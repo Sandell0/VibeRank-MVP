@@ -9,6 +9,7 @@ from pathlib import Path
 
 RESULTS_PATH = Path(__file__).resolve().parent / "trajectory_results.json"
 SVG_PATH = Path(__file__).resolve().parent / "trajectory_mae.svg"
+PITCH_SVG_PATH = Path(__file__).resolve().parent / "trajectory_pitch.svg"
 
 # Reference dataviz palette, light mode.
 SURFACE = "#fcfcfb"
@@ -34,12 +35,12 @@ def nice_ceiling(value: float) -> float:
     return step * (int(value / step) + 1)
 
 
-def main() -> None:
+def render(series: dict[str, tuple[str, str]], out_path: Path) -> None:
     results = json.loads(RESULTS_PATH.read_text(encoding="utf-8"))
-    curves = results["mae_curves"]
+    curves = {key: results["mae_curves"][key] for key in series}
     n_models = len(results["models"])
     truths = [m["true"] for m in results["models"].values()]
-    steps = len(curves["refit"])
+    steps = len(next(iter(curves.values())))
 
     top = nice_ceiling(max(max(values) for values in curves.values()))
     plot_w = WIDTH - MARGIN_LEFT - MARGIN_RIGHT
@@ -92,7 +93,7 @@ def main() -> None:
         )
 
     label_slots: list[tuple[float, str]] = []
-    for key, (color, label) in SERIES.items():
+    for key, (color, label) in series.items():
         values = curves[key]
         dash = ' stroke-dasharray="7 5"' if key == "legacy" else ""
         points = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(values))
@@ -115,7 +116,7 @@ def main() -> None:
         if positions and py - positions[-1] < 18:
             py = positions[-1] + 18
         positions.append(py)
-        color, label = SERIES[key]
+        color, label = series[key]
         final = curves[key][-1]
         lx = MARGIN_LEFT + plot_w + 14
         parts.append(f'<circle cx="{lx}" cy="{py - 4:.1f}" r="4" fill="{color}"/>')
@@ -134,8 +135,19 @@ def main() -> None:
         positions[-1] = py + (16 if detail else 0)
 
     parts.append("</svg>")
-    SVG_PATH.write_text("\n".join(parts), encoding="utf-8")
-    print(f"Saved {SVG_PATH}")
+    out_path.write_text("\n".join(parts), encoding="utf-8")
+    print(f"Saved {out_path}")
+
+
+def main() -> None:
+    render(SERIES, SVG_PATH)
+    render(
+        {
+            "holistic": ("#1baf7a", "Raw grader read"),
+            "holistic_cal": ("#008300", "VibeRank (calibrated)"),
+        },
+        PITCH_SVG_PATH,
+    )
 
 
 if __name__ == "__main__":

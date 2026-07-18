@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<rect width="880" height="540" fill="#fcfcfb"/>
+<text x="64" y="34" fill="#0b0b0b" font-size="18" font-weight="600">Mean absolute Elo error after each question</text>
+<text x="64" y="56" fill="#52514e" font-size="13">18 live models, public Elo 1210–1749 · leave-one-out item fits · grader mistral-medium-3.5</text>
+<text x="54" y="488.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="64" y1="386.0" x2="630" y2="386.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="390.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">50</text>
+<line x1="64" y1="288.0" x2="630" y2="288.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="292.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="64" y1="190.0" x2="630" y2="190.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="194.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">150</text>
+<line x1="64" y1="92.0" x2="630" y2="92.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="96.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">200</text>
+<line x1="64" y1="484.0" x2="630" y2="484.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="64.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q1</text>
+<text x="205.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q2</text>
+<text x="347.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q3</text>
+<text x="488.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q4</text>
+<text x="630.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q5</text>
+<polyline points="64.0,107.4 205.5,154.8 347.0,162.5 488.5,128.0 630.0,145.2" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<circle cx="64.0" cy="107.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q1: 192 Elo</title></circle>
+<circle cx="205.5" cy="154.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q2: 168 Elo</title></circle>
+<circle cx="347.0" cy="162.5" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q3: 164 Elo</title></circle>
+<circle cx="488.5" cy="128.0" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q4: 182 Elo</title></circle>
+<circle cx="630.0" cy="145.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q5: 173 Elo</title></circle>
+<polyline points="64.0,275.2 205.5,315.1 347.0,316.6 488.5,331.3 630.0,315.1" fill="none" stroke="#008300" stroke-width="2"/>
+<circle cx="64.0" cy="275.2" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q1: 107 Elo</title></circle>
+<circle cx="205.5" cy="315.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q2: 86 Elo</title></circle>
+<circle cx="347.0" cy="316.6" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q3: 85 Elo</title></circle>
+<circle cx="488.5" cy="331.3" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q4: 78 Elo</title></circle>
+<circle cx="630.0" cy="315.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q5: 86 Elo</title></circle>
+<circle cx="644" cy="141.2" r="4" fill="#1baf7a"/>
+<text x="654" y="145.2" fill="#0b0b0b" font-size="12.5">Raw grader read <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">173</tspan></text>
+<circle cx="644" cy="311.1" r="4" fill="#008300"/>
+<text x="654" y="315.1" fill="#0b0b0b" font-size="12.5">VibeRank <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">86</tspan></text>
+<text x="654" y="329.1" fill="#898781" font-size="10.5">(calibrated)</text>
+</svg>

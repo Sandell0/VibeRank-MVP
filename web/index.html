@@ -75,7 +75,18 @@
 
           <label>
             Model
-            <input id="model" value="mistral-small-latest" autocomplete="off" />
+            <select id="model" aria-describedby="provider-note">
+              <option value="mistral-small-latest">Mistral Small (latest) · mistral-small-latest</option>
+            </select>
+            <input
+              id="custom-model"
+              class="custom-model-input"
+              type="text"
+              placeholder="Enter a model ID"
+              aria-label="Custom model ID"
+              autocomplete="off"
+              hidden
+            />
           </label>
 
           <div class="run-facts" aria-label="Evaluation configuration">

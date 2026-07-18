@@ -2,10 +2,37 @@ const $ = (selector) => document.querySelector(selector);
 
 const provider = $("#provider");
 const model = $("#model");
+const customModel = $("#custom-model");
 const runButton = $("#run-evaluation");
 const providerNote = $("#provider-note");
 
 let runtimeConfig = null;
+let knownElos = null;
+
+const CUSTOM_MODEL_VALUE = "__custom__";
+// Catalog entries: [api model id, label, leaderboard display name for ground-truth Elo (null if unknown)]
+const modelCatalog = {
+  mistral: [
+    ["mistral-small-latest", "Mistral Small (latest)", "mistral-small-latest"],
+    ["mistral-small-2603", "Mistral Small 2603", null],
+    ["mistral-medium-2508", "Mistral Medium 2508", "Mistral Medium 3.1"],
+    ["mistral-medium-3.5", "Mistral Medium 3.5", "Mistral Medium 3.5"],
+    ["mistral-large-latest", "Mistral Large (latest)", "Mistral Large 3"],
+  ],
+  openrouter: [
+    ["meta-llama/llama-3.2-1b-instruct", "Meta · Llama 3.2 1B Instruct", null],
+    ["meta-llama/llama-3.2-3b-instruct", "Meta · Llama 3.2 3B Instruct", null],
+    ["meta-llama/llama-3.1-8b-instruct", "Meta · Llama 3.1 8B Instruct", null],
+    ["meta-llama/llama-3.3-70b-instruct", "Meta · Llama 3.3 70B Instruct", "Llama 3.3 70B Instruct"],
+    ["google/gemma-3-27b-it", "Google · Gemma 3 27B", "Gemma 3 27B (IT)"],
+    ["microsoft/phi-4", "Microsoft · Phi 4", "Phi-4"],
+    ["deepseek/deepseek-chat-v3.1", "DeepSeek · V3.1", "DeepSeek V3.1"],
+    ["moonshotai/kimi-k2-0905", "MoonshotAI · Kimi K2 0905", "Kimi K2 0905"],
+    ["moonshotai/kimi-k2.5", "MoonshotAI · Kimi K2.5", "Kimi K2.5"],
+    ["openai/gpt-oss-120b", "OpenAI · gpt-oss-120b", "GPT-OSS-120B"],
+    ["qwen/qwen3-235b-a22b-2507", "Qwen · Qwen3 235B A22B", "Qwen 3 235B A22B 2507 Instruct"],
+  ],
+};
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -24,21 +51,74 @@ async function request(path, options = {}) {
   return payload;
 }
 
+function selectedModelId() {
+  return model.value === CUSTOM_MODEL_VALUE ? customModel.value.trim() : model.value;
+}
+
+function updateRunButton() {
+  const available = provider.value === "mistral"
+    ? runtimeConfig?.mistral_available
+    : runtimeConfig?.openrouter_available && runtimeConfig?.mistral_available;
+  runButton.disabled = !available || !selectedModelId();
+}
+
+function updateCustomModel() {
+  const isCustom = model.value === CUSTOM_MODEL_VALUE;
+  customModel.hidden = !isCustom;
+  customModel.required = isCustom;
+  updateRunButton();
+}
+
+function knownEloFor(truthName) {
+  return truthName && knownElos?.has(truthName) ? knownElos.get(truthName) : null;
+}
+
+function selectedKnownElo() {
+  const id = selectedModelId();
+  const entry = (modelCatalog[provider.value] || []).find(([modelId]) => modelId === id);
+  return entry ? knownEloFor(entry[2]) : null;
+}
+
+async function loadKnownElos() {
+  try {
+    const data = await request("/api/leaderboard-models?limit=1000");
+    knownElos = new Map(data.models.map((entry) => [entry.model, entry.elo]));
+    populateModelPicker(provider.value);
+  } catch {
+    // Ground truth is optional; evaluations work without it.
+  }
+}
+
+function populateModelPicker(selected) {
+  const options = modelCatalog[selected] || [];
+  model.replaceChildren(...options.map(([id, label, truthName]) => {
+    const option = document.createElement("option");
+    option.value = id;
+    const elo = knownEloFor(truthName);
+    option.textContent = `${label} · ${id}${elo != null ? ` · true Elo ${Math.round(elo)}` : ""}`;
+    return option;
+  }));
+  const customOption = document.createElement("option");
+  customOption.value = CUSTOM_MODEL_VALUE;
+  customOption.textContent = "Custom model ID…";
+  model.append(customOption);
+  customModel.value = "";
+  updateCustomModel();
+}
+
 function updateProvider() {
   const selected = provider.value;
+  populateModelPicker(selected);
   if (selected === "mistral") {
-    model.value = "mistral-small-latest";
     providerNote.textContent = runtimeConfig?.mistral_available
       ? "Five target calls and five grader calls. Estimated API cost is shown after the run."
       : "Set MISTRAL_API_KEY on the server to enable live calls.";
-    runButton.disabled = !runtimeConfig?.mistral_available;
   } else {
-    model.value = "meta-llama/llama-3.2-1b-instruct";
     providerNote.textContent = runtimeConfig?.openrouter_available && runtimeConfig?.mistral_available
-      ? "Five OpenRouter target calls and five Mistral grader calls. Estimated API cost is shown after the run."
+      ? "Five OpenRouter target calls and five Mistral grader calls. Usage is shown after the run; cost appears when pricing is configured."
       : "Set OPENROUTER_API_KEY and MISTRAL_API_KEY on the server to enable this mode.";
-    runButton.disabled = !(runtimeConfig?.openrouter_available && runtimeConfig?.mistral_available);
   }
+  updateRunButton();
 }
 
 function posteriorSvg(series, target) {
@@ -232,7 +312,6 @@ function renderTraces(traces) {
           Error: ${escapeHtml(trace.grade.error_type)} · confidence ${Math.round(trace.grade.confidence * 100)}%<br />
           Estimate: ${Math.round(trace.posterior.mean_elo)} Elo
           ${trace.holistic ? `<br />Holistic: ${Math.round(trace.holistic.raw_mean_elo)} raw → ${Math.round(trace.holistic.mean_elo)} ± ${Math.round(trace.holistic.sigma_elo)}` : ""}
-          ${trace.direct?.raw_guess != null ? `<br />Texture read: ${Math.round(trace.direct.raw_guess)} raw${trace.direct.applied ? ` → ${Math.round(trace.direct.calibrated_guess)} calibrated` : " (uncalibrated, not used)"}` : ""}
           ${(trace.usage.target.total_tokens || trace.usage.grader.total_tokens) ? `<br />Target: ${(trace.usage.target.total_tokens || 0).toLocaleString()} tokens · grader: ${(trace.usage.grader.total_tokens || 0).toLocaleString()} tokens` : ""}
         </p>
       </div>
@@ -247,11 +326,13 @@ async function runEvaluation() {
   $("#result-loading").classList.remove("hidden");
   const payload = {
     provider: provider.value,
-    model: model.value.trim(),
+    model: selectedModelId(),
     questions: 5,
     seed: 7,
     question_mode: "fixed",
   };
+  const knownElo = selectedKnownElo();
+  if (knownElo != null) payload.target_elo = knownElo;
   try {
     const result = await request("/api/evaluate", { method: "POST", body: JSON.stringify(payload) });
     renderResult(result);
@@ -261,7 +342,7 @@ async function runEvaluation() {
     $("#result-content").classList.remove("hidden");
   } finally {
     $("#result-loading").classList.add("hidden");
-    runButton.disabled = false;
+    updateRunButton();
   }
 }
 
@@ -277,6 +358,7 @@ async function initialize() {
       ? `${runtimeConfig.fixed_question_count} fixed questions · ${runtimeConfig.grader_model}${holisticStatus}`
       : "Live API keys unavailable";
     updateProvider();
+    loadKnownElos();
   } catch (error) {
     $("#runtime-status").textContent = "Runtime unavailable";
     $("#result-empty").innerHTML = `<div class="error-box">${escapeHtml(error.message)}</div>`;
@@ -284,6 +366,11 @@ async function initialize() {
 }
 
 provider.addEventListener("change", updateProvider);
+model.addEventListener("change", () => {
+  updateCustomModel();
+  if (!customModel.hidden) customModel.focus();
+});
+customModel.addEventListener("input", updateRunButton);
 runButton.addEventListener("click", runEvaluation);
 
 initialize();
