@@ -1,0 +1,54 @@
+{
+  "per_prefix": {
+    "1": {
+      "intercept": -1039.444,
+      "slope": 1.69423,
+      "sigma_elo": 130.0
+    },
+    "2": {
+      "intercept": -417.285,
+      "slope": 1.35077,
+      "sigma_elo": 112.3
+    },
+    "3": {
+      "intercept": -330.433,
+      "slope": 1.30303,
+      "sigma_elo": 107.7
+    },
+    "4": {
+      "intercept": -758.075,
+      "slope": 1.58465,
+      "sigma_elo": 94.9
+    },
+    "5": {
+      "intercept": -680.412,
+      "slope": 1.51566,
+      "sigma_elo": 108.2
+    }
+  },
+  "grader_model": "mistral-medium-3.5",
+  "n_models": 18,
+  "reference_models": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemma-3-27b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.2-1b-instruct",
+    "meta-llama/llama-3.2-3b-instruct",
+    "meta-llama/llama-3.3-70b-instruct",
+    "microsoft/phi-4",
+    "ministral-14b-2512",
+    "ministral-3b-2512",
+    "ministral-8b-2512",
+    "mistral-medium-2508",
+    "mistral-small-2506",
+    "mistral-tiny-2407",
+    "moonshotai/kimi-k2-0905",
+    "moonshotai/kimi-k2.5",
+    "open-mistral-nemo-2407",
+    "openai/gpt-oss-120b",
+    "qwen/qwen3-235b-a22b-2507"
+  ],
+  "elo_spread": 539.0,
+  "usable": true,
+  "reason": "ok"
+}

@@ -1,0 +1,63 @@
+{
+  "intercept": 361.452,
+  "slope": 0.60151,
+  "tau_elo": 71.0,
+  "sigma_w_elo": 154.3,
+  "n_models": 7,
+  "n_observations": 35,
+  "r_squared": 0.868,
+  "usable": true,
+  "reason": "ok",
+  "grader_model": "simulation",
+  "per_model": [
+    {
+      "model": "synthetic-calibration-0",
+      "true_elo": 950.0,
+      "mean_raw_guess": 892.6,
+      "mean_calibrated": 883.0,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-1",
+      "true_elo": 1150.0,
+      "mean_raw_guess": 1065.7,
+      "mean_calibrated": 1170.8,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-2",
+      "true_elo": 1350.0,
+      "mean_raw_guess": 1201.3,
+      "mean_calibrated": 1396.3,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-3",
+      "true_elo": 1550.0,
+      "mean_raw_guess": 1356.4,
+      "mean_calibrated": 1654.1,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-4",
+      "true_elo": 1750.0,
+      "mean_raw_guess": 1399.9,
+      "mean_calibrated": 1726.4,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-5",
+      "true_elo": 1950.0,
+      "mean_raw_guess": 1442.9,
+      "mean_calibrated": 1798.0,
+      "answers": 5
+    },
+    {
+      "model": "synthetic-calibration-6",
+      "true_elo": 2150.0,
+      "mean_raw_guess": 1697.7,
+      "mean_calibrated": 2221.5,
+      "answers": 5
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<rect width="880" height="540" fill="#fcfcfb"/>
+<text x="64" y="34" fill="#0b0b0b" font-size="18" font-weight="600">Mean absolute Elo error after each question</text>
+<text x="64" y="56" fill="#52514e" font-size="13">18 live models, public Elo 1210–1749 · leave-one-out item fits · grader mistral-medium-3.5</text>
+<text x="54" y="488.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="64" y1="418.7" x2="630" y2="418.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="422.7" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="64" y1="353.3" x2="630" y2="353.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="357.3" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">200</text>
+<line x1="64" y1="288.0" x2="630" y2="288.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="292.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">300</text>
+<line x1="64" y1="222.7" x2="630" y2="222.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="226.7" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">400</text>
+<line x1="64" y1="157.3" x2="630" y2="157.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="161.3" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">500</text>
+<line x1="64" y1="92.0" x2="630" y2="92.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54" y="96.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">600</text>
+<line x1="64" y1="484.0" x2="630" y2="484.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="64.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q1</text>
+<text x="205.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q2</text>
+<text x="347.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q3</text>
+<text x="488.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q4</text>
+<text x="630.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q5</text>
+<polyline points="64.0,337.4 205.5,338.2 347.0,332.7 488.5,333.2 630.0,349.3" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="64.0" cy="337.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Refit ordinal (factorized, items fit LOO) — after Q1: 224 Elo</title></circle>
+<circle cx="205.5" cy="338.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Refit ordinal (factorized, items fit LOO) — after Q2: 223 Elo</title></circle>
+<circle cx="347.0" cy="332.7" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Refit ordinal (factorized, items fit LOO) — after Q3: 232 Elo</title></circle>
+<circle cx="488.5" cy="333.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Refit ordinal (factorized, items fit LOO) — after Q4: 231 Elo</title></circle>
+<circle cx="630.0" cy="349.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Refit ordinal (factorized, items fit LOO) — after Q5: 206 Elo</title></circle>
+<polyline points="64.0,358.5 205.5,374.3 347.0,376.8 488.5,365.3 630.0,371.1" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<circle cx="64.0" cy="358.5" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Holistic raw read — after Q1: 192 Elo</title></circle>
+<circle cx="205.5" cy="374.3" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Holistic raw read — after Q2: 168 Elo</title></circle>
+<circle cx="347.0" cy="376.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Holistic raw read — after Q3: 164 Elo</title></circle>
+<circle cx="488.5" cy="365.3" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Holistic raw read — after Q4: 182 Elo</title></circle>
+<circle cx="630.0" cy="371.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Holistic raw read — after Q5: 173 Elo</title></circle>
+<polyline points="64.0,349.3 205.5,247.6 347.0,103.5 488.5,130.9 630.0,132.9" fill="none" stroke="#eda100" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="64.0" cy="349.3" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Legacy ordinal (hand-set difficulties) — after Q1: 206 Elo</title></circle>
+<circle cx="205.5" cy="247.6" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Legacy ordinal (hand-set difficulties) — after Q2: 362 Elo</title></circle>
+<circle cx="347.0" cy="103.5" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Legacy ordinal (hand-set difficulties) — after Q3: 582 Elo</title></circle>
+<circle cx="488.5" cy="130.9" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Legacy ordinal (hand-set difficulties) — after Q4: 540 Elo</title></circle>
+<circle cx="630.0" cy="132.9" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Legacy ordinal (hand-set difficulties) — after Q5: 537 Elo</title></circle>
+<polyline points="64.0,414.4 205.5,427.7 347.0,428.2 488.5,433.1 630.0,427.7" fill="none" stroke="#008300" stroke-width="2"/>
+<circle cx="64.0" cy="414.4" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Calibrated holistic (shipped) — after Q1: 107 Elo</title></circle>
+<circle cx="205.5" cy="427.7" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Calibrated holistic (shipped) — after Q2: 86 Elo</title></circle>
+<circle cx="347.0" cy="428.2" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Calibrated holistic (shipped) — after Q3: 85 Elo</title></circle>
+<circle cx="488.5" cy="433.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Calibrated holistic (shipped) — after Q4: 78 Elo</title></circle>
+<circle cx="630.0" cy="427.7" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Calibrated holistic (shipped) — after Q5: 86 Elo</title></circle>
+<circle cx="644" cy="128.9" r="4" fill="#eda100"/>
+<text x="654" y="132.9" fill="#0b0b0b" font-size="12.5">Legacy ordinal <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">537</tspan></text>
+<text x="654" y="146.9" fill="#898781" font-size="10.5">(hand-set difficulties)</text>
+<circle cx="644" cy="345.3" r="4" fill="#2a78d6"/>
+<text x="654" y="349.3" fill="#0b0b0b" font-size="12.5">Refit ordinal <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">206</tspan></text>
+<text x="654" y="363.3" fill="#898781" font-size="10.5">(factorized, items fit LOO)</text>
+<circle cx="644" cy="379.3" r="4" fill="#1baf7a"/>
+<text x="654" y="383.3" fill="#0b0b0b" font-size="12.5">Holistic raw read <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">173</tspan></text>
+<circle cx="644" cy="423.7" r="4" fill="#008300"/>
+<text x="654" y="427.7" fill="#0b0b0b" font-size="12.5">Calibrated holistic <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">86</tspan></text>
+<text x="654" y="441.7" fill="#898781" font-size="10.5">(shipped)</text>
+</svg>

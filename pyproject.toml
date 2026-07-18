@@ -1,0 +1,12 @@
+[project]
+name = "viberank"
+version = "0.1.0"
+description = "Dense, adaptive free-form evaluation that estimates model Elo from a few answers"
+requires-python = ">=3.11"
+
+[project.scripts]
+viberank = "viberank.api:main"
+
+[tool.unittest]
+start-directory = "tests"
+

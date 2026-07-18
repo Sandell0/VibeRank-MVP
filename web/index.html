@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VibeRank estimates a live model's Elo from five fixed reasoning answers." />
+    <title>VibeRank — Five answers to Elo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="VibeRank home">
+          <span class="brand-mark">V</span>
+          <span>VibeRank</span>
+        </a>
+        <div class="status-pill" id="runtime-status">Loading runtime…</div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">LIVE MODEL EVALUATION</p>
+          <h1>Can five answers<br />recover <em>model Elo?</em></h1>
+        </div>
+        <div class="hero-side">
+          <div class="mistral-cat" role="img" aria-label="A pixel-art Mistral cat watching the benchmark">
+            <svg viewBox="0 0 176 112" aria-hidden="true">
+              <g class="cat-tail">
+                <rect x="144" y="64" width="16" height="16" rx="2" />
+                <rect x="152" y="48" width="16" height="24" rx="2" />
+                <rect x="144" y="40" width="16" height="16" rx="2" />
+              </g>
+              <g class="cat-body">
+                <path d="M32 32h16V16h16v16h48V16h16v16h16v64H32z" />
+                <rect class="cat-highlight" x="48" y="32" width="80" height="16" />
+                <rect class="cat-shadow" x="32" y="80" width="112" height="16" />
+                <rect class="cat-eye" x="56" y="56" width="16" height="16" rx="2" />
+                <rect class="cat-eye" x="104" y="56" width="16" height="16" rx="2" />
+                <rect class="cat-pupil cat-pupil-left" x="62" y="58" width="6" height="12" rx="2" />
+                <rect class="cat-pupil cat-pupil-right" x="110" y="58" width="6" height="12" rx="2" />
+                <path class="cat-muzzle" d="M80 68h16v8H88v8h-8z" />
+                <rect class="cat-whisker" x="16" y="66" width="28" height="4" rx="2" />
+                <rect class="cat-whisker" x="132" y="66" width="28" height="4" rx="2" />
+                <rect class="cat-paw" x="48" y="94" width="24" height="10" rx="3" />
+                <rect class="cat-paw" x="104" y="94" width="24" height="10" rx="3" />
+              </g>
+            </svg>
+            <span>MISTRAL CAT · WATCHING THE EVAL</span>
+          </div>
+          <p class="hero-copy">
+            Run five frozen reasoning questions against a real model. Inspect the estimate, uncertainty,
+            grader evidence, and API usage without synthetic scores or hidden-Elo controls.
+          </p>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="control-panel panel">
+          <div class="panel-heading">
+            <span class="step-number">01</span>
+            <div>
+              <p class="panel-kicker">Real answers only</p>
+              <h2>Live evaluation</h2>
+            </div>
+          </div>
+
+          <label>
+            Target provider
+            <select id="provider">
+              <option value="mistral">Mistral API</option>
+              <option value="openrouter">OpenRouter model</option>
+            </select>
+          </label>
+
+          <label>
+            Model
+            <input id="model" value="mistral-small-latest" autocomplete="off" />
+          </label>
+
+          <div class="run-facts" aria-label="Evaluation configuration">
+            <div>
+              <span>Questions</span>
+              <strong id="question-count">5 fixed</strong>
+            </div>
+            <div>
+              <span>Grader</span>
+              <strong id="grader-name">Loading…</strong>
+            </div>
+          </div>
+
+          <button class="primary-button" id="run-evaluation">
+            <span>Estimate Elo</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-note" id="provider-note">Checking API availability…</p>
+        </aside>
+
+        <section class="result-panel panel" aria-live="polite">
+          <div id="result-empty" class="empty-state">
+            <div class="radar"></div>
+            <h2>Ready for a live run</h2>
+            <p>Nothing is called until you click Estimate Elo.</p>
+          </div>
+          <div id="result-loading" class="loading-state hidden">
+            <div class="loader"></div>
+            <p>Collecting five answers and grading the evidence…</p>
+          </div>
+          <div id="result-content" class="hidden"></div>
+        </section>
+      </section>
+
+      <section class="trace-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FIVE-QUESTION EVIDENCE</p>
+            <h2>Answers and grader trace</h2>
+          </div>
+          <p>Open “Exact grader context” to compare each answer against everything the grader saw.</p>
+        </div>
+        <div id="trace-list" class="trace-list">
+          <div class="trace-placeholder">Run an evaluation to inspect the fixed questions and grading evidence.</div>
+        </div>
+      </section>
+
+      <footer>
+        <p>VibeRank research prototype · Five fixed questions · Live models only</p>
+        <p>Elo estimate + 90% range + explicit API cost</p>
+      </footer>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
