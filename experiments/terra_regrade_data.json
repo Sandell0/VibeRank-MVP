@@ -1,0 +1,802 @@
+{
+  "mistral-tiny-2407": {
+    "1": {
+      "terra_score": 0.9400000000000001,
+      "medium_score": 1.0,
+      "difficulty": 1520.0,
+      "explanation": "The response recognizes the two relevant sample compositions but computes the two-red-one-blue probabilities without accounting for draw order, miscomputes the announcement likelihoods, and incorrectly equates a red next draw with three reds in the initial sample rather than conditioning on the remaining urn composition."
+    },
+    "2": {
+      "terra_score": 0.03,
+      "medium_score": 0.05,
+      "difficulty": 1410.0,
+      "explanation": "The answer incorrectly infers individual switch parities from lamps affected by multiple switches, identifies the wrong odd switches, violates the at-most-3 condition by allowing 5 presses, and counts tuples without enforcing either the lamp equations or total of 7 presses."
+    },
+    "3": {
+      "terra_score": 1.0,
+      "medium_score": 1.1,
+      "difficulty": 1230.0,
+      "explanation": "Although moving north 2 is a valid winning opening, the stated same-direction copying rule is invalid and is based on incorrect coordinates and false claims about Bob's legal moves, so it does not establish a forced win."
+    },
+    "4": {
+      "terra_score": 0.89,
+      "medium_score": 1.0,
+      "difficulty": 1190.0,
+      "explanation": "The answer reaches the incorrect total 1512 by treating dependent seat choices as independent, using an unjustified average for E's position, and incorrectly handling adjacency and end-seat constraints."
+    },
+    "5": {
+      "terra_score": 0.1,
+      "medium_score": 1.0,
+      "difficulty": 1160.0,
+      "explanation": "The proposed four-action sequence miscalculates the contents: after the first pour the state is (0,7), and the final pour yields (3,11), not 6 liters, so both the claimed solution and minimality claim are false."
+    }
+  },
+  "open-mistral-nemo-2407": {
+    "1": {
+      "terra_score": 0.93,
+      "medium_score": 1.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer mismodels the two-unit observation as DNN, computes incorrect likelihoods, omits the unequal machine priors in Bayes' rule, and consequently gives incorrect results for both parts."
+    },
+    "2": {
+      "terra_score": 0.29000000000000004,
+      "medium_score": 1.0,
+      "difficulty": 1410.0,
+      "explanation": "The answer incorrectly claims 37 minutes is minimal, and its proposed sequence is invalid because after technicians 3 and 4 cross, technician 1 is on the left and cannot return the lantern from the right; it also misses the valid 25-minute strategy and gives an unsound lower-bound argument."
+    },
+    "3": {
+      "terra_score": 0.13,
+      "medium_score": 1.0,
+      "difficulty": 1360.0,
+      "explanation": "The answer reaches the opposite of the correct assignment, repeatedly misuses the truth/lie biconditional, and ends by calling Bram and Dena truthful despite having labeled both lying."
+    },
+    "4": {
+      "terra_score": 0.01,
+      "medium_score": 0.05,
+      "difficulty": 1320.0,
+      "explanation": "The proposed presses E and F actually leave A, G, and H off and turn C and I on, so they do not produce the stated target; the required unique set is A, C, E, F, and H."
+    },
+    "5": {
+      "terra_score": 0.03,
+      "medium_score": 0.05,
+      "difficulty": 1230.0,
+      "explanation": "The answer gives 16,896 rather than 744 and uses an invalid sequential-choice product that neither accounts for changing adjacency constraints nor treats the first and last positions as adjacent."
+    }
+  },
+  "ministral-3b-2512": {
+    "1": {
+      "terra_score": 2.9799999999999995,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly partitions by line and defect status before squaring inspector flag probabilities, obtains equivalent exact fractions 891/9047 = 1485/1508 and 650/9047 = 1354/1885, and properly handles line-specific false-positive rates."
+    },
+    "2": {
+      "terra_score": 0.01,
+      "medium_score": 0.0,
+      "difficulty": 1900.0,
+      "explanation": "The response never identifies the feasible optimum {B, E, F, H} (cost 15, value 37) and repeatedly presents over-budget, invalid sets as purported final answers."
+    },
+    "3": {
+      "terra_score": 2.91,
+      "medium_score": 3.0,
+      "difficulty": 1680.0,
+      "explanation": "The answer correctly derives A=1, B=1, C=0, D=0 with device 6 solely false, but its uniqueness discussion explicitly works through only devices 1, 2, and 4 and merely asserts that device 3 also fails without showing it; device 5 is not addressed at all."
+    },
+    "4": {
+      "terra_score": 0.99,
+      "medium_score": 3.0,
+      "difficulty": 1810.0,
+      "explanation": "The answer makes the central causal error of claiming total-effect estimation requires adjusting for mediators and that S does not block A-related confounding, incorrectly rejects valid sets {S,H} and {A,S,H}, and also mis-sums the untreated standardized probability (0.405, not 0.305), producing an incorrect effect estimate."
+    },
+    "5": {
+      "terra_score": 0.02,
+      "medium_score": 0.05,
+      "difficulty": 1910.0,
+      "explanation": "The response repeatedly claims an incorrect maximum of 15, never supplies a conservation-satisfying feasible flow, and miscomputes cuts by including arcs that do not cross them while missing the capacity-16 optimality cut calculation."
+    }
+  },
+  "ministral-8b-2512": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The response correctly includes mixed draws that yield an RR report via the coin flip, conditions both urn and remaining composition on the report, and derives the exact probability 7/15."
+    },
+    "2": {
+      "terra_score": 0.03,
+      "medium_score": 0.05,
+      "difficulty": 1900.0,
+      "explanation": "Although it initially recognizes the XOR target and that selecting all rows in A and columns in B produces it, the response repeatedly contradicts itself, concludes 10 rather than the true minimum 5, and its final 10-move list has incorrect row and column parities and does not yield the target."
+    },
+    "3": {
+      "terra_score": 0.006,
+      "medium_score": 0.0,
+      "difficulty": 1690.0,
+      "explanation": "The response repeatedly asserts an impossible 20-minute optimum, provides no valid 20-minute schedule, and its explicitly computed complete schedules total 27 or 31 minutes without an optimality proof."
+    },
+    "4": {
+      "terra_score": 0.01,
+      "medium_score": 0.05,
+      "difficulty": 1560.0,
+      "explanation": "The response repeatedly asserts 9062 despite explicitly recognizing that it violates clue 4, incorrectly infers that 9 must occur from clue 3, and never derives the required digits or order 2603."
+    },
+    "5": {
+      "terra_score": 0.99,
+      "medium_score": 1.05,
+      "difficulty": 1460.0,
+      "explanation": "Although the proposed walk is continuous from A to H and reaches E before F, it traverses only 7 of the required 16 corridors and explicitly (but incorrectly) claims that the remaining corridors need not be used."
+    }
+  },
+  "meta-llama/llama-3.2-1b-instruct": {
+    "1": {
+      "terra_score": 0.65,
+      "medium_score": 0.1,
+      "difficulty": 1520.0,
+      "explanation": "The answer incorrectly claims the host can open a prize-containing box, never computes the posterior conditional on opening B and C, and consequently uses prior rather than conditional expected payouts to conclude $4.50 for A."
+    },
+    "2": {
+      "terra_score": 0.02,
+      "medium_score": 0.0,
+      "difficulty": 1180.0,
+      "explanation": "The answer gives the incorrect completion time of 5 hours and repeatedly reverses or ignores prerequisites (for example, starting C at hour 0 despite requiring A), with no valid schedule or valid lower-bound argument."
+    },
+    "3": {
+      "terra_score": 0.93,
+      "medium_score": 1.0,
+      "difficulty": 980.0,
+      "explanation": "The response correctly obtains 30,240 arrangements with G internal, but it never applies the C-D and E-F nonconsecutiveness restrictions or the A-before-B condition, so its final answer is incorrect."
+    },
+    "4": {
+      "terra_score": 0.01,
+      "medium_score": 0.0,
+      "difficulty": 930.0,
+      "explanation": "The response ignores the disjoint three-pile square-subtraction structure, proposes illegal nonsquare removals such as 3, 7, 12, and 19, gives no valid complete winning-move list, and never establishes the required Grundy/xor strategy."
+    },
+    "5": {
+      "terra_score": 0.03,
+      "medium_score": 0.05,
+      "difficulty": 870.0,
+      "explanation": "The answer incorrectly treats the final digit d as the last three-digit number for the divisibility-by-8 rule, never derives the mirror-sum constraints, and concludes 1236, which is not divisible by 8 and whose reverse sum is not 9999."
+    }
+  },
+  "meta-llama/llama-3.2-3b-instruct": {
+    "1": {
+      "terra_score": 0.04,
+      "medium_score": 1.05,
+      "difficulty": 1520.0,
+      "explanation": "The response is unfinished and makes false parity and adjacency deductions, while never deriving the required inconsistency through the G,A,B case analysis."
+    },
+    "2": {
+      "terra_score": 0.11,
+      "medium_score": 0.0,
+      "difficulty": 1420.0,
+      "explanation": "The response stops after beginning to restate the priors and provides no likelihoods, posterior probabilities, or fourth-draw calculation."
+    },
+    "3": {
+      "terra_score": 0.02,
+      "medium_score": 0.1,
+      "difficulty": 1230.0,
+      "explanation": "The response incorrectly treats robots as comparing their allocations to those of more-senior robots rather than to their own continuation outcome, and it neither completes backward induction nor identifies either valid R1 allocation."
+    },
+    "4": {
+      "terra_score": 0.8300000000000001,
+      "medium_score": 0.1,
+      "difficulty": 1090.0,
+      "explanation": "The response stops mid-explanation, gives none of the required final results, and appears to incorrectly replace recursive copies of Sn with a single forward move."
+    },
+    "5": {
+      "terra_score": 0.98,
+      "medium_score": 3.0,
+      "difficulty": 980.0,
+      "explanation": "The response begins setting up part 1 but is truncated before providing any proof and does not address the adjacent-swap detection or the required correction ambiguity."
+    }
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+    "1": {
+      "terra_score": 1.0,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "It correctly obtains the conditional double-positive rates and prior defect rate, but miscalculates the defect posterior (the correct value is about 0.736, not 0.722) and incorrectly treats tests as having direct supplier-specific rates, yielding a radically wrong supplier-B posterior of 2.32% rather than 54.2%."
+    },
+    "2": {
+      "terra_score": 0.89,
+      "medium_score": 1.0,
+      "difficulty": 1430.0,
+      "explanation": "The proposed 16-hour schedule violates prerequisites by starting C at 0 and D at 3 before A finishes at 4, and it incorrectly claims 16 hours is optimal despite the feasible 15-hour schedule and 30/2 lower bound."
+    },
+    "3": {
+      "terra_score": 0.7100000000000001,
+      "medium_score": 0.0,
+      "difficulty": 1370.0,
+      "explanation": "Although it identifies the digit equations and the divisibility-by-11 test, it incorrectly simplifies A-(A+D)+(A-D)-D as -3D instead of A-3D, leading to invalid digit values and no solution."
+    },
+    "4": {
+      "terra_score": 0.04,
+      "medium_score": 1.0,
+      "difficulty": 1240.0,
+      "explanation": "The response does not reconstruct the matches and makes unsupported inferences from point totals, ending in a contradiction despite the standings being consistent and uniquely solvable."
+    },
+    "5": {
+      "terra_score": 0.08,
+      "medium_score": 1.1,
+      "difficulty": 1210.0,
+      "explanation": "The answer incorrectly concludes that pressing every button once and then again yields lamps 3 and 5 on; in fact each button is pressed twice overall, so all toggles cancel and every lamp is off."
+    }
+  },
+  "microsoft/phi-4": {
+    "1": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer identifies the relevant states and self-loop transitions, but solves its probability and expectation recurrences incorrectly and gives conclusions inconsistent even with its stated intermediate value E_0=5."
+    },
+    "2": {
+      "terra_score": 1.76,
+      "medium_score": 1.1,
+      "difficulty": 1410.0,
+      "explanation": "The proposed move of removing 2 from 13 is legal and correctly reaches zero xor, but the answer incorrectly treats the initial xor value 3 as congruent to zero and therefore calls the initial position losing, and it does not justify that the restoration move is always legal."
+    },
+    "3": {
+      "terra_score": 2.03,
+      "medium_score": 3.0,
+      "difficulty": 1370.0,
+      "explanation": "The answer gives a valid 29-minute schedule, but its claim that no faster schedule exists is only an intuitive assertion rather than a sound exhaustive lower-bound argument or recurrence."
+    },
+    "4": {
+      "terra_score": 2.31,
+      "medium_score": 3.0,
+      "difficulty": 1490.0,
+      "explanation": "It gives the correct five-move set (the corners and center) and correctly verifies it, but its claim that fewer moves are impossible is only asserted from vague parity/adjacency constraints rather than proving the unique parity pattern or otherwise ruling out 0\u20134 moves."
+    },
+    "5": {
+      "terra_score": 0.03,
+      "medium_score": 1.0,
+      "difficulty": 1580.0,
+      "explanation": "Although it initially writes the rotation equation correctly, it conducts incoherent digit testing, claims the false value 219978 is a solution despite explicitly computing that its rotation differs from 4N, and omits all actual solutions."
+    }
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+    "1": {
+      "terra_score": 0.93,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "The response recognizes several ordering constraints and the CD adjacency, but it gives an unsupported incorrect total of 12 and incorrectly treats positions between C and D as available, without performing the required interleaving count."
+    },
+    "2": {
+      "terra_score": 1.01,
+      "medium_score": 1.1,
+      "difficulty": 1430.0,
+      "explanation": "Although it selects policy 3, it incorrectly computes the posterior after the first positive as 4/27 rather than 8/27, yielding an incorrect two-test posterior (8/215 rather than 16/187), and it never validly determines the third-result actions or retest expected loss."
+    },
+    "3": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 1380.0,
+      "explanation": "Although it correctly computes lcm(2,...,9)=2520, it incorrectly treats N as divisible by each d rather than N+1, so 360360 does not have remainder d-1 (it has remainder 0) and is not minimal."
+    },
+    "4": {
+      "terra_score": 1.0,
+      "medium_score": 1.1,
+      "difficulty": 1340.0,
+      "explanation": "Although it correctly says Alice wins, removing 2 is not a winning first move: after Bob takes 3 and Alice takes 1, Bob can take 3 from 7 to leave Alice 4 with 3 forbidden, a losing state."
+    },
+    "5": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 1320.0,
+      "explanation": "The answer concludes B and D entered, but in that case A, B, C, and D are all true (four statements), so it violates the exactly-three-true-statements condition; the valid pair is B and C with C, D, and E true."
+    }
+  },
+  "google/gemma-3-27b-it": {
+    "1": {
+      "terra_score": 1.015,
+      "medium_score": 1.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly conditions within each machine, but then incorrectly averages those conditional probabilities with prior weights 1/3 rather than posterior machine weights proportional to P(T1\u2229T2|m), producing the wrong final probability."
+    },
+    "2": {
+      "terra_score": 0.9400000000000001,
+      "medium_score": 0.05,
+      "difficulty": 1410.0,
+      "explanation": "The proposed sequence is feasible but totals 31 minutes rather than 25, is not optimal, and the stated optimality argument is unsupported and internally inconsistent about handling the slowest people."
+    },
+    "3": {
+      "terra_score": 0.9500000000000001,
+      "medium_score": 1.0,
+      "difficulty": 1230.0,
+      "explanation": "Although it correctly forces A-B and A-C and includes C-E, it adds invalid pairs B-E, D-E, and D-F, omits forced B-F, and explicitly contradicts the stated degree totals for D and E."
+    },
+    "4": {
+      "terra_score": 0.98,
+      "medium_score": 1.0,
+      "difficulty": 1190.0,
+      "explanation": "Although it correctly infers the digit set and states some valid zero-exact constraints, it wrongly concludes 2579, which has exact matches in attempt 7592 despite that attempt requiring zero."
+    },
+    "5": {
+      "terra_score": 0.03,
+      "medium_score": 0.05,
+      "difficulty": 1150.0,
+      "explanation": "Although it correctly splits at the checkpoint and notes the boundary condition, it wrongly claims only RRRUU violates the first segment (there are 5 valid, not 9), fails to derive the second-segment count, and gives the incorrect final answer 63 rather than 70."
+    }
+  },
+  "openai/gpt-oss-120b": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly computes both conditional evidence likelihoods, applies the 3% overall defect prior to obtain 0.0024/0.09455 \u2248 2.54%, derives the correct line posteriors, and identifies Line A as most likely."
+    },
+    "2": {
+      "terra_score": 2.9499999999999997,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "The displayed schedule is valid: each person appears four times, and its absent triples form a Fano-plane line system in which every pair is jointly absent once, implying every pair works together exactly twice."
+    },
+    "3": {
+      "terra_score": 2.9949999999999997,
+      "medium_score": 3.0,
+      "difficulty": 2170.0,
+      "explanation": "The answer derives the correct precedence graph, proves the two-abort lower bound using disjoint cycles, identifies exactly {B,E} and {C,F}, and gives valid remaining-edge DAGs and serial orders for both."
+    },
+    "4": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 2360.0,
+      "explanation": "The listed eight presses do produce the target, but the claimed solution-space weight formula is false and overlooks the valid four-press solution (1,1), (1,4), (2,3), (3,2), so its asserted minimum of eight is centrally incorrect."
+    },
+    "5": {
+      "terra_score": 1.01,
+      "medium_score": 3.0,
+      "difficulty": 2320.0,
+      "explanation": "The response states the appropriate endpoint-DP recurrence and reports advantage 56, but it is cut off before deriving Alice's total, identifying the first move, or giving either required conditional reply."
+    }
+  },
+  "qwen/qwen3-235b-a22b-2507": {
+    "1": {
+      "terra_score": 2.9859999999999998,
+      "medium_score": 0.0,
+      "difficulty": 1520.0,
+      "explanation": "Despite an initially contradictory opening sentence that is explicitly corrected, the answer correctly identifies 3 as the sole winning opening, supplies legal contingent continuations for both replies, and gives concrete second-player winning replies against openings 1 and 2."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1160.0,
+      "explanation": "The answer correctly derives the digit set from clue 3, fixes 5 in position 1 using clue 1, uses clue 4 to force 7 and 2 into positions 3 and 4, leaves 0 in position 2, verifies all clues including clue 2, and establishes uniqueness."
+    },
+    "3": {
+      "terra_score": 2.11,
+      "medium_score": 3.0,
+      "difficulty": 1360.0,
+      "explanation": "It correctly gives a feasible 11-hour two-worker schedule and respects all dependencies, but its argument excluding a 10-hour schedule is informal and does not rigorously establish the required capacity conflict before time 7."
+    },
+    "4": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1490.0,
+      "explanation": "The answer correctly computes the first-sample likelihoods, updates to posterior weights 36/149, 63/149, and 50/149, computes the conditional second-sample probabilities from each remaining composition, and combines them to obtain the exact fraction 410/1043."
+    },
+    "5": {
+      "terra_score": 2.98,
+      "medium_score": 3.0,
+      "difficulty": 1590.0,
+      "explanation": "The answer identifies exactly the three stable matchings, gives the correct applicant- and program-proposing DA outcomes, and rigorously proves completeness by forcing D-W and checking all six remaining permutations with valid blocking pairs."
+    }
+  },
+  "deepseek/deepseek-chat-v3.1": {
+    "1": {
+      "terra_score": 2.9949999999999997,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "After explicitly catching and correcting its initially invalid {B,C,F} proposal, the answer correctly identifies the unique optimum {B,C,D} with cost 10 and benefit 24 and validly bounds all non-C alternatives by 23."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "The answer correctly identifies RBB and BRB as the only compatible sequences, applies priors and likelihoods to obtain the correct posterior, and correctly computes both 1/2 for the first red and 5/16 (0.3125) for the hypothetical next red draw."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2170.0,
+      "explanation": "The answer correctly derives N=25641f from the rotation equation, restricts f to 4 through 9, checks every candidate against the digit conditions, and verifies the unique solution 102564 satisfies the rotation."
+    },
+    "4": {
+      "terra_score": 1.0,
+      "medium_score": 1.0,
+      "difficulty": 2360.0,
+      "explanation": "Although it correctly formulates the mod-2 toggle equations, it makes an algebraic error after (A): substituting x32=0 gives x33=x12+x13, which together with (B) implies x13=x22, but this does not lead to x13=1; its claimed six-press vector fails equation 2, and the correct unique solution has five presses."
+    },
+    "5": {
+      "terra_score": 1.02,
+      "medium_score": 2.1,
+      "difficulty": 2320.0,
+      "explanation": "Although it correctly identifies Alice and the opening move of 1, its claimed response rule is invalid: when Bob takes 2, Alice taking 1 removes only 3 tokens rather than 4 and does not preserve the asserted multiple-of-4 invariant, so the strategy is not justified or generally winning."
+    }
+  },
+  "moonshotai/kimi-k2-0905": {
+    "1": {
+      "terra_score": 0.027,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "Taking 2 leaves Bob the winning state F(15,2), and the proposed multiple-of-5 continuation is infeasible (for example, after Bob takes 1 Alice cannot reduce 14 to 10 in one legal move)."
+    },
+    "2": {
+      "terra_score": 1.0,
+      "medium_score": 1.0,
+      "difficulty": 1430.0,
+      "explanation": "The answer correctly identifies the two possible relative orders of B and H and treats DE as a block, but it incorrectly assumes F and G are nonadjacent only when DE lies between them among the three residual objects, ignoring that their occupied positions can be separated by A/B/C/H; consequently it gets 140 instead of 300 and an unsupported incorrect probability of 3/7 instead of 1/5."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1370.0,
+      "explanation": "The answer correctly uses conditional independence, obtains P(M2|TT)=25/34 and P(D|TT)=243/340, and correctly computes non-recall cost as 1701/68\u2248$25.01, so recall is preferable to $12."
+    },
+    "4": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 1490.0,
+      "explanation": "Although it eventually asserts the correct optimum of 13, it initially states 14 and presents an invalid schedule that preempts G across workers; its claimed 13-hour feasibility lacks a complete valid schedule, and its 12-hour impossibility argument is unsupported and partly false in its timing assertions."
+    },
+    "5": {
+      "terra_score": 0.92,
+      "medium_score": 1.05,
+      "difficulty": 1460.0,
+      "explanation": "The response correctly formulates parts of the target and notes some relevant GF(2) ideas, but it ultimately asserts an incorrect minimum of 9 with a block set that is not verified and supplies no valid minimality argument; the true minimum is 11."
+    }
+  },
+  "moonshotai/kimi-k2.5": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly forms the CE and FG blocks, counts 20 precedence-respecting arrangements, excludes 12 DB-adjacent cases to obtain 8 valid arrangements, and correctly subtracts the 6 ADB cases from 12 AD-block cases to get probability 3/4."
+    },
+    "2": {
+      "terra_score": 0.0,
+      "medium_score": 0.0,
+      "difficulty": 1900.0,
+      "explanation": "The candidate provides no answer, pressing pattern, or minimality justification."
+    },
+    "3": {
+      "terra_score": 0.0,
+      "medium_score": 0.0,
+      "difficulty": 1680.0,
+      "explanation": "The candidate provides no answer, strategy, first move, or justification."
+    },
+    "4": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1550.0,
+      "explanation": "The answer correctly applies Bayes' rule using the unequal host-opening likelihoods, obtains posteriors 2/5, 1/5, and 2/5 for Doors 1, 3, and 4, computes payouts $4, $5, and $3.60, and selects Door 3."
+    },
+    "5": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1650.0,
+      "explanation": "The answer gives the correct value 19, a complete capacity-feasible and conservation-valid flow assignment, and a valid directed cut {S,B} of capacity 19 proving optimality."
+    }
+  },
+  "openai/gpt-5.2": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly excludes doors 2 and 3, computes the ordered weighted likelihoods as 1/3 and 3/5, applies the priors to obtain P(D4|H)=9/29, and correctly recommends keeping door 1."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 0.0,
+      "difficulty": 1900.0,
+      "explanation": "The answer correctly uses the union-toggle rule (with the intersection toggled once) to prove that every move flips every column's black-cell parity, while the target has mixed column parities and is therefore unreachable."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1680.0,
+      "explanation": "The answer gives a capacity-feasible 22-unit flow with conservation verified at every intermediate node and proves optimality using the valid 22-capacity cut {S,A,B,D}|{C,T}."
+    },
+    "4": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1810.0,
+      "explanation": "The answer gives a feasible 31-length schedule and a valid independent lower bound: M2 cannot begin before time 2 and has 29 total processing time, so every schedule has makespan at least 31."
+    },
+    "5": {
+      "terra_score": 2.9899999999999998,
+      "medium_score": 3.0,
+      "difficulty": 1910.0,
+      "explanation": "The response correctly derives B and E, verifies every suspect\u2019s truth-pattern, and supplies a complete uniqueness argument by excluding A and C as guilty before forcing E once B is guilty."
+    }
+  },
+  "moonshotai/kimi-k2.6": {
+    "1": {
+      "terra_score": 1.11,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The response correctly computes both posteriors and the keep-versus-switch comparison after gold, but it is truncated before completing the silver switching comparison, stating the full policy, or deriving the overall probability 73/144."
+    },
+    "2": {
+      "terra_score": 0.0,
+      "medium_score": 0.0,
+      "difficulty": 1900.0,
+      "explanation": "The candidate provides no completion time, schedule, or optimality justification."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1680.0,
+      "explanation": "The answer correctly verifies 21978 and gives a complete carry-based case analysis forcing a=2, e=8, b=1, d=7, and c=9 while eliminating all alternatives."
+    },
+    "4": {
+      "terra_score": 0.01,
+      "medium_score": 0.0,
+      "difficulty": 1810.0,
+      "explanation": "The candidate provides no answer, construction, parity formulation, or optimality justification."
+    },
+    "5": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1720.0,
+      "explanation": "The answer correctly counts 196 labeled nonadjacent placements and applies Burnside correctly: only the identity rotation contributes, edge reflections contribute zero, vertex reflections contribute 12 each, yielding 10 orbits."
+    }
+  },
+  "qwen/qwen3.6-plus": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly derives the posterior source-jar probabilities, accounts for depletion to obtain 45/76 for staying, correctly handles the conditional random-other-jar selection to obtain 82/171, and chooses option 1."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "The answer lists exactly all 25 required pairs and gives a valid forced-degree argument through A, B, C, D, and the final E-F edge, establishing uniqueness."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2170.0,
+      "explanation": "The answer correctly formulates and solves the modular dial equations, obtains and verifies press counts (4,1,3,0,2), and proves minimality using uniqueness modulo 5 and nonnegative press counts."
+    },
+    "4": {
+      "terra_score": 2.27,
+      "medium_score": 3.0,
+      "difficulty": 2360.0,
+      "explanation": "The schedule, optimum, and stated forced assignments are correct, but it omits the required explicit P\u2192R\u2192V\u2192X lower-bound proof and its stated reason that Bo cannot perform R is not valid without the missing bay-conflict argument."
+    },
+    "5": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2480.0,
+      "explanation": "It correctly decomposes paths at the two diagonal returns into two primitive Catalan excursions and a strictly diagonal-avoiding tail, applies the Catalan convolution and reflection count correctly, and sums to 429."
+    }
+  },
+  "ministral-14b-2512": {
+    "1": {
+      "terra_score": 0.19,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "The answer incorrectly treats the device as selecting a uniformly random card from all three (using k/3), whereas it displays green with probability 1 whenever at least one green was drawn, invalidating all three requested results."
+    },
+    "2": {
+      "terra_score": 1.0,
+      "medium_score": 1.0,
+      "difficulty": 1430.0,
+      "explanation": "Although it correctly names the second player, its proposed response to an opening removal of 2 is another 2, which is illegal, so the central pair-to-4 strategy and its claimed invariant fail."
+    },
+    "3": {
+      "terra_score": 2.88,
+      "medium_score": 3.0,
+      "difficulty": 1370.0,
+      "explanation": "The answer ultimately derives the necessary equation, exhaustively checks final digits 1 through 9 (discarding 1 through 3 because the five-digit prefix would begin with zero), and correctly identifies exactly the three valid numbers, although it contains a confused and unnecessary interim check for b=3 before repairing the presentation."
+    },
+    "4": {
+      "terra_score": 0.96,
+      "medium_score": 1.1,
+      "difficulty": 1490.0,
+      "explanation": "Although it recognizes an Euler/parity approach and correctly totals the original corridors as 10, it miscomputes degrees (C is 3 and E is 2), claims an impossible 12, and its listed route actually has length 17 rather than 12; the true minimum is 13."
+    },
+    "5": {
+      "terra_score": 0.9500000000000001,
+      "medium_score": 1.0,
+      "difficulty": 1470.0,
+      "explanation": "The final trio BDF is invalid because B's statement is false when both C and E are innocent, so it has only three true statements (C, E, and F), not four."
+    }
+  },
+  "mistral-small-2506": {
+    "1": {
+      "terra_score": 1.0,
+      "medium_score": 1.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer treats the evidence as merely two heads, using likelihood p^2 instead of the required full stopping-sequence likelihood p^2(1-p), so its central posterior conclusion is wrong; its later posterior arithmetic is also invalid."
+    },
+    "2": {
+      "terra_score": 0.08,
+      "medium_score": 0.1,
+      "difficulty": 1410.0,
+      "explanation": "The claimed 9-hour schedule is infeasible because it assigns technician 1 to C from 3\u20135 and E from 3\u20137 simultaneously, and the lower bound incorrectly treats a single critical path as sufficient despite the two final tasks and their shared prerequisites."
+    },
+    "3": {
+      "terra_score": 1.0,
+      "medium_score": 1.0,
+      "difficulty": 1240.0,
+      "explanation": "It correctly identifies the block count for a specified pair and the all-four count, but incorrectly multiplies by an extra 4! after already arranging all six units and fails to exclude cases with exactly three adjacent couples, yielding a fundamentally wrong total."
+    },
+    "4": {
+      "terra_score": 1.9200000000000002,
+      "medium_score": 3.0,
+      "difficulty": 1190.0,
+      "explanation": "The answer correctly identifies and verifies B and D as faulty in the E-functioning case, but its rejection of the E-faulty case is not logically established: it does not propagate the truth/falsehood constraints to show that A, C, and E are all faulty."
+    },
+    "5": {
+      "terra_score": 0.99,
+      "medium_score": 1.0,
+      "difficulty": 1300.0,
+      "explanation": "Although it correctly states the initial congruences, it falsely treats all remainders as one less than their divisors, so its LCM argument and answer 2519 do not satisfy the stated conditions."
+    }
+  },
+  "mistral-medium-2508": {
+    "1": {
+      "terra_score": 1.0,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "Although it correctly states that the third draw must be the second defective, it computes likelihoods as unordered three-draw compositions and thereby omits the required ordering, producing incorrect posteriors and remaining-defect probability; the final use decision is only coincidentally correct."
+    },
+    "2": {
+      "terra_score": 0.9500000000000001,
+      "medium_score": 1.0,
+      "difficulty": 1430.0,
+      "explanation": "The claimed optimum of 13 is false because a valid 12-unit schedule exists, and the displayed schedule also starts H at time 10 even though G does not finish until time 11."
+    },
+    "3": {
+      "terra_score": 2.59,
+      "medium_score": 3.0,
+      "difficulty": 1370.0,
+      "explanation": "Although it initially and incorrectly names B instead of D and includes confused claims about D's parity, it derives the uniquely forced parity vector A=C=D=F=1 and B=E=0, verifies it, and gives the correct minimum of 4."
+    },
+    "4": {
+      "terra_score": 1.87,
+      "medium_score": 2.1,
+      "difficulty": 1490.0,
+      "explanation": "The answer correctly finds and verifies 2178, but its uniqueness proof incorrectly claims that a=1 forces d=4, omitting the possible leading reversed digits d=5,6,7 and therefore not validly eliminating all a=1 cases."
+    },
+    "5": {
+      "terra_score": 0.05,
+      "medium_score": 1.1,
+      "difficulty": 1520.0,
+      "explanation": "Although it correctly says the first player wins, it gives the wrong initial move and an illegal response rule, since responding to an opponent's 2 with 2 repeats the immediately preceding move."
+    }
+  },
+  "deepseek/deepseek-v4-pro": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 2.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly applies conditional independence, obtains the posterior probabilities (equivalent to 64/91, 9/91, and 18/91), computes every action's expected loss, and correctly concludes that buying the diagnostic minimizes expected loss."
+    },
+    "2": {
+      "terra_score": 2.96,
+      "medium_score": 1.1,
+      "difficulty": 1620.0,
+      "explanation": "Although it initially presents invalid and inconsistent schedules, it explicitly corrects them and ends with a feasible two-worker schedule of length 14 plus a valid forced-timing/resource-conflict proof that 13 is impossible."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1570.0,
+      "explanation": "The answer correctly derives the square-subtraction Grundy values through 20, obtains initial xor 3, identifies exactly (14,1), (18,4), and (18,9) as moves to xor zero, and rules out every other legal first move."
+    },
+    "4": {
+      "terra_score": 0.0,
+      "medium_score": 0.0,
+      "difficulty": 1690.0,
+      "explanation": "The candidate provides no answer, reasoning, sequence, or justification for either the maximum or the minimum move count."
+    },
+    "5": {
+      "terra_score": 0.997,
+      "medium_score": 1.0,
+      "difficulty": 1600.0,
+      "explanation": "The barycentric coordinate for E is reversed: CE:EA=3:4 requires E=(3,0,4), not (4,0,3), so BE, all subsequent intersections, and the final area ratio are incorrect."
+    }
+  },
+  "openai/gpt-5.4": {
+    "1": {
+      "terra_score": 2.9899999999999998,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "Despite initially contradictory trial schedules and an opening claim of 11, the answer ultimately states the correct optimum of 12, gives a valid two-worker schedule, and supplies the required forced-timing contradiction ruling out 11."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "It gives the correct reject-two-then-first-record policy, correctly computes 13/30, and supplies a valid record/cutoff and exchangeability argument excluding benefits from detailed-history strategies."
+    },
+    "3": {
+      "terra_score": 0.02,
+      "medium_score": 0.1,
+      "difficulty": 2170.0,
+      "explanation": "Although it briefly states the correct minimum of 3, it repeatedly rejects correct/incorrect candidate sets and ends with the false claim that the minimum is 5, with an unverified press set and unsupported minimality assertion."
+    },
+    "4": {
+      "terra_score": 2.0,
+      "medium_score": 2.0,
+      "difficulty": 2010.0,
+      "explanation": "The setup and inclusion-exclusion through three intersections are correct, but it incorrectly claims the maximum matching is 3: the edges (1,2), (4,5), (6,7), and (8,9) form a size-4 matching, yielding the missing +384 term and total 16128."
+    },
+    "5": {
+      "terra_score": 2.02,
+      "medium_score": 3.0,
+      "difficulty": 2050.0,
+      "explanation": "The shared lab-state conditioning, posterior disease calculation, and third-test conditional-probability numerator are correct, but 0.010043819/0.0137773 is approximately 0.729012 (0.7290 to four significant figures), not 0.7289."
+    }
+  },
+  "anthropic/claude-opus-4.8": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer identifies all and only eligible multiples of 6, correctly weights them by reciprocal divisor counts, obtains favorable and total weights 7/24 and 20/24, and clearly explains why naive conditional counting is invalid."
+    },
+    "2": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "The answer correctly models the forbidden previous move, proves the complete losing-position classification by induction, and correctly concludes that taking 1 leaves Bob in losing state (20,1)."
+    },
+    "3": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2170.0,
+      "explanation": "The answer correctly proves the 15-unit upper bound via a valid cut, gives a capacity- and conservation-feasible 15-unit flow, and rigorously establishes the minimum maximum-flow cost of 60 by showing the downstream arcs are forced and optimizing the only remaining upstream split."
+    },
+    "4": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2360.0,
+      "explanation": "The candidate derives the unique assignment A knight and B, C, D, E knaves, correctly checks every statement, and exhausts all alternatives by splitting on A and then the forced opposite types of B and C."
+    },
+    "5": {
+      "terra_score": 2.15,
+      "medium_score": 3.0,
+      "difficulty": 2480.0,
+      "explanation": "The conclusion and explicit six-question code/decoder are correct, and the stated 8n<=2^n count does yield the needed 40>32 lower bound, but the answer incorrectly claims exact-one-error neighborhoods require minimum distance at least 3 and incorrectly applies radius-one balls of size n+1, which is not valid when an error is guaranteed rather than merely possible."
+    }
+  },
+  "openai/gpt-5.5": {
+    "1": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 1520.0,
+      "explanation": "The answer correctly derives the digit-set sum, lists all 10 eligible sets, uses valid inclusion-exclusion to obtain 30 no-adjacency arrangements, removes the 6 equal-endpoint cases, and concludes 240."
+    },
+    "2": {
+      "terra_score": 2.1599999999999997,
+      "medium_score": 3.0,
+      "difficulty": 1900.0,
+      "explanation": "The policy and final value $151/30 are correct, but the stated expected value of buying a second observation after an initial blue is arithmetically incorrect (the correct net value is 583/104, not 89/16), though it remains below 45/8."
+    },
+    "3": {
+      "terra_score": 2.9899999999999998,
+      "medium_score": 3.0,
+      "difficulty": 2170.0,
+      "explanation": "The answer correctly uses row/column parity XOR, gives a valid four-move sequence with the required parities, and establishes the lower bound by covering the two possible parity representations through four odd rows or four odd columns."
+    },
+    "4": {
+      "terra_score": 3.0,
+      "medium_score": 3.0,
+      "difficulty": 2360.0,
+      "explanation": "The answer gives a complete valid tournament realization with the required scores and correctly proves that the forced cyclic-triple count is 84 minus the score-determined 60 transitive triples, namely 24."
+    },
+    "5": {
+      "terra_score": 0.01,
+      "medium_score": 3.0,
+      "difficulty": 2480.0,
+      "explanation": "The candidate answer is empty and provides neither a minimum, a strategy, nor a lower-bound proof."
+    }
+  }
+}
