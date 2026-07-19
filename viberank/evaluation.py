@@ -252,6 +252,15 @@ def run_evaluation(config: EvaluationConfig) -> dict[str, Any]:
     holistic_active = holistic_off_reason is None
     holistic_final: dict[str, Any] | None = None
 
+    def _author_client(default_client):
+        provider = os.environ.get("VIBERANK_AUTHOR_PROVIDER", "").strip().lower()
+        model = os.environ.get("VIBERANK_AUTHOR_MODEL", "").strip()
+        if provider == "openrouter" and model:
+            return openrouter_client(model)
+        if provider == "mistral" and model:
+            return mistral_client(model)
+        return default_client
+
     grader_client = None
     if config.provider == "simulation":
         if config.target_elo is None:
@@ -263,12 +272,20 @@ def run_evaluation(config: EvaluationConfig) -> dict[str, Any]:
     elif config.provider == "mistral":
         target_client = mistral_client(config.model)
         grader_client = mistral_client()
-        author = MistralQuestionAuthor(grader_client) if question_mode == "authored" else None
+        author = (
+            MistralQuestionAuthor(_author_client(grader_client))
+            if question_mode == "authored"
+            else None
+        )
         grader = MistralGrader(grader_client)
     elif config.provider == "openrouter":
         target_client = openrouter_client(config.model)
         grader_client = mistral_client()
-        author = MistralQuestionAuthor(grader_client) if question_mode == "authored" else None
+        author = (
+            MistralQuestionAuthor(_author_client(grader_client))
+            if question_mode == "authored"
+            else None
+        )
         grader = MistralGrader(grader_client)
     else:
         raise ValueError("provider must be simulation, mistral, or openrouter")

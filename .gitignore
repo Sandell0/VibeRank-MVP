@@ -5,3 +5,5 @@ __pycache__/
 .env
 work/
 outputs/*.zip
+.demo/venv/
+*.output

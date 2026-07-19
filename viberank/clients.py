@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import urllib.error
@@ -84,7 +85,12 @@ class ChatClient:
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
             raise ProviderError(f"{self.provider_name} returned HTTP {exc.code}: {detail}") from exc
-        except (urllib.error.URLError, TimeoutError) as exc:
+        except (
+            urllib.error.URLError,
+            TimeoutError,
+            http.client.HTTPException,
+            ConnectionError,
+        ) as exc:
             raise ProviderError(f"Could not reach {self.provider_name}: {exc}") from exc
         try:
             content = result["choices"][0]["message"]["content"]

@@ -1,0 +1,107 @@
+[
+  {
+    "model": "openai/gpt-5.2",
+    "true": 1744.0,
+    "raw_final": 1950.0,
+    "raw_reads": [
+      1750.0,
+      1750.0,
+      1850.0,
+      1950.0,
+      1950.0
+    ],
+    "corrected": 1735.5,
+    "sigma": 108.2,
+    "error": -8.5
+  },
+  {
+    "model": "moonshotai/kimi-k2.6",
+    "true": 1758.0,
+    "raw_final": 1950.0,
+    "raw_reads": [
+      1800.0,
+      1850.0,
+      1900.0,
+      1900.0,
+      1950.0
+    ],
+    "corrected": 1735.5,
+    "sigma": 108.2,
+    "error": -22.5
+  },
+  {
+    "model": "qwen/qwen3.6-plus",
+    "true": 1759.0,
+    "raw_final": 1900.0,
+    "raw_reads": [
+      1800.0,
+      1850.0,
+      1900.0,
+      1900.0,
+      1900.0
+    ],
+    "corrected": 1702.5,
+    "sigma": 108.2,
+    "error": -56.5
+  },
+  {
+    "model": "deepseek/deepseek-v4-pro",
+    "true": 1775.0,
+    "raw_final": 1750.0,
+    "raw_reads": [
+      1800.0,
+      1850.0,
+      1850.0,
+      1900.0,
+      1750.0
+    ],
+    "corrected": 1603.5,
+    "sigma": 108.2,
+    "error": -171.5
+  },
+  {
+    "model": "openai/gpt-5.4",
+    "true": 1829.0,
+    "raw_final": 1950.0,
+    "raw_reads": [
+      1800.0,
+      1850.0,
+      1950.0,
+      1900.0,
+      1950.0
+    ],
+    "corrected": 1735.5,
+    "sigma": 108.2,
+    "error": -93.5
+  },
+  {
+    "model": "anthropic/claude-opus-4.8",
+    "true": 1906.0,
+    "raw_final": 1950.0,
+    "raw_reads": [
+      1800.0,
+      1750.0,
+      1900.0,
+      1950.0,
+      1950.0
+    ],
+    "corrected": 1735.5,
+    "sigma": 108.2,
+    "error": -170.5
+  },
+  {
+    "model": "openai/gpt-5.5",
+    "true": 1911.0,
+    "raw_final": 1950.0,
+    "raw_reads": [
+      1800.0,
+      1850.0,
+      1900.0,
+      1900.0,
+      1950.0
+    ],
+    "corrected": 1735.5,
+    "sigma": 108.2,
+    "error": -175.5
+  }
+]

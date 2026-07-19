@@ -1,0 +1,177 @@
+[
+  {
+    "model": "meta-llama/llama-3.2-1b-instruct",
+    "true": 1210.0,
+    "raw_final": 1250.0,
+    "estimate": 1080.1,
+    "error": -129.9
+  },
+  {
+    "model": "mistral-tiny-2407",
+    "true": 1339.0,
+    "raw_final": 1550.0,
+    "estimate": 1559.1,
+    "error": 220.1
+  },
+  {
+    "model": "meta-llama/llama-3.2-3b-instruct",
+    "true": 1371.0,
+    "raw_final": 1450.0,
+    "estimate": 1407.2,
+    "error": 36.2
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "true": 1440.0,
+    "raw_final": 1250.0,
+    "estimate": 1062.5,
+    "error": -377.5
+  },
+  {
+    "model": "open-mistral-nemo-2407",
+    "true": 1466.0,
+    "raw_final": 1350.0,
+    "estimate": 1237.1,
+    "error": -228.9
+  },
+  {
+    "model": "ministral-3b-2512",
+    "true": 1480.0,
+    "raw_final": 1550.0,
+    "estimate": 1548.8,
+    "error": 68.8
+  },
+  {
+    "model": "microsoft/phi-4",
+    "true": 1485.0,
+    "raw_final": 1550.0,
+    "estimate": 1548.5,
+    "error": 63.5
+  },
+  {
+    "model": "ministral-8b-2512",
+    "true": 1521.0,
+    "raw_final": 1550.0,
+    "estimate": 1546.5,
+    "error": 25.5
+  },
+  {
+    "model": "ministral-14b-2512",
+    "true": 1535.0,
+    "raw_final": 1550.0,
+    "estimate": 1545.8,
+    "error": 10.8
+  },
+  {
+    "model": "meta-llama/llama-3.3-70b-instruct",
+    "true": 1546.0,
+    "raw_final": 1550.0,
+    "estimate": 1545.2,
+    "error": -0.8
+  },
+  {
+    "model": "mistral-small-2506",
+    "true": 1574.0,
+    "raw_final": 1550.0,
+    "estimate": 1544.0,
+    "error": -30.0
+  },
+  {
+    "model": "google/gemma-3-27b-it",
+    "true": 1588.0,
+    "raw_final": 1650.0,
+    "estimate": 1691.1,
+    "error": 103.1
+  },
+  {
+    "model": "openai/gpt-oss-120b",
+    "true": 1599.0,
+    "raw_final": 1750.0,
+    "estimate": 1838.0,
+    "error": 239.0
+  },
+  {
+    "model": "qwen/qwen3-235b-a22b-2507",
+    "true": 1625.0,
+    "raw_final": 1750.0,
+    "estimate": 1838.8,
+    "error": 213.8
+  },
+  {
+    "model": "mistral-medium-2508",
+    "true": 1628.0,
+    "raw_final": 1350.0,
+    "estimate": 1249.9,
+    "error": -378.1
+  },
+  {
+    "model": "deepseek/deepseek-chat-v3.1",
+    "true": 1667.0,
+    "raw_final": 1750.0,
+    "estimate": 1839.0,
+    "error": 172.0
+  },
+  {
+    "model": "moonshotai/kimi-k2-0905",
+    "true": 1688.0,
+    "raw_final": 1650.0,
+    "estimate": 1687.1,
+    "error": -0.9
+  },
+  {
+    "model": "openai/gpt-5.2",
+    "true": 1744.0,
+    "raw_final": 1750.0,
+    "estimate": 1836.6,
+    "error": 92.6
+  },
+  {
+    "model": "moonshotai/kimi-k2.5",
+    "true": 1749.0,
+    "raw_final": 1750.0,
+    "estimate": 1836.3,
+    "error": 87.3
+  },
+  {
+    "model": "moonshotai/kimi-k2.6",
+    "true": 1758.0,
+    "raw_final": 1750.0,
+    "estimate": 1835.7,
+    "error": 77.7
+  },
+  {
+    "model": "qwen/qwen3.6-plus",
+    "true": 1759.0,
+    "raw_final": 1650.0,
+    "estimate": 1682.9,
+    "error": -76.1
+  },
+  {
+    "model": "deepseek/deepseek-v4-pro",
+    "true": 1775.0,
+    "raw_final": 1650.0,
+    "estimate": 1681.8,
+    "error": -93.2
+  },
+  {
+    "model": "openai/gpt-5.4",
+    "true": 1829.0,
+    "raw_final": 1750.0,
+    "estimate": 1829.1,
+    "error": 0.1
+  },
+  {
+    "model": "anthropic/claude-opus-4.8",
+    "true": 1906.0,
+    "raw_final": 1750.0,
+    "estimate": 1817.6,
+    "error": -88.4
+  },
+  {
+    "model": "openai/gpt-5.5",
+    "true": 1911.0,
+    "raw_final": 1750.0,
+    "estimate": 1816.7,
+    "error": -94.3
+  }
+]

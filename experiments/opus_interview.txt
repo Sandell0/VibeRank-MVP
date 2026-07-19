@@ -1,0 +1,248 @@
+==== Q1 (author target 1520) River Crossing with Constraints
+PROMPT: Four people need to cross a rickety bridge at night. They have one flashlight and the bridge can only hold two people at a time. The group consists of Alice (takes 1 minute to cross), Bob (2 minutes), Carol (5 minutes), and Dave (10 minutes). When two people cross together, they must move at the slower person's pace. The flashlight must be carried back and forth for each crossing. What is the minimum total time required for all four to cross the bridge, and what is the sequence of crossings that achieves this time?
+
+ANSWER: # Minimum Time: 17 Minutes
+
+## The Optimal Sequence
+
+The key insight is to make the two slowest people (Carol and Dave) cross **together**, so their times overlap instead of adding up separately.
+
+| Step | Action | People Crossing | Time | Cumulative |
+|------|--------|----------------|------|------------|
+| 1 | Cross over | Alice + Bob | 2 min | 2 |
+| 2 | Return | Alice | 1 min | 3 |
+| 3 | Cross over | Carol + Dave | 10 min | 13 |
+| 4 | Return | Bob | 2 min | 15 |
+| 5 | Cross over | Alice + Bob | 2 min | 17 |
+
+**Total: 17 minutes**
+
+## Why This Works
+
+The two slow people (Carol at 5 min and Dave at 10 min) are the main problem. If they crossed separately with faster people, we'd pay for the 10-minute trip *and* separately pay for the 5-minute trip. By sending them **together**, we only pay 10 minutes for both.
+
+To set this up, we use the fastest people (Alice and Bob) as "shuttles":
+
+- **Steps 1–2:** Alice and Bob cross first, and Alice returns the flashlight. This "pre-positions" the fast pair, costing only 3 minutes.
+- **Step 3:** Carol and Dave cross together (10 min). This is the expensive trip, but it moves *both* slow people at once.
+- **Steps 4–5:** Bob is already waiting on the far side, so he brings the light back (2 min), then he and Alice make the final crossing (2 min).
+
+## Comparing to the Naive Approach
+
+A tempting but slower strategy is to always send the fastest person (Alice) as the escort:
+
+- Alice + Dave cross (10), Alice returns (1), Alice + Carol cross (5), Alice returns (1), Alice + Bob cross (2) = **19 minutes**
+
+This fails because it forces Carol and Dave to cross on *separate* trips, so you pay 10 + 5 = 15 minutes for the two slow people rather than just 10.
+
+The **17-minute solution** is optimal because it minimizes the number of expensive slow crossings by pairing the two slowest travelers together.
+
+SCORE 3.00: The answer provides the correct minimum time (17 minutes) and a valid sequence that adheres to all bridge constraints.
+
+==== Q2 (author target 1900) The Missing Page Mystery
+PROMPT: A librarian finds that a 100-page book is missing exactly one page. She notices that the sum of the page numbers of the remaining pages is 4999. Which page is missing? Assume the book's pages are numbered consecutively starting from 1, and each physical sheet of paper contains two page numbers (front and back).
+
+ANSWER: I need to find which page is missing.
+
+**Setting up the sum:**
+
+The sum of all pages from 1 to 100 is:
+$$\frac{100 \times 101}{2} = 5050$$
+
+The remaining pages sum to 4999, so the missing amount is:
+$$5050 - 4999 = 51$$
+
+**Considering the physical sheet:**
+
+This is the key subtlety. Pages are printed on sheets, where each sheet holds two page numbers (front and back). Removing a physical *page* (one side) isn't physically possible without removing the sheet — but the problem states exactly one *page* is missing, and the sum decreased by 51.
+
+If only a single page number were missing, page 51 would be the answer, since removing page 51 alone reduces the sum by 51. So the missing page number is **page 51**.
+
+**Checking consistency with the sheet structure:**
+
+Let me verify how pages pair on sheets. Sheet 1 has pages 1 and 2, sheet 2 has pages 3 and 4, and so on. In general, sheet *n* contains pages $2n-1$ and $2n$.
+
+Page 51 is odd, so it sits on sheet 26 together with page 52. If a whole physical sheet were torn out, both 51 and 52 would go missing, reducing the sum by $51 + 52 = 103$, not 51. That would leave a sum of $5050 - 103 = 4947$, which contradicts the given 4999.
+
+Since the observed reduction is exactly 51, only **page 51** is missing.
+
+**Answer:** The missing page is **page 51**.
+
+SCORE 1.00: The answer correctly calculates the missing sum (51) but fails to account for the physical sheet constraint, leading to an incorrect conclusion that page 51 alone is missing.
+
+==== Q3 (author target 1820) The Coin Weighing Dilemma
+PROMPT: You have twelve identical-looking coins, one of which is counterfeit. The counterfeit coin is either heavier or lighter than the real coins. Using a balance scale only three times, determine which coin is counterfeit and whether it is heavier or lighter. Describe the exact steps for each weighing and how to interpret the results to identify the counterfeit coin and its weight difference.
+
+ANSWER: # The Twelve Coins Problem
+
+Label the coins 1 through 12. I'll describe a strategy where each weighing's outcome (left heavy, balanced, or right heavy) narrows down the answer.
+
+## Weighing 1: {1, 2, 3, 4} vs {5, 6, 7, 8}
+
+Set coins 9, 10, 11, 12 aside. Three outcomes:
+
+- **Balanced** → fake is among {9, 10, 11, 12}
+- **Left heavy** → fake is in {1,2,3,4} (heavy) OR in {5,6,7,8} (light)
+- **Right heavy** → fake is in {5,6,7,8} (heavy) OR in {1,2,3,4} (light)
+
+---
+
+## CASE A: Weighing 1 Balanced (fake in {9,10,11,12})
+
+All of 1–8 are known genuine.
+
+**Weighing 2: {9, 10, 11} vs {1, 2, 3}** (right side genuine)
+
+- **Balanced** → fake is 12. 
+  - **Weighing 3: 12 vs 1.** Tells if 12 is heavy or light.
+- **Left heavy** → one of {9,10,11} is heavy.
+  - **Weighing 3: 9 vs 10.** If balanced, 11 is heavy; if unbalanced, the heavier pan holds the fake (heavy).
+- **Right heavy** → one of {9,10,11} is light.
+  - **Weighing 3: 9 vs 10.** If balanced, 11 is light; if unbalanced, the lighter pan holds the fake (light).
+
+---
+
+## CASE B: Weighing 1 Left Heavy
+Suspects: {1,2,3,4} possibly heavy, {5,6,7,8} possibly light. Coins 9–12 are genuine.
+
+**Weighing 2: {1, 2, 5} vs {3, 6, 9}** (9 is genuine)
+
+- **Balanced** → fake is among the untested {4 (heavy), 7 (light), 8 (light)}.
+  - **Weighing 3: 7 vs 8.** 
+    - Balanced → 4 is heavy.
+    - Left heavy → 8 is light; Right heavy → 7 is light.
+
+- **Left heavy** → consistent options: 1 or 2 is heavy, OR 6 is light.
+  - **Weighing 3: 1 vs 2.** 
+    - Left heavy → 1 heavy; Right heavy → 2 heavy; Balanced → 6 light.
+
+- **Right heavy** → consistent options: 3 is heavy, OR 5 is light.
+  (Coins 1,2 moved to the now-lighter pan can't explain this; only 3 going up or 5 going up.)
+  - **Weighing 3: 3 vs 9** (9 genuine).
+    - Left heavy → 3 heavy; Balanced → 5 light.
+
+---
+
+## CASE C: Weighing 1 Right Heavy
+Suspects: {5,6,7,8} possibly heavy, {1,2,3,4} possibly light. This is the mirror image of Case B.
+
+**Weighing 2: {5, 6, 1} vs {7, 2, 9}** (9 genuine)
+
+- **Balanced** → fake among {8 (heavy), 3 (light), 4 (light)}.
+  - **Weighing 3: 3 vs 4.** Balanced → 8 heavy; Left heavy → 4 light; Right heavy → 3 light.
+
+- **Left heavy** → 5 or 6 heavy, OR 2 light.
+  - **Weighing 3: 5 vs 6.** Left heavy → 5 heavy; Right heavy → 6 heavy; Balanced → 2 light.
+
+- **Right heavy** → 7 heavy, OR 1 light.
+  - **Weighing 3: 7 vs 9.** Right heavy → 7 heavy; Balanced → 1 light.
+
+---
+
+## Why This Works
+
+The key principle: each weighing has **three** possible outcomes, so three weighings distinguish up to 3³ = 27 possibilities. Here we must identify 1 of 12 coins **and** whether it's heavy or light — that's 24 possibilities, which fits within 27.
+
+The design ensures that after each weighing, the remaining possibilities always split as evenly as possible across the three outcomes (never more than the next stage can resolve). Notice in Weighing 2 of Cases B and C, we deliberately **rotate coins between pans** (moving some suspected-heavy and suspected-light coins to opposite sides and introducing a known-genuine coin) so that each outcome points to a distinct, resolvable subset.
+
+SCORE 3.00: The answer provides a complete, logically consistent, and unambiguous sequence of weighings covering all possible outcomes, correctly identifying the counterfeit coin and its weight difference.
+
+==== Q4 (author target 1960) The Poisoned Chalice
+PROMPT: A king must choose a new royal advisor from two candidates: Alice and Bob. The king offers each a chalice of wine. One chalice is poisoned (fatal if ingested), the other is safe. The king allows each candidate to select a chalice, but they must drink from it immediately. Alice goes first. She picks a chalice at random and drinks from it, surviving. Now it is Bob’s turn. He sees Alice has survived. What should Bob do to maximize his probability of survival? Explain your reasoning.
+
+ANSWER: # Bob's Decision
+
+Bob should drink from the **other chalice** (the one Alice did not choose).
+
+## Reasoning
+
+There are two chalices: one poisoned, one safe. Alice picked one at random and drank from it, and she survived.
+
+The key insight: **Alice survived, which means her chalice was the safe one.** The poison is fatal, so surviving proves her chalice was not poisoned.
+
+Since there is exactly one poisoned chalice and one safe chalice, and we now know Alice's chalice is the safe one, the *remaining* chalice must be the poisoned one.
+
+Wait—this reveals the actual situation clearly:
+
+- Alice's chalice = safe (proven by her survival)
+- The other chalice = poisoned
+
+So if Bob wants to **survive**, he faces a problem: the only remaining chalice available to him (the other one) is the poisoned one.
+
+## The Real Answer
+
+Bob's survival depends on the rules. If Bob is forced to drink and there are only these two chalices, then:
+
+- The safe chalice has already been consumed/identified by Alice.
+- The remaining chalice is guaranteed poisoned.
+
+If Bob **must** drink from a chalice and only the untouched one is available to him, he is doomed regardless of choice—the untouched chalice is certainly poisoned.
+
+**However**, if Bob is allowed to drink from Alice's chalice (which still may contain safe wine, since the poison identity is about which chalice, not whether Alice drank it all), then Bob should drink from **Alice's chalice**, because her survival guarantees it is the safe one. This gives him a **100% chance of survival**, versus 0% for the untouched chalice.
+
+## Conclusion
+
+Bob should drink from **Alice's chalice** if permitted, since her survival proves it is safe (probability of survival = 1). Choosing the untouched chalice would be certain death, since the single poison must be there.
+
+SCORE 3.00: The answer correctly deduces that Alice's survival proves her chalice is safe and concludes Bob should drink from Alice's chalice for 100% survival.
+
+==== Q5 (author target 2070) The Silent Auction
+PROMPT: Three art collectors—Alice, Bob, and Carol—are bidding in a silent auction for a single painting. Each submits a sealed bid. The highest bidder wins the painting and pays their bid. If there is a tie for the highest bid, the painting is sold to one of the highest bidders at random (each with equal probability). All bidders are rational and aim to maximize their expected utility. They know the painting is worth exactly $100 to each of them, and they can bid any non-negative integer dollar amount. What is the Nash equilibrium bidding strategy for each bidder, and what is the expected price the auctioneer will receive? Assume the bidders are symmetric and cannot communicate or collude.
+
+ANSWER: # Setting Up the Problem
+
+This is a **first-price sealed-bid auction** where the winner pays their own bid. Each bidder values the painting at $100 and wins utility = (100 − bid) if they win, or 0 if they lose. Ties are broken randomly among the highest bidders.
+
+# Finding the Equilibrium
+
+Let me look for a symmetric pure-strategy Nash equilibrium where all three players bid the same amount, $b$.
+
+**Checking whether everyone bidding $b$ can be an equilibrium:**
+
+If all three bid $b$, each wins with probability 1/3, so each earns expected utility:
+$$\frac{1}{3}(100 - b)$$
+
+Now consider a deviation. A player could bid $b + 1$ and win **for certain**, earning:
+$$100 - (b + 1) = 99 - b$$
+
+For no player to want to deviate upward, we need:
+$$\frac{1}{3}(100 - b) \geq 99 - b$$
+
+Solving:
+$$100 - b \geq 297 - 3b$$
+$$2b \geq 197$$
+$$b \geq 98.5$$
+
+So $b \geq 99$ (integer bids).
+
+**Checking the downward deviation.** A player could also lower their bid and simply lose (utility 0). If $b > 100$, they'd be paying more than the value when they win, so bidding high wouldn't make sense. We need the equilibrium payoff to be nonnegative:
+$$\frac{1}{3}(100 - b) \geq 0 \implies b \leq 100$$
+
+**Combining both conditions:** $99 \leq b \leq 100$.
+
+# Examining the Candidates
+
+**Case b = 100:** Each player earns $\frac{1}{3}(100-100) = 0$. Deviating to bid 101 gives negative utility; deviating down gives 0. This is an equilibrium, but it's weak (everyone is indifferent, earning zero).
+
+**Case b = 99:** Each player earns $\frac{1}{3}(100 - 99) = \frac{1}{3}$.
+- Deviating up to 100 gives $100 - 100 = 0 < \frac{1}{3}$. ✗ No incentive.
+- Deviating down to 98 gives 0 (loses). ✗ No incentive.
+
+So **everyone bidding $99** is a stable Nash equilibrium where players earn positive surplus.
+
+**Why competition drives bids this high:** With three competitors valuing the item identically, the pressure to outbid rivals pushes bids up to (nearly) the full value. The winner captures almost no surplus—the price is bid up to just below the common value.
+
+# The Answer
+
+**Equilibrium strategy:** Each bidder bids **$99**.
+
+- No one gains by bidding $100 (that yields zero surplus, worse than the $1/3 expected surplus from tying at $99).
+- No one gains by bidding less (they'd lose and get nothing).
+
+**Expected price the auctioneer receives:** Since all three bid $99 and one of them wins (paying their bid of $99), the auctioneer receives:
+$$\boxed{\$99}$$
+
+The auctioneer captures essentially the entire value of the painting, and the three symmetric bidders split a total surplus of only $1 (each with expected surplus $1/3).
+
+SCORE 1.00: The candidate answer incorrectly identifies a pure-strategy equilibrium (bidding $99) as the Nash equilibrium, ignoring the mixed-strategy nature of the true equilibrium.
+

@@ -1,0 +1,1454 @@
+{
+  "grader_model": "mistral-medium-3.5",
+  "models": {
+    "openai/gpt-5.2": {
+      "provider": "openrouter",
+      "public_elo": 1744.0,
+      "leaderboard_row": "GPT-5.2",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "Turn over **A** and **7**.\n\n- **A**: The rule applies to vowels. If **A** has an **odd** number on the back, the rule is violated.  \n- **7**: A violation can also occur if an **odd** number has a **vowel** on the back (that would create \u201cvowel \u2192 odd\u201d), so **7** must be checked.\n\nYou do **not** need to turn over **D** (rule says nothing about consonants) or **4** (an even number may have either a vowel or consonant without violating the rule).",
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 177,
+            "total_tokens": 285
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "Use Bayes\u2019 theorem:\n\n\\[\nP(B\\mid D)=\\frac{P(D\\mid B)\\,P(B)}{P(D)}\n\\]\n\nGiven:\n- \\(P(A)=0.30,\\; P(D\\mid A)=0.02\\)\n- \\(P(B)=0.70,\\; P(D\\mid B)=0.05\\)\n\nFirst compute \\(P(D)\\) (total probability of defect):\n\n\\[\nP(D)=P(D\\mid A)P(A)+P(D\\mid B)P(B)\n=0.02(0.30)+0.05(0.70)\n=0.006+0.035\n=0.041\n\\]\n\nNow compute \\(P(B\\mid D)\\):\n\n\\[\nP(B\\mid D)=\\frac{0.05(0.70)}{0.041}\n=\\frac{0.035}{0.041}\n\\approx 0.8537\n\\]\n\nSo the probability the defective item came from Line B is approximately **0.854** (about **85.4%**).",
+          "usage": {
+            "prompt_tokens": 104,
+            "completion_tokens": 231,
+            "total_tokens": 335
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "`mystery([-4, 2, -1, 3, -5, 4, 4, -10])` returns **8**.\n\nThis function is a form of **Kadane\u2019s algorithm** for the **maximum subarray sum**, except it allows the \u201cempty subarray\u201d with sum 0 (because it never lets `current` go below 0).\n\n### What `current` and `best` mean\n- `current` = the maximum sum of any contiguous subarray that **ends at the current element**, but clamped to be at least 0 (so if extending would go negative, it \u201cstarts over\u201d at 0).\n- `best` = the maximum value `current` has taken so far, i.e., the best (largest) subarray sum seen anywhere up to this point.\n\n### Step-by-step for `[-4, 2, -1, 3, -5, 4, 4, -10]`\n\nStart: `current = 0`, `best = 0`\n\n| x     | current = max(0, current + x) | best = max(best, current) | Interpretation |\n|------:|-------------------------------:|----------------------------:|----------------|\n| -4    | max(0, 0-4) = 0                | max(0, 0) = 0              | drop/reset (negative sum) |\n| 2     | max(0, 0+2) = 2                | max(0, 2) = 2              | start subarray [2] |\n| -1    | max(0, 2-1) = 1                | max(2, 1) = 2              | extend to [2, -1] |\n| 3     | max(0, 1+3) = 4                | max(2, 4) = 4              | extend to [2, -1, 3] |\n| -5    | max(0, 4-5) = 0                | max(4, 0) = 4              | sum went negative, reset |\n| 4     | max(0, 0+4) = 4                | max(4, 4) = 4              | start subarray [4] |\n| 4     | max(0, 4+4) = 8                | max(4, 8) = 8              | extend to [4, 4] (best) |\n| -10   | max(0, 8-10) = 0               | max(8, 0) = 8              | reset |\n\nFinal answer: **8**, achieved by the subarray `[4, 4]`.\n\n### Behavior on a non-empty list of only negative numbers\nIf the list contains only negatives (e.g. `[-3, -1, -7]`), then `current` becomes `0` at every step and `best` stays `0`, so the function returns **0**.  \nThat corresponds to choosing the **empty subarray** rather than any negative-sum subarray.",
+          "usage": {
+            "prompt_tokens": 139,
+            "completion_tokens": 876,
+            "total_tokens": 1015
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "There are \\( \\frac{4!}{2!2!}=6 \\) different orders of the multiset \\(\\{A,A,B,B\\}\\). Compute the final display for each.\n\nLet \\(A:x\\mapsto x+4\\) and \\(B:x\\mapsto 2x\\), starting from \\(0\\).\n\n| Order | Intermediate values | Final |\n|---|---|---|\n| \\(AABB\\) | \\(0 \\xrightarrow{A}4 \\xrightarrow{A}8 \\xrightarrow{B}16 \\xrightarrow{B}32\\) | \\(32\\) |\n| \\(ABAB\\) | \\(0 \\xrightarrow{A}4 \\xrightarrow{B}8 \\xrightarrow{A}12 \\xrightarrow{B}24\\) | \\(24\\) |\n| \\(ABBA\\) | \\(0 \\xrightarrow{A}4 \\xrightarrow{B}8 \\xrightarrow{B}16 \\xrightarrow{A}20\\) | \\(20\\) |\n| \\(BAAB\\) | \\(0 \\xrightarrow{B}0 \\xrightarrow{A}4 \\xrightarrow{A}8 \\xrightarrow{B}16\\) | \\(16\\) |\n| \\(BABA\\) | \\(0 \\xrightarrow{B}0 \\xrightarrow{A}4 \\xrightarrow{B}8 \\xrightarrow{A}12\\) | \\(12\\) |\n| \\(BBAA\\) | \\(0 \\xrightarrow{B}0 \\xrightarrow{B}0 \\xrightarrow{A}4 \\xrightarrow{A}8\\) | \\(8\\) |\n\nSince these are all 6 possible orders, no outcomes are missing.\n\n**All possible final displayed values:**  \n\\[\n\\boxed{8,\\ 12,\\ 16,\\ 20,\\ 24,\\ 32}\n\\]",
+          "usage": {
+            "prompt_tokens": 93,
+            "completion_tokens": 827,
+            "total_tokens": 920
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "Treat time 0 as the project start. With unlimited workers, each task starts as soon as its predecessors are finished.\n\n**Durations (hours):**  \nA=3, B=2, C=4, D=5, E=2, F=3\n\n**Precedence:**  \n- C after A  \n- D after A and B  \n- E after C  \n- F after D and E  \n\n## Earliest start/finish times\n| Task | Predecessors | Earliest Start (ES) | Earliest Finish (EF) |\n|------|--------------|---------------------|----------------------|\n| A | \u2014 | 0 | 0+3 = **3** |\n| B | \u2014 | 0 | 0+2 = **2** |\n| C | A | ES = EF(A)=3 | 3+4 = **7** |\n| D | A, B | ES = max(EF(A), EF(B)) = max(3,2)=3 | 3+5 = **8** |\n| E | C | ES = EF(C)=7 | 7+2 = **9** |\n| F | D, E | ES = max(EF(D), EF(E)) = max(8,9)=9 | 9+3 = **12** |\n\n## Project finish time\nThe project finishes when **F** finishes: **12 hours**.\n\n## Chain that determines the finish (critical chain)\nSince **F** can only start after both **D** and **E**, its start is controlled by the later of the two:\n- D finishes at 8\n- E finishes at 9  \u2190 later, so it controls F\u2019s start\n\nSo the determining chain is:\n**A \u2192 C \u2192 E \u2192 F** with total duration \\(3 + 4 + 2 + 3 = 12\\) hours.\n\n(Other path into F is **A \u2192 D \u2192 F** = \\(3+5+3=11\\) hours, and **B \u2192 D \u2192 F** = \\(2+5+3=10\\) hours, both shorter.)",
+          "usage": {
+            "prompt_tokens": 134,
+            "completion_tokens": 441,
+            "total_tokens": 575
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly identifies A and 7, explains both cases (vowel with odd number and odd number with vowel), and justifies excluding D and 4.",
+          "usage": {
+            "prompt_tokens": 809,
+            "completion_tokens": 180,
+            "total_tokens": 989
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' theorem, computes the numerator (0.035) and denominator (0.041), and concludes 35/41 \u2248 85.4%.",
+          "usage": {
+            "prompt_tokens": 1018,
+            "completion_tokens": 200,
+            "total_tokens": 1218
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "None",
+          "explanation": "The answer correctly computes the return value, accurately describes current and best, and addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1489,
+            "completion_tokens": 170,
+            "total_tokens": 1659
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six values, evaluates all orderings, and justifies completeness via combinatorial argument.",
+          "usage": {
+            "prompt_tokens": 1121,
+            "completion_tokens": 177,
+            "total_tokens": 1298
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 2000.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project finish time as 12 hours, identifies A\u2192C\u2192E\u2192F as the critical chain, and rigorously reasons the merge timing before F.",
+          "usage": {
+            "prompt_tokens": 1216,
+            "completion_tokens": 192,
+            "total_tokens": 1408
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1950.0,
+        "low_90": 1850.0,
+        "high_90": 2050.0,
+        "assessment": "The model demonstrates strong, consistent reasoning across all five questions. It correctly solves the Wason selection task (Q1), applies Bayes' theorem accurately (Q2), identifies and explains Kadane's algorithm with edge-case behavior (Q3), exhaustively enumerates all permutations for the button-press problem (Q4), and computes the critical path in a project network (Q5). No errors were observed, and explanations were precise and complete. The 90% interval reflects uncertainty from the small sample size (5 questions) but remains high due to the model's flawless performance on diverse, non-trivial tasks.",
+        "usage": {
+          "prompt_tokens": 3382,
+          "completion_tokens": 172,
+          "total_tokens": 3554
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1750.0,
+          "low_90": 1600.0,
+          "high_90": 1900.0,
+          "assessment": "Correctly identifies A and 7 as the only cards to turn over, with precise reasoning for both the direct case (A) and the contrapositive (7). Explicitly rules out D and 4 with valid logic. Demonstrates strong logical reasoning and understanding of the Wason selection task.",
+          "usage": {
+            "prompt_tokens": 551,
+            "completion_tokens": 102,
+            "total_tokens": 653
+          }
+        },
+        {
+          "mean_elo": 1750.0,
+          "low_90": 1600.0,
+          "high_90": 1900.0,
+          "assessment": "Model correctly solved both problems with precise reasoning. For Q1, it identified the necessary cards (A and 7) and explained the contrapositive logic. For Q2, it applied Bayes' theorem accurately, computed intermediate steps correctly, and arrived at the exact reference answer. No errors detected, but sample size is small (2 questions).",
+          "usage": {
+            "prompt_tokens": 1071,
+            "completion_tokens": 110,
+            "total_tokens": 1181
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubric. The model demonstrates strong logical consistency, mathematical accuracy (Bayes' theorem, Kadane's algorithm), and clear explanations. Uncertainty stems from the small sample size (3 questions), but performance aligns with a high-end frontier model.",
+          "usage": {
+            "prompt_tokens": 2062,
+            "completion_tokens": 112,
+            "total_tokens": 2174
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong reasoning across all four questions: correct selection and explanation for the Wason selection task (Q1), accurate Bayes' theorem application with precise calculations (Q2), full understanding of Kadane's algorithm variant with step-by-step justification (Q3), and exhaustive enumeration of all permutations for the button-pressing problem (Q4). No errors detected; depth and correctness suggest frontier-level capability.",
+          "usage": {
+            "prompt_tokens": 2657,
+            "completion_tokens": 128,
+            "total_tokens": 2785
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong, consistent reasoning across all five questions. It correctly solves the Wason selection task (Q1), applies Bayes' theorem accurately (Q2), identifies and explains Kadane's algorithm with edge-case behavior (Q3), exhaustively enumerates all permutations for the button-press problem (Q4), and computes the critical path in a project network (Q5). No errors were observed, and explanations were precise and complete. The 90% interval reflects uncertainty from the small sample size (5 questions) but remains high due to the model's flawless performance on diverse, non-trivial tasks.",
+          "usage": {
+            "prompt_tokens": 3382,
+            "completion_tokens": 172,
+            "total_tokens": 3554
+          }
+        }
+      ]
+    },
+    "moonshotai/kimi-k2.6": {
+      "provider": "openrouter",
+      "public_elo": 1758.0,
+      "leaderboard_row": "Kimi K2.6",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "Turn over the **A** and the **7**.\n\n- **A** must be turned because it shows a vowel. The rule requires a vowel to have an even number on the other side, so you must check that the reverse is not an odd number.\n- **7** must be turned because it shows an odd number (i.e., not even). By the contrapositive of the rule, an odd number cannot have a vowel on its other side; if it does, the rule is broken.\n\nYou do **not** need to turn over **D** (a consonant, so the rule imposes no requirement) or **4** (an even number; the rule does not say that only vowels may have even numbers on the reverse).",
+          "usage": {
+            "prompt_tokens": 111,
+            "completion_tokens": 773,
+            "total_tokens": 884
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "Let $A$, $B$, and $D$ denote the events that an item came from Line A, Line B, and is defective, respectively.\n\nGiven:\n- $P(A) = 0.30$\n- $P(B) = 0.70$\n- $P(D \\mid A) = 0.02$\n- $P(D \\mid B) = 0.05$\n\nBy the law of total probability, the overall probability of selecting a defective item is:\n$$\nP(D) = P(D \\mid A)P(A) + P(D \\mid B)P(B)\n$$\n$$\nP(D) = (0.02)(0.30) + (0.05)(0.70) = 0.006 + 0.035 = 0.041\n$$\n\nBy Bayes' theorem, the probability that a defective item came from Line B is:\n$$\nP(B \\mid D) = \\frac{P(D \\mid B)P(B)}{P(D)} = \\frac{0.035}{0.041} = \\frac{35}{41}\n$$\n\nSo the probability is $\\frac{35}{41} \\approx 0.8537$ (about **85.37%**).",
+          "usage": {
+            "prompt_tokens": 106,
+            "completion_tokens": 709,
+            "total_tokens": 815
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "The function returns **8**.\n\nHere is the step-by-step trace for `mystery([-4, 2, -1, 3, -5, 4, 4, -10])`:\n\n| `x` | `current = max(0, current + x)` | `best = max(best, current)` |\n|-----|-------------------------------|----------------------------|\n| -4  | 0                             | 0                          |\n| 2   | 2                             | 2                          |\n| -1  | 1                             | 2                          |\n| 3   | 4                             | 4                          |\n| -5  | 0                             | 4                          |\n| 4   | 4                             | 4                          |\n| 4   | 8                             | 8                          |\n| -10 | 0                             | 8                          |\n\n- **`current`** represents the maximum sum of a contiguous subarray ending at the current position (or 0 if extending the previous subarray would make the sum negative, effectively discarding it and starting fresh).\n- **`best`** represents the maximum subarray sum encountered anywhere in the list so far.\n\n**Behavior on a non-empty, all-negative list:**  \nThe function returns **0**. Because it initializes both variables to 0 and never lets `current` drop below 0, it effectively allows the empty subarray. Thus, even if every element is negative, `best` remains 0 rather than returning the largest (least negative) element.",
+          "usage": {
+            "prompt_tokens": 141,
+            "completion_tokens": 1626,
+            "total_tokens": 1767
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": " There are only \\(\\binom{4}{2}=6\\) possible orders for the two A\u2019s and two B\u2019s.  \nComputing each one:\n\n| Order | Step\u2011by\u2011step | Final value |\n|-------|--------------|-------------|\n| A A B B | \\(0\\to4\\to8\\to16\\to32\\) | 32 |\n| A B A B | \\(0\\to4\\to8\\to12\\to24\\) | 24 |\n| A B B A | \\(0\\to4\\to8\\to16\\to20\\) | 20 |\n| B A A B | \\(0\\to0\\to4\\to8\\to16\\) | 16 |\n| B A B A | \\(0\\to0\\to4\\to8\\to12\\) | 12 |\n| B B A A | \\(0\\to0\\to0\\to4\\to8\\) | 8 |\n\nSo the six possible final values are  \n\\[\n\\boxed{8,\\;12,\\;16,\\;20,\\;24,\\;32}.\n\\]\n\n**Why none are missing:**  \nEach A adds 4, and every B that occurs *after* that A doubles that contribution. If the two A\u2019s are followed by \\(k\\) and \\(\\ell\\) B\u2019s respectively, the final display is\n\\[\n4\\cdot 2^{k}+4\\cdot 2^{\\ell}.\n\\]\nWith exactly two B\u2019s available, the only possible pairs \\((k,\\ell)\\) among the six orders are \\((2,2),(2,1),(2,0),(1,1),(1,0),(0,0)\\), giving exactly the six values above. Since there are no other orders, no other values can occur.",
+          "usage": {
+            "prompt_tokens": 95,
+            "completion_tokens": 3164,
+            "total_tokens": 3259
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": " With unlimited workers, tasks that have no unmet dependencies begin at time 0.\n\n**Earliest start / finish times**\n- **A**: starts 0, finishes 3\n- **B**: starts 0, finishes 2\n- **C**: needs A done \u2192 starts 3, finishes **7**\n- **D**: needs A and B done \u2192 starts max(3,\u202f2)\u202f=\u202f3, finishes **8**\n- **E**: needs C done \u2192 starts 7, finishes **9**\n- **F**: needs D and E done \u2192 starts max(8,\u202f9)\u202f=\u202f9, finishes **12**\n\n**Result**\n- The project finishes at **12 hours**.\n- The chain that determines the finish time is **A \u2192 C \u2192 E \u2192 F**.\n\n**Why:** D finishes at 8, but F cannot start until E finishes at 9. Thus E (and its predecessors A and C) is the bottleneck. The lengths of the two merge paths into F are:\n- A\u2013D\u2013F: 3\u202f+\u202f5\u202f+\u202f3\u202f=\u202f11\n- A\u2013C\u2013E\u2013F: 3\u202f+\u202f4\u202f+\u202f2\u202f+\u202f3\u202f=\u202f**12**\n\nBecause the A\u2013C\u2013E\u2013F path is longest, it leaves no slack for those tasks, and it fixes F\u2019s earliest start at 9 and the project completion at 12.",
+          "usage": {
+            "prompt_tokens": 136,
+            "completion_tokens": 1763,
+            "total_tokens": 1899
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly identifies A and 7, explains the vowel-even number check and the contrapositive case, and dismisses D and 4 with valid reasoning.",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 180,
+            "total_tokens": 1018
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' theorem, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.37%.",
+          "usage": {
+            "prompt_tokens": 1064,
+            "completion_tokens": 212,
+            "total_tokens": 1276
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, describes current and best accurately, and addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1141,
+            "completion_tokens": 171,
+            "total_tokens": 1312
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 2000.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six values, evaluates all orderings, and justifies completeness via combinatorial argument and algebraic reasoning.",
+          "usage": {
+            "prompt_tokens": 1142,
+            "completion_tokens": 180,
+            "total_tokens": 1322
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project completion time as 12 hours, identifies A\u2192C\u2192E\u2192F as the critical chain, and provides accurate reasoning for F's start time at 9.",
+          "usage": {
+            "prompt_tokens": 1074,
+            "completion_tokens": 195,
+            "total_tokens": 1269
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1950.0,
+        "low_90": 1850.0,
+        "high_90": 2050.0,
+        "assessment": "The model demonstrates strong, consistent reasoning across all five questions, with perfect correctness on logic (Wason selection), probability (Bayes' theorem), algorithm analysis (Kadane's variant), combinatorial enumeration (button sequences), and critical path scheduling. No errors or omissions were observed, and explanations were precise and complete. The 90% interval reflects uncertainty from the small sample size (5 questions) but high confidence in frontier-level performance.",
+        "usage": {
+          "prompt_tokens": 2991,
+          "completion_tokens": 137,
+          "total_tokens": 3128
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identifies A and 7 as the cards to turn over, with precise reasoning for both the direct case (vowel must have even number) and the contrapositive (odd number must not have a vowel). No errors or omissions in logic.",
+          "usage": {
+            "prompt_tokens": 580,
+            "completion_tokens": 93,
+            "total_tokens": 673
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "Model correctly solved both problems with precise reasoning: selected A and 7 for the Wason task with contrapositive explanation, and applied Bayes' theorem accurately for the probability question, matching the reference answers exactly. Demonstrates strong logical and mathematical reasoning with no errors.",
+          "usage": {
+            "prompt_tokens": 1146,
+            "completion_tokens": 94,
+            "total_tokens": 1240
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubric. The model demonstrates strong logical reasoning (Wason selection task), accurate probabilistic calculation (Bayes' theorem), and correct algorithmic analysis (Kadane's algorithm with edge case handling). The consistency and depth across all answers suggest frontier-level capability.",
+          "usage": {
+            "prompt_tokens": 1789,
+            "completion_tokens": 113,
+            "total_tokens": 1902
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "The model answered all four questions correctly, demonstrating strong logical reasoning (Wason selection task), precise probabilistic calculation (Bayes' theorem), accurate algorithmic tracing (Kadane's variant), and exhaustive combinatorial enumeration. No errors were observed, but the small sample size (4 questions) leaves uncertainty about consistency on harder or more varied tasks.",
+          "usage": {
+            "prompt_tokens": 2406,
+            "completion_tokens": 116,
+            "total_tokens": 2522
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong, consistent reasoning across all five questions, with perfect correctness on logic (Wason selection), probability (Bayes' theorem), algorithm analysis (Kadane's variant), combinatorial enumeration (button sequences), and critical path scheduling. No errors or omissions were observed, and explanations were precise and complete. The 90% interval reflects uncertainty from the small sample size (5 questions) but high confidence in frontier-level performance.",
+          "usage": {
+            "prompt_tokens": 2991,
+            "completion_tokens": 137,
+            "total_tokens": 3128
+          }
+        }
+      ]
+    },
+    "qwen/qwen3.6-plus": {
+      "provider": "openrouter",
+      "public_elo": 1759.0,
+      "leaderboard_row": "Qwen 3.6 Plus",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "You must turn over the **A** and the **7**. \n\n**Explanation:**\nTo test a conditional rule (\"If P, then Q\"), you must look for the specific scenario that would prove it false: a case where P is true and Q is false. In this context, you are looking for a card that has a **vowel on one side and an odd number on the other**. \n\n*   **A:** You must turn this over to ensure there is an even number on the back. If there is an odd number, the rule is violated.\n*   **7:** You must turn this over to ensure there is *not* a vowel on the back. If there is a vowel, the rule is violated. \n*   **D:** You do not need to turn this over because the rule only makes a claim about vowels, not consonants.\n*   **4:** You do not need to turn this over because the rule does not state that even numbers must have vowels on the reverse side (an even number can legally have a consonant on the back).",
+          "usage": {
+            "prompt_tokens": 113,
+            "completion_tokens": 1408,
+            "total_tokens": 1521
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "The probability that the defective item came from Line B is **35/41** (approximately **85.37%**).\n\nHere is the step-by-step calculation using Bayes' Theorem:\n\n**1. Define the probabilities given:**\n*   Probability an item is from Line A: $P(A) = 0.30$\n*   Probability an item is from Line B: $P(B) = 0.70$\n*   Probability an item is defective given it's from Line A: $P(\\text{Defective}|A) = 0.02$\n*   Probability an item is defective given it's from Line B: $P(\\text{Defective}|B) = 0.05$\n\n**2. Calculate the probability of a defective item coming from each line:**\n*   Defective from Line A: $P(A \\text{ and Defective}) = 0.30 \\times 0.02 = 0.006$\n*   Defective from Line B: $P(B \\text{ and Defective}) = 0.70 \\times 0.05 = 0.035$\n\n**3. Calculate the total probability of selecting a defective item:**\n*   $P(\\text{Defective}) = 0.006 + 0.035 = 0.041$\n\n**4. Calculate the conditional probability that the defective item came from Line B:**\n*   $P(B|\\text{Defective}) = \\frac{P(B \\text{ and Defective})}{P(\\text{Defective})}$\n*   $P(B|\\text{Defective}) = \\frac{0.035}{0.041} = \\frac{35}{41} \\approx 0.8537$",
+          "usage": {
+            "prompt_tokens": 111,
+            "completion_tokens": 1630,
+            "total_tokens": 1741
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "The function returns **8**.\n\n**Explanation of `current` and `best` after each iteration:**\nIn this algorithm (a variation of Kadane's algorithm), `current` represents the maximum sum of a contiguous subarray ending at the current element, resetting to `0` if adding the current element makes the sum negative. `best` represents the highest subarray sum found anywhere in the list up to that point in the loop.\n\nHere is the state of the variables after each element in `[-4, 2, -1, 3, -5, 4, 4, -10]` is processed:\n*   **x = -4:** `current` becomes `0` (since `0 + -4` is negative, it resets). `best` remains `0`.\n*   **x = 2:** `current` becomes `2` (`0 + 2`). `best` updates to `2`.\n*   **x = -1:** `current` becomes `1` (`2 + -1`). `best` remains `2`.\n*   **x = 3:** `current` becomes `4` (`1 + 3`). `best` updates to `4`.\n*   **x = -5:** `current` becomes `0` (`4 + -5` is negative, so it resets). `best` remains `4`.\n*   **x = 4:** `current` becomes `4` (`0 + 4`). `best` remains `4`.\n*   **x = 4:** `current` becomes `8` (`4 + 4`). `best` updates to `8`.\n*   **x = -10:** `current` becomes `0` (`8 + -10` is negative, so it resets). `best` remains `8`.\n\n**Behavior on a non-empty list containing only negative numbers:**\nIf the input list contains only negative numbers (e.g., `[-5, -2, -9]`), the function will return **0**. \n\nBecause `current` is calculated using `max(0, current + x)`, it will immediately reset to `0` every time a negative number is added to it. Since `best` is initialized to `0` and `current` never rises above `0`, `best` never updates. The function effectively returns the sum of an empty subarray rather than the largest single negative number in the list.",
+          "usage": {
+            "prompt_tokens": 150,
+            "completion_tokens": 2742,
+            "total_tokens": 2892
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "To find all possible final values, we must evaluate every distinct order in which the buttons can be pressed. Since button A is pressed twice and button B is pressed twice, there are $\\frac{4!}{2!2!} = 6$ possible sequences of operations. \n\nStarting at **0**, here are the step-by-step results for each of the 6 sequences:\n\n1. **A, A, B, B**\n   * A: $0 + 4 = 4$\n   * A: $4 + 4 = 8$\n   * B: $8 \\times 2 = 16$\n   * B: $16 \\times 2 = \\mathbf{32}$\n\n2. **A, B, A, B**\n   * A: $0 + 4 = 4$\n   * B: $4 \\times 2 = 8$\n   * A: $8 + 4 = 12$\n   * B: $12 \\times 2 = \\mathbf{24}$\n\n3. **A, B, B, A**\n   * A: $0 + 4 = 4$\n   * B: $4 \\times 2 = 8$\n   * B: $8 \\times 2 = 16$\n   * A: $16 + 4 = \\mathbf{20}$\n\n4. **B, A, A, B**\n   * B: $0 \\times 2 = 0$\n   * A: $0 + 4 = 4$\n   * A: $4 + 4 = 8$\n   * B: $8 \\times 2 = \\mathbf{16}$\n\n5. **B, A, B, A**\n   * B: $0 \\times 2 = 0$\n   * A: $0 + 4 = 4$\n   * B: $4 \\times 2 = 8$\n   * A: $8 + 4 = \\mathbf{12}$\n\n6. **B, B, A, A**\n   * B: $0 \\times 2 = 0$\n   * B: $0 \\times 2 = 0$\n   * A: $0 + 4 = 4$\n   * A: $4 + 4 = \\mathbf{8}$\n\nThe possible final displayed values are **8, 12, 16, 20, 24, and 32**.",
+          "usage": {
+            "prompt_tokens": 98,
+            "completion_tokens": 2935,
+            "total_tokens": 3033
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "The project finishes at **12 hours**, and the chain of tasks that determines this time is **A \u2192 C \u2192 E \u2192 F**. \n\nHere is the step-by-step earliest start (ES) and earliest finish (EF) reasoning:\n\n1. **Tasks A and B** have no predecessors, so they both start at hour 0.\n   * **A**: Starts at 0, finishes at 3 (0 + 3).\n   * **B**: Starts at 0, finishes at 2 (0 + 2).\n\n2. **Task C** depends only on A. It must wait for A to finish.\n   * **C**: Starts at 3, finishes at 7 (3 + 4).\n\n3. **Task D** depends on both A and B. It must wait for the *latest* of the two to finish. Since A finishes at 3 and B finishes at 2, D starts at hour 3.\n   * **D**: Starts at 3, finishes at 8 (3 + 5).\n\n4. **Task E** depends only on C. It must wait for C to finish.\n   * **E**: Starts at 7, finishes at 9 (7 + 2).\n\n5. **Task F** depends on both D and E. It must wait for the *latest* of the two to finish. Since D finishes at 8 and E finishes at 9, F starts at hour 9.\n   * **F**: Starts at 9, finishes at 12 (9 + 3).\n\nBecause Task F is the final task, the project finishes at hour 12. Tracing back the tasks that dictated the start times (A forced C to start at 3; C forced E to start at 7; E forced F to start at 9), the critical chain is **A \u2192 C \u2192 E \u2192 F** (3 + 4 + 2 + 3 = 12 hours).",
+          "usage": {
+            "prompt_tokens": 139,
+            "completion_tokens": 2220,
+            "total_tokens": 2359
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "None",
+          "explanation": "The answer correctly selects A and 7, explains the vowel-even number check for A, and the contrapositive (vowel-odd number) check for 7, while dismissing D and 4.",
+          "usage": {
+            "prompt_tokens": 909,
+            "completion_tokens": 189,
+            "total_tokens": 1098
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' Theorem, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.37%.",
+          "usage": {
+            "prompt_tokens": 1176,
+            "completion_tokens": 212,
+            "total_tokens": 1388
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, accurately describes `current` and `best`, and explicitly addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1326,
+            "completion_tokens": 175,
+            "total_tokens": 1501
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six values, evaluates all six orderings, and justifies completeness via combinatorial argument.",
+          "usage": {
+            "prompt_tokens": 1296,
+            "completion_tokens": 178,
+            "total_tokens": 1474
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project completion time, identifies the critical chain, and provides accurate step-by-step reasoning for task dependencies and timing.",
+          "usage": {
+            "prompt_tokens": 1182,
+            "completion_tokens": 182,
+            "total_tokens": 1364
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1900.0,
+        "low_90": 1750.0,
+        "high_90": 2050.0,
+        "assessment": "The model demonstrates strong reasoning across all five questions, correctly solving each with precise, well-justified answers. It handles logic puzzles (Q1), probability (Q2), algorithm analysis (Q3), combinatorial enumeration (Q4), and project scheduling (Q5) with depth and accuracy. The 90% interval reflects uncertainty from the small sample size but high confidence in frontier-level performance.",
+        "usage": {
+          "prompt_tokens": 3619,
+          "completion_tokens": 129,
+          "total_tokens": 3748
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identifies A and 7 as the cards to turn over, with a precise explanation of the conditional rule and its contrapositive. Demonstrates strong logical reasoning and understanding of the Wason selection task, aligning with frontier model performance.",
+          "usage": {
+            "prompt_tokens": 651,
+            "completion_tokens": 89,
+            "total_tokens": 740
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "Model correctly solved both reasoning problems with precise, well-explained answers. Demonstrated strong logical reasoning (Wason selection task) and accurate Bayesian probability calculation. No errors detected in the provided transcript.",
+          "usage": {
+            "prompt_tokens": 1329,
+            "completion_tokens": 82,
+            "total_tokens": 1411
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubrics. The model demonstrates strong logical reasoning (Wason selection task), accurate probabilistic calculation (Bayes' theorem), and correct algorithmic analysis (Kadane's variant). The 90% interval reflects uncertainty from only three samples but suggests frontier-level performance.",
+          "usage": {
+            "prompt_tokens": 2157,
+            "completion_tokens": 115,
+            "total_tokens": 2272
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong logical reasoning, mathematical precision, and algorithmic understanding across all four questions. It correctly solves the Wason selection task (Q1), applies Bayes' theorem accurately (Q2), explains Kadane's algorithm and edge cases (Q3), and exhaustively enumerates all permutations for the button-pressing problem (Q4). No errors were observed, but the 90% interval reflects uncertainty from only four samples.",
+          "usage": {
+            "prompt_tokens": 2927,
+            "completion_tokens": 135,
+            "total_tokens": 3062
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong reasoning across all five questions, correctly solving each with precise, well-justified answers. It handles logic puzzles (Q1), probability (Q2), algorithm analysis (Q3), combinatorial enumeration (Q4), and project scheduling (Q5) with depth and accuracy. The 90% interval reflects uncertainty from the small sample size but high confidence in frontier-level performance.",
+          "usage": {
+            "prompt_tokens": 3619,
+            "completion_tokens": 129,
+            "total_tokens": 3748
+          }
+        }
+      ]
+    },
+    "deepseek/deepseek-v4-pro": {
+      "provider": "openrouter",
+      "public_elo": 1775.0,
+      "leaderboard_row": "DeepSeek V4 Pro",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "You must turn over the **A** and the **7**.\n\n- **A (vowel)**: You need to check that the other side has an even number. If it\u2019s odd, the rule is violated.\n- **7 (odd number)**: You need to check that the other side is *not* a vowel. If it\u2019s a vowel, the rule is violated (because a vowel would require an even number on the other side).\n\nThe **D** (consonant) and **4** (even number) do not need to be turned over. The rule says nothing about consonants, and an even number on one side does not require a vowel on the other.",
+          "usage": {
+            "prompt_tokens": 102,
+            "completion_tokens": 142,
+            "total_tokens": 244
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "The probability that a defective item came from Line B is 35/41 (approximately 85.37%).\n\n**Calculation using Bayes' theorem:**\n\nLet \\( A \\) be the event the item is from Line A, and \\( B \\) the event it is from Line B. Let \\( D \\) be the event the item is defective.\n\nGiven:\n- \\( P(A) = 0.30 \\), \\( P(D \\mid A) = 0.02 \\)\n- \\( P(B) = 0.70 \\), \\( P(D \\mid B) = 0.05 \\)\n\nFirst, compute the total probability of a defective item, \\( P(D) \\):\n\\[\nP(D) = P(D \\mid A)P(A) + P(D \\mid B)P(B) = (0.02)(0.30) + (0.05)(0.70) = 0.006 + 0.035 = 0.041\n\\]\n\nThen apply Bayes' theorem to find \\( P(B \\mid D) \\):\n\\[\nP(B \\mid D) = \\frac{P(D \\mid B)P(B)}{P(D)} = \\frac{0.05 \\times 0.70}{0.041} = \\frac{0.035}{0.041} = \\frac{35}{41} \\approx 0.8537\n\\]",
+          "usage": {
+            "prompt_tokens": 98,
+            "completion_tokens": 568,
+            "total_tokens": 666
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "Let\u2019s trace through the given input step by step.\n\n**Input:** `[-4, 2, -1, 3, -5, 4, 4, -10]`\n\n### Trace Table\n\n| Iteration | x   | current = max(0, current + x) | best = max(best, current) |\n|-----------|-----|-------------------------------|---------------------------|\n| Initial   | \u2014   | 0                             | 0                         |\n| 1         | -4  | max(0, 0 + (-4)) = 0          | max(0, 0) = 0             |\n| 2         | 2   | max(0, 0 + 2) = 2             | max(0, 2) = 2             |\n| 3         | -1  | max(0, 2 + (-1)) = 1          | max(2, 1) = 2             |\n| 4         | 3   | max(0, 1 + 3) = 4             | max(2, 4) = 4             |\n| 5         | -5  | max(0, 4 + (-5)) = 0          | max(4, 0) = 4             |\n| 6         | 4   | max(0, 0 + 4) = 4             | max(4, 4) = 4             |\n| 7         | 4   | max(0, 4 + 4) = 8             | max(4, 8) = 8             |\n| 8         | -10 | max(0, 8 + (-10)) = 0         | max(8, 0) = 8             |\n\n**Return value:** `8`\n\n---\n\n### What `current` and `best` represent\n\n- **`current`** is the maximum sum of a contiguous subarray ending at the current position (reset to 0 if that sum would be negative).\n- **`best`** is the maximum `current` value seen so far \u2014 i.e., the maximum contiguous subarray sum up to that point in the list.\n\n---\n\n### Behavior for a list of only negative numbers\n\nIf all numbers are negative, at each step `current + x` will be negative, so `current` will continually be reset to `0`. `best` will stay at `0` throughout, so the function returns `0`.\n\nThis means: for an all-negative list, the function returns `0` instead of the maximum (least negative) element, which reflects the common variant of Kadane\u2019s algorithm where the empty subarray (sum = 0) is considered valid.",
+          "usage": {
+            "prompt_tokens": 135,
+            "completion_tokens": 581,
+            "total_tokens": 716
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "The possible final displayed values are **8, 12, 16, 20, 24, and 32**.\n\nWe start at 0 and must press A exactly twice (+4 each time) and B exactly twice (\u00d72 each time). There are 6 possible orders. Computing each:\n\n- **A, A, B, B**:  \n  0 \u2192 +4 = 4 \u2192 +4 = 8 \u2192 \u00d72 = 16 \u2192 \u00d72 = **32**\n\n- **A, B, A, B**:  \n  0 \u2192 +4 = 4 \u2192 \u00d72 = 8 \u2192 +4 = 12 \u2192 \u00d72 = **24**\n\n- **A, B, B, A**:  \n  0 \u2192 +4 = 4 \u2192 \u00d72 = 8 \u2192 \u00d72 = 16 \u2192 +4 = **20**\n\n- **B, A, A, B**:  \n  0 \u2192 \u00d72 = 0 \u2192 +4 = 4 \u2192 +4 = 8 \u2192 \u00d72 = **16**\n\n- **B, A, B, A**:  \n  0 \u2192 \u00d72 = 0 \u2192 +4 = 4 \u2192 \u00d72 = 8 \u2192 +4 = **12**\n\n- **B, B, A, A**:  \n  0 \u2192 \u00d72 = 0 \u2192 \u00d72 = 0 \u2192 +4 = 4 \u2192 +4 = **8**\n\nAll six distinct sequences yield the six values listed, so no other final values are possible.",
+          "usage": {
+            "prompt_tokens": 87,
+            "completion_tokens": 792,
+            "total_tokens": 879
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "The project finishes at **11 hours**, and the chain that determines this time is **A \u2192 C \u2192 E \u2192 F**.\n\n### Reasoning with earliest start and finish times\n\nWe assume all tasks start as early as their dependencies allow.\n\n**Step 1 \u2013 Tasks with no dependencies**\n- **A**: Start = 0, Finish = 0 + 3 = 3  \n- **B**: Start = 0, Finish = 0 + 2 = 2  \n\n**Step 2 \u2013 Tasks that depend on A and/or B**\n- **C** (needs A): Start = Finish of A = 3, Finish = 3 + 4 = 7  \n- **D** (needs A and B): Start = max(Finish of A, Finish of B) = max(3, 2) = 3, Finish = 3 + 5 = 8  \n\n**Step 3 \u2013 Tasks that depend on C, D**\n- **E** (needs C): Start = Finish of C = 7, Finish = 7 + 2 = 9  \n- **F** (needs D and E): Start = max(Finish of D, Finish of E) = max(8, 9) = 9, Finish = 9 + 3 = 12  \n\nWait \u2014 I see a small arithmetic slip. Let me correct:\n\nF\u2019s duration is 3, so Finish = 9 + 3 = 12, not 11.  \n\n### Corrected finish times\n- A: 0 \u2192 3  \n- B: 0 \u2192 2  \n- C: 3 \u2192 7  \n- D: 3 \u2192 8  \n- E: 7 \u2192 9  \n- F: 9 \u2192 12  \n\n**Project finish**: 12 hours.  \n**Critical chain**: A \u2192 C \u2192 E \u2192 F (total 3 + 4 + 2 + 3 = 12).",
+          "usage": {
+            "prompt_tokens": 128,
+            "completion_tokens": 409,
+            "total_tokens": 537
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly identifies A and 7, explains both the direct and contrapositive cases, and dismisses D and 4 with valid reasoning.",
+          "usage": {
+            "prompt_tokens": 825,
+            "completion_tokens": 176,
+            "total_tokens": 1001
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' theorem, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.4%.",
+          "usage": {
+            "prompt_tokens": 1105,
+            "completion_tokens": 211,
+            "total_tokens": 1316
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, accurately describes `current` and `best`, and addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1401,
+            "completion_tokens": 174,
+            "total_tokens": 1575
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six correct values, evaluates all six orderings, and justifies completeness by enumerating all distinct sequences.",
+          "usage": {
+            "prompt_tokens": 1107,
+            "completion_tokens": 181,
+            "total_tokens": 1288
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The candidate initially misstated the finish time as 11 hours but corrected it to 12 hours, provided accurate earliest start/finish reasoning, and identified the correct critical chain.",
+          "usage": {
+            "prompt_tokens": 1197,
+            "completion_tokens": 192,
+            "total_tokens": 1389
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1750.0,
+        "low_90": 1650.0,
+        "high_90": 1850.0,
+        "assessment": "The model demonstrates strong reasoning across all five questions, with near-perfect correctness. It solves the Wason selection task (Q1) flawlessly, applies Bayes' theorem precisely (Q2), traces Kadane's algorithm accurately (Q3), exhaustively enumerates all permutations for the button-press problem (Q4), and corrects its own arithmetic error in the critical path analysis (Q5). The only minor flaw is the initial arithmetic mistake in Q5, which it self-corrects. This level of consistency and depth aligns with a high-tier frontier model, though not exceptional.",
+        "usage": {
+          "prompt_tokens": 3365,
+          "completion_tokens": 167,
+          "total_tokens": 3532
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identified A and 7 as the only cards to turn over, with precise reasoning matching the reference and rubric. Demonstrated strong logical reasoning (contrapositive) and clarity. Single sample limits confidence, but performance aligns with strong frontier models.",
+          "usage": {
+            "prompt_tokens": 567,
+            "completion_tokens": 93,
+            "total_tokens": 660
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "Both answers are fully correct and demonstrate strong logical reasoning. The first answer correctly identifies the Wason selection task solution (A and 7) with precise contrapositive reasoning. The second answer applies Bayes' theorem accurately, computing the exact fraction (35/41) and showing all intermediate steps. No errors or omissions detected in either response.",
+          "usage": {
+            "prompt_tokens": 1174,
+            "completion_tokens": 112,
+            "total_tokens": 1286
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubrics. The model demonstrates strong logical reasoning (Wason selection task), probabilistic calculation (Bayes' theorem), and algorithmic understanding (Kadane's algorithm variant). The 90% interval reflects uncertainty from only three samples but suggests frontier-level ability.",
+          "usage": {
+            "prompt_tokens": 2077,
+            "completion_tokens": 114,
+            "total_tokens": 2191
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "The model answered all four questions correctly, demonstrating strong logical reasoning (Wason selection task), precise probabilistic calculation (Bayes' theorem), accurate algorithm tracing (Kadane's variant), and exhaustive enumeration (button sequences). No errors were observed, but the small sample size (4 questions) leaves uncertainty about consistency on harder or more varied tasks.",
+          "usage": {
+            "prompt_tokens": 2658,
+            "completion_tokens": 116,
+            "total_tokens": 2774
+          }
+        },
+        {
+          "mean_elo": 1750.0,
+          "low_90": 1650.0,
+          "high_90": 1850.0,
+          "assessment": "The model demonstrates strong reasoning across all five questions, with near-perfect correctness. It solves the Wason selection task (Q1) flawlessly, applies Bayes' theorem precisely (Q2), traces Kadane's algorithm accurately (Q3), exhaustively enumerates all permutations for the button-press problem (Q4), and corrects its own arithmetic error in the critical path analysis (Q5). The only minor flaw is the initial arithmetic mistake in Q5, which it self-corrects. This level of consistency and depth aligns with a high-tier frontier model, though not exceptional.",
+          "usage": {
+            "prompt_tokens": 3365,
+            "completion_tokens": 167,
+            "total_tokens": 3532
+          }
+        }
+      ]
+    },
+    "openai/gpt-5.4": {
+      "provider": "openrouter",
+      "public_elo": 1829.0,
+      "leaderboard_row": "GPT-5.4",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "Turn over **A** and **7**.\n\nWhy:\n- The rule is **\u201cIf vowel, then even number.\u201d**\n- To check for a violation, you need:\n  - **A**: if the other side is odd, the rule is false.\n  - **7**: if the other side is a vowel, the rule is false.\n\nWhy not the others:\n- **D**: a consonant does not matter; the rule says nothing about consonants.\n- **4**: an even number does not have to have a vowel on the other side; it could have either a vowel or a consonant.\n\nSo the necessary cards are **A and 7**.",
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 145,
+            "total_tokens": 253
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "Use Bayes\u2019 rule.\n\nLet \\(A\\) = item came from Line A, \\(B\\) = item came from Line B, and \\(D\\) = item is defective.\n\nGiven:\n- \\(P(A)=0.30\\)\n- \\(P(B)=0.70\\)\n- \\(P(D\\mid A)=0.02\\)\n- \\(P(D\\mid B)=0.05\\)\n\nWe want:\n\n\\[\nP(B\\mid D)=\\frac{P(D\\mid B)P(B)}{P(D\\mid A)P(A)+P(D\\mid B)P(B)}\n\\]\n\nSubstitute:\n\n\\[\nP(B\\mid D)=\\frac{0.05\\cdot 0.70}{0.02\\cdot 0.30 + 0.05\\cdot 0.70}\n\\]\n\n\\[\n=\\frac{0.035}{0.006+0.035}\n=\\frac{0.035}{0.041}\n\\approx 0.8537\n\\]\n\nSo the probability the defective item came from **Line B** is:\n\n\\[\n\\boxed{\\frac{35}{41}\\approx 0.854}\n\\]\n\nSo, about **85.4%**.",
+          "usage": {
+            "prompt_tokens": 104,
+            "completion_tokens": 266,
+            "total_tokens": 370
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "`mystery([-4, 2, -1, 3, -5, 4, 4, -10])` returns **8**.\n\nThis function is an implementation of **Kadane\u2019s algorithm** for the **maximum subarray sum**, except it allows the empty subarray, so the result is never negative.\n\n## What the variables mean\n- `current`: the maximum sum of a contiguous subarray **ending at the current position**, but never less than 0.\n- `best`: the largest value `current` has ever had so far, i.e. the maximum subarray sum seen anywhere so far.\n\n## Step-by-step trace\n\nStart:\n- `best = 0`\n- `current = 0`\n\nNow process each value:\n\n### 1. `x = -4`\n- `current = max(0, 0 + (-4)) = max(0, -4) = 0`\n- `best = max(0, 0) = 0`\n\nMeaning:\n- Any subarray ending here would have negative sum, so we reset to 0.\n- Best seen so far is still 0.\n\n### 2. `x = 2`\n- `current = max(0, 0 + 2) = 2`\n- `best = max(0, 2) = 2`\n\nMeaning:\n- Best subarray ending here is `[2]`, sum 2.\n- Best overall so far is 2.\n\n### 3. `x = -1`\n- `current = max(0, 2 + (-1)) = 1`\n- `best = max(2, 1) = 2`\n\nMeaning:\n- Best subarray ending here is `[2, -1]`, sum 1.\n- Best overall remains 2.\n\n### 4. `x = 3`\n- `current = max(0, 1 + 3) = 4`\n- `best = max(2, 4) = 4`\n\nMeaning:\n- Best subarray ending here is `[2, -1, 3]`, sum 4.\n- Best overall becomes 4.\n\n### 5. `x = -5`\n- `current = max(0, 4 + (-5)) = 0`\n- `best = max(4, 0) = 4`\n\nMeaning:\n- Extending the current subarray gives negative sum, so reset to 0.\n- Best overall stays 4.\n\n### 6. `x = 4`\n- `current = max(0, 0 + 4) = 4`\n- `best = max(4, 4) = 4`\n\nMeaning:\n- Best subarray ending here is `[4]`, sum 4.\n- Best overall still 4.\n\n### 7. `x = 4`\n- `current = max(0, 4 + 4) = 8`\n- `best = max(4, 8) = 8`\n\nMeaning:\n- Best subarray ending here is `[4, 4]`, sum 8.\n- Best overall becomes 8.\n\n### 8. `x = -10`\n- `current = max(0, 8 + (-10)) = 0`\n- `best = max(8, 0) = 8`\n\nMeaning:\n- Extending would go negative, so reset to 0.\n- Best overall remains 8.\n\n## Final result\nThe function returns:\n\n**8**\n\nThe maximum-sum contiguous subarray is `[4, 4]`.\n\n## Behavior on a non-empty list of only negative numbers\nIf every number is negative, then `current + x` is always negative, so:\n\n- `current` becomes `0` every time\n- `best` stays `0`\n\nSo on any non-empty all-negative list, the function returns **0**.\n\nExample:\n```python\nmystery([-3, -7, -1])   # returns 0\n```\n\nThis happens because the algorithm effectively allows choosing the **empty subarray**, whose sum is 0.",
+          "usage": {
+            "prompt_tokens": 139,
+            "completion_tokens": 861,
+            "total_tokens": 1000
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "Let \\(A(x)=x+4\\) and \\(B(x)=2x\\), starting from \\(0\\).\n\nYou must use exactly two \\(A\\)'s and two \\(B\\)'s, so the possible orders are all 4-step sequences with 2 A's and 2 B's:\n\n\\[\n\\binom{4}{2}=6\n\\]\n\nSo we check these 6 orders:\n\n1. **AABB**  \n   \\[\n   0 \\xrightarrow{A} 4 \\xrightarrow{A} 8 \\xrightarrow{B} 16 \\xrightarrow{B} 32\n   \\]\n   Final value: **32**\n\n2. **ABAB**  \n   \\[\n   0 \\xrightarrow{A} 4 \\xrightarrow{B} 8 \\xrightarrow{A} 12 \\xrightarrow{B} 24\n   \\]\n   Final value: **24**\n\n3. **ABBA**  \n   \\[\n   0 \\xrightarrow{A} 4 \\xrightarrow{B} 8 \\xrightarrow{B} 16 \\xrightarrow{A} 20\n   \\]\n   Final value: **20**\n\n4. **BAAB**  \n   \\[\n   0 \\xrightarrow{B} 0 \\xrightarrow{A} 4 \\xrightarrow{A} 8 \\xrightarrow{B} 16\n   \\]\n   Final value: **16**\n\n5. **BABA**  \n   \\[\n   0 \\xrightarrow{B} 0 \\xrightarrow{A} 4 \\xrightarrow{B} 8 \\xrightarrow{A} 12\n   \\]\n   Final value: **12**\n\n6. **BBAA**  \n   \\[\n   0 \\xrightarrow{B} 0 \\xrightarrow{B} 0 \\xrightarrow{A} 4 \\xrightarrow{A} 8\n   \\]\n   Final value: **8**\n\nThus all possible final displayed values are:\n\n\\[\n\\boxed{8,\\ 12,\\ 16,\\ 20,\\ 24,\\ 32}\n\\]",
+          "usage": {
+            "prompt_tokens": 93,
+            "completion_tokens": 459,
+            "total_tokens": 552
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "Earliest-time schedule:\n\n- **A**: starts 0, finishes **3**\n- **B**: starts 0, finishes **2**\n\nThen dependent tasks:\n\n- **C** after A: starts **3**, finishes **7**\n- **D** after A and B: starts at max(3, 2) = **3**, finishes **8**\n- **E** after C: starts **7**, finishes **9**\n- **F** after D and E: starts at max(8, 9) = **9**, finishes **12**\n\n## Project finish time\nThe project finishes when **F** finishes, at **12 hours**.\n\n## Chain that determines the finish\nCompare the two routes feeding into F:\n\n- A \u2192 D finishes by **8**\n- A \u2192 C \u2192 E finishes by **9**\n\nSince **F** must wait for both D and E, the slower side is **A \u2192 C \u2192 E**, so the controlling chain is:\n\n**A \u2192 C \u2192 E \u2192 F**\n\nIts total duration is:\n\n- A = 3\n- C = 4\n- E = 2\n- F = 3\n\nTotal = **3 + 4 + 2 + 3 = 12 hours**\n\nSo the **project duration is 12 hours**, determined by **A \u2192 C \u2192 E \u2192 F**.",
+          "usage": {
+            "prompt_tokens": 134,
+            "completion_tokens": 283,
+            "total_tokens": 417
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly identifies A and 7, explains the vowel-even number check for A, and the contrapositive check for 7, while excluding D and 4 with valid reasoning.",
+          "usage": {
+            "prompt_tokens": 820,
+            "completion_tokens": 185,
+            "total_tokens": 1005
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' rule, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.4%.",
+          "usage": {
+            "prompt_tokens": 1047,
+            "completion_tokens": 211,
+            "total_tokens": 1258
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, accurately describes `current` and `best`, and explicitly addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1684,
+            "completion_tokens": 175,
+            "total_tokens": 1859
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six values, evaluates all six orderings, and justifies completeness via combinatorial argument.",
+          "usage": {
+            "prompt_tokens": 1194,
+            "completion_tokens": 178,
+            "total_tokens": 1372
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project finish time as 12 hours, identifies A\u2192C\u2192E\u2192F as the critical chain, and provides accurate reasoning for the merge timing before F.",
+          "usage": {
+            "prompt_tokens": 1048,
+            "completion_tokens": 193,
+            "total_tokens": 1241
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1950.0,
+        "low_90": 1850.0,
+        "high_90": 2050.0,
+        "assessment": "The model answered all five questions correctly, demonstrating strong logical reasoning, precise mathematical calculation (Bayes' rule, Kadane's algorithm), exhaustive enumeration (button sequences), and correct critical path analysis. No errors were observed, but the small sample size (5 questions) leaves uncertainty about consistency on harder or more varied problems. The depth and accuracy suggest frontier-level performance.",
+        "usage": {
+          "prompt_tokens": 3522,
+          "completion_tokens": 120,
+          "total_tokens": 3642
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identifies A and 7 as the only cards to turn over, with precise reasoning matching the reference and rubric. Demonstrates strong logical reasoning (contrapositive understanding) and clarity. Single sample limits confidence, but performance aligns with strong frontier models.",
+          "usage": {
+            "prompt_tokens": 562,
+            "completion_tokens": 94,
+            "total_tokens": 656
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "Both answers are fully correct, with precise reasoning and adherence to the rubric. The model demonstrates strong logical deduction (Wason selection task) and accurate probabilistic calculation (Bayes' rule). With only two samples, uncertainty remains high, but performance aligns with a strong frontier model.",
+          "usage": {
+            "prompt_tokens": 1111,
+            "completion_tokens": 104,
+            "total_tokens": 1215
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong logical reasoning across all three questions: correctly identifies the Wason selection task cards (A and 7) with precise contrapositive reasoning, accurately applies Bayes' theorem with proper weighting and arithmetic, and fully explains Kadane's algorithm variant (including edge case for all-negative inputs). No errors detected; performance aligns with a high-end frontier model.",
+          "usage": {
+            "prompt_tokens": 2297,
+            "completion_tokens": 120,
+            "total_tokens": 2417
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong logical reasoning, mathematical precision, and algorithmic understanding across all four questions. It correctly solves the Wason selection task (Q1), applies Bayes' theorem accurately (Q2), explains Kadane's algorithm with a full trace and edge-case behavior (Q3), and exhaustively enumerates all permutations for the button-press problem (Q4). No errors or omissions are observed, but the small sample size (4 questions) leaves uncertainty in the upper bound.",
+          "usage": {
+            "prompt_tokens": 2965,
+            "completion_tokens": 145,
+            "total_tokens": 3110
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model answered all five questions correctly, demonstrating strong logical reasoning, precise mathematical calculation (Bayes' rule, Kadane's algorithm), exhaustive enumeration (button sequences), and correct critical path analysis. No errors were observed, but the small sample size (5 questions) leaves uncertainty about consistency on harder or more varied problems. The depth and accuracy suggest frontier-level performance.",
+          "usage": {
+            "prompt_tokens": 3522,
+            "completion_tokens": 120,
+            "total_tokens": 3642
+          }
+        }
+      ]
+    },
+    "anthropic/claude-opus-4.8": {
+      "provider": "openrouter",
+      "public_elo": 1906.0,
+      "leaderboard_row": "Claude Opus 4.8",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "You must turn over the **A** and the **7**.\n\nThe rule is: vowel \u2192 even number. To catch a violation, you look for cases that could show a vowel paired with an odd number.\n\n- **A (vowel):** Must be flipped. If the other side is odd, the rule is broken. This directly tests the rule.\n\n- **7 (odd number):** Must be flipped. If the other side is a vowel, then a vowel has an odd number on the back\u2014a violation. So this could disprove the rule.\n\n- **D (consonant):** No need to flip. The rule says nothing about consonants; whatever number is on the back doesn't matter.\n\n- **4 (even number):** No need to flip. The rule only requires vowels to have even numbers\u2014it does not forbid consonants from having even numbers. So whether the back is a vowel or consonant, the rule can't be violated.\n\nThe key logical point: the rule is only violated by a vowel with an odd number. So you check the card that shows a vowel (A) and the card that shows an odd number (7), since only these could hide that forbidden combination.",
+          "usage": {
+            "prompt_tokens": 143,
+            "completion_tokens": 336,
+            "total_tokens": 479
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "# Bayes' Theorem Solution\n\n## Setting Up the Problem\n\nLet me define the events:\n- **A** = item came from Line A, with P(A) = 0.30\n- **B** = item came from Line B, with P(B) = 0.70\n- **D** = item is defective\n\nThe defect rates are:\n- P(D | A) = 0.02\n- P(D | B) = 0.05\n\nI need to find **P(B | D)**.\n\n## Applying Bayes' Theorem\n\n$$P(B \\mid D) = \\frac{P(D \\mid B) \\cdot P(B)}{P(D)}$$\n\n**Step 1: Find the total probability of a defect, P(D)**\n\nUsing the law of total probability:\n\n$$P(D) = P(D \\mid A)P(A) + P(D \\mid B)P(B)$$\n\n$$P(D) = (0.02)(0.30) + (0.05)(0.70)$$\n\n$$P(D) = 0.006 + 0.035 = 0.041$$\n\n**Step 2: Compute P(B | D)**\n\n$$P(B \\mid D) = \\frac{(0.05)(0.70)}{0.041} = \\frac{0.035}{0.041}$$\n\n$$\\boxed{P(B \\mid D) \\approx 0.8537}$$\n\n## Conclusion\n\nGiven that the item is defective, there is about an **85.4%** probability it came from Line B.\n\nThis makes intuitive sense: Line B not only produces more items (70%) but also has a higher defect rate (5%), so most defective items should trace back to it.",
+          "usage": {
+            "prompt_tokens": 135,
+            "completion_tokens": 496,
+            "total_tokens": 631
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "## Tracing the execution\n\nThe function processes `[-4, 2, -1, 3, -5, 4, 4, -10]`. Let me track `current` and `best` after each step:\n\n| x | `current = max(0, current + x)` | `best = max(best, current)` |\n|-----|-------------------------------|------------------------------|\n| -4 | max(0, 0 + -4) = 0 | max(0, 0) = 0 |\n| 2 | max(0, 0 + 2) = 2 | max(0, 2) = 2 |\n| -1 | max(0, 2 + -1) = 1 | max(2, 1) = 2 |\n| 3 | max(0, 1 + 3) = 4 | max(2, 4) = 4 |\n| -5 | max(0, 4 + -5) = 0 | max(4, 0) = 4 |\n| 4 | max(0, 0 + 4) = 4 | max(4, 4) = 4 |\n| 4 | max(0, 4 + 4) = 8 | max(4, 8) = **8** |\n| -10 | max(0, 8 + -10) = 0 | max(8, 0) = 8 |\n\n**Return value: `8`** (from the subarray `[4, 4]`).\n\n## What the variables represent\n\n- **`current`**: the largest sum of a contiguous run of elements *ending at the current position*. Because of the `max(0, ...)`, whenever the running sum would go negative, it resets to 0\u2014this discards a prefix that only hurts, effectively starting a fresh subarray.\n\n- **`best`**: the largest `current` value seen so far, i.e., the maximum subarray sum found anywhere up to this point.\n\nThis is Kadane's algorithm for the **maximum contiguous subarray sum**.\n\n## Behavior on all-negative lists\n\nBecause `current` is clamped at a minimum of `0`, and `best` starts at `0`, adding any negative number keeps `current` at `0` and `best` never rises above `0`.\n\nSo for a non-empty list containing only negative numbers, the function returns **`0`**\u2014corresponding to choosing the *empty* subarray. It does **not** return the largest (least negative) element, which is what a \"true\" maximum subarray implementation restricted to non-empty subarrays would return.",
+          "usage": {
+            "prompt_tokens": 181,
+            "completion_tokens": 736,
+            "total_tokens": 917
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "I need to find all possible final values from pressing A (add 4) twice and B (multiply by 2) twice, in some order, starting from 0.\n\n## Setting Up\n\nThere are sequences of 4 presses using A, A, B, B. The number of distinct orderings is 4!/(2!\u00b72!) = 6. Let me compute each.\n\nI'll denote operations left to right, starting from 0.\n\n**1. AABB**\n- 0 \u2192 A \u2192 4 \u2192 A \u2192 8 \u2192 B \u2192 16 \u2192 B \u2192 **32**\n\n**2. ABAB**\n- 0 \u2192 A \u2192 4 \u2192 B \u2192 8 \u2192 A \u2192 12 \u2192 B \u2192 **24**\n\n**3. ABBA**\n- 0 \u2192 A \u2192 4 \u2192 B \u2192 8 \u2192 B \u2192 16 \u2192 A \u2192 **20**\n\n**4. BAAB**\n- 0 \u2192 B \u2192 0 \u2192 A \u2192 4 \u2192 A \u2192 8 \u2192 B \u2192 **16**\n\n**5. BABA**\n- 0 \u2192 B \u2192 0 \u2192 A \u2192 4 \u2192 B \u2192 8 \u2192 A \u2192 **12**\n\n**6. BBAA**\n- 0 \u2192 B \u2192 0 \u2192 B \u2192 0 \u2192 A \u2192 4 \u2192 A \u2192 **8**\n\n## Checking Completeness\n\nThe 6 orderings are all arrangements of A, A, B, B:\n- AABB, ABAB, ABBA (A first)\n- BAAB, BABA, BBAA (B first)\n\nThese are exhaustive: choosing the two positions (out of 4) for the A's determines the sequence, and there are C(4,2) = 6 such choices, matching the six listed.\n\n## Results\n\nThe possible final values are:\n\n$$\\{8,\\ 12,\\ 16,\\ 20,\\ 24,\\ 32\\}$$\n\nNote that all six sequences give **distinct** values, so there are exactly six possible final displayed values.",
+          "usage": {
+            "prompt_tokens": 132,
+            "completion_tokens": 556,
+            "total_tokens": 688
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "I'll compute the earliest start (ES) and earliest finish (EF) for each task, where EF = ES + duration.\n\n**Dependencies:**\n- A: no predecessors\n- B: no predecessors\n- C: after A\n- D: after A and B\n- E: after C\n- F: after D and E\n\n**Earliest times (starting at time 0):**\n\n**A:** ES = 0, EF = 0 + 3 = 3\n\n**B:** ES = 0, EF = 0 + 2 = 2\n\n**C:** starts after A finishes \u2192 ES = 3, EF = 3 + 4 = 7\n\n**D:** starts after both A and B finish \u2192 ES = max(3, 2) = 3, EF = 3 + 5 = 8\n\n**E:** starts after C finishes \u2192 ES = 7, EF = 7 + 2 = 9\n\n**F:** starts after both D and E finish \u2192 ES = max(8, 9) = 9, EF = 9 + 3 = 12\n\n**Project finish: 12 hours.**\n\n**Determining chain:**\n\nF starts at 9, which is driven by E (finishing at 9), not D (finishing at 8). E is driven by C, and C by A. So the controlling path is:\n\n**A \u2192 C \u2192 E \u2192 F** = 3 + 4 + 2 + 3 = **12 hours**\n\nThis chain is the longest path through the network and thus sets the project completion time.",
+          "usage": {
+            "prompt_tokens": 171,
+            "completion_tokens": 438,
+            "total_tokens": 609
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly identifies A and 7, explains the vowel-even rule and contrapositive case, and dismisses D and 4 with valid reasoning.",
+          "usage": {
+            "prompt_tokens": 929,
+            "completion_tokens": 178,
+            "total_tokens": 1107
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' Theorem, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.4%.",
+          "usage": {
+            "prompt_tokens": 1167,
+            "completion_tokens": 211,
+            "total_tokens": 1378
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, explains current and best, and addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1390,
+            "completion_tokens": 170,
+            "total_tokens": 1560
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six correct values, evaluates all orderings, and justifies completeness via combinatorial argument.",
+          "usage": {
+            "prompt_tokens": 1208,
+            "completion_tokens": 178,
+            "total_tokens": 1386
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project completion time, identifies the critical chain, and provides full reasoning for the merge timing before F.",
+          "usage": {
+            "prompt_tokens": 1109,
+            "completion_tokens": 180,
+            "total_tokens": 1289
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1950.0,
+        "low_90": 1850.0,
+        "high_90": 2050.0,
+        "assessment": "The model demonstrates strong, consistent reasoning across all five questions, solving each correctly with clear, logical explanations. It handles formal logic (Wason selection task), probability (Bayes' theorem), algorithm analysis (Kadane's algorithm), combinatorial enumeration (button sequences), and critical path scheduling with precision. The depth of reasoning and correctness suggest frontier-level capability, though the small sample size (5 questions) introduces uncertainty. No errors were observed, but the 90% interval accounts for potential variance in unseen tasks.",
+        "usage": {
+          "prompt_tokens": 3533,
+          "completion_tokens": 151,
+          "total_tokens": 3684
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identifies A and 7 as the only cards to turn over, with precise logical reasoning matching the reference and rubric. Demonstrates strong understanding of contrapositive and rule scope.",
+          "usage": {
+            "prompt_tokens": 671,
+            "completion_tokens": 79,
+            "total_tokens": 750
+          }
+        },
+        {
+          "mean_elo": 1750.0,
+          "low_90": 1600.0,
+          "high_90": 1900.0,
+          "assessment": "The model correctly solved both problems with precise reasoning. For Q1, it identified A and 7 as the only necessary cards, with clear contrapositive logic. For Q2, it applied Bayes' Theorem accurately, computing 35/41 (~85.4%) with correct intermediate steps. No errors detected, but only two samples limit confidence.",
+          "usage": {
+            "prompt_tokens": 1340,
+            "completion_tokens": 119,
+            "total_tokens": 1459
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubrics. The model demonstrates strong logical reasoning (Wason selection task), accurate probabilistic calculation (Bayes' theorem), and correct algorithmic analysis (Kadane's algorithm with edge-case handling). No errors or gaps detected in the provided evidence.",
+          "usage": {
+            "prompt_tokens": 2232,
+            "completion_tokens": 111,
+            "total_tokens": 2343
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong logical reasoning across all four questions: correctly solves the Wason selection task (A and 7), applies Bayes' theorem accurately with proper weighting (35/41), traces Kadane's algorithm precisely and explains edge cases, and exhaustively enumerates all permutations for the button-press problem. No errors detected; depth and consistency suggest frontier-level performance.",
+          "usage": {
+            "prompt_tokens": 2914,
+            "completion_tokens": 123,
+            "total_tokens": 3037
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong, consistent reasoning across all five questions, solving each correctly with clear, logical explanations. It handles formal logic (Wason selection task), probability (Bayes' theorem), algorithm analysis (Kadane's algorithm), combinatorial enumeration (button sequences), and critical path scheduling with precision. The depth of reasoning and correctness suggest frontier-level capability, though the small sample size (5 questions) introduces uncertainty. No errors were observed, but the 90% interval accounts for potential variance in unseen tasks.",
+          "usage": {
+            "prompt_tokens": 3533,
+            "completion_tokens": 151,
+            "total_tokens": 3684
+          }
+        }
+      ]
+    },
+    "openai/gpt-5.5": {
+      "provider": "openrouter",
+      "public_elo": 1911.0,
+      "leaderboard_row": "GPT-5.5",
+      "answers": [
+        {
+          "question_id": "debug-1-card-rule",
+          "answer": "Turn over **A** and **7**.\n\n- **A**: It\u2019s a vowel, so the rule says the other side must be an even number. If it has an odd number, the rule is violated.\n- **7**: It\u2019s an odd number, so the other side must not be a vowel. If it has a vowel, the rule is violated.\n\nYou do **not** need to turn over **D** because the rule says nothing about consonants. You do **not** need to turn over **4** because even numbers may have either vowels or consonants on the other side.",
+          "usage": {
+            "prompt_tokens": 108,
+            "completion_tokens": 151,
+            "total_tokens": 259
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "answer": "Using Bayes\u2019 rule:\n\n\\[\nP(B \\mid D)=\\frac{P(D \\mid B)P(B)}{P(D \\mid A)P(A)+P(D \\mid B)P(B)}\n\\]\n\nSubstitute the given values:\n\n\\[\nP(B \\mid D)=\\frac{(0.05)(0.70)}{(0.02)(0.30)+(0.05)(0.70)}\n\\]\n\n\\[\n=\\frac{0.035}{0.006+0.035}\n\\]\n\n\\[\n=\\frac{0.035}{0.041}\n\\]\n\n\\[\n=\\frac{35}{41}\\approx 0.8537\n\\]\n\nSo the probability that the defective item came from Line B is:\n\n\\[\n\\boxed{85.4\\%}\n\\]",
+          "usage": {
+            "prompt_tokens": 104,
+            "completion_tokens": 231,
+            "total_tokens": 335
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "answer": "`mystery([-4, 2, -1, 3, -5, 4, 4, -10])` returns:\n\n```python\n8\n```\n\nStep by step:\n\n| `x` | `current = max(0, current + x)` | `best = max(best, current)` | Meaning |\n|---:|---:|---:|---|\n| start | `0` | `0` | no elements processed yet |\n| `-4` | `0` | `0` | negative sum is discarded |\n| `2` | `2` | `2` | best subarray ending here is `[2]` |\n| `-1` | `1` | `2` | current subarray is `[2, -1]`, sum `1` |\n| `3` | `4` | `4` | current subarray is `[2, -1, 3]`, sum `4` |\n| `-5` | `0` | `4` | sum drops below `0`, so reset |\n| `4` | `4` | `4` | current subarray is `[4]` |\n| `4` | `8` | `8` | current subarray is `[4, 4]`, sum `8` |\n| `-10` | `0` | `8` | sum drops below `0`, so reset |\n\nSo the maximum sum found is from the contiguous subarray:\n\n```python\n[4, 4]\n```\n\nwith sum:\n\n```python\n8\n```\n\n`current` represents the best contiguous subarray sum ending at the current position, but never below `0`.\n\n`best` represents the largest such sum seen anywhere so far.\n\nThis is Kadane\u2019s algorithm for maximum contiguous subarray sum, with the empty subarray allowed.\n\nFor a non-empty list containing only negative numbers, such as:\n\n```python\n[-3, -1, -7]\n```\n\nthe function returns:\n\n```python\n0\n```\n\nbecause every negative running sum is reset to `0`. It does not return the largest negative number; it treats choosing no elements as better than choosing a negative-sum subarray.",
+          "usage": {
+            "prompt_tokens": 139,
+            "completion_tokens": 692,
+            "total_tokens": 831
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "answer": "There are only \\(\\binom{4}{2}=6\\) possible orders, since we must choose which 2 of the 4 presses are A\u2019s.\n\nLet \\(A\\) mean \u201cadd 4\u201d and \\(B\\) mean \u201cmultiply by 2.\u201d\n\nStarting from \\(0\\):\n\n1. \\(AABB:\\quad 0 \\to 4 \\to 8 \\to 16 \\to 32\\)\n2. \\(ABAB:\\quad 0 \\to 4 \\to 8 \\to 12 \\to 24\\)\n3. \\(ABBA:\\quad 0 \\to 4 \\to 8 \\to 16 \\to 20\\)\n4. \\(BAAB:\\quad 0 \\to 0 \\to 4 \\to 8 \\to 16\\)\n5. \\(BABA:\\quad 0 \\to 0 \\to 4 \\to 8 \\to 12\\)\n6. \\(BBAA:\\quad 0 \\to 0 \\to 0 \\to 4 \\to 8\\)\n\nSo the possible final displayed values are\n\n\\[\n\\boxed{8,\\ 12,\\ 16,\\ 20,\\ 24,\\ 32}\n\\]\n\nNone are missing because these six orders are all possible arrangements of two A\u2019s and two B\u2019s.",
+          "usage": {
+            "prompt_tokens": 93,
+            "completion_tokens": 540,
+            "total_tokens": 633
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "answer": "With unlimited workers, tasks with no prerequisites start at time 0.\n\n| Task | Prerequisite(s) | Duration | Earliest Start | Earliest Finish |\n|---|---:|---:|---:|---:|\n| A | \u2014 | 3 | 0 | 3 |\n| B | \u2014 | 2 | 0 | 2 |\n| C | A | 4 | 3 | 7 |\n| D | A, B | 5 | max(3, 2) = 3 | 8 |\n| E | C | 2 | 7 | 9 |\n| F | D, E | 3 | max(8, 9) = 9 | 12 |\n\nThe project finishes after **12 hours**.\n\nThe chain that determines the finish time is:\n\n**A \u2192 C \u2192 E \u2192 F**\n\nTotal duration:\n\n**3 + 4 + 2 + 3 = 12 hours**\n\nSo the critical chain/path is **A-C-E-F**, and the project completion time is **12 hours**.",
+          "usage": {
+            "prompt_tokens": 134,
+            "completion_tokens": 375,
+            "total_tokens": 509
+          }
+        }
+      ],
+      "grades": [
+        {
+          "question_id": "debug-1-card-rule",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "None",
+          "explanation": "The answer correctly selects A and 7, explains both cases (vowel must have even number, odd number must not have vowel), and justifies excluding D and 4.",
+          "usage": {
+            "prompt_tokens": 808,
+            "completion_tokens": 182,
+            "total_tokens": 990
+          }
+        },
+        {
+          "question_id": "debug-2-defective-source",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly applies Bayes' rule, weights defect rates by production-line base rates, uses 0.035 as numerator and 0.041 as total defective probability, and concludes 35/41 \u2248 85.4%.",
+          "usage": {
+            "prompt_tokens": 964,
+            "completion_tokens": 211,
+            "total_tokens": 1175
+          }
+        },
+        {
+          "question_id": "debug-3-loop-invariant",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the return value, describes current and best accurately, and addresses the all-negative case.",
+          "usage": {
+            "prompt_tokens": 1271,
+            "completion_tokens": 171,
+            "total_tokens": 1442
+          }
+        },
+        {
+          "question_id": "debug-4-operation-order",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer lists all six values, evaluates all orderings, and justifies completeness via combinatorial argument.",
+          "usage": {
+            "prompt_tokens": 1062,
+            "completion_tokens": 177,
+            "total_tokens": 1239
+          }
+        },
+        {
+          "question_id": "debug-5-critical-path",
+          "probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "apparent_elo": 1800.0,
+          "error_type": "none",
+          "explanation": "The answer correctly computes the project completion time as 12 hours, identifies A\u2192C\u2192E\u2192F as the critical chain, and shows the merge timing before F.",
+          "usage": {
+            "prompt_tokens": 992,
+            "completion_tokens": 190,
+            "total_tokens": 1182
+          }
+        }
+      ],
+      "holistic": {
+        "mean_elo": 1950.0,
+        "low_90": 1850.0,
+        "high_90": 2050.0,
+        "assessment": "The model demonstrates strong, consistent reasoning across all five questions, solving each correctly with precise, well-justified answers. It handles logic puzzles (Wason selection), probability (Bayes' theorem), algorithm analysis (Kadane's), combinatorics (permutations of operations), and scheduling (critical path). The depth and accuracy suggest frontier-level capability, though the small sample size leaves some uncertainty.",
+        "usage": {
+          "prompt_tokens": 2827,
+          "completion_tokens": 130,
+          "total_tokens": 2957
+        }
+      },
+      "holistic_prefixes": [
+        {
+          "mean_elo": 1800.0,
+          "low_90": 1600.0,
+          "high_90": 2000.0,
+          "assessment": "Correctly identifies A and 7 as the only cards to turn over, with precise reasoning matching the reference and rubric. Demonstrates strong logical reasoning (Wason selection task) and clarity in explaining contrapositive. No errors or omissions.",
+          "usage": {
+            "prompt_tokens": 550,
+            "completion_tokens": 91,
+            "total_tokens": 641
+          }
+        },
+        {
+          "mean_elo": 1850.0,
+          "low_90": 1700.0,
+          "high_90": 2000.0,
+          "assessment": "Model correctly solved both problems with precise reasoning. For Q1, it identified the necessary cards (A and 7) and provided accurate contrapositive logic. For Q2, it applied Bayes' rule flawlessly, computing the exact fraction (35/41) and percentage (85.4%). No errors detected; reasoning depth and correctness align with strong frontier models.",
+          "usage": {
+            "prompt_tokens": 1016,
+            "completion_tokens": 118,
+            "total_tokens": 1134
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1750.0,
+          "high_90": 2050.0,
+          "assessment": "All three answers are fully correct, with precise reasoning and adherence to the rubrics. The model demonstrates strong logical reasoning (Wason selection task), accurate probabilistic calculation (Bayes' rule), and deep algorithmic understanding (Kadane's algorithm with edge-case handling). No errors or omissions detected in the provided transcript.",
+          "usage": {
+            "prompt_tokens": 1789,
+            "completion_tokens": 112,
+            "total_tokens": 1901
+          }
+        },
+        {
+          "mean_elo": 1900.0,
+          "low_90": 1800.0,
+          "high_90": 2000.0,
+          "assessment": "The model answered all four questions correctly, demonstrating strong logical reasoning (Wason selection task), precise probabilistic calculation (Bayes' rule), accurate algorithm analysis (Kadane's variant), and exhaustive combinatorial enumeration (button presses). No errors or omissions were observed, but the small sample size (4 questions) limits confidence in the upper bound.",
+          "usage": {
+            "prompt_tokens": 2325,
+            "completion_tokens": 112,
+            "total_tokens": 2437
+          }
+        },
+        {
+          "mean_elo": 1950.0,
+          "low_90": 1850.0,
+          "high_90": 2050.0,
+          "assessment": "The model demonstrates strong, consistent reasoning across all five questions, solving each correctly with precise, well-justified answers. It handles logic puzzles (Wason selection), probability (Bayes' theorem), algorithm analysis (Kadane's), combinatorics (permutations of operations), and scheduling (critical path). The depth and accuracy suggest frontier-level capability, though the small sample size leaves some uncertainty.",
+          "usage": {
+            "prompt_tokens": 2827,
+            "completion_tokens": 130,
+            "total_tokens": 2957
+          }
+        }
+      ]
+    }
+  }
+}

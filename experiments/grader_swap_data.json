@@ -1,0 +1,150 @@
+{
+  "mistral-small-2506": {
+    "mistral-tiny-2407": {
+      "read": 1600.0,
+      "total_tokens": 3365
+    },
+    "open-mistral-nemo-2407": {
+      "read": 1500.0,
+      "total_tokens": 3109
+    },
+    "ministral-3b-2512": {
+      "read": 1800.0,
+      "total_tokens": 5861
+    },
+    "ministral-14b-2512": {
+      "read": 1600.0,
+      "total_tokens": 5043
+    },
+    "mistral-small-2506": {
+      "read": 1600.0,
+      "total_tokens": 4995
+    },
+    "ministral-8b-2512": {
+      "read": 1600.0,
+      "total_tokens": 5421
+    },
+    "mistral-medium-2508": {
+      "read": 1600.0,
+      "total_tokens": 17929
+    },
+    "meta-llama/llama-3.2-1b-instruct": {
+      "read": 1200.0,
+      "total_tokens": 13701
+    },
+    "meta-llama/llama-3.2-3b-instruct": {
+      "read": 1400.0,
+      "total_tokens": 3277
+    },
+    "meta-llama/llama-3.1-8b-instruct": {
+      "read": 1500.0,
+      "total_tokens": 3435
+    },
+    "microsoft/phi-4": {
+      "read": 1800.0,
+      "total_tokens": 4597
+    },
+    "meta-llama/llama-3.3-70b-instruct": {
+      "read": 1600.0,
+      "total_tokens": 3860
+    },
+    "google/gemma-3-27b-it": {
+      "read": 1600.0,
+      "total_tokens": 10399
+    },
+    "openai/gpt-oss-120b": {
+      "read": 1800.0,
+      "total_tokens": 4147
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "read": 1800.0,
+      "total_tokens": 4731
+    },
+    "deepseek/deepseek-chat-v3.1": {
+      "read": 1800.0,
+      "total_tokens": 4131
+    },
+    "moonshotai/kimi-k2-0905": {
+      "read": 1800.0,
+      "total_tokens": 3387
+    },
+    "moonshotai/kimi-k2.5": {
+      "read": 1800.0,
+      "total_tokens": 3523
+    }
+  },
+  "mistral-large-2512": {
+    "mistral-tiny-2407": {
+      "read": 1450.0,
+      "total_tokens": 3430
+    },
+    "open-mistral-nemo-2407": {
+      "read": 1450.0,
+      "total_tokens": 3150
+    },
+    "ministral-3b-2512": {
+      "read": 1650.0,
+      "total_tokens": 5889
+    },
+    "ministral-14b-2512": {
+      "read": 1550.0,
+      "total_tokens": 5098
+    },
+    "mistral-small-2506": {
+      "read": 1650.0,
+      "total_tokens": 5035
+    },
+    "ministral-8b-2512": {
+      "read": 1450.0,
+      "total_tokens": 5497
+    },
+    "mistral-medium-2508": {
+      "read": 1450.0,
+      "total_tokens": 18047
+    },
+    "meta-llama/llama-3.2-1b-instruct": {
+      "read": 1100.0,
+      "total_tokens": 13778
+    },
+    "meta-llama/llama-3.2-3b-instruct": {
+      "read": 1350.0,
+      "total_tokens": 3321
+    },
+    "meta-llama/llama-3.1-8b-instruct": {
+      "read": 1350.0,
+      "total_tokens": 3488
+    },
+    "microsoft/phi-4": {
+      "read": 1700.0,
+      "total_tokens": 4637
+    },
+    "meta-llama/llama-3.3-70b-instruct": {
+      "read": 1550.0,
+      "total_tokens": 3898
+    },
+    "google/gemma-3-27b-it": {
+      "read": 1500.0,
+      "total_tokens": 10494
+    },
+    "openai/gpt-oss-120b": {
+      "read": 1750.0,
+      "total_tokens": 4196
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "read": 1750.0,
+      "total_tokens": 4767
+    },
+    "deepseek/deepseek-chat-v3.1": {
+      "read": 1750.0,
+      "total_tokens": 4152
+    },
+    "moonshotai/kimi-k2-0905": {
+      "read": 1750.0,
+      "total_tokens": 3382
+    },
+    "moonshotai/kimi-k2.5": {
+      "read": 1750.0,
+      "total_tokens": 3565
+    }
+  }
+}

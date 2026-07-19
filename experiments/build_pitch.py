@@ -1,4 +1,19 @@
+"""Assemble the VibeRank pitch page with both figure SVGs inlined.
 
+Edit the HTML template below (all presentation copy lives in it), then:
+
+    python -m experiments.build_pitch
+"""
+from pathlib import Path
+
+EXP = Path(__file__).resolve().parent
+OUT = EXP / "viberank_pitch.html"
+
+trajectory_svg = (EXP / "trajectory_pitch.svg").read_text(encoding="utf-8")
+scatter_svg = (EXP / "external_scatter.svg").read_text(encoding="utf-8")
+graders_svg = (EXP / "grader_compare.svg").read_text(encoding="utf-8")
+
+HTML = """
 <title>VibeRank — Automating the Vibe Check</title>
 <style>
   :root {
@@ -173,32 +188,7 @@
         asserted.</span></li>
     </ol>
     <figure>
-      <div class="plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
-<rect width="880" height="330" fill="#fcfcfb"/>
-<text x="250" y="34" fill="#0b0b0b" font-size="18" font-weight="600">Any Mistral works as the grader</text>
-<text x="250" y="56" fill="#52514e" font-size="13">Same 18 transcripts re-read by each grader, per-grader calibration, leave-one-out MAE — lower is better</text>
-<line x1="250.0" y1="88" x2="250.0" y2="262" stroke="#e1e0d9" stroke-width="1"/>
-<text x="250.0" y="282" fill="#898781" font-size="11.5" text-anchor="middle" style="font-variant-numeric: tabular-nums">0</text>
-<line x1="430.0" y1="88" x2="430.0" y2="262" stroke="#e1e0d9" stroke-width="1"/>
-<text x="430.0" y="282" fill="#898781" font-size="11.5" text-anchor="middle" style="font-variant-numeric: tabular-nums">40</text>
-<line x1="610.0" y1="88" x2="610.0" y2="262" stroke="#e1e0d9" stroke-width="1"/>
-<text x="610.0" y="282" fill="#898781" font-size="11.5" text-anchor="middle" style="font-variant-numeric: tabular-nums">80</text>
-<line x1="790.0" y1="88" x2="790.0" y2="262" stroke="#e1e0d9" stroke-width="1"/>
-<text x="790.0" y="282" fill="#898781" font-size="11.5" text-anchor="middle" style="font-variant-numeric: tabular-nums">120</text>
-<text x="520.0" y="304" fill="#898781" font-size="11.5" text-anchor="middle">mean absolute Elo error</text>
-<text x="236" y="108.0" fill="#0b0b0b" font-size="14" text-anchor="end" font-weight="600">Mistral Small</text>
-<text x="236" y="124.0" fill="#898781" font-size="11.5" text-anchor="end">$0.60 / M out</text>
-<rect x="250" y="96" width="470.7" height="22" rx="4" fill="#2a78d6"><title>Mistral Small: LOO MAE 105 Elo</title></rect>
-<text x="730.7" y="112.0" fill="#0b0b0b" font-size="14" font-weight="600" style="font-variant-numeric: tabular-nums">105</text>
-<text x="236" y="170.0" fill="#0b0b0b" font-size="14" text-anchor="end" font-weight="600">Mistral Medium 3.5</text>
-<text x="236" y="186.0" fill="#898781" font-size="11.5" text-anchor="end">$7.50 / M out · shipped</text>
-<rect x="250" y="158" width="387.9" height="22" rx="4" fill="#008300"><title>Mistral Medium 3.5: LOO MAE 86 Elo</title></rect>
-<text x="647.9" y="174.0" fill="#0b0b0b" font-size="14" font-weight="600" style="font-variant-numeric: tabular-nums">86</text>
-<text x="236" y="232.0" fill="#0b0b0b" font-size="14" text-anchor="end" font-weight="600">Mistral Large 3</text>
-<text x="236" y="248.0" fill="#898781" font-size="11.5" text-anchor="end">$1.50 / M out</text>
-<rect x="250" y="220" width="393.3" height="22" rx="4" fill="#2a78d6"><title>Mistral Large 3: LOO MAE 87 Elo</title></rect>
-<text x="653.3" y="236.0" fill="#0b0b0b" font-size="14" font-weight="600" style="font-variant-numeric: tabular-nums">87</text>
-</svg></div>
+      <div class="plate">__GRADERS_SVG__</div>
       <figcaption><b>The method survives a grader swap.</b> Each grader speaks its own raw
         Elo dialect (their scales differ by up to 80 points on identical transcripts), but
         after its own cheap refit, every Mistral from Small up lands within ~20 Elo of the
@@ -220,43 +210,7 @@
         public scale with measured noise.</p>
     </div>
     <figure>
-      <div class="plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
-<rect width="880" height="540" fill="#fcfcfb"/>
-<text x="64" y="34" fill="#0b0b0b" font-size="18" font-weight="600">Mean absolute Elo error after each question</text>
-<text x="64" y="56" fill="#52514e" font-size="13">18 live models, public Elo 1210–1749 · leave-one-out item fits · grader mistral-medium-3.5</text>
-<text x="54" y="488.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">0</text>
-<line x1="64" y1="386.0" x2="630" y2="386.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="54" y="390.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">50</text>
-<line x1="64" y1="288.0" x2="630" y2="288.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="54" y="292.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">100</text>
-<line x1="64" y1="190.0" x2="630" y2="190.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="54" y="194.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">150</text>
-<line x1="64" y1="92.0" x2="630" y2="92.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="54" y="96.0" fill="#898781" font-size="12" text-anchor="end" style="font-variant-numeric: tabular-nums">200</text>
-<line x1="64" y1="484.0" x2="630" y2="484.0" stroke="#c3c2b7" stroke-width="1"/>
-<text x="64.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q1</text>
-<text x="205.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q2</text>
-<text x="347.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q3</text>
-<text x="488.5" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q4</text>
-<text x="630.0" y="512" fill="#898781" font-size="12" text-anchor="middle">after Q5</text>
-<polyline points="64.0,107.4 205.5,154.8 347.0,162.5 488.5,128.0 630.0,145.2" fill="none" stroke="#1baf7a" stroke-width="2"/>
-<circle cx="64.0" cy="107.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q1: 192 Elo</title></circle>
-<circle cx="205.5" cy="154.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q2: 168 Elo</title></circle>
-<circle cx="347.0" cy="162.5" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q3: 164 Elo</title></circle>
-<circle cx="488.5" cy="128.0" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q4: 182 Elo</title></circle>
-<circle cx="630.0" cy="145.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Raw grader read — after Q5: 173 Elo</title></circle>
-<polyline points="64.0,275.2 205.5,315.1 347.0,316.6 488.5,331.3 630.0,315.1" fill="none" stroke="#008300" stroke-width="2"/>
-<circle cx="64.0" cy="275.2" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q1: 107 Elo</title></circle>
-<circle cx="205.5" cy="315.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q2: 86 Elo</title></circle>
-<circle cx="347.0" cy="316.6" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q3: 85 Elo</title></circle>
-<circle cx="488.5" cy="331.3" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q4: 78 Elo</title></circle>
-<circle cx="630.0" cy="315.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>VibeRank (calibrated) — after Q5: 86 Elo</title></circle>
-<circle cx="644" cy="141.2" r="4" fill="#1baf7a"/>
-<text x="654" y="145.2" fill="#0b0b0b" font-size="12.5">Raw grader read <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">173</tspan></text>
-<circle cx="644" cy="311.1" r="4" fill="#008300"/>
-<text x="654" y="315.1" fill="#0b0b0b" font-size="12.5">VibeRank <tspan fill="#52514e" style="font-variant-numeric: tabular-nums">86</tspan></text>
-<text x="654" y="329.1" fill="#898781" font-size="10.5">(calibrated)</text>
-</svg></div>
+      <div class="plate">__TRAJECTORY_SVG__</div>
       <figcaption><b>Mean absolute Elo error after each question.</b> 18 live models across
         Mistral, Meta, Google, OpenAI-OSS, Qwen, DeepSeek, Moonshot families; every estimate
         made with the evaluated model held out of all calibration fits. Grader:
@@ -274,72 +228,7 @@
         only correlates with each index so well.</p>
     </div>
     <figure>
-      <div class="plate"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 505" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
-<rect width="900" height="505" fill="#fcfcfb"/>
-<text x="70" y="34" fill="#0b0b0b" font-size="18" font-weight="600">A $0.04 vibe check against full benchmark indices</text>
-<text x="70" y="56" fill="#52514e" font-size="13">VibeRank estimate (5 answers, calibrated holistic read, leave-one-out) vs external capability indices</text>
-<text x="70" y="84" fill="#0b0b0b" font-size="14.5" font-weight="600">Epoch Capabilities Index</text>
-<text x="70" y="102" fill="#52514e" font-size="12">n = 10 · Spearman ρ = 0.90 (ground-truth ceiling 0.94)</text>
-<line x1="70" y1="110.0" x2="430" y2="110.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="62" y="114.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1802</text>
-<line x1="70" y1="185.0" x2="430" y2="185.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="62" y="189.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1671</text>
-<line x1="70" y1="260.0" x2="430" y2="260.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="62" y="264.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1539</text>
-<line x1="70" y1="335.0" x2="430" y2="335.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="62" y="339.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1407</text>
-<line x1="70" y1="410.0" x2="430" y2="410.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="62" y="414.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1275</text>
-<line x1="70" y1="410" x2="430" y2="410" stroke="#c3c2b7" stroke-width="1"/>
-<text x="70.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">111</text>
-<text x="250.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">132</text>
-<text x="430.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">152</text>
-<text x="250.0" y="450" fill="#898781" font-size="11.5" text-anchor="middle">Epoch ECI score</text>
-<line x1="70.0" y1="411.1" x2="430.0" y2="70.6" stroke="#eda100" stroke-width="2" stroke-dasharray="6 5"/>
-<circle cx="131.0" cy="381.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Mistral Nemo Instruct (2407): VibeRank 1326, external 118.3</title></circle>
-<circle cx="104.8" cy="380.6" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Llama 3.1 8B Instruct: VibeRank 1327, external 115.4</title></circle>
-<circle cx="242.9" cy="220.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Phi-4: VibeRank 1609, external 131.0</title></circle>
-<circle cx="211.6" cy="261.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Llama 3.3 70B Instruct: VibeRank 1537, external 127.5</title></circle>
-<circle cx="243.2" cy="262.5" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Gemma 3 27B (IT): VibeRank 1534, external 131.1</title></circle>
-<circle cx="326.4" cy="139.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>GPT-OSS-120B: VibeRank 1751, external 140.5</title></circle>
-<circle cx="312.6" cy="182.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Qwen 3 235B A22B 2507 Instruct: VibeRank 1674, external 138.9</title></circle>
-<circle cx="310.9" cy="185.4" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>DeepSeek V3.1: VibeRank 1670, external 138.8</title></circle>
-<circle cx="330.6" cy="142.7" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Kimi K2 0905: VibeRank 1745, external 141.0</title></circle>
-<circle cx="395.2" cy="150.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Kimi K2.5: VibeRank 1732, external 148.3</title></circle>
-<text x="510" y="84" fill="#0b0b0b" font-size="14.5" font-weight="600">Artificial Analysis Intelligence Index</text>
-<text x="510" y="102" fill="#52514e" font-size="12">n = 14 · Spearman ρ = 0.56 (ground-truth ceiling 0.89)</text>
-<line x1="510" y1="110.0" x2="870" y2="110.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="502" y="114.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1795</text>
-<line x1="510" y1="185.0" x2="870" y2="185.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="502" y="189.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1666</text>
-<line x1="510" y1="260.0" x2="870" y2="260.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="502" y="264.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1536</text>
-<line x1="510" y1="335.0" x2="870" y2="335.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="502" y="339.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1406</text>
-<line x1="510" y1="410.0" x2="870" y2="410.0" stroke="#e1e0d9" stroke-width="1"/>
-<text x="502" y="414.0" fill="#898781" font-size="11" text-anchor="end" style="font-variant-numeric: tabular-nums">1277</text>
-<line x1="510" y1="410" x2="870" y2="410" stroke="#c3c2b7" stroke-width="1"/>
-<text x="510.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">-2</text>
-<text x="690.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">20</text>
-<text x="870.0" y="430" fill="#898781" font-size="11" text-anchor="middle" style="font-variant-numeric: tabular-nums">42</text>
-<text x="690.0" y="450" fill="#898781" font-size="11.5" text-anchor="middle">AA Intelligence Index (v4)</text>
-<line x1="510.0" y1="318.4" x2="870.0" y2="97.5" stroke="#eda100" stroke-width="2" stroke-dasharray="6 5"/>
-<circle cx="544.8" cy="289.6" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Mistral 7B Instruct (v0.3): VibeRank 1485, external 2.1</title></circle>
-<circle cx="582.5" cy="217.7" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Ministral-3-3B-Instruct-2512: VibeRank 1609, external 6.8</title></circle>
-<circle cx="616.8" cy="218.5" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Ministral-3-14B-Instruct-2512: VibeRank 1608, external 11.1</title></circle>
-<circle cx="612.8" cy="219.7" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Mistral Small 3.2: VibeRank 1606, external 10.6</title></circle>
-<circle cx="599.9" cy="380.4" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Ministral-3-8B-Instruct-2512: VibeRank 1328, external 9.0</title></circle>
-<circle cx="646.1" cy="300.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Mistral Medium 3.1: VibeRank 1466, external 14.7</title></circle>
-<circle cx="589.0" cy="381.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Llama 3.1 8B Instruct: VibeRank 1327, external 7.6</title></circle>
-<circle cx="566.9" cy="217.7" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Phi-4: VibeRank 1609, external 4.9</title></circle>
-<circle cx="603.4" cy="259.4" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Llama 3.3 70B Instruct: VibeRank 1537, external 9.4</title></circle>
-<circle cx="587.5" cy="260.9" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Gemma 3 27B (IT): VibeRank 1534, external 7.4</title></circle>
-<circle cx="674.1" cy="179.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Qwen 3 235B A22B 2507 Instruct: VibeRank 1674, external 18.2</title></circle>
-<circle cx="697.5" cy="182.5" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>DeepSeek V3.1: VibeRank 1670, external 21.1</title></circle>
-<circle cx="717.6" cy="139.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Kimi K2 0905: VibeRank 1745, external 23.5</title></circle>
-<circle cx="835.2" cy="146.5" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Kimi K2.5: VibeRank 1732, external 38.1</title></circle>
-<text x="70" y="493" fill="#898781" font-size="11">y-axis: VibeRank Elo estimate · dashed line: least-squares fit · hover points for model names</text>
-</svg></div>
+      <div class="plate">__SCATTER_SVG__</div>
       <figcaption><b>Left:</b> against Epoch ECI the five-answer estimate reaches
         ρ&nbsp;=&nbsp;0.90 of a 0.94 ceiling — ~96% of the achievable rank agreement, at
         n&nbsp;=&nbsp;10 overlap. <b>Right:</b> against the AA index it manages
@@ -424,3 +313,12 @@
       5 families · all numbers leave-one-out · July 2026</span>
   </footer>
 </div>
+"""
+
+html = (
+    HTML.replace("__TRAJECTORY_SVG__", trajectory_svg)
+    .replace("__SCATTER_SVG__", scatter_svg)
+    .replace("__GRADERS_SVG__", graders_svg)
+)
+OUT.write_text(html, encoding="utf-8")
+print(f"Saved {OUT} ({len(html):,} chars)")

@@ -1,0 +1,22 @@
+{
+  "mistral-medium-3.5": {
+    "loo_mae": 86.2,
+    "slope": 1.516,
+    "intercept": -680.4,
+    "mean_read": 1636.1
+  },
+  "mistral-small-2506": {
+    "loo_mae": 104.6,
+    "slope": 0.971,
+    "intercept": 149.6,
+    "mean_read": 1633.3,
+    "shift_vs_baseline": -2.8
+  },
+  "mistral-large-2512": {
+    "loo_mae": 87.4,
+    "slope": 1.114,
+    "intercept": -149.2,
+    "mean_read": 1552.8,
+    "shift_vs_baseline": -83.3
+  }
+}
