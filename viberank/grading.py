@@ -17,7 +17,12 @@ def _extract_json(text: str) -> dict[str, Any]:
         match = re.search(r"\{.*\}", text, flags=re.DOTALL)
         if not match:
             raise ProviderError(f"Model did not return JSON: {text[:500]}")
-        return json.loads(match.group(0))
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError as exc:
+            raise ProviderError(
+                f"Model returned malformed JSON ({exc}): {text[:500]}"
+            ) from exc
 
 
 def _slug(value: str) -> str:
