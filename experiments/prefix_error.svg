@@ -33,11 +33,17 @@
 <circle cx="340.0" cy="360.4" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Fixed Qs + calibrated read (shipped) after Q4: 112</title></circle>
 <circle cx="430.0" cy="360.3" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Fixed Qs + calibrated read (shipped) after Q5: 112</title></circle>
 <polyline points="70.0,323.4 160.0,346.5 250.0,356.3 340.0,356.0 430.0,357.8" fill="none" stroke="#2a78d6" stroke-width="2"/>
-<circle cx="70.0" cy="323.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q1: 217</title></circle>
-<circle cx="160.0" cy="346.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q2: 152</title></circle>
-<circle cx="250.0" cy="356.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q3: 124</title></circle>
-<circle cx="340.0" cy="356.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q4: 125</title></circle>
-<circle cx="430.0" cy="357.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q5: 120</title></circle>
+<circle cx="70.0" cy="323.4" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q1: 217</title></circle>
+<circle cx="160.0" cy="346.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q2: 152</title></circle>
+<circle cx="250.0" cy="356.3" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q3: 124</title></circle>
+<circle cx="340.0" cy="356.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q4: 125</title></circle>
+<circle cx="430.0" cy="357.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q5: 120</title></circle>
+<polyline points="70.0,309.3 160.0,355.5 250.0,362.7 340.0,366.8 430.0,367.2" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<circle cx="70.0" cy="309.3" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q1: 257</title></circle>
+<circle cx="160.0" cy="355.5" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q2: 126</title></circle>
+<circle cx="250.0" cy="362.7" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q3: 106</title></circle>
+<circle cx="340.0" cy="366.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q4: 94</title></circle>
+<circle cx="430.0" cy="367.2" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q5: 93</title></circle>
 <polyline points="70.0,126.0 160.0,229.3 250.0,260.7 340.0,278.4 430.0,292.5" fill="none" stroke="#eda100" stroke-width="2" stroke-dasharray="7 5"/>
 <circle cx="70.0" cy="126.0" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Medium-authored ladder (control) after Q1: 776</title></circle>
 <circle cx="160.0" cy="229.3" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Medium-authored ladder (control) after Q2: 484</title></circle>
@@ -75,11 +81,17 @@
 <circle cx="790.0" cy="376.9" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Fixed Qs + calibrated read (shipped) after Q4: 65</title></circle>
 <circle cx="880.0" cy="373.9" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Fixed Qs + calibrated read (shipped) after Q5: 74</title></circle>
 <polyline points="520.0,335.0 610.0,357.8 700.0,362.2 790.0,352.9 880.0,352.5" fill="none" stroke="#2a78d6" stroke-width="2"/>
-<circle cx="520.0" cy="335.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q1: 184</title></circle>
-<circle cx="610.0" cy="357.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q2: 120</title></circle>
-<circle cx="700.0" cy="362.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q3: 107</title></circle>
-<circle cx="790.0" cy="352.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q4: 133</title></circle>
-<circle cx="880.0" cy="352.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Terra-authored adaptive ladder after Q5: 135</title></circle>
+<circle cx="520.0" cy="335.0" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q1: 184</title></circle>
+<circle cx="610.0" cy="357.8" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q2: 120</title></circle>
+<circle cx="700.0" cy="362.2" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q3: 107</title></circle>
+<circle cx="790.0" cy="352.9" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q4: 133</title></circle>
+<circle cx="880.0" cy="352.5" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Posterior-steered ladder after Q5: 135</title></circle>
+<polyline points="520.0,307.6 610.0,366.1 700.0,368.7 790.0,365.8 880.0,365.6" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<circle cx="520.0" cy="307.6" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q1: 262</title></circle>
+<circle cx="610.0" cy="366.1" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q2: 96</title></circle>
+<circle cx="700.0" cy="368.7" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q3: 89</title></circle>
+<circle cx="790.0" cy="365.8" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q4: 97</title></circle>
+<circle cx="880.0" cy="365.6" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>Self-steered ladder after Q5: 97</title></circle>
 <polyline points="520.0,104.5 610.0,232.4 700.0,250.1 790.0,285.8 880.0,293.9" fill="none" stroke="#eda100" stroke-width="2" stroke-dasharray="7 5"/>
 <circle cx="520.0" cy="104.5" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Medium-authored ladder (control) after Q1: 837</title></circle>
 <circle cx="610.0" cy="232.4" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Medium-authored ladder (control) after Q2: 475</title></circle>
@@ -89,7 +101,9 @@
 <line x1="70" y1="450" x2="96" y2="450" stroke="#008300" stroke-width="2"/>
 <text x="102" y="454" fill="#0b0b0b" font-size="12.5">Fixed Qs + calibrated read (shipped)</text>
 <line x1="340.4" y1="450" x2="366.4" y2="450" stroke="#2a78d6" stroke-width="2"/>
-<text x="372.4" y="454" fill="#0b0b0b" font-size="12.5">Terra-authored adaptive ladder</text>
-<line x1="572.4" y1="450" x2="598.4" y2="450" stroke="#eda100" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="604.4" y="454" fill="#0b0b0b" font-size="12.5">Medium-authored ladder (control)</text>
+<text x="372.4" y="454" fill="#0b0b0b" font-size="12.5">Posterior-steered ladder</text>
+<line x1="534.0" y1="450" x2="560.0" y2="450" stroke="#1baf7a" stroke-width="2"/>
+<text x="566.0" y="454" fill="#0b0b0b" font-size="12.5">Self-steered ladder</text>
+<line x1="695.6" y1="450" x2="721.6" y2="450" stroke="#eda100" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="727.6" y="454" fill="#0b0b0b" font-size="12.5">Medium-authored ladder (control)</text>
 </svg>

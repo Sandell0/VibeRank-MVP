@@ -29,7 +29,8 @@ BASELINE = "#c3c2b7"
 FONT = 'system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif'
 SERIES = {
     "fixed_calibrated": ("#008300", "Fixed Qs + calibrated read (shipped)", ""),
-    "terra_ladder": ("#2a78d6", "Terra-authored adaptive ladder", ""),
+    "terra_ladder": ("#2a78d6", "Posterior-steered ladder", ""),
+    "self_ladder": ("#1baf7a", "Self-steered ladder", ""),
     "medium_ladder": ("#eda100", "Medium-authored ladder (control)", ' stroke-dasharray="7 5"'),
 }
 
@@ -58,6 +59,18 @@ def load_ladder(path: str) -> dict:
             ],
         }
         for name, record in data.items()
+    }
+
+
+def load_self_steered() -> dict:
+    data = json.loads((EXP / "self_steered_data.json").read_text(encoding="utf-8"))["models"]
+    return {
+        name: {
+            "true": record["public_elo"],
+            "traces": [(s["difficulty"], s["medium_score"]) for s in record["steps"]],
+        }
+        for name, record in data.items()
+        if len(record.get("steps", [])) == QUESTIONS
     }
 
 
@@ -90,43 +103,35 @@ def loo_mae(scores: dict[str, float], truths: dict[str, float], subset) -> float
 
 def curves() -> dict:
     fixed = load_fixed()
-    terra = load_ladder("terra_author_data.json")
-    medium = load_ladder("adaptive_battle_data.json")
+    ladder_sets = {
+        "terra_ladder": load_ladder("terra_author_data.json"),
+        "self_ladder": load_self_steered(),
+        "medium_ladder": load_ladder("adaptive_battle_data.json"),
+    }
     everyone = lambda t: True
     frontier = lambda t: t >= FRONTIER_FLOOR
 
     out: dict[str, dict[str, list[float]]] = {"all": {}, "frontier": {}}
     for label, subset in (("all", everyone), ("frontier", frontier)):
-        fixed_curve = []
-        terra_curve = []
-        medium_curve = []
+        panel: dict[str, list[float]] = {"fixed_calibrated": []}
         for k in range(1, QUESTIONS + 1):
-            fixed_curve.append(
+            panel["fixed_calibrated"].append(
                 loo_mae(
                     {n: e["reads"][k - 1] for n, e in fixed.items()},
                     {n: e["true"] for n, e in fixed.items()},
                     subset,
                 )
             )
-            terra_curve.append(
+        for key, dataset in ladder_sets.items():
+            panel[key] = [
                 loo_mae(
-                    {n: ladder_score(e["traces"][:k]) for n, e in terra.items()},
-                    {n: e["true"] for n, e in terra.items()},
+                    {n: ladder_score(e["traces"][:k]) for n, e in dataset.items()},
+                    {n: e["true"] for n, e in dataset.items()},
                     subset,
                 )
-            )
-            medium_curve.append(
-                loo_mae(
-                    {n: ladder_score(e["traces"][:k]) for n, e in medium.items()},
-                    {n: e["true"] for n, e in medium.items()},
-                    subset,
-                )
-            )
-        out[label] = {
-            "fixed_calibrated": fixed_curve,
-            "terra_ladder": terra_curve,
-            "medium_ladder": medium_curve,
-        }
+                for k in range(1, QUESTIONS + 1)
+            ]
+        out[label] = panel
     return out
 
 
