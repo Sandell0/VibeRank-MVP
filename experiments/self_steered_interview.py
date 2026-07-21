@@ -28,7 +28,10 @@ from viberank.grading import MistralGrader, _extract_json
 
 EXP = Path(__file__).resolve().parent
 DATA_PATH = EXP / "self_steered_data.json"
+RESULTS_PATH = EXP / "self_steered_results.json"
 INTERVIEWER = "openai/gpt-5.6-terra"
+# None = mistral-medium (production grader); set to an OpenRouter id to swap.
+GRADER_MODEL: str | None = None
 QUESTIONS = 5
 FRONTIER_FLOOR = 1740.0
 PASS = 2.5
@@ -161,7 +164,9 @@ def answer_question(client, prompt_text: str) -> str:
 def collect() -> dict:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8")) if DATA_PATH.is_file() else {"models": {}}
     interviewer = openrouter_client(INTERVIEWER)
-    grader = MistralGrader(mistral_client())
+    grader = MistralGrader(
+        openrouter_client(GRADER_MODEL) if GRADER_MODEL else mistral_client()
+    )
     for provider, model, elo, row in TARGETS:
         record = data["models"].setdefault(
             model,
@@ -293,7 +298,7 @@ def analyze(data: dict) -> None:
             for k in range(QUESTIONS)
         ]
         print(f"  {label:<10} " + " ".join(f"{v:>6.0f}" for v in by_step))
-    out = EXP / "self_steered_results.json"
+    out = RESULTS_PATH
     out.write_text(
         json.dumps(
             {
