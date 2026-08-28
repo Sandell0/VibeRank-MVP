@@ -37,6 +37,7 @@ SOURCES = [
     ("gpt-5.6-terra", 1889, "self_steered_data.json", "medium-graded"),
     ("gpt-5.6-sol", 1954, "sol_interview_data.json", "medium-graded"),
     ("gpt-5.6-sol (k=25 pilot)", 1954, "pilot_deep_data.json", "medium-graded"),
+    ("gpt-5.6-terra (k=25 pilot)", 1889, "pilot_terra_data.json", "medium-graded"),
 ]
 
 
