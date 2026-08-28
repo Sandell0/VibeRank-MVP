@@ -1,0 +1,226 @@
+{
+  "conditioned": {
+    "meta-llama/llama-3.1-8b-instruct": {
+      "anthropic/claude-opus-4.8": {
+        "10": {
+          "mean_elo": 1150.0
+        },
+        "25": {
+          "mean_elo": 1130.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "10": {
+          "mean_elo": 1150.0
+        },
+        "25": {
+          "mean_elo": 1150.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "10": {
+          "mean_elo": 1050.0
+        },
+        "25": {
+          "mean_elo": 1100.0
+        }
+      }
+    },
+    "microsoft/phi-4": {
+      "anthropic/claude-opus-4.8": {
+        "10": {
+          "mean_elo": 1350.0
+        },
+        "25": {
+          "mean_elo": 1390.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "10": {
+          "mean_elo": 1320.0
+        },
+        "25": {
+          "mean_elo": 1380.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "10": {
+          "mean_elo": 1320.0
+        },
+        "25": {
+          "mean_elo": 1330.0
+        }
+      }
+    },
+    "mistral-small-2506": {
+      "anthropic/claude-opus-4.8": {
+        "10": {
+          "mean_elo": 1440.0
+        },
+        "25": {
+          "mean_elo": 1440.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "10": {
+          "mean_elo": 1420.0
+        },
+        "25": {
+          "mean_elo": 1410.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "10": {
+          "mean_elo": 1420.0
+        },
+        "25": {
+          "mean_elo": 1420.0
+        }
+      }
+    },
+    "google/gemma-3-27b-it": {
+      "anthropic/claude-opus-4.8": {
+        "10": {
+          "mean_elo": 1430.0
+        },
+        "25": {
+          "mean_elo": 1330.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "10": {
+          "mean_elo": 1420.0
+        },
+        "25": {
+          "mean_elo": 1380.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "10": {
+          "mean_elo": 1380.0
+        },
+        "25": {
+          "mean_elo": 1250.0
+        }
+      }
+    },
+    "moonshotai/kimi-k2-0905": {
+      "anthropic/claude-opus-4.8": {
+        "10": {
+          "mean_elo": 1850.0
+        },
+        "25": {
+          "mean_elo": 1880.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "10": {
+          "mean_elo": 1820.0
+        },
+        "25": {
+          "mean_elo": 1960.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "10": {
+          "mean_elo": 2080.0
+        },
+        "25": {
+          "mean_elo": 2050.0
+        }
+      }
+    }
+  },
+  "ladder_only": {
+    "meta-llama/llama-3.1-8b-instruct": {
+      "anthropic/claude-opus-4.8": {
+        "25": {
+          "mean_elo": 1130.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "25": {
+          "mean_elo": 1140.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "25": {
+          "mean_elo": 1120.0
+        }
+      }
+    },
+    "microsoft/phi-4": {
+      "anthropic/claude-opus-4.8": {
+        "25": {
+          "mean_elo": 1410.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "25": {
+          "mean_elo": 1380.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "25": {
+          "mean_elo": 1380.0
+        }
+      }
+    },
+    "mistral-small-2506": {
+      "anthropic/claude-opus-4.8": {
+        "25": {
+          "mean_elo": 1410.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "25": {
+          "mean_elo": 1420.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {
+        "25": {
+          "mean_elo": 1425.0
+        }
+      }
+    },
+    "google/gemma-3-27b-it": {
+      "anthropic/claude-opus-4.8": {
+        "25": {
+          "mean_elo": 1390.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "25": {
+          "mean_elo": 1410.0
+        }
+      },
+      "deepseek/deepseek-v4-pro": {}
+    },
+    "moonshotai/kimi-k2-0905": {
+      "anthropic/claude-opus-4.8": {
+        "25": {
+          "mean_elo": 2050.0
+        }
+      },
+      "qwen/qwen3.7-max": {
+        "25": {
+          "mean_elo": 2010.0
+        }
+      }
+    }
+  },
+  "usage": {
+    "anthropic/claude-opus-4.8": {
+      "prompt": 526055,
+      "completion": 7620
+    },
+    "qwen/qwen3.7-max": {
+      "prompt": 391925,
+      "completion": 51220
+    },
+    "deepseek/deepseek-v4-pro": {
+      "prompt": 390437,
+      "completion": 135712
+    }
+  }
+}
