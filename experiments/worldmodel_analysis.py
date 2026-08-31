@@ -19,10 +19,15 @@ ELO = {  # budget-unified, 2026-08-30
     "qwen/qwen3.6-plus": 1814, "deepseek/deepseek-v4-pro": 1836,
     "openai/gpt-5.4": 1881, "anthropic/claude-opus-4.8": 1934,
     "openai/gpt-5.5": 1937,
-    "anthropic/claude-fable-5": 2037,  # above-band probes, not in band metrics
+    "anthropic/claude-fable-5": 2037,  # probes, not in band metrics
     "anthropic/claude-opus-5": 2060,
+    "openai/gpt-5.4-mini": 1776,       # distilled probes (Elo-for-size)
+    "anthropic/claude-haiku-4.5": 1686,
+    "qwen/qwen3.6-35b-a3b": 1701,
 }
-ABOVE_BAND = {"anthropic/claude-fable-5", "anthropic/claude-opus-5"}
+ABOVE_BAND = {"anthropic/claude-fable-5", "anthropic/claude-opus-5",
+              "openai/gpt-5.4-mini", "anthropic/claude-haiku-4.5",
+              "qwen/qwen3.6-35b-a3b"}
 BAND = [m for m in ELO if ELO[m] >= 1800 and m not in ABOVE_BAND]
 
 BAD_ITEMS = {  # extractor junk, excluded from scoring
