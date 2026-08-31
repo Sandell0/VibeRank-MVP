@@ -21,6 +21,9 @@ This file maps conclusions to the artifacts in this repo.
 | Fresh 80-item multi-DOMAIN verifiable bank (8 families, 3 escalation waves, effort pinned) saturates the frontier band every wave (measurable 0.97–1.00; 4 real in-band misses/560 cells); discriminates fine below the band | `domain_portfolio.py`, `domain_portfolio_bank.json`, `domain_portfolio_data.json`, `domain_analysis.py` |
 | Provider output ceilings censor before difficulty discriminates: 7/12 no-answer cells flip at 120k budget; qwen3.6-plus has a hard ~65k completion ceiling (4 cells permanently unmeasurable) | `domain_rerun_null.py`, write-up §G4 |
 | Public-board side of the same checks (basket curves: verifiable-only baskets reach +0.89 in-band; frontier boards agree MORE than mid) | leaderboard repo `research/scripts/aggregation-curve.py`, write-up §G3 |
+| Long-tail recall (Gutenberg span-keyed, closed-book) is the first fresh instrument that spreads the band: 0.24–0.47, ρ +0.89, bootstrap-stable | `worldmodel_smoke.py`, `worldmodel_smoke_bank.json`, `worldmodel_smoke_data.json`, `worldmodel_analysis.py`, write-up §H |
+| Retrocast (resolved Manifold binaries) mechanism validated; KNOW-pass caught qwen's effective cutoff inside the window; n=25 Brier base-rate-dominated | same files, write-up §H |
+| Claude Fable 5 out-of-sample probe (Elo 2037): recall 0.62, Brier 0.170 — instrument monotone 100 Elo above its fit range | `worldmodel_fable.py`, write-up §H |
 
 Earlier (pre-program) baselines: `sol_interview_*` (best k=5 run),
 `self_steered_*` (Terra), `qwen_interview_*` (confounded self-grading),

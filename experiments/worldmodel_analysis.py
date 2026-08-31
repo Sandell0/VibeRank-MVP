@@ -19,8 +19,10 @@ ELO = {  # budget-unified, 2026-08-30
     "qwen/qwen3.6-plus": 1814, "deepseek/deepseek-v4-pro": 1836,
     "openai/gpt-5.4": 1881, "anthropic/claude-opus-4.8": 1934,
     "openai/gpt-5.5": 1937,
+    "anthropic/claude-fable-5": 2037,  # above-band probe, not in band metrics
 }
-BAND = [m for m in ELO if ELO[m] >= 1800]
+ABOVE_BAND = {"anthropic/claude-fable-5"}
+BAND = [m for m in ELO if ELO[m] >= 1800 and m not in ABOVE_BAND]
 
 BAD_ITEMS = {  # extractor junk, excluded from scoring
     "recall-mid-155-1": "key is 'my servant', not a name",
