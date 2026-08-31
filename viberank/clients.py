@@ -60,6 +60,8 @@ class ChatClient:
         temperature: float = 0.2,
         json_mode: bool = False,
         max_tokens: int = DEFAULT_MAX_TOKENS,
+        extra: dict[str, Any] | None = None,
+        timeout: float = 120.0,
     ) -> ChatResult:
         payload: dict[str, Any] = {
             "model": self.model,
@@ -69,6 +71,8 @@ class ChatClient:
         }
         if json_mode:
             payload["response_format"] = {"type": "json_object"}
+        if extra:
+            payload.update(extra)
         request = urllib.request.Request(
             self.endpoint,
             data=json.dumps(payload).encode("utf-8"),
@@ -80,7 +84,7 @@ class ChatClient:
             method="POST",
         )
         try:
-            with urllib.request.urlopen(request, timeout=120) as response:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
                 result = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
