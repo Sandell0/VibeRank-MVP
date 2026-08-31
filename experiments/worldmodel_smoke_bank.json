@@ -1,0 +1,587 @@
+[
+ {
+  "id": "recall-famous-1342-0",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "question": "How many songs did Mary sing before her father stopped her?",
+  "key": "two",
+  "prompt": "From your memory of the book 'Pride and Prejudice' by Jane Austen: How many songs did Mary sing before her father stopped her?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-1342-1",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "question": "Which noblewoman does Mr. Collins mention in his speech to Mr. Darcy?",
+  "key": "Lady Catherine de Bourgh",
+  "prompt": "From your memory of the book 'Pride and Prejudice' by Jane Austen: Which noblewoman does Mr. Collins mention in his speech to Mr. Darcy?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-1342-2",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "question": "What annual sum during Mr. Bennet's life was offered to Wickham to marry Lydia?",
+  "key": "one hundred a year",
+  "prompt": "From your memory of the book 'Pride and Prejudice' by Jane Austen: What annual sum during Mr. Bennet's life was offered to Wickham to marry Lydia?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-2701-0",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Moby Dick; Or, The Whale",
+  "author": "Herman Melville",
+  "question": "What disease does Stubb mention the devil might give John?",
+  "key": "Asiatic cholera",
+  "prompt": "From your memory of the book 'Moby Dick; Or, The Whale' by Herman Melville: What disease does Stubb mention the devil might give John?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-2701-1",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Moby Dick; Or, The Whale",
+  "author": "Herman Melville",
+  "question": "What is the name of the character who offers his shoulders as a pedestal for Flask to stand on?",
+  "key": "Daggoo",
+  "prompt": "From your memory of the book 'Moby Dick; Or, The Whale' by Herman Melville: What is the name of the character who offers his shoulders as a pedestal for Flask to stand on?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-2701-2",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Moby Dick; Or, The Whale",
+  "author": "Herman Melville",
+  "question": "What city did the cook mention passing a church in?",
+  "key": "Cape-Town",
+  "prompt": "From your memory of the book 'Moby Dick; Or, The Whale' by Herman Melville: What city did the cook mention passing a church in?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-84-0",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Frankenstein; or, the modern prometheus",
+  "author": "Mary Wollstonecraft Shelley",
+  "question": "What is the name of the pretty little girl who is William's favorite wife?",
+  "key": "Louisa Biron",
+  "prompt": "From your memory of the book 'Frankenstein; or, the modern prometheus' by Mary Wollstonecraft Shelley: What is the name of the pretty little girl who is William's favorite wife?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-84-1",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Frankenstein; or, the modern prometheus",
+  "author": "Mary Wollstonecraft Shelley",
+  "question": "Which river flows beside Oxford in the passage?",
+  "key": "Isis",
+  "prompt": "From your memory of the book 'Frankenstein; or, the modern prometheus' by Mary Wollstonecraft Shelley: Which river flows beside Oxford in the passage?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-84-2",
+  "family": "recall",
+  "tier": "famous",
+  "book": "Frankenstein; or, the modern prometheus",
+  "author": "Mary Wollstonecraft Shelley",
+  "question": "What is the name of Victor's cousin and betrothed?",
+  "key": "Elizabeth",
+  "prompt": "From your memory of the book 'Frankenstein; or, the modern prometheus' by Mary Wollstonecraft Shelley: What is the name of Victor's cousin and betrothed?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-1661-0",
+  "family": "recall",
+  "tier": "famous",
+  "book": "The Adventures of Sherlock Holmes",
+  "author": "Arthur Conan Doyle",
+  "question": "Whose house is on fire in the passage?",
+  "key": "Dr. Becher\u2019s",
+  "prompt": "From your memory of the book 'The Adventures of Sherlock Holmes' by Arthur Conan Doyle: Whose house is on fire in the passage?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-1661-1",
+  "family": "recall",
+  "tier": "famous",
+  "book": "The Adventures of Sherlock Holmes",
+  "author": "Arthur Conan Doyle",
+  "question": "What name does the stepfather use when disguised?",
+  "key": "Mr. Hosmer Angel",
+  "prompt": "From your memory of the book 'The Adventures of Sherlock Holmes' by Arthur Conan Doyle: What name does the stepfather use when disguised?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-famous-1661-2",
+  "family": "recall",
+  "tier": "famous",
+  "book": "The Adventures of Sherlock Holmes",
+  "author": "Arthur Conan Doyle",
+  "question": "What name does the disguised man use when begging?",
+  "key": "Hugh Boone",
+  "prompt": "From your memory of the book 'The Adventures of Sherlock Holmes' by Arthur Conan Doyle: What name does the disguised man use when begging?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-308-0",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Three men in a boat (to say nothing of the dog)",
+  "author": "Jerome K. Jerome",
+  "question": "What musical instrument was the young fellow studying to play?",
+  "key": "bagpipes",
+  "prompt": "From your memory of the book 'Three men in a boat (to say nothing of the dog)' by Jerome K. Jerome: What musical instrument was the young fellow studying to play?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-308-1",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Three men in a boat (to say nothing of the dog)",
+  "author": "Jerome K. Jerome",
+  "question": "How many years has the old fellow been drinking river water?",
+  "key": "fifteen years",
+  "prompt": "From your memory of the book 'Three men in a boat (to say nothing of the dog)' by Jerome K. Jerome: How many years has the old fellow been drinking river water?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-308-2",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Three men in a boat (to say nothing of the dog)",
+  "author": "Jerome K. Jerome",
+  "question": "What is the name of the dog in this passage?",
+  "key": "Montmorency",
+  "prompt": "From your memory of the book 'Three men in a boat (to say nothing of the dog)' by Jerome K. Jerome: What is the name of the dog in this passage?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-155-0",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Moonstone",
+  "author": "Wilkie Collins",
+  "question": "What event are the women in the carriage taking Rachel to?",
+  "key": "the flower-show",
+  "prompt": "From your memory of the book 'The Moonstone' by Wilkie Collins: What event are the women in the carriage taking Rachel to?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-155-1",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Moonstone",
+  "author": "Wilkie Collins",
+  "question": "What is the name of the servant who delivered the letter to Rachel?",
+  "key": "my servant",
+  "prompt": "From your memory of the book 'The Moonstone' by Wilkie Collins: What is the name of the servant who delivered the letter to Rachel?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-155-2",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Moonstone",
+  "author": "Wilkie Collins",
+  "question": "What is the name of the character whose death is to be revealed to Miss Verinder?",
+  "key": "Rosanna",
+  "prompt": "From your memory of the book 'The Moonstone' by Wilkie Collins: What is the name of the character whose death is to be revealed to Miss Verinder?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-2398-0",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Renaissance: Studies in Art and Poetry",
+  "author": "Walter Pater",
+  "question": "Which city's streets are described as having a people as fantastic, changeful, and dreamlike?",
+  "key": "Milan",
+  "prompt": "From your memory of the book 'The Renaissance: Studies in Art and Poetry' by Walter Pater: Which city's streets are described as having a people as fantastic, changeful, and dreamlike?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-2398-1",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Renaissance: Studies in Art and Poetry",
+  "author": "Walter Pater",
+  "question": "Where was Michelangelo's David originally displayed?",
+  "key": "Palazzo Vecchio",
+  "prompt": "From your memory of the book 'The Renaissance: Studies in Art and Poetry' by Walter Pater: Where was Michelangelo's David originally displayed?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-2398-2",
+  "family": "recall",
+  "tier": "mid",
+  "book": "The Renaissance: Studies in Art and Poetry",
+  "author": "Walter Pater",
+  "question": "Who was Leonardo's rival in the competition to paint The Battle of the Standard?",
+  "key": "Michelangelo",
+  "prompt": "From your memory of the book 'The Renaissance: Studies in Art and Poetry' by Walter Pater: Who was Leonardo's rival in the competition to paint The Battle of the Standard?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-1023-0",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Bleak House",
+  "author": "Charles Dickens",
+  "question": "What is the name of the character who expresses belief that Jo is a limb of the arch-fiend?",
+  "key": "Mrs. Snagsby",
+  "prompt": "From your memory of the book 'Bleak House' by Charles Dickens: What is the name of the character who expresses belief that Jo is a limb of the arch-fiend?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-1023-1",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Bleak House",
+  "author": "Charles Dickens",
+  "question": "What is the name of the captain whose writing Mr. Tulkinghorn wants to compare?",
+  "key": "Captain Hawdon",
+  "prompt": "From your memory of the book 'Bleak House' by Charles Dickens: What is the name of the captain whose writing Mr. Tulkinghorn wants to compare?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-mid-1023-2",
+  "family": "recall",
+  "tier": "mid",
+  "book": "Bleak House",
+  "author": "Charles Dickens",
+  "question": "What is the name of the servant who responds to the bell in this scene?",
+  "key": "Mercury",
+  "prompt": "From your memory of the book 'Bleak House' by Charles Dickens: What is the name of the servant who responds to the bell in this scene?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-52153-0",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys",
+  "author": "Clarence Young",
+  "question": "What is the name of the ranch in the story?",
+  "key": "Square Z",
+  "prompt": "From your memory of the book 'The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys' by Clarence Young: What is the name of the ranch in the story?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-52153-1",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys",
+  "author": "Clarence Young",
+  "question": "What is the name of the character who kicks the express package?",
+  "key": "Ned",
+  "prompt": "From your memory of the book 'The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys' by Clarence Young: What is the name of the character who kicks the express package?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-52153-2",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys",
+  "author": "Clarence Young",
+  "question": "What type of sandwiches did Bob's mother make?",
+  "key": "chicken ones",
+  "prompt": "From your memory of the book 'The Motor Boys on a Ranch; or, Ned, Bob and Jerry Among the Cowboys' by Clarence Young: What type of sandwiches did Bob's mother make?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-60432-0",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Real Tsaritsa",
+  "author": "Lili Den",
+  "question": "What was the Empress's first name in this passage?",
+  "key": "Lili",
+  "prompt": "From your memory of the book 'The Real Tsaritsa' by Lili Den: What was the Empress's first name in this passage?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-60432-1",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Real Tsaritsa",
+  "author": "Lili Den",
+  "question": "Which town did Baroness Ysa B\u00fcxhoevgen visit before returning to the Palace?",
+  "key": "Tsarkoe Selo",
+  "prompt": "From your memory of the book 'The Real Tsaritsa' by Lili Den: Which town did Baroness Ysa B\u00fcxhoevgen visit before returning to the Palace?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-60432-2",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The Real Tsaritsa",
+  "author": "Lili Den",
+  "question": "What was the name of the palace where the narrator was walking when carriages passed by?",
+  "key": "Livadia",
+  "prompt": "From your memory of the book 'The Real Tsaritsa' by Lili Den: What was the name of the palace where the narrator was walking when carriages passed by?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-63311-0",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "Methods & Aims in Archaeology",
+  "author": "W. M. Flinders Petrie",
+  "question": "Which museum explicitly states how much has been added to original statues?",
+  "key": "the Louvre",
+  "prompt": "From your memory of the book 'Methods & Aims in Archaeology' by W. M. Flinders Petrie: Which museum explicitly states how much has been added to original statues?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-63311-1",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "Methods & Aims in Archaeology",
+  "author": "W. M. Flinders Petrie",
+  "question": "In which country are boys required to go to school, making their use in excavation difficult?",
+  "key": "Greece",
+  "prompt": "From your memory of the book 'Methods & Aims in Archaeology' by W. M. Flinders Petrie: In which country are boys required to go to school, making their use in excavation difficult?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-63311-2",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "Methods & Aims in Archaeology",
+  "author": "W. M. Flinders Petrie",
+  "question": "What tool is used to press the paper into the hollows for small lines?",
+  "key": "indiarubber",
+  "prompt": "From your memory of the book 'Methods & Aims in Archaeology' by W. M. Flinders Petrie: What tool is used to press the paper into the hollows for small lines?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-69777-0",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The rat-trap",
+  "author": "Dolf Wyllarde",
+  "question": "What is the name of the character who is easily comforted like a child?",
+  "key": "Ally",
+  "prompt": "From your memory of the book 'The rat-trap' by Dolf Wyllarde: What is the name of the character who is easily comforted like a child?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-69777-1",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The rat-trap",
+  "author": "Dolf Wyllarde",
+  "question": "What is the name of the character who says, 'One and elevenpence halfpenny!'?",
+  "key": "Chum",
+  "prompt": "From your memory of the book 'The rat-trap' by Dolf Wyllarde: What is the name of the character who says, 'One and elevenpence halfpenny!'?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "recall-obscure-69777-2",
+  "family": "recall",
+  "tier": "obscure",
+  "book": "The rat-trap",
+  "author": "Dolf Wyllarde",
+  "question": "What type of flower did the tall woman wear against her skin?",
+  "key": "black velvet rose",
+  "prompt": "From your memory of the book 'The rat-trap' by Dolf Wyllarde: What type of flower did the tall woman wear against her skin?\nAnswer with just the name/number/phrase; if you do not remember, answer UNKNOWN.\nEnd your reply with a line 'FINAL: <answer>'."
+ },
+ {
+  "id": "retro-ypFv3TnCKtjSnY3Q2VDj",
+  "family": "retro",
+  "question": "Will Twitter IPO by 2028?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2022-10-05",
+  "bettors": 15
+ },
+ {
+  "id": "retro-T9vV5ST3jgJV3nqvOnZ4",
+  "family": "retro",
+  "question": "Will Massachusetts decriminalize psilocybin before 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2022-04-18",
+  "bettors": 16
+ },
+ {
+  "id": "retro-CchlGjOuD4e3exiC02SJ",
+  "family": "retro",
+  "question": "Will there be a trillionaire by the end of 2028?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2022-11-23",
+  "bettors": 319
+ },
+ {
+  "id": "retro-12g6otPL80nZDk4ueu3h",
+  "family": "retro",
+  "question": "AI honesty #1: by 2027 will we have AI that doesn't hallucinate random nonsense?",
+  "resolution": "YES",
+  "resolution_month": "2026-08",
+  "created": "2022-10-13",
+  "bettors": 46
+ },
+ {
+  "id": "retro-jkeJxRSaBxeUrRpvUu4J",
+  "family": "retro",
+  "question": "Will a previous winner of the World Cup win the 2026 FIFA World Cup?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2022-12-18",
+  "bettors": 82
+ },
+ {
+  "id": "retro-tVMuayTJMPgUEFL92xYF",
+  "family": "retro",
+  "question": "Will Elon Musk take Twitter public (IPO) anytime in the future?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2022-10-31",
+  "bettors": 22
+ },
+ {
+  "id": "retro-pTOGG7BW7K8z5XOqGjCg",
+  "family": "retro",
+  "question": "Will Sam Rosen and AellaGirl have sex by EOY 2029?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-01-07",
+  "bettors": 15
+ },
+ {
+  "id": "retro-IMzxYnCug16mQBW7zLyf",
+  "family": "retro",
+  "question": "Will the Colombian government and National Liberation Army (ELN) rebels announce a comprehensive agreement before the end of President Gustavo Petro\u2019s term?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-01-15",
+  "bettors": 25
+ },
+ {
+  "id": "retro-PRDNtG161LErj6WKWzBV",
+  "family": "retro",
+  "question": "Will there be a Rick and Morty Season 8 by 2030?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-01-22",
+  "bettors": 16
+ },
+ {
+  "id": "retro-jSfjEF0CcRzIOKcfnQtB",
+  "family": "retro",
+  "question": "Will France win the 2026 FIFA World Cup?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-01-25",
+  "bettors": 55
+ },
+ {
+  "id": "retro-RjKpiXcM1xoojSpzOAwd",
+  "family": "retro",
+  "question": "Will SLS Block 1B or SLS Block 2 ever be launched?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-03-01",
+  "bettors": 22
+ },
+ {
+  "id": "retro-l6pDOuXNGWyIkjcJUEEj",
+  "family": "retro",
+  "question": "Will we have end to end AI generated anime series by the end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-02-27",
+  "bettors": 145
+ },
+ {
+  "id": "retro-PLA04avUAyYOPSVovLw9",
+  "family": "retro",
+  "question": "Will a magazine publish a +8000 word piece about the Silicon Valley Bank saga?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-03-13",
+  "bettors": 20
+ },
+ {
+  "id": "retro-wcjqRgGKIGUnYfhTMIpQ",
+  "family": "retro",
+  "question": "Will we have a popular LLM fine-tuned on people's personal texts by June 1, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-03-10",
+  "bettors": 48
+ },
+ {
+  "id": "retro-ccew8406BGl84Lo0H5Ey",
+  "family": "retro",
+  "question": "Will an AI implement a Python PEP by 2024?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-03-23",
+  "bettors": 17
+ },
+ {
+  "id": "retro-v1Ys84LuzIrEUPDPDB6P",
+  "family": "retro",
+  "question": "\ud83c\udf93 Will I complete my PhD?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-04-11",
+  "bettors": 41
+ },
+ {
+  "id": "retro-uKOjLoodI4duxopn3Y5X",
+  "family": "retro",
+  "question": "Will another Star Wars movie be released before 2027?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-03-26",
+  "bettors": 24
+ },
+ {
+  "id": "retro-dbMVnIstHAcHbvI2r1Mg",
+  "family": "retro",
+  "question": "If I'm alive by 2026, will I believe it is due to personal enjoyment of living or altruistic purposes",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-06-20",
+  "bettors": 24
+ },
+ {
+  "id": "retro-z11T9Ti0znknwluyYej4",
+  "family": "retro",
+  "question": "Will Edward Snowden be pardoned by 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-04-03",
+  "bettors": 56
+ },
+ {
+  "id": "retro-9LgJjSIMk1MzhxyLU2sJ",
+  "family": "retro",
+  "question": "Will a posthumous deathbed UFO confession from Jimmy Carter be revealed within a year of his passing?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-08-02",
+  "bettors": 26
+ },
+ {
+  "id": "retro-8KSJeo7HCLnzuDv5rl3q",
+  "family": "retro",
+  "question": "Will Eliezer Yudkowsky and Aella start dating during the next 3yrs?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-04-17",
+  "bettors": 40
+ },
+ {
+  "id": "retro-piY5pFsWeDtrA1Wm0RPC",
+  "family": "retro",
+  "question": "Will Mr. Donald Trump join Manifold Markets before the end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-08-11",
+  "bettors": 25
+ },
+ {
+  "id": "retro-5GYiswIEZ4dM2NGnxbOR",
+  "family": "retro",
+  "question": "Will the winner of the 2026 FIFA World Cup come from Europe?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-08-06",
+  "bettors": 54
+ },
+ {
+  "id": "retro-ZQvUHx5d2tphDz1tJSMM",
+  "family": "retro",
+  "question": "Will there be official peace talks involving both Putin and Zelenskyy before Aug 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-08-13",
+  "bettors": 247
+ },
+ {
+  "id": "retro-QHFQmCmz8HplpN2QQnl2",
+  "family": "retro",
+  "question": "Will England win the 2026 FIFA World Cup?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-08-06",
+  "bettors": 105
+ }
+]
