@@ -23,7 +23,8 @@ This file maps conclusions to the artifacts in this repo.
 | Public-board side of the same checks (basket curves: verifiable-only baskets reach +0.89 in-band; frontier boards agree MORE than mid) | leaderboard repo `research/scripts/aggregation-curve.py`, write-up §G3 |
 | Long-tail recall (Gutenberg span-keyed, closed-book) is the first fresh instrument that spreads the band: 0.24–0.47, ρ +0.89, bootstrap-stable | `worldmodel_smoke.py`, `worldmodel_smoke_bank.json`, `worldmodel_smoke_data.json`, `worldmodel_analysis.py`, write-up §H |
 | Retrocast (resolved Manifold binaries) mechanism validated; KNOW-pass caught qwen's effective cutoff inside the window; n=25 Brier base-rate-dominated | same files, write-up §H |
-| Claude Fable 5 out-of-sample probe (Elo 2037): recall 0.62, Brier 0.170 — instrument monotone 100 Elo above its fit range | `worldmodel_fable.py`, write-up §H |
+| Fable 5 (2037) + Opus 5 (2060) out-of-sample probes: recall 0.62/0.59, both above the band — monotone ~100 Elo past fit range; 1 item can't adjudicate their 23-Elo gap | `worldmodel_fable.py`, `worldmodel_probe.py`, write-up §H |
+| Retro self-correction: on the no-model-knows shared set nobody beats base rate; KNOW-pass exclusion is commit-propensity-asymmetric — retro v2 needs symmetric exclusion | write-up §H |
 
 Earlier (pre-program) baselines: `sol_interview_*` (best k=5 run),
 `self_steered_*` (Terra), `qwen_interview_*` (confounded self-grading),
