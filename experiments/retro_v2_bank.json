@@ -1,0 +1,1109 @@
+[
+ {
+  "id": "retro2-sJnxqZZWl88OEPxbdXwX",
+  "family": "retro",
+  "question": "Will this Yudkowsky tweet hold up?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2022-08-29",
+  "bettors": 625
+ },
+ {
+  "id": "retro2-XqK1nn3TmVG83hF5PglL",
+  "family": "retro",
+  "question": "Will there be a space station with artificial gravity by June 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2022-06-07",
+  "bettors": 50
+ },
+ {
+  "id": "retro2-lgxNmHNmrYvowjnSyQAM",
+  "family": "retro",
+  "question": "Will Lionel Messi play in the 2026 World Cup?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-02-23",
+  "bettors": 66
+ },
+ {
+  "id": "retro2-YGoCYPirxuE4DHZ9HFHr",
+  "family": "retro",
+  "question": "Will Elon Musk lose his security clearance by the end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-09-10",
+  "bettors": 40
+ },
+ {
+  "id": "retro2-MkXkFzbsnGcOc0ja4M4A",
+  "family": "retro",
+  "question": "Will some U.S. lawyers be negatively affected financially due to AI by end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2023-01-03",
+  "bettors": 61
+ },
+ {
+  "id": "retro2-vxi6XfA9celPUwAzC6BL",
+  "family": "retro",
+  "question": "Female AI love bot: ChadGPT",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2023-01-28",
+  "bettors": 73
+ },
+ {
+  "id": "retro2-j65AKQZQCjgqa3erm88N",
+  "family": "retro",
+  "question": "Will the 2026 FIFA World Cup champion be a first time winner?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-08-06",
+  "bettors": 43
+ },
+ {
+  "id": "retro2-cJr9XGDCpr6oaNng4prv",
+  "family": "retro",
+  "question": "AI will generate coherent 5-min films by the end of 2025",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2023-09-23",
+  "bettors": 99
+ },
+ {
+  "id": "retro2-H6DS1JfUIX8Evql1KLK2",
+  "family": "retro",
+  "question": "Will some U.S. musicians be negatively affected financially due to AI by end of 2025?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2023-01-04",
+  "bettors": 79
+ },
+ {
+  "id": "retro2-QnGZyS7XfpXUfujacWdO",
+  "family": "retro",
+  "question": "Will there be a song created by an AI system in the year-end top 100 Billboards chart by 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-02-03",
+  "bettors": 269
+ },
+ {
+  "id": "retro2-V8Ljj1i9EREOFMq6Bg18",
+  "family": "retro",
+  "question": "Will any player score 6 or more goals in the 2026 FIFA World Cup?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-08-06",
+  "bettors": 40
+ },
+ {
+  "id": "retro2-HeuuEdddfLL6EFrL0fRN",
+  "family": "retro",
+  "question": "Will Manchester City be relegated or demoted before the start of the 2026/27 Premier League season?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2024-05-20",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-eithThMNGm1lATYq6f54",
+  "family": "retro",
+  "question": "Will some U.S. accountants be negatively affected financially due to AI by end of 2025?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2023-01-04",
+  "bettors": 44
+ },
+ {
+  "id": "retro2-SXyTj7qHh3V3cHHnlNuw",
+  "family": "retro",
+  "question": "Will Elon Musk be the world's first trillionaire?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2023-02-09",
+  "bettors": 119
+ },
+ {
+  "id": "retro2-XOJ8Tfrg8s2iqPFwauO8",
+  "family": "retro",
+  "question": "Will France win the 2026 FIFA World Cup?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-08-09",
+  "bettors": 44
+ },
+ {
+  "id": "retro2-n6bopn43z9",
+  "family": "retro",
+  "question": "Will OpenAI employ more people on 8/1/26 than it does on 8/1/24?",
+  "resolution": "YES",
+  "resolution_month": "2026-08",
+  "created": "2024-07-29",
+  "bettors": 63
+ },
+ {
+  "id": "retro2-pM6Xx8AdGWZfTdysrIjv",
+  "family": "retro",
+  "question": "Will some U.S. doctors be negatively affected financially due to AI by end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2023-01-04",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-QSVgwCxYAV2HedfGyMiv",
+  "family": "retro",
+  "question": "Will LLMs become a ubiquitous part of everyday life by June 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2023-02-13",
+  "bettors": 74
+ },
+ {
+  "id": "retro2-yTCCaTUbAtJWWFo1dGzD",
+  "family": "retro",
+  "question": "Will a nation outside of Europe or South America make it to the 2026 FIFA World Cup Final?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-08-09",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-dIntAyAcUZ",
+  "family": "retro",
+  "question": "Will Sam Altman become more cautious about AGI/ASI development after having a child?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2024-11-09",
+  "bettors": 101
+ },
+ {
+  "id": "retro2-Vt5H2E5rjTtjZaEUN9Wk",
+  "family": "retro",
+  "question": "Will some U.S. consultants be negatively affected financially due to AI by end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2023-01-04",
+  "bettors": 43
+ },
+ {
+  "id": "retro2-3e8XS9XJFH8QrdvbbjgD",
+  "family": "retro",
+  "question": "Will OpenAI release a model referred to as \"GPT-6\" before June 1st, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-03-16",
+  "bettors": 88
+ },
+ {
+  "id": "retro2-QBF6oIt8FdUqw9vKIESb",
+  "family": "retro",
+  "question": "Will Argentina win the 2026 FIFA World Cup?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2023-08-21",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-8Nzq0Iq92g",
+  "family": "retro",
+  "question": "Aella? Will Nick Deck 'er? (Aella-Decker 2025 hookup market)",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2025-05-04",
+  "bettors": 86
+ },
+ {
+  "id": "retro2-0vfCTCfht3mB2XgEsrxz",
+  "family": "retro",
+  "question": "Will some U.S. actors be negatively affected financially due to AI by end of 2025?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2023-01-04",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-gNIyXqC02SDXHGheCcGR",
+  "family": "retro",
+  "question": "Will someone commit terrorism against an AI lab by the end of 2025 for AI-safety related reasons?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-03-22",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-txlyUI6GiSL18s36Z95J",
+  "family": "retro",
+  "question": "Will Taylor swift and Travis Kelce get married?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2023-12-15",
+  "bettors": 107
+ },
+ {
+  "id": "retro2-czESSygIPZ",
+  "family": "retro",
+  "question": "Will Trump set foot in Greenland by the end of July 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2025-08-01",
+  "bettors": 63
+ },
+ {
+  "id": "retro2-UuKeZO2xvwtE3qMNxMKw",
+  "family": "retro",
+  "question": "Will drawing AIs like DALL-E be able to draw convicing hands 9 times out of 10 before the end of 2024?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2023-03-05",
+  "bettors": 42
+ },
+ {
+  "id": "retro2-5D2M9ROOmLDoHODXZZ8B",
+  "family": "retro",
+  "question": "Will it be revealed that GPT-5 was used for how GPT-5 will be released?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-04-09",
+  "bettors": 56
+ },
+ {
+  "id": "retro2-enDYPoHVisJ5GxcrK6bk",
+  "family": "retro",
+  "question": "Will Taylor Swift get married before the One Piece manga ends?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2024-01-12",
+  "bettors": 40
+ },
+ {
+  "id": "retro2-L0SAgPdhh0",
+  "family": "retro",
+  "question": "Will a video made entirely with AI reach 100 million views on YouTube in 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-08",
+  "created": "2025-08-03",
+  "bettors": 61
+ },
+ {
+  "id": "retro2-U58ue9CkiHRqrgmPlr0S",
+  "family": "retro",
+  "question": "Will an AI Doomer turn to violence by the end of 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2024-02-17",
+  "bettors": 55
+ },
+ {
+  "id": "retro2-IR7wwwlaE0TRJt6rmbe9",
+  "family": "retro",
+  "question": "Will Donald Trump serve any prison time before 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-10-14",
+  "bettors": 59
+ },
+ {
+  "id": "retro2-HD42jFl0J4xp4kCOldas",
+  "family": "retro",
+  "question": "Will Trump announce he is running for President in the 2028 election?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2024-01-22",
+  "bettors": 116
+ },
+ {
+  "id": "retro2-pLhI9s2P8N",
+  "family": "retro",
+  "question": "5+ perfect scorers at IMO 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-08",
+  "created": "2025-08-31",
+  "bettors": 60
+ },
+ {
+  "id": "retro2-O6R80dnggu",
+  "family": "retro",
+  "question": "GTA VI released on May 26, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-05-02",
+  "bettors": 54
+ },
+ {
+  "id": "retro2-ZKezTCssUducHwCLJjXD",
+  "family": "retro",
+  "question": "Will Cristiano Ronaldo or Leo Messi play at the 2026 FIFA World Cup?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2023-10-18",
+  "bettors": 86
+ },
+ {
+  "id": "retro2-8TGMkSPjMMgWKl24ymom",
+  "family": "retro",
+  "question": "Russian attacks or invades Finland by mid 2026",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2024-03-01",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-Q6zCns2UuN",
+  "family": "retro",
+  "question": "Will Jannik Sinner win at least 2 Grand Slams in 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-01-05",
+  "bettors": 49
+ },
+ {
+  "id": "retro2-yhCRLptzUL",
+  "family": "retro",
+  "question": "Israel wins Eurovision 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-05-18",
+  "bettors": 50
+ },
+ {
+  "id": "retro2-OezoJEmDmhlSI9pd0ZhR",
+  "family": "retro",
+  "question": "An AI model with 100 trillion parameters exists by the end of 2025?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2023-12-18",
+  "bettors": 91
+ },
+ {
+  "id": "retro2-Jc4rRAQpvCXE9tCEfa4n",
+  "family": "retro",
+  "question": "Russian attacks or invades Latvia by mid 2026",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2024-03-01",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-su6n5h6AZS",
+  "family": "retro",
+  "question": "Will Trump interfere with Greenland?",
+  "resolution": "YES",
+  "resolution_month": "2026-08",
+  "created": "2026-01-06",
+  "bettors": 380
+ },
+ {
+  "id": "retro2-QsQUZ22Z28",
+  "family": "retro",
+  "question": "Will Trump attempt to fire Jerome Powell before May 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-07-03",
+  "bettors": 112
+ },
+ {
+  "id": "retro2-ndlJ7If8jUswxCNUwVaA",
+  "family": "retro",
+  "question": "Will Norway reach 95% electric vehicle sales in new passenger car before 2026 ?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2024-01-09",
+  "bettors": 42
+ },
+ {
+  "id": "retro2-VxnB7vd5I3hg60PigZoz",
+  "family": "retro",
+  "question": "Will FTX creditors get back more than 100%?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2024-03-03",
+  "bettors": 55
+ },
+ {
+  "id": "retro2-qt5pcdLy9g",
+  "family": "retro",
+  "question": "Will anything CRAZY happen on August 4, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-01-08",
+  "bettors": 46
+ },
+ {
+  "id": "retro2-dgPNU5ICzP",
+  "family": "retro",
+  "question": "Will Colbert be forced off air before May, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-07-27",
+  "bettors": 52
+ },
+ {
+  "id": "retro2-i7MP3oGFn6nUnrHe9aG5",
+  "family": "retro",
+  "question": "Will the Nintendo Switch 2 be hacked within 12 months of its release date?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2024-02-03",
+  "bettors": 148
+ },
+ {
+  "id": "retro2-Vs5hvajBbG3NipnDyDF4",
+  "family": "retro",
+  "question": "Will Taylor Swift marry Travis Kelce before the end of 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2024-04-05",
+  "bettors": 68
+ },
+ {
+  "id": "retro2-snZ6ClC8cP",
+  "family": "retro",
+  "question": "Will a Chinese AI model rank in the top 10 on the LMArena Text leaderboard on August 1?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-01-12",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-N2NPRNZAss",
+  "family": "retro",
+  "question": "Real Madrid tops Spanish league in 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-08-14",
+  "bettors": 43
+ },
+ {
+  "id": "retro2-dLq1oGr6ndcwTPIUAV9t",
+  "family": "retro",
+  "question": "On the 12th anniversary of the Russian annexation of Crimea, will the Russia-Ukraine war still be ongoing?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2024-04-08",
+  "bettors": 43
+ },
+ {
+  "id": "retro2-OpRRgcB6cymEfMe3a1sG",
+  "family": "retro",
+  "question": "Will the Lumina oral probiotic treatment reduce the rate of cavities by at least 50% in the 4 years after application?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2024-04-10",
+  "bettors": 89
+ },
+ {
+  "id": "retro2-sPuSducIS2",
+  "family": "retro",
+  "question": "Will Russia and Ukraine agree to a ceasefire before August 1, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-03-22",
+  "bettors": 116
+ },
+ {
+  "id": "retro2-uQdQc8sICZ",
+  "family": "retro",
+  "question": "Thomas Massie wins Kentucky's 4th Republican primary in 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-09-10",
+  "bettors": 243
+ },
+ {
+  "id": "retro2-ADS8fVRT4vhTq4lm7V12",
+  "family": "retro",
+  "question": "Will SpaceX IPO before the end of 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2024-05-02",
+  "bettors": 100
+ },
+ {
+  "id": "retro2-m4n27pyrhp",
+  "family": "retro",
+  "question": "Will Larry the Cat outlast Keir Starmer\u2019s Prime Minister tenure?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2024-09-09",
+  "bettors": 42
+ },
+ {
+  "id": "retro2-PAPtPqQZhh",
+  "family": "retro",
+  "question": "Will at least 1 non-passenger get hantavirus from the MV Hondius outbreak?",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-05-14",
+  "bettors": 145
+ },
+ {
+  "id": "retro2-PCt0P5qsCZ",
+  "family": "retro",
+  "question": "Israel participates in Eurovision 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2025-09-15",
+  "bettors": 43
+ },
+ {
+  "id": "retro2-6mlxaa3ql4",
+  "family": "retro",
+  "question": "Will Kanye West Die by 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2024-08-09",
+  "bettors": 66
+ },
+ {
+  "id": "retro2-6PpCI0gRLS",
+  "family": "retro",
+  "question": "Mark Zuckerberg either divorced or separated by July 1, 2026",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2025-01-23",
+  "bettors": 51
+ },
+ {
+  "id": "retro2-EL8nnQuOAq",
+  "family": "retro",
+  "question": "Strait of Hormuz traffic returns to normal by end of July? [Polymarket]",
+  "resolution": "NO",
+  "resolution_month": "2026-08",
+  "created": "2026-05-28",
+  "bettors": 50
+ },
+ {
+  "id": "retro2-2cCOO6dZun",
+  "family": "retro",
+  "question": "Trump visits China before May 1, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2025-11-12",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-dI5U6ps6IP",
+  "family": "retro",
+  "question": "Will an AI achieve >85% performance on the FrontierMath benchmark before 2028?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2024-11-08",
+  "bettors": 303
+ },
+ {
+  "id": "retro2-0PE59gu09y",
+  "family": "retro",
+  "question": "Will Donald Trump attend the Men's 2026 soccer World Cup final in person?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2025-03-10",
+  "bettors": 110
+ },
+ {
+  "id": "retro2-0q0RRPtScc",
+  "family": "retro",
+  "question": "China's rebar failure rate below 20% in 2025 national quality check?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2025-11-26",
+  "bettors": 155
+ },
+ {
+  "id": "retro2-92gdnLROgN",
+  "family": "retro",
+  "question": "Will an AI achieve >85% performance on the FrontierMath benchmark before 2027?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2024-11-08",
+  "bettors": 119
+ },
+ {
+  "id": "retro2-AOuQPL9guU",
+  "family": "retro",
+  "question": "Fewer US programming jobs 1 year from March 13, 2025? [Tegmark / Ng bet]",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2025-03-13",
+  "bettors": 62
+ },
+ {
+  "id": "retro2-uCgZhL5udI",
+  "family": "retro",
+  "question": "Will Anthropic surpass OpenAI valuation in 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2026-01-04",
+  "bettors": 288
+ },
+ {
+  "id": "retro2-s9CZcc65NL",
+  "family": "retro",
+  "question": "Did DOGE cause a data breach during 2025?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2025-02-07",
+  "bettors": 149
+ },
+ {
+  "id": "retro2-qIIy2UnOAN",
+  "family": "retro",
+  "question": "Kash Patel remains FBI Director on June 30, 2026",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2025-07-12",
+  "bettors": 54
+ },
+ {
+  "id": "retro2-UdsLNSc2OE",
+  "family": "retro",
+  "question": "[ACX 2026] Will an AI model reach a 3 hour time horizon with 80% reliability during 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2026-01-06",
+  "bettors": 82
+ },
+ {
+  "id": "retro2-EEcggZCt2y",
+  "family": "retro",
+  "question": "Will an AI achieve >80% performance on the FrontierMath benchmark before 2027?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2025-02-07",
+  "bettors": 64
+ },
+ {
+  "id": "retro2-OAL8q0Azzl",
+  "family": "retro",
+  "question": "Perfect score achieved by an AI model in the International Math Olympiad (IMO) 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2025-07-19",
+  "bettors": 539
+ },
+ {
+  "id": "retro2-NLPzcQ2Cy9",
+  "family": "retro",
+  "question": "Will the US strike Yemen by April 30, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2026-01-26",
+  "bettors": 73
+ },
+ {
+  "id": "retro2-9zlInyCcq9",
+  "family": "retro",
+  "question": "A major tech company, besides Anthropic, reports at least 98% of its code is AI-generated before April 1, 2026",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2025-03-11",
+  "bettors": 59
+ },
+ {
+  "id": "retro2-UQIRCNSA06",
+  "family": "retro",
+  "question": "Will Tadej Pogacar win the 2026 Tour de France?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2025-07-28",
+  "bettors": 42
+ },
+ {
+  "id": "retro2-n0SOsuUccS",
+  "family": "retro",
+  "question": "Will the winner of Eurovision 2026 come from Europe?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2026-02-02",
+  "bettors": 67
+ },
+ {
+  "id": "retro2-sPtUnO9PNc",
+  "family": "retro",
+  "question": "Manchester United makes Premier League top 4 in 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2025-08-12",
+  "bettors": 66
+ },
+ {
+  "id": "retro2-dUzApqSQdN",
+  "family": "retro",
+  "question": "Will Hamas \u201cdisarm and relinquish power\u201d in Gaza?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2025-07-31",
+  "bettors": 57
+ },
+ {
+  "id": "retro2-yq9hpgsgsU",
+  "family": "retro",
+  "question": "Will pro-independence parties win a majority of seats at the 2026 Welsh election?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2026-02-05",
+  "bettors": 48
+ },
+ {
+  "id": "retro2-ELRCAcQ2IQ",
+  "family": "retro",
+  "question": "AI races: Will Alex Bores be the 2026 Democratic candidate for NY-12?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2025-10-20",
+  "bettors": 89
+ },
+ {
+  "id": "retro2-yEzz69QLyp",
+  "family": "retro",
+  "question": "Will the United States government admit there are alien UFOs by July 4?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2025-12-22",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-9S9RPEZLdl",
+  "family": "retro",
+  "question": "Will xAI release Grok 5 before May 1st 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2026-02-12",
+  "bettors": 42
+ },
+ {
+  "id": "retro2-ggsSOlny9s",
+  "family": "retro",
+  "question": "Will at least 2 of the 2026 FIFA World Cup host nations win their opening group stage match?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2025-10-30",
+  "bettors": 41
+ },
+ {
+  "id": "retro2-uzLy0uyLZ2",
+  "family": "retro",
+  "question": "[ACX 2026] Will Keir Starmer cease to be Prime Minister of the UK during 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-01-06",
+  "bettors": 235
+ },
+ {
+  "id": "retro2-OlQq8h8qOh",
+  "family": "retro",
+  "question": "Strait of Hormuz traffic returns to normal by April 30? [Polymarket]",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2026-03-11",
+  "bettors": 625
+ },
+ {
+  "id": "retro2-C0Pu698Eph",
+  "family": "retro",
+  "question": "Will there be a trillionaire by the end of 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2025-12-20",
+  "bettors": 135
+ },
+ {
+  "id": "retro2-ZCdtlP2A8u",
+  "family": "retro",
+  "question": "[ACX 2026] Will the winner of the 2026 FIFA World Cup be a country that has never won before?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-01-06",
+  "bettors": 98
+ },
+ {
+  "id": "retro2-286ycOt8cp",
+  "family": "retro",
+  "question": "Will Spurs aka Tottenham Hotspur be relegated from the Premier League at the end of the 25/26 season?",
+  "resolution": "NO",
+  "resolution_month": "2026-05",
+  "created": "2026-03-16",
+  "bettors": 46
+ },
+ {
+  "id": "retro2-98C2A2O9QC",
+  "family": "retro",
+  "question": "Graham Platner and James Talarico both win their primaries?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-01-04",
+  "bettors": 169
+ },
+ {
+  "id": "retro2-lUSdpt96lp",
+  "family": "retro",
+  "question": "Will Ukraine gain more territory than it loses in any month of 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-01-10",
+  "bettors": 76
+ },
+ {
+  "id": "retro2-OU2hqNZPu0",
+  "family": "retro",
+  "question": "Trump visits China by May 15?",
+  "resolution": "YES",
+  "resolution_month": "2026-05",
+  "created": "2026-03-27",
+  "bettors": 320
+ },
+ {
+  "id": "retro2-IZNcZQAu0d",
+  "family": "retro",
+  "question": "Will the ICE deployment in Minnesota be substantially reduced by June 1, 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-01-16",
+  "bettors": 40
+ },
+ {
+  "id": "retro2-hdNqANszg0",
+  "family": "retro",
+  "question": "Will consumer AI platforms (ChatGPT, Claude, Perplexity, etc) face an \u2018economic blackout\u2019 protest against the US govt?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-01-25",
+  "bettors": 93
+ },
+ {
+  "id": "retro2-gtEN0EUcRz",
+  "family": "retro",
+  "question": "Will Elon Musk become a trillionaire before July 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-01-27",
+  "bettors": 545
+ },
+ {
+  "id": "retro2-q8dtCdNgsn",
+  "family": "retro",
+  "question": "Will a G7 country announce new quantum legislation within the next 2 months?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-01-30",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-RgldE2qpqn",
+  "family": "retro",
+  "question": "Will Keir Starmer resign in 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-02-07",
+  "bettors": 70
+ },
+ {
+  "id": "retro2-cnlR6p5sZl",
+  "family": "retro",
+  "question": "US - Iran nuclear deal by end of June?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-02-03",
+  "bettors": 320
+ },
+ {
+  "id": "retro2-RPcqcIcASQ",
+  "family": "retro",
+  "question": "Will the Oklahoma City Thunder win 2026 NBA Finals",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-02-12",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-Z85zSOIE8P",
+  "family": "retro",
+  "question": "Will Tulsi Gabbard leave the Trump Cabinet this year?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-02-03",
+  "bettors": 48
+ },
+ {
+  "id": "retro2-zOSd5nE56c",
+  "family": "retro",
+  "question": "Will Iran actually participate in the 2026 FIFA World Cup?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-03-01",
+  "bettors": 290
+ },
+ {
+  "id": "retro2-g0uNUlg9IP",
+  "family": "retro",
+  "question": "Graham Platner to win Primary and General for 2026 US Senate in Maine?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-02-22",
+  "bettors": 47
+ },
+ {
+  "id": "retro2-nQQU9OOlIO",
+  "family": "retro",
+  "question": "New Iranian Supreme Leader is chosen in March 2026 and killed in March 2026.",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-03-04",
+  "bettors": 170
+ },
+ {
+  "id": "retro2-RA5SyCpczc",
+  "family": "retro",
+  "question": "Will Mexico still host all of the planned FIFA World Cup games this year?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-02-25",
+  "bettors": 80
+ },
+ {
+  "id": "retro2-q5hLIPdLll",
+  "family": "retro",
+  "question": "Will the US or Israel occupy Kharg Island (Iran) before June 1, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-03-04",
+  "bettors": 51
+ },
+ {
+  "id": "retro2-Czh26ZqEsl",
+  "family": "retro",
+  "question": "Will Trump attack Cuba before July 4, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-03-08",
+  "bettors": 52
+ },
+ {
+  "id": "retro2-sSEc2lNZ8Z",
+  "family": "retro",
+  "question": "The US takes Military Action against Cuba by end of May 2026",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-03-06",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-PdlUOR8E90",
+  "family": "retro",
+  "question": "Will the US and Iran reach a formal nuclear deal framework by July 1, 2026?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-03-26",
+  "bettors": 53
+ },
+ {
+  "id": "retro2-UlZEC6Rys2",
+  "family": "retro",
+  "question": "Russia-Ukraine ceasefire before end of Iran War",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-03-23",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-5RZdS28O0N",
+  "family": "retro",
+  "question": "Will the USA win the 2026 IMO?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-03-31",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-ghI9lZO0CP",
+  "family": "retro",
+  "question": "US x Iran permanent peace deal by May 31? [Polymarket]",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-04-10",
+  "bettors": 493
+ },
+ {
+  "id": "retro2-dP58EZ5ntQ",
+  "family": "retro",
+  "question": "Will Anthropic reach 50 billion in ARR by the end of June?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-04-07",
+  "bettors": 65
+ },
+ {
+  "id": "retro2-2ItEg96spt",
+  "family": "retro",
+  "question": "Strait of Hormuz traffic returns to normal by end of May? [Polymarket]",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-04-10",
+  "bettors": 318
+ },
+ {
+  "id": "retro2-USpnpA6Idq",
+  "family": "retro",
+  "question": "Will the ID verification requirement for new users be reversed?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-04-09",
+  "bettors": 105
+ },
+ {
+  "id": "retro2-Rplhqs8pd8",
+  "family": "retro",
+  "question": "Will xAI/SpaceX acquire Cursor in 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-06",
+  "created": "2026-04-17",
+  "bettors": 151
+ },
+ {
+  "id": "retro2-tllRhO59t6",
+  "family": "retro",
+  "question": "Will the US and Iran jointly announce a nuclear framework agreement by June 30, 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-04-16",
+  "bettors": 45
+ },
+ {
+  "id": "retro2-qZZ6gnuPRg",
+  "family": "retro",
+  "question": "Will Trump replace Iran with Italy in the World Cup?",
+  "resolution": "NO",
+  "resolution_month": "2026-06",
+  "created": "2026-04-22",
+  "bettors": 40
+ },
+ {
+  "id": "retro2-RcNs5ch6qU",
+  "family": "retro",
+  "question": "Strait of Hormuz traffic returns to normal by end of June? [Polymarket]",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-04-22",
+  "bettors": 263
+ },
+ {
+  "id": "retro2-s2NLyA0UsZ",
+  "family": "retro",
+  "question": "Will the Virginia Redistricting Referendum be certified by June 30th?",
+  "resolution": "NO",
+  "resolution_month": "2026-07",
+  "created": "2026-04-27",
+  "bettors": 76
+ },
+ {
+  "id": "retro2-lnhgNRdtZg",
+  "family": "retro",
+  "question": "Will Anthropic release Claude Opus 5 by August 31, 2026?",
+  "resolution": "YES",
+  "resolution_month": "2026-07",
+  "created": "2026-04-29",
+  "bettors": 40
+ }
+]
