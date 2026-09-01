@@ -5347,6 +5347,388 @@
     "extracted": "0.12",
     "text": "Predicting the winner of a major international tournament like the FIFA World Cup is inherently uncertain due to variables such as team form, injuries, draw luck, and tournament structure. England has consistently ranked among the top national teams in recent years, boasts a deep squad, and has a history of reaching the latter stages of major tournaments. However, the World Cup is highly volatile, and even the strongest pre-tournament favorites typically carry a 10\u201315% chance of lifting the trophy. Factoring in England's current competitive standing, historical knockout performance, and the expanded 48-team format, a reasonable probability estimate is around 12%. This reflects their status as a genuine contender while properly accounting for the tournament's unpredictability.\n\nFINAL: 0.12"
    }
+  },
+  "anthropic/claude-fable-5.1": {
+   "recall-famous-1342-1": {
+    "extracted": "Lady Catherine de Bourgh",
+    "text": "Lady Catherine de Bourgh\n\nFINAL: Lady Catherine de Bourgh",
+    "correct": true
+   },
+   "recall-famous-2701-1": {
+    "extracted": "Daggoo",
+    "text": "In Moby-Dick, Daggoo, the harpooneer, lifts Flask onto his shoulders in the whaleboat so Flask can see.\n\nFINAL: Daggoo",
+    "correct": true
+   },
+   "recall-famous-1342-2": {
+    "extracted": "One hundred pounds per annum",
+    "text": "In Mr. Gardiner's letter, Wickham is to receive Lydia's equal share of the five thousand pounds after the Bennets' deaths, plus one hundred pounds per annum during Mr. Bennet's life.\n\nFINAL: One hundred pounds per annum",
+    "correct": false
+   },
+   "recall-famous-1342-0": {
+    "extracted": "Two",
+    "text": "Two\n\nFINAL: Two",
+    "correct": true
+   },
+   "recall-famous-84-0": {
+    "extracted": "Louisa Biron",
+    "text": "In Elizabeth's letter to Victor, she mentions that little William has \"already had one or two little wives, but Louisa Biron is his favourite, a pretty little girl of five years of age.\"\n\nFINAL: Louisa Biron",
+    "correct": true
+   },
+   "recall-famous-84-1": {
+    "extracted": "Isis",
+    "text": "In Frankenstein, Victor and Clerval visit Oxford, and the text mentions the Isis (the Thames as called at Oxford): \"the waters of the Isis\" \u2014 the city rising from the river's banks with trees and meadows.\n\nFINAL: Isis",
+    "correct": true
+   },
+   "recall-famous-84-2": {
+    "extracted": "Elizabeth Lavenza",
+    "text": "Elizabeth Lavenza\n\nFINAL: Elizabeth Lavenza",
+    "correct": true
+   },
+   "recall-famous-1661-1": {
+    "extracted": "Hosmer Angel",
+    "text": "\"A Case of Identity\" \u2014 Mr. Windibank disguised himself as Hosmer Angel.\n\nFINAL: Hosmer Angel",
+    "correct": true
+   },
+   "recall-famous-1661-2": {
+    "extracted": "Hugh Boone",
+    "text": "The Man with the Twisted Lip: Neville St. Clair disguises himself as the beggar Hugh Boone.\n\nFINAL: Hugh Boone",
+    "correct": true
+   },
+   "recall-famous-1661-0": {
+    "extracted": "Irene Adler's (Briony Lodge)",
+    "text": "Irene Adler's house (Briony Lodge) \u2014 the fake fire alarm in \"A Scandal in Bohemia.\"\n\nFINAL: Irene Adler's (Briony Lodge)",
+    "correct": false
+   },
+   "recall-mid-308-0": {
+    "extracted": "Bagpipes",
+    "text": "In Three Men in a Boat, there's the anecdote about a young fellow who was studying to play the bagpipes \u2014 Jefferson, who learned the bagpipes and had to practice in various places.\n\nFINAL: Bagpipes",
+    "correct": true
+   },
+   "recall-famous-2701-0": {
+    "extracted": "Asiatic cholera",
+    "text": "Asiatic cholera\n\nFINAL: Asiatic cholera",
+    "correct": true
+   },
+   "recall-mid-308-2": {
+    "extracted": "Montmorency",
+    "text": "The dog in \"Three Men in a Boat\" is Montmorency.\n\nFINAL: Montmorency",
+    "correct": true
+   },
+   "recall-famous-2701-2": {
+    "extracted": "Cape Town (Cape-Down)",
+    "text": "Cape Town (\"Cape-Down\")\n\nFINAL: Cape Town (Cape-Down)",
+    "correct": false
+   },
+   "recall-mid-155-0": {
+    "extracted": "A flower show",
+    "text": "Flower show\n\nFINAL: A flower show",
+    "correct": false
+   },
+   "recall-mid-308-1": {
+    "extracted": "fifteen",
+    "text": "Fifteen years\n\nFINAL: fifteen",
+    "correct": true
+   },
+   "recall-mid-155-2": {
+    "extracted": "Rosanna Spearman",
+    "text": "Rosanna Spearman\n\nFINAL: Rosanna Spearman",
+    "correct": true
+   },
+   "recall-mid-155-1": {
+    "extracted": "Penelope",
+    "text": "Penelope (Betteredge)\n\nFINAL: Penelope",
+    "correct": false
+   },
+   "recall-mid-2398-2": {
+    "extracted": "Michelangelo",
+    "text": "Michelangelo\n\nFINAL: Michelangelo",
+    "correct": true
+   },
+   "recall-mid-1023-1": {
+    "extracted": "Captain Hawdon",
+    "text": "Captain Hawdon\n\nFINAL: Captain Hawdon",
+    "correct": true
+   },
+   "recall-mid-2398-1": {
+    "extracted": "Piazza della Signoria, Florence",
+    "text": "Piazza della Signoria (in front of the Palazzo Vecchio), Florence\n\nFINAL: Piazza della Signoria, Florence",
+    "correct": false
+   },
+   "recall-mid-1023-2": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-52153-0": {
+    "extracted": "Square Z Ranch",
+    "text": "Square Z Ranch\n\nFINAL: Square Z Ranch",
+    "correct": true
+   },
+   "recall-obscure-52153-1": {
+    "extracted": "Noddy Nixon",
+    "text": "Noddy Nixon\n\nFINAL: Noddy Nixon",
+    "correct": false
+   },
+   "recall-mid-1023-0": {
+    "extracted": "Mrs. Snagsby",
+    "text": "**Mrs. Snagsby**\n\nFINAL: Mrs. Snagsby",
+    "correct": true
+   },
+   "recall-obscure-60432-0": {
+    "extracted": "Alexandra",
+    "text": "Alexandra\n\nFINAL: Alexandra",
+    "correct": false
+   },
+   "recall-obscure-52153-2": {
+    "extracted": "chicken",
+    "text": "Chicken sandwiches\n\nFINAL: chicken",
+    "correct": true
+   },
+   "recall-mid-2398-0": {
+    "extracted": "Milan",
+    "text": "Milan\n\nFINAL: Milan",
+    "correct": true
+   },
+   "recall-obscure-63311-1": {
+    "extracted": "England",
+    "text": "England\n\nFINAL: England",
+    "correct": false
+   },
+   "recall-obscure-60432-1": {
+    "extracted": "Petrograd",
+    "text": "Petrograd\n\nFINAL: Petrograd",
+    "correct": false
+   },
+   "recall-obscure-63311-0": {
+    "extracted": "The Ny Carlsberg Glyptotek, Copenhagen",
+    "text": "The Ny Carlsberg Glyptotek (Jacobsen collection) in Copenhagen.\n\nFINAL: The Ny Carlsberg Glyptotek, Copenhagen",
+    "correct": false
+   },
+   "recall-obscure-60432-2": {
+    "extracted": "Peterhof",
+    "text": "Peterhof\n\nFINAL: Peterhof",
+    "correct": false
+   },
+   "recall-obscure-63311-2": {
+    "extracted": "a tooth-brush",
+    "text": "A hard tooth-brush.\n\nFINAL: a tooth-brush",
+    "correct": false
+   },
+   "recall-obscure-69777-1": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-69777-0": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "retro-ypFv3TnCKtjSnY3Q2VDj:know": {
+    "extracted": "UNKNOWN",
+    "text": "Twitter was taken private by Elon Musk in October 2022 and later folded into xAI (March 2025). As of my knowledge, neither X nor xAI has gone public, but the question's deadline (2028) is beyond my knowledge cutoff, so the outcome isn't yet determined from what I know.\n\nFINAL: UNKNOWN"
+   },
+   "recall-obscure-69777-2": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "retro-CchlGjOuD4e3exiC02SJ:know": {
+    "extracted": "UNKNOWN",
+    "text": "This hasn't resolved yet as of my knowledge. As of my most recent information, the richest person (Elon Musk) had a net worth in the several-hundred-billion-dollar range (roughly $400\u2013500B+ at peaks in late 2024/2025), but no individual had reached a $1 trillion net worth. Whether someone crosses that threshold by the end of 2028 depends on future market movements (e.g., Tesla, SpaceX, xAI valuations) that are beyond my knowledge cutoff.\n\nFINAL: UNKNOWN"
+   },
+   "retro-ypFv3TnCKtjSnY3Q2VDj:forecast": {
+    "extracted": "0.25",
+    "text": "Twitter was taken private by Elon Musk in October 2022 and later folded into xAI (2025), so it no longer exists as a standalone company that would IPO on its own. A standalone \"Twitter/X\" IPO by end of 2028 seems quite unlikely. The more plausible route is a parent entity (xAI, or a combined SpaceX/xAI vehicle) going public, which reports suggest could happen in 2026\u20132027 \u2014 but whether that would count as \"Twitter IPOing\" is ambiguous, and Musk has historically been reluctant about public markets for X specifically.\n\nWeighing the low chance of a standalone listing against a moderate chance of a parent-company IPO that might be counted, I land around 0.25.\n\nFINAL: 0.25"
+   },
+   "retro-T9vV5ST3jgJV3nqvOnZ4:forecast": {
+    "extracted": "0.03",
+    "text": "Massachusetts' main path to decriminalizing psilocybin was the November 2024 ballot measure (Question 4), which would have legalized regulated therapeutic use and decriminalized personal possession/home cultivation of psilocybin and other natural psychedelics. That measure was defeated by voters (roughly 57% opposed). Following that defeat, the only remaining route before 2026 is legislative action, and the Massachusetts legislature has historically been slow and reluctant on drug-policy reform of this kind (it never acted on decriminalization bills filed in prior sessions, and after voters rejected the measure, lawmakers have little incentive to override that). Local deprioritization ordinances in cities like Somerville, Cambridge, and Northampton don't constitute statewide decriminalization.\n\nSo a YES would require a surprising legislative move in 2025, which I consider quite unlikely.\n\nFINAL: 0.03"
+   },
+   "retro-T9vV5ST3jgJV3nqvOnZ4:know": {
+    "extracted": "NO",
+    "text": "Based on what I know: the main path to this was **Massachusetts Question 4** on the November 2024 ballot, which would have legalized regulated therapeutic use of psilocybin and other natural psychedelics and decriminalized personal possession/home cultivation. **It was defeated**, roughly 57% No to 43% Yes.\n\nAfter that, there was no statewide decriminalization of psilocybin as of my knowledge. Several municipalities (Somerville, Cambridge, Northampton, Easthampton, Amherst, Salem, Provincetown, etc.) had passed local deprioritization resolutions earlier, but those predate the question and aren't statewide decriminalization. Bills to decriminalize or create a therapeutic framework had been filed repeatedly in the Legislature without passing, and I'm not aware of any 2025 legislative enactment.\n\nCaveat: the window runs through the end of 2025, which extends past my reliable knowledge, so a 2025 legislative surprise can't be fully ruled out. But given the ballot defeat and the Legislature's track record, the outcome I know points to no statewide decriminalization.\n\nFINAL: NO"
+   },
+   "retro-jkeJxRSaBxeUrRpvUu4J:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to take place in June\u2013July 2026 in the United States, Canada, and Mexico. As of my knowledge cutoff, the tournament has not yet been played, so I cannot know whether a previous winner (Brazil, Germany, Italy, Argentina, France, Uruguay, England, or Spain) will win it.\n\nFINAL: UNKNOWN"
+   },
+   "retro-12g6otPL80nZDk4ueu3h:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to be a prediction market question (likely Manifold Markets) about whether, by 2027, AI systems will exist that don't hallucinate random nonsense. The resolution date is 2027, which is beyond my knowledge cutoff, so I can't know how it resolved.\n\nWhat I can say from my training knowledge: as of my cutoff, hallucination remained an unsolved problem in large language models. Frontier models had substantially reduced hallucination rates compared to earlier generations (via better training, retrieval augmentation, tool use, calibration/abstention training, and citation grounding), but no widely deployed model was hallucination-free, and researchers generally regarded complete elimination as very difficult given how these models work. Whether that changed enough by 2027 to satisfy the market's resolution criteria (which likely hinged on the creator's judgment of \"doesn't hallucinate random nonsense\") is not something I can determine.\n\nFINAL: UNKNOWN"
+   },
+   "retro-CchlGjOuD4e3exiC02SJ:forecast": {
+    "extracted": "0.5",
+    "text": "**Reasoning**\n\nThe only realistic candidate is Elon Musk (Larry Ellison, Bezos, Zuckerberg are far behind at roughly $200\u2013350B and would need to triple or more). As of my latest knowledge, Musk's net worth was estimated somewhere in the $500\u2013700B range, driven by Tesla (~$1.3\u20131.5T market cap, with Musk holding ~13% outright plus large option packages), SpaceX (private valuations reported climbing toward $800B, with talk of a 2026 IPO around $1.5T), and xAI.\n\nPath to $1T by end-2028:\n- SpaceX IPO or secondary at ~$1.5T would put Musk's ~42% stake at ~$600B alone.\n- Tesla holding or rising modestly from current levels keeps his stake at $300\u2013450B, with the 2025 pay package adding more if milestones are hit.\n- Combined, that's around $1T without heroic assumptions\u2014several forecasters have projected 2027 as a plausible crossing point.\n\nRisks against:\n- Musk's wealth is highly concentrated in richly-valued, AI/robotaxi-narrative-dependent assets. A broad market correction, an AI bubble deflation, or Tesla-specific disappointments (robotaxi delays, autonomy failures, political blowback) could cut his net worth in half.\n- SpaceX IPO could be delayed or priced lower.\n- Three years is short; a single sustained drawdown across the window would sink it.\n- Resolution ambiguity over which tracker (Forbes vs. Bloomberg) and whether private valuations count.\n\nBalancing the strong trajectory and momentum against concentration risk and the fragility of the valuations involved, I land near even odds, slightly favorable given the pace of the past two years.\n\nFINAL: 0.5"
+   },
+   "retro-12g6otPL80nZDk4ueu3h:forecast": {
+    "extracted": "0.35",
+    "text": "**Reasoning**\n\n- Hallucination is a structural property of current LLMs (next-token prediction, no grounded world model). Every frontier model as of 2025 still fabricates citations, facts, and details at nontrivial rates, and some reasoning models (e.g., o3-class) even showed *higher* hallucination rates on certain benchmarks than predecessors.\n- On the other hand, progress is real: retrieval grounding, abstention training, calibration work, and labs explicitly targeting hallucination rates (OpenAI's GPT-5 messaging, Anthropic's honesty work). By 2027 the best systems will likely hallucinate far less than 2023-era models, and \"random nonsense\" (as opposed to subtle, plausible errors) is already rare in top models.\n- The question is vague and subjective (\"random nonsense,\" \"AI that doesn't hallucinate\"). A lenient resolver might say YES if a leading model with tools/grounding rarely produces obvious fabrications; a strict resolver would require essentially zero hallucination, which is very unlikely by 2027.\n- Timeframe is short (~2 years), and complete elimination of hallucination would be a major, unsolved research breakthrough.\n\nBalancing the near-certainty that *some* hallucination persists against the real chance the resolver interprets \"random nonsense\" loosely, I put this somewhat below even odds.\n\nFINAL: 0.35"
+   },
+   "retro-tVMuayTJMPgUEFL92xYF:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge, Twitter (rebranded as X) has not been taken public. After Musk's 2022 acquisition it remained private, and in March 2025 X was folded into Musk's AI company xAI in an all-stock deal, still privately held. There were later reports of Musk's companies consolidating and of a possible SpaceX IPO, but I don't have confirmed knowledge of X/Twitter itself completing an IPO. Since the question is open-ended (\"anytime in the future\") and no IPO had occurred as of my cutoff, the outcome is not settled.\n\nFINAL: UNKNOWN"
+   },
+   "retro-jkeJxRSaBxeUrRpvUu4J:forecast": {
+    "extracted": "0.75",
+    "text": "**Reasoning**\n\nThe previous World Cup winners are Uruguay, Italy, Germany, Brazil, England, Argentina, France, and Spain. Of these, the strongest contenders for 2026 \u2014 Spain, France, England, Brazil, Argentina, and Germany \u2014 are all among the pre-tournament favorites, with Uruguay and Italy (if Italy qualifies, which is uncertain) as outside chances.\n\nHistorically, 14 of 22 World Cups have been won by a team that had already won before, and the last three (2014, 2018, 2022) were all won by former champions. New winners emerge roughly every 12\u201316 years recently (1998 France, 2010 Spain), so 2026 is plausibly \"due\" in a loose sense, but that's weak evidence.\n\nMain non-previous-winner threats: Portugal (strong squad, recent Nations League winners), Netherlands, Belgium, Croatia, Colombia, Morocco, Norway, and the hosts USA/Mexico. Rough market-implied probabilities put the collective chance of previous winners around 72\u201378%, with Spain, France, England, Argentina, and Brazil each in the 10\u201315% range and Germany ~8%.\n\nAdjusting for bookmaker margins and the expanded 48-team format (more randomness in knockout rounds, but favorites still generally prevail), I estimate roughly 75%.\n\nFINAL: 0.75"
+   },
+   "retro-pTOGG7BW7K8z5XOqGjCg:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to be a Manifold Markets\u2013style prediction question with a resolution date at the end of 2029, which is beyond my knowledge cutoff. I don't have any information indicating this has occurred or been resolved, and I can't verify anything about it.\n\nFINAL: UNKNOWN"
+   },
+   "retro-tVMuayTJMPgUEFL92xYF:forecast": {
+    "extracted": "0.35",
+    "text": "**Reasoning**\n\n- Musk took Twitter private in October 2022 and told investors at the time he might bring it back to the public markets within roughly three years \u2014 but that timeline has already passed with no IPO.\n- Twitter became X Corp, and in March 2025 X was folded into xAI (xAI acquired X in an all-stock deal). Twitter/X no longer exists as a standalone company, so a classic \"Twitter IPO\" is now structurally unlikely. Any public listing would be of xAI (or a larger combined Musk entity), with X as one asset inside it.\n- There have been reports of Musk companies (SpaceX, and potentially xAI or a SpaceX\u2013xAI combination) considering IPOs in the 2026 timeframe. If such an entity goes public with X inside it, a lenient resolver might count that as \"taking Twitter public\"; a strict one probably would not.\n- Musk has repeatedly expressed distaste for public markets and the scrutiny/short-seller dynamics that come with them, which cuts against a deliberate standalone listing of X.\n- \"Anytime in the future\" is open-ended, which raises the probability somewhat, but the question presumably has a practical resolution window.\n\nWeighing the structural obstacle (X is no longer a separate company), Musk's aversion to public markets, and the real possibility that a parent entity containing X lists publicly and gets counted, I land a bit below even odds.\n\nFINAL: 0.35"
+   },
+   "retro-pTOGG7BW7K8z5XOqGjCg:forecast": {
+    "extracted": "0.1",
+    "text": "This looks like a personal Manifold-style market involving two people in the rationalist/Bay Area social scene. Aella is highly open about her sex life and has had many partners, which raises the base rate compared to a random pairing, but she has also been fairly selective and has publicly declined such speculative markets before. Sam Rosen is a known Manifold personality who creates self-referential markets; the fact that the market exists suggests some social proximity but not necessarily mutual interest. Long time horizon (through 2029) helps a bit, but these kinds of \"will X and Y hook up\" markets resolve NO the large majority of the time, especially when one party has expressed disinterest.\n\nFINAL: 0.1"
+   },
+   "retro-IMzxYnCug16mQBW7zLyf:know": {
+    "extracted": "UNKNOWN",
+    "text": "**What I know:** Peace talks between Petro's government and the ELN began in late 2022 and produced a bilateral ceasefire in 2023, but they repeatedly stalled. In January 2025, after the ELN launched a violent offensive against FARC dissidents and civilians in the Catatumbo region (dozens killed, tens of thousands displaced), Petro suspended the negotiations, declared a state of internal commotion, and effectively declared the dialogue dead. Through the remainder of 2025 in my knowledge, there was no resumption of formal talks and no sign of progress toward a comprehensive accord.\n\n**Resolution status:** Petro's term ends August 7, 2026, which is beyond my knowledge cutoff. I cannot confirm the final outcome. Everything I know points strongly toward NO (the talks collapsed and relations were deeply hostile), but since the resolution window extends past what I can verify, I can't state it as fact.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PRDNtG161LErj6WKWzBV:know": {
+    "extracted": "YES",
+    "text": "Rick and Morty Season 8 was confirmed by Adult Swim and premiered on May 25, 2025, well before the 2030 deadline. The show had been renewed through Season 10 back in 2018 (a 70-episode order), so Season 8's existence was essentially guaranteed, and it did in fact air.\n\nFINAL: YES"
+   },
+   "retro-jSfjEF0CcRzIOKcfnQtB:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to be held in the United States, Canada, and Mexico from June 11 to July 19, 2026. This is after my knowledge cutoff, so I do not know the outcome. I cannot say whether France won.\n\nFINAL: UNKNOWN"
+   },
+   "retro-IMzxYnCug16mQBW7zLyf:forecast": {
+    "extracted": "0.03",
+    "text": "Petro's term ends August 7, 2026. The Colombia\u2013ELN negotiations, launched in late 2022 under the \"Total Peace\" policy, produced a bilateral ceasefire in 2023 but stalled repeatedly through 2024 and effectively collapsed in January 2025 after the ELN's offensive in Catatumbo killed dozens and displaced tens of thousands. Petro declared the talks suspended, reinstated arrest warrants and offensive operations, and labeled the ELN a criminal organization. Through 2025 the relationship remained hostile, with the ELN continuing attacks and the government showing little appetite to resume formal dialogue. The ELN's decentralized structure, its historic reluctance to demobilize, the loss of Venezuela as a stable guarantor, and the compressed time before a new (likely less conciliatory) government all argue strongly against a comprehensive accord. A final peace deal of the FARC type typically takes years of sustained talks; nothing close to that is in place.\n\nFINAL: 0.03"
+   },
+   "retro-jSfjEF0CcRzIOKcfnQtB:forecast": {
+    "extracted": "0.13",
+    "text": "France is consistently among the top favorites for the 2026 World Cup, alongside Spain, England, Argentina, Brazil, Germany, and Portugal. They reached the finals in 2018 (won) and 2022 (lost on penalties), have an elite talent pool (Mbapp\u00e9, Tchouam\u00e9ni, Camavinga, Saliba, Barcola, Dou\u00e9, etc.), and a stable coaching setup under Deschamps in his final tournament. Bookmaker-implied probabilities have generally placed France around 12\u201315%, roughly co-favorite with Spain.\n\nGiven a 48-team tournament with inherent knockout randomness, even the strongest team rarely exceeds ~15\u201318% chance. Accounting for injury risk and the number of near-equal contenders, I put France at about 13%.\n\nFINAL: 0.13"
+   },
+   "retro-RjKpiXcM1xoojSpzOAwd:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge cutoff, neither SLS Block 1B nor Block 2 has launched. Block 1B (with the Exploration Upper Stage) was slated to debut on Artemis IV around 2028, and Block 2 was even further out. Meanwhile, the FY2026 White House budget proposal called for retiring SLS after Artemis III, which would cancel Block 1B/Block 2 entirely, though Congress had not fully settled the matter. The question therefore remains unresolved.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PRDNtG161LErj6WKWzBV:forecast": {
+    "extracted": "0.98",
+    "text": "Rick and Morty had a 70-episode order from Adult Swim (2018) that extends well beyond Season 7, which aired in late 2023. Adult Swim publicly confirmed Season 8 was in production with a 2025 target, and the show remains a major franchise for the network despite the Justin Roiland recast. Given a production pipeline that's already been running, a 2030 horizon leaves ample slack for even significant delays. The main risks are cancellation or a catastrophic network/studio decision, which seem very unlikely.\n\nFINAL: 0.98"
+   },
+   "retro-l6pDOuXNGWyIkjcJUEEj:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't know the definitive resolution of this market. What I can say from training knowledge: by early-to-mid 2025 there were strong steps in this direction \u2014 notably \"Twins Hinahima\" (aired in Japan, March 2025), a short anime series advertised as roughly 95% AI-generated (with human direction, scripting, and voice acting), plus various AI-heavy shorts and projects. Whether such productions satisfy a strict \"end to end AI generated\" criterion (script, animation, voices, music, editing all AI) depends heavily on how the market's resolver interprets it, and I don't know how it was ultimately resolved at the end of 2025.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PLA04avUAyYOPSVovLw9:know": {
+    "extracted": "UNKNOWN",
+    "text": "I'm not certain how this resolved. There were many long-form pieces about the SVB collapse (in New York Magazine, Bloomberg Businessweek, The New Yorker, etc.), but I can't confirm whether any single magazine article exceeded 8,000 words within the market's timeframe or how the market was formally resolved.\n\nFINAL: UNKNOWN"
+   },
+   "retro-RjKpiXcM1xoojSpzOAwd:forecast": {
+    "extracted": "0.5",
+    "text": "**Reasoning:**\n\n- **Status quo plan:** SLS Block 1 flew Artemis I (2022) and is slated for Artemis II (~2026) and Artemis III (~2027). Block 1B, with the Boeing-built Exploration Upper Stage (EUS), is baselined for Artemis IV (~2028+) and requires Mobile Launcher 2, which is years late and billions over budget. Block 2 (advanced boosters) is even further out and largely notional.\n\n- **Headwinds:** The Trump administration's FY2026 budget request proposed ending SLS and Orion after Artemis III and cancelling Gateway, shifting to commercial launchers. NASA leadership (e.g., Isaacman) has expressed skepticism about SLS's long-term cost-effectiveness. Boeing has cut SLS workforce, ICPS production has ended, and cheaper heavy-lift options (Starship, New Glenn) are maturing. EUS itself has had cost and schedule troubles and criticism from the OIG. Each delay increases the odds of cancellation before Block 1B ever flies.\n\n- **Tailwinds:** Congress has strongly and repeatedly backed SLS. The 2025 reconciliation bill explicitly appropriated billions for SLS for Artemis IV and V (including Block 1B/EUS work), directly countering the executive proposal. Key senators (Alabama, Texas, Florida) fiercely protect the program. Since there is no ICPS supply beyond Artemis III, any continuation of SLS effectively means Block 1B, so \"SLS survives past Artemis III\" \u2248 \"Block 1B flies.\" The \"ever\" framing helps \u2014 schedule slips alone don't resolve NO.\n\n- **Net:** This is essentially a bet on whether SLS survives beyond three flights. Congressional inertia is powerful, but the executive branch's intent, commercial competition, and the program's cost trajectory make cancellation quite plausible within the next several years, before Block 1B hardware and ML-2 are ready.\n\nI put this close to a coin flip, slightly leaning on congressional support.\n\nFINAL: 0.5"
+   },
+   "retro-wcjqRgGKIGUnYfhTMIpQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "I can't confirm the resolution of this question. The resolution date (June 1, 2026) is beyond my knowledge cutoff, so I don't know how it was ultimately judged.\n\nWhat I can say from training knowledge: as of my cutoff, there were hobbyist projects and small products fine-tuning LLMs on individuals' iMessage/WhatsApp histories (e.g., people training models to mimic themselves or friends, apps like Personal AI, and various \"digital twin\" startups), but nothing that clearly qualified as a *popular*, mainstream LLM product built around fine-tuning on users' personal texts. Whether such a product emerged and gained popularity before June 2026 \u2014 and whether the question's creator considered it sufficient \u2014 is unknown to me.\n\nFINAL: UNKNOWN"
+   },
+   "retro-l6pDOuXNGWyIkjcJUEEj:forecast": {
+    "extracted": "0.45",
+    "text": "**Reasoning**\n\n- By 2025, the pieces exist: LLMs for scripts, image models for character design, video models (Kling, Veo 3, Sora, Hailuo, Wan) for animation clips, TTS for voices, music generators for OSTs. Indie creators have stitched these into anime-style short \"episodes\" on YouTube/TikTok, so a loose reading of \"end to end AI generated series\" has plausibly already been met by hobbyist projects.\n- Professional Japan-side efforts (e.g., *Twins Hinahima*, the earlier *The Dog & The Boy* short) used AI heavily but with human correction and direction, so a strict reading (\"no meaningful human creative labor, broadcast-quality, multi-episode\") is unlikely to be satisfied by end of 2025. Video model consistency across characters, shots, and full 20-minute episodes remains a major hurdle.\n- Resolution hinges heavily on how the question author interprets \"end to end\" and \"series\" (indie web series vs. legitimate anime industry release). Ambiguity cuts both ways; question authors on such markets often require something notable rather than any YouTube upload, which pushes probability down, but the pace of video-model progress and the sheer volume of AI-anime experiments push it up.\n\nNet: roughly a coin flip, slightly under.\n\nFINAL: 0.45"
+   },
+   "retro-v1Ys84LuzIrEUPDPDB6P:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to be a personal prediction market question (likely from Manifold Markets) about an individual user completing their PhD. I have no way of knowing who the asker is or how their specific situation resolved, and this isn't a publicly documented event I could have information about.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PLA04avUAyYOPSVovLw9:forecast": {
+    "extracted": "0.48",
+    "text": "**Reasoning**\n\nThe SVB collapse (March 2023) was a major financial event that generated an enormous amount of coverage, but the question sets a high bar: a *magazine* piece of 8,000+ words. That's New Yorker feature length (or a long Bloomberg Businessweek / New York Magazine / Atlantic cover story). \n\nFactors favoring YES:\n- Comparable sagas (FTX, Theranos, Archegos, WeWork) did get long-form magazine treatment, sometimes at or above that length.\n- The story has strong narrative elements (VC group chats, a Twitter-fueled bank run, regulatory failures, the Fed/FDIC weekend rescue), which attract long-form writers.\n- Anniversary pieces and \"inside the collapse\" reconstructions are common for such events.\n\nFactors favoring NO:\n- 8,000 words is genuinely long even for the New Yorker; many features run 5,000\u20137,000 words.\n- Much of the deepest reconstruction of SVB was done by newspapers (WSJ, NYT, FT, Washington Post), which wouldn't count as \"magazines.\"\n- The SVB story lacked a singular villain/fraud narrative, which is often what drives the very long features. Coverage tended to be analytical and shorter.\n- The question's resolution likely depends on a specific verifiable piece being identified within the question's timeframe, and such threshold questions often resolve NO for lack of a clear qualifying article.\n\nBalancing these, I land close to even, tilting slightly below.\n\nFINAL: 0.48"
+   },
+   "retro-ccew8406BGl84Lo0H5Ey:know": {
+    "extracted": "NO",
+    "text": "Based on what I know, no Python PEP had been implemented by an AI system (in the sense of an AI autonomously writing and landing the implementation in CPython) by the end of 2024. Through 2024, CPython PEP implementations were written by human core developers and contributors, and there was no recognized case of an AI agent authoring a PEP's implementation. So the question would have resolved NO.\n\nFINAL: NO"
+   },
+   "retro-wcjqRgGKIGUnYfhTMIpQ:forecast": {
+    "extracted": "0.45",
+    "text": "**Reasoning**\n\nThe question hinges on two vague terms: \"popular\" and \"fine-tuned on people's personal texts.\"\n\nWhat already exists (as of my knowledge):\n- Numerous hobbyist projects fine-tuning open models (Llama, Mistral, GPT-3.5 via API) on WhatsApp/iMessage exports to create \"digital twins\" \u2014 some went viral on GitHub/Hacker News, but none became a mass-market product.\n- Startups like Personal.ai, Delphi, Project December, HereAfter AI, and \"griefbot\" services train or condition models on a person's messages/writings. These are niche, with user bases in the thousands to low hundreds of thousands, not millions.\n- Major consumer personalization (ChatGPT memory, Gemini's personal context, Apple Intelligence, Meta AI) relies on retrieval/context injection rather than true fine-tuning on personal texts. Companies avoid per-user fine-tuning due to cost, privacy, and serving complexity.\n\nArguments for YES by mid-2026:\n- Per-user fine-tuning (LoRA adapters) is getting cheaper; on-device fine-tuning is technically feasible.\n- Strong consumer demand for \"an AI that talks like me / my late relative.\"\n- A generous resolver might count Personal.ai, Delphi, or a viral open-source repo as \"popular.\"\n- Roughly 1+ years remains for a breakout product.\n\nArguments for NO:\n- Industry trend is decisively toward RAG/memory, not fine-tuning; the resolver may insist on actual fine-tuning.\n- No current product meets a strict \"popular\" threshold (millions of users, mainstream recognition).\n- Privacy concerns and platform restrictions on exporting messages limit growth.\n\nNet: the technology and niche products exist, but a strict reading of \"popular\" plus \"fine-tuned\" makes this a coin flip leaning slightly NO. Ambiguity in resolution pushes toward the middle.\n\nFINAL: 0.45"
+   },
+   "retro-v1Ys84LuzIrEUPDPDB6P:forecast": {
+    "extracted": "0.6",
+    "text": "I don't know who you are, your field, your stage, or your circumstances, so I can only reason from base rates and light priors.\n\n**Base rates:** Across US doctoral programs, roughly 50\u201360% of entrants complete within ~10 years (Council of Graduate Schools PhD Completion Project found ~57% at 10 years). Rates vary a lot by field: life sciences and engineering tend to be higher (~60\u201365%), humanities lower (~45\u201350%). UK/European programs with funded, time-limited PhDs often show higher completion (~70\u201380%), partly because of shorter durations and stricter admission at the research stage.\n\n**Adjustments:**\n- Someone already enrolled and far enough along to be asking this question is past the earliest attrition window (much attrition happens in years 1\u20132), which pushes the probability upward.\n- On the other hand, people who create a forecasting question like this are often experiencing doubt or difficulty, which pushes it slightly downward.\n- Selection effect: people who engage with forecasting platforms tend to be conscientious and analytically minded, a mild positive.\n\nBalancing these, I land modestly above the raw entrant base rate but not by much.\n\nFINAL: 0.6"
+   },
+   "retro-uKOjLoodI4duxopn3Y5X:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on what I know, the next theatrical Star Wars film, *The Mandalorian & Grogu*, was scheduled by Lucasfilm/Disney for release on May 22, 2026 \u2014 which would resolve this question YES if it opened as planned. However, I can't confirm from my training data that the film actually reached theaters on that date (release dates can slip), so I don't know the resolution with certainty.\n\nFINAL: UNKNOWN"
+   },
+   "retro-ccew8406BGl84Lo0H5Ey:forecast": {
+    "extracted": "0.1",
+    "text": "This question most plausibly asks whether an AI system (e.g., an LLM-based coding agent) will be credited with substantially implementing an accepted Python Enhancement Proposal in CPython, with the deadline around the end of 2024 (or possibly the start of 2024, depending on how \"by 2024\" is read).\n\nConsiderations:\n- Through 2023, AI coding tools were used as assistants (autocomplete, drafting), but no CPython PEP implementation was attributed to an AI. CPython core developers have generally been cautious or skeptical about AI-generated contributions, and PEP implementations typically require deep interpreter knowledge, review iterations, and human accountability.\n- Autonomous coding agents (Devin, SWE-agent, etc.) emerged in 2024, but their demonstrated capability was on modest, well-scoped GitHub issues, not multi-file interpreter changes like a PEP implementation.\n- Even if an AI wrote large portions of an implementation, it would likely be framed as human-driven with AI assistance, making a clear YES resolution hard.\n- Small PEPs (minor syntax or stdlib additions) exist, so it's not impossible that someone used an AI to produce most of one and publicized it, but I'm not aware of such a case.\n\nGiven the ambiguity and the low base rate of such an event through the plausible deadline, I assign a low probability.\n\nFINAL: 0.1"
+   },
+   "retro-dbMVnIstHAcHbvI2r1Mg:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to be a personal, subjective prediction-market style question about the question creator's own future beliefs (likely from Manifold Markets). Its resolution depends entirely on the creator's private self-assessment in 2026, which is not something recorded in my training data, and 2026 is at or beyond my knowledge cutoff. I have no way to know how (or whether) it resolved.\n\nFINAL: UNKNOWN"
+   },
+   "retro-uKOjLoodI4duxopn3Y5X:forecast": {
+    "extracted": "0.9",
+    "text": "The main candidate here is *The Mandalorian & Grogu*, the Jon Favreau-directed theatrical film that Disney/Lucasfilm has scheduled for May 22, 2026. Principal photography wrapped in 2024/early 2025, so the film is deep in post-production with a firmly held release slot. The next film after that, *Star Wars: Starfighter* (Ryan Gosling, dir. Shawn Levy), is slated for May 2027, which would be too late for this question, so the outcome essentially hinges on *The Mandalorian & Grogu* holding its date within 2026.\n\nConsiderations:\n- Positive: film is shot, date has been publicly reiterated, Disney has a clear incentive to get Star Wars back in theaters after a seven-year gap; a completed live-action film with a locked summer slot rarely slips more than a few months, and even a slip to late 2026 would still resolve YES.\n- Negative: Lucasfilm has a long history of announcing and then delaying/cancelling films; a catastrophic reshoot situation or corporate strategy shift could push it into 2027; minor ambiguity over what counts as a \"Star Wars movie\" (though this one clearly qualifies).\n\nOverall, a completed film with a date ~7 months away from being in the danger zone is very likely to release in 2026.\n\nFINAL: 0.9"
+   },
+   "retro-z11T9Ti0znknwluyYej4:know": {
+    "extracted": "NO",
+    "text": "As of my knowledge, Edward Snowden has not been pardoned. Trump floated the idea in 2020 but did not act on it before leaving office in January 2021, Biden never considered it, and no pardon had been issued as of the start of 2025 (and none as of my latest information into 2025). If the question is interpreted as \"by the start of 2025,\" it resolved NO; if it extends through the end of 2025, I have no knowledge of a pardon occurring, but I cannot fully verify events late in that year.\n\nFINAL: NO"
+   },
+   "retro-z11T9Ti0znknwluyYej4:forecast": {
+    "extracted": "0.05",
+    "text": "Edward Snowden has lived in Russia since 2013 and became a Russian citizen in 2022. Despite periodic talk\u2014Trump said in 2020 he'd \"look at\" a pardon, and some figures in his orbit (e.g., Tulsi Gabbard, Rand Paul) have voiced support\u2014no pardon materialized during Trump's first term, and the Biden administration showed no interest. In the second Trump term, Gabbard notably declined to endorse a pardon during her confirmation, and the national security establishment remains strongly opposed, especially given Snowden's Russian citizenship. The base rate for such high-profile intelligence-leak pardons is very low, and there's no sign of active movement.\n\nFINAL: 0.05"
+   },
+   "retro-dbMVnIstHAcHbvI2r1Mg:forecast": {
+    "extracted": "0.55",
+    "text": "This is an inherently personal, self-resolved question with ambiguous resolution criteria (it's unclear whether YES corresponds to \"personal enjoyment,\" to \"either of those two reasons vs. something else like inertia/fear/family obligation,\" or something else). Given the framing, the creator is likely reflecting on their reasons for continuing to live, and such introspective questions tend to resolve toward the more affirming/agreed-upon framing over time, but the ambiguity keeps me near the middle.\n\nFINAL: 0.55"
+   },
+   "retro-9LgJjSIMk1MzhxyLU2sJ:know": {
+    "extracted": "UNKNOWN",
+    "text": "Jimmy Carter died on December 29, 2024, so this question would resolve around December 29, 2025. As of my training data, no posthumous \"deathbed UFO confession\" from Carter had been revealed \u2014 the long-standing story is only that Carter filed a UFO sighting report in the 1970s about a 1969 Georgia sighting, and there were rumors (never substantiated) that he was emotionally affected by a classified briefing as president. The Carter Center and family released no such statement after his death.\n\nHowever, the full one-year window extends beyond what I can confidently confirm from my training knowledge, so I can't state the final resolution with certainty, though it appears very likely to be NO.\n\nFINAL: UNKNOWN"
+   },
+   "retro-8KSJeo7HCLnzuDv5rl3q:know": {
+    "extracted": "UNKNOWN",
+    "text": "I'm not aware of any public report or confirmation that Eliezer Yudkowsky and Aella began dating, and I don't know how (or whether) this prediction-market question has resolved. The resolution window likely extends past my knowledge cutoff, so I can't state the outcome with confidence.\n\nFINAL: UNKNOWN"
+   },
+   "retro-piY5pFsWeDtrA1Wm0RPC:know": {
+    "extracted": "UNKNOWN",
+    "text": "I have no knowledge of Donald Trump joining Manifold Markets, and this seems extremely unlikely to happen. However, the resolution date (end of 2025) is at or beyond my training knowledge, so I can't confirm the final resolution with certainty. My strong expectation is that it resolved NO, but I can't verify that.\n\nFINAL: UNKNOWN"
+   },
+   "retro-9LgJjSIMk1MzhxyLU2sJ:forecast": {
+    "extracted": "0.03",
+    "text": "Jimmy Carter died on December 29, 2024, after nearly two years in hospice care. He is well known for reporting a 1969 UFO sighting and for promising during his 1976 campaign to release government UFO information, which never materialized \u2014 fueling decades of conspiracy speculation (e.g., the apocryphal story that he wept after a UFO briefing). This makes him a natural subject for posthumous \"deathbed confession\" rumors.\n\nHowever, for this to resolve YES, there would need to be a credible revelation \u2014 from family, aides, the Carter Center, or a reputable outlet \u2014 of a genuine deathbed statement about UFOs. Key considerations:\n\n- Carter's family and the Carter Center are protective of his legacy and have shown no inclination toward sensational disclosures.\n- Carter spoke openly about his UFO sighting for decades; he didn't hide it, so there's little \"secret\" to confess.\n- Deathbed confessions of this type almost never surface credibly; when they do appear, they come from tabloids or fringe UFO communities and would likely not meet a reasonable resolution standard.\n- The base rate for any famous person having a credible posthumous UFO confession revealed is extremely low.\n\nThe main risk to a NO is loose resolution criteria accepting a tabloid or social-media claim as a \"revelation.\" That adds a small amount of probability.\n\nFINAL: 0.03"
+   },
+   "retro-5GYiswIEZ4dM2NGnxbOR:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to be held in the United States, Canada, and Mexico from June 11 to July 19, 2026. This is after my knowledge cutoff, so I do not know the outcome of the tournament or which confederation the winner will come from.\n\nFINAL: UNKNOWN"
+   },
+   "retro-8KSJeo7HCLnzuDv5rl3q:forecast": {
+    "extracted": "0.07",
+    "text": "Both are prominent, polyamorous figures in the same rationalist/Bay Area social scene, they know each other personally, and there has been recurring public banter and speculation about them\u2014so this is far more likely than for two random public figures. Still, the base rate for any two specific people beginning a relationship within a fixed window is low, and resolution would require the relationship to become publicly known and clearly qualify as \"dating.\"\n\nFINAL: 0.07"
+   },
+   "retro-piY5pFsWeDtrA1Wm0RPC:forecast": {
+    "extracted": "0.01",
+    "text": "Manifold Markets is a relatively small play-money prediction market platform. Donald Trump, as a sitting president with his own social media platform (Truth Social), has no plausible incentive or history suggesting he'd create an account there. Even if some account bearing his name appeared, the market would likely require credible verification that it is actually him (or his team). Such markets on Manifold are typically joke/low-probability markets that resolve NO.\n\nBase rate considerations: high-profile figures essentially never join niche platforms like this, and no signals exist pointing to Trump doing so. Small residual for resolution quirks (e.g., an \"official\" account created by a staffer counting, or lenient resolution by the creator).\n\nFINAL: 0.01"
+   },
+   "retro-QHFQmCmz8HplpN2QQnl2:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to be held in June\u2013July 2026 in the United States, Canada, and Mexico. This is after my knowledge cutoff, so I do not know the outcome. England has qualified strongly and is considered one of the contenders, but the tournament had not been played as of my training data.\n\nFINAL: UNKNOWN"
+   },
+   "retro-ZQvUHx5d2tphDz1tJSMM:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, no direct official peace talks involving both Putin and Zelenskyy had taken place \u2014 their only in-person meeting remains the December 2019 Normandy Format summit in Paris. Through 2025, negotiations occurred at the delegation level (e.g., Istanbul talks) and via intermediaries (Trump's meetings with Putin in Alaska and with Zelenskyy in Washington), with Putin offering a meeting in Moscow that Zelenskyy rejected. The resolution window extends to August 2026, which is beyond what I can confirm from my knowledge, so I cannot say how this ultimately resolved.\n\nFINAL: UNKNOWN"
+   },
+   "retro-QHFQmCmz8HplpN2QQnl2:forecast": {
+    "extracted": "0.11",
+    "text": "England enter the 2026 World Cup as one of the strongest squads in the field\u2014deep in attack (Kane, Bellingham, Saka, Palmer, Foden), a settled coach in Thomas Tuchel, and a dominant qualifying campaign. They reached the final of the last two European Championships and the quarter-final/semi-final of the last two World Cups, so they consistently go deep but have not yet finished the job in a major tournament since 1966.\n\nWorking against them: a very competitive top tier (Spain as reigning European champions, France, Argentina as holders, Brazil, Portugal, Germany), the expanded 48-team format adding an extra knockout round (more variance, more chances to be eliminated), North American heat and travel, and historical underperformance in penalty shootouts and finals. Bookmaker odds ahead of the tournament have generally placed England second or third favourite at roughly 6/1\u20137/1, which after removing the bookmaker margin implies about 11\u201312%.\n\nBalancing the strong squad against the depth of competition and tournament randomness, I put England's chances slightly above 1 in 10.\n\nFINAL: 0.11"
+   },
+   "retro-ZQvUHx5d2tphDz1tJSMM:forecast": {
+    "extracted": "0.2",
+    "text": "**Reasoning:**\n\n- Since the full-scale invasion began, Putin and Zelenskyy have never met directly. Putin has repeatedly framed Zelenskyy as \"illegitimate\" (given the expired presidential term under martial law) and has said he'd only meet him at the \"final stage\" to sign a finished agreement, not to negotiate.\n- Throughout 2025, the Trump administration pushed hard for a bilateral or trilateral (Trump\u2013Putin\u2013Zelenskyy) summit, especially after the August 2025 Alaska summit. Putin countered by inviting Zelenskyy to Moscow \u2014 a non-starter \u2014 and no meeting materialized. Direct Russia\u2013Ukraine talks occurred only at the delegation level (Istanbul), and later US-mediated shuttle diplomacy (28-point plan, Geneva, Witkoff/Kushner in Moscow) also stayed below leader level.\n- Core positional gaps (territory in Donbas, security guarantees, NATO, sanctions relief, elections) remain large, and Russia believes it has battlefield momentum, reducing its incentive to concede on a leader-level meeting.\n- On the other hand, the US pressure is intense and persistent, and a settlement framework could be pushed to a signing ceremony that would involve both leaders. Wars of this kind can end faster than expected once a framework is agreed. A ~8-month window is meaningful but not long.\n- Ambiguity: if \"involving\" counts leaders participating in a summit where the deal is signed (even with intermediaries), it's somewhat more plausible than genuine face-to-face negotiation.\n\nBalancing the strong structural resistance from Putin against the real chance of a US-forced settlement culminating in a summit, I estimate roughly one-in-five.\n\nFINAL: 0.2"
+   },
+   "retro-5GYiswIEZ4dM2NGnxbOR:forecast": {
+    "extracted": "0.62",
+    "text": "**Reasoning**\n\n- The 2026 World Cup (USA/Canada/Mexico, June\u2013July 2026) features 48 teams, 16 of them from UEFA. Europe has by far the deepest pool of genuine contenders: Spain (reigning European champions and arguably the best side in the world right now), France (finalists in 2018 and 2022), England (two consecutive Euro finals, deep squad), Portugal, Germany, Netherlands, plus outsiders like Italy, Belgium, Croatia, Norway.\n- The main non-European threats are Argentina (reigning champions, but Messi-era aging) and Brazil (talented but inconsistent, recently underperforming in qualifying). Beyond those two, non-European winners are very unlikely (USA, Mexico, Uruguay, Colombia, Morocco are long shots).\n- Historical pattern: Europe won four straight (2006\u20132018) before Argentina in 2022. Overall, Europe has won 12 of 22 editions. The \"no European winner in the Americas\" narrative was broken by Germany in 2014, and the 2026 hosts are in the Northern Hemisphere with familiar summer conditions, so the location penalty is modest.\n- Bookmaker markets have consistently put the combined European probability around 60\u201365%, with Spain/France/England each roughly at or near the top of the odds board.\n\nBalancing Europe's depth against Argentina and Brazil (who together carry perhaps ~30%) and the long tail of others, I put Europe a bit above 60%.\n\nFINAL: 0.62"
+   }
   }
  },
  "usage": {
@@ -5405,6 +5787,10 @@
   "qwen/qwen3.6-35b-a3b": {
    "prompt": 8589,
    "completion": 186242
+  },
+  "anthropic/claude-fable-5.1": {
+   "prompt": 12219,
+   "completion": 38706
   }
  }
 }

@@ -8072,6 +8072,903 @@
     "text": "**Considerations:**\n\n**Base rates / cadence:** Anthropic has been shipping frontier models very rapidly \u2014 Claude 3 (Mar 2024), 3.5 (Jun 2024), 3.7 (Feb 2025), Claude 4 (May 2025), Opus 4.1 (Aug 2025), Sonnet 4.5 (Sep 2025), Haiku 4.5 (Oct 2025), Opus 4.5 (Nov 2025), and apparently continued point releases into early 2026. That's a new frontier model roughly every 2\u20133 months, and an Opus-tier update roughly every 3\u20136 months. So by August 2026 there will almost certainly be one or two new Opus-tier models.\n\n**The crux is naming, not capability.** Anthropic has strongly favored fractional increments (3.5, 3.7, 4.1, 4.5, 4.6...) and has stretched the \"4.x\" family for well over a year. They only bumped the major version once (3.x \u2192 4) in roughly 14 months, and that came with a major pretraining generation. If they follow the same 4.x-stretching pattern, the next releases could easily be 4.6/4.7/\"Opus 4.5 (new)\" style rather than Opus 5.\n\n**Factors pushing toward YES:**\n- Competitive branding pressure (OpenAI already on GPT-5.x; Google on Gemini 3.x).\n- Massive compute buildout (Amazon/Google TPU deals) implies a genuinely new pretraining generation landing in 2026, which is the kind of thing that historically triggers a major version bump.\n- ~9 months is a long window given their release velocity; two Opus-tier launches plausibly fit.\n\n**Factors pushing toward NO:**\n- Anthropic's demonstrated preference for incremental version numbers and reluctance to spend the \"next integer.\"\n- They may reserve \"Claude 5\" for a step-change they want to market carefully, possibly late 2026 or 2027.\n- Possible naming-scheme change entirely (e.g., dropping numbers, or \"Claude Opus 5\" arriving as just \"Claude 5\" family\u2014though that would likely still resolve YES).\n- Safety/deployment review cycles for a genuinely new generation can slip.\n\nWeighing these, I think a new-generation Opus arriving in the window is likely (~70\u201375%), but conditional on that, the probability it's labeled \"5\" rather than another 4.x increment is maybe 45\u201355%.\n\nFINAL: 0.35",
     "completion_tokens": 1900
    }
+  },
+  "anthropic/claude-fable-5.1": {
+   "retro2-j65AKQZQCjgqa3erm88N:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to take place in June\u2013July 2026 in the United States, Canada, and Mexico. This is beyond my knowledge cutoff, so I do not know who won or whether the champion was a first-time winner.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 95
+   },
+   "retro2-V8Ljj1i9EREOFMq6Bg18:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled for June\u2013July 2026 in the United States, Canada, and Mexico. This is after my knowledge cutoff, so I don't know whether any player scored 6 or more goals in the tournament.\n\nFor context: in recent World Cups, the Golden Boot winners scored 8 (Mbapp\u00e9, 2022), 6 (Kane, 2018), 6 (James Rodr\u00edguez, 2014), and 5 (M\u00fcller, 2010). The expanded 48-team format with up to 8 matches for finalists could make 6+ goals more likely, but the outcome is not something I can confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 218
+   },
+   "retro2-lgxNmHNmrYvowjnSyQAM:know": {
+    "extracted": "UNKNOWN",
+    "text": "This hasn't been resolved within my knowledge. The 2026 FIFA World Cup (hosted by the USA, Canada, and Mexico) is scheduled for June\u2013July 2026, which is after my knowledge cutoff. As of what I know, Messi (who would be 38\u201339 at the time) had said he would decide closer to the tournament based on how he felt physically, and Argentina's coach Lionel Scaloni indicated the door was open, but no definitive confirmation or withdrawal had occurred.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 240
+   },
+   "retro2-XqK1nn3TmVG83hF5PglL:know": {
+    "extracted": "NO",
+    "text": "As of my training knowledge, no space station with artificial (spin-generated) gravity exists, and none was anywhere close to launching. The ISS and China's Tiangong are microgravity stations. Vast's Haven-1 (targeted for ~2025\u20132026) is a small single-module station without artificial gravity; Vast's spin-gravity concepts were for much later stations. Other commercial proposals (Orbital Reef, Starlab, Axiom) also lack artificial gravity and are planned for later in the decade. Given development timelines, there is effectively no path to an artificial-gravity station operating by June 2026.\n\nFINAL: NO",
+    "completion_tokens": 501
+   },
+   "retro2-QnGZyS7XfpXUfujacWdO:know": {
+    "extracted": "UNKNOWN",
+    "text": "I can't be certain how this resolves. Through my knowledge, no AI-generated song had made the Billboard Year-End Hot 100 (the 2025 year-end chart contained no AI act; AI acts like Xania Monet, Breaking Rust, and The Velvet Sundown only reached genre/sales charts). But the 2026 year-end chart would not be published until December 2026, which is beyond what I can confirm, so I can't give a definitive resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 599
+   },
+   "retro2-XOJ8Tfrg8s2iqPFwauO8:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to be held in June\u2013July 2026 in the United States, Canada, and Mexico. This is after my training knowledge cutoff, so I do not know whether France won the tournament.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 87
+   },
+   "retro2-YGoCYPirxuE4DHZ9HFHr:know": {
+    "extracted": "UNKNOWN",
+    "text": "As far as I know, Elon Musk kept his security clearance (held through SpaceX, which requires it for classified national-security launches and Starshield work) throughout the period my training data covers. There were controversies in 2025 \u2014 his role at DOGE, a Pentagon inspector general review related to his drug use and foreign contacts, and his public falling-out with Trump in June 2025 \u2014 but I'm not aware of any report that his clearance was actually revoked or that he lost it. However, I can't confirm the situation all the way through December 31, 2025, so I can't state the resolution with confidence.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 627
+   },
+   "retro2-SXyTj7qHh3V3cHHnlNuw:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, this has not happened. Elon Musk's net worth reached record highs (several hundred billion dollars, with estimates around $400\u2013500+ billion in 2025), and Tesla shareholders approved a compensation package in late 2025 that could theoretically push him toward trillionaire status if ambitious milestones are met over the coming years. However, no individual\u2014Musk included\u2014had actually reached a $1 trillion net worth by my cutoff, so the question remains unresolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 330
+   },
+   "retro2-HeuuEdddfLL6EFrL0fRN:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, this hadn't been resolved. Manchester City faced the Premier League's independent commission hearing (Sept\u2013Dec 2024) over the ~115/130 charges of alleged financial rule breaches, but no verdict had been announced as of my knowledge cutoff, and no sanction (points deduction, demotion, or expulsion) had been imposed. Sporting-wise, City finished 3rd in 2024/25, so they were not relegated for 2025/26; whether they could be relegated on the pitch in 2025/26 or demoted by a ruling before August 2026 is beyond what I know.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 457
+   },
+   "retro2-yTCCaTUbAtJWWFo1dGzD:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to take place in June\u2013July 2026 in the United States, Canada, and Mexico. This is after my knowledge cutoff, so I do not know who reached the final.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 83
+   },
+   "retro2-QBF6oIt8FdUqw9vKIESb:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to be held in the United States, Canada, and Mexico from June 11 to July 19, 2026. This is after my knowledge cutoff, so I don't know the outcome. Argentina, as the defending champion (2022), is among the favorites, but the tournament had not taken place as of my training data.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 125
+   },
+   "retro2-n6bopn43z9:know": {
+    "extracted": "UNKNOWN",
+    "text": "OpenAI had roughly 1,700\u20132,000 employees around August 2024, and by 2025 headcount had grown substantially (reports of ~3,000+ and plans to keep expanding). So the trend strongly points toward \"yes.\" However, the resolution date (August 1, 2026) is beyond my training knowledge, so I can't confirm the actual outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 322
+   },
+   "retro2-txlyUI6GiSL18s36Z95J:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge: Taylor Swift and Travis Kelce announced their engagement on August 26, 2025, but as of my knowledge cutoff they had not yet held a wedding. Whether the marriage actually takes place (and when) is beyond what I can confirm, so I can't resolve this question.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 202
+   },
+   "retro2-3e8XS9XJFH8QrdvbbjgD:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge, OpenAI had released GPT-5 (August 2025) and follow-ups like GPT-5.1 and GPT-5.2 (late 2025), but no model called \"GPT-6\" had been released. Sam Altman indicated GPT-6 would arrive faster than the GPT-4\u2192GPT-5 gap, but I have no knowledge of an actual GPT-6 release, and the June 1, 2026 deadline is beyond what I can confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 335
+   },
+   "retro2-czESSygIPZ:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of events through the end of July 2026. As of my training data, Trump had repeatedly expressed interest in acquiring Greenland (including during his second term starting January 2025), and his son Donald Trump Jr. visited Nuuk in January 2025, but I have no record of Trump himself visiting Greenland, nor can I confirm what happened through July 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 198
+   },
+   "retro2-gNIyXqC02SDXHGheCcGR:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on what I know, no terrorist attack against an AI lab motivated by AI-safety concerns had occurred through late 2025. There were related incidents \u2014 e.g., StopAI protests/blockades at OpenAI's offices, and in November 2025 OpenAI temporarily locked down its San Francisco offices over a reported threat linked to a former StopAI activist \u2014 but none of these constituted an actual act of terrorism against a lab. However, since the question resolves at the end of 2025 and my knowledge doesn't reliably cover the full period, I can't confirm the final resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 592
+   },
+   "retro2-enDYPoHVisJ5GxcrK6bk:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, this hasn't resolved. Taylor Swift announced her engagement to Travis Kelce in August 2025, but no wedding had taken place as far as I know. Meanwhile, the One Piece manga is still ongoing (in its Final Saga, with Eiichiro Oda giving no firm end date). Since neither event has occurred, the question remains open.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 273
+   },
+   "retro2-L0SAgPdhh0:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome. My training data doesn't cover 2026 events sufficiently to confirm whether a fully AI-generated video reached 100 million views on YouTube during that year. There were AI-generated videos (e.g., AI music videos, AI-generated kids content, viral Sora/Veo clips) approaching or exceeding large view counts before my cutoff, but I can't verify the specific resolution of this question for 2026 or how \"made entirely with AI\" was adjudicated.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 262
+   },
+   "retro2-U58ue9CkiHRqrgmPlr0S:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't know the resolved outcome. The question's deadline (end of 2026) is beyond my knowledge cutoff, and while there have been some violent incidents involving people connected to AI-risk/rationalist circles (e.g., the \"Zizians\" cases), I can't confirm whether or how this specific market resolved, or whether such incidents met its criteria.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 319
+   },
+   "retro2-pLhI9s2P8N:know": {
+    "extracted": "UNKNOWN",
+    "text": "IMO 2026 is scheduled to take place in Shanghai, China, in July 2026. That is beyond my knowledge cutoff, so I don't know the results or how many contestants (if any) achieved perfect scores.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 230
+   },
+   "retro2-IR7wwwlaE0TRJt6rmbe9:know": {
+    "extracted": "NO",
+    "text": "Based on what I know: Trump was convicted in the New York hush-money case in May 2024, but at his January 2025 sentencing he received an unconditional discharge (no jail, no probation, no fine). The two federal cases were dismissed after his November 2024 election win, and the Georgia case has been stalled/derailed. He was inaugurated as president in January 2025, making incarceration during 2025 effectively impossible. Nothing in my knowledge indicates he has served or will serve any prison time before 2026, and while the very end of 2025 may extend past my knowledge cutoff, the outcome is as close to settled as these things get.\n\nFINAL: NO",
+    "completion_tokens": 486
+   },
+   "retro2-HD42jFl0J4xp4kCOldas:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, Donald Trump had not formally announced a run for President in 2028. He repeatedly hinted or joked about a third term (e.g., \"Trump 2028\" merchandise, comments about \"methods\" to serve again), but he also acknowledged in interviews that the 22nd Amendment bars him and said he was \"not allowed\" to run. No official candidacy announcement had been made by my cutoff, and I don't know the question's resolution deadline, so I can't confirm the final resolution\u2014though it leaned toward NO as of what I know.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 471
+   },
+   "retro2-ZKezTCssUducHwCLJjXD:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup (June\u2013July 2026 in the US, Canada, and Mexico) had not taken place as of my knowledge cutoff. Both Argentina (Messi) and Portugal (Ronaldo) qualified, and both players expressed interest in participating, with Ronaldo indicating he intended to play and Messi leaving it somewhat open depending on fitness. However, whether either actually appears in a match at the tournament is something I cannot confirm, since the event occurs after my training data ends.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 287
+   },
+   "retro2-O6R80dnggu:know": {
+    "extracted": "NO",
+    "text": "Based on my training knowledge: Rockstar had originally set GTA VI for Fall 2025, then in May 2025 pushed it to **May 26, 2026**. However, in **November 2025**, Rockstar announced another delay, moving the release to **November 19, 2026**. Because of that second delay, the game was not slated to (and would not) release on May 26, 2026.\n\nCaveat: my knowledge doesn't extend to the actual May 2026 date itself, but given the officially announced delay, the resolution is that it did not release on May 26, 2026.\n\nFINAL: NO",
+    "completion_tokens": 481
+   },
+   "retro2-Q6zCns2UuN:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the 2026 Grand Slam results. As of my training data, the 2026 tennis season (Australian Open in January, Roland Garros in May\u2013June, Wimbledon in July, US Open in August\u2013September) had not concluded, so I can't say whether Jannik Sinner won two or more majors that year.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 205
+   },
+   "retro2-yhCRLptzUL:know": {
+    "extracted": "UNKNOWN",
+    "text": "Eurovision 2026 (scheduled for May 2026 in Vienna, Austria) is beyond my knowledge cutoff, so I don't know the outcome. I can't confirm whether Israel won, or even whether Israel participated given the debates around its participation.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 100
+   },
+   "retro2-8TGMkSPjMMgWKl24ymom:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, Russia has not attacked or invaded Finland. There have been hybrid-type incidents (e.g., migrant pressure at the border in late 2023, airspace violations, GPS jamming, suspected cable sabotage in the Baltic), but no armed attack or invasion of Finnish territory. However, the question's resolution window runs to mid-2026, which is beyond my knowledge cutoff, so I cannot confirm the final outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 288
+   },
+   "retro2-OezoJEmDmhlSI9pd0ZhR:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, no publicly known AI model with 100 trillion parameters existed. The largest disclosed or credibly rumored models were in the roughly 1\u20132 trillion parameter range (e.g., GPT-4 rumored ~1.8T via mixture-of-experts, Llama 4 Behemoth ~2T, Kimi K2 ~1T). The old claim that \"GPT-4 has 100 trillion parameters\" was debunked. Reaching 100T by end of 2025 would require a ~50x jump over the largest known models, which seemed very unlikely given hardware and training-cost constraints\u2014so my strong expectation is that this resolved NO.\n\nHowever, the resolution date (end of 2025) is at or beyond my reliable knowledge, so I can't confirm the final outcome with certainty.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 688
+   },
+   "retro2-Jc4rRAQpvCXE9tCEfa4n:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge (through early 2025), Russia had not attacked or invaded Latvia. There were ongoing tensions \u2014 hybrid activities, drone incursions into Baltic airspace, sabotage concerns, and NATO reinforcement of the Baltic states \u2014 but no armed attack or invasion of Latvian territory. However, the question's resolution window extends to mid-2026, which is beyond my knowledge cutoff, so I cannot confirm the final outcome. Based on the situation as I know it, the outcome was trending toward NO, but I can't verify events after my cutoff.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 336
+   },
+   "retro2-dgPNU5ICzP:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on what I know: in July 2025, CBS announced that *The Late Show with Stephen Colbert* would end in May 2026, with the show continuing to air until then. Through the end of my reliable knowledge (late 2025), Colbert was still on the air as scheduled, and there was no indication he had been pulled early. However, the resolution window runs up to May 2026, which extends past my knowledge cutoff, so I cannot confirm whether anything changed in early 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 396
+   },
+   "retro2-QsQUZ22Z28:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have confirmed knowledge of how this resolved. Through my training data, Trump repeatedly attacked Powell, reportedly drafted/showed a firing letter to lawmakers in July 2025 before backing off, moved to fire Governor Lisa Cook, and a DOJ probe into Powell over the Fed renovation emerged in early 2026 \u2014 but I'm not aware of a formal attempt to remove Powell as chair, and I can't confirm the state of things through May 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 570
+   },
+   "retro2-VxnB7vd5I3hg60PigZoz:know": {
+    "extracted": "YES",
+    "text": "FTX's Chapter 11 reorganization plan, confirmed by the Delaware bankruptcy court in October 2024 and effective January 3, 2025, provided for customers and most creditors to receive roughly 118\u2013119% of the petition-date (November 2022) dollar value of their claims, including interest. Actual distributions began in February 2025, when the \"convenience class\" (claims under $50,000) received about 119% of their claims, and larger creditors began receiving distributions in May 2025 with further installments following. So in nominal, petition-date dollar terms, creditors did get back more than 100% (though not in crypto-denominated terms, since assets like Bitcoin appreciated substantially after the collapse).\n\nFINAL: YES",
+    "completion_tokens": 518
+   },
+   "retro2-ndlJ7If8jUswxCNUwVaA:know": {
+    "extracted": "YES",
+    "text": "Based on my knowledge, Norway's battery-electric share of new passenger car registrations rose sharply through 2025: after ~82% in 2023 and ~89% in 2024, monthly shares in 2025 were frequently above 95% (e.g., ~96% in January, ~97% in mid-year months, and a record ~98% in September). The full-year 2025 figure reported by OFV (Norwegian Road Federation) came in at roughly 95.9%, so the 95% threshold was reached before 2026.\n\nFINAL: YES",
+    "completion_tokens": 545
+   },
+   "retro2-Vs5hvajBbG3NipnDyDF4:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, Taylor Swift and Travis Kelce announced their engagement in August 2025, but I have no knowledge of a wedding actually taking place. Whether they married before the end of 2026 is beyond what I can confirm \u2014 this resolves after my knowledge cutoff, so I can't state the outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 200
+   },
+   "retro2-N2NPRNZAss:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome of the 2025\u201326 La Liga season, which would conclude in May 2026. As of my training data, that season was either not yet started or still in progress, so I can't say whether Real Madrid finished top (or topped the table at any specific point in 2026). The resolution is beyond my knowledge cutoff.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 205
+   },
+   "retro2-i7MP3oGFn6nUnrHe9aG5:know": {
+    "extracted": "UNKNOWN",
+    "text": "The Nintendo Switch 2 launched on June 5, 2025, so the 12-month window runs to June 2025\u2013June 2026. In my training data, I'm aware of early partial exploits (e.g., a userland ROP demonstration shortly after launch by a security researcher, and various Mig Switch-type cartridge workarounds), but I don't have reliable knowledge of whether a full jailbreak/custom firmware or homebrew execution meeting the market's resolution criteria was publicly achieved before June 2026. The window extends past what I can confidently confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 542
+   },
+   "retro2-dLq1oGr6ndcwTPIUAV9t:know": {
+    "extracted": "UNKNOWN",
+    "text": "The Russian annexation of Crimea took place in March 2014 (treaty signed March 18, 2014), so the 12th anniversary falls in March 2026. That date is beyond my knowledge cutoff, so I can't confirm whether the war was still ongoing at that point. As of my latest knowledge, the war was continuing with no concluded peace agreement, but I can't verify the status as of March 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 245
+   },
+   "retro2-OpRRgcB6cymEfMe3a1sG:know": {
+    "extracted": null,
+    "text": "None",
+    "completion_tokens": 114
+   },
+   "retro2-sPuSducIS2:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't know the outcome of this. As of my training data, Russia and Ukraine had not agreed to a general ceasefire despite various negotiation efforts (e.g., US-mediated talks in 2025, partial/limited pauses such as the brief energy-infrastructure and Easter truces, and discussions around a peace framework). Whether a ceasefire was ultimately agreed before August 1, 2026 lies beyond what I can confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 319
+   },
+   "retro2-uQdQc8sICZ:know": {
+    "extracted": "UNKNOWN",
+    "text": "This refers to the Kentucky Republican primary scheduled for May 2026, in which Rep. Thomas Massie faced a Trump-backed challenge (notably from Ed Gallrein, with a super PAC aligned with Trump spending against Massie). As of my training data, the primary had not yet taken place, so I do not know whether Massie won or lost.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 211
+   },
+   "retro2-ADS8fVRT4vhTq4lm7V12:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, SpaceX had not gone public. In late 2025 there were credible reports (e.g., Bloomberg, WSJ) that SpaceX was preparing for a potential IPO in 2026, possibly targeting a valuation around $1.5 trillion, with Elon Musk reportedly favoring a mid-to-late 2026 timeline. However, I have no confirmed knowledge that the IPO actually occurred, and the resolution date (end of 2026) is beyond what I can verify.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 337
+   },
+   "retro2-m4n27pyrhp:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, this has not resolved. Larry the Cat (Chief Mouser since 2011, born around January 2007) was still resident at 10 Downing Street, and Keir Starmer (Prime Minister since July 2024) was still in office. Neither event\u2014Larry's departure/death nor Starmer leaving office\u2014had occurred as far as I know, so the question remains open.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 266
+   },
+   "retro2-PAPtPqQZhh:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of a hantavirus outbreak aboard the MV Hondius (an Oceanwide Expeditions polar expedition vessel). This event appears to fall after my training data cutoff, so I can't say whether any non-passenger (e.g., crew member or other contact) contracted hantavirus as a result.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 229
+   },
+   "retro2-snZ6ClC8cP:know": {
+    "extracted": "YES",
+    "text": "Based on what I know: by late July 2025, the LMArena Text leaderboard included several Chinese models in the upper tier \u2014 Kimi K2 (Moonshot) debuted around rank 5 in mid-July 2025, DeepSeek R1-0528 was hovering around the top 10 (rank ~6\u20138 with ties), and Qwen3-235B-A22B-Instruct-2507 and GLM-4.5 were also placing high. Given LMArena's tie-based ranking, at least one Chinese model was within the top 10 on the text leaderboard around August 1, 2025. I'm moderately confident this resolved YES.\n\nFINAL: YES",
+    "completion_tokens": 724
+   },
+   "retro2-PCt0P5qsCZ:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on what I know: in December 2025 the EBU's General Assembly declined to hold a vote excluding Israel and instead adopted new voting/promotion safeguards, leaving Israel (KAN) eligible. Israel confirmed it would take part, while Spain, Ireland, the Netherlands, Slovenia and Iceland announced withdrawals in protest. The contest itself (Vienna, May 2026) had not yet taken place as of my knowledge, so I can't confirm the final resolution \u2014 though the trajectory strongly pointed toward Israel participating.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 537
+   },
+   "retro2-6PpCI0gRLS:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge, Mark Zuckerberg and Priscilla Chan remained married with no public reports of divorce or separation. However, the resolution date (July 1, 2026) is beyond my training knowledge, so I cannot confirm how this ultimately resolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 227
+   },
+   "retro2-2cCOO6dZun:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on what I know: After the Trump\u2013Xi meeting in Busan, South Korea (October 30, 2025, on the sidelines of APEC), Trump said he planned to travel to China in April 2026, and Xi was expected to make a reciprocal visit to the U.S. later in 2026. However, I do not have reliable knowledge of whether that April 2026 trip actually took place, was postponed, or was cancelled \u2014 this falls after the period my training data covers with confidence. So I cannot confirm the resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 298
+   },
+   "retro2-6mlxaa3ql4:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my most recent training data, Kanye West (Ye) is alive\u2014there's no record of his death. However, the question's resolution window (\"by 2026,\" i.e., through the end of 2025) extends past what I can reliably confirm from my knowledge, so I can't state the final outcome with certainty. The overwhelmingly likely resolution is NO, but I cannot verify it.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 537
+   },
+   "retro2-EL8nnQuOAq:know": {
+    "extracted": "UNKNOWN",
+    "text": "I'm not certain which specific event this market refers to or how it resolved. If it concerns the June 2025 Israel\u2013Iran conflict (after which Iran's parliament voted to authorize closing the strait), shipping was never fully halted\u2014traffic dipped but continued, and a ceasefire followed within days\u2014but I don't have reliable knowledge of the market's precise resolution criteria or its final outcome. It may also refer to an event after my training data.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 452
+   },
+   "retro2-0PE59gu09y:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup final is scheduled for July 19, 2026, at MetLife Stadium in New Jersey. That date is after my knowledge cutoff, so I cannot know whether Donald Trump actually attended the final in person. While Trump has been closely involved with the tournament (e.g., attending the 2025 Club World Cup final, hosting the draw in Washington, D.C., and serving on the White House task force for the event), the outcome of this specific question is not something I can confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 177
+   },
+   "retro2-dI5U6ps6IP:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge, no AI system has come close to 85% on FrontierMath. The best reported results were roughly in the 25\u201340% range (e.g., OpenAI's o3 claiming ~25% in late 2024, with later models like o4-mini, GPT-5, and Gemini variants reported in the ~25\u201340% range on Tiers 1\u20133, and much lower on Tier 4). The question's deadline (before 2028) is beyond my knowledge cutoff, so the outcome is not yet determined from what I know.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 349
+   },
+   "retro2-92gdnLROgN:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge cutoff, this has not been resolved. FrontierMath (Epoch AI's benchmark of extremely difficult research-level math problems) saw OpenAI's o3 reportedly reach ~25% in December 2024, and through 2025 top models (o4-mini, GPT-5, Gemini 2.5 Deep Think, etc.) were scoring roughly in the 25\u201340% range on Tiers 1\u20133, with much lower scores on Tier 4. No model had approached 85%, and the question's window runs to the end of 2026, which is beyond my knowledge. I cannot confirm the outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 371
+   },
+   "retro2-AOuQPL9guU:know": {
+    "extracted": "UNKNOWN",
+    "text": "I'm aware of the context: in March 2025 Max Tegmark and Andrew Ng publicly disagreed about whether AI would reduce the number of US programming jobs within a year (Tegmark predicting fewer, Ng predicting the opposite), and a Manifold market was created around it. The resolution would depend on employment data (e.g., BLS figures) as of roughly March 2026. That resolution date is beyond what I can reliably confirm from my training data, so I can't state the outcome with confidence.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 413
+   },
+   "retro2-qIIy2UnOAN:know": {
+    "extracted": "UNKNOWN",
+    "text": "Kash Patel was confirmed as FBI Director by the Senate in February 2025 and took office at that time. However, whether he still held the position on June 30, 2026 is beyond my reliable knowledge \u2014 I don't have information confirming his status on that specific date, and I can't verify whether he remained in office, resigned, or was removed by then.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 201
+   },
+   "retro2-uCgZhL5udI:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, this had not occurred and remains unresolved. In late 2025, OpenAI was valued at roughly $500B (secondary sale in October 2025) with reports of discussions at $750B+ for new funding, while Anthropic was valued at $183B (September 2025) and then reportedly around $350B following Microsoft/Nvidia investment talks in November 2025. Anthropic had not surpassed OpenAI, and the outcome for 2026 is beyond my knowledge cutoff.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 395
+   },
+   "retro2-0q0RRPtScc:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of the published results of China's 2025 national quality supervision spot check (\u56fd\u5bb6\u76d1\u7763\u62bd\u67e5) for rebar. Historically, national-level failure rates for hot-rolled ribbed steel bars have generally been in the single digits to low teens (well under 20%), so a sub-20% result would be the expected pattern, but the actual 2025 figure was likely released after my knowledge cutoff, and I can't confirm it.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 625
+   },
+   "retro2-OAL8q0Azzl:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome of IMO 2026. What I do know: at IMO 2025 (July 2025), both Google DeepMind's Gemini Deep Think and an experimental OpenAI model achieved gold-medal-level performance, scoring 35/42 by solving 5 of the 6 problems \u2014 notably, neither achieved a perfect score (both missed Problem 6). IMO 2026 (scheduled for July 2026 in Shanghai) falls after my knowledge cutoff, so I cannot say whether any AI model achieved a perfect 42/42 there.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 336
+   },
+   "retro2-EEcggZCt2y:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my knowledge, this has not been resolved. FrontierMath (Epoch AI, released Nov 2024) started with top models scoring under 2%. OpenAI's o3 was reported at ~25% in December 2024, and through 2025 frontier models (o4-mini, GPT-5, Gemini 2.5 Deep Think, etc.) were scoring roughly in the 25\u201335% range on Tiers 1\u20133, with much lower scores on Tier 4. No model had reached anywhere near 80% as of my training data, and the question's deadline (before 2027) extends past my knowledge cutoff, so the final outcome is not known to me.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 381
+   },
+   "retro2-UdsLNSc2OE:know": {
+    "extracted": "UNKNOWN",
+    "text": "This question refers to METR's \"time horizon\" metric for AI agents on software/research tasks. As of my knowledge (late 2025), the best models had 50%-reliability horizons of roughly 2\u20135 hours (e.g., GPT-5 ~2h17m, Claude Opus 4.5 ~4h49m), while 80%-reliability horizons were far shorter\u2014typically on the order of 20\u201330 minutes to perhaps under an hour. Reaching a 3-hour horizon at 80% reliability would require a large jump (roughly a 5\u20136x increase in the 80% horizon), which would likely correspond to a 50% horizon in the range of 15\u201320+ hours.\n\nWhether this occurred during 2026 is beyond my knowledge cutoff, and I can't confirm the resolution either way.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 549
+   },
+   "retro2-NLPzcQ2Cy9:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of events through April 30, 2026. What I know: the US conducted an extensive strike campaign against Houthi targets in Yemen from mid-March to early May 2025 (Operation Rough Rider), which ended with a US\u2013Houthi ceasefire brokered via Oman on May 6, 2025. After that, US strikes on Yemen paused, while Israel continued striking Houthi targets. Whether the US resumed strikes on Yemen in the period leading up to April 30, 2026 is beyond what I can confirm.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 461
+   },
+   "retro2-s9CZcc65NL:know": {
+    "extracted": "YES",
+    "text": "Based on what I know, several incidents in 2025 were widely characterized as DOGE-related data security failures:\n\n- A Treasury court filing (March 2025) acknowledged that DOGE-affiliated staffer Marko Elez had mistakenly emailed a spreadsheet containing unencrypted personally identifiable information to officials outside Treasury, in violation of policy \u2014 effectively an admitted data breach.\n- An NLRB whistleblower (Daniel Berulis, April 2025) alleged DOGE personnel exfiltrated sensitive agency data and disabled logging.\n- A DOGE staffer's credentials appeared in info-stealer leak dumps, and Elez later publicly exposed a private xAI API key (July 2025).\n- An SSA whistleblower (Charles Borges, August 2025) alleged DOGE copied the entire Social Security NUMIDENT database into an insecure cloud environment.\n\nGiven the Treasury admission and the multiple documented incidents, the question as generally framed would most plausibly resolve YES, though exact resolution depends on the specific criteria used (e.g., whether a formal \"breach\" declaration was required).\n\nFINAL: YES",
+    "completion_tokens": 1173
+   },
+   "retro2-9zlInyCcq9:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, no major tech company (other than Anthropic, whose leadership has cited ~90\u2013100% figures for teams like Claude Code) had reported that at least 98% of its code is AI-generated. The highest public figures I'm aware of from major companies were much lower: Google (~25\u201330%), Microsoft (~20\u201330%), Robinhood (~50%), Coinbase (~40%), with Meta predicting roughly half by 2026. Some small startups have claimed near-100% AI-generated code, but they wouldn't typically count as \"major tech companies.\"\n\nHowever, the resolution window extends to April 1, 2026, which is beyond my knowledge cutoff, so I cannot confirm whether such a report occurred before that date.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 554
+   },
+   "retro2-UQIRCNSA06:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 Tour de France would take place in July 2026, which is beyond my knowledge cutoff. I don't have information about whether it has occurred or its outcome. Based on prior form (Poga\u010dar won in 2020, 2021, 2024, and 2025), he would be a strong favorite, but I cannot confirm the actual result.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 122
+   },
+   "retro2-n0SOsuUccS:know": {
+    "extracted": "UNKNOWN",
+    "text": "Eurovision 2026 is scheduled to be held in Vienna, Austria (after Austria's JJ won in 2025), in May 2026. That is beyond my training knowledge, so I don't know the winner or their country of origin. Note that the question's framing is a bit ambiguous anyway, since non-European participants like Israel and Australia compete, but in any case the result is not something I have information on.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 207
+   },
+   "retro2-sPtUnO9PNc:know": {
+    "extracted": "UNKNOWN",
+    "text": "This refers to the 2025\u201326 Premier League season, which concludes in May 2026. That final table is beyond what I can confirm from my training data, so I can't state the resolution with confidence. For context, Manchester United finished 15th in 2024\u201325 and made significant changes for 2025\u201326, but I don't have reliable knowledge of where they ultimately finished.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 247
+   },
+   "retro2-dUzApqSQdN:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge: the October 2025 Gaza ceasefire agreement (built on the Trump 20-point plan) called for Hamas to disarm and give up governing power in Gaza, and Hamas released the remaining living Israeli hostages in mid-October 2025. However, as of the latest information I have, Hamas had not actually disarmed or formally relinquished control \u2014 disarmament remained a contested second-phase issue, Hamas publicly resisted surrendering its weapons, and it continued to exert de facto control over parts of Gaza. I don't know the question's exact deadline or how it ultimately resolved after my knowledge cutoff, so I can't state a definitive resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 467
+   },
+   "retro2-yq9hpgsgsU:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 Senedd (Welsh Parliament) election is scheduled for 7 May 2026, under a new system with 96 seats elected by closed-list proportional representation across 16 constituencies. As of my training data, this election had not yet taken place. Polling in 2025 showed Plaid Cymru (the main pro-independence party) and Reform UK competing for first place, with Labour slumping, but no results exist in my knowledge, so I cannot say whether pro-independence parties (Plaid Cymru, plus potentially the Greens) secured a majority of seats.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 330
+   },
+   "retro2-ggsSOlny9s:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup (hosted by the United States, Canada, and Mexico) is scheduled to begin in June 2026. This is after my knowledge cutoff, so I don't know the outcomes of the host nations' opening group stage matches.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 98
+   },
+   "retro2-ELRCAcQ2IQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "Alex Bores, a New York State Assembly member known for sponsoring the RAISE Act on AI safety, entered the 2026 Democratic primary for NY-12 after Rep. Jerry Nadler announced his retirement. He faced a crowded field including Micah Lasher, Jack Schlossberg, and others, and drew notable opposition spending from a pro-AI-industry super PAC (Leading the Future). However, the Democratic primary is scheduled for June 2026, which is beyond my knowledge cutoff, so I don't know the result.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 389
+   },
+   "retro2-yEzz69QLyp:know": {
+    "extracted": "NO",
+    "text": "Based on my knowledge, the U.S. government has not officially admitted that UFOs/UAPs are of alien or extraterrestrial origin. This question was likely posted around 2023 (amid the David Grusch whistleblower claims and the lead-up to the July 26, 2023 congressional UAP hearing), but no such admission occurred by July 4 of that year \u2014 nor in subsequent years through my knowledge cutoff. Official positions (Pentagon AARO, NASA's UAP study) have consistently stated there is no evidence of extraterrestrial origin. Any such market would have resolved NO.\n\nFINAL: NO",
+    "completion_tokens": 397
+   },
+   "retro2-9S9RPEZLdl:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have confirmed knowledge of the outcome. As of my training data, xAI had released Grok 4 (July 2025) and Grok 4.1 (November 2025), and Elon Musk had said Grok 5 was in training with a target of early 2026 (after earlier targets of late 2025 slipped). Whether Grok 5 actually shipped before May 1, 2026 is beyond what I can verify, and xAI timelines have historically slipped, so I can't reliably resolve this.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 327
+   },
+   "retro2-ZCdtlP2A8u:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled for June\u2013July 2026 in the United States, Canada, and Mexico. This is after my knowledge cutoff, so I don't know who won or whether the winner was a first-time champion.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 90
+   },
+   "retro2-OlQq8h8qOh:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of this event's outcome. The question refers to a Strait of Hormuz traffic disruption and a Polymarket contract about normalization by April 30, which appears to relate to events after my training data ends (or that I cannot confirm). I cannot verify whether traffic returned to normal by that date.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 223
+   },
+   "retro2-uzLy0uyLZ2:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of events through the end of 2026. As of my training data, Keir Starmer was still Prime Minister (having taken office in July 2024), though he faced significant political pressure, poor polling, and internal Labour Party discontent during 2025, with speculation about leadership challenges (e.g., from figures like Andy Burnham or Wes Streeting) and the May 2026 local/devolved elections being viewed as a potential flashpoint. However, I cannot confirm whether he actually ceased to be PM at any point in 2026, so the resolution is unknown to me.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 308
+   },
+   "retro2-286ycOt8cp:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of how the 2025/26 Premier League season concluded \u2014 that outcome falls after my training data. Tottenham finished 17th in 2024/25 (their worst finish in decades) but won the Europa League and remained a well-resourced club, so relegation would be considered unlikely, but I can't confirm the actual result.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 223
+   },
+   "retro2-C0Pu698Eph:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, no individual has reached a net worth of $1 trillion. The closest was Elon Musk, whose net worth was estimated in the roughly $400\u2013500+ billion range in late 2024\u20132025, with some projections (e.g., Informa Connect's analysis and Tesla's proposed 2025 pay package) suggesting he could potentially hit $1 trillion around 2027 if valuations continued to climb. Bernard Arnault, Jeff Bezos, Larry Ellison, and Mark Zuckerberg were far behind.\n\nThe resolution date (end of 2026) is beyond my knowledge cutoff, so I cannot confirm the outcome. It had not happened as of the latest information I have, but whether it occurs by end of 2026 remains uncertain to me.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 420
+   },
+   "retro2-lUSdpt96lp:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of events in 2026, so I can't say whether Ukraine has had a net-positive territorial month in any month of that year. Through my available knowledge (into 2025), Russia was generally making slow net gains along the front, with Ukraine occasionally regaining ground locally, but that doesn't determine what happened in 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 188
+   },
+   "retro2-98C2A2O9QC:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome of this. The Texas Democratic Senate primary (Talarico vs. Jasmine Crockett and others) was scheduled for March 3, 2026, and the Maine Democratic Senate primary (Platner vs. Gov. Janet Mills) for June 9, 2026. Both are after my reliable knowledge, so I can't say how either turned out, let alone both.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 352
+   },
+   "retro2-OU2hqNZPu0:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to refer to President Trump's planned trip to Beijing in 2026, which he announced after meeting Xi Jinping in Busan in late October 2025 (he said he expected to visit China in April 2026). Whether that trip actually took place on or before May 15, 2026 is beyond what I can confirm from my training data \u2014 I don't have reliable knowledge of the outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 285
+   },
+   "retro2-RgldE2qpqn:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, Keir Starmer was serving as UK Prime Minister (having taken office in July 2024), and no resignation had occurred. The events of 2026 are beyond my knowledge cutoff, so I cannot say how this question resolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 175
+   },
+   "retro2-RPcqcIcASQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome of the 2026 NBA Finals. The Oklahoma City Thunder won the 2025 NBA Finals (defeating the Indiana Pacers in seven games), but the 2026 Finals would take place in June 2026, which is beyond my training knowledge. I cannot say whether they repeated as champions.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 224
+   },
+   "retro2-cnlR6p5sZl:know": {
+    "extracted": "NO",
+    "text": "This most likely refers to the 2025 US\u2013Iran negotiations (Oman-mediated talks starting April 2025). No deal was reached by June 30, 2025 \u2014 instead, Israel launched strikes on Iran on June 13, and the US bombed Iranian nuclear sites on June 22, with talks collapsing. (If it referred to 2015, the JCPOA was also not reached by June 30; it was concluded July 14, 2015.) Either way, the resolution is NO.\n\nFINAL: NO",
+    "completion_tokens": 361
+   },
+   "retro2-hdNqANszg0:know": {
+    "extracted": "NO",
+    "text": "Based on what I know: in early 2025 the \"economic blackout\" movement (e.g., the People's Union USA's February 28, 2025 boycott) targeted large retailers and corporations like Amazon, Walmart, and Target, along with follow-up boycotts of specific companies. I am not aware of any organized \"economic blackout\" protest that specifically targeted consumer AI platforms such as ChatGPT, Claude, or Perplexity during that period. While there were scattered calls online to cancel AI subscriptions over the companies' ties to the administration, nothing rose to the level of a recognized \"economic blackout\" action against these platforms, so the likely resolution was NO.\n\nFINAL: NO",
+    "completion_tokens": 741
+   },
+   "retro2-Z85zSOIE8P:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, Tulsi Gabbard was confirmed as Director of National Intelligence in February 2025 and remained in that role. There were reports of friction with Trump (e.g., his public disagreement with her assessment on Iran's nuclear program in June 2025), and speculation about her standing, but she had not resigned or been removed as far as I know. However, I can't confirm the status through the end of the year, so I can't be certain of the final resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 435
+   },
+   "retro2-zOSd5nE56c:know": {
+    "extracted": "UNKNOWN",
+    "text": "Iran secured qualification for the 2026 World Cup in March 2025 (beating Uzbekistan in a qualifier), so they are slated to be in the tournament. However, the World Cup itself runs June\u2013July 2026, which is beyond my knowledge cutoff. There were open questions about Iran's actual participation due to geopolitical tensions with the United States (a host nation), U.S. travel restrictions, and the mid-2025 conflict, but I don't know how those resolved or whether Iran ultimately took the field.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 318
+   },
+   "retro2-gtEN0EUcRz:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my most recent knowledge, Elon Musk had not become a trillionaire. In late 2025 his net worth was estimated in the roughly $500\u2013700 billion range (Forbes reported him crossing $500 billion in October 2025, with later estimates climbing higher amid rising SpaceX and Tesla valuations). Tesla shareholders approved a compensation package in November 2025 that could theoretically push him toward trillionaire status, but that depends on hitting ambitious multi-year milestones, and it had not happened yet.\n\nThe resolution date (July 2026) is beyond what I can confirm, so I can't say how this turned out.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 414
+   },
+   "retro2-g0uNUlg9IP:know": {
+    "extracted": "UNKNOWN",
+    "text": "Graham Platner, an oyster farmer and veteran, launched a Democratic campaign for Maine's 2026 U.S. Senate seat (held by Republican Susan Collins) in August 2025. Governor Janet Mills entered the Democratic primary in October 2025, setting up a competitive contest. Platner's campaign also faced controversy over old online posts and a tattoo. However, the Democratic primary is scheduled for June 2026 and the general election for November 2026, both of which are beyond my knowledge cutoff. I do not know whether he won the primary or the general election.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 317
+   },
+   "retro2-nQQU9OOlIO:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have information about this. As of my training data, Ali Khamenei remained Iran's Supreme Leader, and I have no knowledge of a new Supreme Leader being selected in March 2026, let alone killed that same month. This event, if it occurred, falls after my knowledge cutoff, so I cannot confirm or deny it.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 245
+   },
+   "retro2-RA5SyCpczc:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled for June\u2013July 2026, with Mexico slated to host 13 matches across Mexico City (Estadio Azteca), Guadalajara, and Monterrey. As of my training knowledge, the tournament had not yet taken place, so I cannot confirm whether Mexico ultimately hosted all of its planned games or whether any were relocated (e.g., due to security concerns, stadium readiness, or other issues). There were no confirmed relocations as of my knowledge, but the event itself lies beyond what I can verify.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 283
+   },
+   "retro2-Czh26ZqEsl:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of events extending through July 4, 2026, so I can't confirm how this resolved. As of my training data, the U.S. had not launched a military attack on Cuba under Trump's second term, but I cannot verify what happened in the period leading up to the resolution date.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 184
+   },
+   "retro2-q5hLIPdLll:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, this had not happened as of my knowledge cutoff. During the June 2025 Israel\u2013Iran conflict, the US struck Iranian nuclear facilities (Fordow, Natanz, Isfahan) and Israel conducted extensive air campaigns, but there was no ground occupation of Kharg Island by either the US or Israel. However, my knowledge does not extend through June 1, 2026, so I cannot confirm the final resolution of this question.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 348
+   },
+   "retro2-sSEc2lNZ8Z:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of events through the end of May 2026, so I can't confirm whether the US took military action against Cuba in that window. As of my training data, there was heightened US pressure on Cuba (sanctions, terrorism designation, rhetoric following the Venezuela intervention in early 2026), but I cannot verify whether any military action occurred by the deadline.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 226
+   },
+   "retro2-5RZdS28O0N:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 International Mathematical Olympiad is scheduled to be held in Shanghai, China, in July 2026. This is beyond my knowledge cutoff, so I don't know the results. For context, the USA won in 2024 (Bath, UK), and China won in 2025 (Sunshine Coast, Australia), with the USA finishing second. Whether the USA wins in 2026 remains undetermined in my knowledge.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 154
+   },
+   "retro2-ghI9lZO0CP:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of this market's resolution. The market appears to concern US\u2013Iran negotiations (likely in 2026, following the 2025 conflict and ceasefire), which is beyond or at the edge of my training data. I can't confirm whether a permanent peace deal was signed by May 31, and I'm not aware of one having been concluded as of my knowledge cutoff.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 324
+   },
+   "retro2-PdlUOR8E90:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge extending to July 2026. What I do know: in 2025 the US and Iran held several rounds of indirect (Omani-mediated) talks starting in April 2025, but those were derailed by the June 2025 Israel\u2013Iran war and the US strikes on Iranian nuclear sites (Fordow, Natanz, Isfahan). Afterward, Iran suspended cooperation with the IAEA and talks stalled, with the E3 moving toward \"snapback\" sanctions in late 2025. As of my knowledge, no formal nuclear deal framework had been reached, but I cannot confirm what happened between then and July 1, 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 363
+   },
+   "retro2-dP58EZ5ntQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of the outcome. Based on what I know, Anthropic's annualized revenue run-rate was reported at roughly $5B in mid-2025, with later reports in the $7\u20139B range by late 2025 and internal projections for 2026 in the tens of billions (roughly $20\u201326B for the year in optimistic scenarios). Reaching $50B ARR by the end of June (presumably 2026) would require a dramatic acceleration well beyond those reported figures and projections, so it looks unlikely \u2014 but I cannot confirm how this actually resolved, since the resolution date is beyond my reliable knowledge.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 410
+   },
+   "retro2-2ItEg96spt:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of the resolution of this market. The framing implies a significant disruption to Strait of Hormuz shipping traffic preceding the May deadline in question, and I'm not aware of the specific event or how it was resolved \u2014 this appears to be after my knowledge cutoff or otherwise outside what I can verify.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 373
+   },
+   "retro2-Rplhqs8pd8:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have knowledge of this outcome. As far as my training data goes, Cursor (Anysphere) remained an independent company raising large venture rounds, and while there were reports in early 2026 about SpaceX and xAI combining, I have no record of either acquiring Cursor. Since the question concerns events through the end of 2026, which extends beyond what I can reliably confirm, I can't state the resolution.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 381
+   },
+   "retro2-tllRhO59t6:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have reliable knowledge of events through June 30, 2026. What I know: US\u2013Iran indirect talks mediated by Oman began in April 2025, but were derailed by the June 2025 Israel\u2013Iran war and US strikes on Iranian nuclear sites (June 22, 2025). Afterward, negotiations stalled, Iran suspended cooperation with the IAEA, and European powers triggered \"snapback\" sanctions in late 2025. As of my knowledge, no joint US\u2013Iran nuclear framework agreement had been announced, but I cannot confirm what happened through the June 30, 2026 deadline.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 368
+   },
+   "retro2-RcNs5ch6qU:know": {
+    "extracted": "UNKNOWN",
+    "text": "I'm not certain which specific event this market refers to or its exact resolution criteria. During the June 2025 Israel\u2013Iran conflict, traffic through the Strait of Hormuz dipped (with Iran's parliament voting to endorse a closure that never materialized) and largely recovered after the ceasefire, but I don't have reliable knowledge of this particular Polymarket market's resolution, and it may concern a later period beyond my knowledge.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 559
+   },
+   "retro2-lnhgNRdtZg:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge, Anthropic had released Claude Opus 4 (May 2025), Claude Opus 4.1 (August 2025), and Claude Opus 4.5 (November 2025). I have no knowledge of a model named \"Claude Opus 5\" being released, and the resolution date of August 31, 2026 appears to be beyond my knowledge cutoff. I therefore cannot say how this resolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 274
+   },
+   "retro2-s2NLyA0UsZ:know": {
+    "extracted": "UNKNOWN",
+    "text": "This appears to refer to the Virginia mid-decade redistricting constitutional amendment effort that Democrats advanced in late 2025 (with a planned second legislative passage in 2026 and a subsequent voter referendum in spring 2026). Whether that referendum occurred and was certified by June 30, 2026 is beyond what I can confirm from my training data.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 369
+   },
+   "retro2-qZZ6gnuPRg:know": {
+    "extracted": "NO",
+    "text": "This question stems from the controversy over Iran's participation in the 2026 World Cup (hosted by the US, Canada, and Mexico) amid US\u2013Iran tensions and travel restrictions, combined with Italy's struggles to qualify. However, the US President has no authority over World Cup participants \u2014 FIFA determines qualification purely through the sporting process. Iran qualified on the field, and there was no mechanism (nor any actual FIFA action) to swap a qualified team for a non-qualified one at a head of state's request. Any talk of \"replacing Iran with Italy\" was speculation/joke material, not something that occurred.\n\nFINAL: NO",
+    "completion_tokens": 799
+   },
+   "retro2-V8Ljj1i9EREOFMq6Bg18:forecast": {
+    "extracted": "0.87",
+    "text": "Historical base rate: since 1978, the World Cup top scorer has reached 6+ goals in 10 of 12 tournaments (exceptions: 2006 and 2010, both with 5). The 2026 format adds an extra knockout round (8 games for finalists instead of 7) and more weaker teams in the group stage, both of which should increase the top scorer's expected tally. Counterpoints are the trend toward more defensive, evenly matched knockout football and possible goal-sharing across deeper squads, but the structural changes outweigh those.\n\nFINAL: 0.87",
+    "completion_tokens": 577
+   },
+   "retro2-SXyTj7qHh3V3cHHnlNuw:forecast": {
+    "extracted": "0.55",
+    "text": "**Reasoning:**\n\n- Elon Musk is the clear front-runner. His net worth has been in the ~$400\u2013500B+ range, driven by Tesla's high valuation, SpaceX's rapidly rising private valuation (~$400B and possibly heading toward an IPO), and xAI. Tesla shareholders also approved a compensation package worth up to ~$1 trillion if aggressive milestones are met, and several analysts have projected he could cross $1T around 2027 if trends continue.\n- Main competitors: Larry Ellison (briefly surpassed Musk in 2025 amid Oracle's AI-driven surge), Jensen Huang, Mark Zuckerberg, Jeff Bezos, and possibly the Walton family or Bernard Arnault. Each is generally $150\u2013250B+ behind Musk, and none has quite the concentrated high-growth exposure Musk does.\n- Wildcards: a huge Bitcoin run could theoretically make \"Satoshi Nakamoto\" a paper trillionaire, but that likely wouldn't count for most resolution criteria. AI-driven wealth (e.g., Sam Altman if OpenAI equity issues change, or an unknown founder) is a longer-shot possibility.\n- Downside risks for Musk: Tesla's valuation is heavily narrative-driven (robotaxi/Optimus) and could deflate; a broad market correction, political blowback, or a rival's AI-fueled surge (Ellison, Huang) could let someone else cross first. There's also a chance no one crosses $1T within a given resolution window.\n\nBalancing his large lead and high-beta assets against the fragility of that lead and the multi-year horizon, I put this modestly above even odds.\n\nFINAL: 0.55",
+    "completion_tokens": 1008
+   },
+   "retro2-j65AKQZQCjgqa3erm88N:forecast": {
+    "extracted": "0.23",
+    "text": "**Reasoning:**\n\nPrevious World Cup winners: Brazil, Germany, Italy, Argentina, France, Uruguay, England, Spain. Historically 8 of 22 tournaments produced a first-time champion, but since 1978 only two (France 1998, Spain 2010) \u2014 roughly 1 in 6 in the modern era.\n\nFor 2026 (48-team format, North American hosts), the favorites are all previous winners: Spain, France, England, Argentina, Brazil, Germany. Their combined chance is likely around 70-75%.\n\nPlausible first-time winners: Portugal (strongest case, ~8-10%), Netherlands (~5-6%), Norway (~3%), Belgium, Colombia, Morocco, USA, Croatia, Mexico, and a long tail of others (~1-3% each). Summing these and correcting for bookmaker longshot inflation gives roughly 20-25%.\n\nThe expanded field adds a bit of variance, and knockout football is inherently random, but the elite tier of past winners remains dominant.\n\nFINAL: 0.23",
+    "completion_tokens": 990
+   },
+   "retro2-lgxNmHNmrYvowjnSyQAM:forecast": {
+    "extracted": "0.8",
+    "text": "**Key considerations:**\n\n- **Argentina has qualified** for the 2026 World Cup (they secured their place early in CONMEBOL qualifying), so the team-level hurdle is cleared.\n- **Age/fitness:** Messi will be 38\u201339 during the tournament (born June 1987). This is old for a World Cup player, but he has continued to perform at an elite level for Inter Miami in MLS (leading scorer, MVP-caliber seasons) and has kept appearing for Argentina in qualifiers and friendlies through 2025.\n- **His own statements:** Messi has repeatedly said he wants to be there but will decide based on how he feels physically, taking it \"day by day.\" He has not ruled it out, and his tone in 2025 leaned toward playing. His contract extension with Inter Miami running past 2026 suggests he intends to keep playing at a high level through the tournament window.\n- **Location:** The tournament is hosted largely in the US, where he lives and plays \u2014 a strong pull factor, and Argentina's matches would likely be in front of huge supportive crowds.\n- **Coach/federation:** Scaloni and the AFA clearly want him and have kept building the team around him.\n- **Risks:** A serious injury in the months before the tournament (he has had recurring muscle issues), a sudden decline in form, or a personal decision that the body isn't up to it. There is also small tail risk of an unexpected retirement announcement.\n\nBalancing the strong intent, continued form, team qualification, and home-adjacent tournament against the real injury/age risk at 39, I estimate a high but not overwhelming probability.\n\nFINAL: 0.8",
+    "completion_tokens": 885
+   },
+   "retro2-HeuuEdddfLL6EFrL0fRN:forecast": {
+    "extracted": "0.05",
+    "text": "**Reasoning**\n\nThere are two paths to a YES here:\n\n1. **Sporting relegation** (finishing in the bottom three of the 2025/26 Premier League). Manchester City remain one of the strongest squads in the world with enormous resources; even a poor season by their standards lands them in the top half. This is effectively negligible (<0.5%).\n\n2. **Regulatory demotion** stemming from the Premier League's ~115/130 charges of alleged financial-rule breaches. The independent commission hearing concluded in December 2024, with a verdict long awaited. Key considerations:\n   - The range of possible sanctions includes fines, points deductions, and in theory expulsion/relegation. Most legal and football-finance commentators regard a points deduction and/or fine as the most likely outcome if City are found guilty, with demotion viewed as an extreme, low-probability sanction.\n   - City have consistently and strongly contested the charges, and there is genuine uncertainty about whether they'll be found guilty on the most serious counts (e.g., disguised owner funding).\n   - Even if a severe sanction is imposed, City would almost certainly appeal, and possibly pursue further legal avenues, which could push any final, effective demotion past summer 2026.\n   - Timing: the verdict has already been delayed well beyond early expectations, compressing the window for a decision plus appeal to be finalized before August 2026.\n\nCombining a modest probability of a guilty verdict on the gravest charges, a small conditional probability that the commission chooses demotion over points/fines, and further discounting for appeals and timing, I arrive at a low single-digit probability, with a small bump for the tail risk of the charges being treated with unprecedented severity.\n\nFINAL: 0.05",
+    "completion_tokens": 1029
+   },
+   "retro2-QnGZyS7XfpXUfujacWdO:forecast": {
+    "extracted": "0.12",
+    "text": "**Reasoning**\n\n- The Billboard year-end Hot 100 is the top 100 songs of the entire year by combined streaming, sales, and radio. Getting on it requires a genuine, sustained mainstream hit (roughly hundreds of millions of US streams plus radio play), not just a viral moment or a #1 on a niche sales chart.\n- As of what I know, AI-generated acts have made it onto smaller Billboard component charts (e.g., an AI \"country\" act topping Country Digital Song Sales, an AI R&B act appearing on R&B digital sales/airplay charts), and AI artists have racked up large Spotify stream counts. But none has come close to Hot 100 year-end territory, and radio/label ecosystems remain resistant.\n- If the question resolves on the 2025 year-end chart, the answer is almost certainly NO. If it includes the 2026 year-end chart, there's a modest chance a fully AI-generated song breaks through as a novelty/viral hit with enough legs, or that a major-label artist releases a hit that is substantially AI-created and gets characterized that way.\n- Definitional ambiguity (\"created by an AI system\" vs. \"using AI tools\") adds some upside for YES, since AI-assisted production is already common, but a strict reading (song substantially generated by AI) makes it a high bar.\n\nBalancing rapid growth in AI music against the very high bar of the year-end top 100, I put this at a low but non-trivial probability.\n\nFINAL: 0.12",
+    "completion_tokens": 1194
+   },
+   "retro2-XOJ8Tfrg8s2iqPFwauO8:forecast": {
+    "extracted": "0.13",
+    "text": "France enters 2026 as one of the strongest squads in the world: reigning two-time finalists (2018 winners, 2022 runners-up), with Kylian Mbapp\u00e9 at his peak plus a deep pool of talent (Tchouam\u00e9ni, Camavinga, Saliba, Konat\u00e9, Demb\u00e9l\u00e9, Olise, Dou\u00e9, Barcola, etc.) and Didier Deschamps' proven tournament record. Their qualifying campaign was comfortable.\n\nHowever, the field is very competitive: Spain (Euro 2024 champions, Yamal/Pedri), England (loaded attack, new manager), Argentina (defending champions), Brazil under Ancelotti, Portugal, Germany, Netherlands. Pre-tournament betting markets have generally put France in the 12\u201316% range, roughly co-favorite with Spain and England. Knockout football in a 48-team format introduces significant variance, and France has occasionally underperformed (Euro 2020/2024 attacking struggles).\n\nBalancing squad quality against the depth of the field and tournament randomness, I estimate roughly a 13% chance.\n\nFINAL: 0.13",
+    "completion_tokens": 481
+   },
+   "retro2-n6bopn43z9:forecast": {
+    "extracted": "0.96",
+    "text": "OpenAI had roughly 1,700\u20132,000 employees around August 2024. Since then it has raised enormous funding, expanded aggressively into products (ChatGPT enterprise, Sora, agents, hardware, international offices), and reported headcounts well above 3,000 by 2025 with continued hiring. A drop back below the mid-2024 level by August 2026 would require a severe collapse, major layoffs, or an unusual restructuring (e.g., spinning off large units), all of which appear unlikely given its trajectory and capital position. Minor risks include measurement ambiguity and unexpected corporate events.\n\nFINAL: 0.96",
+    "completion_tokens": 376
+   },
+   "retro2-QBF6oIt8FdUqw9vKIESb:forecast": {
+    "extracted": "0.11",
+    "text": "Argentina enter 2026 as defending champions and reigning Copa Am\u00e9rica holders, with a deep, cohesive squad (\u00c1lvarez, Mac Allister, Enzo Fern\u00e1ndez, Lautaro Mart\u00ednez, Romero, Otamendi, E. Mart\u00ednez) and Scaloni still in charge, though Messi will be 39 and Di Mar\u00eda has retired. They qualified comfortably. Historically, defending champions rarely repeat (last was Brazil 1962), and the field is deep: Spain (Euro 2024 winners, young core), France, England, Brazil, Portugal, Germany, and the Netherlands are all credible contenders, plus the tournament is in North America with a 48-team format adding one extra knockout round.\n\nBetting markets have generally placed Argentina among the top 4\u20135 favorites, roughly in the 9\u201312% implied-probability range. I'll go slightly toward the middle of that.\n\nFINAL: 0.11",
+    "completion_tokens": 406
+   },
+   "retro2-txlyUI6GiSL18s36Z95J:forecast": {
+    "extracted": "0.78",
+    "text": "Based on what I know: Taylor Swift and Travis Kelce began dating in 2023, their relationship has been highly public and stable, and they announced their engagement in August 2025. Engaged couples marry at a high rate (roughly 80%+), and there have been no credible signs of trouble. The main uncertainties are (1) an unspecified resolution deadline\u2014if the question requires marriage by a near-term date, a wedding reportedly planned for 2026 might fall outside it\u2014and (2) the general possibility of a broken engagement, which is somewhat elevated for celebrity couples.\n\nFINAL: 0.78",
+    "completion_tokens": 457
+   },
+   "retro2-yTCCaTUbAtJWWFo1dGzD:forecast": {
+    "extracted": "0.12",
+    "text": "**Reasoning**\n\n- **Base rate:** In all 22 previous World Cups, every final has been contested exclusively by European and South American nations (0/22). The closest non-Euro/SA runs were semifinal appearances: USA (1930), South Korea (2002), Morocco (2022).\n- **2026 specifics:** The expanded 48-team format is hosted in the USA, Canada, and Mexico, which gives three CONCACAF hosts home advantage and guaranteed berths. Morocco showed in 2022 that an African side can genuinely compete with Europe's elite. Japan has been strong and increasingly deep; Senegal, South Korea, Australia, Iran, and others are competitive but generally unlikely to string together 4\u20135 knockout wins.\n- **Market-style estimate:** Typical pre-tournament outright odds give the strongest non-Euro/SA teams (USA, Morocco, Japan, Mexico, Canada, Korea, Senegal, etc.) combined implied winning probability of roughly 5\u20138%. Reaching the final is roughly double the chance of winning, so ~10\u201315%.\n- **Path difficulty:** A finalist must win the round of 32, 16, quarterfinal, and semifinal, almost certainly facing at least two or three top European/South American sides. Bracket luck could help (e.g., a favorable half), but the strong favorites (France, Spain, England, Argentina, Brazil, Germany, Portugal, Netherlands) heavily populate both halves.\n\nBalancing the strong historical prior against the host advantage, expanded field, and rising quality of teams like Morocco and Japan, I land around 12%.\n\nFINAL: 0.12",
+    "completion_tokens": 1059
+   },
+   "retro2-3e8XS9XJFH8QrdvbbjgD:forecast": {
+    "extracted": "0.2",
+    "text": "GPT-5 launched in August 2025, roughly 2.4 years after GPT-4. Sam Altman has said GPT-6 would come faster than that gap, and OpenAI has since shipped incremental versions (GPT-5.1 in November 2025, GPT-5.2 in December 2025), suggesting a cadence of point releases rather than an imminent major version jump. A GPT-6 launch before June 1, 2026 would mean under 10 months after GPT-5\u2014faster than any previous major-version cycle. Competitive pressure (Gemini 3, Claude, etc.) and OpenAI's \"code red\" posture could accelerate things, and OpenAI has been flexible with naming, but the more likely path through spring 2026 is more 5.x releases, with GPT-6 later in 2026 or beyond.\n\nFINAL: 0.2",
+    "completion_tokens": 701
+   },
+   "retro2-czESSygIPZ:forecast": {
+    "extracted": "0.15",
+    "text": "**Reasoning**\n\n- Trump has repeatedly expressed interest in Greenland, and his administration has sent surrogates (Don Jr. in Jan 2025, VP Vance to Pituffik Space Base in March 2025). The US base at Pituffik gives Trump a venue where he could land without needing a Danish/Greenlandic invitation, so the visit is logistically feasible.\n- Tensions in early 2026 (renewed pressure on Denmark/Greenland, tariff threats, then a \"framework\" arrangement discussed around Davos) keep Greenland salient, and Trump has mused about visiting \"at some point.\"\n- However, Trump travels abroad relatively rarely, and a Greenland trip would be diplomatically provocative with both Copenhagen and Nuuk having signaled they don't want a presidential visit framed around acquisition. He tends to talk about such trips more than execute them (cf. many floated visits that never happen).\n- The window (through July 2026) is fairly short, and the 2026 calendar is crowded (250th anniversary events, World Cup, midterm campaigning).\n\nBalancing feasibility and salience against Trump's limited foreign travel and the diplomatic friction, I put this at a modest probability.\n\nFINAL: 0.15",
+    "completion_tokens": 889
+   },
+   "retro2-enDYPoHVisJ5GxcrK6bk:forecast": {
+    "extracted": "0.87",
+    "text": "**Reasoning:**\n\n- **Taylor Swift's status:** As of my knowledge, Taylor Swift and Travis Kelce announced their engagement in August 2025. Celebrity engagements do sometimes fall apart, but the base rate for a publicly announced engagement of two established adults converting into a marriage within a couple of years is fairly high (perhaps 80\u201390%). Reports suggested a wedding possibly in 2026.\n\n- **One Piece's status:** The manga is in its \"Final Saga,\" but Eiichiro Oda's timelines have historically slipped considerably. As of 2025 the story was in the Elbaf arc, with substantial plot (Laugh Tale, the final war, Imu, etc.) still remaining. Most informed estimates put the ending somewhere around 2028\u20132032 or later, given Oda's pacing and frequent breaks. An abrupt end within the next 1\u20132 years would require an unlikely event (e.g., serious health issues or cancellation).\n\n- **Combining:** For YES, Swift needs to marry before the manga concludes. The main failure modes are (a) the engagement ending without marriage, roughly 10\u201315%, and (b) a wedding being delayed for many years while One Piece finishes first, which is unlikely given the announced timeline and Oda's slow pace. There's also a small risk of ambiguity (e.g., a secret wedding not confirmed), but that likely resolves YES eventually.\n\nOverall, this looks strongly likely to resolve YES.\n\nFINAL: 0.87",
+    "completion_tokens": 836
+   },
+   "retro2-HD42jFl0J4xp4kCOldas:forecast": {
+    "extracted": "0.1",
+    "text": "Trump is barred by the 22nd Amendment from being elected to a third term. While he has repeatedly teased a third term (selling \"Trump 2028\" merchandise, saying \"I'm not joking,\" floating dubious legal theories), he has also on multiple occasions acknowledged he is \"not allowed\" to run and that it's \"pretty clear\" the Constitution prevents it. A formal announcement of candidacy would be a major escalation beyond trolling, would face immediate legal challenges, and would complicate the GOP's actual succession planning (Vance, Rubio, etc.). His age (82 in 2028) also weighs against it. The main risk of a YES is loose resolution based on offhand remarks (\"I'm running in 2028\") that he might make as a joke or provocation, which is a real possibility given his style.\n\nBalancing the constitutional barrier and his own acknowledgments against his penchant for provocative statements and the possibility of a loosely interpreted \"announcement,\" I put this at a low but non-trivial probability.\n\nFINAL: 0.1",
+    "completion_tokens": 634
+   },
+   "retro2-U58ue9CkiHRqrgmPlr0S:forecast": {
+    "extracted": "0.45",
+    "text": "This depends heavily on how strictly \"AI Doomer\" and \"violence\" are interpreted. Considerations:\n\n- Base rate: Through 2023\u20132025, AI x-risk concern grew substantially, and there were protests (Stop AI, PauseAI), blockades, threats, and vandalism, but few clearly documented cases of physical violence explicitly motivated by AI-doom beliefs. The Zizian-linked killings (2022\u20132025) involved people from rationalist/AI-adjacent circles, but the motivations were not clearly \"AI doom,\" and many would not count them.\n- Trend: Rising salience of AI job displacement, data-center backlash, and apocalyptic rhetoric increases the chance that some individual acts violently (assault on a lab employee, arson at a data center, etc.) and cites AI risk. Radicalization of a small fringe is plausible over a ~3-year window ending 2026.\n- Countervailing: The community most concerned about AI doom is strongly norm-bound against violence, and most violent incidents involving AI (e.g., chatbot-induced harm, anti-tech attacks) aren't clearly \"doomer\" motivated. Strict resolution criteria could exclude ambiguous cases.\n\nWeighing a fairly high probability that some qualifying-ish incident occurs against ambiguity in attribution and resolution, I land slightly below even.\n\nFINAL: 0.45",
+    "completion_tokens": 1062
+   },
+   "retro2-L0SAgPdhh0:forecast": {
+    "extracted": "0.87",
+    "text": "**Reasoning**\n\n- AI video generation quality and volume exploded in 2025 (Veo 3, Sora 2, Kling, etc.), and fully AI-generated content is already flooding YouTube, especially Shorts (AI animal vlogs, \"Italian brainrot,\" AI ASMR, AI kids' songs, AI music videos). Several such Shorts and compilations have already reached tens of millions of views, and some arguably over 100M.\n- YouTube's Shorts feed makes 100M+ view counts routine for viral formats; the base rate of a single video hitting 100M is high for trend-driven content, and AI content is now a major trend category.\n- Over a full calendar year, with millions of AI videos being uploaded and platforms increasingly labeling AI content (which helps verification), it's very likely at least one fully AI-generated video (visuals, audio, voice) crosses 100M.\n- Main risks to YES: strict interpretation of \"entirely\" (e.g., disqualifying human editing, human-written script, human-composed music), disputes about verifiability (creators not disclosing tools), or a resolver requiring the video to be uploaded and reach 100M within 2026 specifically. Also possible YouTube policy actions against \"AI slop\" could dampen reach, but they mostly target monetization, not views.\n\nOverall, this looks highly likely, with the remaining uncertainty mostly about resolution strictness rather than whether it plausibly happens.\n\nFINAL: 0.87",
+    "completion_tokens": 1384
+   },
+   "retro2-ZKezTCssUducHwCLJjXD:forecast": {
+    "extracted": "0.96",
+    "text": "Both players' national teams have qualified: Argentina as reigning champions comfortably through CONMEBOL, and Portugal via UEFA qualifying in November 2025. Ronaldo has repeatedly and explicitly stated he intends to play in 2026 (calling it his final World Cup), and he remains a starter for Portugal; his red card against Ireland was resolved with a largely suspended ban that should not keep him out of the tournament. Messi has been more cautious in his statements but has continued to play and score for Argentina, extended his Inter Miami contract, and has been steadily signaling he'll be there if healthy.\n\nMain risks are age-related injury or a late decision to retire (Messi especially), or an unexpected health issue. But since the question resolves YES if either of them plays a single minute, the two independent-ish risks compound strongly in favor of YES. Individually I'd put Ronaldo around 85\u201390% and Messi around 80\u201385%; combined, roughly 96\u201397%.\n\nFINAL: 0.96",
+    "completion_tokens": 784
+   },
+   "retro2-Q6zCns2UuN:forecast": {
+    "extracted": "0.41",
+    "text": "Sinner won two Slams in each of 2024 (AO, USO) and 2025 (AO, Wimbledon), and the tour is essentially a two-man rivalry with Alcaraz at the top. Rough per-event win probabilities for Sinner in 2026: Australian Open ~40\u201345%, Roland Garros ~25%, Wimbledon ~40%, US Open ~35%. Treating those as roughly independent gives an expected ~1.4 Slam titles and a probability of winning at least two of about 40\u201345%. Injury/form risk and Alcaraz's strength pull it slightly down; positive correlation of form pushes it slightly up.\n\nFINAL: 0.41",
+    "completion_tokens": 885
+   },
+   "retro2-yhCRLptzUL:forecast": {
+    "extracted": "0.07",
+    "text": "**Reasoning:**\n\n- Israel is expected to participate in Eurovision 2026 (Vienna) after the EBU declined to hold a vote on exclusion in December 2025, prompting withdrawals by Spain, the Netherlands, Ireland, and Slovenia. There's still some residual chance of non-participation (~10-15%).\n- Israel has had very strong televote results in recent years (3rd in 2023, 5th in 2024, 2nd in 2025 with the televote win), but consistently weak jury scores. Winning Eurovision generally requires a solid showing with both.\n- The EBU's new rules for 2026 (max 10 votes per person instead of 20, juries back in semifinals, curbs on government-backed promotional campaigns) are widely seen as blunting exactly the televote dynamics that have boosted Israel's placements.\n- Base rate for any given entrant is roughly 3%; Israel's recent form pushes that up, but the rule changes, jury skepticism, and participation uncertainty pull it back down.\n\nFINAL: 0.07",
+    "completion_tokens": 882
+   },
+   "retro2-pLhI9s2P8N:forecast": {
+    "extracted": "0.5",
+    "text": "Historical counts of perfect scores fluctuate a lot depending on problem difficulty: recent years have often landed in the 3\u20136 range (e.g., 6 in 2019, 0 in 2020, 2022 lower, 2023\u20132025 roughly 5\u20136), while harder years (2015, 2017) produce 0\u20132. The threshold of 5 sits right around the median for recent contests, so this is close to a coin flip, perhaps slightly favored given the recent trend toward more perfect scores and a strong host field.\n\nFINAL: 0.5",
+    "completion_tokens": 1794
+   },
+   "retro2-dgPNU5ICzP:forecast": {
+    "extracted": "0.1",
+    "text": "The Late Show with Stephen Colbert is scheduled by CBS to conclude in May 2026 (announced July 2025). For this to resolve YES, Colbert would need to be pulled from the air earlier than the planned end date \u2014 e.g., Paramount/Skydance cancelling abruptly over political content, a Trump-related pressure campaign, a suspension (\u00e0 la Kimmel's brief 2025 suspension) that becomes permanent, or some scandal.\n\nConsiderations:\n- Colbert has been openly critical of Trump and Paramount since the cancellation announcement, and the new Skydance-led Paramount has shown willingness to accommodate political pressure. This creates nonzero tail risk.\n- However, networks almost always let announced final seasons run to completion; pulling a show early invites more backlash than it avoids, and the contractual/advertising commitments are already in place. The Kimmel episode also showed that pulling a host under political pressure generates significant blowback, which likely makes CBS more cautious, not less.\n- A temporary suspension might arguably count depending on resolution criteria, adding a little probability.\n\nOverall, an early forced exit is possible but unlikely.\n\nFINAL: 0.1",
+    "completion_tokens": 690
+   },
+   "retro2-snZ6ClC8cP:forecast": {
+    "extracted": "0.9",
+    "text": "Based on what I know about the LMArena (formerly Chatbot Arena) Text leaderboard through mid-2025: Chinese models have been consistently present in the top 10 since early 2025. DeepSeek R1 (and its 0528 update) sat around ranks 4\u20138, Qwen3-235B and later Kimi K2 (released July 2025) were placed within the top 10, and GLM-4.5 also debuted near the top. Given that the leaderboard uses rank-with-ties (often making the \"top 10\" include more than ten models) and that multiple strong Chinese open-weight models were competitive with frontier Western models as of July 2025, it seems very likely at least one Chinese model would occupy a top-10 spot on August 1. The main risk is a flurry of new Western releases (e.g., a new GPT or Claude variant) pushing Chinese models down, but even then several Chinese models would need to be displaced simultaneously.\n\nFINAL: 0.9",
+    "completion_tokens": 678
+   },
+   "retro2-Vs5hvajBbG3NipnDyDF4:forecast": {
+    "extracted": "0.72",
+    "text": "**Reasoning:**\n\n- Taylor Swift and Travis Kelce have been publicly dating since September 2023 and announced their engagement in late August 2025.\n- Typical celebrity/high-profile engagements often last 12\u201318 months; a wedding by December 2026 would be roughly 16 months after the engagement announcement, which is well within the normal range.\n- Logistics favor 2026: Kelce's NFL season ends by February 2026 (and there's speculation he may retire after it), and Swift is not on tour, leaving a wide spring/summer/fall 2026 window. Multiple tabloid reports pointed to a summer 2026 wedding.\n- Risks to a YES: a breakup (low probability given how public and committed the relationship appears), deliberate delay to 2027 (e.g., for scheduling, security, or a desired venue/season), or a very private wedding that isn't publicly confirmed within the window (though something this high-profile would almost certainly leak/be confirmed).\n\nBalancing the strong base rate for engaged couples marrying within ~16 months against celebrity scheduling uncertainty and small breakup risk, I put this at roughly 70\u201375%.\n\nFINAL: 0.72",
+    "completion_tokens": 757
+   },
+   "retro2-OpRRgcB6cymEfMe3a1sG:forecast": {
+    "extracted": null,
+    "text": "None",
+    "completion_tokens": 6
+   },
+   "retro2-dLq1oGr6ndcwTPIUAV9t:forecast": {
+    "extracted": "0.8",
+    "text": "The 12th anniversary of the Crimea annexation falls on March 18, 2026. As of my latest knowledge, the war remains active, with heavy fighting along the front and ongoing strikes, despite intensive US-led diplomatic efforts in 2025 (Alaska summit, the 28-point plan, Geneva and Moscow talks). Those efforts have repeatedly stalled on core issues \u2014 territory, security guarantees, Ukrainian military limits \u2014 with Russia maintaining maximalist demands and Ukraine and Europe resisting. A ceasefire by mid-March 2026 is plausible given the diplomatic momentum and pressure, but the base rate of such negotiations producing an actual halt to fighting within a few months is low, and even a signed framework might not stop hostilities by that date.\n\nFINAL: 0.8",
+    "completion_tokens": 648
+   },
+   "retro2-N2NPRNZAss:forecast": {
+    "extracted": "0.47",
+    "text": "Real Madrid enter the 2025\u201326 La Liga season as one of two clear favourites alongside defending champions Barcelona, with Atl\u00e9tico Madrid a distant third. Under new coach Xabi Alonso, with reinforcements like Trent Alexander-Arnold, Dean Huijsen, \u00c1lvaro Carreras and Franco Mastantuono, plus Mbapp\u00e9, Vin\u00edcius and Bellingham, they have arguably the deepest squad. Barcelona, however, won the double in 2024\u201325 and retain a very strong, cohesive side under Hansi Flick.\n\nHistorically the title has gone to one of these two almost every year, roughly split. Preseason markets had Barcelona a slight favourite (~45%) with Madrid close behind (~40%), and early-season form suggested Madrid competitive at the top. Accounting for injury variance, Barcelona's quality, and a small chance of Atl\u00e9tico or a surprise, I land near a coin flip, slightly below.\n\nFINAL: 0.47",
+    "completion_tokens": 703
+   },
+   "retro2-i7MP3oGFn6nUnrHe9aG5:forecast": {
+    "extracted": "0.42",
+    "text": "**Reasoning**\n\n- **Base rate / precedent:** The original Switch (March 2017) saw a public kernel exploit demonstrated at 34C3 in December 2017 (~9 months) and the Fus\u00e9e Gel\u00e9e bootrom exploit publicly released in April 2018 (~13 months). So the first-generation console was \"hacked\" within roughly a year by most definitions.\n- **Factors lowering the probability for Switch 2:**\n  - Custom NVIDIA T239 SoC with lessons learned from the Tegra X1 bootrom disaster; Nintendo has a far more mature security posture (no repeat of a hardware-level unpatchable flaw is likely).\n  - Strong legal deterrence: the Gary Bowser prosecution, aggressive lawsuits against modders and emulator projects, and a 2025 EULA update explicitly permitting console bricking for modification. Reputable researchers are less likely to publish, and scene groups are more cautious.\n  - As of my knowledge, several months post-launch there was no public custom firmware or kernel-level exploit release.\n- **Factors raising the probability:**\n  - Very early on, researchers demonstrated userland code execution on Switch 2 (via a backwards-compatible Switch 1 game's save exploit), showing interest and some attack surface. If a resolver counts \"any demonstrated unsigned code execution\" as hacked, this could already count as YES.\n  - MIG-style flash carts and the huge commercial incentive for piracy mean well-funded groups (modchip makers) are actively working on it; a modchip announcement/glitch attack before June 2026 is plausible.\n  - Twelve months is a fairly long window for a high-profile target.\n\n**Judgment:** Under a strict definition (public CFW/kernel exploit or working modchip released), I lean slightly below even odds. Under a loose definition (any demonstrated exploit), it likely already resolves YES. Weighing the ambiguity, I settle a bit under 50%.\n\nFINAL: 0.42",
+    "completion_tokens": 1559
+   },
+   "retro2-sPuSducIS2:forecast": {
+    "extracted": "0.32",
+    "text": "**Reasoning**\n\n- Through 2025, the Trump administration pushed hard for a deal: Ukraine accepted a US-proposed 30-day ceasefire in March 2025, but Russia declined an unconditional halt; limited energy/Black Sea arrangements were fragile and short-lived. The Alaska Trump\u2013Putin summit (Aug 2025) produced no ceasefire, and later US-drafted peace frameworks (late 2025) were still being negotiated with major gaps on territory, security guarantees, and force limits.\n- Russia's stated position has consistently required substantive concessions (recognition of annexed territory, Ukrainian neutrality/no NATO, limits on Ukraine's military) before halting fire, and Moscow believes it holds battlefield momentum. That makes a quick unconditional ceasefire unlikely.\n- Countervailing pressures: Russian economic strain, US pressure on both sides (including leverage over aid/intelligence to Ukraine and sanctions on Russia), Ukraine's manpower and political difficulties, and Trump's strong personal desire for a deal. These raise the odds of some agreement within ~8 months compared to prior years.\n- Base rates for protracted interstate wars suggest ceasefires often take years of stalemate; but active great-power mediation increases the hazard rate. Question resolution ambiguity (would a partial or short-lived ceasefire count?) slightly raises the YES probability.\n\nWeighing these, I put the chance of a formally agreed ceasefire before August 1, 2026 at roughly one in three.\n\nFINAL: 0.32",
+    "completion_tokens": 1141
+   },
+   "retro2-uQdQc8sICZ:forecast": {
+    "extracted": "0.58",
+    "text": "**Reasoning**\n\n- **Incumbency and district strength:** Massie has represented KY-4 since 2012 and has repeatedly crushed primary challengers, including in 2020 when Trump publicly called for his ouster and he still won ~81%. He has a distinct, well-established libertarian brand and deep local roots in northern Kentucky.\n- **The threat this time is much bigger:** Trump has personally endorsed a challenger (Ed Gallrein, a former Navy SEAL), and a Trump-aligned super PAC run by top Trump operatives (LaCivita/Fabrizio) has been spending heavily against Massie since mid-2025. Trump's endorsement is extremely powerful in Republican primaries, and Trump's team has made Massie a priority target after his votes against the reconciliation bill, his Iran war-powers push, and the Epstein files effort.\n- **Mitigating factors:** Massie has raised record sums, has strong small-donor support, and early polling (including some independent-leaning polls) showed him leading. Many of his positions (Epstein files, spending) poll well with the GOP base even when Trump opposes him. Gallrein is not a well-known figure and previously lost a state-level bid. Historically, House incumbents with strong local brands tend to survive even Trump-backed challenges more often than not, unless they are seen as anti-Trump on identity (e.g., Cheney), and Massie frames himself as pro-agenda but principled.\n- **Uncertainty:** A Trump-endorsed candidate with millions in outside money against an incumbent Trump is actively campaigning against is a genuinely competitive situation, and rural KY GOP voters are strongly pro-Trump.\n\nBalancing Massie's demonstrated resilience and fundraising against the unprecedented intensity of the Trump-aligned effort, I lean modestly toward Massie surviving.\n\nFINAL: 0.58",
+    "completion_tokens": 1150
+   },
+   "retro2-ADS8fVRT4vhTq4lm7V12:forecast": {
+    "extracted": "0.65",
+    "text": "**Reasoning**\n\n- For years Musk said SpaceX would stay private until Starship/Mars operations were routine, with Starlink as the more likely IPO candidate. That was the base case through most of 2025.\n- However, in late 2025 credible reporting (Bloomberg, WSJ, Reuters) indicated SpaceX was actively preparing for an IPO targeted for mid-to-late 2026, potentially at a valuation exceeding $1 trillion and raising tens of billions \u2014 which would make it the largest IPO ever. Banks were reportedly being lined up, and Musk did not deny the reports; some accounts had him confirming internally that going public was the plan. Subsequent reporting in early 2026 (including SpaceX/xAI consolidation discussions) also framed a 2026 listing as the intent.\n- Positives for YES: strong insider/press signals, huge capital needs (Starship, Starlink expansion, possible AI/data-center ambitions), liquidity demand from employees and early investors, buoyant market appetite for mega-cap tech.\n- Negatives: IPO timelines slip frequently; a mid-2026 target leaves only a few months of buffer; market downturns, geopolitical shocks, or Starship setbacks could push it to 2027; Musk has a history of changing course; the complexity of a ~$1.5T listing (SEC review, governance, national-security considerations) is nontrivial.\n\nWeighing the fairly concrete 2026 preparation reports against normal slippage risk and Musk-specific unpredictability, I put this somewhat above even odds.\n\nFINAL: 0.65",
+    "completion_tokens": 1132
+   },
+   "retro2-m4n27pyrhp:forecast": {
+    "extracted": "0.37",
+    "text": "**Key considerations**\n\n- **Larry the Cat**: Born around January 2007, so he is roughly 18\u201319 years old \u2014 already very old for a cat. Annual mortality for cats at this age is high (perhaps 25\u201340% per year and rising), and there's also the possibility he is retired from Downing Street rather than dying in post.\n- **Keir Starmer**: Took office July 2024 with a large majority, but his poll ratings have been poor and there is persistent speculation about a leadership challenge before the next election (due by 2029). A reasonable distribution: modest chance he's gone by end-2026, roughly even odds he's gone before the election, and a meaningful chance he serves until a 2029 election (and a smaller chance he wins and continues).\n\n**Rough calculation**\n\nWeighting Starmer's likely exit dates by Larry's probability of still being alive/in post at those times:\n- Exit in 2025\u20132026: Larry likely still around (~65\u201395%)\n- Exit in 2027: ~40\u201350%\n- Exit in 2028: ~20\u201330%\n- Exit in 2029 or later: ~5\u201315%\n\nSumming over the plausible distribution gives something around 0.35\u20130.42.\n\nFINAL: 0.37",
+    "completion_tokens": 1284
+   },
+   "retro2-EL8nnQuOAq:forecast": {
+    "extracted": "0.45",
+    "text": "**Reasoning**\n\nThe question presupposes a meaningful disruption to Strait of Hormuz shipping tied to Iran-related conflict. Key considerations:\n\n- **If the context is the June 2025 Israel\u2013Iran / U.S. strikes episode**: the strait never actually closed. Transit counts dipped modestly in late June (some owners paused, GPS jamming, higher war-risk premiums), but after the June 24 ceasefire, tanker traffic recovered within weeks. Under that scenario, \"normal by end of July\" would be quite likely, subject to how strictly \"normal\" is defined in the resolution criteria (e.g., comparison to a pre-crisis daily transit baseline).\n\n- **If the context is a more severe, later disruption** (actual mining, attacks on tankers, or a de facto closure), historical analogues (Red Sea/Houthi crisis) suggest shipping and insurance markets are slow to normalize even after hostilities ease. War-risk premiums stay elevated, and major operators wait for sustained calm. A full return to baseline within a few weeks would be unlikely.\n\n- **Resolution mechanics matter**: Polymarket questions of this type usually rely on a quantitative threshold (e.g., transits within X% of a baseline per Lloyd's List, Windward, or Kpler). Even modest lingering caution can keep numbers below the threshold, biasing toward NO in ambiguous cases.\n\nBalancing the possibility that this refers to a mild disruption (high YES probability) against a more serious one (low YES probability), and accounting for the tendency of such markets to be created only when disruption is real, I land somewhat below even odds.\n\nFINAL: 0.45",
+    "completion_tokens": 1212
+   },
+   "retro2-2cCOO6dZun:forecast": {
+    "extracted": "0.67",
+    "text": "**Reasoning**\n\n- At the Trump\u2013Xi meeting in Busan (Oct 30, 2025), Trump publicly stated he would visit China in April 2026, with Xi to make a reciprocal visit to the U.S. later in 2026. This was reiterated after a Trump\u2013Xi phone call in late November 2025, where Trump said he had accepted Xi's invitation to Beijing in April.\n- Announced head-of-state trips with a reciprocal-visit structure usually do happen; both sides have strong incentives (trade truce maintenance, Xi wanting the optics of hosting, Trump wanting a \"deal\" moment).\n- Risks: (1) Slippage \u2014 an \"April\" trip could easily drift into May or later due to scheduling, midterm-year politics, or negotiations over deliverables; a visit on, say, May 5 would resolve NO. (2) Derailment \u2014 Taiwan arms sales, export-control fights, rare-earth disputes, a flare-up over Japan/Taiwan, or domestic crises could postpone the trip. (3) Trump's stated timelines frequently shift.\n- Nonetheless, the explicit, repeated commitment to April by both governments makes a pre-May visit the modal outcome, with meaningful but not dominant risk of delay.\n\nFINAL: 0.67",
+    "completion_tokens": 922
+   },
+   "retro2-dI5U6ps6IP:forecast": {
+    "extracted": "0.57",
+    "text": "**Reasoning**\n\n- FrontierMath (Epoch AI, released Nov 2024) started with top models at ~2%. By late 2025, frontier models (GPT-5-class, Gemini 3-class) were scoring roughly 30\u201340% on Tiers 1\u20133, with Tier 4 lower (~15\u201330%). That's an enormous jump in ~one year.\n- The question gives until end of 2027 \u2014 two more years of progress. Math reasoning has been one of the fastest-improving domains (IMO gold in 2025, rapid gains on HLE, AIME saturation).\n- Headwinds: the last ~15% of a benchmark is disproportionately hard; some fraction of problems may have errors or ambiguous answers capping achievable scores; Tier 4 problems are genuinely research-level; resolution may depend on Epoch's holdout evaluation rather than lab-reported numbers with heavy compute; and it's unclear whether the threshold applies to the full set including Tier 4.\n- Tailwinds: labs explicitly target these benchmarks, test-time compute scaling continues, and the historical trajectory (2% \u2192 ~40% in a year) suggests the remaining gap is closeable in two years if trends hold even partially.\n\nBalancing the rapid trend against saturation difficulties and resolution ambiguity, I lean modestly toward YES.\n\nFINAL: 0.57",
+    "completion_tokens": 1127
+   },
+   "retro2-0PE59gu09y:forecast": {
+    "extracted": "0.85",
+    "text": "**Reasoning:**\n\n- The 2026 World Cup final is scheduled for July 19, 2026, at MetLife Stadium in East Rutherford, New Jersey \u2014 very close to Trump's Bedminster golf club, where he typically spends summer weekends.\n- Trump has shown unusually strong personal interest in FIFA events: he attended the 2025 Club World Cup final at the same stadium, presented the trophy, and stayed on stage during the celebration. He has a close, very public relationship with Gianni Infantino, who has visited the White House multiple times and given Trump a \"peace prize.\"\n- Trump chairs the White House Task Force on the 2026 World Cup and clearly views the tournament as a showcase event of his presidency (alongside the 250th anniversary celebrations). Attending the final as host-nation president is an obvious high-profile opportunity he is unlikely to pass up.\n- Downside risks: he will be 80 years old, health issues, unexpected crises, security concerns, a dispute with FIFA or host cities, or simply a change of mind. There is also a small chance of definitional edge cases (e.g., attending only part of the match \u2014 though that would likely still count as attending \"in person\").\n\nGiven his demonstrated enthusiasm and the logistics, attendance seems very likely, with the main uncertainty being health/unforeseen events over the intervening months.\n\nFINAL: 0.85",
+    "completion_tokens": 743
+   },
+   "retro2-92gdnLROgN:forecast": {
+    "extracted": "0.3",
+    "text": "**Reasoning**\n\n- FrontierMath (Epoch AI, Nov 2024) started with top models at ~2%. o3 was reported at ~25% (Dec 2024, high compute), and through 2025 frontier models (o4-mini, GPT-5 variants, Gemini Deep Think) climbed to roughly 25\u201340% on Tiers 1\u20133, with Tier 4 much lower.\n- That's a steep trajectory (~2% \u2192 ~40% in about a year), and reasoning models have made dramatic gains on hard math (IMO gold-level results in 2025).\n- However, going from ~40% to >85% is a large jump. The remaining problems are the hardest research-level ones, benchmark difficulty is heavy-tailed, and there are known issues with some problems being flawed or ambiguous, which may effectively cap achievable scores below ~90\u201395%.\n- Resolution ambiguities (which tier set, which evaluator, compute budget) add uncertainty. Epoch's independent runs tend to score lower than lab-reported numbers.\n- Roughly one year remains; saturation to 85%+ is plausible but far from assured.\n\nFINAL: 0.3",
+    "completion_tokens": 813
+   },
+   "retro2-0q0RRPtScc:forecast": {
+    "extracted": "0.68",
+    "text": "**Reasoning**\n\nSAMR's national product quality supervision spot checks (\u56fd\u5bb6\u76d1\u7763\u62bd\u67e5) on hot-rolled ribbed bars for concrete reinforcement have historically shown fairly low unqualified rates \u2014 typically in the single digits to low teens percent (common failures being weight/size deviation, i.e., \"\u7626\u8eab\u94a2\u7b4b,\" and occasionally mechanical properties). In 2024, amid the steel price slump and the crackdown on slimmed rebar, reported failure rates rose and some provincial checks showed elevated numbers, which is likely why a 20% threshold was chosen \u2014 it's near the upper end of plausible outcomes rather than the center.\n\nFactors pushing toward YES (below 20%):\n- Long-run base rate for national-level rebar checks is well under 20%.\n- Intensified enforcement in 2024\u20132025 tends to push producers toward compliance, and national sampling usually draws from a broad mix of large compliant mills.\n\nFactors pushing toward NO:\n- SAMR increasingly does risk-targeted sampling (focusing on small mills, distribution markets), which inflates failure rates.\n- Continued margin pressure in steel gives incentive to cut corners.\n- Possible ambiguity if the 2025 results aren't published clearly or use a different product category.\n\nBalancing these, I lean toward the rate coming in under 20%, but with meaningful uncertainty.\n\nFINAL: 0.68",
+    "completion_tokens": 1262
+   },
+   "retro2-uCgZhL5udI:forecast": {
+    "extracted": "0.07",
+    "text": "**Reasoning**\n\n- **Current state (per my knowledge, late 2025/early 2026):** OpenAI's last marked valuation was ~$500B (October 2025 secondary), with widely reported talks of a new mega-round at roughly $750B\u2013$830B+. Anthropic was valued at $183B (September 2025), then ~$350B in connection with the Microsoft/Nvidia investment (November 2025), with reports of a further round around that level in early 2026.\n- **Gap:** Roughly 2x\u20132.5x in OpenAI's favor at the most recent marks. For Anthropic to surpass OpenAI within 2026, it would need to roughly double or triple its valuation while OpenAI's stays flat or falls \u2014 an unusual dynamic in a market where both are raising aggressively.\n- **Arguments for YES:** Anthropic's revenue is growing faster in percentage terms (run-rate rising from ~$1B to ~$7\u20139B during 2025, with 2026 targets of $20B+), enterprise/coding traction is strong, and OpenAI faces very large capex commitments, governance/compute risks, and some skepticism about its ~$1.4T infrastructure obligations. A sharp sentiment shift (e.g., an \"AI bubble\" correction hitting OpenAI harder, or a major OpenAI stumble) could compress the gap.\n- **Arguments for NO:** OpenAI's absolute revenue is still ~2\u20133x Anthropic's, its consumer footprint is far larger, and investor demand for OpenAI shares remains intense. Valuation marks tend to move in tandem for the two leaders; when Anthropic re-rates upward, OpenAI typically does too. Also, an OpenAI IPO or new round in 2026 would likely set a mark near or above $1T.\n- **Resolution ambiguity:** Depends on what counts as \"valuation\" (primary round, secondary, reported talks), but under any reasonable interpretation, Anthropic overtaking within the year requires a substantial surprise.\n\nOverall, this is possible but unlikely within a single year given the size of the gap and correlated valuation dynamics.\n\nFINAL: 0.07",
+    "completion_tokens": 1071
+   },
+   "retro2-qIIy2UnOAN:forecast": {
+    "extracted": "0.8",
+    "text": "Kash Patel was confirmed as FBI Director in February 2025. Since then he has faced a steady stream of controversies (the Epstein files backlash, the handling of the Charlie Kirk assassination investigation, turmoil in the deputy director role with Dan Bongino's departure, reports of personal use of the FBI jet and questions about his girlfriend's security detail, mass firings and lawsuits from former agents). There have been recurring press reports that Trump was frustrated or considering a replacement, but Trump has publicly and repeatedly backed him, and Patel has denied any plans to leave.\n\nConsiderations:\n- Trump's first-term cabinet/agency-head churn was high, and Patel is a lightning rod, so nonzero risk of a sudden departure.\n- Countervailing: Patel is a loyalist doing what Trump wants at the FBI; Trump dislikes firing people in ways that look like conceding to critics; the remaining window to June 30, 2026 is a few months at most.\n- Health or an unexpected scandal escalation are additional tail risks.\n\nOverall, I'd put continued tenure through June 30, 2026 as fairly likely but not certain.\n\nFINAL: 0.8",
+    "completion_tokens": 767
+   },
+   "retro2-AOuQPL9guU:forecast": {
+    "extracted": "0.62",
+    "text": "**Reasoning**\n\nThe Tegmark/Ng disagreement centered on whether AI coding tools would shrink or grow the number of US programming jobs. Ng argues a Jevons-style effect (cheaper code \u2192 more demand for developers); Tegmark argues substitution dominates. The market presumably resolves on some official or widely-tracked measure (BLS CPS/OES occupational employment for programmers/software developers, or possibly job-posting indices like Indeed's).\n\nConsiderations pointing toward YES (fewer jobs):\n- BLS \"computer programmer\" employment has been on a multi-year decline and hit multi-decade lows in 2023\u20132024.\n- Software job postings (Indeed) remained ~35% below pre-pandemic levels through 2025 with no strong recovery, and tech layoffs continued in 2025.\n- Evidence emerged in 2025 (e.g., the Stanford/ADP payroll study) of falling employment for early-career software developers in AI-exposed roles.\n- Companies were publicly citing AI as a reason to slow engineering hiring.\n\nConsiderations pointing toward NO:\n- The broader \"software developers\" category has historically grown and is far larger than the \"programmer\" category; CPS estimates are noisy and could tick up.\n- Economic conditions could improve hiring; AI startups and \"AI engineer\" roles add headcount.\n- Ambiguity in which data series is used and how \"programming jobs\" is defined could favor a broad category that grew.\n\nOn balance, the prevailing trend and 2025 hiring environment lean toward fewer jobs, but data noise and definitional uncertainty keep this well short of certain.\n\nFINAL: 0.62",
+    "completion_tokens": 1293
+   },
+   "retro2-OAL8q0Azzl:forecast": {
+    "extracted": "0.52",
+    "text": "**Reasoning**\n\n- Trajectory: IMO 2024 \u2013 DeepMind's AlphaProof/AlphaGeometry system scored 28/42 (silver). IMO 2025 \u2013 both Google DeepMind (Gemini Deep Think) and OpenAI's experimental reasoning model scored 35/42 (gold), solving problems 1\u20135 but failing problem 6 (a hard combinatorics problem few humans solved). The year-over-year jump was large, and the naive extrapolation points at 42.\n- Model capability since then has kept rising (Gemini 3 / Deep Think, GPT-5-class models, strong Chinese labs like ByteDance Seed and DeepSeek also entering), and there will likely be several labs attempting IMO 2026, increasing the chance that at least one gets everything.\n- Headwinds: a perfect score requires full marks on all six problems, including the hardest P3/P6, and grading is strict about rigor. The 2025 failure on P6 shows the hardest combinatorics problems remain a real obstacle; a single 6/7 on one problem means NO. Resolution ambiguity also matters (official vs. self-reported grading, whether the IMO formally hosts AI entries), and the question only pays out for exactly 42/42.\n\nBalancing the strong trend and multiple attempts against the difficulty of a flawless sweep, I put this near a coin flip, slightly favoring YES.\n\nFINAL: 0.52",
+    "completion_tokens": 1169
+   },
+   "retro2-UQIRCNSA06:forecast": {
+    "extracted": "0.62",
+    "text": "Pogacar is the dominant rider of his generation, having won the Tour in 2020, 2021, 2024, and 2025 (the last by a comfortable margin over Vingegaard). He'll be 27 in July 2026, near peak age, with the strongest team in the sport (UAE Team Emirates). The main risks are: crashes or illness (which affect roughly 10-15% of favorites in any given Tour), a resurgent Vingegaard or an improved Evenepoel/Remco setup, and the small chance he skips the Tour to target other races (he has hinted at wanting to do the Giro/Vuelta double at some point, but the Tour remains the priority). Historically, dominant defending champions win the next Tour perhaps 55-65% of the time.\n\nFINAL: 0.62",
+    "completion_tokens": 539
+   },
+   "retro2-EEcggZCt2y:forecast": {
+    "extracted": "0.5",
+    "text": "**Reasoning**\n\nFrontierMath (Epoch AI, Nov 2024) started with frontier models scoring under 2%. By mid-2025, top reasoning models (o3, o4-mini, GPT-5) were in the ~20\u201330% range on Tiers 1\u20133, and by late 2025 the best models were reportedly approaching ~40%, with Tier 4 (research-level) problems still much lower (~10\u201320%). So the trajectory is roughly 2% \u2192 25% \u2192 40% over about a year.\n\nArguments for YES:\n- Math reasoning has been the fastest-moving capability area (AIME saturated, IMO gold-level performance achieved in 2025).\n- Other hard benchmarks (GPQA, SWE-bench Verified) went from ~30\u201340% to ~80% in about 12\u201318 months once labs focused on them.\n- Enormous compute and RL investment continues; test-time compute scaling directly helps on this kind of benchmark.\n- Roughly one more \"doubling\" of accuracy is needed in ~13 months, which fits historical benchmark saturation curves.\n\nArguments for NO:\n- The last 20\u201340% of FrontierMath includes genuinely research-level problems where progress may be much slower than on the easier tiers; the curve could flatten.\n- Some problems may have errors or ambiguities that effectively cap achievable scores below 80%.\n- Ambiguity over whether Tier 4 must be included; if it is, 80% is considerably harder.\n- Reported scores may depend on evaluation setup (Epoch's independent runs vs. lab-reported numbers), and resolution may hinge on a credible measurement.\n\nBalancing the fast historical pace against the difficulty of the tail problems and resolution ambiguity, I land near a coin flip, slightly favoring YES given how quickly math benchmarks have fallen.\n\nFINAL: 0.5",
+    "completion_tokens": 1348
+   },
+   "retro2-UdsLNSc2OE:forecast": {
+    "extracted": "0.42",
+    "text": "**Reasoning**\n\nThis question is about METR's \"time horizon\" metric. Key facts I know:\n\n- As of late 2025, frontier models (GPT\u20115, GPT\u20115.1\u2011Codex\u2011Max, Claude Opus 4.5) had 50%-reliability horizons roughly in the 2\u20135 hour range, but 80%-reliability horizons were far shorter \u2014 roughly 25\u201330 minutes.\n- The 80% horizon has historically been ~5\u20136x shorter than the 50% horizon, because success rates fall off with task length.\n- The long-run doubling time is ~7 months; the 2024\u20132025 trend looked faster (~4 months).\n\nTo reach a 3-hour 80% horizon from ~30 minutes requires ~2.5\u20133 doublings (a ~6x increase). At a 4-month doubling time that lands around Q4 2026; at a 7-month doubling time it lands in 2027. Equivalently, it likely requires a 50% horizon around 15\u201320 hours, which pushes toward the ceiling of METR's original task suite, raising saturation/measurement issues.\n\nAdditional considerations:\n- Measurement lag: METR often publishes evaluations weeks after model release, so a late-2026 model might not get a qualifying published number within 2026.\n- Confidence intervals on these horizons are very wide; a point estimate crossing 3h might occur even if \"true\" capability is a bit lower (or the reverse).\n- Possible methodology changes (new task suites) could shift numbers either way.\n\nOverall it's close to a coin flip, slightly tilted toward NO because the required pace is at the faster end of historical trends and reporting lag eats into the window.\n\nFINAL: 0.42",
+    "completion_tokens": 1452
+   },
+   "retro2-NLPzcQ2Cy9:forecast": {
+    "extracted": "0.35",
+    "text": "**Reasoning**\n\n- **Background:** The US conducted a major bombing campaign against the Houthis (Operation Rough Rider) in March\u2013May 2025, ending with an Oman-brokered understanding on May 6, 2025: the Houthis would stop targeting US vessels and the US would halt strikes. Since then, the US has largely refrained from striking Yemen, even as Israel continued its own strikes on Houthi targets and the Houthis sank commercial ships (e.g., Magic Seas, Eternity C in July 2025) and fired at Israel.\n- **Post-Gaza-ceasefire dynamics:** After the October 2025 Gaza ceasefire, the Houthis paused most attacks on Israel and shipping, lowering the immediate trigger for renewed US action.\n- **Paths to YES:** (1) Houthis attack US Navy or US-linked shipping, prompting retaliation; (2) a renewed Israel\u2013Iran or US\u2013Iran confrontation that draws in Houthi targets; (3) collapse of the Gaza ceasefire and resumption of Red Sea attacks; (4) a US counterterrorism strike on AQAP in Yemen, which may or may not count depending on resolution wording but could plausibly resolve YES; (5) the Trump administration's general willingness to use force (Venezuela, Nigeria, Iran in 2025).\n- **Paths to NO:** The truce with the Houthis has been surprisingly durable; the administration seemed content to let Israel handle Houthi retaliation; AQAP strikes have been infrequent and lightly reported since 2025.\n\nOver a roughly 4\u20136 month window, I put the chance of a direct US strike on Houthi targets at roughly 25\u201330%, with additional probability from counterterrorism strikes or ambiguous incidents that might count.\n\nFINAL: 0.35",
+    "completion_tokens": 1278
+   },
+   "retro2-n0SOsuUccS:forecast": {
+    "extracted": "0.88",
+    "text": "Considerations:\n\n- Most Eurovision participants are unambiguously European, so the base rate strongly favors YES.\n- Non-European (geographically) candidates: Australia (never won, typically mid-table), Israel (4 wins, strong televote base recently, but its 2026 participation is uncertain due to boycott threats and the EBU's deferred decision), and transcontinental/Asian-located entrants like Armenia, Azerbaijan, Georgia, and Cyprus (rarely in winning contention, and resolution might count them as \"European\" anyway).\n- Rough breakdown: Israel participates (~55%) and wins (~12% conditional) \u2248 6\u20137%; Australia \u2248 3%; Caucasus/Cyprus counted as non-Europe and winning \u2248 2\u20133%.\n\nThat leaves roughly 88% for a European winner.\n\nFINAL: 0.88",
+    "completion_tokens": 832
+   },
+   "retro2-9zlInyCcq9:forecast": {
+    "extracted": "0.15",
+    "text": "**Reasoning**\n\n- The bar (\u226598%) is extraordinarily high. Even Anthropic's own public claims have hovered around \"~90%\" (Dario Amodei, with some individual engineers saying ~100% for themselves). No other major company has come close publicly.\n- Known public figures: Microsoft ~20\u201330% (Nadella, 2025), Google ~30% (Pichai), Salesforce ~30\u201350%, Robinhood ~50% of new code, Coinbase ~40%, Meta forecasting ~50% \"within a year.\" These are all far below 98%.\n- The most plausible candidates for such a claim are frontier AI labs (OpenAI, xAI, Google DeepMind as part of Google) or AI-coding startups (Cursor/Anysphere, Replit). OpenAI has said Codex is used by nearly all its engineers and writes a large share of code, but a company-wide \"98%+\" claim would be a major step, and whether an AI-coding startup counts as a \"major tech company\" is doubtful under most resolution criteria.\n- Resolution ambiguity (e.g., \"98% of new code\" vs. total codebase, an executive's offhand remark vs. formal report) adds some upside tail, as does the hype incentive for AI labs to make aggressive claims within the window.\n- Window is short (before April 1, 2026).\n\nBalancing the strong incentive for AI labs to make headline-grabbing claims against the very high threshold and short window, I put this at roughly 15%.\n\nFINAL: 0.15",
+    "completion_tokens": 1613
+   },
+   "retro2-yq9hpgsgsU:forecast": {
+    "extracted": "0.06",
+    "text": "**Reasoning**\n\nThe 2026 Senedd election (May 2026) will use a new system: 96 seats elected by closed\u2011list D'Hondt in 16 constituencies of 6 members each. A majority is 49 seats.\n\nPro\u2011independence parties: Plaid Cymru is the only significant one; the Wales Green Party formally backs independence, and minor parties like Propel and Gwlad are unlikely to win seats.\n\nPolling through 2025 showed a three\u2011way fragmentation: Plaid Cymru roughly 26\u201332%, Reform UK roughly 25\u201332%, Labour collapsed to ~14\u201320%, Conservatives ~10\u201313%, Greens ~5\u20138%, Lib Dems ~4\u20136%. Seat projections from these polls typically give Plaid something like 32\u201338 seats, Reform ~28\u201335, Labour ~15\u201320, Conservatives ~6\u201310, Greens 0\u20133.\n\nUnder D'Hondt in 6\u2011seat districts, a party's seat share is roughly proportional to its vote share with a modest bonus for the largest parties. To reach 49 seats Plaid (plus perhaps a couple of Green seats) would likely need somewhere around 42\u201346% of the vote nationwide\u2014well above its ~30% polling and above anything Plaid has ever achieved (its best Senedd result was ~22% constituency vote in 1999). The Caerphilly by\u2011election win (~47%) was under FPTP with tactical anti\u2011Reform voting, which doesn't translate to a national list vote.\n\nPaths to YES: a further Labour collapse with its voters consolidating behind Plaid as the anti\u2011Reform vehicle, Reform underperforming, and Greens picking up a few seats. This is conceivable but would require an unprecedented surge of ~12\u201315 points beyond current polling, and Welsh polls have historically tended to overstate Plaid rather than understate it.\n\n**Estimate:** low but not negligible.\n\nFINAL: 0.06",
+    "completion_tokens": 1297
+   },
+   "retro2-9S9RPEZLdl:forecast": {
+    "extracted": "0.42",
+    "text": "**Reasoning**\n\n- xAI's release cadence: Grok 3 (Feb 2025), Grok 4 (July 2025), Grok 4.1 (Nov 2025). Roughly a major version every ~5\u20136 months, with incremental updates in between.\n- Elon Musk stated Grok 5 (reportedly a ~6T-parameter model on Colossus 2) began training around Sept\u2013Oct 2025, initially targeting \"end of 2025,\" then revised to \"Q1 2026.\" That's already one slip.\n- Musk's track record on model timelines is consistently optimistic: Grok 3 arrived ~2 months late; Grok 3.5 was promised and never shipped; Grok 4 came later than implied. A further slip from Q1 into Q2 or beyond is quite plausible, especially for a much larger model requiring long training plus post-training/safety work.\n- Interim releases (Grok 4.20, etc.) suggest xAI may fill the gap with incremental versions rather than rushing Grok 5.\n- On the other hand, xAI is highly competitive and Musk-driven, has enormous compute, and May 1 gives a ~1-month buffer past the Q1 target. There's also some chance they label a release \"Grok 5\" even if it's not the fully realized 6T model, which would resolve YES.\n\nBalancing a stated Q1 2026 target against chronic slippage and the ambition of the model, I land slightly below even odds.\n\nFINAL: 0.42",
+    "completion_tokens": 1104
+   },
+   "retro2-sPtUnO9PNc:forecast": {
+    "extracted": "0.45",
+    "text": "**Reasoning (from my knowledge, no outcome assumed):**\n\n- Manchester United finished 15th in 2024\u201325, then invested heavily (Cunha, Mbeumo, Sesko, Lammens) for 2025\u201326.\n- The 2025\u201326 season under Ruben Amorim was inconsistent: strong results (wins at Anfield, vs. Chelsea, Brighton) mixed with poor ones (Brentford, Everton, Grimsby cup exit). By midwinter United hovered around 5th\u20138th, a few points off the top four, and Amorim was dismissed in January 2026 with Michael Carrick taking over on an interim basis.\n- Under Carrick the team's early results were encouraging (including a win away at Arsenal), pushing United into the thick of the top-four race alongside Chelsea, Aston Villa, Liverpool, and Manchester City, with Arsenal well clear at the top.\n- The race for 3rd\u20136th looked very tight, with several clubs within a handful of points. United's squad depth is reasonable and they have no European football, which helps, but their underlying performance metrics have often lagged their results, and rivals like Liverpool and City have stronger squads on paper.\n\nWeighing a genuinely competitive multi-team race where United are one of roughly four or five plausible candidates for the two available spots (behind Arsenal and City), I put it a little below a coin flip.\n\nFINAL: 0.45",
+    "completion_tokens": 1378
+   },
+   "retro2-ELRCAcQ2IQ:forecast": {
+    "extracted": "0.26",
+    "text": "**Context I'm working from:** NY-12 (Manhattan) is open after Jerry Nadler's retirement. The Democratic primary (June 2026) is crowded: Alex Bores (Assemblymember, author of the RAISE Act on AI safety), Micah Lasher (Assemblymember, Nadler's endorsed successor with deep establishment ties), Jack Schlossberg (JFK's grandson, high name ID), plus others like Liam Elkind, George Conway, Jami Floyd, etc. NY federal primaries are plurality-winner, so a fragmented field means a winner could emerge with ~30%.\n\n**Bores's case:** He's become nationally prominent as the first target of the a16z/OpenAI-linked super PAC \"Leading the Future,\" which has actually boosted his profile and fundraising among AI-safety and anti-Big-Tech donors. He's a sitting legislator with a district base on the Upper East Side, strong fundraising, and a clear message. The \"tech billionaires vs. the guy who wants to regulate them\" framing is a good fit for a highly educated Manhattan Democratic electorate.\n\n**Against him:** Lasher has Nadler's endorsement and much of the Manhattan political establishment (clubs, elected officials), which historically matters a lot in this district. Schlossberg's name recognition led early polling. A well-funded hostile super PAC will spend heavily against Bores. Multiple candidates split the reform/progressive lane.\n\n**Assessment:** I'd rank Lasher as a modest favorite, with Bores and Schlossberg as the main alternatives and a real chance of a surprise. Bores is a credible top-three contender but not the favorite.\n\nFINAL: 0.26",
+    "completion_tokens": 1496
+   },
+   "retro2-ggsSOlny9s:forecast": {
+    "extracted": "0.44",
+    "text": "**Setup (from the December 2025 draw as I recall it):**\n- **Mexico** (Group A) opens June 11 at Estadio Azteca vs **South Africa**.\n- **Canada** (Group B) opens June 12 in Toronto vs the **UEFA Playoff Path A winner** (Italy / Wales / Bosnia / Northern Ireland).\n- **USA** (Group D) opens June 12 in Los Angeles vs **Paraguay**.\n\n**Rough win probabilities (draws count as non-wins):**\n- Mexico vs South Africa at home, altitude, opening-match hype: ~55%.\n- USA vs Paraguay: fairly even matchup; Paraguay is defensively solid, USA has home edge but has been inconsistent: ~45\u201348%.\n- Canada vs playoff winner: heavily dependent on who emerges. If Italy, Canada is a clear underdog (~30%); if Bosnia/Wales/N. Ireland, roughly a coin flip. Blended: ~37%.\n\n**Combining (treating as roughly independent):**\n- All three win \u2248 0.10\n- Exactly two win \u2248 0.35\n- Total P(at least 2) \u2248 0.44\u20130.45\n\nHost nations historically do well in openers, but three hosts means the \"at least 2 of 3\" bar is moderately demanding, and Canada's matchup is the weak link.\n\nFINAL: 0.44",
+    "completion_tokens": 1202
+   },
+   "retro2-uzLy0uyLZ2:forecast": {
+    "extracted": "0.42",
+    "text": "**Reasoning**\n\n- Starmer became PM in July 2024 with a very large Commons majority, which normally provides strong protection against removal. However, his personal approval ratings through 2025 sank to historically low levels for a PM this early in a term, Labour fell to third/fourth in national polls behind Reform UK, and there were multiple episodes of open leadership speculation (welfare rebellion, Rayner's resignation, briefings around Burnham, Streeting, and others).\n- Key trigger points in 2026: the May local elections plus Scottish Parliament and Welsh Senedd elections, which are widely expected to be very poor for Labour. A rout there is the most plausible catalyst for a leadership challenge, and Labour's rules (20% of MPs to nominate a challenger) make a challenge feasible given the number of disaffected MPs.\n- Counterweights: Labour has never forcibly removed a sitting PM; there is no obvious consensus successor; MPs may fear a leadership contest would be destabilising and might wait for a more natural transition; Starmer has shown resilience and stubbornness. Resignation for health or scandal reasons is possible but low probability.\n- Betting markets in late 2025 were pricing something around a coin flip for him leaving in 2026, reflecting genuine uncertainty.\n\nWeighing the structural protection of a big majority against unusually intense pressure and a clear catalyst in May, I land somewhat below 50%.\n\nFINAL: 0.42",
+    "completion_tokens": 1066
+   },
+   "retro2-286ycOt8cp:forecast": {
+    "extracted": "0.03",
+    "text": "Tottenham finished 17th in 2024/25 (38 points) but won the Europa League, replaced Postecoglou with Thomas Frank, and have a squad and budget that are among the top 6\u20138 in the league. Clubs with Spurs' financial resources are relegated extremely rarely; the 17th-place finish was heavily influenced by rotation/prioritizing Europe and an unusual injury crisis. Bookmakers preseason typically priced Spurs relegation around 2\u20134%. Given Champions League involvement adds some squad strain but Frank is a steady manager and the promoted sides have historically struggled, relegation remains a tail risk.\n\nFINAL: 0.03",
+    "completion_tokens": 484
+   },
+   "retro2-C0Pu698Eph:forecast": {
+    "extracted": "0.3",
+    "text": "**Reasoning**\n\nThe only realistic candidate is Elon Musk. As of late 2025, estimates placed his net worth roughly in the $500\u2013700B range (Forbes had him crossing $500B in October 2025, with later estimates higher after SpaceX secondary sales at elevated valuations). His wealth is concentrated in Tesla (~13% plus large option awards, including the newly approved 2025 pay package that only vests on long-term milestones), SpaceX (~42%), and xAI.\n\nPaths to $1T by end of 2026:\n- SpaceX IPO at the rumored ~$1.5T valuation would put his stake around $600B+.\n- Tesla would also need a strong run (market cap well above $1.5\u20132T) for the combination to reach ~$1T.\n- xAI appreciation adds some tailwind.\n\nHeadwinds: Tesla's valuation is volatile and fundamentals (auto sales) have been weak; SpaceX IPO timing and valuation are uncertain; Bloomberg/Forbes apply discounts to private holdings and unvested options; a ~50%+ gain in one year from an already enormous base is demanding. Other billionaires (Ellison, Bezos, Zuckerberg) are far below the threshold.\n\nOverall, it's plausible but requires several favorable outcomes to line up within a single year.\n\nFINAL: 0.3",
+    "completion_tokens": 1090
+   },
+   "retro2-ZCdtlP2A8u:forecast": {
+    "extracted": "0.27",
+    "text": "**Reasoning**\n\nOnly eight nations have ever won the World Cup: Brazil, Germany, Italy, Argentina, France, Uruguay, England, and Spain. For this to resolve YES, a team outside that group must win in 2026.\n\nStrongest contenders who have never won: Portugal (Ronaldo's likely last tournament, strong squad), Netherlands (perennial finalist-caliber), Belgium (aging but talented), Colombia, Norway (Haaland/\u00d8degaard), Morocco (2022 semifinalist), Croatia (2018 finalist, 2022 third), and the co-hosts USA and Mexico with home advantage. Japan, Denmark, Switzerland, and others are long shots.\n\nMarket-style implied probabilities (as of my knowledge) for these never-winners sum to roughly 30-35% before removing bookmaker overround, so a fair estimate is around 27-30%.\n\nHistorical base rate is lower: only 2 of the last 10 tournaments (France 1998, Spain 2010) produced a first-time champion, and the favorites (Spain, France, England, Brazil, Argentina, Germany) are all previous winners. The expanded 48-team format adds slight variance but mostly at the group stage, not among the elite.\n\nBalancing the market view (~29%) against the historical base rate (~20%), I land around 27%.\n\nFINAL: 0.27",
+    "completion_tokens": 1177
+   },
+   "retro2-OlQq8h8qOh:forecast": {
+    "extracted": "0.27",
+    "text": "**Reasoning**\n\nThe question presupposes that traffic through the Strait of Hormuz has been significantly disrupted (presumably due to a military conflict involving Iran, attacks on shipping, mining, or an Iranian attempt at closure). The key considerations:\n\n1. **\"Normal\" is a high bar.** These markets typically define \"normal\" as transit counts returning to roughly pre-crisis baseline levels (e.g., ~90%+ of daily tanker transits). Even after hostilities pause, shipping normalization lags substantially.\n\n2. **Historical analogues are discouraging.** The Red Sea/Bab el-Mandeb disruption from Houthi attacks (late 2023 onward) never returned to normal even after ceasefires, because war-risk insurance premiums stayed elevated and shipowners remained cautious for months. The 2019 tanker-attack episode near Hormuz saw premiums spike and take weeks to fall, though traffic itself didn't collapse. Mine clearance, if mines were involved, takes weeks to months.\n\n3. **Insurance and shipowner behavior.** Even with a ceasefire, Lloyd's Joint War Committee listings and P&I club guidance tend to persist. Major carriers (Maersk, Hapag-Lloyd, etc.) historically resume slowly and cautiously.\n\n4. **Political uncertainty.** If the underlying conflict is unresolved or the ceasefire is fragile, Iran retains the ability to re-escalate, keeping traffic depressed.\n\n5. **Counterpoint.** Hormuz is far more economically essential than the Red Sea route \u2014 roughly 20% of global oil passes through, with no viable alternative for Gulf producers. Strong incentives exist for Gulf states, the US, and even Iran to restore flows quickly. If the disruption was more threatened than actual, traffic could rebound fast.\n\nBalancing the strong economic pressure for restoration against the sticky nature of shipping disruptions and the strict \"normal\" threshold, I lean toward NO but with meaningful uncertainty.\n\nFINAL: 0.27",
+    "completion_tokens": 1193
+   },
+   "retro2-OU2hqNZPu0:forecast": {
+    "extracted": "0.67",
+    "text": "**Context I know:** After the Trump\u2013Xi meeting in Busan (late Oct 2025), Trump said he would travel to China in April 2026, and after a follow-up phone call with Xi in late November 2025 he reiterated that he had accepted an invitation to visit Beijing in April, with Xi to make a reciprocal US visit later in 2026. So there is a publicly announced plan with a target month that falls comfortably before the May 15 deadline.\n\n**Reasons for YES:**\n- Both leaders have publicly committed to the visit and there's a working trade truce both sides want to preserve.\n- Presidential visits announced at this level usually happen; the deadline gives ~2 weeks of slack beyond the announced month.\n- Trump likes high-profile summitry and has personal investment in the \"deal\" with Xi.\n\n**Reasons for NO:**\n- Dates for such trips frequently slip by weeks or months (scheduling, protocol, or wanting more deliverables first).\n- US-China relations are volatile: Taiwan arms sales, export controls, rare-earth issues, or a tariff flare-up could postpone the trip.\n- Other crises (Middle East, domestic politics, health) could intervene.\n- A formal date hadn't (to my knowledge) been officially locked in by both governments.\n\nBalancing an explicit, repeated public commitment against the well-known tendency of such trips to slip and the fragility of the relationship, I put this somewhat above even odds but well short of certain.\n\nFINAL: 0.67",
+    "completion_tokens": 932
+   },
+   "retro2-lUSdpt96lp:forecast": {
+    "extracted": "0.27",
+    "text": "**Reasoning**\n\nThrough 2025, Russia made net territorial gains essentially every month (typically several hundred km\u00b2 per month per ISW/DeepState), with Ukraine's local counterattacks (e.g., near Dobropillia, in Sumy/Zaporizhzhia) recovering ground but never enough to flip a full month to net Ukrainian gain. The last clear month of net Ukrainian gain was August 2024 (Kursk incursion).\n\nFor 2026, paths to YES:\n- A Ukrainian counteroffensive or successful local operation during a month where Russian advances are slow (winter/mud season months have sometimes seen Russian gains dip to ~100\u2013200 km\u00b2), producing a small net positive month.\n- A ceasefire/peace deal involving Russian withdrawal from some occupied areas (e.g., parts of Kharkiv, Sumy, or Dnipropetrovsk regions), which could register as territorial gain in that month.\n- Russian offensive exhaustion combined with Ukrainian drone-dominated defense enabling modest counterattacks.\n\nPaths to NO:\n- Continuation of the 2025 pattern: steady Russian gains every month, Ukraine hampered by manpower shortages.\n- A ceasefire that freezes lines with no exchanges (zero net change, not a gain).\n- Measurement ambiguity favoring the trend of Russian advance.\n\nGiven twelve chances and the fact that Ukraine only needs one month with a slight net positive, this is not negligible, but the 2025 trend was uniformly negative for Ukraine and structural factors (manpower) haven't improved.\n\nFINAL: 0.27",
+    "completion_tokens": 1290
+   },
+   "retro2-RPcqcIcASQ:forecast": {
+    "extracted": "0.27",
+    "text": "The Oklahoma City Thunder are the defending champions after winning the 2025 NBA Finals with a 68-win team built around Shai Gilgeous-Alexander (MVP), Jalen Williams, and Chet Holmgren \u2014 all young and under long-term contracts, with deep roster continuity and a strong draft-pick cupboard. Preseason futures markets for 2026 generally had them as the clear favorite, roughly in the +250 to +300 range (implied ~26\u201329%).\n\nConsiderations:\n- Strengths: elite defense, best point differential in decades, young core still improving, health of Holmgren/Hartenstein, plus continuity.\n- Risks: repeating is historically hard (only a handful of franchises in the last 25 years); injury variance in a long postseason; strong competition (Denver, Houston with Durant, Minnesota, Cleveland, Boston depending on Tatum's recovery, New York); playoff series can be coin-flippy even for the best team (they went to 7 games twice in 2025).\n\nBalancing favorite status against the inherent uncertainty of a full season plus four playoff rounds, I land slightly below market-implied odds.\n\nFINAL: 0.27",
+    "completion_tokens": 535
+   },
+   "retro2-gtEN0EUcRz:forecast": {
+    "extracted": "0.25",
+    "text": "**Reasoning**\n\n- As of late 2025, Musk's net worth (Forbes/Bloomberg) was roughly $450\u2013500B, having briefly touched ~$500B in October 2025. Reaching $1T before July 2026 requires roughly a doubling in about six months.\n- Main paths to $1T: (1) a SpaceX IPO or major revaluation at ~$1.5T (Musk owns ~42%, which would put his stake near $600B+), (2) a large Tesla rally (his ~13% stake plus options), and (3) xAI/X valuation growth. Reports in late 2025 suggested SpaceX was targeting a mid-2026 IPO at a ~$1.5T valuation, which would be the single biggest lever.\n- Obstacles: IPO timelines frequently slip past the target; Forbes and Bloomberg apply conservative valuations to private stakes (and haircuts for illiquidity); Tesla's stock is volatile and could fall; the new Tesla pay package vests over years and won't count as net worth near-term. Even in an optimistic scenario (SpaceX at $1.5T, TSLA strong, xAI growing), the total lands near but not clearly above $1T.\n- Given the need for both a successful, on-time SpaceX event and a supportive Tesla stock price, plus wealth-tracker conservatism, this is plausible but less likely than not.\n\nFINAL: 0.25",
+    "completion_tokens": 1275
+   },
+   "retro2-Z85zSOIE8P:forecast": {
+    "extracted": "0.25",
+    "text": "Tulsi Gabbard was confirmed as Director of National Intelligence in February 2025. Through the parts of her tenure I'm aware of, she has had visible friction with Trump (e.g., his public dismissal of her testimony on Iran's nuclear program in June 2025, reports of her being sidelined from some decision-making, controversy over ODNI restructuring and declassification actions), and there has been periodic speculation about her being pushed out. However, Trump has repeatedly defended her publicly, and his second-term Cabinet has shown far lower turnover than his first term \u2014 through late 2025, no Senate-confirmed Cabinet secretary had departed (Mike Waltz's move from NSA was the main high-profile shake-up).\n\nBase rates: first-term Trump saw roughly 20\u201335% of Cabinet-level officials leave in a given year, but the second term has been notably more stable. Gabbard is a plausible above-average departure risk given the friction, her ideological distance from parts of the administration on foreign policy, and the DNI role being one Trump has historically treated as expendable. But loyalty dynamics, Trump's aversion to appearing to concede to critics, and her continued public alignment with him cut against it.\n\nBalancing these, I estimate a moderate but below-even probability that she exits the Cabinet within the year.\n\nFINAL: 0.25",
+    "completion_tokens": 981
+   },
+   "retro2-RgldE2qpqn:forecast": {
+    "extracted": "0.47",
+    "text": "**Reasoning**\n\n- Starmer entered 2026 with historically low approval ratings, Labour polling third behind Reform UK and roughly level with the Greens/Tories, a bruising 2025 (welfare U-turns, Rayner's resignation, the Mandelson affair, a difficult November Budget), and open briefing wars about potential successors (Streeting, Mahmood, Burnham, Rayner).\n- The May 2026 elections (Scottish Parliament, Welsh Senedd, English locals) look set to be very bad for Labour, particularly losing Wales \u2014 a natural trigger point for a leadership crisis.\n- Recent UK precedent shows PMs frequently being forced out mid-term (Cameron, May, Johnson, Truss), and Starmer has few loyal factional defenders once his electoral rationale (\"he wins\") is gone.\n- Countervailing factors: Labour's rules make challenging an incumbent hard (20% of MPs must back a challenger), Labour has never deposed a sitting PM, there's no consensus successor, Burnham isn't in Parliament, and a big majority plus fear of a Truss-style chaos may make MPs hesitate. Starmer himself is stubborn and could limp on to 2027 or beyond, promising a \"reset.\"\n- Resolution ambiguity: if he's forced out via a formal challenge rather than a formal resignation, it may or may not count, though in practice most exits involve an announced resignation.\n\nWeighing the intense pressure and obvious trigger event against institutional inertia and the lack of an obvious successor, I put this a bit below even odds.\n\nFINAL: 0.47",
+    "completion_tokens": 1362
+   },
+   "retro2-g0uNUlg9IP:forecast": {
+    "extracted": "0.25",
+    "text": "Graham Platner (oyster farmer, veteran, progressive) is running in the Democratic primary against Gov. Janet Mills, with the winner facing Susan Collins in a likely Democratic-leaning midterm year.\n\n**Primary:** Platner has shown surprising strength\u2014strong fundraising, grassroots energy, and several polls showing him leading or tied with Mills among Democratic primary voters despite the October 2025 controversies (old Reddit posts, tattoo). Mills has establishment support (Schumer/DSCC) and name recognition but is older and viewed as a reluctant candidate. I'd put Platner around 50% to win the June 2026 primary.\n\n**General:** Collins is a resilient incumbent who has repeatedly beaten polls, but 2026 looks like a favorable Democratic environment and Maine voted for Harris. A generic Democrat is roughly a coin flip against Collins; Platner's baggage could hurt with swing voters, though his populist profile could also help in rural Maine. Roughly 45\u201350%.\n\nCombined: ~0.5 \u00d7 ~0.48 \u2248 0.24\u20130.26.\n\nFINAL: 0.25",
+    "completion_tokens": 751
+   },
+   "retro2-RA5SyCpczc:forecast": {
+    "extracted": "0.91",
+    "text": "Mexico is scheduled to host 13 matches of the 2026 World Cup across Mexico City (Estadio Azteca, including the opening match on June 11), Guadalajara, and Monterrey. Key considerations:\n\n- **Base rate:** FIFA has essentially never relocated World Cup matches away from a confirmed host country months before the tournament. Hosting commitments, ticketing, broadcasting, and logistics are deeply locked in.\n- **Risks:** Cartel/security concerns, Estadio Azteca renovation delays, US\u2013Mexico political tensions (tariffs, talk of US action against cartels), and Trump's periodic rhetoric about moving games from \"unsafe\" places (though that has mainly targeted US cities and FIFA controls venue decisions). A major natural disaster (earthquake in Mexico City) is a small tail risk.\n- **Mitigants:** FIFA has repeatedly expressed confidence in Mexican venues; Mexico has hosted two World Cups before; Infantino and Mexican authorities are aligned; relocating 13 matches on short notice would be enormously disruptive.\n\nOverall, the strong default is that all planned Mexican matches go ahead as scheduled, with modest tail risk from security, infrastructure, or geopolitical shocks.\n\nFINAL: 0.91",
+    "completion_tokens": 891
+   },
+   "retro2-zOSd5nE56c:forecast": {
+    "extracted": "0.8",
+    "text": "**Key considerations**\n\n- Iran qualified for the 2026 World Cup in March 2025 and the Iranian federation has consistently signalled it intends to play; FIFA also strongly wants all 48 qualified teams present. Historically, qualified teams almost never withdraw (last major cases were decades ago).\n- The June 2025 US travel proclamation includes Iran but explicitly exempts athletes, coaches and essential staff for major sporting events like the World Cup, so the team itself should be able to enter.\n- Iran's group-stage matches were drawn into US venues (Los Angeles/Seattle), which Iran objected to; the federation skipped/limited its delegation at the December 2025 draw over visa issues and asked FIFA to relocate matches to Mexico. Some Iranian officials have floated boycott rhetoric, but rhetoric from Tehran often exceeds action, and sporting participation is a rare source of national pride and prestige.\n- The major downside risk is geopolitical: renewed US/Israeli strikes on Iran, escalating domestic unrest and crackdowns, or a regime decision to boycott a US-hosted event for political reasons. Any serious military conflict between the US and Iran in spring 2026 could plausibly lead to withdrawal or a FIFA-imposed exclusion. Visa denials for coaching staff or officials could also create friction, though probably not outright withdrawal.\n\n**Judgment**\n\nThe strong default is participation, tempered by a meaningfully nonzero chance of withdrawal/exclusion driven by US\u2013Iran conflict or political posturing.\n\nFINAL: 0.8",
+    "completion_tokens": 1302
+   },
+   "retro2-Czh26ZqEsl:forecast": {
+    "extracted": "0.13",
+    "text": "**Reasoning**\n\nContext as I know it (through roughly early 2026): The Trump administration has escalated dramatically in the Caribbean \u2014 lethal strikes on alleged drug boats, a large naval buildup, and the January 2026 operation against Maduro in Venezuela. Following that, Trump and Rubio repeatedly signaled that Cuba was in their sights, with Trump saying Cuba is \"ready to fall\" and the administration squeezing Havana's oil supply (post-Venezuela) and economic lifelines.\n\nFactors pushing toward YES:\n- Demonstrated willingness to use force in the hemisphere and to break norms (Venezuela precedent).\n- Rubio's deep personal hostility to the Cuban regime; the administration explicitly naming Cuba as a next target.\n- Cuba's severe economic crisis, which could produce unrest and a pretext for intervention.\n- \"Attack\" could be resolved by a fairly limited action (a strike on Cuban territory or Cuban military assets), which lowers the bar.\n\nFactors pushing toward NO:\n- The stated strategy appears to be economic strangulation and expecting regime collapse \"without a shot,\" not military action.\n- Cuba lacks the narco-trafficking pretext used against Venezuela; a strike on Cuba would be far more internationally costly and domestically divisive (midterm year).\n- Cuba has a large, organized military and population; an attack is a much bigger commitment than a snatch operation on Maduro.\n- Reports of quiet negotiations/talks with Havana suggest a diplomatic track exists.\n- The window is only a few months.\n\nBase rates for a US attack on Cuba are very low, but this administration has repeatedly done things that seemed low-probability. I weight the escalatory pattern significantly but still see economic pressure as the more likely path in this timeframe.\n\nFINAL: 0.13",
+    "completion_tokens": 1092
+   },
+   "retro2-5RZdS28O0N:forecast": {
+    "extracted": "0.25",
+    "text": "**Reasoning:** The IMO team competition (unofficial ranking by total score) has been dominated by China in recent years: China won 2019 (tied with USA), 2020, 2021, 2022, 2023, and 2025. The USA won in 2015, 2016, 2018, tied in 2019, and won outright in 2024 by a narrow margin over China. Over the past decade, the USA has finished first (or tied first) roughly 4\u20135 times out of 11, but China has been the more consistent top finisher, often with a comfortable margin. The 2026 IMO is scheduled to be held in Shanghai, China, and host nations tend to field very strong, well-prepared teams. Korea and other nations are occasional contenders too but less frequently take first.\n\nGiven China's structural advantage and home hosting, but acknowledging the USA's proven ability to win in a given year (2024), I estimate the USA's chance at around 25%.\n\nFINAL: 0.25",
+    "completion_tokens": 593
+   },
+   "retro2-sSEc2lNZ8Z:forecast": {
+    "extracted": "0.12",
+    "text": "**Reasoning:**\n\n- Context as of my knowledge: The Trump administration has taken an increasingly hard line on Cuba \u2014 re-designating it a state sponsor of terrorism, and after the January 2026 operation that removed Maduro in Venezuela, Trump and Rubio openly signaled that Cuba was \"next,\" cut off Venezuelan oil flows to the island, and declared a national emergency threatening tariffs on countries supplying Cuba with oil. Trump has repeatedly said Cuba is \"ready to fall.\"\n- However, the stated preference has been for a negotiated or \"friendly\" transition driven by economic strangulation rather than force. Cuba, unlike Venezuela, lacks a single indicted leader providing a legal pretext, has no comparable narcotics-trafficking framing, and an operation would carry far greater diplomatic and domestic political costs (Russian/Chinese ties, refugee flows, proximity).\n- Pathways to YES: a Venezuela-style raid, strikes on Cuban territory, or an incident involving a drug-boat strike inside Cuban waters that the market counts. The drug-boat campaign makes an ambiguous edge case somewhat plausible.\n- Timeframe is short (a few months). Base rates for direct US military action against Cuba are extremely low, but the current posture is the most aggressive in decades.\n\nBalancing the elevated rhetoric and precedent against the administration's apparent preference for economic pressure and the short window, I put this at a modest but non-trivial probability.\n\nFINAL: 0.12",
+    "completion_tokens": 1089
+   },
+   "retro2-PdlUOR8E90:forecast": {
+    "extracted": "0.12",
+    "text": "**Reasoning**\n\n- **Background (as I know it):** Indirect US\u2013Iran talks via Oman ran April\u2013May 2025 but stalled over enrichment. In June 2025 Israel and then the US struck Iranian nuclear sites (Fordow, Natanz, Isfahan), followed by a ceasefire. Iran then suspended IAEA cooperation, the E3 triggered \"snapback\" UN sanctions (reimposed late September 2025), and the Iran\u2013IAEA Cairo arrangement collapsed. Iran's leadership grew more hardline and demanded guarantees against further strikes before any talks; the US insisted on zero enrichment.\n- **Factors for YES:** Trump wants a signature deal and is willing to label loose understandings as \"frameworks\"; Iran is economically strained and militarily weakened, which could push it toward a face-saving arrangement; Oman/Qatar channels remain open; a ~7\u20138 month window is not trivial.\n- **Factors for NO:** Trust is near zero after the strikes; the core dispute (enrichment on Iranian soil) is unresolved and both sides have publicly locked in maximalist positions; Iran's domestic politics punish concessions; snapback removed a key inducement; renewed Israeli/US military action is at least as plausible as diplomacy; even in 2013 a framework took many months of sustained negotiation once talks actually started, and talks had not formally resumed as of my knowledge.\n- **Base rate:** Historically, formal US\u2013Iran nuclear frameworks are rare events (2013 JPOA, 2015 JCPOA framework), each requiring long preparation. Post-conflict rapid frameworks are uncommon.\n\nBalancing Trump's deal-seeking and the possibility of a loosely-defined \"framework\" against deep structural obstacles, I estimate a low but non-negligible probability.\n\nFINAL: 0.12",
+    "completion_tokens": 1115
+   },
+   "retro2-2ItEg96spt:forecast": {
+    "extracted": "0.3",
+    "text": "I don't have information on how this resolved, so I'm reasoning from structure and base rates.\n\nKey considerations:\n- A market like this only exists because traffic through the Strait was significantly disrupted (likely tied to a major Iran conflict escalation). Once shipping through Hormuz is disrupted\u2014by attacks, mining, threats, or war-risk insurance spikes\u2014recovery to \"normal\" tends to lag the end of active hostilities by weeks to months. Insurers, charterers, and tanker owners are slow to return; transit counts often stay depressed even after a ceasefire.\n- \"Returns to normal\" is a high bar. Polymarket resolution typically requires transit volumes near pre-crisis baselines (per Lloyd's List, MarineTraffic, Kpler, etc.), not merely \"some ships passing.\" Partial recovery (e.g., 60\u201380% of baseline) would likely resolve NO.\n- On the other hand, Hormuz is so economically critical (\u224820% of global oil) that there's enormous pressure from the US, Gulf states, China, and others to restore flows quickly; disruptions historically (tanker war, 2019 seizures) never fully halted traffic, and de-escalation could produce a fast rebound if the threat environment clears.\n- The window (through end of May) is short relative to typical recovery timelines after a serious conflict-driven disruption.\n\nWeighing these, I lean NO but with meaningful uncertainty about the severity and duration of the underlying disruption.\n\nFINAL: 0.3",
+    "completion_tokens": 921
+   },
+   "retro2-Rplhqs8pd8:forecast": {
+    "extracted": "0.22",
+    "text": "**Reasoning**\n\n- Context: In early 2026 SpaceX and xAI combined into a single Musk-controlled entity, with a SpaceX IPO reportedly planned. That entity has enormous capital access and Musk has shown appetite for large, fast deals (Twitter, xAI\u2013X merger). Reports also surfaced in early 2026 of SpaceX/xAI exploring a deal for Cursor (Anysphere), so the question isn't coming out of nowhere.\n- Against: Cursor is one of the hottest independent AI startups (~$29B valuation after its late-2025 round, rapidly growing revenue), with founders who have previously rebuffed acquisition interest (e.g., OpenAI). Its business depends heavily on model access from Anthropic/OpenAI, which could be jeopardized by a Musk acquisition \u2014 a real strategic reason for Cursor to decline. Rumored megadeals for hot startups fail more often than they close, and a SpaceX IPO process could complicate a large stock-based acquisition.\n- Timing: Even if talks are real, the deal would need to be agreed and (for most resolution criteria) at least announced/closed within 2026 \u2014 feasible but not guaranteed.\n\nBase rate for a rumored acquisition of a highly sought-after startup actually happening within the year is perhaps 25\u201335%; I discount somewhat for Cursor's independence and model-supplier conflicts, but weight up for Musk's deal aggressiveness.\n\nFINAL: 0.22",
+    "completion_tokens": 967
+   },
+   "retro2-RcNs5ch6qU:forecast": {
+    "extracted": "0.27",
+    "text": "**Reasoning**\n\nThis market presupposes a significant disruption to Strait of Hormuz shipping (whether from the June 2025 Israel\u2013Iran/US strikes and Iran's parliamentary vote to close the strait, or a subsequent escalation). Key considerations:\n\n- **\"Normal\" is a high bar.** Even when the strait remains physically open, shipping disruptions persist well after hostilities pause: war-risk insurance premiums stay elevated, shipowners divert or delay, GPS jamming and naval activity continue, and transit counts typically lag baseline by weeks. Resolution likely depends on a data source (e.g., Lloyd's List, Kpler, Windward transit counts) showing a return to pre-crisis daily transit levels, which historically recovers only gradually.\n- **Short timeframe.** With the market presumably created mid-to-late June, only one to two weeks remain \u2014 not much time for insurers and carriers to fully re-normalize.\n- **Base rate.** Similar Polymarket \"returns to normal / fully reopens by [date]\" markets (Red Sea, Black Sea, etc.) have overwhelmingly resolved NO because partial recovery isn't sufficient.\n- **Counterpoint:** If the disruption was mild (a temporary dip in transits without an actual closure) and a ceasefire took hold quickly, traffic could plausibly rebound close to baseline, and a lenient resolution could go YES.\n\nWeighing these, a NO outcome is more likely, but there's meaningful uncertainty about the severity of the underlying disruption and the resolution criteria.\n\nFINAL: 0.27",
+    "completion_tokens": 1112
+   },
+   "retro2-lnhgNRdtZg:forecast": {
+    "extracted": "0.45",
+    "text": "**Reasoning**\n\nKnown cadence: Claude 3 Opus (Mar 2024) \u2192 Claude 4 / Opus 4 (May 2025) was about a 14\u2011month gap between major version numbers. Since then Anthropic has shipped Opus 4.1 (Aug 2025) and Opus 4.5 (Nov 2025), with a faster point-release rhythm (roughly every 3 months), and early 2026 appears to have continued the 4.x line rather than jumping to 5.\n\nArguments for YES by Aug 31, 2026:\n- A ~14\u201315 month major-version cycle from May 2025 lands around July\u2013August 2026.\n- Strong competitive pressure (GPT\u20115, Gemini 3) and Anthropic's stated intent to ship faster.\n- Anthropic has kept the Opus/Sonnet/Haiku naming consistently through the 4.x generation, so a \"Claude Opus 5\" name is the natural default.\n\nArguments for NO:\n- Anthropic seems comfortable extending the 4.x line (4.1, 4.5, 4.6\u2026) rather than bumping the major version; a 4.7/4.8 in mid\u20112026 is quite plausible instead of a 5.\n- Deadline is tight: the window from the last known Opus release to Aug 31, 2026 is only ~9 months, and major-version launches often slip.\n- Naming risk: a \"Claude 5\" could conceivably drop the Opus branding or change tier names, causing a resolution quirk.\n\nBalancing these, it's close to a coin flip, with a slight lean to NO because of the demonstrated preference for 4.x increments and the tight timeline.\n\nFINAL: 0.45",
+    "completion_tokens": 1321
+   },
+   "retro2-tllRhO59t6:forecast": {
+    "extracted": "0.12",
+    "text": "**Reasoning**\n\n- **Background (as of my knowledge):** In April\u2013May 2025, the Trump administration and Iran held several rounds of Omani-mediated indirect talks. These were derailed by Israel's June 2025 strikes on Iran and the subsequent US strikes on Fordow, Natanz, and Isfahan. Since then, Iran has suspended IAEA cooperation, the E3 triggered the snapback of UN sanctions, and Iranian officials have hardened their rhetoric, insisting on an enrichment right that Washington says it will not accept.\n\n- **Structural obstacles:** The core dispute (zero enrichment vs. Iran's insistence on domestic enrichment) has not narrowed. Iran's leadership has less trust after being attacked during an active negotiation process; hardliners are ascendant. The US position is maximalist and Trump has shown willingness to use force rather than compromise. The status of Iran's enriched uranium stockpile remains unresolved, complicating any framework.\n\n- **Factors favoring a deal:** Trump wants a signature foreign-policy \"deal\" and has repeatedly said Iran wants to talk. Iran's economy is under severe strain, and a weakened Iran might accept an interim or framework arrangement to avoid further strikes. Mediators (Oman, Qatar, possibly Russia/Turkey) remain active. Talks can restart quickly if both sides see advantage.\n\n- **Base rates and timing:** Historically, US\u2013Iran nuclear frameworks take years of talks (JCPOA framework took ~20 months of intensive negotiation after the 2013 interim deal). A \"joint announcement\" of a framework within roughly a year of a military exchange, with the parties not even in sustained direct talks, would be unusually fast. Announcements of \"progress\" or \"talks resuming\" are more likely than a formal jointly announced framework.\n\n- **Resolution strictness:** \"Jointly announce a nuclear framework agreement\" is a fairly high bar\u2014vague statements from one side, or a resumption of talks, wouldn't count.\n\nWeighing these, I put the probability low but not negligible, given Trump's unpredictability and Iran's incentives to relieve pressure.\n\nFINAL: 0.12",
+    "completion_tokens": 1226
+   }
   }
  },
  "usage": {
@@ -8110,6 +9007,10 @@
   "anthropic/claude-opus-5": {
    "prompt": 26257,
    "completion": 167031
+  },
+  "anthropic/claude-fable-5.1": {
+   "prompt": 26615,
+   "completion": 111956
   }
  },
  "effort_applied": {
@@ -8121,6 +9022,7 @@
   "openai/gpt-5.5": true,
   "anthropic/claude-opus-4.8": true,
   "anthropic/claude-fable-5": true,
-  "anthropic/claude-opus-5": true
+  "anthropic/claude-opus-5": true,
+  "anthropic/claude-fable-5.1": true
  }
 }

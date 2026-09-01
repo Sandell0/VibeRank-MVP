@@ -1933,6 +1933,650 @@
      "text": null
     }
    }
+  },
+  "anthropic/claude-fable-5.1": {
+   "answers": {
+    "toolsim-1-0": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-3-5": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-2-2": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-3-4": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-1-1": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-2-3": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-1-0": {
+     "family": "longctx",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 136,
+     "extracted": "6540",
+     "text": "Tomas Reyes leads Glacier (note 11); Glacier was folded into Summit (note 19); Summit's allocation is 1900 units (note 14).\n\nLivia Costa leads Quartz (note 5); Quartz was folded into Horizon (note 12); Horizon's allocation is 4640 units (note 18).\n\nSum: 1900 + 4640 = 6540\n\nFINAL: 6540"
+    },
+    "longctx-3-2": {
+     "family": "longctx",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 167,
+     "extracted": "6530",
+     "text": "Ivo Petrov leads project Delta (note 115). Delta was folded into the Orchard program (note 45). Orchard reports under budget line K30 (note 133), which carries 4130 units (note 70).\n\nZoe Marchetti leads project Anvil (note 90). Anvil was folded into the Everest program (note 41). Everest reports under budget line R32 (note 40), which carries 2400 units (note 21).\n\nSum: 4130 + 2400 = 6530\n\nFINAL: 6530"
+    },
+    "longctx-2-1": {
+     "family": "longctx",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 158,
+     "extracted": "15770",
+     "text": "Dario Quint leads project Zephyr (note 40). Zephyr was folded into the Granite program (note 56). Granite carries a quarterly allocation of 6350 units (note 17).\n\nBruno Vidal leads project Cobalt (note 16). Cobalt was folded into the Lantern program (note 5). Lantern carries a quarterly allocation of 9420 units (note 34).\n\nSum: 6350 + 9420 = 15770\n\nFINAL: 15770"
+    },
+    "longctx-4-3": {
+     "family": "longctx",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 172,
+     "extracted": "8530",
+     "text": "Bea Solano leads project Juniper (note 154). Juniper was folded into the Ironwood program (note 108). Ironwood reports under budget line K58 (note 19), which carries 5030 units (note 94).\n\nIvo Petrov leads project Nimbus (note 155). Nimbus was folded into the Quarry program (note 15). Quarry reports under budget line R60 (note 72), which carries 3500 units (note 22).\n\nSum: 5030 + 3500 = 8530\n\nFINAL: 8530"
+    },
+    "longctx-6-5": {
+     "family": "longctx",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 218,
+     "extracted": "16700",
+     "text": "Tracing the chain:\n\n- Viktor Lang leads project Zephyr (note 311). Zephyr was folded into the Everest program (note 16). Everest reports under budget line K24 (note 230). K24 carries the amount posted at desk E4 (note 313), which is 6910 units (note 351).\n- Ines Ferreira leads project Vertex (note 189). Vertex was folded into the Trident program (note 259). Trident reports under budget line R22 (note 58). R22 carries the amount posted at desk W4 (note 184), which is 9790 units (note 119).\n\nSum: 6910 + 9790 = 16700\n\nFINAL: 16700"
+    },
+    "longctx-5-4": {
+     "family": "longctx",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 208,
+     "extracted": "15020",
+     "text": "Nadia Osei leads project Willow (note 204). Willow was folded into the Pioneer program (note 53). Pioneer reports under budget line K89 (note 52). K89 carries the amount posted at desk E6 (note 223), which is 7710 units (note 4).\n\nAmara Diallo leads project Xenon (note 242). Xenon was folded into the Beacon program (note 35). Beacon reports under budget line R33 (note 248). R33 carries the amount posted at desk W8 (note 73), which is 7310 units (note 44).\n\nSum: 7710 + 7310 = 15020\n\nFINAL: 15020"
+    },
+    "casework-1-0": {
+     "family": "casework",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": 62,
+     "extracted": null,
+     "text": "Step 1: Base 7700 is entirely within the first slice (\u226414000).\n- 7700 \u00d7 10 = 77000; 77000 // 100 = 770\n- Other slices: 0\n"
+    },
+    "casework-1-1": {
+     "family": "casework",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": 66,
+     "extracted": null,
+     "text": "Step 1: Slices on base 8800\n- First 6000 at 18%: 6000 \u00d7 18 = 108000 \u2192 \u00f7100 = 1080\n- 6000\u20137000 (1000 units) at 20"
+    },
+    "casework-2-2": {
+     "family": "casework",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": 125,
+     "extracted": null,
+     "text": "Step 1: Slices\n- First 8000 at 11%: 8000 \u00d7 11 = 88000 \u2192 880\n- 8000 to 16000 (8000 units) at 27%: 8000 \u00d7 27 = 216000 \u2192 2160\n- 16000 to 16800 (800 units) at 8%: 800 \u00d7 8 = 6400 \u2192 64\n- Above 17000: none\n\nSubtot"
+    },
+    "casework-2-3": {
+     "family": "casework",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": 87,
+     "extracted": null,
+     "text": "Step 1: Slices on 12800\n- First 2000 at 18%: 2000\u00d718 = 36000 \u2192 360\n- 2000\u20137000 (5000) at 20%: 5000\u00d720 = 100000 \u2192 1000\n- 7000\u201310000 (3000) at 14"
+    },
+    "casework-3-4": {
+     "family": "casework",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": 66,
+     "extracted": null,
+     "text": "Step 1: Slices on base 19100\n- First 14000 at 18%: 14000\u00d718 = 252000 \u2192 /100 = 2520\n- 14000\u201315000 (1000 units) at 6%: 1"
+    },
+    "casework-3-5": {
+     "family": "casework",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": 63,
+     "extracted": null,
+     "text": "Step 1: Base 2000 falls entirely in the first slice.\n2000 \u00d7 27 = 54000; 54000 // 100 = 540. Total = 540.\n\nStep 2: Class gam"
+    },
+    "tableqa-1-0": {
+     "family": "tableqa",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 217,
+     "extracted": "1696",
+     "text": "Departments on floor \u2265 4: Research (5), Logistics (6).\nBoth have an active project (Pinnacle-34 for Research, Zephyr-79 for Logistics).\n\nEmployees in Research or Logistics who joined strictly before 2022:\n- Priya Nair (Logistics, 2020): 12 \u00d7 20 = 240\n- Henrik Dahl (Research, 2019): 28 \u00d7 52 = 1456\n\nExcluded: Viktor Lang (2024), Talia Rosen (2022), Kenji Mori (2024), Lena Vogel (2022).\n\nTotal: 240 + 1456 = 1696\n\nFINAL: 1696"
+    },
+    "tableqa-4-3": {
+     "family": "tableqa",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 195,
+     "extracted": "3880",
+     "text": "Departments on floor \u2265 4: only Support (floor 4).\nSupport has an active project: Xenon-79 \u2192 qualifies.\n\nSupport employees who joined before 2022:\n- Ivo Petrov (2021): 24 \u00d7 87 = 2088\n- Viktor Lang (2020): 31 \u00d7 47 = 1457\n- Omar Haddad (2021): 5 \u00d7 67 = 335\n\n(Cormac Doyle 2024 and Ilsa Brandt 2024 are excluded.)\n\nSum: 2088 + 1457 + 335 = 3880\n\nFINAL: 3880"
+    },
+    "tableqa-3-2": {
+     "family": "tableqa",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 323,
+     "extracted": "3367",
+     "text": "Departments on floor \u2265 4: Support (4), Research (6), Design (4).\n\nActive projects: Krait-88 (Support), Lumen-29 (Design), Fjord-14 (Support). Research has only Zenith-11 (paused) \u2192 excluded.\n\nQualifying departments: Support, Design.\n\nEmployees in Support or Design who joined before 2022:\n- 102 Bruno Vidal, Design, 2019: 14 \u00d7 85 = 1190\n- 108 Casper Holm, Design, 2020: 5 \u00d7 67 = 335\n- 116 Dina Waheed, Design, 2020: 34 \u00d7 48 = 1632\n- 117 Greta Hoffman, Design, 2019: 10 \u00d7 21 = 210\n\nSupport employees all joined 2022 or later (2026, 2025, 2022, 2026, 2024, 2023) \u2192 none qualify.\n\nSum: 1190 + 335 + 1632 + 210 = 3367\n\nFINAL: 3367"
+    },
+    "tableqa-2-1": {
+     "family": "tableqa",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 351,
+     "extracted": "1460",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 3:** Compliance (3), Ops (6), Design (3).\n\n**Step 2 \u2014 Departments with an 'active' project:** Compliance (Meridian-29), Support (Zephyr-83).\n\n**Step 3 \u2014 Intersection:** Compliance only.\n\n**Step 4 \u2014 Compliance employees who joined before 2024:**\n- Ines Ferreira (2022): 27 \u00d7 30 = 810\n- Nadia Osei (2019): 13 \u00d7 50 = 650\n\n**Total:** 810 + 650 = 1460\n\nFINAL: 1460"
+    },
+    "repobug-1-1": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 37,
+     "extracted": "f2",
+     "text": "f2's docstring says x is scaled by 7, but the body multiplies by 9.\n\nFINAL: f2"
+    },
+    "repobug-1-0": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 35,
+     "extracted": "f2",
+     "text": "f2's docstring says multiply by 7, but the body multiplies by 10.\n\nFINAL: f2"
+    },
+    "repobug-2-2": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 36,
+     "extracted": "f1",
+     "text": "f1's docstring says \"x times 8 plus 18\", but the body uses 28.\n\nFINAL: f1"
+    },
+    "tableqa-5-4": {
+     "family": "tableqa",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 923,
+     "extracted": "6513",
+     "text": "**Step 1 \u2013 Departments on floor \u2265 4:** Research (5), Support (5), Logistics (5), Ops (4).\n\n**Step 2 \u2013 Which of these have an 'active' project?**\n- Research: Delta-15, Zephyr-50 \u2192 yes\n- Logistics: Xenon-83 \u2192 yes\n- Support: all wrapped \u2192 no\n- Ops: all wrapped \u2192 no\n\nQualifying departments: **Research, Logistics**.\n\n**Step 3 \u2013 Employees in those departments who joined before 2025:**\n\nResearch:\n- Omar Haddad (2021): 22 \u00d7 47 = 1034\n- Dario Quint (2021): 6 \u00d7 32 = 192\n- Lena Vogel (2024): 26 \u00d7 69 = 1794\n- Priya Nair (2023): 19 \u00d7 46 = 874\n- Ilsa Brandt (2022): 15 \u00d7 23 = 345\n- (Excluded: Amara Diallo 2026, Nadia Osei 2025)\n\nLogistics:\n- Casper Holm (2023): 7 \u00d7 32 = 224\n- Yusuf Kaan (2020): 15 \u00d7 20 = 300\n- Greta Hoffman (2022): 14 \u00d7 74 = 1036\n- Selin Aydin (2020): 14 \u00d7 51 = 714\n- (Excluded: Anders Berg 2025)\n\n**Step 4 \u2013 Sum:**\n1034 + 192 + 1794 + 874 + 345 = 4239\n224 + 300 + 1036 + 714 = 2274\n4239 + 2274 = 6513\n\nFINAL: 6513"
+    },
+    "tableqa-6-5": {
+     "family": "tableqa",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 890,
+     "extracted": "9552",
+     "text": "**Step 1 \u2013 Departments on floor \u2265 3:** Research (4), Design (4), Ops (6), Field (5), Support (5).\n\n**Step 2 \u2013 Which of these have an active project?**\n- Research: Krait-26 (paused), Vertex-63 (paused) \u2192 no\n- Design: Indigo-50 (active), Talus-74 (active) \u2192 yes\n- Ops: Boreal-83 (paused) \u2192 no\n- Field: Drift-85 (active) \u2192 yes\n- Support: Juniper-31 (active), Lumen-28 (active) \u2192 yes\n\nQualifying departments: **Design, Field, Support**.\n\n**Step 3 \u2013 Employees in those departments who joined before 2023 (\u2264 2022):**\n- Design: Gustav Weber (2020): 16 \u00d7 80 = 1280\n- Support: Jana Kovac (2020): 36 \u00d7 66 = 2376\n- Field: Henrik Dahl (2020): 29 \u00d7 88 = 2552\n- Field: Amara Reyes (2021): 38 \u00d7 88 = 3344\n\n(All other employees in these departments joined 2024\u20132026 and are excluded.)\n\n**Step 4 \u2013 Total:** 1280 + 2376 + 2552 + 3344 = 9552\n\nFINAL: 9552"
+    },
+    "repobug-2-3": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 32,
+     "extracted": "f6",
+     "text": "f6's docstring says shift up by 9, but the body adds 19.\n\nFINAL: f6"
+    },
+    "repobug-3-4": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 61,
+     "extracted": "f6",
+     "text": "f6's docstring says scale by 7 and shift up by 34, but the body computes (x * 12 + 8) % 103. All other functions match their docstrings.\n\nFINAL: f6"
+    },
+    "repobug-3-5": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 29,
+     "extracted": "f5",
+     "text": "f5's docstring says add 27, but the body adds 6.\n\nFINAL: f5"
+    },
+    "audit-1-0": {
+     "family": "audit",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 269,
+     "extracted": "2, 9",
+     "text": "Checking each requirement:\n\n1. replicas 3 in [2,6] \u2014 OK\n2. region sa-east not in allowed list \u2014 VIOLATED\n3. tier is dev, not prod \u2014 OK (not applicable)\n4. cpu 9 \u2265 2\u00d73=6 \u2014 OK\n5. mem_gb 36 \u2265 4\u00d79=36 \u2014 OK\n6. window_start 0 in [0,5] \u2014 OK\n7. owner_tag true \u2014 OK\n8. log_days 93 \u2265 30 \u2014 OK\n9. tls 1.1 not 1.2/1.3 \u2014 VIOLATED\n10. autoscale_max 10 > 3 \u2014 OK\n11. canary_pct 24 \u2264 25 \u2014 OK\n12. tier dev, replicas 3 \u2264 3 \u2014 OK\n\nFINAL: 2, 9"
+    },
+    "audit-2-1": {
+     "family": "audit",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 328,
+     "extracted": "5, 11, 14",
+     "text": "Checking each requirement:\n\n1. replicas=2, in [2,6] \u2192 OK\n2. region us-east is allowed \u2192 OK\n3. tier is dev, not prod \u2192 OK (not applicable)\n4. cpu=25 \u2265 2\u00d72=4 \u2192 OK\n5. mem_gb=6; needs \u2265 4\u00d725=100 or \u2265 32 \u2192 6 fails both \u2192 VIOLATED\n6. window_start=5, within 0\u20135 inclusive \u2192 OK\n7. owner_tag true \u2192 OK\n8. log_days=57 \u2265 30 \u2192 OK\n9. tls 1.2 \u2192 OK\n10. autoscale_max=19 > 2 \u2192 OK\n11. canary_pct=42 > 25 \u2192 VIOLATED\n12. tier dev, replicas=2 \u2264 3 \u2192 OK\n13. region doesn't start with 'eu-' \u2192 OK (not applicable)\n14. backups enabled, window_start=5 > 4 \u2192 VIOLATED\n\nFINAL: 5, 11, 14"
+    },
+    "audit-3-2": {
+     "family": "audit",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 360,
+     "extracted": "1, 2, 6, 9, 11, 14",
+     "text": "Checking each requirement:\n\n1. replicas 8 \u2014 not between 2 and 6 \u2192 VIOLATED\n2. region me-central \u2014 not in allowed list \u2192 VIOLATED\n3. tier prod, backups true \u2192 OK\n4. cpu 17 \u2265 2\u00d78=16 \u2192 OK\n5. mem 45 \u2265 32 \u2192 OK\n6. window_start 21 \u2014 not in 0\u20135 \u2192 VIOLATED\n7. owner_tag true \u2192 OK\n8. log_days 31 \u2265 30 \u2192 OK\n9. TLS 1.1 \u2192 VIOLATED\n10. autoscale_max 13 > 8 \u2192 OK\n11. canary_pct 49 > 25 \u2192 VIOLATED\n12. tier not dev \u2192 OK\n13. region doesn't start with 'eu-' \u2192 OK\n14. backups enabled, window 21 > 4 \u2192 VIOLATED\n15. autoscale_max 13 > 10, cpu 17 \u2265 8 \u2192 OK\n16. canary 49 > 0, tier is prod (not dev) \u2192 OK\n\nFINAL: 1, 2, 6, 9, 11, 14"
+    },
+    "audit-4-3": {
+     "family": "audit",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 418,
+     "extracted": "3, 5, 6, 8, 11, 18",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas=5, between 2 and 6 \u2192 OK\n2. region=us-east, in list \u2192 OK\n3. tier=prod, backups=false \u2192 VIOLATED\n4. cpu=27 \u2265 2\u00d75=10 \u2192 OK\n5. mem_gb=16; needs \u2265 4\u00d727=108 or \u2265 32 \u2192 16 fails both \u2192 VIOLATED\n6. window_start=16, must be 0\u20135 \u2192 VIOLATED\n7. owner_tag=true \u2192 OK\n8. log_days=22 < 30 \u2192 VIOLATED\n9. tls=1.2 \u2192 OK\n10. autoscale_max=9 > 5 \u2192 OK\n11. canary_pct=39 > 25 \u2192 VIOLATED\n12. tier is not dev \u2192 N/A, OK\n13. region doesn't start with 'eu-' \u2192 OK\n14. backups not enabled \u2192 OK\n15. autoscale_max=9 does not exceed 10 \u2192 OK\n16. canary_pct>0, tier=prod (not dev) \u2192 OK\n17. mem_gb=16 \u2264 48 \u2192 OK\n18. tier=prod, tls=1.2 \u2260 1.3 \u2192 VIOLATED\n\nFINAL: 3, 5, 6, 8, 11, 18"
+    },
+    "audit-5-4": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 442,
+     "extracted": "6, 11, 14, 18",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas 5 in [2,6] \u2014 OK\n2. region eu-north allowed \u2014 OK\n3. tier prod, backups true \u2014 OK\n4. cpu 15 \u2265 2\u00d75=10 \u2014 OK\n5. mem_gb 37 \u2265 60? No. \u2265 32? Yes \u2014 OK\n6. window_start 11, must be 0\u20135 \u2014 VIOLATED\n7. owner_tag true \u2014 OK\n8. log_days 76 \u2265 30 \u2014 OK\n9. tls 1.2 \u2014 OK\n10. autoscale_max 8 > 5 \u2014 OK\n11. canary_pct 34 > 25 \u2014 VIOLATED\n12. tier not dev \u2014 N/A, OK\n13. eu- region, log_days 76 \u2265 45 \u2014 OK\n14. backups enabled, window_start 11 > 4 \u2014 VIOLATED\n15. autoscale_max 8 \u2264 10 \u2014 N/A, OK\n16. canary > 0, tier prod (not dev) \u2014 OK\n17. mem_gb 37 \u2264 48 \u2014 OK\n18. tier prod, TLS 1.2 \u2260 1.3 \u2014 VIOLATED\n19. 5\u00d715=75 \u2264 120 \u2014 OK\n20. owner tag present \u2014 N/A, OK\n\nFINAL: 6, 11, 14, 18"
+    },
+    "audit-5-5": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 459,
+     "extracted": "1, 5, 9, 11, 14",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas=1, not in [2,6] \u2192 VIOLATED\n2. region ap-south is allowed \u2192 OK\n3. tier is staging, not prod \u2192 OK (not applicable)\n4. cpu=14 \u2265 2\u00d71=2 \u2192 OK\n5. mem_gb=9; needs \u2265 4\u00d714=56 or \u2265 32 \u2192 9 fails both \u2192 VIOLATED\n6. window_start=5, within 0\u20135 inclusive \u2192 OK\n7. owner_tag present \u2192 OK\n8. log_days=30 \u2265 30 \u2192 OK\n9. tls=1.1, not 1.2/1.3 \u2192 VIOLATED\n10. autoscale_max=11 > 1 \u2192 OK\n11. canary_pct=45 > 25 \u2192 VIOLATED\n12. tier not dev \u2192 OK\n13. region doesn't start with 'eu-' \u2192 OK\n14. backups enabled, window_start=5 > 4 \u2192 VIOLATED\n15. autoscale_max=11 > 10, cpu=14 \u2265 8 \u2192 OK\n16. canary_pct>0, tier is staging (not dev) \u2192 OK\n17. mem_gb=9 \u2264 48 \u2192 OK\n18. tier not prod \u2192 OK\n19. 1\u00d714=14 \u2264 120 \u2192 OK\n20. owner tag present \u2192 OK\n\nFINAL: 1, 5, 9, 11, 14"
+    },
+    "inv-8-0": {
+     "family": "inv",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1738,
+     "extracted": "36758088",
+     "text": "Working backwards from 86336348:\n\n- Undo step 8 (reverse): 84363368\n- Undo step 7 (swap positions 2 and 7): 86363348\n- Undo step 6 (swap positions 7 and 8): 86363384\n- Undo step 5 (d \u2192 9\u2212d is its own inverse): 13636615\n- Undo step 4 (subtract 59215981 mod 10^8): 13636615 \u2212 59215981 + 100000000 = 54420634\n- Undo step 3 (rotate right by 6 = rotate left by 2): 42063454\n- Undo step 2 (reverse): 45436024\n- Undo step 1 (solve 23x \u2261 45436024 mod 10^8): x = 36758088  \n  Check: 36758088 \u00d7 23 = 845436024 \u2192 last 8 digits 45436024 \u2713\n\nFINAL: 36758088"
+    },
+    "inv-14-1": {
+     "family": "inv",
+     "rung": 14,
+     "correct": false,
+     "completion_tokens": 3166,
+     "extracted": "63585095",
+     "text": "Working backwards through the inverse of each step:\n\n- Final: 21804772\n- Undo 14 (rotate right 5): 04772218\n- Undo 13 (reverse): 81227740\n- Undo 12 (rotate right 5): 27740812\n- Undo 11 (swap 2,3): 72740812\n- Undo 10 (rotate right 7): 27408127\n- Undo 9 (rotate right 7): 74081272\n- Undo 8 (swap 1,6): 24081772\n- Undo 7 (\u00d727\u207b\u00b9 = \u00d762962963 mod 10\u2078): 19410436 (check: 27\u00d719410436 = 524081772 \u2713)\n- Undo 6 (d \u2192 7d mod 10): 73870812\n- Undo 5 (\u00d77\u207b\u00b9 = \u00d742857143 mod 10\u2078): 53410116 (check: 7\u00d753410116 = 373870812 \u2713)\n- Undo 4 (swap 1,7): 13410156\n- Undo 3 (swap 3,8): 13610154\n- Undo 2 (reverse): 45101631\n- Undo 1 (d \u2192 7(d\u22126) mod 10): 63585095\n\nFINAL: 63585095"
+    },
+    "inv-22-2": {
+     "family": "inv",
+     "rung": 22,
+     "correct": true,
+     "completion_tokens": 4381,
+     "extracted": "37788826",
+     "text": "**Working backwards from 13395583:**\n\n- Undo 22 (\u221256925703): 13395583 \u2212 56925703 \u2261 56469880\n- Undo 21 (\u221244843911): 11625969\n- Undo 20 (rotate right 5): 25969116\n- Undo 19 (reverse): 61196952\n- Undo 18 (rotate right 2): 52611969\n- Undo 17 (d \u2192 3(d\u22128) mod 10): 12499343\n- Undo 16 (d \u2192 9d mod 10): 98611767\n- Undo 15 (\u00f721 mod 10\u2078): 33267227 (check: 33267227\u00b721 = 698611767 \u2713)\n- Undo 14 (d \u2192 7(d\u22123) mod 10): 00318338\n- Undo 13 (\u00f723 mod 10\u2078): 60883406 (check: 60883406\u00b723 = 1400318338 \u2713)\n- Undo 12 (rotate right 5): 83406608\n- Undo 11 (reverse): 80660438\n- Undo 10 (\u22123602796): 77057642\n- Undo 9 (reverse): 24675077\n- Undo 8 (reverse): 77057642\n- Undo 7 (\u00f713 mod 10\u2078): 29004434 (check: 29004434\u00b713 = 377057642 \u2713)\n- Undo 6 (\u221287067098): 41937336\n- Undo 5 (d \u2192 3(d\u22124) mod 10): 01579776\n- Undo 4 (\u00f727 mod 10\u2078): 77836288 (check: 77836288\u00b727 = 2101579776 \u2713)\n- Undo 3 (reverse): 88263877\n- Undo 2 (swap positions 6 and 8): 88263778\n- Undo 1 (rotate right 4): 37788826\n\nFINAL: 37788826"
+    },
+    "inv-32-3": {
+     "family": "inv",
+     "rung": 32,
+     "correct": true,
+     "completion_tokens": 5110,
+     "extracted": "97097923",
+     "text": "**Working backwards** (inverting each step from the final value 35265817):\n\n- 32 (undo rotate left 1): 73526581\n- 31 (undo rotate left 4): 65817352\n- 30 (undo d\u21927d+2, i.e. d=3(d'\u22122)): 29875390\n- 29 (undo rotate left 3): 39029875\n- 28 (reverse): 57892093\n- 27 (undo rotate left 2): 93578920\n- 26 (undo rotate left 7): 35789209\n- 25 (undo rotate left 6): 78920935\n- 24 (undo d\u21927d+7): 03659684\n- 23 (reverse): 48695630\n- 22 (swap pos 3,5): 48596630\n- 21 (undo d\u21929d+6, i.e. d=6\u2212d'): 28170036\n- 20 (undo rotate left 6): 17003628\n- 19 (divide by 27 mod 10^8): 00629764 (check: 629764\u00b727 = 17003628)\n- 18 (swap pos 1,3): 60029764\n- 17 (subtract 43300806): 16728958\n- 16 (reverse): 85982761\n- 15 (undo d\u21923d, i.e. d=7d'): 65364927\n- 14 (undo d\u21927d+1): 52659438\n- 13 (undo rotate left 5): 59438526\n- 12 (divide by 7): 08491218 (check: 8491218\u00b77 = 59438526)\n- 11 (subtract 62023864): 46467354\n- 10 (undo d\u21927d+9): 51514285\n- 9 (subtract 81305949): 70208336\n- 8 (undo rotate left 3): 33670208\n- 7 (undo d\u21927d+6): 11032826\n- 6 (subtract 30195620): 80837206\n- 5 (subtract 7862983): 72974223\n- 4 (subtract 52659685): 20314538\n- 3 (undo d\u21929d+9, i.e. d=9\u2212d'): 79685461\n- 2 (divide by 7 mod 10^8): 97097923 (check: 97097923\u00b77 = 679685461 \u2192 79685461)\n- 1 (swap pos 1,6 \u2014 both are 9): 97097923\n\nFINAL: 97097923"
+    },
+    "longctx-7-w20": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 474,
+     "extracted": "8700",
+     "text": "**Chain 1 \u2013 Lena Vogel**\n- Lena Vogel leads project Rampart (note 130).\n- Rampart was folded into the Dynamo program (note 626).\n- Dynamo reports under budget line K51 (note 527).\n- K51 carries the amount posted at desk E6 (note 351).\n- Desk E6 amount = 6540 units (note 465).\n\n**Chain 2 \u2013 Amara Diallo**\n- Amara Diallo leads project Vertex (note 613).\n- Vertex was folded into the Compass program (note 133).\n- Compass reports under budget line R20 (note 183).\n- R20 carries the amount posted at desk W5 (note 159).\n- Desk W5 amount = 2160 units (note 329).\n\n**Sum:** 6540 + 2160 = 8700\n\nFINAL: 8700"
+    },
+    "toolsim-4-w20": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-7-w21": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 466,
+     "extracted": "9630",
+     "text": "**Chain for Lena Vogel:**\n- Lena Vogel leads project Krait (note 217)\n- Krait was folded into the Lantern program (note 542)\n- Lantern reports under budget line K29 (note 616)\n- K29 carries the amount posted at desk E3 (note 225)\n- Desk E3 = 1830 units (note 69)\n\n**Chain for Dina Waheed:**\n- Dina Waheed heads project Pinnacle (note 125)\n- Pinnacle was folded into the Ironwood program (note 517)\n- Ironwood reports under budget line R47 (note 363)\n- R47 carries the amount posted at desk W7 (note 87)\n- Desk W7 = 7800 units (note 410)\n\nSum: 1830 + 7800 = 9630\n\nFINAL: 9630"
+    },
+    "toolsim-4-w21": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-8-w22": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 549,
+     "extracted": "15960",
+     "text": "**Chain 1 (Henrik Dahl):**\n- Henrik Dahl heads project Rampart (note 150)\n- Rampart was folded into the Ironwood program (note 923)\n- Ironwood reports under budget line K84 (note 87)\n- K84 carries the amount posted at desk E7 (note 566)\n- Desk E7 matches ledger row G762 (note 694)\n- G762 shows 9400 units (note 575)\n\n**Chain 2 (Ivo Petrov):**\n- Ivo Petrov heads project Delta (note 752)\n- Delta was folded into the Quarry program (note 940)\n- Quarry reports under budget line R13 (note 534)\n- R13 carries the amount posted at desk W5 (note 203)\n- Desk W5 matches ledger row H988 (note 341)\n- H988 shows 6560 units (note 595)\n\nSum: 9400 + 6560 = 15960\n\nFINAL: 15960"
+    },
+    "casework-4-w20": {
+     "family": "casework",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": 33,
+     "extracted": null,
+     "text": "Step 1: Base 5000 is entirely in the first slice: 5000 \u00d7 24 = 120000"
+    },
+    "casework-4-w21": {
+     "family": "casework",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": 61,
+     "extracted": null,
+     "text": "Step 1: Slices on 19100\n- First 8000 at 29%: 8000\u00d729 = 232000 \u2192 2320\n- 8000\u20139000 (1000) at 20%: 20000 "
+    },
+    "casework-5-w22": {
+     "family": "casework",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": 66,
+     "extracted": null,
+     "text": "Step 1: Slice levies on 12700\n- First 2000 at 20%: 2000\u00d720 = 40000 \u2192 400\n- 2001\u20135000 (3000 units) at 21%: 3000\u00d721 "
+    },
+    "longctx-8-w23": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 555,
+     "extracted": "18340",
+     "text": "**Chain 1 (Milan Novak):**\n- Milan Novak leads project Nimbus (note 555)\n- Nimbus was folded into the Compass program (note 503)\n- Compass reports under budget line K87 (note 854)\n- K87 carries the amount posted at desk E4 (note 314)\n- Desk E4 matches ledger row G595 (note 1097)\n- G595 shows 9080 units (note 893)\n\n**Chain 2 (Petra Lindqvist):**\n- Petra Lindqvist leads project Willow (note 789)\n- Willow was folded into the Lantern program (note 1050)\n- Lantern reports under budget line R70 (note 1070)\n- R70 carries the amount posted at desk W5 (note 145)\n- Desk W5 matches ledger row H551 (note 512)\n- H551 shows 9260 units (note 478)\n\n**Sum:** 9080 + 9260 = 18340\n\nFINAL: 18340"
+    },
+    "casework-5-w23": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 870,
+     "extracted": "4563",
+     "text": "**Step 1 \u2013 Sliced levy on 17300**\n- First 10000 \u00d7 27 = 270000 \u2192 2700\n- 10000\u201314000: 4000 \u00d7 26 = 104000 \u2192 1040\n- 14000\u201316000: 2000 \u00d7 25 = 50000 \u2192 500\n- Above 16000: 1300 \u00d7 26 = 33800 \u2192 338\n- Total: 2700 + 1040 + 500 + 338 = **4578**\n\n**Step 2 \u2013 Surcharge:** class is beta \u2192 none. Total 4578.\n\n**Step 3 \u2013 Relief credit:** base exceeds 12000 by 5300 \u2192 53 full hundreds \u2192 reduction 53 \u00d7 7 = 371. Credit = 607 \u2212 371 = 236. Total = 4578 \u2212 236 = **4342**.\n\n**Step 4 \u2013 Surtax:** excess over 1800 = 2542; 2542 \u00d7 5 = 12710 \u2192 127. Total = **4469**.\n\n**Step 5 \u2013 Second surtax:** excess over 1750 = 2719; 2719 \u00d7 3 = 8157 \u2192 81. Total = **4550**.\n\n**Step 6 \u2013 Oddity levy:** 4550 \u00f7 7 = 650 exactly \u2192 add 13. Total = **4563**.\n\n**Step 7 \u2013 Cap:** 37% of 17300 = 640100 \u2192 6401. 4563 \u2264 6401, so no cap applies.\n\nFINAL: 4563"
+    },
+    "toolsim-5-w22": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-7-w20": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1314,
+     "extracted": "10424",
+     "text": "**Step 1 \u2013 Department filter**\nAll departments are on floor \u2265 3. Departments with an active project: Logistics, Research, Compliance, Design, Ops. Departments with a paused project: Logistics, Design, Compliance \u2192 excluded.\nRemaining: **Research, Ops**.\n\n**Step 2 \u2013 Employee filter** (rate \u2265 43, not a department head, joined before 2023)\n\nResearch:\n- Jonas Meyer \u2013 head, excluded\n- Holm Casper \u2013 head, excluded\n- Talia Rosen (2024), Petra Lindqvist (2026) \u2013 joined too late\n- Ines Ferreira, Marisol Vega \u2013 rate < 43\n- Cormac Omar: 15 \u00d7 84 = 1260 \u2713\n\nOps:\n- Priya Nair: 35 \u00d7 75 = 2625 \u2713\n- Henrik Dahl: 15 \u00d7 53 = 795 \u2713\n- Nora Lindgren: 8 \u00d7 43 = 344 \u2713\n- Costa Ivo: 32 \u00d7 60 = 1920 \u2713\n- Nair Reyes: 30 \u00d7 53 = 1590 \u2713\n- Vogel Waheed: 35 \u00d7 54 = 1890 \u2713\n- Excluded: Elio Sartori (2026), Jana Kovac (2023), Bruno Vidal (2024), Haddad Lindgren (2026), Anders Berg & Viktor Dahl (rate < 43)\n\n**Step 3 \u2013 Sum**\n1260 + 2625 + 795 + 344 + 1920 + 1590 + 1890 = 10424\n\nFINAL: 10424"
+    },
+    "tableqa-8-w22": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1217,
+     "extracted": "9157",
+     "text": "**Step 1 \u2013 Departments on floor \u2265 3:** Logistics (4), Field (4).\n\n**Step 2 \u2013 Must have an active project:**\n- Logistics: Cobalt-82 (active) \u2713\n- Field: Cinder-31 (paused), Nimbus-53 (paused) \u2014 no active \u2717\n\n**Step 3 \u2013 Exclude if any paused project:** Logistics has only Cobalt-82 (active) \u2192 stays.\n\n**Step 4 \u2013 Logistics employees with rate \u2265 54, not a department head, joined before 2025:**\n- 121 Anders Berg: 30 \u00d7 66 = 1980\n- 130 Ilsa Brandt: 22 \u00d7 81 = 1782\n- 131 Petra Lindqvist: 23 \u00d7 89 = 2047\n- 136 Ivo Haddad: 33 \u00d7 54 = 1782\n- 187 Dario Novak: 27 \u00d7 58 = 1566\n\nExcluded: Marisol Vega and Solano Solano (heads), Bruno Vidal / Osei Rosen / Omar Rustam / Lang Costa (joined \u2265 2025), Rustam Aliyev (rate 53), and all others with rate < 54.\n\n**Total:** 1980 + 1782 + 2047 + 1782 + 1566 = 9157\n\nFINAL: 9157"
+    },
+    "repobug-4-w20": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 66,
+     "extracted": "f2",
+     "text": "f2's docstring says \"Add 35 to 6 copies of x\" which means x*6 + 35, but the body computes x*35 + 6. All other functions match their docstrings.\n\nFINAL: f2"
+    },
+    "tableqa-7-w21": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1508,
+     "extracted": "9618",
+     "text": "**Step 1 \u2013 Departments on floor \u2265 2:** Compliance, Ops, Design, Research, Logistics, Support (Field is floor 1, excluded).\n\n**Step 2 \u2013 Has an active project:** Ops (Meridian-51), Support (Sable-17, Cinder-79), Compliance (Umber-66). Research, Design, Logistics have none.\n\n**Step 3 \u2013 Exclude departments with a paused project:** Ops has Cobalt-87 (paused) \u2192 excluded.\n\n**Remaining departments:** Support, Compliance.\n\n**Step 4 \u2013 Employees with rate \u2265 42, not a department head, joined before 2025:**\n\nSupport:\n- Milan Novak (4 \u00d7 76, 2023) = 304\n- Livia Costa (30 \u00d7 67, 2022) = 2010\n- Talia Rosen (34 \u00d7 67, 2024) = 2278\n- (Lena Vogel, Marisol Vega, Milan Yusuf joined 2026; Omar Haddad 2025; Priya Nair rate 31 \u2014 all excluded)\n\nCompliance:\n- Viktor Lang (35 \u00d7 70, 2024) = 2450\n- Weber Bea (26 \u00d7 79, 2020) = 2054\n- Marchetti Selin (6 \u00d7 87, 2019) = 522\n- (Henrik Dahl, Diallo Ferreira, Osei Doyle are heads; Gustav Weber, Henrik Vega, Jonas Kaan, Nora Jana have rate < 42; Dina Waheed joined 2026 \u2014 all excluded)\n\n**Sum:** 304 + 2010 + 2278 + 2450 + 2054 + 522 = 9618\n\nFINAL: 9618"
+    },
+    "repobug-5-w22": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 30,
+     "extracted": "f9",
+     "text": "f9's docstring says \"add 10\" but the body adds 11.\n\nFINAL: f9"
+    },
+    "repobug-4-w21": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 92,
+     "extracted": "f10",
+     "text": "f10's docstring says \"Add 23 to 6 copies of x\" \u2192 (x * 6 + 23) % 103, but the body computes (x * 23 + 6) % 103, swapping the multiplier and the additive constant. All other functions match their docstrings.\n\nFINAL: f10"
+    },
+    "tableqa-8-w23": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1090,
+     "extracted": "7224",
+     "text": "**Step 1 \u2013 Departments on floor \u2265 3:** Compliance (6), Field (3), Logistics (3), Design (4), Support (6), Ops (4). Research (floor 1) is out.\n\n**Step 2 \u2013 Must have an 'active' project:** Compliance (Xenon-16, Zephyr-27), Support (Vertex-91), Ops (Pinnacle-80).\n\n**Step 3 \u2013 Exclude those with a 'paused' project:**\n- Compliance has Delta-83 (paused) \u2192 excluded\n- Support has Drift-39 (paused) \u2192 excluded\n- Ops has only Pinnacle-80 (active) \u2192 remains\n\nOnly **Ops** qualifies.\n\n**Step 4 \u2013 Ops employees, filters (rate \u2265 31, not a department head, joined before 2025):**\n- 111 Jana Kovac \u2013 joined 2025 \u2192 excluded\n- 119 Omar Haddad \u2013 10 \u00d7 57 = 570\n- 124 Ivo Petrov \u2013 34 \u00d7 42 = 1428\n- 145 Petra Marisol \u2013 22 \u00d7 68 = 1496\n- 149 Vogel Tomas \u2013 head of Logistics \u2192 excluded\n- 150 Weber Costa \u2013 joined 2026 \u2192 excluded\n- 164 Costa Quint \u2013 head of Support \u2192 excluded\n- 172 Meyer Petra \u2013 12 \u00d7 39 = 468\n- 174 Sartori Rosen \u2013 18 \u00d7 79 = 1422\n- 179 Rustam Dahl \u2013 23 \u00d7 80 = 1840\n\n**Sum:** 570 + 1428 + 1496 + 468 + 1422 + 1840 = 7224\n\nFINAL: 7224"
+    },
+    "repobug-5-w23": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 36,
+     "extracted": "f8",
+     "text": "f8's docstring says \"x times 7 plus 11\" but the body adds 12.\n\nFINAL: f8"
+    },
+    "toolsim-5-w23": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "audit-6-w20": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1099,
+     "extracted": "6, 7, 11, 14, 20, 23, 26",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas=2, in [2,6] \u2192 OK\n2. region eu-west allowed \u2192 OK\n3. tier is staging, not prod \u2192 OK\n4. cpu 8 \u2265 2\u00d72=4 \u2192 OK\n5. mem 41 \u2265 32 \u2192 OK\n6. window_start 9, not in [0,5] \u2192 **VIOLATED**\n7. owner_tag false \u2192 **VIOLATED**\n8. log_days 70 \u2265 30 \u2192 OK\n9. TLS 1.2 \u2192 OK\n10. autoscale_max 10 > 2 \u2192 OK\n11. canary_pct 53 > 25 \u2192 **VIOLATED**\n12. tier not dev \u2192 OK\n13. eu- region, log_days 70 \u2265 45 \u2192 OK\n14. backups enabled, window 9 > 4 \u2192 **VIOLATED**\n15. autoscale_max 10 does not exceed 10 \u2192 OK\n16. canary > 0, tier staging (not dev) \u2192 OK\n17. mem 41 \u2264 48 \u2192 OK\n18. tier not prod \u2192 OK\n19. 2\u00d78=16 \u2264 120 \u2192 OK\n20. owner tag missing but tier is staging, not dev \u2192 **VIOLATED**\n21. mem 41 > 32, backups enabled \u2192 OK\n22. staging, log_days 70 is even \u2192 OK\n23. replicas 2 < 3 but canary_pct 53 \u2260 0 \u2192 **VIOLATED**\n24. cpu 8 \u2264 24 \u2192 OK\n25. TLS not 1.1 \u2192 OK\n26. autoscale_max 10 > 4\u00d72=8 \u2192 **VIOLATED**\n\nFINAL: 6, 7, 11, 14, 20, 23, 26"
+    },
+    "audit-6-w21": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1107,
+     "extracted": "2, 5, 10, 11, 19, 22, 24",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas=5 in [2,6] \u2192 OK\n2. region=sa-east not in allowed list \u2192 **VIOLATED**\n3. tier is staging, not prod \u2192 N/A, OK\n4. cpu 26 \u2265 2\u00d75=10 \u2192 OK\n5. mem_gb 30: not \u2265 4\u00d726=104 and not \u2265 32 \u2192 **VIOLATED**\n6. window_start 4 in [0,5] \u2192 OK\n7. owner_tag present \u2192 OK\n8. log_days 65 \u2265 30 \u2192 OK\n9. TLS 1.3 \u2192 OK\n10. autoscale_max 4 > 5? No \u2192 **VIOLATED**\n11. canary_pct 51 > 25 \u2192 **VIOLATED**\n12. tier not dev \u2192 OK\n13. region doesn't start with 'eu-' \u2192 OK\n14. backups enabled, window 4 \u2264 4 \u2192 OK\n15. autoscale_max 4 \u2264 10 \u2192 OK\n16. canary > 0, tier is staging (not dev) \u2192 OK\n17. mem_gb 30 \u2264 48 \u2192 OK\n18. tier not prod \u2192 OK\n19. 5 \u00d7 26 = 130 > 120 \u2192 **VIOLATED**\n20. owner tag present \u2192 OK\n21. mem_gb 30 does not exceed 32 \u2192 OK\n22. tier staging, log_days 65 is odd \u2192 **VIOLATED**\n23. replicas 5 not fewer than 3 \u2192 OK\n24. cpu 26 > 24 \u2192 **VIOLATED**\n25. TLS is 1.3, not 1.1 \u2192 OK\n26. autoscale_max 4 \u2264 20 \u2192 OK\n\nFINAL: 2, 5, 10, 11, 19, 22, 24"
+    },
+    "audit-7-w22": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1099,
+     "extracted": "2, 6, 7, 14, 16, 28",
+     "text": "Checking each requirement against the manifest:\n\n- 1: replicas 3 \u2208 [2,6] \u2713\n- 2: region me-central not in allowed list \u2717\n- 3: tier is dev, N/A \u2713\n- 4: cpu 8 \u2265 2\u00d73=6 \u2713\n- 5: mem 39 \u2265 32 \u2713\n- 6: window_start 12 not in [0,5] \u2717\n- 7: owner_tag false \u2717\n- 8: 70 \u2265 30 \u2713\n- 9: TLS 1.2 \u2713\n- 10: 7 > 3 \u2713\n- 11: 14 \u2264 25 \u2713\n- 12: dev, replicas 3 \u2264 3 \u2713\n- 13: region not eu- \u2713\n- 14: backups enabled, window 12 > 4 \u2717\n- 15: autoscale_max 7 \u2264 10, N/A \u2713\n- 16: canary 14 > 0 and tier is dev \u2717\n- 17: 39 \u2264 48 \u2713\n- 18: not prod \u2713\n- 19: 3\u00d78=24 \u2264 120 \u2713\n- 20: owner missing, tier is dev \u2713\n- 21: mem 39 > 32, backups enabled \u2713\n- 22: not staging \u2713\n- 23: replicas = 3, not fewer \u2713\n- 24: 8 \u2264 24 \u2713\n- 25: TLS not 1.1 \u2713\n- 26: 7 \u2264 12 \u2713\n- 27: not ap-south \u2713\n- 28: canary 14 > 10 but owner tag missing \u2717\n- 29: 3+7=10 \u2264 22 \u2713\n- 30: backups enabled, N/A \u2713\n\nFINAL: 2, 6, 7, 14, 16, 28"
+    },
+    "audit-7-w23": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1198,
+     "extracted": "2, 6, 11, 14, 16, 17, 26",
+     "text": "Checking each requirement against the manifest:\n\n1. replicas=3 \u2208 [2,6] \u2014 OK\n2. region=sa-east not in allowed list \u2014 **VIOLATED**\n3. tier is dev, not prod \u2014 OK\n4. cpu=16 \u2265 2\u00d73=6 \u2014 OK\n5. mem=59 \u2265 32 \u2014 OK\n6. window_start=12 not in [0,5] \u2014 **VIOLATED**\n7. owner tag present \u2014 OK\n8. log_days=108 \u2265 30 \u2014 OK\n9. TLS 1.3 \u2014 OK\n10. autoscale_max=15 > 3 \u2014 OK\n11. canary_pct=45 > 25 \u2014 **VIOLATED**\n12. dev with replicas=3 \u2264 3 \u2014 OK\n13. region doesn't start with eu- \u2014 OK\n14. backups enabled but window_start=12 > 4 \u2014 **VIOLATED**\n15. autoscale_max=15 > 10, cpu=16 \u2265 8 \u2014 OK\n16. canary_pct=45 > 0 but tier is dev \u2014 **VIOLATED**\n17. mem_gb=59 > 48 \u2014 **VIOLATED**\n18. not prod \u2014 OK\n19. 3\u00d716=48 \u2264 120 \u2014 OK\n20. owner tag present \u2014 OK\n21. mem=59 > 32, backups enabled \u2014 OK\n22. not staging \u2014 OK\n23. replicas=3, not fewer than 3 \u2014 OK\n24. cpu=16 \u2264 24 \u2014 OK\n25. TLS is not 1.1 \u2014 OK\n26. autoscale_max=15 > 4\u00d73=12 \u2014 **VIOLATED**\n27. not ap-south \u2014 OK\n28. canary>10, owner tag present \u2014 OK\n29. 3+15=18 \u2264 22 \u2014 OK\n30. backups enabled \u2014 OK\n\nFINAL: 2, 6, 11, 14, 16, 17, 26"
+    },
+    "bigknap-1-w30": {
+     "family": "bigknap",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 4346,
+     "extracted": "1212",
+     "text": "**Approach:** Sort items by value/weight ratio and use the LP relaxation as an upper bound, then check nearby integer solutions.\n\nGreedy prefix by ratio (items 20, 11, 7, 25, 9, 1, 23, 12, 4, 21, 22, 2, 24, 28, 27, 16) uses weight 365 for value 1132; the next item (6: value 105, weight 68) doesn't fit, giving an LP bound of 1132 + 105\u00b7(55/68) \u2248 1216.85, so the optimum is \u2264 1216.\n\nBest integer solution found: take the greedy prefix but drop item 16 and add item 6:\n\nItems 20, 11, 7, 25, 9, 1, 23, 12, 4, 21, 22, 2, 24, 28, 27, 6\n- Weight: 10+14+17+12+21+8+10+33+21+29+40+41+25+40+28+68 = 417 \u2264 420\n- Value: 80+90+106+63+96+35+35+109+65+72+90+92+53+73+48+105 = 1212\n\n**Optimality check (Lagrangian with \u03bb = 105/68):** Any solution's gap from the bound 1216.85 equals \u03bb\u00b7(slack) + (positive reduced values of excluded items) + (|negative reduced values| of included items). The solution above has gap 0.29 (item 16 excluded) + 3\u00b71.544 (slack 3) \u2248 4.9. To reach 1213 the gap would need to be \u2264 3.85, but excluding any other positive-reduced-value item costs \u2265 4.76, including any negative item (e.g., item 14, cost 3.24) forces excluding \u226541 weight of high-value items, and excluding only item 16 leaves slack exactly 3. Hence no solution exceeds 1212.\n\nFINAL: 1212"
+    },
+    "bigknap-3-w32": {
+     "family": "bigknap",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 4236,
+     "extracted": "1431",
+     "text": "**Approach:** Sort items by value/weight ratio and fill greedily, then check exchanges against the LP relaxation bound.\n\nGreedy by ratio picks items 22, 8, 9, 26, 5, 2, 12, 25, 30, 18, 13, 21, 4, 15, 20, 32, 14 \u2192 weight 580, value 1417. The LP bound (fractional next item 1 at ratio 41/36) is \u22481440, so the optimum lies in [1417, 1440].\n\nImprovement: swap out item 13 (w17, v27) for item 1 (w36, v41):\n- Weight: 580 \u2212 17 + 36 = 599 \u2264 601\n- Value: 1417 \u2212 27 + 41 = 1431\n\nChecking all other exchanges (adding item 1 with 17, 29, 11, 27, 3, 28, etc., and removing the appropriate low-ratio items 14, 32, 20, 15, 21, 4, 13, 18) \u2014 none yields a value above 1431 within capacity.\n\n**Optimal set:** items 1, 2, 4, 5, 8, 9, 12, 14, 15, 18, 20, 21, 22, 25, 26, 30, 32  \nWeight = 599, Value = 1431.\n\nFINAL: 1431"
+    },
+    "inv-60-w21": {
+     "family": "inv",
+     "rung": 60,
+     "correct": true,
+     "completion_tokens": 6835,
+     "extracted": "80931354",
+     "text": "Working backwards from 31198109, inverting each step:\n\n- 60 (rot L2 \u2192 rot R2): 09311981\n- 59 (\u00f721): 33776761\n- 58 (\u00f77): 76253823\n- 57 (swap 2,4): 75263823\n- 56 (\u221244100561): 31163262\n- 55 (rot R1): 23116326\n- 54 (rot R1): 62311632\n- 53 (rot 4): 16326231\n- 52 (swap 1,6): 26326131\n- 51 (\u00f719): 43490849\n- 50 (swap 6,8): 43490948\n- 49 (reverse): 84909434\n- 48 (rot R1): 48490943\n- 47 (inverse 3d+2): 42496947\n- 46 (\u00f713): 26345919\n- 45 (\u221212027484): 14318435\n- 44 (\u221293496045): 20822390\n- 43 (\u221295586901): 25235489\n- 42 (\u00f711): 65930499\n- 41 (\u221219663917): 46266582\n- 40 (reverse): 28566264\n- 39 (\u00f73): 09522088\n- 38 (rot L1): 95220880\n- 37 (inverse 3d+6): 13228448\n- 36, 35 (reverse twice): 13228448\n- 34 (rot R3): 44813228\n- 33 (swap 2,4): 41843228\n- 32 (rot R1): 84184322\n- 31 (d\u21929\u2212d): 15815677\n- 30 (rot 4): 56771581\n- 29 (\u221271123269): 85648312\n- 28 (rot R3): 31285648\n- 27 (rot 4): 56483128\n- 26 (\u221210685987): 45797141\n- 25 (swap 3,7): 45497171\n- 24 (reverse): 17179454\n- 23 (inverse 9d+7): 60608323\n- 22 (\u221238247524): 22360799\n- 21 (\u221229100671): 93260128\n- 20 (\u221238872958): 54387170\n- 19 (rot L1): 43871705\n- 18 (rot L2): 87170543\n- 17 (\u00f721): 08912883\n- 16 (rot R1): 30891288\n- 15 (swap 2,5): 31890288\n- 14 (rot 4): 02883189\n- 13 (reverse): 98138820\n- 12 (\u221266367826): 31770994\n- 11 (inverse 3d+6): 95778116\n- 10 (rot L3): 78116957\n- 9 (swap 1,2): 87116957\n- 8 (inverse 3d+5): 14227804\n- 7 (swap 7,8): 14227840\n- 6 (swap 5,8): 14220847\n- 5 (rot R1): 71422084\n- 4 (\u221262285543): 09136541\n- 3 (inverse 9d+4): 45318903\n- 2 (reverse): 30981354\n- 1 (swap 1,4): 80931354\n\nFINAL: 80931354"
+    },
+    "inv-45-w20": {
+     "family": "inv",
+     "rung": 45,
+     "correct": true,
+     "completion_tokens": 6987,
+     "extracted": "28284741",
+     "text": "Working backwards through all 45 steps:\n\n- Step 45 (\u00f79): 76200291\n- Step 44 (\u221245335565): 30864726\n- Step 43 (d\u21927d): 10628942\n- Step 42 (rotate right 5): 28942106\n- Step 41 (rotate right 7): 89421062\n- Step 40 (reverse): 26012498\n- Step 39 (swap 4,8): 26082491\n- Step 38 (\u00f727): 15780833\n- Step 37 (reverse): 33808751\n- Step 36 (\u221222851817): 10956934\n- Step 35 (inverse of 3d+8): 14796752\n- Step 34 (\u00f713): 93445904\n- Step 33 (d\u21929d): 17665106\n- Step 32 (\u00f719): 21982374\n- Step 31 (inverse of 7d+6): 85968134\n- Step 30 (rotate right 1): 48596813\n- Step 29 (swap 1,6): 88596413\n- Step 28 (swap 5,7): 88591463\n- Step 27 (\u22125676123): 82915340\n- Step 26 (inverse of 7d+3): 57846031\n- Step 25 (\u221271028416): 86817615\n- Step 24 (swap 1,2): 68817615\n- Step 23 (reverse): 51671886\n- Step 22 (swap 5,8): 51676881\n- Step 21 (\u22123857580): 47819301\n- Step 20 (\u00f721): 73705681\n- Step 19 (swap 2,4): 70735681\n- Steps 18,17 (reverse twice): 70735681\n- Step 16 (\u221276778368): 93957313\n- Step 15 (rotate 4): 73139395\n- Step 14 (\u00f727): 21227385\n- Step 13 (reverse): 58372212\n- Step 12 (inverse of 3d+8): 90538818\n- Step 11 (rotate right 5): 38818905\n- Step 10 (swap 2,8): 35818908\n- Step 9 (rotate right 6): 81890835\n- Step 8 (\u00f713): 06299295\n- Step 7 (rotate right 5): 99295062\n- Step 6 (rotate right 5): 95062992\n- Step 5 (reverse): 29926059\n- Step 4 (rotate 4): 60592992\n- Step 3 (\u221225235125): 35357867\n- Step 2 (inverse of 7d+9): 28284714\n- Step 1 (swap 7,8): 28284741\n\nFINAL: 28284741"
+    },
+    "bigknap-2-w31": {
+     "family": "bigknap",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 4976,
+     "extracted": "1359",
+     "text": "**Approach.** Sorting items by value/weight ratio, the high\u2011ratio items (4, 9, 12, 17, 13, 8, 11, 14, 19, 7, 16, 30) have total weight 301 and value 969, leaving 286 capacity for the \"boundary\" items (22, 2, 3, 21, 28, 24, 26, 25, 1, \u2026).\n\nBest fill of the remaining 286:\n- Items 22 + 3 + 21 + 24: weight 75 + 80 + 69 + 62 = 286, value 109 + 112 + 95 + 74 = 390.\n\nAlternatives (e.g., 22+2+3+21 = weight 275, value 388; 22+3+28+2 = 283, value 385; dropping a high\u2011ratio item to fit 28 or 26) all give less. The LP relaxation bound is \u22481370, and no exchange of items improves on this packing.\n\n**Optimal set:** items 3, 4, 7, 8, 9, 11, 12, 13, 14, 16, 17, 19, 21, 22, 24, 30\n- Total weight = 587 (exactly the capacity)\n- Total value = 969 + 390 = 1359\n\nFINAL: 1359"
+    },
+    "bigknap-4-w33": {
+     "family": "bigknap",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 5305,
+     "extracted": "1557",
+     "text": "**Approach.** Sort items by value/weight ratio and fill greedily, then check for improvements using an LP (fractional) bound.\n\nGreedy by ratio takes items 26, 18, 3, 4, 32, 17, 12, 33, 8, 14, 23, 10, 9, 30, 13, 6, 27, 2 \u2192 weight 630, value 1545, with 17 unused capacity (no remaining item is that light).\n\nThe fractional LP bound (adding 17/34 of item 25) is 1567, so the optimum lies in [1545, 1567].\n\n**Improvement:** swap item 27 (w 62, v 86) for item 7 (w 77, v 98): weight 645 \u2264 647, value 1557.\n\n**Optimality check (reduced-cost argument).** Using the LP multiplier \u03bb \u2248 1.294 (item 25's ratio), each item's reduced profit is v \u2212 \u03bbw. Any feasible solution's value = \u03bb\u00b7(weight) + \u03a3(reduced profits), so loss below 1567 = \u03bb\u00b7(slack) + (reduced profits of dropped LP items) + |reduced profits of added non-LP items|. To beat 1557 the total loss must be under ~10. The only items with small reduced magnitudes are 6 (3.9), 27 (5.8), 2 (2.8), 25 (0), 7 (\u22121.6); every other item costs \u2265 14. Enumerating all combinations of these with weight \u2264 647 shows the smallest loss is exactly the swap 27\u21927 (loss 5.8 + 1.6 + 2\u00b71.294 \u2248 10), giving 1557; all other combinations either exceed capacity or leave large slack. Hence 1557 is optimal.\n\n**Optimal set:** items 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 17, 18, 23, 26, 30, 32, 33  \nWeight = 645 \u2264 647, Value = 1557.\n\nFINAL: 1557"
+    },
+    "tableqa-9-w30": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 2471,
+     "extracted": "13783",
+     "text": "**Step 1 \u2013 Department filter**\n\n- Floor \u2265 2: Support, Ops, Field, Logistics, Research, Design (Compliance is floor 1 \u2192 out).\n- Has an active project: Support (Quartz-92), Design (Nimbus-89), Research (Zephyr-69), Ops (Zenith-45), Field (Talus-88). Logistics has none \u2192 out.\n- Has a paused project: Support (Krait-13, Pinnacle-88) \u2192 out.\n\nRemaining departments: **Ops, Field, Research, Design**.\n\n**Step 2 \u2013 Employee filter** (rate \u2265 41, not a department head, joined < 2023)\n\n**Ops**\n- Bea Solano 37\u00d767 = 2479\n- Berg Osei 11\u00d745 = 495\n- Ferreira Ines 8\u00d757 = 456\n- Bea Amara (180) 39\u00d772 = 2808\n- Total = **6238**\n\n**Field**\n- Rustam Aliyev 38\u00d788 = 3344\n- Ivo Petrov 21\u00d789 = 1869\n- Dina Greta 28\u00d781 = 2268\n- Ilsa Holm 29\u00d763 = 1827\n- Nadia Jana 34\u00d773 = 2482\n- (Reyes Petra excluded as head; Priya Brandt joined 2025 and is a head)\n- Total = **11790**\n\n**Research**\n- Ines Ferreira 24\u00d769 = 1656\n- Haddad Kovac 37\u00d785 = 3145\n- Amara Reyes 38\u00d788 = 3344\n- Mori Waheed 39\u00d789 = 3471\n- Meyer Petrov 11\u00d756 = 616\n- Weber Tomas 10\u00d768 = 680\n- Osei Rustam 13\u00d767 = 871\n- (Lena Vogel excluded as head)\n- Total = **13783**\n\n**Design**\n- Livia Costa 9\u00d745 = 405\n- Dina Waheed 21\u00d784 = 1764\n- Freja Nilsson 25\u00d778 = 1950\n- Brandt Vidal 25\u00d767 = 1675\n- Berg Gustav 4\u00d766 = 264\n- Mori Lindgren 4\u00d785 = 340\n- (Vega Aydin excluded as head)\n- Total = **6398**\n\n**Step 3 \u2013 Largest departmental total:** Research with 13783.\n\nFINAL: 13783"
+    },
+    "toolsim-6-w30": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-7-w32": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-6-w31": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-9-w31": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 2296,
+     "extracted": "13346",
+     "text": "**Step 1 \u2013 Department filter**\n- Floor \u2265 4: Ops, Field, Logistics, Support, Research\n- With an active project: Research, Logistics, Field (Ops and Support have none)\n- With a paused project: Ops, Support, Compliance \u2192 none of the three above\n- Remaining: **Field, Logistics, Research**\n\n**Step 2 \u2013 Employee filter** (rate \u2265 41, not a department head, joined < 2025)\n\nResearch: Lena Vogel 1035, Bea Henrik 1610, Hana Hoffman 2010, Milan Brandt 2352, Rustam Meyer 1121, Rustam Quint 2345, Nadia Amara 2331 \u2192 **12,804**\n\nLogistics: Marisol Vega 1320, Gustav Weber 1394, Bruno Henrik 2688, Petrov Rustam 968, Berg Priya 2146, Marchetti Aydin 903, Yusuf Marchetti 464, Milan Zoe 2407, Sartori Vogel 1056 \u2192 **13,346**\n\nField: Nora Lindgren 2356, Jana Kovac 1584, Talia Rosen 688, Henrik Dahl 1634, Ilsa Aydin 518, Freja Viktor 1159, Livia Rosen 682, Vidal Livia 2100, Vega Freja 984 \u2192 **11,705**\n\nLargest departmental total: Logistics.\n\nFINAL: 13346"
+    },
+    "toolsim-7-w33": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-5-w34": {
+     "family": "bigknap",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 6200,
+     "extracted": "1417",
+     "text": "**Approach.** Sort items by value/weight. The high-ratio items (27, 17, 4, 34, 18, 30, 15, 10, 23, 2, 33, 21, 13, 36, 1, 24, 29) fill weight 596 with value 1392 (greedy), leaving 27 unused capacity; the LP relaxation bound is \u22481422. \n\nBetter: drop item 29 (w82, v95) and instead take item 11 (w66, v75) and item 26 (w42, v45):\n\nChosen items: 27, 17, 4, 34, 18, 30, 15, 10, 23, 2, 33, 21, 13, 36, 1, 24, 11, 26\n\n- Weight: 6+10+13+27+35+26+25+31+36+54+27+20+32+54+54+64+66+42 = 622 \u2264 623  \n- Value: 54+88+106+89+112+82+74+91+96+115+54+38+59+90+74+75+75+45 = 1417\n\n**Optimality check.** All items with ratio \u2265 1 total weight 954 / value 1767, so at least 331 weight must be excluded, and this solution loses exactly 350 (items 29, 16, 3, 5, 9, 14). Any exclusion set of weight \u2265 331 must average under 1.057 value/weight to lose less than 350; enumerating combinations of the low\u2011ratio items (5, 9, 14, 3, 26, 16, 11, 29, 24) and possible additions of sub\u20111\u2011ratio items (25, 19, 20, 28, 12) shows none beats a loss of 350 (e.g., 11+26+16 misses by exactly 1 unit of weight). Hence 1417 is optimal.\n\nFINAL: 1417"
+    },
+    "tableqa-10-w32": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 1871,
+     "extracted": "10094",
+     "text": "**Step 1 \u2013 Department filter**\n\nAll departments are on floor \u2265 2. Departments with an active project: Compliance, Field, Support, Research, Design (Ops and Logistics have none). Excluding those with a paused project (Design, Support): remaining departments are **Compliance, Field, Research**.\n\n**Step 2 \u2013 Employee filter** (rate \u2265 51, not a department head, joined before 2022)\n\nCompliance:\n- Ilsa Brandt: 27 \u00d7 88 = 2376\n- Nora Costa: 39 \u00d7 71 = 2769\n- Total = 5145\n\nField:\n- Hana Sato: 18 \u00d7 54 = 972\n- Yusuf Kaan: 14 \u00d7 67 = 938\n- Selin Rustam: 30 \u00d7 84 = 2520\n- Nair Elio: 24 \u00d7 86 = 2064\n- Ferreira Viktor: 20 \u00d7 82 = 1640\n- Novak Diallo: 28 \u00d7 70 = 1960\n- Total = 10094\n(Lena Brandt excluded, rate 50; Nora Bruno and Vidal Freja are department heads)\n\nResearch:\n- Ines Ferreira: 31 \u00d7 84 = 2604\n- Elio Nilsson: 9 \u00d7 86 = 774\n- Elio Gustav: 24 \u00d7 78 = 1872\n- Total = 5250\n\n**Step 3 \u2013 Largest departmental total:** Field with 10094.\n\nFINAL: 10094"
+    },
+    "tableqa-10-w33": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 3197,
+     "extracted": "19612",
+     "text": "**Step 1 \u2013 Qualifying departments** (floor \u2265 2, has an active project, no paused project):\n- Support (floor 3): has Delta-45 paused \u2192 excluded\n- Logistics (floor 3): Umber-56 active, no paused \u2192 included\n- Design (floor 5): Nimbus-51 active \u2192 included\n- Compliance (floor 6): Drift-39 active \u2192 included\n- Field (floor 1) \u2192 excluded\n- Research (floor 3): only paused project \u2192 excluded\n- Ops (floor 2): Lumen-92, Zephyr-82 active \u2192 included\n\n**Step 2 \u2013 Employees** with rate \u2265 37, joined < 2025, not a department head (excluded: Viktor Livia #254, Haddad Kovac #213, Marisol Vogel #221, Ferreira Amara #210).\n\n**Logistics:** 1014 + 1280 + 966 + 2870 + 1241 + 3108 = **10,479**\n\n**Design:** 2190 + 2002 + 1872 + 627 + 1296 + 968 + 1890 + 1394 + 2336 + 2047 + 1898 + 1092 = **19,612**\n\n**Compliance:** 1144 + 1672 + 1118 + 650 + 1248 + 594 + 2436 + 1612 + 912 + 2325 + 1872 = **15,583**\n\n**Ops:** 1491 + 1092 + 913 + 1188 + 2888 + 828 + 3060 + 2485 + 1496 + 228 = **15,669**\n\nLargest departmental total: Design.\n\nFINAL: 19612"
+    },
+    "inv-70-w30": {
+     "family": "inv",
+     "rung": 70,
+     "correct": false,
+     "completion_tokens": 10711,
+     "extracted": "28828301",
+     "text": "**Working backwards** (using modular inverses: 17\u207b\u00b9=5882353, 23\u207b\u00b9=47826087, 21\u207b\u00b9=80952381, 11\u207b\u00b9=90909091, 7\u207b\u00b9=42857143, 13\u207b\u00b9=76923077 mod 10\u2078):\n\n- 70: 22311112 \u00f717 \u2192 36606536\n- 69: rotate right 3 \u2192 53636606\n- 68: swap 2,8 \u2192 56636603\n- 67: \u221224811919 \u2192 31824684\n- 66: \u00f713 \u2192 17832668\n- 65: \u221285961766 \u2192 31870902\n- 64: \u00f711 \u2192 30170082\n- 63: rotate right 3 \u2192 08230170\n- 62: inverse map (3e+1) \u2192 15701421\n- 61: reverse \u2192 12410751\n- 60: inverse map (7e+3) \u2192 07103280\n- 59: inverse map (9e+1) \u2192 14018931\n- 58: swap 2,3 \u2192 10418931\n- 57: inverse map (3e+5) \u2192 85789248\n- 56: reverse \u2192 84298758\n- 55: rotate right 3 \u2192 75884298\n- 54: \u00f77 \u2192 10840614\n- 53: \u221252533251 \u2192 58307363\n- 52: \u00f77 \u2192 94043909\n- 51: \u00f717 \u2192 70237877\n- 50: reverse \u2192 77873207\n- 49: \u00f713 \u2192 98297939\n- 48: \u00f711 \u2192 81663449\n- 47: reverse \u2192 94436618\n- 46: rotate left 1 \u2192 44366189\n- 45: \u221212287404 \u2192 32078785\n- 44: \u00f717 \u2192 37181105\n- 43: swap 1,4 \u2192 87131105\n- 42: \u22126424519 \u2192 80706586\n- 41: inverse map (7e+5) \u2192 15457017\n- 40: reverse \u2192 71075451\n- 39: inverse map (3e+5) \u2192 68560708\n- 38: \u221210524120 \u2192 58036588\n- 37: inverse map (7e+9) \u2192 45901455\n- 36: swap 5,7 \u2192 45905415\n- 35: \u221222620440 \u2192 23284975\n- 34: rotate right 1 \u2192 52328497\n- 33: reverse \u2192 79482325\n- 32: \u00f713 \u2192 06114025\n- 31: rotate 4 \u2192 40250611\n- 30: inverse map (7e+1) \u2192 91561388\n- 29: swap 4,5 \u2192 91516388\n- 28: swap 5,8 \u2192 91518386\n- 27: inverse map (9e+9) \u2192 08481613\n- 26: rotate right 3 \u2192 61308481\n- 25: swap 1,6 \u2192 41308681\n- 24: reverse \u2192 18680314\n- 23: \u00f723 \u2192 22551318\n- 22: rotate left 1 \u2192 25513182\n- 21: \u00f77 \u2192 89359026\n- 20: \u00f711 \u2192 26305366\n- 19: \u221212274738 \u2192 14030628\n- 18: \u00f721 \u2192 43525268\n- 17: \u00f723 \u2192 54066316\n- 16: swap 3,5 \u2192 54660316\n- 15: \u221281080014 \u2192 73580302\n- 14: rotate 4 \u2192 03027358\n- 13: \u00f723 \u2192 87088146\n- 12: reverse \u2192 64188078\n- 11: swap 1,7 \u2192 74188068\n- 10: inverse map (3e+8) \u2192 90128862\n- 9: swap 3,4 \u2192 90218862\n- 8: rotate left 1 \u2192 02188629\n- 7: swap 5,7 \u2192 02182689\n- 6: swap 5,8 \u2192 02189682\n- 5: inverse map (3e+5) \u2192 51892391\n- 4: \u00f717 \u2192 61876023\n- 3: \u221252983139 \u2192 08892884\n- 2: swap 1,2 \u2192 80892884\n- 1: \u221252064583 \u2192 28828301\n\nForward check of first steps: 28828301+52064583=80892884 \u2192 swap \u2192 08892884 \u2192 +52983139 = 61876023 \u2192 \u00d717 \u2192 51892391 \u2713\n\nFINAL: 28828301"
+    }
+   }
   }
  },
  "usage": {
@@ -1947,11 +2591,16 @@
   "qwen/qwen3.6-35b-a3b": {
    "prompt": 249683,
    "completion": 854481
+  },
+  "anthropic/claude-fable-5.1": {
+   "prompt": 339999,
+   "completion": 93689
   }
  },
  "effort_applied": {
   "anthropic/claude-haiku-4.5": true,
   "openai/gpt-5.4-mini": true,
-  "qwen/qwen3.6-35b-a3b": true
+  "qwen/qwen3.6-35b-a3b": true,
+  "anthropic/claude-fable-5.1": true
  }
 }
