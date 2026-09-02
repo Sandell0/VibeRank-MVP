@@ -1181,6 +1181,131 @@
      "text": "FINAL: 1848"
     }
    }
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": true,
+     "extracted": "59202020",
+     "text": "The original 8-digit number is recovered by reversing the four transformation steps.\n\n**Step 4 reverse:** The final result is 08171705. Replace each digit \\(d\\) by \\((d \\cdot 9 + 3) \\bmod 10\\). The inverse transformation is \\(d \\equiv 9 \\cdot (f - 3) \\bmod 10\\). Applying this to each digit gives the string before step 4: **35262638**.\n\n**Step 3 reverse:** Step 3 rotated left by 6 positions. Reversing this is a left rotation by 2 positions (or right rotation by 6). Rotating 35262638 left by 2 gives **26263835**.\n\n**Step 2 reverse:** Step 2 multiplied by 13 and kept the last 8 digits. We need \\(R\\) such that \\(13R \\equiv 26263835 \\pmod{10^8}\\). Since \\(\\gcd(13,10^8)=1\\), we solve the congruence. Noting that \\(26263835 = 13 \\times 2020295\\), we get \\(R \\equiv 2020295 \\pmod{10^8}\\). As an 8-digit string (with leading zero): **02020295**.\n\n**Step 1 reverse:** Step 1 reversed the 8-digit representation. Reversing 02020295 gives the original number: **59202020** (which has no leading zero).\n\nVerification of the forward steps confirms the final result 08171705.\n\nFINAL: 59202020"
+    },
+    "exe-2-0": {
+     "correct": true,
+     "extracted": "308",
+     "text": "FINAL: 308"
+    },
+    "inv-4-1": {
+     "correct": true,
+     "extracted": "92898498",
+     "text": "The original 8-digit number is recovered by reversing the four steps in reverse order.\n\n1. The final result after step 4 is 47877633. Step 4 reverses the digit order, so step 3 output is the reverse of 47877633: 33677874.\n2. Step 3 multiplies by 13 and keeps the last 8 digits. To reverse this, we solve 13X \u2261 33677874 (mod 100000000). The inverse of 13 modulo 10\u2078 is 76923077, giving X = 33677874 \u00d7 76923077 mod 10\u2078 = 94898298. Thus step 2 output is 94898298.\n3. Step 2 reverses the digit order, so step 1 output is the reverse of 94898298: 89289849.\n4. Step 1 rotates left by 7 positions, which on 8 digits is equivalent to a right rotate by 1. To reverse, we left-rotate 89289849 by 1, yielding 92898498.\n\nVerification of the forward steps on 92898498:\n- Step 1: rotate left by 7 \u2192 89289849\n- Step 2: reverse \u2192 94898298\n- Step 3: \u00d713, keep last 8 \u2192 33677874\n- Step 4: reverse \u2192 47877633\n\nFINAL: 92898498"
+    },
+    "exe-2-1": {
+     "correct": true,
+     "extracted": "576",
+     "text": "The program initializes v0=23, v1=24, v2=22, v3=6 and loops i from 1 to 12. Each iteration updates v0 and v2 modulo 997, and if v0 is divisible by 3, adds 2 to v2. Tracing exactly:\n\n- i=1: v0=75, v2=30 (v0%3==0)\n- i=2: v0=231, v2=44 (v0%3==0)\n- i=3: v0=699, v2=64 (v0%3==0)\n- i=4: v0=109, v2=88 (v0%3\u22600)\n- i=5: v0=333, v2=120 (v0%3==0)\n- i=6: v0=8, v2=156 (v0%3\u22600)\n- i=7: v0=30, v2=200 (v0%3==0)\n- i=8: v0=96, v2=250 (v0%3==0)\n- i=9: v0=294, v2=306 (v0%3==0)\n- i=10: v0=888, v2=368 (v0%3==0)\n- i=11: v0=676, v2=434 (v0%3\u22600)\n- i=12: v0=40, v2=506 (v0%3\u22600)\n\nFinal values: v0=40, v1=24, v2=506, v3=6. Sum = 40 + 24 + 506 + 6 = 576.\n\nFINAL: 576"
+    },
+    "inv-8-0": {
+     "correct": true,
+     "extracted": "16442211",
+     "text": "The original 8-digit number is recovered by reversing the given steps. Starting from the final result 77129782 and applying the inverse operations in reverse order:\n\n- Reverse step 8: apply (9d+1) mod 10 to each digit \u2192 44092439  \n- Reverse step 7: swap positions 1 and 6 \u2192 44092439 (no change)  \n- Reverse step 6: apply (3d+9) mod 10 to each digit \u2192 11965186  \n- Reverse step 5: multiply by 13\u207b\u00b9 mod 10\u2078 = 76923077 \u2192 23997322  \n- Reverse step 4: reverse the digits \u2192 22379932  \n- Reverse step 3: apply (3d+5) mod 10 to each digit \u2192 11462241  \n- Reverse step 2: swap positions 4 and 7 \u2192 11442261  \n- Reverse step 1: swap positions 2 and 7 \u2192 16442211  \n\nVerification by applying the forward steps to 16442211 yields the final result 77129782.\n\nFINAL: 16442211"
+    },
+    "exe-4-0": {
+     "correct": true,
+     "extracted": "720",
+     "text": "FINAL: 720"
+    },
+    "inv-8-1": {
+     "correct": true,
+     "extracted": "39786618",
+     "text": "The original 8-digit number is recovered by reversing the given steps. Starting from the final result 65434728 and working backwards:\n\n- Step 8 reverse: rotate right by 3 \u2192 72865434  \n- Step 7 reverse (digit-wise (9d+8) mod 10) \u2192 16023454  \n- Step 6 reverse (multiply by inverse of 9 mod 10\u2078 = 88888889) \u2192 24002606  \n- Step 5 reverse (subtract 43041634 mod 10\u2078) \u2192 80960972  \n- Step 4 reverse (multiply by inverse of 9 mod 10\u2078) \u2192 53440108  \n- Step 3 reverse (multiply by inverse of 21 mod 10\u2078 = 80952381) \u2192 83497148  \n- Step 2 reverse (digit-wise 3d mod 10 inverse = 7d mod 10) \u2192 61839786  \n- Step 1 reverse (rotate right by 5, i.e., left by 3) \u2192 39786618  \n\nVerification confirms the forward process yields exactly 65434728.\n\nFINAL: 39786618"
+    },
+    "exe-4-1": {
+     "correct": true,
+     "extracted": "2025",
+     "text": "The loop runs for i from 1 to 18. Initial values: v0=5, v1=23, v2=1, v3=28, v4=16. Since v4=16 and 16%3=1, the condition `v4 % 3 == 1` is always true, so v1 increments by 2 each iteration modulo 997.\n\nTracing each iteration:\n\n- i=1: v3=(28+23*1)%997=51; v2,v3=51,(1+1)%997=2 \u2192 v2=51, v3=2; v0=(5*2+23)%997=33; v1=25\n- i=2: v3=(2+25*2)%997=52; v2,v3=52,(51+2)%997=53 \u2192 v2=52, v3=53; v0=(33*2+25)%997=91; v1=27\n- i=3: v3=(53+27*3)%997=134; v2,v3=134,(52+3)%997=55 \u2192 v2=134, v3=55; v0=(91*2+27)%997=209; v1=29\n- i=4: v3=(55+29*4)%997=171; v2,v3=171,(134+4)%997=138 \u2192 v2=171, v3=138; v0=(209*2+29)%997=447; v1=31\n- i=5: v3=(138+31*5)%997=293; v2,v3=293,(171+5)%997=176 \u2192 v2=293, v3=176; v0=(447*2+31)%997=925; v1=33\n- i=6: v3=(176+33*6)%997=374; v2,v3=374,(293+6)%997=299 \u2192 v2=374, v3=299; v0=(925*2+33)%997=886; v1=35\n- i=7: v3=(299+35*7)%997=544; v2,v3=544,(374+7)%997=381 \u2192 v2=544, v3=381; v0=(886*2+35)%997=810; v1=37\n- i=8: v3=(381+37*8)%997=677; v2,v3=677,(544+8)%997=552 \u2192 v2=677, v3=552; v0=(810*2+37)%997=660; v1=39\n- i=9: v3=(552+39*9)%997=903; v2,v3=903,(677+9)%997=686 \u2192 v2=903, v3=686; v0=(660*2+39)%997=362; v1=41\n- i=10: v3=(686+41*10)%997=99; v2,v3=99,(903+10)%997=913 \u2192 v2=99, v3=913; v0=(362*2+41)%997=765; v1=43\n- i=11: v3=(913+43*11)%997=389; v2,v3=389,(99+11)%997=110 \u2192 v2=389, v3=110; v0=(765*2+43)%997=576; v1=45\n- i=12: v3=(110+45*12)%997=650; v2,v3=650,(389+12)%997=401 \u2192 v2=650, v3=401; v0=(576*2+45)%997=200; v1=47\n- i=13: v3=(401+47*13)%997=15; v2,v3=15,(650+13)%997=663 \u2192 v2=15, v3=663; v0=(200*2+47)%997=447; v1=49\n- i=14: v3=(663+49*14)%997=352; v2,v3=352,(15+14)%997=29 \u2192 v2=352, v3=29; v0=(447*2+49)%997=943; v1=51\n- i=15: v3=(29+51*15)%997=794; v2,v3=794,(352+15)%997=367 \u2192 v2=794, v3=367; v0=(943*2+51)%997=940; v1=53\n- i=16: v3=(367+53*16)%997=218; v2,v3=218,(794+16)%997=810 \u2192 v2=218, v3=810; v0=(940*2+53)%997=936; v1=55\n- i=17: v3=(810+55*17)%997=748; v2,v3=748,(218+17)%997=235 \u2192 v2=748, v3=235; v0=(936*2+55)%997=930; v1=57\n- i=18: v3=(235+57*18)%997=264; v2,v3=264,(748+18)%997=766 \u2192 v2=264, v3=766; v0=(930*2+57)%997=920; v1=59\n\nFinal values: v0=920, v1=59, v2=264, v3=766, v4=16. Sum = 920 + 59 + 264 + 766 + 16 = 2025.\n\nFINAL: 2025"
+    },
+    "inv-14-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-6-0": {
+     "correct": true,
+     "extracted": "1446",
+     "text": "The program initializes v0=27, v1=20, v2=25, v3=28, v4=11, v5=12 and loops i from 1 to 24. In each iteration, it updates v0, v4, v5, and conditionally v3 as specified. After carefully tracing all 24 iterations, the final values are:\n\n- v0 = 206\n- v1 = 20\n- v2 = 25\n- v3 = 83\n- v4 = 437\n- v5 = 675\n\nSumming these: 206 + 20 + 25 + 83 + 437 + 675 = 1446.\n\nFINAL: 1446"
+    },
+    "inv-14-1": {
+     "correct": true,
+     "extracted": "35799633",
+     "text": "The original 8-digit number is recovered by reversing the 14 steps from the final result 79270622. Steps 1\u20134 cancel out (reverse twice and swap positions 2 and 3 twice), so after step 4 the number is the original. Reversing steps 14 down to 5 yields 35799633, which has no leading zero and, when the forward steps are applied, produces 79270622.\n\nFINAL: 35799633"
+    },
+    "exe-6-1": {
+     "correct": true,
+     "extracted": "2768",
+     "text": "The final value of v0 + v1 + v2 + v3 + v4 + v5 after executing the program is 2768.\n\nFINAL: 2768"
+    },
+    "inv-22-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-45-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-0": {
+     "correct": false,
+     "extracted": null,
+     "text": "We need to execute the given Python program to compute the final sum of v0 through v8 after a loop from i=1 to 42 inclusive. The initial values are given. We need to trace exactly, step by step, and output the final sum v0+v1+v2+v3+v4+v5+v6+v7+v8. We must not guess; we must trace exactly. Since I'm an AI, I can simulate the loop mentally or compute it step by step. I need to be careful and exact. I'll simulate the loop iteratively>\n interact with the system."
+    },
+    "inv-45-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-1": {
+     "correct": true,
+     "extracted": "1848",
+     "text": "FINAL: 1848"
+    }
+   }
   }
  },
  "usage": {
@@ -1219,6 +1344,10 @@
   "openai/gpt-5.5": {
    "prompt": 9119,
    "completion": 90807
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "prompt": 3638,
+   "completion": 209677
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "slug": "nvidia/nemotron-3.5-lightning:free",
- "generated_at": "2026-09-02T01:09:19+00:00",
+ "generated_at": "2026-09-02T10:47:28+00:00",
  "public_elo": null,
  "catalog": {
   "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
@@ -18,7 +18,12 @@
   "expires": null,
   "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
  },
- "step_results": {},
+ "step_results": {
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "73 requests, 0 429 retries, 0 max_tokens clamps, 0.0 min paced",
+  "_elapsed": "565 min"
+ },
  "steps": {
   "recall": {
    "n": 34,
@@ -111,36 +116,56 @@
    }
   },
   "frontier": {
-   "n": 8,
-   "solved": 8,
-   "censored": 0,
-   "attempted": 8,
+   "n": 13,
+   "solved": 12,
+   "censored": 11,
+   "attempted": 24,
    "bank": 24,
-   "accuracy": 1.0,
+   "accuracy": 0.9230769230769231,
    "families": {
     "execution": {
-     "solved": 4,
-     "n": 4,
-     "censored": 0
+     "solved": 7,
+     "n": 8,
+     "censored": 4
     },
     "inversion": {
-     "solved": 4,
-     "n": 4,
-     "censored": 0
+     "solved": 5,
+     "n": 5,
+     "censored": 7
     }
    }
   },
   "portfolio": {
-   "n": 1,
-   "solved": 1,
-   "censored": 0,
-   "attempted": 1,
+   "n": 19,
+   "solved": 12,
+   "censored": 11,
+   "attempted": 30,
    "bank": 30,
-   "accuracy": 1.0,
+   "accuracy": 0.631578947368421,
    "families": {
+    "bughunt": {
+     "solved": 2,
+     "n": 3,
+     "censored": 3
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 2,
+     "censored": 4
+    },
+    "spec": {
+     "solved": 0,
+     "n": 2,
+     "censored": 4
+    },
     "zebra": {
-     "solved": 1,
-     "n": 1,
+     "solved": 5,
+     "n": 6,
      "censored": 0
     }
    }
