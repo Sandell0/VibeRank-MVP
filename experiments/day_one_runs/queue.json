@@ -1,0 +1,148 @@
+{
+ "models": [
+  {
+   "slug": "inclusionai/ling-3.0-flash-fin:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "dots-studio/dots-3-note-preview:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "liquid/lfm-2.5-2.6b:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "thinkingmachines/inkling-small:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "poolside/laguna-s-2.1:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "thinkingmachines/inkling:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "poolside/laguna-xs-2.1:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "cohere/north-mini-code:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "z-ai/glm-5.2:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "minimax/minimax-m3:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "google/gemma-4-26b-a4b-it:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "google/gemma-4-31b-it:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "minimax/minimax-m2.7:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  },
+  {
+   "slug": "nvidia/nemotron-3-super-120b-a12b:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 0,
+   "status": "pending",
+   "last_run": null,
+   "last_exit": null,
+   "note": ""
+  }
+ ]
+}
