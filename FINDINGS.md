@@ -34,3 +34,5 @@ Earlier (pre-program) baselines: `sol_interview_*` (best k=5 run),
 Ops: run experiments with max_tokens ≥60k for reasoning models; TaskStop any
 predecessor task before resuming after a laptop sleep (suspended tasks revive
 and race the data file); gpt-oss-120b is not a valid difficulty-smoke reference.
+
+Day-one battery (2026-09-01, owner rule: every new free model on OpenRouter or another API provider gets run on all our benchmarks): `python -m experiments.day_one <slug>` runs the live instruments above (recall, retro-today, domain bank, frontier and portfolio ladders; `--interview` adds the Sol ladder) for one model, paced for free routes, resumable, summary in `experiments/day_one_runs/`. The trigger and the runbook live in the leaderboard repo: `pipeline/watch-free-models.py` and `docs/free-model-day-one.md`.

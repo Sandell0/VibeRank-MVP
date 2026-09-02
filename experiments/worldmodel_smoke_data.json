@@ -5729,6 +5729,388 @@
     "extracted": "0.62",
     "text": "**Reasoning**\n\n- The 2026 World Cup (USA/Canada/Mexico, June\u2013July 2026) features 48 teams, 16 of them from UEFA. Europe has by far the deepest pool of genuine contenders: Spain (reigning European champions and arguably the best side in the world right now), France (finalists in 2018 and 2022), England (two consecutive Euro finals, deep squad), Portugal, Germany, Netherlands, plus outsiders like Italy, Belgium, Croatia, Norway.\n- The main non-European threats are Argentina (reigning champions, but Messi-era aging) and Brazil (talented but inconsistent, recently underperforming in qualifying). Beyond those two, non-European winners are very unlikely (USA, Mexico, Uruguay, Colombia, Morocco are long shots).\n- Historical pattern: Europe won four straight (2006\u20132018) before Argentina in 2022. Overall, Europe has won 12 of 22 editions. The \"no European winner in the Americas\" narrative was broken by Germany in 2014, and the 2026 hosts are in the Northern Hemisphere with familiar summer conditions, so the location penalty is modest.\n- Bookmaker markets have consistently put the combined European probability around 60\u201365%, with Spain/France/England each roughly at or near the top of the odds board.\n\nBalancing Europe's depth against Argentina and Brazil (who together carry perhaps ~30%) and the long tail of others, I put Europe a bit above 60%.\n\nFINAL: 0.62"
    }
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "recall-famous-1342-2": {
+    "extracted": "\u00a3100 per year",
+    "text": "FINAL: \u00a3100 per year",
+    "correct": false
+   },
+   "recall-famous-1342-1": {
+    "extracted": "Lady Catherine de Bourgh",
+    "text": "FINAL: Lady Catherine de Bourgh",
+    "correct": true
+   },
+   "recall-famous-2701-1": {
+    "extracted": "Daggoo",
+    "text": "FINAL: Daggoo",
+    "correct": true
+   },
+   "recall-famous-2701-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-2701-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-84-2": {
+    "extracted": "Elizabeth Lavenza",
+    "text": "Elizabeth Lavenza\nFINAL: Elizabeth Lavenza",
+    "correct": true
+   },
+   "recall-famous-84-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-1342-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-84-0": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-1661-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-1661-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-308-2": {
+    "extracted": "Montmorency",
+    "text": "The dog's name in *Three Men in a Boat* is Montmorency.\n\nFINAL: Montmorency",
+    "correct": true
+   },
+   "recall-mid-308-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-308-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-famous-1661-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-155-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-155-2": {
+    "extracted": "Rosanna Spearman",
+    "text": "FINAL: Rosanna Spearman",
+    "correct": true
+   },
+   "recall-mid-2398-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-155-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-2398-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-2398-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-1023-1": {
+    "extracted": "Captain Hawdon",
+    "text": "Captain Hawdon\n\nFINAL: Captain Hawdon",
+    "correct": true
+   },
+   "recall-obscure-52153-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-52153-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-52153-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-60432-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-mid-1023-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-60432-0": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-63311-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-63311-1": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-60432-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-69777-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-63311-0": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "recall-obscure-69777-1": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\nFINAL: UNKNOWN",
+    "correct": false
+   },
+   "retro-ypFv3TnCKtjSnY3Q2VDj:know": {
+    "extracted": "UNKNOWN",
+    "text": "Twitter was taken private in 2022 following Elon Musk's acquisition and delisted from the NYSE. As of my knowledge cutoff in 2024, there has been no Twitter IPO, and the question of whether one will occur by 2028 falls outside my resolved training data. Since the outcome is not known and the event is future\u2011dated beyond my cutoff, the correct resolution is uncertain.\n\nFINAL: UNKNOWN"
+   },
+   "recall-obscure-69777-2": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN",
+    "correct": false
+   },
+   "retro-T9vV5ST3jgJV3nqvOnZ4:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge (cutoff mid\u20112024), there is no definitive record of Massachusetts statewide decriminalizing psilocybin before 2026. Local city resolutions may have existed, but the state\u2011level outcome is unclear from my data, and I lack post\u20112024 information. \n\nFINAL: UNKNOWN"
+   },
+   "retro-T9vV5ST3jgJV3nqvOnZ4:forecast": {
+    "extracted": "0.30",
+    "text": "Massachusetts has seen local decriminalization efforts, notably Boston's 2021 ordinance removing criminal penalties for entheogenic plants and fungi, including psilocybin. However, state\u2011wide decriminalization requires legislative action at the Massachusetts State House, which involves committee reviews, floor votes, and potential gubernatorial approval. As of my last data, no such state\u2011level decriminalization bill has been enacted. While there is growing national momentum and some supportive voices within the legislature, the process is slow, and opposition from law\u2011enforcement and public\u2011health quarters remains. The window \"before 2026\" (roughly the next 1\u20132 legislative sessions) is relatively tight for a full decriminalization law to clear all hurdles. Given the combination of existing local policy, favorable political trends, but significant procedural barriers, I assign a moderate probability.\n\nFINAL: 0.30"
+   },
+   "retro-CchlGjOuD4e3exiC02SJ:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data (which extends to mid-2026), no definitive outcome is known for a trillionaire existing by the end of 2028, as that date is in the future relative to my knowledge cutoff. I cannot resolve this from past information alone.\n\nFINAL: UNKNOWN"
+   },
+   "recall-mid-1023-2": {
+    "extracted": null,
+    "text": "None",
+    "correct": false
+   },
+   "retro-ypFv3TnCKtjSnY3Q2VDj:forecast": {
+    "extracted": "0.20",
+    "text": "FINAL: 0.20"
+   },
+   "retro-12g6otPL80nZDk4ueu3h:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training data, the question of whether AI will reliably avoid hallucinations by 2027 has not yet been resolved, as 2027 is beyond my knowledge cutoff. I cannot confirm the outcome.\n\nFINAL: UNKNOWN"
+   },
+   "retro-jkeJxRSaBxeUrRpvUu4J:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup has not yet been played; it is scheduled to take place in June\u2013July 2026 across the United States, Canada, and Mexico. Since the tournament's outcome is not yet determined, I cannot confirm whether a previous World Cup winner will lift the trophy.\n\nFINAL: UNKNOWN"
+   },
+   "retro-tVMuayTJMPgUEFL92xYF:know": {
+    "extracted": "NO",
+    "text": "No, Elon Musk has not taken Twitter public via IPO. He acquired Twitter in October 2022 and took it private, delisting it from the stock exchange. The platform was later rebranded to X and remains a private company; there has been no Twitter/X IPO under his ownership as of my knowledge cutoff.\n\nFINAL: NO"
+   },
+   "retro-CchlGjOuD4e3exiC02SJ:forecast": {
+    "extracted": "0.15",
+    "text": "The question asks for the probability that a trillionaire (net worth \u2265 $1 trillion) exists by the end of 2028. As of mid\u20112025, the world\u2019s richest individuals have net worths in the $200\u2013300 billion range, and no one has yet reached $1 trillion. To hit that mark by the end of 2028 (roughly 3\u20134 years from now) would require sustained compound annual growth of roughly 30\u201340% on a several\u2011hundred\u2011billion base\u2014an order of magnitude faster than typical wealth accumulation for the richest people in history. While explosive growth in AI, space, or crypto sectors could theoretically produce such a fortune, the base\u2011rate evidence (zero trillionaires to date, historical wealth growth patterns, and the extreme rarity of 4\u00d7 multi\u2011year gains) makes this outcome uncommon. I assign a moderate\u2011low probability reflecting the difficulty of sustaining such growth, the volatility of ultra\u2011high\u2011net\u2011worth fortunes, and the typical timeline estimates for a first trillionaire (often placed a decade or more out).\n\nFINAL: 0.15"
+   },
+   "retro-12g6otPL80nZDk4ueu3h:forecast": {
+    "extracted": "0.25",
+    "text": "Forecast: Given current AI architecture and the inherent probabilistic nature of large language models, eliminating hallucinations entirely by 2027 is a tall order. While significant progress is expected in retrieval-augmented generation, fact-checking modules, and alignment techniques, fundamental limitations in next-token prediction and training data coverage make a guaranteed \"no random nonsense\" capability across general domains unlikely within just three years. I assign a moderate-but-low probability that such AI will exist and be demonstrably reliable by the end of 2027.\n\nFINAL: 0.25"
+   },
+   "retro-pTOGG7BW7K8z5XOqGjCg:know": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN"
+   },
+   "retro-tVMuayTJMPgUEFL92xYF:forecast": {
+    "extracted": "0.30",
+    "text": "Based on available information up to my knowledge cutoff, Elon Musk acquired Twitter in late 2022 and deliberately took it private, rebranding it to X. Since then, he has repeatedly mentioned that going public again would depend on the platform's financial stability, user growth, and his longer-term vision\u2014particularly integrating payments and AI. He has not announced any active IPO plans, and his statements suggest a preference for keeping X private or restructuring it on his own terms. The social media sector's post\u2011IPO volatility, combined with Musk's history of surprising timelines and prioritizing control over quarterly market cycles, makes a near\u2011term or certain future IPO uncertain. Given these factors\u2014recent privatization, ambiguous public remarks, and the challenging environment for social media listings\u2014I assign a moderate but non\u2011high probability that he will take Twitter public via IPO at any point in the future.\n\nFINAL: 0.30"
+   },
+   "retro-pTOGG7BW7K8z5XOqGjCg:forecast": {
+    "extracted": "0.01",
+    "text": "Based on publicly available information, Sam Rosen is a well-known sportscaster with no documented romantic or sexual connection to AellaGirl (Aella). Their professional spheres, social circles, and personal lives are entirely separate, and there is no evidence of any relationship or interaction between them. Without any basis for such an outcome, the probability is effectively vanishingly small, though not strictly zero due to the inherent unpredictability of human behavior.\n\nFINAL: 0.01"
+   },
+   "retro-IMzxYnCug16mQBW7zLyf:forecast": {
+    "extracted": "0.35",
+    "text": "Based on the current trajectory of Colombia-E peace talks, the typical multi-year timeline required for comprehensive agreements with guerrilla groups, and the structural, security, and political hurdles the ELN continues to present, a full agreement before the end of President Petro\u2019s term (August 2026) is possible but far from certain. While Petro\u2019s personal background and \"total peace\" agenda create strong political momentum, ELN fragmentation, ongoing kidnappings, demands that stretch beyond typical ceasefire frameworks, and the risk of spoilers all significantly lower the odds of a signed comprehensive deal within the remaining timeframe. Substantial progress, ceasefires, and framework agreements are more likely than a final, all-encompassing accord.\n\nFINAL: 0.35"
+   },
+   "retro-IMzxYnCug16mQBW7zLyf:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "retro-jSfjEF0CcRzIOKcfnQtB:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup has not yet taken place; it is scheduled for June\u2013July 2026 in Canada, Mexico, and the United States. Since the tournament's outcome is not within my training knowledge cutoff, I cannot determine whether France will win.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PRDNtG161LErj6WKWzBV:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training data, Rick and Morty Season 8 had not been released or confirmed with a specific 2030 deadline as of my knowledge cutoff, and I cannot definitively determine whether it will air by 2030. \n\nFINAL: UNKNOWN"
+   },
+   "retro-jSfjEF0CcRzIOKcfnQtB:forecast": {
+    "extracted": "0.16",
+    "text": "France remains one of the world's most formidable national teams, boasting a generational talent in Kylian Mbapp\u00e9, a deep and experienced squad, and a strong track record in major tournaments. However, the 2026 expanded World Cup (48 teams) features numerous elite competitors\u2014Brazil, England, Germany, Argentina, Portugal, and others\u2014spreading the likelihood of victory across a larger field. Given France's sustained excellence but increased competition, a reasonable forecast probability is assigned.\n\nFINAL: 0.16"
+   },
+   "retro-PRDNtG161LErj6WKWzBV:forecast": {
+    "extracted": "0.8",
+    "text": "Rick and Morty is currently in its seventh season (released 2023\u20132024) on Adult Swim, a flagship series with a proven track record of renewals. It has already been ordered for 70+ episodes, and given its consistent ratings, cultural impact, and the network's history of greenlighting follow-ups, a eighth season is very likely to be produced and aired well before 2030. Production timelines for adult animation typically allow 1\u20132 years per season, and with roughly 5\u20136 years remaining until 2030, there is ample time. While no outcome is guaranteed, the structural and commercial incentives strongly favor continuation.\n\nFINAL: 0.8"
+   },
+   "retro-l6pDOuXNGWyIkjcJUEEj:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, I don't have verified information confirming whether a fully end-to-end AI-generated anime series will be completed and released by the end of 2025. My data doesn't conclusively cover that future outcome, and such a project's status would depend on developments after my last update. Therefore, I'm unable to affirmatively say YES or NO.\n\nFINAL: UNKNOWN"
+   },
+   "retro-RjKpiXcM1xoojSpzOAwd:forecast": {
+    "extracted": "0.85",
+    "text": "SLS (Space Launch System) Block 1B is NASA\u2019s current baseline for crewed Artemis missions (Artemis II and III). It is in advanced production, with the Exploration Upper Stage (EUS) under development, and the program has strong bipartisan political support and funded budgets extending through multiple flights. While delays are characteristic of the program, the likelihood that Block 1B eventually launches is very high. SLS Block 2 is a later, more powerful evolution, but the \u201cor\u201d condition is already satisfied if Block 1B flies. Given the program\u2019s institutional backing and current trajectory, the probability that at least one of these variants is launched at some point is very high, though not certain due to rare but possible large-scale program changes or cancellations.\n\nFINAL: 0.85"
+   },
+   "retro-l6pDOuXNGWyIkjcJUEEj:forecast": {
+    "extracted": "0.10",
+    "text": "Given the current state of AI video and animation generation, along with the technical and industry challenges of producing a coherent, long-form anime series end-to-end, a fully AI-generated series by the end of 2025 faces significant hurdles in temporal consistency, narrative coherence, and studio adoption. While AI tools are increasingly integrated into production pipelines, a complete AI-driven series from concept to final episode seems very unlikely within this timeframe.\n\nFINAL: 0.10"
+   },
+   "retro-RjKpiXcM1xoojSpzOAwd:know": {
+    "extracted": "UNKNOWN",
+    "text": "As of my training knowledge (early 2025), neither SLS Block 1B nor SLS Block 2 had been launched. Block 1B's first planned crewed flight (Artemis II) was delayed to 2026 or later, and Block 2 was scheduled for an even later date. Their eventual launch is planned but not yet realized or guaranteed, and schedules have shifted. Given the uncertainty and the fact the outcome had not occurred by my knowledge cutoff, I cannot definitively resolve the question as YES or NO.\n\nFINAL: UNKNOWN"
+   },
+   "retro-PLA04avUAyYOPSVovLw9:know": {
+    "extracted": "YES",
+    "text": "FINAL: YES"
+   },
+   "retro-wcjqRgGKIGUnYfhTMIpQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "This question refers to a future event (June 1, 2026) that is beyond my training knowledge cutoff. I have no information about whether such an LLM will exist, nor can I predict future developments in AI.\n\nFINAL: UNKNOWN"
+   },
+   "retro-jkeJxRSaBxeUrRpvUu4J:forecast": {
+    "extracted": "0.65",
+    "text": "The question asks whether the 2026 FIFA World Cup winner will be a nation that has previously won the World Cup (i.e., from the set of Uruguay, Italy, England, Germany, Argentina, Brazil, France, Spain). Historically, across the 22 World Cups from 1930 to 2022, 14 were won by nations that had already won the tournament before (~64% frequency). The 2026 edition expands to 48 teams, which slightly increases the chance of a new nation breaking through, but the traditional powerhouses remain the overwhelming favorites to win qualification and the tournament itself. Given the defending champion (Argentina), plus France, Brazil, Germany, and Italy as top contenders\u2014all previous winners\u2014the probability leans high but accounts for the expanded field.\n\nFINAL: 0.65"
+   },
+   "retro-PLA04avUAyYOPSVovLw9:forecast": {
+    "extracted": "0.25",
+    "text": "FINAL: 0.25"
+   },
+   "retro-wcjqRgGKIGUnYfhTMIpQ:forecast": {
+    "extracted": "0.65",
+    "text": "The question hinges on whether a large language model will gain mainstream popularity by mid-2026 after being fine-tuned on personal user text data. Several converging trends make this plausible: the industry is already moving toward highly personalized assistants (custom GPTs, memory features, per-user fine-tuning), technical infrastructure for privacy-preserving fine-tuning (differential privacy, federated learning) is maturing, and there's strong commercial incentive for companies to lock in users with tailored experiences. By June 2026\u2014roughly 18 months out\u2014it's reasonable to expect at least one major LLM provider to offer a widely adopted, personal-text-fine-tuned model, barring severe regulatory blowback. However, \"popular\" introduces ambiguity about the adoption threshold, and privacy norms could slow mass-market rollout. On balance, the likelihood exceeds a coin flip but falls short of near-certainty.\n\nFINAL: 0.65"
+   },
+   "retro-v1Ys84LuzIrEUPDPDB6P:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, I don't have access to any specific individual's PhD completion status, and this doesn't correspond to a widely reported, identifiable event in my data. Therefore, I cannot determine the outcome.\n\nFINAL: UNKNOWN"
+   },
+   "retro-ccew8406BGl84Lo0H5Ey:know": {
+    "extracted": "UNKNOWN",
+    "text": "FINAL: UNKNOWN"
+   },
+   "retro-ccew8406BGl84Lo0H5Ey:forecast": {
+    "extracted": "0.05",
+    "text": "Based on my knowledge up to 2025, AI systems (including large language models) were already capable of generating Python code and assisting in PEP drafting by 2023\u20132024. However, the formal implementation and merging of a Python PEP into CPython involves rigorous review, testing, and approval by the core Python development community\u2014processes that, by the end of 2024, had not been carried out primarily or autonomously by an AI. While AI-assisted contributions to PEPs or PRs certainly occurred, a full \"AI implements a Python PEP\" as the driving force had not happened. I assign a small but non-zero probability to edge cases where AI-generated code was accepted as part of a broader human-reviewed implementation.\n\nFINAL: 0.05"
+   },
+   "retro-uKOjLoodI4duxopn3Y5X:know": {
+    "extracted": "NO",
+    "text": "Based on my training knowledge up to mid\u20112026, no new Star Wars theatrical movie had been released before 2027. The last mainline release was *Star Wars: The Rise of Skywalker* (2019), and no others were scheduled or premiered theatrically before 2027 as of that cutoff.\n\nFINAL: NO"
+   },
+   "retro-dbMVnIstHAcHbvI2r1Mg:know": {
+    "extracted": "UNKNOWN",
+    "text": "This question refers to a future personal belief that isn't documented in my training data as a resolved event. I have no way to know how that specific individual's beliefs would turn out, so the outcome is unknown.\n\nFINAL: UNKNOWN"
+   },
+   "retro-v1Ys84LuzIrEUPDPDB6P:forecast": {
+    "extracted": "0.55",
+    "text": "As an AI, I have no personal information about you\u2014your field, progress, institution, or circumstances. PhD completion rates vary widely by discipline, country, and individual factors, but general statistical data (e.g., U.S. NCSES surveys) typically place overall completion rates within roughly 50\u201360% over a standard timeline. Without any personal details, the most reasonable approach is to use this base rate as my forecast.\n\nFINAL: 0.55"
+   },
+   "retro-uKOjLoodI4duxopn3Y5X:forecast": {
+    "extracted": "0.25",
+    "text": "Based on my knowledge up to my training cutoff, there is no Star Wars theatrical movie with a confirmed release date before 2027. While several projects have been announced or rumored (e.g., a Rey-focused film, James Mangold's *Dawn of the Jedi*), none have firm scheduling or release windows set for 2025\u20132026. Under Disney, Star Wars movies have been released inconsistently since the sequel trilogy ended in 2019, with gaps of several years between installments. Without a definite, announced slate, the likelihood of a new release before 2027 is low.\n\nFINAL: 0.25"
+   },
+   "retro-9LgJjSIMk1MzhxyLU2sJ:know": {
+    "extracted": "NO",
+    "text": "The scenario described\u2014a posthumous deathbed UFO confession from Jimmy Carter revealed within a year of his passing\u2014has not occurred. As of my knowledge cutoff and current information, Jimmy Carter is still living, and no such posthumous revelation has taken place. Therefore, the proposition has not been realized.\n\nFINAL: NO"
+   },
+   "retro-dbMVnIstHAcHbvI2r1Mg:forecast": {
+    "extracted": "0.35",
+    "text": "The question asks for the probability that, if alive by 2026, the individual will attribute their survival to either personal enjoyment of living or altruistic purposes. Since I have no personal data about the user\u2014no health history, values, lifestyle, or stated beliefs\u2014I must base this on general patterns of human belief attribution regarding survival and purpose. \n\nEmpirical and philosophical considerations suggest that while many people value personal enjoyment and altruism as meaningful aspects of life, attributing *being alive* specifically to those causes is less common than attributing it to health, circumstance, luck, or genetics. However, a significant portion of people do frame their continued existence through lenses of purpose, enjoyment, or contribution. Given the \"or\" condition and the lack of user-specific information, I assign a moderate probability reflecting that such a belief is plausible but not dominant across populations.\n\nFINAL: 0.35"
+   },
+   "retro-z11T9Ti0znknwluyYej4:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, there is no record of Edward Snowden being pardoned by any U.S. president as of my knowledge cutoff, and the question extends into a timeframe (2025) that falls after my training data. I cannot confirm the outcome with certainty.\n\nFINAL: UNKNOWN"
+   },
+   "retro-z11T9Ti0znknwluyYej4:forecast": {
+    "extracted": "0.10",
+    "text": "Based on my knowledge, Edward Snowden has not been pardoned as of the latest available information, and the structural barriers\u2014a pending Espionage Act case, his current status in Russia, and the high political cost of granting clemency for a major intelligence leak\u2014make a formal pardon by 2025 extremely unlikely. While some legislators have advocated for clemency, executive action of this nature requires substantial political consensus that has not materialized.\n\nFINAL: 0.10"
+   },
+   "retro-9LgJjSIMk1MzhxyLU2sJ:forecast": {
+    "extracted": "0.01",
+    "text": "The scenario requires three unlikely conditions to align: Jimmy Carter's passing within the relevant timeframe, the existence of a previously undisclosed \"deathbed UFO confession,\" and that confession being publicly revealed within one year. Carter has been notably open about his 1969 UFO sighting and has already declassified related files during his presidency, making a sensational, previously secret deathbed confession atypical. Posthumous revelations of this nature are extremely rare for modern presidents, and the tight one-year window after death, combined with the niche subject matter, makes the joint probability very low. Based on historical patterns, base rates, and the absence of any known mechanism or precedent for such an event, I assign a low but non-zero probability.\n\nFINAL: 0.01"
+   },
+   "retro-piY5pFsWeDtrA1Wm0RPC:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don't have specific resolution data from my training knowledge on whether Donald Trump joined Manifold Markets before the end of 2025. FINAL: UNKNOWN"
+   },
+   "retro-8KSJeo7HCLnzuDv5rl3q:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge, there is no public record or indication that Eliezer Yudkowsky and Aella started dating, and I am not aware of any resolved prediction or outcome for this specific question. Given the lack of definitive information and the predictive nature of the timeframe, I cannot confirm a YES or NO resolution.\n\nFINAL: UNKNOWN"
+   },
+   "retro-5GYiswIEZ4dM2NGnxbOR:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup had not yet taken place as of my knowledge cutoff (mid-2024), so the outcome is unknown.\n\nUNKNOWN\nFINAL: UNKNOWN"
+   },
+   "retro-8KSJeo7HCLnzuDv5rl3q:forecast": {
+    "extracted": "0.02",
+    "text": "Based on my knowledge, there is no public evidence of any romantic connection between Eliezer Yudkowsky and Aella. Eliezer is known for extreme privacy regarding his personal life, is married, and focuses heavily on AI risk and rationality work. Aella is a prominent internet personality and writer who interacts within overlapping rationalist/EA circles but has no documented history or signals of a relationship with Eliezer. Their age difference, distinct life focuses, and lack of interaction make a romantic involvement in the next three years highly improbable.\n\nFINAL: 0.02"
+   },
+   "retro-piY5pFsWeDtrA1Wm0RPC:forecast": {
+    "extracted": "0.05",
+    "text": "Based on available knowledge about Donald Trump's platform habits and Manifold Markets' nature as a niche prediction/community site (not a primary social or broadcast platform for political figures), there is no indication he would join Manifold Markets before the end of 2025. His established pattern involves owning or directing his own ecosystems (Truth Social, Truth Social-related projects, X, NFTs, etc.), and there's no precedent or strong incentive for him to participate on Manifold.\n\nFINAL: 0.05"
+   },
+   "retro-QHFQmCmz8HplpN2QQnl2:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 FIFA World Cup is scheduled to take place in June\u2013July 2026, which is after my knowledge cutoff. Therefore, I do not have information on the outcome.\n\nFINAL: UNKNOWN"
+   },
+   "retro-ZQvUHx5d2tphDz1tJSMM:know": {
+    "extracted": "UNKNOWN",
+    "text": "Based on my training knowledge cutoff (mid-2024) and the fact that the question concerns events before August 2026\u2014a future date relative to my data\u2014I have no verified information on whether such official peace talks have occurred or will occur. The outcome is uncertain and outside my confirmed scope.\n\nFINAL: UNKNOWN"
+   },
+   "retro-QHFQmCmz8HplpN2QQnl2:forecast": {
+    "extracted": "0.12",
+    "text": "Based on England's historical World Cup record (only one win since 1966), the typical strength of the tournament field, and the current generation of talent, England is consistently regarded as a strong contender but not a near-certainty. Pre-tournament bookmaker expectations and competitive depth suggest a win probability in the single digits to low teens. \n\nFINAL: 0.12"
+   },
+   "retro-5GYiswIEZ4dM2NGnxbOR:forecast": {
+    "extracted": "0.53",
+    "text": "The 2026 FIFA World Cup will feature 48 teams for the first time, with UEFA allocated 16 spots\u2014the most of any confederation. Historically, in 32-team World Cups since 1998, European teams won 4 out of 7 tournaments (\u224857%). The expanded format adds more teams from other confederations (CONMEBOL 6, CONCACAF 6 including hosts, AFC 8, CAF 9, OFC 1), which could slightly dilute Europe's historical dominance, but Europe still possesses the deepest pool of consistently top-tier squads (France, England, Germany, Portugal, Spain, Belgium, Netherlands, etc.). Accounting for historical win rates, confederation spot distribution, and the host advantage for CONCACAF teams, a reasonable probabilistic forecast is that Europe has roughly a 53% chance of producing the winner.\n\nFINAL: 0.53"
+   },
+   "retro-ZQvUHx5d2tphDz1tJSMM:forecast": {
+    "extracted": "0.15",
+    "text": "Based on the known trajectory of the Russia\u2013Ukraine war, both leaders have publicly set mutually exclusive conditions for peace, and no official, substantive talks involving both Putin and Zelenskyy have occurred since the early 2022 Istanbul negotiations. While third\u2011party mediation (Turkey, China, the UN, etc.) continues, direct high\u2011level bilateral peace talks remain exceptionally rare in this conflict. Given the entrenched positions, ongoing military operations, and the absence of any clear catalyst for a breakthrough before August 2026, the likelihood of such talks materializing is low but not zero\u2014accounting for possible war\u2011exhaustion scenarios, major geopolitical shifts, or a sudden mediation push.\n\nFINAL: 0.15"
+   }
   }
  },
  "usage": {
@@ -5791,6 +6173,10 @@
   "anthropic/claude-fable-5.1": {
    "prompt": 12219,
    "completion": 38706
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "prompt": 8688,
+   "completion": 129671
   }
  }
 }

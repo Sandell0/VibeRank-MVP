@@ -2577,6 +2577,650 @@
      "text": "**Working backwards** (using modular inverses: 17\u207b\u00b9=5882353, 23\u207b\u00b9=47826087, 21\u207b\u00b9=80952381, 11\u207b\u00b9=90909091, 7\u207b\u00b9=42857143, 13\u207b\u00b9=76923077 mod 10\u2078):\n\n- 70: 22311112 \u00f717 \u2192 36606536\n- 69: rotate right 3 \u2192 53636606\n- 68: swap 2,8 \u2192 56636603\n- 67: \u221224811919 \u2192 31824684\n- 66: \u00f713 \u2192 17832668\n- 65: \u221285961766 \u2192 31870902\n- 64: \u00f711 \u2192 30170082\n- 63: rotate right 3 \u2192 08230170\n- 62: inverse map (3e+1) \u2192 15701421\n- 61: reverse \u2192 12410751\n- 60: inverse map (7e+3) \u2192 07103280\n- 59: inverse map (9e+1) \u2192 14018931\n- 58: swap 2,3 \u2192 10418931\n- 57: inverse map (3e+5) \u2192 85789248\n- 56: reverse \u2192 84298758\n- 55: rotate right 3 \u2192 75884298\n- 54: \u00f77 \u2192 10840614\n- 53: \u221252533251 \u2192 58307363\n- 52: \u00f77 \u2192 94043909\n- 51: \u00f717 \u2192 70237877\n- 50: reverse \u2192 77873207\n- 49: \u00f713 \u2192 98297939\n- 48: \u00f711 \u2192 81663449\n- 47: reverse \u2192 94436618\n- 46: rotate left 1 \u2192 44366189\n- 45: \u221212287404 \u2192 32078785\n- 44: \u00f717 \u2192 37181105\n- 43: swap 1,4 \u2192 87131105\n- 42: \u22126424519 \u2192 80706586\n- 41: inverse map (7e+5) \u2192 15457017\n- 40: reverse \u2192 71075451\n- 39: inverse map (3e+5) \u2192 68560708\n- 38: \u221210524120 \u2192 58036588\n- 37: inverse map (7e+9) \u2192 45901455\n- 36: swap 5,7 \u2192 45905415\n- 35: \u221222620440 \u2192 23284975\n- 34: rotate right 1 \u2192 52328497\n- 33: reverse \u2192 79482325\n- 32: \u00f713 \u2192 06114025\n- 31: rotate 4 \u2192 40250611\n- 30: inverse map (7e+1) \u2192 91561388\n- 29: swap 4,5 \u2192 91516388\n- 28: swap 5,8 \u2192 91518386\n- 27: inverse map (9e+9) \u2192 08481613\n- 26: rotate right 3 \u2192 61308481\n- 25: swap 1,6 \u2192 41308681\n- 24: reverse \u2192 18680314\n- 23: \u00f723 \u2192 22551318\n- 22: rotate left 1 \u2192 25513182\n- 21: \u00f77 \u2192 89359026\n- 20: \u00f711 \u2192 26305366\n- 19: \u221212274738 \u2192 14030628\n- 18: \u00f721 \u2192 43525268\n- 17: \u00f723 \u2192 54066316\n- 16: swap 3,5 \u2192 54660316\n- 15: \u221281080014 \u2192 73580302\n- 14: rotate 4 \u2192 03027358\n- 13: \u00f723 \u2192 87088146\n- 12: reverse \u2192 64188078\n- 11: swap 1,7 \u2192 74188068\n- 10: inverse map (3e+8) \u2192 90128862\n- 9: swap 3,4 \u2192 90218862\n- 8: rotate left 1 \u2192 02188629\n- 7: swap 5,7 \u2192 02182689\n- 6: swap 5,8 \u2192 02189682\n- 5: inverse map (3e+5) \u2192 51892391\n- 4: \u00f717 \u2192 61876023\n- 3: \u221252983139 \u2192 08892884\n- 2: swap 1,2 \u2192 80892884\n- 1: \u221252064583 \u2192 28828301\n\nForward check of first steps: 28828301+52064583=80892884 \u2192 swap \u2192 08892884 \u2192 +52983139 = 61876023 \u2192 \u00d717 \u2192 51892391 \u2713\n\nFINAL: 28828301"
     }
    }
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "answers": {
+    "toolsim-2-2": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 5326,
+     "extracted": "move(C, B, 70); deposit(B, 30)",
+     "text": "FINAL: move(C, B, 70); deposit(B, 30)"
+    },
+    "toolsim-3-5": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 10455,
+     "extracted": "move(E, B, 20); deposit(B, 10); deposit(C, 60)",
+     "text": "We need to reach the target balances: A: 90, B: 120, C: 140, D: 90, E: 60.  \nInitial balances: A: 90, B: 90, C: 80, D: 90, E: 80.  \nTotal initial sum = 430, goal sum = 500, so we must add 70 total via deposits.  \nWe can move 20 from E to B (both initially unlocked, E has 80 \u2265 20), then deposit 10 to B and 60 to C.  \nThis yields: B: 90 + 20 (move) + 10 (deposit) = 120; C: 80 + 60 = 140; E: 80 - 20 = 60; A and D remain 90.  \nAll operations satisfy the requirements: move(E, B, 20) needs both unlocked and E's balance \u2265 20; deposit(B, 10) and deposit(C, 60) need only the accounts unlocked.  \nThe flags for A and D remain as initially, which is allowed because the goal only specifies balances.\n\nFINAL: move(E, B, 20); deposit(B, 10); deposit(C, 60)"
+    },
+    "longctx-1-0": {
+     "family": "longctx",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 633,
+     "extracted": "6540",
+     "text": "The project led by Tomas Reyes is Glacier, which was folded into the Summit program. The Summit program has a quarterly allocation of 1900 units (note 14). The project led by Livia Costa is Quartz, which was folded into the Horizon program. The Horizon program has a quarterly allocation of 4640 units (note 18). The sum of these two allocations is 1900 + 4640 = 6540.\n\nFINAL: 6540"
+    },
+    "longctx-2-1": {
+     "family": "longctx",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 636,
+     "extracted": "15770",
+     "text": "The project led by Bruno Vidal is Cobalt, which was folded into the Lantern program. The Lantern program carries a quarterly allocation of 9420 units (note 34). The project led by Dario Quint is Zephyr, which was folded into the Granite program. The Granite program carries a quarterly allocation of 6350 units (note 17). The sum of these two allocations is 9420 + 6350 = 15770.\n\nFINAL: 15770"
+    },
+    "longctx-3-2": {
+     "family": "longctx",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 866,
+     "extracted": "6530",
+     "text": "The question asks for the sum of the quarterly allocations of the programs containing the projects led by Ivo Petrov and Zoe Marchetti.\n\nFrom the notes:\n- Note 115: \"After the reshuffle, Ivo Petrov now leads project Delta.\"\n- Note 45: \"Project Delta was folded into the Orchard program last quarter.\"\n- Note 70: \"Budget line K30 carries a quarterly allocation of 4130 units.\"\n- Note 133: \"The Orchard program reports under budget line K30.\"\n\n- Note 90: \"After the reshuffle, Zoe Marchetti now leads project Anvil.\"\n- Note 41: \"Project Anvil was folded into the Everest program last quarter.\"\n- Note 40: \"The Everest program reports under budget line R32.\"\n- Note 21: \"Budget line R32 carries a quarterly allocation of 2400 units.\"\n\nThus:\n- Orchard program (containing Delta, led by Petrov): 4130 units\n- Everest program (containing Anvil, led by Marchetti): 2400 units\n\nSum: 4130 + 2400 = 6530\n\nFINAL: 6530"
+    },
+    "longctx-4-3": {
+     "family": "longctx",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1932,
+     "extracted": "8530",
+     "text": "Bea Solano leads project Juniper, which was folded into the Ironwood program last quarter. The Ironwood program reports under budget line K58, which carries a quarterly allocation of 5030 units (note 94, note 19).\n\nIvo Petrov leads project Nimbus, which was folded into the Quarry program last quarter. The Quarry program reports under budget line R60, which carries a quarterly allocation of 3500 units (note 15, note 72, note 20).\n\nThe sum of the two quarterly allocations is 5030 + 3500 = 8530.\n\nFINAL: 8530"
+    },
+    "toolsim-1-1": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 7465,
+     "extracted": "verify(A); unlock(A); deposit(A, 20); deposit(B, 20)",
+     "text": "FINAL: verify(A); unlock(A); deposit(A, 20); deposit(B, 20)"
+    },
+    "longctx-6-5": {
+     "family": "longctx",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1059,
+     "extracted": "16700",
+     "text": "The project led by Viktor Lang is Zephyr, which was folded into the Everest program. The project led by Ines Ferreira is Vertex, which was folded into the Trident program. \n\nFrom the notes:\n- Note 230: \"The Everest program reports under budget line K24.\"\n- Note 313: \"Budget line K24 carries a quarterly allocation of the amount posted at desk E4.\"\n- Note 351: \"The amount posted at desk E4 is 6910 units.\"\n- Note 58: \"The Trident program reports under budget line R22.\"\n- Note 184: \"Budget line R22 carries a quarterly allocation of the amount posted at desk W4.\"\n- Note 119: \"The amount posted at desk W4 is 9790 units.\"\n\nTherefore:\n- Everest program quarterly allocation = 6910 units\n- Trident program quarterly allocation = 9790 units\n- SUM = 6910 + 9790 = 16700\n\nFINAL: 16700"
+    },
+    "longctx-5-4": {
+     "family": "longctx",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2594,
+     "extracted": "15020",
+     "text": "The project led by Nadia Osei is project Willow, which was folded into the Pioneer program (note 53). The quarterly allocation for the Pioneer program is given by budget line K89, which carries the amount posted at desk E6 (note 223). Note 4 states that the amount posted at desk E6 is 7710 units, so the Pioneer program's quarterly allocation is 7710 units.\n\nThe project led by Amara Diallo is project Xenon, which was folded into the Beacon program (note 35). The Beacon program reports under budget line R33 (note 248). Note 73 states that budget line R33 carries a quarterly allocation of the amount posted at desk W8, and note 44 confirms that the amount posted at desk W8 is 7310 units. Thus, the Beacon program's quarterly allocation is 7310 units.\n\nThe sum of the two quarterly allocations is 7710 + 7310 = 15020.\n\nFINAL: 15020"
+    },
+    "casework-1-0": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1647,
+     "extracted": "249",
+     "text": "The base amount is 7700.  \nStep 1: The first 14000 units are levied at 10%. Since 7700 \u2264 14000, the entire amount is levied at 10%:  \n7700 \u00d7 10 = 77000; integer division by 100 gives 770.  \nStep 2: Filing class is gamma, so add a surcharge of 45 per registered unit. Registered units = 0, so surcharge = 0. Total = 770 + 0 = 770.  \nStep 3: Case is flagged for relief, subtract a credit of 521. 770 \u2212 521 = 249. Total cannot go below 0, so it remains 249.  \nStep 4: Cap at 28% of the base amount: 7700 \u00d7 28 = 215600; integer division by 100 gives 2156. Since 249 \u2264 2156, the cap does not apply.  \n\nFINAL: 249"
+    },
+    "casework-1-1": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 4096,
+     "extracted": "1194",
+     "text": "The levy is computed step by step as specified.\n\n**Step 1: Levy on the base amount (8800 units) per slice in order, with integer division after each multiplication.**\n\n- First 6000 units at 18%:  \n  \\(6000 \\times 18 = 108000\\); \\(108000 \\div 100 = 1080\\)\n- Units above 6000 up to 7000 (1000 units) at 20%:  \n  \\(1000 \\times 20 = 20000\\); \\(20000 \\div 100 = 200\\)\n- Units above 7000 up to 11000 (8800 \u2212 7000 = 1800 units) at 24%:  \n  \\(1800 \\times 24 = 43200\\); \\(43200 \\div 100 = 432\\)\n- Units above 11000: 0 (since 8800 < 11000)\n\nTotal levy from step 1: \\(1080 + 200 + 432 = 1712\\)\n\n**Step 2: Filing class is beta, not alpha or gamma, so no surcharge is added.**  \nLevy remains 1712.\n\n**Step 3: Case is flagged for relief, subtract credit of 518 (total cannot go below 0).**  \n\\(1712 - 518 = 1194\\) (1194 > 0, so levy is 1194).\n\n**Step 4: Cap at 32% of the base amount (integer division by 100).**  \n\\(32 \\times 8800 = 281600\\); \\(281600 \\div 100 = 2816\\).  \nSince 1194 \u2264 2816, the cap does not reduce the levy.\n\nFinal levy: 1194\n\nFINAL: 1194"
+    },
+    "toolsim-3-4": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 10135,
+     "extracted": "verify(D); unlock(D); move(B, D, 70); move(C, E, 40); deposit(D, 70); deposit(E, 40)",
+     "text": "FINAL: verify(D); unlock(D); move(B, D, 70); move(C, E, 40); deposit(D, 70); deposit(E, 40)"
+    },
+    "casework-2-3": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 4155,
+     "extracted": "1290",
+     "text": "The levy is computed step by step as specified.\n\n**Step 1: Levy on the base amount (12800) per slice**\n- First 2000 units at 18%: \\(2000 \\times 18 = 36000\\), integer division by 100 \u2192 360\n- Units 2001\u20137000 (5000 units) at 20%: \\(5000 \\times 20 = 100000\\), /100 \u2192 1000\n- Units 7001\u201310000 (3000 units) at 14%: \\(3000 \\times 14 = 42000\\), /100 \u2192 420\n- Units above 10000 (2800 units) at 7%: \\(2800 \\times 7 = 19600\\), /100 \u2192 196\n- Total levy from step 1: \\(360 + 1000 + 420 + 196 = 1976\\)\n\n**Step 2: Surcharge for filing class**\n- Filing class is beta (not alpha or gamma), so no surcharge is added. Levy remains 1976.\n\n**Step 3: Credit for relief**\n- Case is flagged for relief, base amount 12800 \u2264 20000, so credit = 686.\n- Subtract: \\(1976 - 686 = 1290\\). Total after subtraction is not below 0.\n\n**Step 4: Cap at 38% of base amount**\n- 38% of 12800: \\(12800 \\times 38 = 486400\\), integer division by 100 \u2192 4864.\n- Current levy 1290 \u2264 4864, so cap does not reduce it.\n\nFinal levy: 1290\n\nFINAL: 1290"
+    },
+    "casework-2-2": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 4078,
+     "extracted": "2701",
+     "text": "The levy is computed step by step as follows:\n\n**Step 1: Levy on base amount (16800) per slice in order**\n- First 8000 units at 11%: \\(8000 \\times 11 = 88000\\), integer division by 100 \u2192 880\n- Units 8001\u201316000 (8000 units) at 27%: \\(8000 \\times 27 = 216000\\), /100 \u2192 2160\n- Units 16001\u201317000 (800 units, since base is 16800) at 8%: \\(800 \\times 8 = 6400\\), /100 \u2192 64\n- Units above 17000: 0\n- Subtotal: \\(880 + 2160 + 64 = 3104\\)\n\n**Step 2: Surcharge for filing class**\n- Filing class is beta, not alpha or gamma \u2192 no surcharge added. Subtotal remains 3104.\n\n**Step 3: Credit for relief flagging**\n- Flagged for relief: yes. Base amount 16800 > 14000.\n- Credit base: 683. Reduction: for every full 100 units above 14000.  \n  Units above 14000 = \\(16800 - 14000 = 2800\\). Full 100s = \\(\\lfloor 2800 / 100 \\rfloor = 28\\).  \n  Reduction = \\(10 \\times 28 = 280\\).  \n  Reduced credit = \\(683 - 280 = 403\\) (cannot go below 0).\n- Subtract credit from subtotal: \\(3104 - 403 = 2701\\). Total after subtraction cannot go below 0 (2701 > 0).\n\n**Step 4: Cap at 42% of base amount**\n- 42% of 16800: \\(16800 \\times 42 = 705600\\), /100 \u2192 7056.\n- Current levy 2701 \u2264 7056 \u2192 cap does not apply.\n\nFinal levy: 2701\n\nFINAL: 2701"
+    },
+    "casework-3-5": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2620,
+     "extracted": "211",
+     "text": "FINAL: 211"
+    },
+    "tableqa-1-0": {
+     "family": "tableqa",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1674,
+     "extracted": "1696",
+     "text": "The qualifying departments must have floor \u2265 4 and at least one active project.  \n- Research (floor 5) has active project Pinnacle-34.  \n- Logistics (floor 6) has active project Zephyr-79.  \n\nEmployees in Research or Logistics who joined strictly before 2022:  \n- Henrik Dahl (Research, joined 2019): hours=28, rate=52 \u2192 28\u00d752 = 1456  \n- Priya Nair (Logistics, joined 2020): hours=12, rate=20 \u2192 12\u00d720 = 240  \n\nTotal sum = 1456 + 240 = 1696.\n\nFINAL: 1696"
+    },
+    "tableqa-4-3": {
+     "family": "tableqa",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1361,
+     "extracted": "3880",
+     "text": "The departments on floor 4 or higher are only Support (floor 4). Support has at least one active project (Xenon-79). Employees in Support who joined strictly before 2022 are Ivo Petrov (joined 2021), Viktor Lang (joined 2020), and Omar Haddad (joined 2021). Computing hours \u00d7 rate:\n\n- Ivo Petrov: 24 \u00d7 87 = 2088\n- Viktor Lang: 31 \u00d7 47 = 1457\n- Omar Haddad: 5 \u00d7 67 = 335\n\nSum: 2088 + 1457 + 335 = 3880.\n\nFINAL: 3880"
+    },
+    "tableqa-2-1": {
+     "family": "tableqa",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1594,
+     "extracted": "1460",
+     "text": "The departments on floor 3 or higher are Compliance (floor 3), Ops (floor 6), and Design (floor 3). Among these, only Compliance has at least one active project (Meridian-29). Therefore, we consider employees in the Compliance department who joined before 2024.\n\nCompliance employees:\n- id 107: Ines Ferreira, joined 2022, hours=27, rate=30 \u2192 27 \u00d7 30 = 810\n- id 114: Nadia Osei, joined 2019, hours=13, rate=50 \u2192 13 \u00d7 50 = 650\n\nTotal sum = 810 + 650 = 1460.\n\nFINAL: 1460"
+    },
+    "casework-3-4": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 5722,
+     "extracted": "3300",
+     "text": "The levy is computed step by step as follows:\n\n**Step 1: Levy on base amount (19100)**\n- First 14000 units at 18%: 14000 \u00d7 18 = 252000; integer division by 100 \u2192 2520\n- Remaining: 19100 \u2212 14000 = 5100\n- Units 14001\u201315000 at 6%: take 1000 units (since 5100 > 1000); 1000 \u00d7 6 = 6000; /100 \u2192 60\n- Remaining: 5100 \u2212 1000 = 4100\n- Units 15001\u201317000 at 24%: take 2000 units; 2000 \u00d7 24 = 48000; /100 \u2192 480\n- Remaining: 4100 \u2212 2000 = 2100\n- Units above 17000 at 6%: 2100 units; 2100 \u00d7 6 = 12600; /100 \u2192 126\n- Total after Step 1: 2520 + 60 + 480 + 126 = 3186\n\n**Step 2: Surcharge for filing class gamma**\n- Filing class is gamma, so add 48 per registered unit (1 unit): +48\n- Total: 3186 + 48 = 3234\n\n**Step 3: Relief credit**\n- Flagged for relief: no \u2192 no subtraction applied\n- Total remains 3234\n\n**Step 4: Surtax**\n- Running total 3234 exceeds 1900; excess = 3234 \u2212 1900 = 1334\n- 5% of excess: (5 \u00d7 1334) / 100 = 6670 / 100 = 66 (integer division)\n- Total: 3234 + 66 = 3300\n\n**Step 5: Cap at 40% of base amount**\n- 40% of 19100: (40 \u00d7 19100) / 100 = 764000 / 100 = 7640\n- Current total 3300 \u2264 7640 \u2192 no cap applied\n- Final levy = 3300\n\nFINAL: 3300"
+    },
+    "repobug-1-0": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 641,
+     "extracted": "f2",
+     "text": "The function f2 has a docstring stating it returns the remainder of (x times 7 plus 27) divided by 101, but its body uses `x * 10` instead of `x * 7`. All other helper functions' bodies exactly match their docstrings.\n\nFINAL: f2"
+    },
+    "tableqa-3-2": {
+     "family": "tableqa",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2856,
+     "extracted": "3367",
+     "text": "The qualifying departments are those on floor 4 or higher with at least one active project. From the DEPARTMENTS table, floors 4+ are Support (4), Research (6), and Design (4). From PROJECTS, Support has active projects (Krait-88, Fjord-14), Design has an active project (Lumen-29), but Research has no active project. Thus, only Support and Design qualify.\n\nEmployees of Support and Design who joined strictly before 2022 (i.e., joined in 2021 or earlier):\n\n- Design employees:\n  - Bruno Vidal (id 102): joined 2019, hours=14, rate=85 \u2192 14\u00d785 = 1190\n  - Casper Holm (id 108): joined 2020, hours=5, rate=67 \u2192 5\u00d767 = 335\n  - Dina Waheed (id 116): joined 2020, hours=34, rate=48 \u2192 34\u00d748 = 1632\n  - Greta Hoffman (id 117): joined 2019, hours=10, rate=21 \u2192 10\u00d721 = 210\n\n- Support employees: all joined in 2023 or later, so none qualify.\n\nSum: 1190 + 335 + 1632 + 210 = 3367.\n\nFINAL: 3367"
+    },
+    "repobug-1-1": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 633,
+     "extracted": "f2",
+     "text": "The function f2 has a docstring stating it \"Return x scaled by 7, shifted up by 15, reduced modulo 89,\" but its body uses `x * 9` instead of `x * 7`. All other functions' bodies match their docstrings exactly.\n\nFINAL: f2"
+    },
+    "repobug-2-3": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 575,
+     "extracted": "f6",
+     "text": "The docstring for `f6` states \"Return x scaled by 7, shifted up by 9, reduced modulo 103,\" but the actual body uses `+ 19` instead of `+ 9`. All other functions' bodies match their docstrings exactly.\n\nFINAL: f6"
+    },
+    "repobug-2-2": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 608,
+     "extracted": "f1",
+     "text": "The function f1 has a docstring stating it returns the remainder of (x times 8 plus 18) divided by 89, but its body returns (x * 8 + 28) % 89, which uses 28 instead of 18. All other functions match their docstrings exactly.\n\nFINAL: f1"
+    },
+    "repobug-3-5": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1078,
+     "extracted": "f5",
+     "text": "FINAL: f5"
+    },
+    "repobug-3-4": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 850,
+     "extracted": "f6",
+     "text": "The function f6 has a body `(x * 12 + 8) % 103` but its docstring says \"Return x scaled by 7, shifted up by 34, reduced modulo 103.\" The scaling factor and shift amount in the body (12 and 8) do not match the docstring's description (7 and 34). All other functions' bodies exactly match their docstrings.\n\nFINAL: f6"
+    },
+    "audit-1-0": {
+     "family": "audit",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 672,
+     "extracted": "2,9",
+     "text": "2,9\nFINAL: 2,9"
+    },
+    "tableqa-5-4": {
+     "family": "tableqa",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": 4265,
+     "extracted": "5639",
+     "text": "The departments on floor 4 or higher with at least one active project are Research (floor 5, active projects Delta-15 and Zephyr-50) and Logistics (floor 5, active project Xenon-83). \n\nEmployees in Research who joined strictly before 2025:\n- Omar Haddad (2021): 22 \u00d7 47 = 1034\n- Dario Quint (2021): 6 \u00d7 32 = 192\n- Lena Vogel (2024): 26 \u00d7 69 = 1794\n- Ilsa Brandt (2022): 15 \u00d7 23 = 345\nResearch sum = 1034 + 192 + 1794 + 345 = 3365\n\nEmployees in Logistics who joined strictly before 2025:\n- Casper Holm (2023): 7 \u00d7 32 = 224\n- Yusuf Kaan (2020): 15 \u00d7 20 = 300\n- Greta Hoffman (2022): 14 \u00d7 74 = 1036\n- Selin Aydin (2020): 14 \u00d7 51 = 714\nLogistics sum = 224 + 300 + 1036 + 714 = 2274\n\nTotal sum = 3365 + 2274 = 5639\n\nFINAL: 5639"
+    },
+    "tableqa-6-5": {
+     "family": "tableqa",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 5143,
+     "extracted": "9552",
+     "text": "The qualifying departments are those on floor 3 or higher with at least one active project. From the DEPARTMENTS table, floors >= 3 are Research (4), Design (4), Ops (6), Field (5), Support (5). Checking PROJECTS for active status: Design has Indigo-50 and Talus-74 active; Field has Drift-85 active; Support has Juniper-31 and Lumen-28 active. Research and Ops have no active projects. Thus, the qualifying departments are Design, Field, and Support.\n\nEmployees in these departments who joined strictly before 2023 (i.e., joined in 2022 or earlier) are:\n- Gustav Weber (Design, joined 2020): hours=16, rate=80 \u2192 16\u00d780 = 1280\n- Henrik Dahl (Field, joined 2020): hours=29, rate=88 \u2192 29\u00d788 = 2552\n- Jana Kovac (Support, joined 2020): hours=36, rate=66 \u2192 36\u00d766 = 2376\n- Amara Reyes (Field, joined 2021): hours=38, rate=88 \u2192 38\u00d788 = 3344\n\nSum: 1280 + 2552 + 2376 + 3344 = 9552.\n\nFINAL: 9552"
+    },
+    "audit-4-3": {
+     "family": "audit",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 2298,
+     "extracted": "3,5,6,8,11,18",
+     "text": "3,5,6,8,11,18\nFINAL: 3,5,6,8,11,18"
+    },
+    "audit-5-4": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1921,
+     "extracted": "6,11,14,18",
+     "text": "6,11,14,18\nFINAL: 6,11,14,18"
+    },
+    "toolsim-2-3": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 12672,
+     "extracted": "deposit(D, 100); move(B, D, 100)",
+     "text": "FINAL: deposit(D, 100); move(B, D, 100)"
+    },
+    "audit-5-5": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 3188,
+     "extracted": "1,5,9,11,14",
+     "text": "1,5,9,11,14\nFINAL: 1,5,9,11,14"
+    },
+    "toolsim-1-0": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 2587,
+     "extracted": "verify(B); unlock(B); deposit(B, 50)",
+     "text": "FINAL: verify(B); unlock(B); deposit(B, 50)"
+    },
+    "audit-2-1": {
+     "family": "audit",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 2180,
+     "extracted": "5,11,14",
+     "text": "5,11,14\nFINAL: 5,11,14"
+    },
+    "audit-3-2": {
+     "family": "audit",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1916,
+     "extracted": "1,2,6,9,11,14",
+     "text": "1,2,6,9,11,14\nFINAL: 1,2,6,9,11,14"
+    },
+    "inv-22-2": {
+     "family": "inv",
+     "rung": 22,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-5-w22": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-5-w23": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-7-w20": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-7-w21": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 3740,
+     "extracted": "9630",
+     "text": "To answer this question, I need to identify the quarterly allocations for the programs containing the projects led by Lena Vogel and Dina Waheed, then sum them.\n\nFirst, let's find Lena Vogel's program:\n- Note 217 states: \"Lena Vogel took over as lead of project Krait this cycle.\"\n- Note 542 confirms: \"Project Krait was folded into the Lantern program last quarter.\"\n- Note 616 states: \"The Lantern program reports under budget line K29.\"\n- Note 225 states: \"Budget line K29 carries the amount posted at desk E3.\"\n- Note 69 provides the amount: \"The amount posted at desk E3 is 1830 units.\"\n\nSo the Lantern program (containing project Krait led by Lena Vogel) has a quarterly allocation of 1830 units.\n\nNext, let's find Dina Waheed's program:\n- Note 125 states: \"Dina Waheed was appointed to head project Pinnacle.\"\n- Note 517 confirms: \"Project Pinnacle was folded into the Ironwood program last quarter.\"\n- Note 363 states: \"The Ironwood program reports under budget line R47.\"\n- Note 87 states: \"Budget line R47 carries the amount posted at desk W7.\"\n- Note 410 provides the amount: \"The amount posted at desk W7 is 7800 units.\"\n\nSo the Ironwood program (containing project Pinnacle led by Dina Waheed) has a quarterly allocation of 7800 units.\n\nSumming these two allocations: 1830 + 7800 = 9630.\n\nFINAL: 9630"
+    },
+    "inv-8-0": {
+     "family": "inv",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "inv-14-1": {
+     "family": "inv",
+     "rung": 14,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-4-w20": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-3": {
+     "family": "inv",
+     "rung": 32,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-4-w21": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-8-w22": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-8-w23": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-5-w22": {
+     "family": "casework",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-5-w23": {
+     "family": "casework",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-4-w20": {
+     "family": "casework",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-4-w21": {
+     "family": "casework",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-7-w20": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-4-w21": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1091,
+     "extracted": "f10",
+     "text": "The function f10 has a body that does not match its docstring. The docstring says \"Add 23 to 6 copies of x\", which should compute (6*x + 23) % 103, but the body returns (x * 23 + 6) % 103, swapping the coefficient and constant.\n\nFINAL: f10"
+    },
+    "repobug-4-w20": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 846,
+     "extracted": "f2",
+     "text": "The function f2 has a body `(x * 35 + 6) % 97`, but its docstring says \"Add 35 to 6 copies of x\", which would correspond to `6*x + 35`. All other functions' bodies match their docstrings exactly.\n\nFINAL: f2"
+    },
+    "repobug-5-w22": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1060,
+     "extracted": "f9",
+     "text": "The function f9 has a docstring stating \"Multiply the input by 7, then add 10, keeping the result modulo 97\", but its body returns `(x * 7 + 11) % 97`, which adds 11 instead of 10. All other functions match their docstrings exactly.\n\nFINAL: f9"
+    },
+    "repobug-5-w23": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1038,
+     "extracted": "f8",
+     "text": "The function f8 has a docstring stating \"Return the remainder of (x times 7 plus 11) divided by 103,\" but its body uses `+ 12` instead of `+ 11`. All other functions' bodies match their docstrings exactly.\n\nFINAL: f8"
+    },
+    "tableqa-8-w22": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": 1823,
+     "extracted": "0",
+     "text": "The departments on floor 3 or higher are Logistics (floor 4) and Field (floor 4).  \nAmong these, only Logistics has at least one active project (Cobalt-82). Field has no active projects, so it is excluded from the first filter.  \n\nNow we exclude departments that also have at least one paused project. Logistics has paused projects (Cinder-31, Nimbus-53), so Logistics is excluded. Field was already excluded. No departments remain after this filtering.  \n\nSince there are no remaining departments, there are no employees from those departments to consider. The total sum of hours \u00d7 rate for such employees is therefore 0.\n\nFINAL: 0"
+    },
+    "audit-6-w20": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2623,
+     "extracted": "6,7,11,14,20,23,26",
+     "text": "6,7,11,14,20,23,26\nFINAL: 6,7,11,14,20,23,26"
+    },
+    "audit-7-w23": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 5483,
+     "extracted": "2,6,11,14,16,17,26",
+     "text": "2,6,11,14,16,17,26\nFINAL: 2,6,11,14,16,17,26"
+    },
+    "audit-6-w21": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 3143,
+     "extracted": "2,5,10,11,19,22,24",
+     "text": "2,5,10,11,19,22,24\nFINAL: 2,5,10,11,19,22,24"
+    },
+    "audit-7-w22": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 4931,
+     "extracted": "2, 6, 7, 14, 16, 28",
+     "text": "2, 6, 7, 14, 16, 28\nFINAL: 2, 6, 7, 14, 16, 28"
+    },
+    "tableqa-7-w21": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-8-w23": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "inv-60-w21": {
+     "family": "inv",
+     "rung": 60,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-1-w30": {
+     "family": "bigknap",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-6-w30": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": false,
+     "completion_tokens": 2428,
+     "extracted": "answer. Let's reason step-by-step for the actual task",
+     "text": "We need to produce the final answer. Let's reason step-by-step for the actual task.\n\nWe have initial accounts and goal state. We need to generate at most 17 calls.\n\nLet's list the initial balances and goal:\nA: 110 -> 110 (no change)\nB: 30 -> 30 (no change)\nC: 70 -> 70 (no change)\nD: 30 -> 170 (increase by 140)\nE: 110 -> 110 (no change)\nF: 50 -> 50 (no change)\nG: 20 -> 90 (increase by 70)\nH: 40 -> 10 (decrease by the requirements. Let me carefully analyze the task:\n\n1. **Understand the operations and constraints:**\n   - `verify(X)` - marks account X as verified (always allowed)\n   - `unlock(X)` - requires X verified; unlocks X\n   - `deposit(X, N)` - requires X unlocked; adds N (positive integer) to X\n   - `move(X, Y, N)` - requires BOTH X and Y unlocked, X's balance >= N, X != Y; moves N from X to Y\n   - Any call violating requirements ABORTS the whole session\n\n2. **Initial state:**\n   - A: balance 110, LOCKED, NOT verified\n   - B: balance 30, LOCKED, NOT verified\n   - C: balance 70, LOCKED, NOT verified\n   - D: balance 30, unlocked, verified\n   - E: balance 110, LOCKED, NOT verified\n   - F: balance 50, LOCKED, NOT verified\n   - G: balance 20, LOCKED, NOT verified\n   - H: balance 40, LOCKED, NOT verified\n\n3. **Goal state (balances only, verified/locked flags don't matter):**\n   - A: 110\n   - B: 30\n   - C: 70\n   - D: 170\n   - E: 110\n   - F: 50\n   - G: 90\n   - H: 10\n\n4. **Analyze what needs to happen:**\n   - A: 110 \u2192 110 (no change needed)\n   - B: 30 \u2192 30 (no change needed)\n   - C: 70 \u2192 70 (no change needed)\n   - D: 30 \u2192 170 (needs +140)\n   - E: 110 \u2192 110 (no change needed)\n   - F: 50 \u2192 50 (no change needed)\n   - G: 20 \u2192 90 (needs +70)\n   - H: 40 \u2192 10 (needs -30)\n\n5. **Available operations and requirements:**\n   - D is already unlocked and verified - can receive/deposit/transfer\n   - A, B, C, E, F, G, H are all LOCKED and NOT verified initially\n   - To use `move()`, both source and destination need to be unlocked\n   - To unlock, need `verify()` first, then `unlock()`\n   - `deposit()` requires unlocked account\n\n6. **Strategy to reach goal:**\n   - Need to transfer 140 to D (from somewhere) and 30 from H\n   - Need to transfer 70 to G (from somewhere)\n   - Need to take 30 from H\n\n   Let me think about possible sources:\n   - A has 110, could transfer some\n   - B has 30 (but needs to stay at 30)\n   - C has 70 (needs to stay at 70)\n   - E has 110 (could transfer)\n   - F has 50 (needs to stay at 50)\n   - G starts at 20, needs to reach 90 (+70)\n   - H starts at 40, needs to reach 10 (-30)\n\n   So I need to:\n   - Unlock accounts to enable transfers\n   - Transfer 140 to D (could come from A or E)\n   - Transfer 70 to G (from somewhere)\n   - Transfer 30 from H (to somewhere)\n\n   Let me plan the sequence:\n\n   **Step 1: Unlock necessary accounts**\n   - Need to verify and unlock accounts that will participate in moves\n   - D is already unlocked and verified\n   - Need to unlock some source accounts (A, E possibly) and destination accounts (G, H)\n\n   **Step 2: Plan the moves**\n   - D needs +140: could get from A (110) + E (110) but that's too much, or just from one of them\n   - G needs +70: could come from H (40\u219210) or from another account\n   - H needs to go from 40\u219210: lose 30\n\n   Let me think about a minimal sequence:\n\n   Actually, let me reconsider. The goal is:\n   - A: 110 (unchanged)\n   - B: 30 (unchanged)\n   - C: 70 (unchanged)\n   - D: 170 (from 30, needs +140)\n   - E: 110 (unchanged)\n   - F: 50 (unchanged)\n   - G: 90 (from 20, needs +70)\n   - H: 10 (from 40, needs -30)\n\n   So net transfers needed:\n   - +140 to D\n   - +70 to G\n   - -30 from H\n\n   Total out: +140 +70 = +210 to D and G\n   Total in: -30 from H\n   Net: 210 - 30 = 180 difference\n\n   Wait, that doesn't balance. 1, 2, 3, 4, 5, 6, 7, 8, 9 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52., 2015, 2015\n\n**Tags:** 17, 2015, 2015, 2015, 2015, 2015, 2015\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review -Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December 31, 2015 by 2015 in Review**\n\nIt's been a year since my last post. I've been busy with work and other things, but I'm back now. Let's dive into 2015: A Year in Review.\n\n---\n\n# 2015: A Year in Review\n\n**Posted on December. on\n XIT.. or; for.ity\nth.w\nw...\n...., for.\n..\n.\n = .\n .\n\ns y.. - movebw.uced\n\n\n\n\n \n\n\n\n\n\n\n\tw\n\n\n\n\nrle-thque\tmoveth movemen\nw.\n\n\n\n\n.\n\ud504\nmove. h y moveww.nc \tmove;\n\n ( (x;;. (; ;\t ();).\n\n}}6: 0:w81u\ud2b8\u0440 yth 2ock.c;;. (\tfor.che y;;.\tmove,;.;n\tmove;Th; (;w;.r;;wik. 2\n.\t\n n u....\u02d0...;..\t.r;;\u03b8\tk;;;u;;\u03b8;\tth:;\u0181;w;\tmove\n;;  \n;\tmoveww. 1\n  \n. (;th;w;w\t\t;\tly;;;\t;\tth;n;\t\t.\t in.th.;nth;0;n the thes. &, &\n the:,\n, al\n\nallys...\ns the.\nally ( the the of &"
+    },
+    "bigknap-3-w32": {
+     "family": "bigknap",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": 2830,
+     "extracted": null,
+     "text": "We need to output the exact optimum. Not an approximation.\n\n  Report the maximum achievable total value \u2014 the exact optimum, not an approximation.\n\n  So I need to find the maximum value subset within capacity 601.\n\n  This is a knapsack problem. I need to select items to maximize total value without exceeding weight 601.\n\n  Let me list all items with value and weight:\n\n  1: v=41, w=36\n  2: v=85, w=15\n  3: v=35, w=47\n  4: v=36, w=24\n  5: v=108, w=17\n  6: v=28, w=78\n  7: v=16, w=60\n  8: v=109, w=9\n  9: v=88, w=11\n  10: v=64, w=78\n  11: v=40, w=46\n  12: v=97, w=19\n  13: v=27, w=17\n  14: v=102, w=86\n  15: v=103, w=74\n  16: v=30, w=69\n  17: v=88, w=78\n  18: v=76, w=45\n  19: v=29, w=87\n  20: v=94, w=76\n  21: v=79, w=51\n  22. v=112, w=5  (item 22? Wait, item 22: v=112, w=5)\n  Let me re-list carefully from the text:\n\n  item 1: value 41, weight 36\n  item 2: value 85, weight 15\n  item 3: value 35, weight 47\n  item 4: value 36, weight 24\n  item 5: value 108, weight 17\n  item 6: value 28, weight 78\n  item 22: value 112, weight 5\n  item 3: value 35, weight 47\n  item 3: value 35, weight 47\n  item 4: value 36, weight 24\n  item 5: value 108, weight 17\n  item 6: value 28, weight 78\n  item 7: value 16, weight 60\n  item 8: value 109, weight 9\n  item 9: value 88, weight 11\n  item 10: value 64, weight 78\n  item 11: value 40, weight 46\n  item 12: value 97, weight 19\n  item 13: value 27, weight 17\n  item 14: value 102, weight 86\n  item 16: value 30, weight 69\n  item 19: value 29, weight 87\n  item 20: value 94, weight 76\n  item 21: value 79, weight 51\n  item 22: value 112, weight 5\n  item 23: value 57, weight 78\n  item 23: value 57, weight 78\n  item 24: value 28, weight 81\n  item 25: value 77, weight 18\n  item 26: value 57, weight 8\n  item 27: value 63, weight 76\n  item 28: value 24, weight 40\n  item 29: value 61, weight 62\n  item 22: value 112, weight 5\n  item 23: value 57, weight 78\n  item 23: value 57, weight 78\n  item 24: value 28, weight 81\n  item 25: value 77, weight 18\n  item 26: value 57, weight 8\n  item 27: value 63, weight 76\n  item 28: value 24, weight 40\n  item 29: value 61, weight 62\n  item 23: value 57, weight 78\n  item 29: value 61, weight 62\n  item 30: value 69, weight 23\n  item 31: value 48, weight 88\n  item 32: value 98, weight 82\n\n  Total capacity = 601.\n\n  I'll start by computing the value density (value per weight) for each item to identify the most efficient items. This will help me prioritize which items to consider first, although the optimal solution may not simply be the highest density items due to integer constraints.\n\n  Item 1: 41/36 \u2248 1.1389\n  item 2: 85/15 \u2248 5.6667\n  item 3: 35/47 \u2248 0.7447\n  item 4: 36/24 = 1.5\n  item 5: 108/17 \u2248 6.3529\n  item 6: 28/78 \u2248 0.3590\n  item 7: 16/60 \u2248 0.2667\n  item 8: 109/9 \u2248 12.1111\n  item 9: 88/11 = 8\n  item 10: 64/78 \u2248 0.8205\n  item 11: 40/46 \u2248 0.8696\n  item 12: 97/19 \u2248 5.1053\n  item 13: 27/17 \u2248 1.5882\n  item 14: 102/86 \u2248 1.1860\n  item 16: 30/69 \u2248 0.4348\n  item 19: 29/87 \u2248 0.3333\n  item 20: 94/76 \u2248 1.2368\n  item 21: 79/51 \u2248 1.5490\n  item 22: 112/5 = 22.4\n  item 23: v=57, w=78\n  item 23: 57/78 \u2248 0.7436\n  item 24: 28/81 \u2248 0.3457\n  item 25: 77/18 \u2248 4.3333\n  item 26: 57/8 = 7.125\n  item 27: 63/76 \u2248 0.8289\n  item 28: 24/40 = 0.6\n  item 29: 61/62 \u2248 0.9839\n  item 23: 57/78 \u2248 0.7436 (wait, item 23 is v=57, w=78, same as item 6? Actually item 6 is v=28, w=78; item 23: v=57, w=78)\n  item 23: 57/78 \u2248 0.7436\n  item 24: 28/81 \u2248 0.3457\n  item 25: 77/18 \u2248 4.3333\n  item 26: 57/8 = 7.125\n  item 27: 63/76 \u2248 0.8289\n  item 28: 24/40 = 0.6\n  item 29: 61/62 \u2248 0.9839\n  item 30: 69/23 \u2248 3.0435\n  item 30: 69/23 \u2248 3.0435 (wait, item 30: value 69, weight 23; item 30: value 69, weight 23? Actually item 30: value 69, weight 23; item 30: value 69, weight 23? The list has item 30: value 69, weight 23, and then item 30 again? Actually the list has item 30: value 69, weight 23, and then item 30 again? Let's check: \"item 30: value 69, weight 23\" and then \"item 30: value 69, weight 23\" - there might be a duplicate or typo. I'll assume item 30 is v=69, w=23, and item 30 is a duplicate or maybe it's item 30 and then item 31? Actually the list goes up to item 32. Let's count: \n  1: 41,36\n  2: 85,15\n  3: 35,47\n  4: 36,24\n  item 5: 108,17\n  item 6: 28,78\n  item 7: 16,60\n  item 8: 109,9\n  item 9: 88,11\n  item 10: 64,78\n  item 11: 40,46\n  item 12: 97,19\n  item 13: 27,17\n  item 14: 102,86\n  item 16: 30,69 (note: item 16, not 15? Actually \"item 16: value 30, weight 69\" - yes)\n  item 17: 88,78\n  item 19: 29,87\n  item 20: 94,76\n  item 21: 79,51\n  item 22: 112,5\n  item 23: 57,78\n  item 23: 57,78 (duplicate? Actually \"item 23: value 57, weight 78\" and then \"item 23: value 57, weight 78\" - probably a typo, but I'll treat as one item with v=57, w=78)\n  item 23: 57,78 (duplicate)\n  item 24: 28,81\n  item 25: 77,18\n  item 26: 57,8\n  item 27: 63,76\n  item 28: 24,40\n  item 29: 61,62\n  item 30: 69,23 (value 69, weight 23)\n  item 31: 48,88\n  item 32: 98,82\n\n  Let's list all items with indices 1 to 32:\n  1: 41,36 need to find the maximum total value. This is a 0/1 knapsack problem with 32 1 complete the the items total of. is 1."
+    },
+    "inv-45-w20": {
+     "family": "inv",
+     "rung": 45,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "toolsim-6-w31": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 9219,
+     "extracted": "verify(E); unlock(E); verify(F); unlock(F); verify(C); unlock(C); verify(G); unlock(G); move(E, G, 80); move(F, C, 10); deposit(C, 30)",
+     "text": "We need to transform the initial balances to the goal balances using the allowed operations. The initial total is 550, goal total is 580, so we must add 30 via deposits. The required changes per account are: C needs +40, G needs +80, E needs -80, F needs -10. We can achieve this by verifying and unlocking E, F, C, G, moving 80 from E to G, 10 from F to C, and depositing 30 into C.\n\nThe sequence of calls (11 total, well within the 17 limit):\n1. verify(E) \u2013 marks E verified.\n2. unlock(E) \u2013 requires E verified; unlocks E.\n3. verify(F) \u2013 marks F verified.\n4. unlock(F) \u2013 requires F verified; unlocks F.\n5. verify(C) \u2013 marks C verified.\n6. unlock(C) \u2013 requires C verified; unlocks C.\n7. verify(G) \u2013 marks G verified.\n8. unlock(G) \u2013 requires G verified; unlocks G.\n9. move(E, G, 80) \u2013 moves 80 from E to G (both unlocked, E balance \u226580).\n10. move(F, C, 10) \u2013 moves 10 from F to C (both unlocked, F balance \u226510).\n11. deposit(C, 30) \u2013 adds 30 to C (C unlocked).\n\nFinal balances: A:100, B:70, C:110, D:70, E:20, F:40, G:150, H:20. The verified/locked flags do not matter per the problem statement.\n\nFINAL: verify(E); unlock(E); verify(F); unlock(F); verify(C); unlock(C); verify(G); unlock(G); move(E, G, 80); move(F, C, 10); deposit(C, 30)"
+    },
+    "toolsim-7-w33": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 10371,
+     "extracted": "verify(A); unlock(A); verify(H); unlock(H); move(A, C, 41); move(A, H, 69); deposit(C, 149); deposit(H, 1)",
+     "text": "We need to transform the initial balances to the goal balances. The total money increases from 650 to 800, requiring 150 in deposits. Account A must lose 110, C must gain 190, and H must gain 70. We can achieve this by verifying and unlocking A and H, moving money from A to C and H, and then depositing the remaining amounts.\n\nInitial state: A=110 (locked, not verified), B=30, C=40 (unlocked, verified), D=70, E=90, F=40, G=80, H=80 (locked, not verified), I=110. Goal: A=0, B=30, C=230, D=70, E=90, F=40, G=80, H=150, I=110.\n\nSequence (8 calls, well within 19):\n1. `verify(A)` \u2013 marks A verified.\n2. `unlock(A)` \u2013 A becomes unlocked.\n3. `verify(H)` \u2013 marks H verified.\n4. `unlock(H)` \u2013 H becomes unlocked.\n5. `move(A, C, 41)` \u2013 A loses 41, C gains 41 (A:69, C:81).\n6. `move(A, H, 69)` \u2013 A loses 69, H gains 69 (A:0, H:149).\n7. `deposit(C, 149)` \u2013 C gains 149 (C:230).\n8. `deposit(H, 1)` \u2013 H gains 1 (H:150).\n\nFinal balances match the goal exactly.\n\nFINAL: verify(A); unlock(A); verify(H); unlock(H); move(A, C, 41); move(A, H, 69); deposit(C, 149); deposit(H, 1)"
+    },
+    "bigknap-2-w31": {
+     "family": "bigknap",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": 37331,
+     "extracted": "341",
+     "text": "The knapsack problem can be solved by applying the dominance rule for 0/1 knapsack: an item is dominated if another item has weight \u2264 and value \u2265 (with at least one strict inequality). After systematically checking all 30 items against each other, only four items are non\u2011dominated:\n\n- Item 4: value 102, weight 10  \n- Item 9: value 79, weight 9  \n- Item 12: value 42, weight 7  \n- Item 17: value 118, weight 23  \n\nAll other 26 items are dominated by at least one of these four, meaning they can be removed without affecting the optimal value. The reduced problem has only these four items, with total weight 10 + 9 + 7 + 23 = 49, which is well within the capacity of 587. Taking all four items yields the maximum total value:\n\n102 + 79 + 42 + 118 = 341.\n\nFINAL: 341"
+    },
+    "toolsim-7-w32": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 15625,
+     "extracted": "verify(F); unlock(F); move(F, B, 50); deposit(B, 30); verify(D); unlock(D); deposit(D, 110)",
+     "text": "FINAL: verify(F); unlock(F); move(F, B, 50); deposit(B, 30); verify(D); unlock(D); deposit(D, 110)"
+    },
+    "tableqa-10-w32": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 24670,
+     "extracted": "10094",
+     "text": "The departments on floor 2 or higher with at least one 'active' project and no 'paused' project are Compliance, Field, and Research.  \n\nFiltering employees from these departments with rate \u2265 51 and who are not department heads, and who joined strictly before 2022:\n\n- **Compliance**: Ilsa Brandt (hours=27, rate=88, joined=2019) and Nora Costa (hours=39, rate=71, joined=2021)  \n  Products: 27\u00d788 = 2376; 39\u00d771 = 2769 \u2192 Sum = 5145\n\n- **Field**: Hana Sato (18\u00d754=972), Yusuf Kaan (14\u00d767=938), Selin Rustam (30\u00d784=2520), Nair Elio (24\u00d786=2064), Ferreira Viktor (20\u00d782=1640), Novak Diallo (28\u00d770=1960)  \n  Sum = 972 + 938 + 2520 + 2064 + 1640 + 1960 = 10094\n\n- **Research**: Ines Ferreira (31\u00d784=2604), Elio Nilsson (9\u00d786=774), Elio Gustav (24\u00d778=1872)  \n  Sum = 2604 + 774 + 1872 = 5250\n\nThe largest departmental total is 10094.\n\nFINAL: 10094"
+    },
+    "tableqa-9-w31": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": false,
+     "completion_tokens": 30514,
+     "extracted": "<number>'.\" So we output \"FINAL: 12804",
+     "text": "We are given three tables: DEPARTMENTS, EMPLOYEES, PROJECTS. We need to solve a query step by step.\n\nFirst, restate the data clearly.\n\nDEPARTMENTS:\ndept | floor | head\nOps | 5 | Lang Weber\nDesign | 3 | Lena Zoe\nField | 4 | Rustam Aliyev\nLogistics | 6 | Petra Brandt\nSupport | 6 | Livia Costa\nResearch | 5 | Omar Meyer\nCompliance | 2 | Aliyev Nair\n\nEMPLOYEES:\nid | name | dept | hours | rate | joined\nWe have many rows. I'll list them with details.\n\nPROJECTS:\nproj | dept | status\nIndigo-94 | Research | active\nKrait-40 | Research | active\nMeridian-14 | Logistics | active\nPinnacle-28 | Compliance | active\nEmber-67 | Design | active\nObsidian-93 | Support | wrapped\nBoreal-53 | Compliance | paused\nDelta-81 | Support | wrapped\nNimbus-19 | Research | active\nBoreal-73 | Ops | paused\nLumen-27 | Compliance | wrapped\nPinnacle-74 | Compliance | paused\nHarrow-22 | Logistics | wrapped\nNimbus-14 | Support | paused\nSable-14 | Field | active\nDelta-49 | Ops | wrapped\nJuniper-88 | Compliance | active\nSable-45 | Design | wrapped\n\nNow, the query steps:\n\n1. \"consider departments that are on floor 4 or higher AND have at least one project with status 'active'.\"\n   - Floor 4 or higher: floors: Ops 5, Design 3 (no, 3 < 4), Field 4, Logistics 6, Support 6, Research 5, Compliance 2 (no).\n   So departments with floor >=4: Ops (5), Field (4), Logistics (6), Support (6), Research (5). Compliance floor 2 excluded, Design floor 3 excluded.\n\n2. \"AND have at least one project with status 'active'.\"\n   Check each of these departments for active projects:\n   - Ops: Projects: Boreal-73 paused, Delta-49 wrapped, Harrow-22 wrapped. Any active? None listed as active. Wait, check: Ops projects: Boreal-73 paused, Delta-49 wrapped, Harrow-22 wrapped. No active. So Ops has no active project.\n   - Field: Projects: Sable-14 active. So Field has active.\n   - Logistics: Projects: Meridian-14 active. So Logistics has active.\n   - Support: Projects: Obsidian-93 wrapped, Delta-81 wrapped, Nimbus-14 paused. No active. So Support has no active.\n   - Research: Projects: Indigo-94 active, Krait-40 active, Nimbus-19 active. So Research has active.\n\n   So departments that satisfy both: floor >=4 AND at least one active project: Field, Logistics, Research.\n\n   Wait, check Ops again: Ops floor 5, but no active project. So excluded.\n   Support floor 6, no active project. Excluded.\n   Design floor 3 <4, excluded.\n   Compliance floor 2 excluded.\n\n   So the set of departments: Field, Logistics, Research.\n\n3. \"Exclude departments that ALSO have at least one 'paused' project.\"\n   Now, among Field, Logistics, Research, we need to exclude any that have at least one paused project.\n   - Field: Projects: only Sable-14 active. No paused listed. So Field has no paused project. So Field remains.\n   - Logistics: Projects: Boreal-73 paused, Delta-49 wrapped, Harrow-22 wrapped. Has paused (Boreal-73). So Logistics has at least one paused project. Therefore, Logistics is excluded.\n   - Research: Projects: Indigo-94 active, Krait-40 active, Nimbus-19 active. No paused listed. So Research has no paused project. So Research remains.\n\n   After exclusion, remaining departments: Field and Research.\n\n   Wait, check: \"Exclude departments that ALSO have at least one 'paused' project.\" So we remove departments that have any paused project. Logistics has Boreal-73 paused, so excluded. Field has none, Research has none. So remaining: Field and Research.\n\n4. \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\"\n   We need to consider employees from the remaining departments (Field and Research). But careful: \"Among the remaining employees\" - does this mean all employees from those departments? Or employees across all departments that meet some criteria? The phrasing: \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\" The \"remaining employees\" likely refers to employees from the departments that survived the previous filters (Field and Research). But we need to interpret: The query says: \"consider departments that are on floor 4 or higher AND have at least one project with status 'active'. Exclude departments that ALSO have at least one 'paused' project. Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\"\n\n   So we have a set of departments: Field and Research. Then we look at employees in those departments. From those employees, we select only those with rate >= 41 and who are not the head of any department. Then we further filter: \"For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   So steps:\n   - Identify employees in departments Field and Research.\n   - From those, keep only employees with rate >= 41 and not a department head.\n   - Among those, further keep only employees who joined strictly before 2025 (i.e., joined year < 2025).\n   - For each department (Field and Research), compute sum of (hours * rate) for those employees.\n   - Report the largest single departmental total.\n\n   But we must be careful: \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\" The \"remaining employees\" might mean all employees from the original set? But the context is the departments we filtered. I think it's employees from the remaining departments (Field and Research). However, we should check if there are employees from other departments that might be considered? The query says: \"consider departments that are on floor 4 or higher AND have at least one project with status 'active'. Exclude departments that ALSO have at least one 'paused' project. Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\" The phrase \"remaining employees\" likely refers to employees belonging to the departments that survived the exclusion. Because otherwise, it would say \"all employees\" or something. So we restrict to Field and Research departments.\n\n   Let's list employees in Field and Research.\n\n   First, extract from EMPLOYEES table those with dept = Field or dept = Research.\n\n   EMPLOYEES data (I'll copy relevant rows):\n\n   id | name | dept | hours | rate | joined\n   100 | Omar Haddad | Research | 28 | 36 | 2023\n   101 | Greta Hoffman | Logistics | 21 | 39 | 2022 (not Field/Research)\n   102 | Nadia Osei | Design | 26 | 22 | 2020\n   103 | Livia Costa | Field | 8 | 54 | 2025\n   104 | Bea Solano | Ops | 31 | 39 | 2019\n   105 | Ines Ferreira | Design | 33 | 67 | 2019\n   106 | Lena Vogel | Research | 15 | 69 | 2020\n   107 | Elio Sartori | Design | 16 | 42 | 2026\n   108 | Amara Diallo | Support | 16 | 68 | 2019\n   109 | Anders Berg | Support | 25 | 80 | 2020\n   110 | Nora Lindgren | Field | 31 | 76 | 2022\n   111 | Marisol Vega | Logistics | 22 | 60 | 2021\n   112 | Tomas Reyes | Field | 29 | 62 | 2026\n   113 | Ivo Petrov | Compliance | 7 | 80 | 2025\n   114 | Milan Novak | Ops | 20 | 50 | 2026\n   115 | Dina Waheed | Compliance | 32 | 60 | 2022\n   116 | Hana Sato | Support | 38 | 51 | 2025\n   117 | Yusuf Kaan | Compliance | 32 | 85 | 2021\n   118 | Casper Holm | Compliance | 34 | 68 | 2020\n   119 | Jana Kovac | Field | 36 | 44 | 2019\n   120 | Bruno Vidal | Research | 18 | 21 | 2020\n   121 | Gustav Weber | Logistics | 17 | 82 | 2024\n   122 | Kenji Mori | Logistics | 37 | 77 | 2025\n   123 | Talia Rosen | Field | 16 | 43 | 2023\n   124 | Zoe Marchetti | Ops | 39 | 35 | 2024\n   125 | Freja Nilsson | Ops | 14 | 49 | 2024\n   126 | Priya Nair | Ops | 15 | 66 | 2023\n   127 | Jonas Meyer | Support | 33 | 42 | 2022\n   128 | Selin Aydin | Compliance | 9 | 76 | 2025\n   129 | Henrik Dahl | Field | 38 | 43 | 2021\n   130 | Cormac Doyle | Ops | 13 | 83 | 2019\n   131 | Viktor Lang | Support | 27 | 89 | 2022\n   132 | Petra Lindqvist | Design | 34 | 36 | 2022\n   133 | Ilsa Brandt | Logistics | 5 | 26 | 2019\n   134 | Dario Quint | Field | 19 | 32 | 2026\n   135 | Rustam Aliyev | Support | 25 | 41 | 2023\n   136 | Bruno Henrik | Logistics | 32 | 84 | 2022\n   137 | Lena Zoe | Research | 31 | 59 | 2026\n   138 | Doyle Tomas | Ops | 32 | 73 | 2022\n   139 | Haddad Hoffman | Ops | 8 | 62 | 2026\n   140 | Milan Nora | Ops | 37 | 23 | 2019\n   141 | Sato Lang | Support | 33 | 82 | 2023\n   142 | Anders Henrik | Ops | 19 | 22 | 2023\n   143 | Selin Viktor | Field | 30 | 36 | 2025\n   144 | Novak Costa | Ops | 14 | 80 | 2025\n   145 | Rosen Quint | Ops | 39 | 47 | 2022\n   146 | Cormac Sato | Logistics | 28 | 23 | 2023\n   147 | Vogel Amara | Field | 20 | 84 | 2026\n   148 | Lang Livia | Research | 26 | 34 | 2023\n   149 | Ilsa Aydin | Field | 7 | 74 | 2022\n   150 | Petrov Rustam | Logistics | 11 | 88 | 2022\n   151 | Berg Priya | Logistics | 29 | 74 | 2020\n   152 | Kaan Novak | Ops | 18 | 62 | 2026\n   153 | Bea Henrik | Research | 35 | 46 | 2020\n   154 | Gustav Yusuf | Ops | 27 | 27 | 2021\n   155 | Vidal Kovac | Ops | 13 | 53 | 2019\n   156 | Vogel Elio | Logistics | 35 | 26 | 2026\n   157 | Aliyev Nair | Design | 38 | 62 | 2021\n   158 | Brandt Brandt | Ops | 22 | 38 | 2020\n   159 | Omar Meyer | Support | 19 | 56 | 2024\n   160 | Hana Hoffman | Research | 30 | 67 | 2024\n   161 | Rosen Nadia | Design | 19 | 45 | 2021\n   162 | Sartori Osei | Support | 9 | 33 | 2024\n   163 | Aydin Talia | Compliance | 38 | 66 | 2026\n   164 | Reyes Mori | Support | 13 | 55 | 2025\n   165 | Viktor Gustav | Field | 20 | 38 | 2025\n   166 | Milan Brandt | Research | 28 | 84 | 2024\n   167 | Marchetti Lang | Design | 38 | 61 | 2023\n   168 | Kovac Rosen | Compliance | 4 | 66 | 2021\n   169 | Zoe Lindgren | Design | 39 | 72 | 2020\n   170 | Petra Brandt | Logistics | 36 | 33 | 2024\n   171 | Weber Livia | Support | 7 | 25 | 2022\n   172 | Elio Casper | Compliance | 4 | 86 | 2024\n   173 | Berg Aydin | Support | 13 | 62 | 2020\n   174 | Haddad Jana | Compliance | 6 | 60 | 2025\n   175 | Marchetti Aydin | Logistics | 21 | 43 | 2019\n   176 | Aliyev Dina | Research | 25 | 33 | 2020\n   177 | Osei Nilsson | Field | 10 | 29 | 2026\n   178 | Tomas Haddad | Compliance | 8 | 42 | 2020\n   179 | Henrik Marisol | Ops | 38 | 27 | 2022\n   180 | Kaan Costa | Compliance | 10 | 53 | 2021\n   181 | Freja Viktor | Field | 19 | 61 | 2019\n   182 | Dario Lindgren | Design | 19 | 32 | 2021\n   183 | Sato Lindgren | Design | 18 | 85 | 2021\n   184 | Lang Novak | Field | 27 | 30 | 2025\n   185 | Priya Rustam | Design | 15 | 61 | 2023\n   186 | Kovac Reyes | Ops | 13 | 38 | 2022\n   187 | Jonas Greta | Field | 10 | 75 | 2025\n   188 | Jana Nilsson | Support | 5 | 66 | 2022\n   189 | Nadia Ferreira | Design | 8 | 70 | 2022\n   190 | Meyer Hoffman | Design | 10 | 28 | 2025\n   191 | Weber Mori | Ops | 34 | 41 | 2024\n   192 | Doyle Kovac | Ops | 19 | 37 | 2024\n   193 | Rustam Meyer | Research | 19 | 59 | 2023\n   194 | Lena Brandt | Research | 22 | 84 | 2026\n   195 | Holm Dahl | Compliance | 20 | 74 | 2019\n   196 | Livia Rosen | Field | 11 | 62 | 2020\n   197 | Yusuf Marchetti | Logistics | 8 | 58 | 2024\n   198 | Priya Reyes | Compliance | 17 | 73 | 2023\n   199 | Rustam Quint | Research | 35 | 67 | 2022\n   200 | Vidal Livia | Field | 35 | 60 | 2019\n   201 | Vega Freja | Field | 24 | 41 | 2024\n   202 | Nadia Amara | Research | 37 | 63 | 2022\n   203 | Talia Selin | Ops | 34 | 63 | 2026\n   204 | Nilsson Lindgren | Field | 24 | 88 | 2025\n   205 | Dahl Bruno | Research | 11 | 31 | 2026\n   206 | Jonas Viktor | Design | 35 | 50 | 2023\n   207 | Costa Marchetti | Ops | 33 | 73 | 2025\n   208 | Milan Zoe | Logistics | 29 | 83 | 2023\n   209 | Lena Selin | Research | 22 | 74 | 2025\n   210 | Rustam Brandt | Design | 23 | 44 | 2020\n   211 | Sartori Vogel | Logistics | 24 | 44 | 2022\n   212 | Costa Sartori | Design | 31 | 47 | 2026\n   213 | Nilsson Amara | Research | 29 | 77 | 2026\n   214 | Lena Berg | Design | 13 | 38 | 2025\n   215 | Cormac Haddad | Compliance | 4 | 21 | 2019\n   216 | Diallo Osei | Support | 8 | 71 | 2022\n   217 | Rustam Aliyev | Design | 33 | 37 | 2026\n   218 | Sartori Marchetti | Support | 36 | 56 | 2019\n   219 | Lang Weber | Research | 13 | 41 | 2025\n\n   Now, filter for dept = Field or Research.\n\n   Let's list all employees with dept Field or Research.\n\n   I'll go through the list and pick those.\n\n   Field dept:\n   - 103 Livia Costa | Field | 8 | 54 | 2025\n   - 110 Nora Lindgren | Field | 31 | 76 | 2022\n   - 112 Tomas Reyes | Field | 29 | 62 | 2026\n   - 119 Jana Kovac | Field | 36 | 44 | 2019\n   - 123 Talia Rosen | Field | 16 | 43 | 2023\n   - 129 Henrik Dahl | Field | 38 | 43 | 2021\n   - 134 Dario Quint | Field | 19 | 32 | 2026\n   - 143 Selin Viktor | Field | 30 | 36 | 2025\n   - 149 Ilsa Aydin | Field | 7 | 74 | 2022\n   - 155 Vidal Kovac? Wait, 155 is Ops. Not Field.\n   - 157 Aliyev Nair? Design.\n   - 165 Viktor Gustav | Field | 20 | 38 | 2025\n   - 177 Osei Nilsson | Field | 10 | 29 | 2026\n   - 179 Henrik Marisol? Ops.\n   - 181 Freja Viktor | Field | 19 | 61 | 2019\n   - 184 Lang Novak | Field | 27 | 30 | 2025\n   - 187 Jonas Greta | Field | 10 | 75 | 2025\n   - 196 Livia Rosen | Field | 11 | 62 | 2020\n   - 200 Vidal Livia | Field | 35 | 60 | 2019\n   - 201 Vega Freja | Field | 24 | 41 | 2024\n   - 204 Nilsson Lindgren | Field | 24 | 88 | 2025\n   - 207 Costa Marchetti? Ops.\n   - 217 Rustam Aliyev? Design.\n   - Also check others: 139 Haddad Hoffman Ops, etc. I think I have most Field.\n\n   Let's systematically go through all rows and pick Field or Research.\n\n   I'll create a list:\n\n   Row 100: Research\n   Row 103: Field\n   Row 106: Research\n   Row 110: Field\n   Row 112: Field\n   Row 119: Field\n   Row 123: Field\n   Row 129: Field\n   Row 134: Field\n   Row 137: Research\n   Row 143: Field\n   Row 147: Field\n   Row 148: Research\n   Row 153: Research\n   Row 155: Ops (skip)\n   Row 159: Support (skip)\n   Row 160: Research\n   Row 165: Field\n   Row 166: Research\n   Row 171: Support (skip)\n   Row 173: Support (skip)\n   Row 174: Compliance (skip)\n   Row 176: Research\n   Row 177: Field\n   Row 178: Compliance (skip)\n   Row 181: Field\n   Row 184: Field\n   Row 187: Field\n   Row 196: Field\n   Row 200: Field\n   Row 201: Field\n   Row 204: Field\n   Row 205: Research\n   Row 209: Research\n   Row 213: Research\n   Row 219: Research\n\n   Also check row 133? Logistics. Row 135 Support. Row 136 Logistics. Row 138 Ops. Row 139 Ops. Row 140 Ops. Row 141 Support. Row 142 Ops. Row 144 Ops. Row 145 Ops. Row 146 Logistics. Row 148 Research already. Row 149 Field. Row 150 Logistics. Row 151 Logistics. Row 152 Ops. Row 154 Ops. Row 156 Logistics. Row 157 Design. Row 158 Ops. Row 159 Support. Row 160 Research. Row 161 Design. Row 162 Support. Row 163 Compliance. Row 164 Support. Row 165 Field. Row 166 Research. Row 167 Design. Row 168 Compliance. Row 169 Design. Row 170 Logistics. Row 171 Support. Row 172 Compliance. Row 173 Support. Row 174 Compliance. Row 175 Logistics. Row 176 Research. Row 177 Field. Row 178 Compliance. Row 179 Ops. Row 180 Compliance. Row 181 Field. Row 182 Design. Row 183 Design. Row 184 Field. Row 185 Design. Row 186 Ops. Row 187 Field. Row 188 Support. Row 189 Design. Row 190 Design. Row 191 Ops. Row 192 Ops. Row 193 Research. Row 194 Research. Row 195 Compliance. Row 196 Field. Row 197 Logistics. Row 198 Compliance. Row 199 Research. Row 200 Field. Row 201 Field. Row 202 Research. Row 203 Ops. Row 204 Field. Row 205 Research. Row 206 Design. Row 207 Ops. Row 208 Logistics. Row 209 Research. Row 210 Design. Row 211 Logistics. Row 212 Design. Row 213 Research. Row 214 Design. Row 215 Compliance. Row 216 Support. Row 17? Already.\n\n   So Field employees (id, name, dept, hours, rate, joined):\n   103: Livia Costa | Field | 8 | 54 | 2025\n   110: Nora Lindgren | Field | 31 | 76 | 2022\n   112: Tomas Reyes | Field | 29 | 62 | 2026\n   119: Jana Kovac | Field | 36 | 44 | 2019\n   123: Talia Rosen | Field | 16 | 43 | 2023\n   129: Henrik Dahl | Field | 38 | 43 | 2021\n   134: Dario Quint | Field | 19 | 32 | 2026\n   143: Selin Viktor | Field | 30 | 36 | 2025\n   149: Ilsa Aydin | Field | 7 | 74 | 2022\n   155? No, 155 is Ops.\n   165: Viktor Gustav | Field | 20 | 38 | 2025\n   177: Osei Nilsson | Field | 10 | 29 | 2026\n   181: Freja Viktor | Field | 19 | 61 | 2019\n   184: Lang Novak | Field | 27 | 30 | 2025\n   187: Jonas Greta | Field | 10 | 75 | 2025\n   196: Livia Rosen | Field | 11 | 62 | 2020\n   200: Vidal Livia | Field | 35 | 60 | 2019\n   201: Vega Freja | Field | 24 | 41 | 2024\n   204: Nilsson Lindgren | Field | 24 | 88 | 2025\n   Also check 134 Dario Quint Field 19 32 2026 (already).\n   What about 129 Henrik Dahl Field 38 43 2021 (already).\n   119 Jana Kovac Field 36 44 2019 (already).\n   112 Tomas Reyes Field 29 62 2026 (already).\n   110 Nora Lindgren Field 31 76 2022 (already).\n   103 Livia Costa Field 8 54 2025 (already).\n   Any others? 134 Dario Quint Field 19 32 2026.\n   143 Selin Viktor Field 30 36 2025.\n   149 Ilsa Aydin Field 7 74 2022.\n   165 Viktor Gustav Field 20 38 2025.\n   177 Osei Nilsson Field 10 29 2026.\n   181 Freja Viktor Field 19 61 2019.\n   184 Lang Novak Field 27 30 2025.\n   187 Jonas Greta Field 10 75 2025.\n   196 Livia Rosen Field 11 62 2020.\n   200 Vidal Livia Field 35 60 2019.\n   201 Vega Freja Field 24 41 2024.\n   204 Nilsson Lindgren Field 24 88 2025.\n   Also 123 Talia Rosen Field 16 43 2023 (already).\n   129 Henrik Dahl Field 38 43 2021 (already).\n   134 Dario Quint Field 19 32 2026 (already).\n   143 Selin Viktor Field 30 36 2025 (already).\n   149 Ilsa Aydin Field 7 74 2022 (already).\n   155? No.\n   165 Viktor Gustav Field 20 38 2025 (already).\n   177 Osei Nilsson Field 10 29 2026 (already).\n   181 Freja Viktor Field 19 61 2019 (already).\n   184 Lang Novak Field 27 30 2025 (already).\n   187 Jonas Greta Field 10 75 2025 (already).\n   196 Livia Rosen Field 11 62 2020 (already).\n   200 Vidal Livia Field 35 60 2019 (already).\n   201 Vega Freja Field 24 41 2024 (already).\n   204 Nilsson Lindgren Field 24 88 2025 (already).\n   Also 119 Jana Kovac Field 36 44 2019 (already).\n   112 Tomas Reyes Field 29 62 2026 (already).\n   110 Nora Lindgren Field 31 76 2022 (already).\n   103 Livia Costa Field 8 54 2025 (already).\n   What about 134 Dario Quint? Already.\n   I think that's all Field.\n\n   Now Research employees:\n   100: Omar Haddad | Research | 28 | 36 | 2023\n   106: Lena Vogel | Research | 15 | 69 | 2020\n   113: Ivo Petrov | Compliance (skip)\n   115: Dina Waheed | Compliance (skip)\n   117: Yusuf Kaan | Compliance (skip)\n   118: Casper Holm | Compliance (skip)\n   120: Bruno Vidal | Research | 18 | 21 | 2020\n   126: Priya Nair | Ops (skip)\n   127: Jonas Meyer | Support (skip)\n   128: Selin Aydin | Compliance (skip)\n   130: Cormac Doyle | Ops (skip)\n   131: Viktor Lang | Support (skip)\n   132: Petra Lindqvist | Design (skip)\n   133: Ilsa Brandt | Logistics (skip)\n   135: Rustam Aliyev | Support (skip)\n   136: Bruno Henrik | Logistics (skip)\n   137: Lena Zoe | Research | 31 | 59 | 2026\n   138: Doyle Tomas | Ops (skip)\n   139: Haddad Hoffman | Ops (skip)\n   140: Milan Nora | Ops (skip)\n   141: Sato Lang | Support (skip)\n   142: Anders Henrik | Ops (skip)\n   144: Novak Costa | Ops (skip)\n   145: Rosen Quint | Ops (skip)\n   146: Cormac Sato | Logistics (skip)\n   148: Lang Livia | Research | 26 | 34 | 2023\n   150: Petrov Rustam | Logistics (skip)\n   151: Berg Priya | Logistics (skip)\n   153: Bea Henrik | Research | 35 | 46 | 2020\n   155: Vidal Kovac | Ops (skip)\n   156: Vogel Elio | Logistics (skip)\n   157: Aliyev Nair | Design (skip)\n   158: Brandt Brandt | Ops (skip)\n   159: Omar Meyer | Support (skip)\n   160: Hana Hoffman | Research | 30 | 67 | 2024\n   161: Rosen Nadia | Design (skip)\n   162: Sartori Osei | Support (skip)\n   163: Aydin Talia | Compliance (skip)\n   164: Reyes Mori | Support (skip)\n   165: Viktor Gustav | Field (skip)\n   166: Milan Brandt | Research | 28 | 84 | 2024\n   167: Marchetti Lang | Design (skip)\n   168: Kovac Rosen | Compliance (skip)\n   169: Zoe Lindgren | Design (skip)\n   170: Petra Brandt | Logistics (skip)\n   171: Weber Livia | Support (skip)\n   172: Elio Casper | Compliance (skip)\n   173: Berg Aydin | Support (skip)\n   174: Haddad Jana | Compliance (skip)\n   175: Marchetti Aydin | Logistics (skip)\n   176: Aliyev Dina | Research | 25 | 33 | 2020\n   178: Tomas Haddad | Compliance (skip)\n   179: Henrik Marisol | Ops (skip)\n   180: Kaan Costa | Compliance (skip)\n   181: Freja Viktor | Field (skip)\n   182: Dario Lindgren | Design (skip)\n   183: Sato Lindgren | Design (skip)\n   184: Lang Novak | Field (skip)\n   185: Priya Rustam | Design (skip)\n   186: Kovac Reyes | Ops (skip)\n   187: Jonas Greta | Field (skip)\n   188: Jana Nilsson | Support (skip)\n   189: Nadia Ferreira | Design (skip)\n   190: Meyer Hoffman | Design (skip)\n   191: Weber Mori | Ops (skip)\n   192: Doyle Kovac | Ops (skip)\n   193: Rustam Meyer | Research | 19 | 59 | 2023\n   194: Lena Brandt | Research | 22 | 84 | 2026\n   195: Holm Dahl | Compliance (skip)\n   196: Livia Rosen | Field (skip)\n   197: Yusuf Marchetti | Logistics (skip)\n   198: Priya Reyes | Compliance (skip)\n   199: Rustam Quint | Research | 35 | 67 | 2022\n   200: Vidal Livia | Field (skip)\n   201: Vega Freja | Field (skip)\n   202: Nadia Amara | Research | 37 | 63 | 2022\n   203: Talia Selin | Ops (skip)\n   204: Nilsson Lindgren | Field (skip)\n   205: Dahl Bruno | Research | 11 | 31 | 2026\n   206: Jonas Viktor | Design (skip)\n   207: Costa Marchetti | Ops (skip)\n   208: Milan Zoe | Logistics (skip)\n   209: Lena Selin | Research | 22 | 74 | 2025\n   210: Rustam Brandt | Design (skip)\n   211: Sartori Vogel | Logistics (skip)\n   212: Costa Sartori | Design (skip)\n   213: Nilsson Amara | Research | 29 | 77 | 2026\n   214: Lena Berg | Design (skip)\n   215: Cormac Haddad | Compliance (skip)\n   216: Diallo Osei | Support (skip)\n   217: Rustam Aliyev | Design (skip)\n   218: Sartori Marchetti | Support (skip)\n   219: Lang Weber | Research | 13 | 41 | 2025\n\n   So Research employees:\n   100: Omar Haddad | Research | 28 | 36 | 2023\n   106: Lena Vogel | Research | 15 | 69 | 2020\n   120: Bruno Vidal | Research | 18 | 21 | 2020\n   137: Lena Zoe | Research | 31 | 59 | 2026\n   148: Lang Livia | Research | 26 | 34 | 2023\n   153: Bea Henrik | Research | 35 | 46 | 2020\n   160: Hana Hoffman | Research | 30 | 67 | 2024\n   166: Milan Brandt | Research | 28 | 84 | 2024\n   176: Aliyev Dina | Research | 25 | 33 | 2020\n   193: Rustam Meyer | Research | 19 | 59 | 2023\n   194: Lena Brandt | Research | 22 | 84 | 2026\n   199: Rustam Quint | Research | 35 | 67 | 2022\n   202: Nadia Amara | Research | 37 | 63 | 2022\n   205: Dahl Bruno | Research | 11 | 31 | 2026\n   209: Lena Selin | Research | 22 | 74 | 2025\n   213: Nilsson Amara | Research | 29 | 77 | 2026\n   219: Lang Weber | Research | 13 | 41 | 2025\n\n   Also check 133? No. 135? No. 136? No. 137 yes. 148 yes. 153 yes. 160 yes. 166 yes. 176 yes. 193 yes. 194 yes. 199 yes. 202 yes. 205 yes. 209 yes. 213 yes. 219 yes.\n\n   Now, next step: \"count only those with a rate of at least 41 who are not listed as the head of any department.\"\n\n   We need to consider employees from Field and Research departments. From those, we keep only those with rate >= 41 and who are not the head of any department.\n\n   First, identify department heads from DEPARTMENTS table:\n   - Ops: head Lang Weber\n   - Design: head Lena Zoe\n   - Field: head Rustam Aliyev\n   - Logistics: head Petra Brandt\n   - Support: head Livia Costa\n   - Research: head Omar Meyer\n   - Compliance: head Aliyev Nair\n\n   So heads: Lang Weber, Lena Zoe, Rustam Aliyev, Petra Brandt, Livia Costa, Omar Meyer, Aliyev Nair.\n\n   Now, from the Field and Research employees, we need to exclude those who are heads. But note: heads are specific people. For Field, head is Rustam Aliyev. For Research, head is Omar Meyer.\n\n   So we must exclude any employee who is Rustam Aliyev (if in Field) or Omar Meyer (if in Research). Also, could there be other heads? Only those listed.\n\n   Now, we also need rate >= 41.\n\n   Let's process Field employees first.\n\n   Field employees list with rate and joined:\n\n   103: Livia Costa | Field | 8 | 54 | 2025\n   110: Nora Lindgren | Field | 31 | 76 | 2022\n   112: Tomas Reyes | Field | 29 | 62 | 2026\n   119: Jana Kovac | Field | 36 | 44 | 2019\n   123: Talia Rosen | Field | 16 | 43 | 2023\n   129: Henrik Dahl | Field | 38 | 43 | 2021\n   134: Dario Quint | Field | 19 | 32 | 2026\n   143: Selin Viktor | Field | 30 | 36 | 2025\n   149: Ilsa Aydin | Field | 7 | 74 | 2022\n   155? Not Field.\n   165: Viktor Gustav | Field | 20 | 38 | 2025\n   177: Osei Nilsson | Field | 10 | 29 | 2026\n   181: Freja Viktor | Field | 19 | 61 | 2019\n   184: Lang Novak | Field | 27 | 30 | 2025\n   187: Jonas Greta | Field | 10 | 75 | 2025\n   196: Livia Rosen | Field | 11 | 62 | 2020\n   200: Vidal Livia | Field | 35 | 60 | 2019\n   201: Vega Freja | Field | 24 | 41 | 2024\n   204: Nilsson Lindgren | Field | 24 | 88 | 2025\n\n   Also check 134 Dario Quint rate 32 <41, exclude.\n   143 Selin Viktor rate 36 <41, exclude.\n   155 not Field.\n   165 Viktor Gustav rate 38 <41, exclude.\n   177 Osei Nilsson rate 29 <41, exclude.\n   184 Lang Novak rate 30 <41, exclude.\n   187 Jonas Greta rate 75 >=41, but joined 2025, we'll filter later.\n   196 Livia Rosen rate 62 >=41.\n   200 Vidal Livia rate 60 >=41.\n   201 Vega Freja rate 41 >=41 (exactly 41, so >=41 includes).\n   204 Nilsson Lindgren rate 88 >=41.\n   103 Livia Costa rate 54 >=41.\n   110 Nora Lindgren rate 76 >=41.\n   112 Tomas Reyes rate 62 >=41.\n   119 Jana Kovac rate 44 >=41.\n   123 Talia Rosen rate 43 >=41.\n   129 Henrik Dahl rate 43 >=41.\n   149 Ilsa Aydin rate 74 >=41.\n\n   Now, also need to exclude those who are heads of any department. Heads: Lang Weber, Lena Zoe, Rustam Aliyev, Petra Brandt, Livia Costa, Omar Meyer, Aliyev Nair.\n\n   In Field employees, is any of them a head? Livia Costa is head of Support, but she is in Field (id 103). She is listed as head of Support, but she is an employee in Field. The condition: \"who are not listed as the head of any department.\" Livia Costa is listed as head of Support department. So she is listed as the head of some department (Support). Therefore, she should be excluded because she is \"listed as the head of any department.\" Even though she works in Field, she is a head. So exclude her.\n\n   Similarly, are there other heads in Field? Rustam Aliyev is head of Field, but he is not in Field employees list? Check: Rustam Aliyev is id 135, but dept Support, not Field. So not in Field. Lang Weber is head of Ops, not in Field. Lena Zoe is head of Design, not in Field. Petra Brandt head of Logistics, not in Field. Omar Meyer head of Research, not in Field. Aliyev Nair head of Compliance, not in Field.\n\n   So only Livia Costa (id 103) is a head among Field employees. Exclude her.\n\n   Also, check if any other Field employee is a head? No.\n\n   Now, from Field employees with rate >=41 and not head, we have:\n   - 110: Nora Lindgren | rate 76, joined 2022\n   - 112: Tomas Reyes | rate 62, joined 2026\n   - 119: Jana Kovac | rate 44, joined 2019\n   - 123: Talia Rosen | rate 43, joined 2023\n   - 129: Henrik Dahl | rate 43, joined 2021\n   - 149: Ilsa Aydin | rate 74, joined 2022\n   - 196: Livia Rosen | rate 62, joined 2020\n   - 200: Vidal Livia | rate 60, joined 2019\n   - 201: Vega Freja | rate 41, joined 2024\n   - 204: Nilsson Lindgren | rate 88, joined 2025\n\n   Also 103 excluded. 134 rate 32 <41 excluded. 143 rate 36 excluded. 155 not Field. 165 rate 38 excluded. 177 rate 29 excluded. 184 rate 30 excluded. 187 rate 75 but joined 2025, we'll filter later. 181 Freja Viktor rate 61 >=41, joined 2019. I missed 181! Let's check: 181 Freja Viktor | Field | 19 | 61 | 2019. Yes, rate 61 >=41, not a head. So include her.\n\n   Also 187 Jonas Greta rate 75 joined 2025.\n\n   And 196 Livia Rosen already included.\n\n   Let's list all Field employees with rate >=41 and not head:\n   - 103 Livia Costa: excluded (head)\n   - 110 Nora Lindgren: rate 76, joined 2022 -> keep\n   - 112 Tomas Reyes: rate 62, joined 2026 -> keep\n   - 119 Jana Kovac: rate 44, joined 2019 -> keep\n   - 123 Talia Rosen: rate 43, joined 2023 -> keep\n   - 129 Henrik Dahl: rate 43, joined 2021 -> keep\n   - 149 Ilsa Aydin: rate 74, joined 2022 -> keep\n   - 155? Not Field.\n   - 165 Viktor Gustav: rate 38 <41 -> exclude\n   - 177 Osei Nilsson: rate 29 <41 -> exclude\n   - 181 Freja Viktor: rate 61, joined 2019 -> keep\n   - 184 Lang Novak: rate 30 <41 -> exclude\n   - 187 Jonas Greta: rate 75, joined 2025 -> keep (but joined 2025, we'll filter later for before 2025)\n   - 196 Livia Rosen: rate 62, joined 2020 -> keep\n   - 200 Vidal Livia: rate 60, joined 2019 -> keep\n   - 201 Vega Freja: rate 41, joined 2024 -> keep\n   - 204 Nilsson Lindgren: rate 88, joined 2025 -> keep (joined 2025)\n\n   Also check 134 Dario Quint rate 32 excluded. 143 Selin Viktor rate 36 excluded. 134 etc.\n\n   So Field candidates (rate >=41, not head): \n   110, 112, 119, 123, 129, 149, 181, 187, 196, 200, 201, 204.\n\n   Now Research employees with rate >=41 and not head.\n\n   Research employees list:\n   100: Omar Haddad | Research | 28 | 36 | 2023 -> rate 36 <41, exclude.\n   106: Lena Vogel | Research | 15 | 69 | 2020 -> rate 69 >=41, not head? Head of Research is Omar Meyer. Lena Vogel is not a head. So keep.\n   120: Bruno Vidal | Research | 18 | 21 | 2020 -> rate 21 <41, exclude.\n   137: Lena Zoe | Research | 31 | 59 | 2026 -> rate 59 >=41. But Lena Zoe is head of Design department. She is listed as head of Design. So she is \"listed as the head of any department.\" Therefore, exclude her because she is a head.\n   148: Lang Livia | Research | 26 | 34 | 2023 -> rate 34 <41, exclude.\n   153: Bea Henrik | Research | 35 | 46 | 2020 -> rate 46 >=41. Not a head? Head of Research is Omar Meyer. Bea Henrik is not a head. So keep.\n   160: Hana Hoffman | Research | 30 | 67 | 2024 -> rate 67 >=41. Not a head. Keep.\n   166: Milan Brandt | Research | 28 | 84 | 2024 -> rate 84 >=41. Not a head. Keep.\n   176: Aliyev Dina | Research | 25 | 33 | 2020 -> rate 33 <41, exclude.\n   193: Rustam Meyer | Research | 19 | 59 | 2023 -> rate 59 >=41. But Rustam Meyer: is he a head? Head of Research is Omar Meyer. Rustam Meyer is not the head (head is Omar Meyer). But note: Rustam Aliyev is head of Field. Rustam Meyer might be different. He is not listed as head. So keep.\n   194: Lena Brandt | Research | 22 | 84 | 2026 -> rate 84 >=41. Not a head. Keep.\n   199: Rustam Quint | Research | 35 | 67 | 2022 -> rate 67 >=41. Not a head. Keep.\n   202: Nadia Amara | Research | 37 | 63 | 2022 -> rate 63 >=41. Not a head. Keep.\n   205: Dahl Bruno | Research | 11 | 31 | 2026 -> rate 31 <41, exclude.\n   209: Lena Selin | Research | 22 | 74 | 2025 -> rate 74 >=41. Not a head. Keep.\n   213: Nilsson Amara | Research | 29 | 77 | 2026 -> rate 77 >=41. Not a head. Keep.\n   219: Lang Weber | Research | 13 | 41 | 2025 -> rate 41 >=41. But Lang Weber is head of Ops department. So he is listed as head of any department. Exclude him.\n\n   Also check 133? No. 135? No. 136? No. 137 excluded. 148 excluded. 153 keep. 160 keep. 166 keep. 176 excluded. 193 keep. 194 keep. 199 keep. 202 keep. 205 excluded. 209 keep. 213 keep. 219 excluded.\n\n   Also 100 excluded rate. 120 excluded rate. 137 excluded head. 148 excluded rate.\n\n   So Research candidates (rate >=41, not head):\n   - 106: Lena Vogel | rate 69, joined 2020\n   - 153: Bea Henrik | rate 46, joined 2020\n   - 160: Hana Hoffman | rate 67, joined 2024\n   - 166: Milan Brandt | rate 84, joined 2024\n   - 193: Rustam Meyer | rate 59, joined 2023\n   - 194: Lena Brandt | rate 84, joined 2026\n   - 199: Rustam Quint | rate 67, joined 2022\n   - 202: Nadia Amara | rate 63, joined 2022\n   - 209: Lena Selin | rate 74, joined 2025\n   - 213: Nilsson Amara | rate 77, joined 2026\n\n   Also check 137 excluded. 153 keep. 160 keep. 166 keep. 193 keep. 194 keep. 199 keep. 202 keep. 209 keep. 213 keep. 219 excluded.\n\n   Now, next filter: \"For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   So we need to consider only employees who joined strictly before 2025, i.e., joined year < 2025. Joined year 2025 or later are excluded.\n\n   Let's list Field candidates and their joined years:\n\n   Field candidates (rate >=41, not head):\n   110: Nora Lindgren | joined 2022 -> before 2025? 2022 < 2025, yes.\n   112: Tomas Reyes | joined 2026 -> 2026 is not strictly before 2025 (it's after), so exclude.\n   119: Jana Kovac | joined 2019 -> yes.\n   123: Talia Rosen | joined 2023 -> yes.\n   129: Henrik Dahl | joined 2021 -> yes.\n   149: Ilsa Aydin | joined 2022 -> yes.\n   181: Freja Viktor | joined 2019 -> yes.\n   187: Jonas Greta | joined 2025 -> 2025 is not strictly before 2025, exclude.\n   196: Livia Rosen | joined 2020 -> yes.\n   200: Vidal Livia | joined 2019 -> yes.\n   201: Vega Freja | joined 2024 -> yes.\n   204: Nilsson Lindgren | joined 2025 -> exclude.\n\n   So Field employees who joined strictly before 2025 and rate >=41, not head:\n   110: Nora Lindgren | hours 31, rate 76\n   119: Jana Kovac | hours 36, rate 44\n   123: Talia Rosen | hours 16, rate 43\n   129: Henrik Dahl | hours 38, rate 43\n   149: Ilsa Aydin | hours 7, rate 74\n   181: Freja Viktor | hours 19, rate 61\n   196: Livia Rosen | hours 11, rate 62\n   200: Vidal Livia | hours 35, rate 60\n   201: Vega Freja | hours 24, rate 41\n\n   Also check if any others: 112 excluded due to joined 2026. 187 excluded joined 2025. 204 excluded joined 2025.\n\n   Now compute hours * rate for each, then sum per department (Field).\n\n   Let's compute:\n\n   110: 31 * 76 = 2356\n   119: 36 * 44 = 1584\n   123: 16 * 43 = 688\n   129: 38 * 43 = 1634\n   149: 7 * 74 = 518\n   181: 19 * 61 = 1159\n   196: 11 * 62 = 682\n   200: 35 * 60 = 2100\n   201: 24 * 41 = 984\n\n   Now sum these up for Field department.\n\n   Let's add step by step:\n   2356 + 1584 = 3940\n   3940 + 688 = 4628\n   4628 + 1634 = 6262\n   6262 + 518 = 6780\n   6780 + 1159 = 7939\n   7939 + 682 = 8621\n   8621 + 2100 = 10721\n   10721 + 984 = 11705\n\n   So Field total = 11705.\n\n   Now Research candidates who joined strictly before 2025:\n\n   Research candidates (rate >=41, not head):\n   106: Lena Vogel | joined 2020 -> yes\n   153: Bea Henrik | joined 2020 -> yes\n   160: Hana Hoffman | joined 2024 -> yes\n   166: Milan Brandt | joined 2024 -> yes\n   193: Rustam Meyer | joined 2023 -> yes\n   194: Lena Brandt | joined 2026 -> 2026 is not strictly before 2025, exclude.\n   199: Rustam Quint | joined 2022 -> yes\n   202: Nadia Amara | joined 2022 -> yes\n   209: Lena Selin | joined 2025 -> exclude (2025 not strictly before)\n   213: Nilsson Amara | joined 2026 -> exclude\n\n   So Research employees who joined strictly before 2025 and rate >=41, not head:\n   106: Lena Vogel | hours 15, rate 69\n   153: Bea Henrik | hours 35, rate 46\n   160: Hana Hoffman | hours 30, rate 67\n   166: Milan Brandt | hours 28, rate 84\n   193: Rustam Meyer | hours 19, rate 59\n   199: Rustam Quint | hours 35, rate 67\n   202: Nadia Amara | hours 37, rate 63\n\n   Also check 194 excluded joined 2026. 209 excluded joined 2025. 213 excluded joined 2026. 100 excluded rate. 120 excluded rate. 137 excluded head. 148 excluded rate. 153 keep. 160 keep. 166 keep. 193 keep. 199 keep. 202 keep. 205 excluded rate. 209 excluded joined. 213 excluded joined. 219 excluded head.\n\n   Now compute hours * rate for each:\n\n   106: 15 * 69 = 1035\n   153: 35 * 46 = 1610\n   160: 30 * 67 = 2010\n   166: 28 * 84 = 2352\n   193: 19 * 59 = 1121\n   199: 35 * 67 = 2345\n   202: 37 * 63 = 2331\n\n   Now sum these for Research department:\n\n   Let's add:\n   1035 + 1610 = 2645\n   2645 + 2010 = 4655\n   4655 + 2352 = 7007\n   7007 + 1121 = 8128\n   8128 + 2345 = 10473\n   10473 + 2331 = 12804\n\n   So Research total = 12804.\n\n   Now we need to report the largest single departmental total. Field total = 11705, Research total = 12804. Largest is 12804.\n\n   But wait: We must ensure we didn't miss any employees or misinterpret steps.\n\n   Let's double-check all steps carefully.\n\n   Step 1: Departments on floor 4 or higher AND have at least one active project.\n   Floors: Ops 5, Design 3, Field 4, Logistics 6, Support 6, Research 5, Compliance 2.\n   Departments with floor >=4: Ops, Field, Logistics, Support, Research.\n   Active projects:\n   - Ops: none active (Boreal-73 paused, Delta-49 wrapped, Harrow-22 wrapped) -> exclude.\n   - Field: Sable-14 active -> include.\n   - Logistics: Meridian-14 active -> include.\n   - Support: no active (Obsidian-93 wrapped, Delta-81 wrapped, Nimbus-14 paused) -> exclude.\n   - Research: Indigo-94 active, Krait-40 active, Nimbus-19 active -> include.\n   So departments: Field, Logistics, Research.\n\n   Step 2: Exclude departments that ALSO have at least one 'paused' project.\n   - Field: projects: only Sable-14 active. No paused. So Field remains.\n   - Logistics: has Boreal-73 paused -> exclude.\n   - Research: no paused -> remain.\n   Remaining: Field and Research.\n\n   Step 3: \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\"\n   Remaining employees: those in Field and Research departments.\n\n   Heads: from DEPARTMENTS: Lang Weber (Ops), Lena Zoe (Design), Rustam Aliyev (Field), Petra Brandt (Logistics), Livia Costa (Support), Omar Meyer (Research), Aliyev Nair (Compliance).\n\n   So heads are: Lang Weber, Lena Zoe, Rustam Aliyev, Petra Brandt, Livia Costa, Omar Meyer, Aliyev Nair.\n\n   Now, from Field and Research employees, we select those with rate >=41 and not a head.\n\n   We listed Field employees and excluded Livia Costa (id 103) because she is head of Support. Also, are there any other heads in Field? Rustam Aliyev is head of Field, but he is not in Field employees (he is in Support). So only Livia Costa excluded.\n\n   From Research employees, we excluded Lena Zoe (id 137) because she is head of Design. Also, Lang Weber is head of Ops, excluded id 219. Omar Meyer is head of Research, but he is not in Research employees? Check: Omar Meyer is id 159, dept Support, not Research. So not in Research. So only Lena Zoe and Lang Weber excluded from Research.\n\n   Also, we must ensure we didn't miss any employees who are heads but we didn't list. The heads are exactly those seven. So our exclusions are correct.\n\n   Step 4: \"For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   We filtered employees who joined strictly before 2025 (joined year < 2025). We computed sums.\n\n   Let's re-verify the Field employees list and their data.\n\n   Field employees from EMPLOYEES:\n\n   I'll re-list all Field employees with id, name, hours, rate, joined, and check rate >=41, not head, joined <2025.\n\n   Field employees (from my earlier extraction):\n\n   103: Livia Costa | Field | 8 | 54 | 2025 -> rate 54 >=41, but head (Livia Costa is head of Support) -> exclude. Also joined 2025, but head exclusion first.\n\n   110: Nora Lindgren | Field | 31 | 76 | 2022 -> rate 76 >=41, not head, joined 2022 <2025 -> include.\n\n   112: Tomas Reyes | Field | 29 | 62 | 2026 -> rate 62 >=41, not head, joined 2026 >=2025 -> exclude (joined strictly before 2025).\n\n   119: Jana Kovac | Field | 36 | 44 | 2019 -> rate 44 >=41, not head, joined 2019 <2025 -> include.\n\n   123: Talia Rosen | Field | 16 | 43 | 2023 -> rate 43 >=41, not head, joined 2023 <2025 -> include.\n\n   129: Henrik Dahl | Field | 38 | 43 | 2021 -> rate 43 >=41, not head, joined 2021 <2025 -> include.\n\n   134: Dario Quint | Field | 19 | 32 | 2026 -> rate 32 <41 -> exclude.\n\n   143: Selin Viktor | Field | 30 | 36 | 2025 -> rate 36 <41 -> exclude.\n\n   149: Ilsa Aydin | Field | 7 | 74 | 2022 -> rate 74 >=41, not head, joined 2022 <2025 -> include.\n\n   155: not Field.\n\n   165: Viktor Gustav | Field | 20 | 38 | 2025 -> rate 38 <41 -> exclude.\n\n   177: Osei Nilsson | Field | 10 | 29 | 2026 -> rate 29 <41 -> exclude.\n\n   181: Freja Viktor | Field | 19 | 61 | 2019 -> rate 61 >=41, not head, joined 2019 <2025 -> include.\n\n   184: Lang Novak | Field | 27 | 30 | 2025 -> rate 30 <41 -> exclude.\n\n   187: Jonas Greta | Field | 10 | 75 | 2025 -> rate 75 >=41, not head, joined 2025 -> exclude (not strictly before 2025).\n\n   196: Livia Rosen | Field | 11 | 62 | 2020 -> rate 62 >=41, not head, joined 2020 <2025 -> include.\n\n   200: Vidal Livia | Field | 35 | 60 | 2019 -> rate 60 >=41, not head, joined 2019 <2025 -> include.\n\n   201: Vega Freja | Field | 24 | 41 | 2024 -> rate 41 >=41, not head, joined 2024 <2025 -> include.\n\n   204: Nilsson Lindgren | Field | 24 | 88 | 2025 -> rate 88 >=41, not head, joined 2025 -> exclude.\n\n   Also check 139? Ops. 147? Field but rate 84 >=41, joined 2026 -> exclude due to joined. I missed 147 earlier? Let's check: 147 Vogel Amara | Field | 20 | 84 | 2026. Yes, I had 147 in Field list initially but then I might have missed it in the final candidates because rate 84 >=41, but joined 2026, so excluded by joined filter. But in my Field candidates list before joined filter, I had 147? I had 147 Vogel Amara Field 20 84 2026. In my earlier Field candidates list, I had: 110, 112, 119, 123, 129, 149, 181, 187, 196, 200, 201, 204. I missed 147! Let's check: In my Field employees extraction, I listed 147: Vogel Amara | Field | 20 | 84 | 2026. I need to include her in the rate >=41 not head list, but she will be excluded by joined filter (2026). However, I should ensure she is considered in the intermediate step, but since we only keep those who joined strictly before 2025, she will be excluded. But I must make sure I didn't miss any other Field employees with rate >=41 not head.\n\n   Let's systematically go through all Field employees again, ensuring none missed.\n\n   Field employees from the EMPLOYEES table (dept = Field):\n\n   I'll scan the entire EMPLOYEES list for dept=Field.\n\n   Row 103: Livia Costa | Field | 8 | 54 | 2025\n   Row 110: Nora Lindgren | Field | 31 | 76 | 2022\n   Row 112: Tomas Reyes | Field | 29 | 62 | 2026\n   Row 119: Jana Kovac | Field | 36 | 44 | 2019\n   Row 123: Talia Rosen | Field | 16 | 43 | 2023\n   Row 129: Henrik Dahl | Field | 38 | 43 | 2021\n   Row 134: Dario Quint | Field | 19 | 32 | 2026\n   Row 143: Selin Viktor | Field | 30 | 36 | 2025\n   Row 147: Vogel Amara | Field | 20 | 84 | 2026\n   Row 149: Ilsa Aydin | Field | 7 | 74 | 2022\n   Row 155: not Field (Ops)\n   Row 165: Viktor Gustav | Field | 20 | 38 | 2025\n   Row 177: Osei Nilsson | Field | 10 | 29 | 2026\n   Row 181: Freja Viktor | Field | 19 | 61 | 2019\n   Row 184: Lang Novak | Field | 27 | 30 | 2025\n   Row 187: Jonas Greta | Field | 10 | 75 | 2025\n   Row 196: Livia Rosen | Field | 11 | 62 | 2020\n   Row 200: Vidal Livia | Field | 35 | 60 | 2019\n   Row 201: Vega Freja | Field | 24 | 41 | 2024\n   Row 204: Nilsson Lindgren | Field | 24 | 88 | 2025\n   Row 217: Rustam Aliyev | Design (not Field)\n   Also check row 133? Logistics. Row 135 Support. Row 136 Logistics. Row 137 Research. Row 138 Ops. Row 139 Ops. Row 140 Ops. Row 141 Support. Row 142 Ops. Row 144 Ops. Row 145 Ops. Row 146 Logistics. Row 148 Research. Row 150 Logistics. Row 151 Logistics. Row 152 Ops. Row 154 Ops. Row 156 Logistics. Row 157 Design. Row 158 Ops. Row 159 Support. Row 160 Research. Row 161 Design. Row 162 Support. Row 163 Compliance. Row 164 Support. Row 165 Field (already). Row 166 Research. Row 167 Design. Row 168 Compliance. Row 169 Design. Row 170 Logistics. Row 171 Support. Row 172 Compliance. Row 173 Support. Row 174 Compliance. Row 175 Logistics. Row 176 Research. Row 177 Field (already). Row 178 Compliance. Row 179 Ops. Row 180 Compliance. Row 181 Field (already). Row 182 Design. Row 183 Design. Row 184 Field (already). Row 185 Design. Row 186 Ops. Row 187 Field (already). Row 188 Support. Row 189 Design. Row 190 Design. Row 191 Ops. Row 192 Ops. Row 193 Research. Row 194 Research. Row 195 Compliance. Row 196 Field (already). Row 197 Logistics. Row 198 Compliance. Row 199 Research. Row 200 Field (already). Row 201 Field (already). Row 202 Research. Row 203 Ops. Row 204 Field (already). Row 205 Research. Row 206 Design. Row 207 Ops. Row 208 Logistics. Row 209 Research. Row 210 Design. Row 211 Logistics. Row 212 Design. Row 213 Research. Row 214 Design. Row 215 Compliance. Row 216 Support. Row 217 Design. Row 218 Support. Row 219 Research.\n\n   So Field employees are exactly those I listed. I have 147 as well. I missed 147 in my initial Field candidates list, but it's rate 84 >=41, not head (Vogel Amara is not a head). So in the intermediate step (rate >=41, not head), 147 should be included. But she will be excluded by joined filter (2026). However, I need to ensure that when I computed the Field total, I included only those who joined strictly before 2025. So 147 is excluded from the final sum because joined 2026. But I must make sure I didn't accidentally include her in the sum. In my Field sum, I had 9 employees: 110, 119, 123, 129, 149, 181, 196, 200, 201. I missed 147, but since 147 joined 2026, it wouldn't be in the \"joined strictly before 2025\" set, so it's fine that I didn't include it. However, I should confirm that there are no other Field employees with rate >=41 not head and joined <2025 that I missed.\n\n   Let's list all Field employees with rate >=41 and not head, regardless of join date, then filter by join date.\n\n   Field employees rate >=41 and not head:\n   - 103 Livia Costa: excluded head.\n   - 110 Nora Lindgren: rate 76, not head -> include.\n   - 112 Tomas Reyes: rate 62, not head -> include.\n   - 119 Jana Kovac: rate 44, not head -> include.\n   - 123 Talia Rosen: rate 43, not head -> include.\n   - 129 Henrik Dahl: rate 43, not head -> include.\n   - 134 Dario Quint: rate 32 <41 -> exclude.\n   - 143 Selin Viktor: rate 36 <41 -> exclude.\n   - 147 Vogel Amara: rate 84, not head -> include.\n   - 149 Ilsa Aydin: rate 74, not head -> include.\n   - 155 not Field.\n   - 165 Viktor Gustav: rate 38 <41 -> exclude.\n   - 177 Osei Nilsson: rate 29 <41 -> exclude.\n   - 181 Freja Viktor: rate 61, not head -> include.\n   - 184 Lang Novak: rate 30 <41 -> exclude.\n   - 187 Jonas Greta: rate 75, not head -> include.\n   - 196 Livia Rosen: rate 62, not head -> include.\n   - 200 Vidal Livia: rate 60, not head -> include.\n   - 201 Vega Freja: rate 41, not head -> include.\n   - 204 Nilsson Lindgren: rate 88, not head -> include.\n\n   So Field candidates (rate >=41, not head): 110, 112, 119, 123, 129, 147, 149, 181, 187, 196, 200, 201, 204. That's 13 employees.\n\n   Now filter by joined strictly before 2025 (joined year < 2025):\n   - 110: joined 2022 -> keep\n   - 112: joined 2026 -> exclude\n   - 119: joined 2019 -> keep\n   - 123: joined 2023 -> keep\n   - 129: joined 2021 -> keep\n   - 147: joined 2026 -> exclude\n   - 149: joined 2022 -> keep\n   - 181: joined 2019 -> keep\n   - 187: joined 2025 -> exclude (2025 is not strictly before)\n   - 196: joined 2020 -> keep\n   - 200: joined 2019 -> keep\n   - 201: joined 2024 -> keep\n   - 204: joined 2025 -> exclude\n\n   So Field employees kept: 110, 119, 123, 129, 149, 181, 196, 200, 201. That's 9 employees. Exactly the ones I had earlier. Good.\n\n   Now compute hours * rate for these 9:\n\n   110: Nora Lindgren | hours 31, rate 76 -> 31*76 = 2356\n   119: Jana Kovac | hours 36, rate 44 -> 36*44 = 1584\n   123: Talia Rosen | hours 16, rate 43 -> 16*43 = 688\n   129: Henrik Dahl | hours 38, rate 43 -> 38*43 = 1634\n   149: Ilsa Aydin | hours 7, rate 74 -> 7*74 = 518\n   181: Freja Viktor | hours 19, rate 61 -> 19*61 = 1159\n   196: Livia Rosen | hours 11, rate 62 -> 11*62 = 682\n   200: Vidal Livia | hours 35, rate 60 -> 35*60 = 2100\n   201: Vega Freja | hours 24, rate 41 -> 24*41 = 984\n\n   Sum: 2356+1584=3940; +688=4628; +1634=6262; +518=6780; +1159=7939; +682=8621; +2100=10721; +984=11705. Correct.\n\n   Now Research employees.\n\n   Research employees from EMPLOYEES with dept=Research:\n\n   Let's list all Research employees with id, name, hours, rate, joined.\n\n   From my earlier extraction:\n\n   100: Omar Haddad | Research | 28 | 36 | 2023\n   106: Lena Vogel | Research | 15 | 69 | 2020\n   120: Bruno Vidal | Research | 18 | 21 | 2020\n   137: Lena Zoe | Research | 31 | 59 | 2026\n   148: Lang Livia | Research | 26 | 34 | 2023\n   153: Bea Henrik | Research | 35 | 46 | 2020\n   160: Hana Hoffman | Research | 30 | 67 | 2024\n   166: Milan Brandt | Research | 28 | 84 | 2024\n   176: Aliyev Dina | Research | 25 | 33 | 2020\n   193: Rustam Meyer | Research | 19 | 59 | 2023\n   194: Lena Brandt | Research | 22 | 84 | 2026\n   199: Rustam Quint | Research | 35 | 67 | 2022\n   202: Nadia Amara | Research | 37 | 63 | 2022\n   205: Dahl Bruno | Research | 11 | 31 | 2026\n   209: Lena Selin | Research | 22 | 74 | 2025\n   213: Nilsson Amara | Research | 29 | 77 | 2026\n   219: Lang Weber | Research | 13 | 41 | 2025\n\n   Also check if any others: 133? No. 135? No. 136? No. 137 yes. 148 yes. 153 yes. 160 yes. 166 yes. 176 yes. 193 yes. 194 yes. 199 yes. 202 yes. 205 yes. 209 yes. 213 yes. 219 yes.\n\n   Now, rate >=41 and not head.\n\n   Heads: Lang Weber, Lena Zoe, Rustam Aliyev, Petra Brandt, Livia Costa, Omar Meyer, Aliyev Nair.\n\n   In Research employees:\n   - 137 Lena Zoe: rate 59 >=41, but she is head of Design -> exclude.\n   - 219 Lang Weber: rate 41 >=41, but he is head of Ops -> exclude.\n   - 100 Omar Haddad: rate 36 <41 -> exclude.\n   - 120 Bruno Vidal: rate 21 <41 -> exclude.\n   - 148 Lang Livia: rate 34 <41 -> exclude.\n   - 153 Bea Henrik: rate 46 >=41, not head -> include.\n   - 160 Hana Hoffman: rate 67 >=41, not head -> include.\n   - 166 Milan Brandt: rate 84 >=41, not head -> include.\n   - 176 Aliyev Dina: rate 33 <41 -> exclude.\n   - 193 Rustam Meyer: rate 59 >=41, not head -> include. (Note: Rustam Meyer is not the head; head of Research is Omar Meyer. Rustam Meyer is different.)\n   - 194 Lena Brandt: rate 84 >=41, not head -> include.\n   - 199 Rustam Quint: rate 67 >=41, not head -> include.\n   - 202 Nadia Amara: rate 63 >=41, not head -> include.\n   - 205 Dahl Bruno: rate 31 <41 -> exclude.\n   - 209 Lena Selin: rate 74 >=41, not head -> include.\n   - 213 Nilsson Amara: rate 77 >=41, not head -> include.\n\n   So Research candidates (rate >=41, not head): 153, 160, 166, 193, 194, 199, 202, 209, 213. (9 employees, excluding 137 and 219).\n\n   Now filter by joined strictly before 2025 (joined year < 2025):\n\n   - 153: Bea Henrik | joined 2020 -> keep\n   - 160: Hana Hoffman | joined 2024 -> keep\n   - 166: Milan Brandt | joined 2024 -> keep\n   - 193: Rustam Meyer | joined 2023 -> keep\n   - 194: Lena Brandt | joined 2026 -> exclude (2026 not <2025)\n   - 199: Rustam Quint | joined 2022 -> keep\n   - 202: Nadia Amara | joined 2022 -> keep\n   - 209: Lena Selin | joined 2025 -> exclude (2025 not strictly before)\n   - 213: Nilsson Amara | joined 2026 -> exclude\n\n   So Research employees kept: 153, 160, 166, 193, 199, 202. That's 6 employees.\n\n   Compute hours * rate:\n\n   153: Bea Henrik | hours 35, rate 46 -> 35*46 = 1610\n   160: Hana Hoffman | hours 30, rate 67 -> 30*67 = 2010\n   166: Milan Brandt | hours 28, rate 84 -> 28*84 = 2352\n   193: Rustam Meyer | hours 19, rate 59 -> 19*59 = 1121\n   199: Rustam Quint | hours 35, rate 67 -> 35*67 = 2345\n   202: Nadia Amara | hours 37, rate 63 -> 37*63 = 2331\n\n   Sum: 1610 + 2010 = 3620; +2352 = 5972; +1121 = 7093; +2345 = 9438; +2331 = 11769? Wait, let's recalculate carefully.\n\n   1610 + 2010 = 3620\n   3620 + 2352 = 5972\n   5972 + 1121 = 7093\n   7093 + 2345 = 9438\n   9438 + 2331 = 11769\n\n   Wait, earlier I had 12804. I must have made a mistake in the earlier sum. Let's recompute the Research sum carefully.\n\n   Let's list the products again:\n\n   153: 35 * 46 = 1610. Correct.\n   160: 30 * 67 = 2010. Correct.\n   166: 28 * 84 = 2352. Correct.\n   193: 19 * 59 = 1121. Correct.\n   199: 35 * 67 = 2345. Correct.\n   202: 37 * 63 = 2331. Correct.\n\n   Now sum:\n   1610 + 2010 = 3620\n   3620 + 2352 = 5972\n   5972 + 1121 = 7093\n   7093 + 2345 = 9438\n   9438 + 2331 = 11769\n\n   So Research total = 11769.\n\n   Previously I had 12804, which was wrong because I included 194 (joined 2026) and 209 (joined 2025) and maybe others. Let's check my earlier Research candidates: I had 106, 153, 160, 166, 193, 194, 199, 202, 209, 213. But 106 was Lena Vogel, I had her in the list but then I excluded her? Wait, in my earlier Research candidates before join filter, I had: 106, 153, 160, 166, 193, 194, 199, 202, 209, 213. But 106 Lena Vogel rate 69 >=41, not head. I included her in the initial list but then in the join filter I might have excluded her? Let's see: In my earlier Research candidates (rate >=41, not head), I had 106: Lena Vogel | joined 2020. I said \"106: Lena Vogel | rate 69, joined 2020 -> yes\" in the join filter step. But then in the final kept list I had: 106, 153, 160, 166, 193, 199, 202, 209, 213? Wait, I need to check my earlier text.\n\n   In my earlier analysis, after the \"rate >=41, not head\" step for Research, I listed:\n   - 106: Lena Vogel | rate 69, joined 2020\n   - 153: Bea Henrik | rate 46, joined 2020\n   - 160: Hana Hoffman | rate 67, joined 2024\n   - 166: Milan Brandt | rate 84, joined 2024\n   - 193: Rustam Meyer | rate 59, joined 2023\n   - 194: Lena Brandt | rate 84, joined 2026\n   - 199: Rustam Quint | rate 67, joined 2022\n   - 202: Nadia Amara | rate 63, joined 2022\n   - 209: Lena Selin | rate 74, joined 2025\n   - 213: Nilsson Amara | rate 77, joined 2026\n\n   Then I filtered by joined strictly before 2025 and got: 106, 153, 160, 166, 193, 199, 202, 209, 213? Wait, I said: \"Research employees who joined strictly before 2025 and rate >=41, not head: 106: Lena Vogel | hours 15, rate 69; 153: Bea Henrik | hours 35, rate 46; 160: Hana Hoffman | hours 30, rate 67; 166: Milan Brandt | hours 28, rate 84; 193: Rustam Meyer | hours 19, rate 59; 199: Rustam Quint | hours 35, rate 67; 202: Nadia Amara | hours 37, rate 63; 209: Lena Selin | hours 22, rate 74; 213: Nilsson Amara | hours 29, rate 77\". Then I computed sum and got 12804. But I missed that 209 joined 2025 (not strictly before) and 213 joined 2026, and 106 joined 2020 (should be included). But I included 209 and 213 in the sum even though they don't meet the \"strictly before 2025\" condition. Let's check my earlier sum: I had 1035 + 1610 + 2010 + 2352 + 1121 + 2345 + 2331 + ... wait, I need to see what I actually summed.\n\n   In my earlier text: \"Now compute hours * rate for each: 106: 15 * 69 = 1035; 153: 35 * 46 = 1610; 160: 30 * 67 = 2010; 166: 28 * 84 = 2352; 193: 19 * 59 = 1121; 199: 35 * 67 = 2345; 202: 37 * 63 = 2331. Now sum these for Research department: 1035 + 1610 = 2645; 2645 + 2010 = 4655; 4655 + 2352 = 7007; 7007 + 1121 = 8128; 8128 + 2345 = 10473; 10473 + 2331 = 12804.\" I see! I only summed 7 employees: 106, 153, 160, 166, 193, 199, 202. I did NOT include 209 and 213 in that sum. But in the list before, I had 10 employees: 106, 153, 160, 166, 193, 194, 199, 202, 209, 213. Then I filtered by joined strictly before 2025 and said: \"Research employees who joined strictly before 2025 and rate >=41, not head: 106, 153, 160, 166, 193, 199, 202, 209, 213\". But 209 joined 2025 (not strictly before) and 213 joined 2026. So I incorrectly included them in the kept list, but then in the sum I only included 7 of them? Let's read carefully: I wrote: \"Research employees who joined strictly before 2025 and rate >=41, not head: 106: Lena Vogel | hours 15, rate 69; 153: Bea Henrik | hours 35, rate 46; 160: Hana Hoffman | hours 30, rate 67; 166: Milan Brandt | hours 28, rate 84; 193: Rustam Meyer | hours 19, rate 59; 199: Rustam Quint | hours 35, rate 67; 202: Nadia Amara | hours 37, rate 63; 209: Lena Selin | hours 22, rate 74; 213: Nilsson Amara | hours 29, rate 77\". Then I computed sum of the first seven? Actually, the sum I did: 1035 + 1610 + 2010 + 2352 + 1121 + 2345 + 2331. That's 7 terms: 106, 153, 160, 166, 193, 199, 202. I omitted 209 and 213 from the sum, but I had listed them in the kept employees. That was inconsistent. The correct kept employees should be only those with joined < 2025. 209 joined 2025, so excluded. 213 joined 2026, excluded. So the correct kept Research employees are 106, 153, 160, 166, 193, 199, 202. That's 7 employees. And my sum of those 7 gave 12804. But wait, I just recomputed the sum of those 7 and got 11769? Let's check: 1035 + 1610 = 2645; +2010 = 4655; +2352 = 7007; +1121 = 8128; +2345 = 10473; +2331 = 12804. Yes, 12804 is the sum of those 7. But earlier I said \"Research total = 12804\" and then I also said \"I had 12804\" and then I did a recalculation and got 11769? Let's see: In my latest recalculation, I had 153, 160, 166, 193, 199, 202. That's 6 employees, missing 106. I forgot to include 106 in that recalculation! In the recalculation, I listed: 153: 1610; 160: 2010; 166: 2352; 193: 1121; 199: 2345; 202: 2331. That's 6 employees, sum 11769. But I missed 106: 1035. So the correct sum of the 7 employees (including 106) is 12804. And the 6 employees without 106 is 11769. So which is correct? We need to include 106 because Lena Vogel joined 2020, which is strictly before 2025, rate 69 >=41, not head. So she should be included. Therefore, the Research total should be 12804.\n\n   Let's verify the kept Research employees again carefully.\n\n   Research employees with rate >=41 and not head:\n   - 100: Omar Haddad rate 36 <41 -> exclude.\n   - 106: Lena Vogel rate 69 >=41, not head -> include.\n   - 120: Bruno Vidal rate 21 <41 -> exclude.\n   - 137: Lena Zoe rate 59 >=41, but head of Design -> exclude.\n   - 148: Lang Livia rate 34 <41 -> exclude.\n   - 153: Bea Henrik rate 46 >=41, not head -> include.\n   - 160: Hana Hoffman rate 67 >=41, not head -> include.\n   - 166: Milan Brandt rate 84 >=41, not head -> include.\n   - 176: Aliyev Dina rate 33 <41 -> exclude.\n   - 193: Rustam Meyer rate 59 >=41, not head -> include. (Rustam Meyer is not head; head is Omar Meyer.)\n   - 194: Lena Brandt rate 84 >=41, not head -> include.\n   - 199: Rustam Quint rate 67 >=41, not head -> include.\n   - 202: Nadia Amara rate 63 >=41, not head -> include.\n   - 205: Dahl Bruno rate 31 <41 -> exclude.\n   - 209: Lena Selin rate 74 >=41, not head -> but joined 2025, so exclude from final.\n   - 213: Nilsson Amara rate 77 >=41, not head -> joined 2026, exclude.\n   - 219: Lang Weber rate 41 >=41, but head of Ops -> exclude.\n\n   So the candidates with rate >=41 and not head, regardless of join date, are: 106, 153, 160, 166, 193, 194, 199, 202, 209, 213. (10 employees). But we only keep those who joined strictly before 2025 (joined year < 2025).\n\n   Joined years:\n   - 106: 2020 -> keep\n   - 153: 2020 -> keep\n   - 160: 2024 -> keep\n   - 166: 2024 -> keep\n   - 193: 2023 -> keep\n   - 194: 2026 -> exclude\n   - 199: 2022 -> keep\n   - 202: 2022 -> keep\n   - 209: 2025 -> exclude (2025 is not strictly before 2025)\n   - 213: 2026 -> exclude\n\n   So kept: 106, 153, 160, 166, 193, 199, 202. That's 7 employees.\n\n   Now compute hours * rate for these 7:\n\n   106: Lena Vogel | hours 15, rate 69 -> 15*69 = 1035\n   153: Bea Henrik | hours 35, rate 46 -> 35*46 = 1610\n   160: Hana Hoffman | hours 30, rate 67 -> 30*67 = 2010\n   166: Milan Brandt | hours 28, rate 84 -> 28*84 = 2352\n   193: Rustam Meyer | hours 19, rate 59 -> 19*59 = 1121\n   199: Rustam Quint | hours 35, rate 67 -> 35*67 = 2345\n   202: Nadia Amara | hours 37, rate 63 -> 37*63 = 2331\n\n   Sum: 1035 + 1610 = 2645\n   2645 + 2010 = 4655\n   4655 + 2352 = 7007\n   7007 + 1121 = 8128\n   8128 + 2345 = 10473\n   10473 + 2331 = 12804\n\n   So Research total = 12804.\n\n   Now Field total = 11705.\n\n   Largest single departmental total is 12804 (Research).\n\n   But wait: We must ensure that the departments we are summing are indeed Field and Research, and that we didn't miss any other departments that might have survived the filters. The query says: \"consider departments that are on floor 4 or higher AND have at least one project with status 'active'. Exclude departments that ALSO have at least one 'paused' project. Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department. For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   The \"remaining employees\" are from the remaining departments after exclusion. We had Field and Research. We computed sums for Field and Research. Are there any other departments that might have been included? We had Ops, Field, Logistics, Research initially, then excluded Logistics, leaving Field and Research. So only Field and Research.\n\n   Now, double-check if any other departments could be considered. Floor 4 or higher: Ops 5, Field 4, Logistics 6, Support 6, Research 5. Active projects: Ops none, Field yes, Logistics yes, Support none, Research yes. Then exclude those with paused: Ops has paused (Boreal-73), Logistics has paused (Boreal-73), Research has no paused, Field has no paused. So remaining: Field and Research. Correct.\n\n   Now, check if any employee from other departments might be considered \"remaining employees\"? The phrase \"Among the remaining employees\" likely means employees belonging to the remaining departments. So we are correct.\n\n   Now, verify the head exclusions again.\n\n   Heads: \n   - Ops: Lang Weber\n   - Design: Lena Zoe\n   - Field: Rustam Aliyev\n   - Logistics: Petra Brandt\n   - Support: Livia Costa\n   - Research: Omar Meyer\n   - Compliance: Aliyev Nair\n\n   In Field employees, we excluded Livia Costa (id 103) because she is head of Support. Is there any other Field employee who is a head? Rustam Aliyev is head of Field, but he is not in Field employees (he's in Support). So only Livia Costa excluded.\n\n   In Research employees, we excluded Lena Zoe (id 137) because she is head of Design. Lang Weber (id 219) is head of Ops, excluded. Omar Meyer is head of Research, but he is not in Research employees (he's in Support). So Lena Zoe and Lang Weber excluded. Correct.\n\n   Now, check if any other employee might be a head that we missed. The heads are exactly those seven. So our exclusions are complete.\n\n   Now, verify the \"rate of at least 41\" condition. Rate >= 41 means rate >= 41. We included rates exactly 41. For Field, Vega Freja rate 41 included. For Research, Lang Weber rate 41 excluded because head. Any other rate 41? In Field, Vega Freja rate 41 included. In Research, Lang Weber rate 41 excluded. Any other? 199 Rustam Quint rate 67, etc. So correct.\n\n   Now, verify the \"joined strictly before 2025\" condition. Strictly before 2025 means joined year < 2025. So 2024 is okay, 2025 is not. We excluded 2025 and 2026. Correct.\n\n   Now, compute hours * rate sums.\n\n   Field sum: 11705.\n   Research sum: 12804.\n\n   Largest is 12804.\n\n   But wait: The query says \"report the largest single departmental total.\" So we output 12804.\n\n   However, we must ensure that we didn't misinterpret \"summed PER DEPARTMENT\". It means we sum hours*rate for each department separately, then take the largest of those sums. We have Field total 11705, Research total 12804. Largest is 12804.\n\n   Let's double-check the Field sum once more to be absolutely sure.\n\n   Field employees kept (rate >=41, not head, joined <2025):\n   110: Nora Lindgren | hours 31, rate 76 -> 31*76 = 2356\n   119: Jana Kovac | hours 36, rate 44 -> 36*44 = 1584\n   123: Talia Rosen | hours 16, rate 43 -> 16*43 = 688\n   129: Henrik Dahl | hours 38, rate 43 -> 38*43 = 1634\n   149: Ilsa Aydin | hours 7, rate 74 -> 7*74 = 518\n   181: Freja Viktor | hours 19, rate 61 -> 19*61 = 1159\n   196: Livia Rosen | hours 11, rate 62 -> 11*62 = 682\n   200: Vidal Livia | hours 35, rate 60 -> 35*60 = 2100\n   201: Vega Freja | hours 24, rate 41 -> 24*41 = 984\n\n   Sum: \n   2356 + 1584 = 3940\n   3940 + 688 = 4628\n   4628 + 1634 = 6262\n   6262 + 518 = 6780\n   6780 + 1159 = 7939\n   7939 + 682 = 8621\n   8621 + 2100 = 10721\n   10721 + 984 = 11705. Correct.\n\n   Research kept:\n   106: Lena Vogel | 15*69 = 1035\n   153: Bea Henrik | 35*46 = 1610\n   160: Hana Hoffman | 30*67 = 2010\n   166: Milan Brandt | 28*84 = 2352\n   193: Rustam Meyer | 19*59 = 1121\n   199: Rustam Quint | 35*67 = 2345\n   202: Nadia Amara | 37*63 = 2331\n\n   Sum: \n   1035 + 1610 = 2645\n   2645 + 2010 = 4655\n   4655 + 2352 = 7007\n   7007 + 1121 = 8128\n   8128 + 2345 = 10473\n   10473 + 2331 = 12804. Correct.\n\n   Now, is there any chance that \"remaining employees\" includes employees from all departments that meet the floor and active criteria, but then we exclude departments with paused, and then \"among the remaining employees\" means all employees from those departments, but we also have to consider that some employees might be in multiple departments? No, each employee has one dept.\n\n   Also, check if any employee is head of a department but we might have missed because the head might be listed under a different name? The DEPARTMENTS table gives head names. We matched names exactly. For example, Livia Costa is head of Support, and employee 103 is Livia Costa in Field. We excluded her. Good.\n\n   One more check: In Research, we excluded Lena Zoe (head of Design). But Lena Zoe is also an employee in Research (id 137). We excluded her because she is listed as head of any department. Correct.\n\n   Lang Weber is head of Ops, and employee 219 is Lang Weber in Research. We excluded him. Correct.\n\n   Now, what about \"not listed as the head of any department\"? Does that mean the employee's name does not appear in the 'head' column of DEPARTMENTS? Yes. We did that.\n\n   Now, final answer should be 12804.\n\n   But wait: The query says \"End your reply with a line 'FINAL: <number>'.\" So we output \"FINAL: 12804\".\n\n   However, let's re-read the query carefully to ensure no misinterpretation.\n\n   \"consider departments that are on floor 4 or higher AND have at least one project with status 'active'. Exclude departments that ALSO have at least one 'paused' project. Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department. For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   The phrase \"Among the remaining employees\" could be interpreted as: after we have the remaining departments (Field and Research), we look at all employees in those departments, and then from those we count only those with rate >=41 and not head. That's what we did.\n\n   But could \"remaining employees\" refer to employees from the original set who are in departments that survived? Yes.\n\n   One potential nuance: \"Exclude departments that ALSO have at least one 'paused' project.\" We excluded Logistics because it has Boreal-73 paused. But what about Ops? Ops had floor 5 and no active project, so it was already excluded in the first filter. Support had floor 6 and no active project, excluded. So only Logistics was excluded among the initially qualifying departments.\n\n   Now, check if any other department might have floor >=4 and active but we missed. Compliance floor 2, Design floor 3, excluded by floor.\n\n   Now, check the projects statuses again to be absolutely certain.\n\n   PROJECTS table:\n   Indigo-94 | Research | active\n   Krait-40 | Research | active\n   Meridian-14 | Logistics | active\n   Pinnacle-28 | Compliance | active\n   Ember-67 | Design | active\n   Obsidian-93 | Support | wrapped\n   Boreal-53 | Compliance | paused\n   Delta-81 | Support | wrapped\n   Nimbus-19 | Research | active\n   Boreal-73 | Ops | paused\n   Lumen-27 | Compliance | wrapped\n   Pinnacle-74 | Compliance | paused\n   Harrow-22 | Logistics | wrapped\n   Nimbus-14 | Support | paused\n   Sable-14 | Field | active\n   Delta-49 | Ops | wrapped\n   Juniper-88 | Compliance | active\n   Sable-45 | Design | wrapped\n\n   So active projects: Research: Indigo-94, Krait-40, Nimbus-19. Logistics: Meridian-14. Design: Ember-67. Field: Sable-14. Compliance: Pinnacle-28, Juniper-88 (both active). Support: none active. Ops: none active.\n\n   Floor >=4: Ops 5, Field 4, Logistics 6, Support 6, Research 5.\n\n   Departments with floor >=4 AND at least one active: Field (active Sable-14), Logistics (active Meridian-14), Research (active Indigo-94, Krait-40, Nimbus-19). Ops has no active, Support has no active. So Field, Logistics, Research.\n\n   Exclude departments that ALSO have at least one 'paused' project:\n   - Field: projects: only Sable-14 active. No paused. So Field remains.\n   - Logistics: projects: Meridian-14 active, Boreal-73 paused, Delta-49 wrapped, Harrow-22 wrapped. Has paused (Boreal-73). So Logistics excluded.\n   - Research: projects: Indigo-94 active, Krait-40 active, Nimbus-19 active. No paused. So Research remains.\n\n   Remaining: Field and Research. Correct.\n\n   Now, \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\"\n\n   Remaining employees: employees in Field and Research.\n\n   Heads: from DEPARTMENTS: Lang Weber (Ops), Lena Zoe (Design), Rustam Aliyev (Field), Petra Brandt (Logistics), Livia Costa (Support), Omar Meyer (Research), Aliyev Nair (Compliance).\n\n   So we exclude any employee whose name is one of these seven.\n\n   Now, from Field employees, we excluded Livia Costa (head of Support). Also, is Rustam Aliyev in Field? No, he's in Support. So only Livia Costa.\n\n   From Research employees, we excluded Lena Zoe (head of Design) and Lang Weber (head of Ops). Omar Meyer is head of Research, but he is not in Research employees (he's in Support). So correct.\n\n   Now, \"For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT, and report the largest single departmental total.\"\n\n   We did that.\n\n   One more check: In Field, we had employee 187 Jonas Greta joined 2025, excluded. 204 Nilsson Lindgren joined 2025, excluded. 112 Tomas Reyes joined 2026, excluded. 147 Vogel Amara joined 2026, excluded. 184 Lang Novak joined 2025, excluded (rate 30 anyway). 103 Livia Costa excluded as head. 134 Dario Quint rate 32 excluded. 143 Selin Viktor rate 36 excluded. 155 not Field. 165 Viktor Gustav rate 38 excluded. 177 Osei Nilsson rate 29 excluded. 181 Freja Viktor included. 196 Livia Rosen included. 200 Vidal Livia included. 201 Vega Freja included. 110 Nora Lindgren included. 119 Jana Kovac included. 123 Talia Rosen included. 129 Henrik Dahl included. 149 Ilsa Aydin included. All good.\n\n   In Research, we had 137 Lena Zoe excluded as head. 219 Lang Weber excluded as head. 100 Omar Haddad rate 36 excluded. 120 Bruno Vidal rate 21 excluded. 148 Lang Livia rate 34 excluded. 153 Bea Henrik included. 160 Hana Hoffman included. 166 Milan Brandt included. 176 Aliyev Dina rate 33 excluded. 193 Rustam Meyer included. 194 Lena Brandt joined 2026 excluded. 199 Rustam Quint included. 202 Nadia Amara included. 205 Dahl Bruno rate 31 excluded. 209 Lena Selin joined 2025 excluded. 213 Nilsson Amara joined 2026 excluded. 106 Lena Vogel included. All good.\n\n   Now, sums: Field 11705, Research 12804. Largest is 12804.\n\n   But wait: The query says \"report the largest single departmental total.\" It might be that we need to output just the number. The format: \"End your reply with a line 'FINAL: <number>'.\" So we output \"FINAL: 12804\".\n\n   However, let's ensure there's no misinterpretation of \"summed PER DEPARTMENT\". It could mean we sum hours*rate for each department, and then report the largest of those sums. Yes.\n\n   One potential issue: The query says \"Among the remaining employees, count only those with a rate of at least 41 who are not listed as the head of any department.\" Does \"count only those\" mean we only consider those employees, and then we compute hours*rate for them? Yes.\n\n   Another nuance: \"For every remaining employee of those departments who joined strictly before 2025, compute hours * rate summed PER DEPARTMENT\". This could be interpreted as: take the remaining employees (after rate and head filters) and then among those, further filter by joined strictly before 2025, then sum hours*rate per department. That's what we did.\n\n   Now, check if any employee might have been missed because of department head exclusion but we might have included someone who is a head under a different department? We checked all heads.\n\n   Let's double-check the head names against employee names exactly.\n\n   DEPARTMENTS head column:\n   Ops: Lang Weber\n   Design: Lena Zoe\n   Field: Rustam Aliyev\n   Logistics: Petra Brandt\n   Support: Livia Costa\n   Research: Omar Meyer\n   Compliance: Aliyev Nair\n\n   Employee names:\n   - Lang Weber: appears as id 219 Lang Weber in Research, and also as head of Ops. We excluded him from Research.\n   - Lena Zoe: appears as id 137 Lena Zoe in Research, and head of Design. Excluded.\n   - Rustam Aliyev: appears as id 135 Rustam Aliyev in Support, and head of Field. Not in Field employees, so no exclusion needed there, but we didn't include him anyway.\n   - Petra Brandt: head of Logistics, employee 170 Petra Brandt in Logistics, but we are only looking at Field and Research, so not relevant.\n   - Livia Costa: head of Support, employee 103 Livia Costa in Field. We excluded her.\n   - Omar Meyer: head of Research, employee 159 Omar Meyer in Support, not in Research.\n   - Aliyev Nair: head of Compliance, employee 157 Aliyev Nair in Design, not in Field/Research.\n\n   So our exclusions are correct.\n\n   Now, check if any other employee might be a head because of similar names? No.\n\n   Now, verify the \"rate of at least 41\" includes 41. Yes, we included rate 41 for Vega Freja in Field and Lang Weber in Research (but Lang Weber excluded as head). So correct.\n\n   Now, verify the \"joined strictly before 2025\" means joined year < 2025. So 2024 is okay, 2025 is not. We excluded 2025 and 2026. Correct.\n\n   Now, compute the sums again with possible arithmetic errors.\n\n   Field:\n   31*76 = 2356. 30*76=2280, +76=2356. Correct.\n   36*44 = 1584. 36*40=1440, 36*4=144, sum 1584. Correct.\n   16*43 = 688. 10*43=430, 6*43=258, sum 688. Correct.\n   38*43 = 1634. 40*43=1720, minus 2*43=86, 1720-86=1634. Correct.\n   7*74 = 518. 7*70=490, 7*4=28, sum 518. Correct.\n   19*61 = 1159. 20*61=1220, minus 61=1159. Correct.\n   11*62 = 682. 10*62=620, +62=682. Correct.\n   35*60 = 2100. Correct.\n   24*41 = 984. 20*41=820, 4*41=164, sum 984. Correct.\n\n   Sum: 2356+1584=3940. 3940+688=4628. 4628+1634=6262. 6262+518=6780. 6780+1159=7939. 7939+682=8621. 8621+2100=10721. 10721+984=11705. Correct.\n\n   Research:\n   15*69 = 1035. 10*69=690, 5*69=345, sum 1035. Correct.\n   35*46 = 1610. 35*40=1400, 35*6=210, sum 1610. Correct.\n   30*67 = 2010. 30*60=1800, 30*7=210, sum 2010. Correct.\n   28*84 = 2352. 20*84=1680, 8*84=672, sum 2352. Correct.\n   19*59 = 1121. 20*59=1 1 1 wayear oton ? , sure sureways  w a's it"
+    },
+    "bigknap-4-w33": {
+     "family": "bigknap",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-9-w30": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 28701,
+     "extracted": "13783",
+     "text": "The departments on floor 2 or higher with at least one active project are Support, Ops, Field, Research, and Design. Excluding those with any paused project leaves Ops, Field, Research, and Design. From employees in these departments, those with rate \u226541 who are not department heads are selected, then filtered to those who joined strictly before 2023. Computing hours \u00d7 rate per department:\n\n- **Ops**: 6238  \n- **Field**: 9522  \n- **Research**: 13783  \n- **Design**: 4448  \n\nThe largest departmental total is 13783.\n\nFINAL: 13783"
+    },
+    "bigknap-5-w34": {
+     "family": "bigknap",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-10-w33": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 32264,
+     "extracted": "19612",
+     "text": "The departments on floor 2 or higher with at least one active project and no paused projects are Logistics, Design, Compliance, and Ops. From these departments, employees with a rate of at least 37 who are not department heads and joined strictly before 2025 are selected. Computing hours \u00d7 rate per department and summing:\n\n- **Logistics**: 6130\n- **Design**: 19612\n- **Compliance**: 14335\n- **Ops**: 15669\n\nThe largest departmental total is 19612.\n\nFINAL: 19612"
+    },
+    "inv-70-w30": {
+     "family": "inv",
+     "rung": 70,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    }
+   }
   }
  },
  "usage": {
@@ -2595,12 +3239,17 @@
   "anthropic/claude-fable-5.1": {
    "prompt": 339999,
    "completion": 93689
+  },
+  "nvidia/nemotron-3.5-lightning:free": {
+   "prompt": 116806,
+   "completion": 331862
   }
  },
  "effort_applied": {
   "anthropic/claude-haiku-4.5": true,
   "openai/gpt-5.4-mini": true,
   "qwen/qwen3.6-35b-a3b": true,
-  "anthropic/claude-fable-5.1": true
+  "anthropic/claude-fable-5.1": true,
+  "nvidia/nemotron-3.5-lightning:free": true
  }
 }

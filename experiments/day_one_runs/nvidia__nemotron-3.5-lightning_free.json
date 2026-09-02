@@ -1,0 +1,150 @@
+{
+ "slug": "nvidia/nemotron-3.5-lightning:free",
+ "generated_at": "2026-09-02T01:09:19+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+  "created": "2026-08-11",
+  "context_length": 1000000,
+  "max_completion_tokens": 65536,
+  "input_modalities": [
+   "text"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+ },
+ "step_results": {},
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.17647058823529413,
+   "tiers": {
+    "famous": 0.25,
+    "mid": 0.2727272727272727,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.2608695652173913,
+   "rank": 15,
+   "of": 16,
+   "nearest": [
+    [
+     "openai/gpt-oss-120b",
+     0.20588235294117646
+    ],
+    [
+     "moonshotai/kimi-k2-0905",
+     0.23529411764705882
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.2634409090909091,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.6363636363636364,
+   "boldness": 0.265,
+   "commits": 4,
+   "correct_commits": 3,
+   "correct_commits_on_scored_set": 1
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 55,
+   "solved": 50,
+   "accuracy": 0.9090909090909091,
+   "censored": 25,
+   "families": {
+    "audit": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 1,
+     "censored": 4
+    },
+    "casework": {
+     "solved": 6,
+     "n": 6,
+     "censored": 4
+    },
+    "inv": {
+     "solved": 0,
+     "n": 0,
+     "censored": 7
+    },
+    "longctx": {
+     "solved": 7,
+     "n": 7,
+     "censored": 3
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 8,
+     "n": 11,
+     "censored": 3
+    },
+    "toolsim": {
+     "solved": 9,
+     "n": 10,
+     "censored": 4
+    }
+   },
+   "ctok_per_solved_median": 2590.5,
+   "ctok_per_solved_mean": 5053.42,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 116806,
+    "completion": 331862
+   }
+  },
+  "frontier": {
+   "n": 8,
+   "solved": 8,
+   "censored": 0,
+   "attempted": 8,
+   "bank": 24,
+   "accuracy": 1.0,
+   "families": {
+    "execution": {
+     "solved": 4,
+     "n": 4,
+     "censored": 0
+    },
+    "inversion": {
+     "solved": 4,
+     "n": 4,
+     "censored": 0
+    }
+   }
+  },
+  "portfolio": {
+   "n": 1,
+   "solved": 1,
+   "censored": 0,
+   "attempted": 1,
+   "bank": 30,
+   "accuracy": 1.0,
+   "families": {
+    "zebra": {
+     "solved": 1,
+     "n": 1,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}
