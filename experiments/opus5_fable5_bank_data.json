@@ -1,0 +1,506 @@
+{
+ "seed": 20260830,
+ "effort": "high",
+ "responses": {
+  "anthropic/claude-opus-5": {
+   "answers": {
+    "longctx-3-2": {
+     "family": "longctx",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 210,
+     "extracted": "6530",
+     "text": "- Ivo Petrov \u2192 project Delta (note 115) \u2192 folded into Orchard program (note 45) \u2192 budget line K30 (note 133) \u2192 4130 units (note 70).\n- Zoe Marchetti \u2192 project Anvil (note 90) \u2192 folded into Everest program (note 41) \u2192 budget line R32 (note 40) \u2192 2400 units (note 21).\n\nSum: 4130 + 2400 = 6530\n\nFINAL: 6530"
+    },
+    "casework-2-2": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 685,
+     "extracted": "2701",
+     "text": "**Step 1 \u2014 Slice levy on 16800**\n\n- First 8000 at 11%: 8000 \u00d7 11 = 88000 \u2192 88000 / 100 = **880**\n- 8000\u201316000 (8000 units) at 27%: 8000 \u00d7 27 = 216000 \u2192 216000 / 100 = **2160**\n- 16000\u201317000 (800 units, since base is 16800) at 8%: 800 \u00d7 8 = 6400 \u2192 6400 / 100 = **64**\n- Above 17000: 0 units \u2192 **0**\n\nSubtotal = 880 + 2160 + 64 = **3104**\n\n**Step 2 \u2014 Surcharge**\n\nFiling class is beta (not alpha or gamma) \u2192 no surcharge. Total stays **3104**.\n\n**Step 3 \u2014 Relief credit**\n\nBase 16800 exceeds 14000 by 2800 \u2192 28 full hundreds \u2192 reduction = 28 \u00d7 10 = 280.\nCredit = 683 \u2212 280 = 403 (above 0, so kept).\nTotal = 3104 \u2212 403 = **2701** (above 0).\n\n**Step 4 \u2014 Cap**\n\n42% of 16800: 16800 \u00d7 42 = 705600 \u2192 705600 / 100 = 7056.\n2701 \u2264 7056, so no cap applies.\n\nFINAL: 2701"
+    },
+    "casework-1-1": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 551,
+     "extracted": "1194",
+     "text": "## Step 1 \u2014 Slice levy on 8,800\n\n- First 6,000 at 18%: 6000 \u00d7 18 = 108,000 \u2192 108,000 / 100 = **1,080**\n- 6,000\u20137,000 (1,000 units) at 20%: 1000 \u00d7 20 = 20,000 \u2192 20,000 / 100 = **200**\n- 7,000\u201311,000 portion: 8,800 \u2212 7,000 = 1,800 units at 24%: 1800 \u00d7 24 = 43,200 \u2192 43,200 / 100 = **432**\n- Above 11,000: none \u2192 **0**\n\nSubtotal: 1,080 + 200 + 432 = **1,712**\n\n## Step 2 \u2014 Surcharge\n\nFiling class is **beta**, not alpha or gamma \u2192 no surcharge. Total stays **1,712**.\n\n## Step 3 \u2014 Relief credit\n\nFlagged for relief: 1,712 \u2212 518 = **1,194** (above 0, so it stands).\n\n## Step 4 \u2014 Cap check\n\n32% of 8,800: 8800 \u00d7 32 = 281,600 \u2192 281,600 / 100 = **2,816**.\nSince 1,194 \u2264 2,816, the cap does not bind.\n\nFINAL: 1194"
+    },
+    "casework-2-3": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 615,
+     "extracted": "1290",
+     "text": "## Step 1 \u2014 Bracket levy on 12800\n\n| Slice | Units | Rate | Computation | Amount |\n|---|---|---|---|---|\n| First 2000 | 2000 | 18% | 2000\u00d718=36000 \u2192 /100 | 360 |\n| 2000\u20137000 | 5000 | 20% | 5000\u00d720=100000 \u2192 /100 | 1000 |\n| 7000\u201310000 | 3000 | 14% | 3000\u00d714=42000 \u2192 /100 | 420 |\n| Above 10000 | 2800 | 7% | 2800\u00d77=19600 \u2192 /100 | 196 |\n\nSubtotal = 360 + 1000 + 420 + 196 = **1976**\n\n## Step 2 \u2014 Surcharge\nFiling class is **beta**, not alpha or gamma \u2192 no surcharge. Total stays **1976**.\n\n## Step 3 \u2014 Relief credit\nFlagged for relief: credit = 686. Base amount 12800 does **not** exceed 20000, so no reduction applies.\n\n1976 \u2212 686 = **1290** (above 0, so it stands).\n\n## Step 4 \u2014 Cap\n38% of 12800 = 12800\u00d738 = 486400 \u2192 /100 = 4864.\n1290 \u2264 4864, so the cap does not bind.\n\nFINAL: 1290"
+    },
+    "casework-3-5": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 468,
+     "extracted": "211",
+     "text": "## Step 1 \u2014 Slice levy on base 2000\n\n- First slice (first 3000 units): only 2000 units apply \u2192 2000 \u00d7 27 = 54000 \u2192 54000 \u00f7 100 = **540**\n- Higher slices: no units (base \u2264 3000) \u2192 0\n\nRunning total: **540**\n\n## Step 2 \u2014 Filing class surcharge\n\nClass is gamma \u2192 surcharge = 34 \u00d7 3 registered units = 102\n\nRunning total: 540 + 102 = **642**\n\n## Step 3 \u2014 Relief credit\n\nFlagged for relief. Base amount 2000 does **not** exceed 16000, so no reduction of the credit: credit = 431.\n\n642 \u2212 431 = 211 (not below 0)\n\nRunning total: **211**\n\n## Step 4 \u2014 Surtax\n\n211 does not exceed 1800 \u2192 no surtax.\n\nRunning total: **211**\n\n## Step 5 \u2014 Cap\n\nCap = 34% of 2000 = 68000 \u00f7 100 = 680. Since 211 \u2264 680, no capping.\n\nFINAL: 211"
+    },
+    "tableqa-1-0": {
+     "family": "tableqa",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 551,
+     "extracted": "1696",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 4:**\n- Research (floor 5)\n- Logistics (floor 6)\n\n**Step 2 \u2014 Of those, which have \u22651 'active' project?**\n- Research: Pinnacle-34 is active \u2713 (Zephyr-72, Fjord-17 paused)\n- Logistics: Zephyr-79 is active \u2713\n\nBoth qualify: **Research, Logistics**\n\n**Step 3 \u2014 Employees in those departments who joined strictly before 2022:**\n\n| id | name | dept | joined | hours \u00d7 rate |\n|----|------|------|--------|--------------|\n| 100 | Priya Nair | Logistics | 2020 | 12 \u00d7 20 = 240 |\n| 103 | Henrik Dahl | Research | 2019 | 28 \u00d7 52 = 1456 |\n\nExcluded: Viktor Lang (2024), Talia Rosen (2022), Kenji Mori (2024), Lena Vogel (2022) \u2014 plus all Ops/Support staff.\n\n**Step 4 \u2014 Sum:** 240 + 1456 = 1696\n\nFINAL: 1696"
+    },
+    "tableqa-2-1": {
+     "family": "tableqa",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 448,
+     "extracted": "1460",
+     "text": "**Step 1 \u2014 Departments on floor 3 or higher:** Compliance (3), Ops (6), Design (3).\n\n**Step 2 \u2014 Departments with at least one 'active' project:**\n- Meridian-29 \u2192 Compliance (active)\n- Zephyr-83 \u2192 Support (active)\nSo: {Compliance, Support}.\n\n**Step 3 \u2014 Intersection:** Compliance only (Ops projects are all paused; Design has no projects; Support is on floor 1).\n\n**Step 4 \u2014 Compliance employees who joined before 2024:**\n- Ines Ferreira, 2022 \u2192 27 \u00d7 30 = 810\n- Nadia Osei, 2019 \u2192 13 \u00d7 50 = 650\n\n**Total:** 810 + 650 = 1460\n\nFINAL: 1460"
+    },
+    "tableqa-4-3": {
+     "family": "tableqa",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 538,
+     "extracted": "3880",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 4:** only **Support** (floor 4). All others are on floor 2.\n\n**Step 2 \u2014 Does Support have an active project?** Support projects: Obsidian-41 (paused), Zephyr-51 (wrapped), Xenon-79 (**active**), Boreal-18 (paused). Yes \u2192 Support qualifies.\n\n**Step 3 \u2014 Support employees who joined strictly before 2022:**\n\n| id | name | joined | hours \u00d7 rate |\n|----|------|--------|--------------|\n| 104 | Ivo Petrov | 2021 | 24 \u00d7 87 = 2088 |\n| 108 | Viktor Lang | 2020 | 31 \u00d7 47 = 1457 |\n| 117 | Omar Haddad | 2021 | 5 \u00d7 67 = 335 |\n\nExcluded: Cormac Doyle (2024), Ilsa Brandt (2024).\n\n**Step 4 \u2014 Sum:** 2088 + 1457 + 335 = 3880\n\nFINAL: 3880"
+    },
+    "tableqa-3-2": {
+     "family": "tableqa",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 756,
+     "extracted": "3367",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 4:** Support (4), Research (6), Design (4).\n\n**Step 2 \u2014 Which of those have an 'active' project?**\n- Support: Krait-88 (active), Fjord-14 (active) \u2713\n- Design: Lumen-29 (active) \u2713\n- Research: only Zenith-11 (paused) \u2717\n\nQualifying departments: **Support, Design**.\n\n**Step 3 \u2014 Employees of those departments who joined strictly before 2022:**\n\n| id | name | dept | joined | hours \u00d7 rate |\n|----|------|------|--------|--------------|\n| 102 | Bruno Vidal | Design | 2019 | 14 \u00d7 85 = 1190 |\n| 108 | Casper Holm | Design | 2020 | 5 \u00d7 67 = 335 |\n| 116 | Dina Waheed | Design | 2020 | 34 \u00d7 48 = 1632 |\n| 117 | Greta Hoffman | Design | 2019 | 10 \u00d7 21 = 210 |\n\nSupport employees all joined 2022 or later (Nadia Osei 2022 is excluded since \"strictly before 2022\"), so none qualify.\n\n**Step 4 \u2014 Total:** 1190 + 335 + 1632 + 210 = 3367\n\nFINAL: 3367"
+    },
+    "tableqa-6-5": {
+     "family": "tableqa",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1056,
+     "extracted": "9552",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 3:** Research (4), Design (4), Ops (6), Field (5), Support (5). *(Logistics and Compliance are on floor 1 \u2192 out.)*\n\n**Step 2 \u2014 Of those, which have \u22651 'active' project?**\n- Research: Krait-26 (paused), Vertex-63 (paused) \u2192 **no**\n- Ops: Boreal-83 (paused) \u2192 **no**\n- Design: Indigo-50 (active) \u2192 **yes**\n- Field: Drift-85 (active) \u2192 **yes**\n- Support: Juniper-31, Lumen-28 (active) \u2192 **yes**\n\nQualifying departments: **Design, Field, Support**\n\n**Step 3 \u2014 Employees in those depts who joined before 2023:**\n\n| id | name | dept | joined | hours \u00d7 rate |\n|----|------|------|--------|--------------|\n| 106 | Gustav Weber | Design | 2020 | 16 \u00d7 80 = 1280 |\n| 129 | Jana Kovac | Support | 2020 | 36 \u00d7 66 = 2376 |\n| 117 | Henrik Dahl | Field | 2020 | 29 \u00d7 88 = 2552 |\n| 137 | Amara Reyes | Field | 2021 | 38 \u00d7 88 = 3344 |\n\n(Excluded: Talia Rosen 2026, Anders Berg 2026, Milan Novak 2026; Hana Sato 2025, Greta Hoffman 2024, Nora Lindgren 2024, Jonas Meyer 2025, Elio Sartori 2026, Amara Diallo 2024; Petra Lindqvist 2024, Yusuf Nora 2024.)\n\n**Step 4 \u2014 Total:** 1280 + 2376 + 2552 + 3344 = 9552\n\nFINAL: 9552"
+    },
+    "repobug-1-1": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 384,
+     "extracted": "f2",
+     "text": "**f2** is the mismatch: its docstring says \"x scaled by 7, shifted up by 15, reduced modulo 89,\" which would be `(x * 7 + 15) % 89`, but the body computes `(x * 9 + 15) % 89`.\n\nAll others check out:\n- f1: \"\u00d72, +37, mod 89\" \u2192 `(x*2 + 37) % 89` \u2713\n- f3: \"12 added to 9 copies of x, mod 89\" \u2192 `(x*9 + 12) % 89` \u2713\n- f4: \"(x\u00b72 + 39) mod 89\" \u2192 `(x*2 + 39) % 89` \u2713\n- f5: \"37 added to 9 copies of x, mod 89\" \u2192 `(x*9 + 37) % 89` \u2713\n\n(Note that f2 is not even used by `pipeline`, which composes f4 \u2192 f3 \u2192 f5 as documented.)\n\nFINAL: f2"
+    },
+    "audit-1-0": {
+     "family": "audit",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 578,
+     "extracted": "2, 9",
+     "text": "**Check of each requirement:**\n\n1. replicas = 3 \u2192 within [2, 6] \u2714\n2. region = sa-east \u2192 **not** in {eu-west, eu-north, us-east, ap-south} \u2718\n3. tier = dev (not prod) \u2192 condition not triggered \u2714\n4. cpu = 9 \u2265 2 \u00d7 3 = 6 \u2714\n5. mem_gb = 36 \u2265 4 \u00d7 9 = 36 (and \u2265 32) \u2714\n6. window_start = 0 \u2192 within [0, 5] \u2714\n7. owner_tag = true \u2714\n8. log_days = 93 \u2265 30 \u2714\n9. tls = 1.1 \u2192 **not** 1.2 or 1.3 \u2718\n10. autoscale_max = 10 > 3 \u2714\n11. canary_pct = 24 \u2264 25 \u2714\n12. tier = dev, replicas = 3 \u2264 3 \u2714\n\nFINAL: 2, 9"
+    },
+    "audit-2-1": {
+     "family": "audit",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 649,
+     "extracted": "5, 11, 14",
+     "text": "**Checking each requirement:**\n\n1. replicas = 2, within [2, 6] \u2014 OK\n2. region = us-east, in allowed list \u2014 OK\n3. tier = dev, not prod \u2014 vacuously OK\n4. cpu = 25 \u2265 2\u00d72 = 4 \u2014 OK\n5. mem_gb = 6; needs \u2265 4\u00d725 = 100, or \u2265 32 \u2014 **VIOLATION**\n6. window_start = 5, within [0, 5] \u2014 OK\n7. owner_tag = true \u2014 OK\n8. log_days = 57 \u2265 30 \u2014 OK\n9. tls = 1.2 \u2014 OK\n10. autoscale_max = 19 > 2 \u2014 OK\n11. canary_pct = 42 > 25 \u2014 **VIOLATION**\n12. tier = dev, replicas = 2 \u2264 3 \u2014 OK\n13. region doesn't start with 'eu-' \u2014 vacuously OK\n14. backups enabled, window starts at 5:00 > 4:00 \u2014 **VIOLATION**\n\nFINAL: 5, 11, 14"
+    },
+    "audit-3-2": {
+     "family": "audit",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 825,
+     "extracted": "1, 2, 6, 9, 11, 14",
+     "text": "**Checking each requirement:**\n\n1. replicas = 8, not within 2\u20136 \u2192 **VIOLATED**\n2. region = me-central, not in allowed list \u2192 **VIOLATED**\n3. tier = prod, backups = true \u2192 OK\n4. cpu 17 \u2265 2\u00d78 = 16 \u2192 OK\n5. mem_gb 45 \u2265 32 (second clause) \u2192 OK\n6. window_start = 21, not in 0\u20135 \u2192 **VIOLATED**\n7. owner_tag = true \u2192 OK\n8. log_days 31 \u2265 30 \u2192 OK\n9. tls = 1.1, not 1.2/1.3 \u2192 **VIOLATED**\n10. autoscale_max 13 > 8 \u2192 OK\n11. canary_pct 49 > 25 \u2192 **VIOLATED**\n12. tier is not dev \u2192 OK (vacuous)\n13. region doesn't start with 'eu-' \u2192 OK (vacuous)\n14. backups enabled but window starts at 21:00 \u2192 **VIOLATED**\n15. autoscale_max 13 > 10, cpu 17 \u2265 8 \u2192 OK\n16. canary 49 > 0, tier = prod (not dev) \u2192 OK\n\nFINAL: 1, 2, 6, 9, 11, 14"
+    },
+    "audit-4-3": {
+     "family": "audit",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 664,
+     "extracted": "3, 5, 6, 8, 11, 18",
+     "text": "**Violations: 3, 5, 6, 8, 11, 18**\n\n- **3**: tier is prod but backups = false.\n- **5**: mem_gb 16 < 4\u00d727 = 108 and < 32.\n- **6**: window_start 16 is outside 0\u20135.\n- **8**: log_days 22 < 30.\n- **11**: canary_pct 39 > 25.\n- **18**: tier is prod but TLS is 1.2, not 1.3.\n\nSatisfied: 1 (5 in [2,6]), 2 (us-east allowed), 4 (27 \u2265 10), 7 (owner tag present), 9 (1.2 allowed), 10 (9 > 5), 12 (not dev), 13 (not eu-), 14 (backups disabled), 15 (9 \u2264 10), 16 (tier not dev), 17 (16 \u2264 48).\n\nFINAL: 3, 5, 6, 8, 11, 18"
+    },
+    "audit-5-4": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 775,
+     "extracted": "6, 11, 14, 18",
+     "text": "**Checking each requirement:**\n\n1. replicas 5 \u2208 [2,6] \u2014 OK\n2. eu-north is allowed \u2014 OK\n3. prod + backups true \u2014 OK\n4. cpu 15 \u2265 2\u00d75=10 \u2014 OK\n5. mem 37 \u2265 32 (second clause) \u2014 OK\n6. window_start 11 not in 0\u20135 \u2014 **VIOLATION**\n7. owner_tag true \u2014 OK\n8. 76 \u2265 30 \u2014 OK\n9. TLS 1.2 allowed here \u2014 OK\n10. 8 > 5 \u2014 OK\n11. canary 34 > 25 \u2014 **VIOLATION**\n12. tier is prod, not dev \u2014 OK\n13. eu- prefix, 76 \u2265 45 \u2014 OK\n14. backups on, window 11 > 4 \u2014 **VIOLATION**\n15. autoscale_max 8 \u2264 10, clause inactive \u2014 OK\n16. canary > 0, tier is prod \u2014 OK\n17. 37 \u2264 48 \u2014 OK\n18. prod requires TLS 1.3, got 1.2 \u2014 **VIOLATION**\n19. 5\u00d715 = 75 \u2264 120 \u2014 OK\n20. owner tag present \u2014 OK\n\nFINAL: 6, 11, 14, 18"
+    },
+    "audit-5-5": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 963,
+     "extracted": "1, 5, 9, 11, 14",
+     "text": "**Check of each requirement**\n\n1. replicas = 1, needs 2\u20136 \u2192 **VIOLATED**\n2. region ap-south is in the allowed list \u2192 ok\n3. tier is staging, not prod \u2192 ok (vacuous)\n4. cpu 14 \u2265 2\u00d71 = 2 \u2192 ok\n5. mem_gb 9 < 4\u00d714 = 56 and 9 < 32 \u2192 **VIOLATED**\n6. window_start 5 is within 0\u20135 inclusive \u2192 ok\n7. owner_tag present \u2192 ok\n8. log_days 30 \u2265 30 \u2192 ok\n9. tls 1.1 is neither 1.2 nor 1.3 \u2192 **VIOLATED**\n10. autoscale_max 11 > 1 \u2192 ok\n11. canary_pct 45 > 25 \u2192 **VIOLATED**\n12. tier is not dev \u2192 ok (vacuous)\n13. region does not start with \"eu-\" \u2192 ok (vacuous)\n14. backups enabled but window starts at 5:00 > 4:00 \u2192 **VIOLATED**\n15. autoscale_max 11 > 10, cpu 14 \u2265 8 \u2192 ok\n16. canary 45 > 0, tier staging \u2260 dev \u2192 ok\n17. mem_gb 9 \u2264 48 \u2192 ok\n18. tier not prod \u2192 ok (vacuous)\n19. 1 \u00d7 14 = 14 \u2264 120 \u2192 ok\n20. owner tag is present \u2192 ok (vacuous)\n\nFINAL: 1, 5, 9, 11, 14"
+    },
+    "inv-8-0": {
+     "family": "inv",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 3127,
+     "extracted": "36758088",
+     "text": "## Working backwards\n\n**Step 8 (reverse):** result 86336348 \u2192 before: reverse = **84363368**\n\n**Step 7 (swap positions 2 & 7):** 8**4**3633**6**8 \u2192 8**6**3633**4**8 = **86363348**\n\n**Step 6 (swap positions 7 & 8):** 863633**48** \u2192 863633**84** = **86363384**\n\n**Step 5 (d \u2192 (9d+9) mod 10):** since 9d+9 \u2261 \u2212d\u22121 (mod 10), the inverse is d = 9 \u2212 e.\nDigits 8,6,3,6,3,3,8,4 \u2192 1,3,6,3,6,6,1,5 = **13636615**\n\n**Step 4 (add 59215981):** 13636615 \u2212 59215981 = \u221245579366 \u2192 +10\u2078 = **54420634**\n\n**Step 3 (rotate left 6):** rotating left by 6 sends z\u2087z\u2088z\u2081z\u2082z\u2083z\u2084z\u2085z\u2086 = 5 4 4 2 0 6 3 4, so\nz\u2081..z\u2088 = 4,2,0,6,3,4,5,4 = **42063454**\n\n**Step 2 (reverse):** before = reverse(42063454) = **45436024**\n\n**Step 1 (\u00d723 mod 10\u2078):** need N with 23N \u2261 45436024 (mod 10\u2078).\n23\u207b\u00b9 mod 10\u2078 = 47826087 (since 23\u00b747826087 = 1100000001 \u2261 1).\nEquivalently, 45436024 \u2261 7 (mod 23) and 10\u2078 \u2261 2 (mod 23), so 7 + 2k \u2261 0 \u2192 k \u2261 8 (mod 23):\nN = (45436024 + 800000000)/23 = 845436024/23 = **36758088**\n\n## Forward check\n- \u00d723: 36758088\u00b723 = 845436024 \u2192 45436024\n- reverse \u2192 42063454\n- rotate left 6 \u2192 54420634\n- +59215981 \u2192 113636615 \u2192 13636615\n- digit map \u2192 86363384\n- swap 7,8 \u2192 86363348\n- swap 2,7 \u2192 84363368\n- reverse \u2192 86336348 \u2713\n\nFINAL: 36758088"
+    },
+    "inv-14-1": {
+     "family": "inv",
+     "rung": 14,
+     "correct": true,
+     "completion_tokens": 4743,
+     "extracted": "52573598",
+     "text": "## Working backwards\n\n**Step 14** (rotate left 5) \u2192 rotate right 5: `21804772` \u2192 `04772218`\n\n**Step 13** (reverse) \u2192 reverse: `04772218` \u2192 `81227740`\n\n**Step 12** (rotate left 5) \u2192 rotate right 5: `81227740` \u2192 `27740812`\n\n**Step 11** (swap 2,3): both digits are 7 \u2192 `27740812`\n\n**Step 10** (rotate left 7) \u2192 rotate left 1: `27740812` \u2192 `77408122`\n\n**Step 9** (rotate left 7) \u2192 rotate left 1: `77408122` \u2192 `74081227`\n\n**Step 8** (swap 1,6): `74081227` \u2192 `24081727`\n\n**Step 7** (\u00d727): need 27X \u2261 24081727 (mod 10\u2078). Since 27\u00b786077101 = 2324081727 \u2192 X = `86077101`\n\n**Step 6** (d\u21923d mod 10): inverse is d\u21927d mod 10: 8,6,0,7,7,1,0,1 \u2192 6,2,0,9,9,7,0,7 = `62099707`\n\n**Step 5** (\u00d77): need 7X \u2261 62099707 (mod 10\u2078). (62099707+100000000)/7 = 23157101 \u2192 `23157101`\n\n**Step 4** (swap 1,7): `23157101` \u2192 `03157121`\n\n**Step 3** (swap 3,8): both digits are 1 \u2192 `03157121`\n\n**Step 2** (reverse): \u2192 `12175130`\n\n**Step 1** (d\u21923d+6 mod 10): inverse d = 7(e\u22126) mod 10:\n1\u21925, 2\u21922, 1\u21925, 7\u21927, 5\u21923, 1\u21925, 3\u21929, 0\u21928 \u2192 `52573598`\n\n## Forward check\n52573598 \u2192 12175130 \u2192 03157121 \u2192 03157121 \u2192 23157101 \u2192 62099707 \u2192 86077101 \u2192 24081727 \u2192 74081227 \u2192 77408122 \u2192 27740812 \u2192 27740812 \u2192 81227740 \u2192 04772218 \u2192 **21804772** \u2713\n\nFINAL: 52573598"
+    },
+    "inv-22-2": {
+     "family": "inv",
+     "rung": 22,
+     "correct": true,
+     "completion_tokens": 5890,
+     "extracted": "37788826",
+     "text": "## Working backwards\n\n**Step 22** (\u221256925703): 13395583 \u2192 56469880\n**Step 21** (\u221244843911): \u2192 11625969\n**Step 20** (un-rotate left 5): result d\u2086d\u2087d\u2088d\u2081\u2026d\u2085 = 11625969 \u2192 25969116\n**Step 19** (reverse): \u2192 61196952\n**Step 18** (un-rotate left 2): d\u2083\u2026d\u2088d\u2081d\u2082 = 61196952 \u2192 52611969\n**Step 17** (inverse of 7d+8 is 3e+6): 5,2,6,1,1,9,6,9 \u2192 12499343\n**Step 16** (inverse of 9d is 9e): \u2192 98611767\n**Step 15** (\u00f721 mod 10\u2078): 21\u00b733267227 = 698611767 \u2192 33267227\n**Step 14** (inverse of 3d+3 is 7e+9): \u2192 00318338\n**Step 13** (\u00f723 mod 10\u2078): 23\u00b760883406 = 1400318338 \u2192 60883406\n**Step 12** (un-rotate left 5): \u2192 83406608\n**Step 11** (reverse): \u2192 80660438\n**Step 10** (\u22123602796): \u2192 77057642\n**Steps 9 & 8** (two reversals cancel): \u2192 77057642\n**Step 7** (\u00f713 mod 10\u2078): 13\u00b729004434 = 377057642 \u2192 29004434\n**Step 6** (\u221287067098): \u2192 41937336\n**Step 5** (inverse of 7d+4 is 3e+8): \u2192 01579776\n**Step 4** (\u00f727 mod 10\u2078): 27\u00b777836288 = 2101579776 \u2192 77836288\n**Step 3** (reverse): \u2192 88263877\n**Step 2** (swap positions 6 and 8): \u2192 88263778\n**Step 1** (un-rotate left 4): d\u2085\u2026d\u2088d\u2081\u2026d\u2084 = 88263778 \u2192 **37788826**\n\n## Forward check\n\n37788826 \u2192 88263778 \u2192 88263877 \u2192 77836288 \u2192 01579776 \u2192 41937336 \u2192 29004434 \u2192 77057642 \u2192 77057642 \u2192 77057642 \u2192 80660438 \u2192 83406608 \u2192 60883406 \u2192 00318338 \u2192 33267227 \u2192 98611767 \u2192 12499343 \u2192 52611969 \u2192 61196952 \u2192 25969116 \u2192 11625969 \u2192 56469880 \u2192 13395583 \u2713\n\nFINAL: 37788826"
+    },
+    "casework-4-w20": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 424,
+     "extracted": "1314",
+     "text": "**Step 1 \u2014 Slice levy on base 5000**\n- First slice only (5000 \u2264 8000): 5000 \u00d7 24 = 120000 \u2192 120000 / 100 = **1200**\n\nRunning total: 1200\n\n**Step 2 \u2014 Filing class surcharge (gamma \u2192 applies)**\n- 3 registered units: 3 \u00d7 38 = 114\n- Units beyond the third: none \u2192 no extra\n\nRunning total: 1200 + 114 = 1314\n\n**Step 3 \u2014 Relief credit**\n- Not flagged \u2192 no change.\n\nRunning total: 1314\n\n**Step 4 \u2014 Surtax**\n- 1314 does not exceed 1500 \u2192 no surtax.\n\nRunning total: 1314\n\n**Step 5 \u2014 Cap**\n- 31% of 5000 = 155000 / 100 = 1550\n- 1314 \u2264 1550 \u2192 no cap applied.\n\nFINAL: 1314"
+    },
+    "inv-32-3": {
+     "family": "inv",
+     "rung": 32,
+     "correct": true,
+     "completion_tokens": 8416,
+     "extracted": "97097923",
+     "text": "## Working Backwards\n\n**Step 32** (rot-left 1): 35265817 \u2192 **73526581**\n**Step 31** (rot-left 4): \u2192 **65817352**\n**Step 30** (d\u21927d+2, inverse d\u21923d\u22126): \u2192 **29875390**\n**Step 29** (rot-left 3): \u2192 **39029875**\n**Step 28** (reverse): \u2192 **57892093**\n**Step 27** (rot-left 2): \u2192 **93578920**\n**Step 26** (rot-left 7): \u2192 **35789209**\n**Step 25** (rot-left 6): \u2192 **78920935**\n**Step 24** (inverse d\u21923d+9): \u2192 **03659684**\n**Step 23** (reverse): \u2192 **48695630**\n**Step 22** (swap 3,5): \u2192 **48596630**\n**Step 21** (inverse d\u21929d+6): \u2192 **28170036**\n**Step 20** (rot-left 6): \u2192 **17003628**\n**Step 19** (\u00f727, since 27\u00b7629764 = 17003628): \u2192 **00629764**\n**Step 18** (swap 1,3): \u2192 **60029764**\n**Step 17** (\u221243300806): \u2192 **16728958**\n**Step 16** (reverse): \u2192 **85982761**\n**Step 15** (inverse d\u21927d): \u2192 **65364927**\n**Step 14** (inverse d\u21923d\u22123): \u2192 **52659438**\n**Step 13** (rot-left 5): \u2192 **59438526**\n**Step 12** (\u00f77): \u2192 **08491218**\n**Step 11** (\u221262023864): \u2192 **46467354**\n**Step 10** (inverse d\u21923d+3): \u2192 **51514285**\n**Step 9** (\u221281305949): \u2192 **70208336**\n**Step 8** (rot-left 3): \u2192 **33670208**\n**Step 7** (inverse d\u21923d+2): \u2192 **11032826**\n**Step 6** (\u221230195620): \u2192 **80837206**\n**Step 5** (\u22127862983): \u2192 **72974223**\n**Step 4** (\u221252659685): \u2192 **20314538**\n**Step 3** (inverse d\u21929d+9): \u2192 **79685461**\n**Step 2** (\u00f77: 7\u00b797097923 = 679685461 \u2261 79685461): \u2192 **97097923**\n**Step 1** (swap positions 1 and 6: both are 9): \u2192 **97097923**\n\n**Forward check:** 97097923 \u2192 79685461 \u2192 20314538 \u2192 72974223 \u2192 80837206 \u2192 11032826 \u2192 33670208 \u2192 70208336 \u2192 51514285 \u2192 46467354 \u2192 08491218 \u2192 59438526 \u2192 52659438 \u2192 65364927 \u2192 85982761 \u2192 16728958 \u2192 60029764 \u2192 00629764 \u2192 17003628 \u2192 28170036 \u2192 48596630 \u2192 48695630 \u2192 03659684 \u2192 78920935 \u2192 35789209 \u2192 93578920 \u2192 57892093 \u2192 39029875 \u2192 29875390 \u2192 65817352 \u2192 73526581 \u2192 35265817 \u2713\n\nFINAL: 97097923"
+    },
+    "casework-4-w21": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 683,
+     "extracted": "3154",
+     "text": "**Step 1 \u2014 Slice levy on 19,100**\n\n- First 8,000 @ 29%: 8000\u00d729 = 232,000 \u2192 2,320\n- 8,000\u20139,000 (1,000) @ 20%: 1000\u00d720 = 20,000 \u2192 200\n- 9,000\u201312,000 (3,000) @ 15%: 3000\u00d715 = 45,000 \u2192 450\n- Above 12,000 (7,100) @ 13%: 7100\u00d713 = 92,300 \u2192 923\n\nSubtotal = 2,320 + 200 + 450 + 923 = **3,893**\n\n**Step 2 \u2014 Surcharge**\n\nFiling class is beta (not alpha or gamma) \u2192 no surcharge. Total stays 3,893.\n\n**Step 3 \u2014 Relief credit**\n\nFlagged: yes. Base 19,100 does not exceed 20,000, so no reduction; credit = 822.\n3,893 \u2212 822 = **3,071**\n\n**Step 4 \u2014 Surtax**\n\n3,071 > 1,400; excess = 1,671. 1671\u00d75 = 8,355 \u2192 83.\n3,071 + 83 = **3,154**\n\n**Step 5 \u2014 Cap**\n\n37% of 19,100: 19100\u00d737 = 706,700 \u2192 7,067. Since 3,154 \u2264 7,067, no cap applies.\n\nFINAL: 3154"
+    },
+    "casework-5-w22": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 886,
+     "extracted": "1878",
+     "text": "## Step-by-step\n\n**1. Base levy by slice (base = 12700)**\n- First 2000 @20%: 2000\u00d720 = 40000 \u2192 400\n- 2000\u20135000 (3000) @21%: 3000\u00d721 = 63000 \u2192 630\n- 5000\u20139000 (4000) @23%: 4000\u00d723 = 92000 \u2192 920\n- Above 9000 (3700) @11%: 3700\u00d711 = 40700 \u2192 407\n\nTotal = 400 + 630 + 920 + 407 = **2357**\n\n**2. Filing class surcharge (gamma \u2192 applies)**\n- 2 registered units \u00d7 44 = 88; no units beyond the third, so no doubling.\n- Running total = 2357 + 88 = **2445**\n\n**3. Relief credit (flagged: yes)**\n- Base 12700 does not exceed 19000, so credit stays 638.\n- 2445 \u2212 638 = **1807**\n\n**4. Surtax (>1100)**\n- Excess = 1807 \u2212 1100 = 707; 707\u00d75 = 3535 \u2192 35\n- Running total = 1807 + 35 = **1842**\n\n**5. Second surtax (>625)**\n- Excess = 1842 \u2212 625 = 1217; 1217\u00d73 = 3651 \u2192 36\n- Running total = 1842 + 36 = **1878**\n\n**6. Oddity levy**\n- 1878 \u00f7 7 = 268 remainder 2 \u2192 not divisible, no addition. Total = **1878**\n\n**7. Cap**\n- 12700\u00d731 = 393700 \u2192 3937. Since 1878 \u2264 3937, no cap applies.\n\nFINAL: 1878"
+    },
+    "casework-5-w23": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 921,
+     "extracted": "4563",
+     "text": "## Step 1 \u2014 Base levy by slices\n\n- First 10 000 @ 27%: 10000\u00d727 = 270000 \u2192 /100 = **2700**\n- 10 000\u201314 000 \u2192 4 000 @ 26%: 4000\u00d726 = 104000 \u2192 /100 = **1040**\n- 14 000\u201316 000 \u2192 2 000 @ 25%: 2000\u00d725 = 50000 \u2192 /100 = **500**\n- Above 16 000 \u2192 1 300 @ 26%: 1300\u00d726 = 33800 \u2192 /100 = **338**\n\nTotal = 2700 + 1040 + 500 + 338 = **4578**\n\n## Step 2 \u2014 Class surcharge\nFiling class is beta \u2192 no surcharge. Total = **4578**\n\n## Step 3 \u2014 Relief credit\nBase 17 300 exceeds 12 000 by 5 300 \u2192 53 full hundreds \u2192 reduction = 53\u00d77 = 371.\nCredit = 607 \u2212 371 = 236 (above 0).\nTotal = 4578 \u2212 236 = **4342**\n\n## Step 4 \u2014 First surtax (>1800)\nExcess = 4342 \u2212 1800 = 2542; 2542\u00d75 = 12710 \u2192 /100 = 127.\nTotal = 4342 + 127 = **4469**\n\n## Step 5 \u2014 Second surtax (>1750)\nExcess = 4469 \u2212 1750 = 2719; 2719\u00d73 = 8157 \u2192 /100 = 81.\nTotal = 4469 + 81 = **4550**\n\n## Step 6 \u2014 Oddity levy\n4550 \u00f7 7 = 650 exactly \u2192 add 13. Total = **4563**\n\n## Step 7 \u2014 Cap\n37% of 17 300 = 640100/100 = 6401. Since 4563 \u2264 6401, no cap applies.\n\nFINAL: 4563"
+    },
+    "tableqa-7-w20": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2285,
+     "extracted": "10424",
+     "text": "## Step 1: Departments on floor 3+\nAll seven departments (floors 3\u20136) pass.\n\n## Step 2: Must have \u22651 'active' project\n- Field: only wrapped \u2192 out\n- Support: no projects \u2192 out\n- Logistics: Talus\u201117 active \u2713\n- Research: Cobalt\u201125, Nimbus\u201195 active \u2713\n- Compliance: Boreal\u201190, Xenon\u201114 active \u2713\n- Design: Basalt\u201131 active \u2713\n- Ops: Fjord\u201173, Cobalt\u201129 active \u2713\n\n## Step 3: Exclude those also having a 'paused' project\n- Logistics (Umber\u201111 paused) \u2192 out\n- Compliance (Lumen\u201156 paused) \u2192 out\n- Design (Meridian\u201171 paused) \u2192 out\n- Research: no paused \u2713\n- Ops: no paused \u2713\n\n**Qualifying departments: Ops, Research**\n\n## Step 4: Rate \u2265 43 and not a department head\nHeads: Meyer Yusuf, Livia Anders, Tomas Reyes, Holm Casper, Nadia Milan, Jonas Meyer, Kovac Brandt.\n\nOps: Priya Nair (75), Elio Sartori (84), Henrik Dahl (53), Jana Kovac (67), Nora Lindgren (43), Bruno Vidal (81), Costa Ivo (60), Nair Reyes (53), Haddad Lindgren (44), Vogel Waheed (54) \u2192 10\n(dropped: Anders Berg 36, Viktor Dahl 27)\n\nResearch: Talia Rosen (67), Petra Lindqvist (79), Cormac Omar (84) \u2192 3\n(dropped: Jonas Meyer 28/head, Ines Ferreira 27, Marisol Vega 22, Holm Casper \u2014 head)\n\n**Count = 13**\n\n## Step 5: Of those, joined before 2023 \u2192 hours \u00d7 rate\n- Priya Nair (2022): 35 \u00d7 75 = 2625\n- Henrik Dahl (2022): 15 \u00d7 53 = 795\n- Nora Lindgren (2019): 8 \u00d7 43 = 344\n- Costa Ivo (2021): 32 \u00d7 60 = 1920\n- Nair Reyes (2021): 30 \u00d7 53 = 1590\n- Vogel Waheed (2022): 35 \u00d7 54 = 1890\n- Cormac Omar (2022): 15 \u00d7 84 = 1260\n\nSum = 2625 + 795 + 344 + 1920 + 1590 + 1890 + 1260 = **10424**\n\nFINAL: 10424"
+    },
+    "tableqa-7-w21": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2180,
+     "extracted": "9618",
+     "text": "## Step 1: Departments on floor \u2265 2\n\nCompliance (3), Ops (2), Design (2), Research (3), Logistics (4), Support (3). \u2014 Field (floor 1) is out.\n\n## Step 2: Must have \u2265 1 'active' project\n\n- Ops: Meridian\u201151 active \u2713\n- Support: Sable\u201117, Cinder\u201179 active \u2713\n- Compliance: Umber\u201166 active \u2713\n- Research: wrapped \u00d74 + paused \u2717\n- Design: wrapped \u2717\n- Logistics: wrapped \u2717\n\n## Step 3: Exclude any with a 'paused' project\n\n- Ops: Cobalt\u201187 paused \u2192 **excluded**\n- Support: no paused \u2713\n- Compliance: no paused \u2713\n\n**Qualifying departments: Support, Compliance**\n\n## Step 4: Employees with rate \u2265 42, not a department head\n\nHeads: Zoe Berg, Greta Rustam, Diallo Ferreira, Henrik Dahl, Osei Doyle, Sato Vega.\n\nSupport: Lena Vogel (65), Marisol Vega (69), Milan Novak (76), Livia Costa (67), Talia Rosen (67), Omar Haddad (63), Milan Yusuf (74) \u2192 7\n*(Priya Nair 31 fails rate)*\n\nCompliance: Viktor Lang (70), Weber Bea (79), Marchetti Selin (87) \u2192 3\n*(Osei Doyle 55 is a head \u2192 excluded; Henrik Dahl 41 fails rate and is a head; Dina Waheed, Gustav Weber, Henrik Vega, Jonas Kaan, Diallo Ferreira, Nora Jana all fail rate)*\n\n**Count = 10**\n\n## Step 5: Of these, joined before 2025 \u2192 hours \u00d7 rate\n\n| Employee | Joined | hours \u00d7 rate |\n|---|---|---|\n| Milan Novak | 2023 | 4 \u00d7 76 = 304 |\n| Livia Costa | 2022 | 30 \u00d7 67 = 2010 |\n| Talia Rosen | 2024 | 34 \u00d7 67 = 2278 |\n| Viktor Lang | 2024 | 35 \u00d7 70 = 2450 |\n| Weber Bea | 2020 | 26 \u00d7 79 = 2054 |\n| Marchetti Selin | 2019 | 6 \u00d7 87 = 522 |\n\n(Excluded for join year \u2265 2025: Lena Vogel 2026, Marisol Vega 2026, Omar Haddad 2025, Milan Yusuf 2026)\n\nSum = 304 + 2010 + 2278 + 2450 + 2054 + 522 = **9618**\n\nFINAL: 9618"
+    },
+    "tableqa-8-w22": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1861,
+     "extracted": "9157",
+     "text": "**Step 1 \u2014 Departments on floor \u2265 3:** Logistics (4), Field (4).\n\n**Step 2 \u2014 Must have an 'active' project:**\n- Logistics: Cobalt\u201182 (active) \u2713\n- Field: Cinder\u201131 (paused), Nimbus\u201153 (paused) \u2717\n\n**Step 3 \u2014 Exclude if it also has a 'paused' project:** Logistics has only Cobalt\u201182 (active) \u2192 Logistics survives.\n\n**Step 4 \u2014 Logistics employees with rate \u2265 54, excluding department heads** (heads: Omar Haddad, Ilsa Vega, Sato Bruno, Henrik Dahl, Marisol Vega, Solano Solano, Aliyev Bruno \u2192 removes #119 Marisol Vega, #142 Solano Solano):\n\n| id | name | hours | rate | joined |\n|---|---|---|---|---|\n| 121 | Anders Berg | 30 | 66 | 2023 |\n| 124 | Bruno Vidal | 30 | 56 | 2025 |\n| 130 | Ilsa Brandt | 22 | 81 | 2023 |\n| 131 | Petra Lindqvist | 23 | 89 | 2019 |\n| 136 | Ivo Haddad | 33 | 54 | 2024 |\n| 139 | Omar Rustam | 14 | 75 | 2026 |\n| 170 | Osei Rosen | 32 | 54 | 2025 |\n| 178 | Lang Costa | 12 | 85 | 2026 |\n| 187 | Dario Novak | 27 | 58 | 2021 |\n\nCount = **9**\n\n**Step 5 \u2014 Of these, joined strictly before 2025 \u2192 hours \u00d7 rate:**\n- 121: 30 \u00d7 66 = 1980\n- 130: 22 \u00d7 81 = 1782\n- 131: 23 \u00d7 89 = 2047\n- 136: 33 \u00d7 54 = 1782\n- 187: 27 \u00d7 58 = 1566\n\nTotal = 1980 + 1782 + 2047 + 1782 + 1566 = **9157**\n\nFINAL: 9157"
+    },
+    "tableqa-8-w23": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1842,
+     "extracted": "7224",
+     "text": "## Step 1: Departments on floor \u2265 3\n\nCompliance (6), Field (3), Logistics (3), Design (4), Support (6), Ops (4). \u2014 Research (floor 1) is out.\n\n## Step 2: Must have \u22651 'active' project\n\n- Compliance: Xenon-16, Zephyr-27 \u2192 active \u2713\n- Support: Vertex-91 \u2192 active \u2713\n- Ops: Pinnacle-80 \u2192 active \u2713\n- Field (only Cobalt-30 paused), Logistics (paused/wrapped), Design (no projects) \u2192 out\n\n## Step 3: Exclude those also having a 'paused' project\n\n- Compliance: Delta-83 paused \u2192 **excluded**\n- Support: Drift-39 paused \u2192 **excluded**\n- Ops: only Pinnacle-80 (active) \u2192 **kept**\n\nQualifying department: **Ops**\n\n## Step 4: Ops employees, filter rate \u2265 31 and not a department head\n\nHeads: Greta Lindgren, Milan Freja, Priya Nair, Vogel Tomas, Casper Holm, Costa Quint, Livia Sato.\n\n| id | name | hours | rate | joined | keep? |\n|---|---|---|---|---|---|\n| 111 | Jana Kovac | 10 | 70 | 2025 | \u2713 |\n| 119 | Omar Haddad | 10 | 57 | 2023 | \u2713 |\n| 124 | Ivo Petrov | 34 | 42 | 2020 | \u2713 |\n| 145 | Petra Marisol | 22 | 68 | 2022 | \u2713 |\n| 149 | Vogel Tomas | 6 | 83 | 2022 | \u2717 head |\n| 150 | Weber Costa | 37 | 79 | 2026 | \u2713 |\n| 164 | Costa Quint | 4 | 32 | 2020 | \u2717 head |\n| 172 | Meyer Petra | 12 | 39 | 2022 | \u2713 |\n| 174 | Sartori Rosen | 18 | 79 | 2021 | \u2713 |\n| 179 | Rustam Dahl | 23 | 80 | 2024 | \u2713 |\n\nCount of qualifying employees: **8**\n\n## Step 5: Of those, joined strictly before 2025 \u2192 hours \u00d7 rate\n\n- 119: 10 \u00d7 57 = 570\n- 124: 34 \u00d7 42 = 1428\n- 145: 22 \u00d7 68 = 1496\n- 172: 12 \u00d7 39 = 468\n- 174: 18 \u00d7 79 = 1422\n- 179: 23 \u00d7 80 = 1840\n\n(111 joined 2025 and 150 joined 2026 \u2192 excluded)\n\nSum = 570 + 1428 + 1496 + 468 + 1422 + 1840 = **7224**\n\nFINAL: 7224"
+    },
+    "repobug-5-w23": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 205,
+     "extracted": "f8",
+     "text": "**f8** \u2014 its docstring promises `(x * 7 + 11) % 103`, but the body computes `(x * 7 + 12) % 103`.\n\nAll other helpers match their docstrings exactly (scale factor and shift agree in each case).\n\nFINAL: f8"
+    },
+    "audit-6-w21": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1054,
+     "extracted": "2, 5, 10, 11, 19, 22, 24",
+     "text": "**Checking each requirement:**\n\n1. replicas 5 \u2208 [2,6] \u2014 OK\n2. region \"sa-east\" not in allowed list \u2014 **VIOLATION**\n3. tier is staging, not prod \u2014 OK\n4. cpu 26 \u2265 2\u00d75 = 10 \u2014 OK\n5. mem 30 < 4\u00d726 = 104, and 30 < 32 \u2014 **VIOLATION**\n6. window 4 \u2208 [0,5] \u2014 OK\n7. owner_tag true \u2014 OK\n8. 65 \u2265 30 \u2014 OK\n9. TLS 1.3 \u2014 OK\n10. autoscale_max 4 is not > 5 \u2014 **VIOLATION**\n11. canary 51 > 25 \u2014 **VIOLATION**\n12. not dev \u2014 OK\n13. region doesn't start with \"eu-\" \u2014 OK\n14. backups on, window 4 \u2264 4 \u2014 OK\n15. autoscale_max 4 \u2264 10 \u2014 OK\n16. canary > 0, tier is staging (not dev) \u2014 OK\n17. 30 \u2264 48 \u2014 OK\n18. not prod \u2014 OK\n19. 5 \u00d7 26 = 130 > 120 \u2014 **VIOLATION**\n20. owner tag present \u2014 OK\n21. mem 30 \u2264 32 \u2014 OK\n22. staging, log_days 65 is odd \u2014 **VIOLATION**\n23. replicas 5 \u2265 3 \u2014 OK\n24. cpu 26 > 24 \u2014 **VIOLATION**\n25. TLS is not 1.1 \u2014 OK\n26. 4 \u2264 4\u00d75 = 20 \u2014 OK\n\nFINAL: 2, 5, 10, 11, 19, 22, 24"
+    },
+    "audit-6-w20": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 1188,
+     "extracted": "6, 7, 11, 14, 20, 23, 26",
+     "text": "**Checking each requirement:**\n\n1. replicas 2 \u2208 [2,6] \u2014 OK\n2. eu-west allowed \u2014 OK\n3. tier is staging, not prod \u2014 OK (vacuous)\n4. cpu 8 \u2265 2\u00d72 = 4 \u2014 OK\n5. mem 41 \u2265 32 \u2014 OK\n6. window_start 9 not in 0\u20135 \u2014 **VIOLATION**\n7. owner_tag is false (absent) \u2014 **VIOLATION**\n8. 70 \u2265 30 \u2014 OK\n9. TLS 1.2 allowed \u2014 OK\n10. 10 > 2 \u2014 OK\n11. canary_pct 53 > 25 \u2014 **VIOLATION**\n12. tier not dev \u2014 OK (vacuous)\n13. eu- region, 70 \u2265 45 \u2014 OK\n14. backups on, window 9 > 4 \u2014 **VIOLATION**\n15. autoscale_max 10 not > 10 \u2014 OK (vacuous)\n16. canary > 0, tier is staging \u2014 OK\n17. 41 \u2264 48 \u2014 OK\n18. tier not prod \u2014 OK (vacuous)\n19. 2\u00d78 = 16 \u2264 120 \u2014 OK\n20. owner tag missing, tier is staging not dev \u2014 **VIOLATION**\n21. mem 41 > 32, backups enabled \u2014 OK\n22. staging, 70 is even \u2014 OK\n23. replicas 2 < 3, canary 53 \u2260 0 \u2014 **VIOLATION**\n24. 8 \u2264 24 \u2014 OK\n25. TLS is 1.2, not 1.1 \u2014 OK (vacuous)\n26. autoscale_max 10 > 4\u00d72 = 8 \u2014 **VIOLATION**\n\nFINAL: 6, 7, 11, 14, 20, 23, 26"
+    },
+    "audit-7-w22": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1108,
+     "extracted": "2, 6, 7, 14, 16, 28",
+     "text": "**Violations: 2, 6, 7, 14, 16, 28**\n\n- **2** \u2014 region `me-central` is not in the allowed set.\n- **6** \u2014 window_start 12 is outside 0\u20135.\n- **7** \u2014 owner_tag is false (no owner tag).\n- **14** \u2014 backups are enabled, but window starts at 12:00 (> 4:00).\n- **16** \u2014 canary_pct 14 > 0 while tier is 'dev'.\n- **28** \u2014 canary_pct 14 > 10 but owner tag is absent.\n\nChecks passing: 1 (3\u2208[2,6]), 3 (not prod), 4 (8 \u2265 6), 5 (39 \u2265 32), 8 (70 \u2265 30), 9 (TLS 1.2), 10 (7 > 3), 11 (14 \u2264 25), 12 (3 \u2264 3), 13 (region not eu-), 15 (7 \u2264 10), 17 (39 \u2264 48), 18 (not prod), 19 (24 \u2264 120), 20 (tier is dev), 21 (backups on), 22 (not staging), 23 (replicas not < 3), 24 (8 \u2264 24), 25 (not TLS 1.1), 26 (7 \u2264 12), 27 (not ap-south), 29 (10 \u2264 22), 30 (backups on).\n\nFINAL: 2, 6, 7, 14, 16, 28"
+    },
+    "audit-7-w23": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1024,
+     "extracted": "2, 6, 11, 14, 16, 17, 26",
+     "text": "**Violations:**\n\n- **2** \u2014 region `sa-east` is not in {eu-west, eu-north, us-east, ap-south}\n- **6** \u2014 window_start 12 is not between 0 and 5\n- **11** \u2014 canary_pct 45 > 25\n- **14** \u2014 backups enabled but window starts at 12:00 (> 4:00)\n- **16** \u2014 canary_pct 45 > 0 but tier is 'dev'\n- **17** \u2014 mem_gb 59 > 48\n- **26** \u2014 autoscale_max 15 > 4 \u00d7 3 = 12\n\nChecks that pass: 1 (3 in 2\u20136), 3 (not prod), 4 (16 \u2265 6), 5 (59 \u2265 32), 7 (tag present), 8 (108 \u2265 30), 9 (TLS 1.3), 10 (15 > 3), 12 (3 \u2264 3), 13 (not eu-), 15 (16 \u2265 8), 18 (not prod), 19 (48 \u2264 120), 20 (tag present), 21 (backups on), 22 (not staging), 23 (replicas not < 3), 24 (16 \u2264 24), 25 (TLS not 1.1), 27 (not ap-south), 28 (tag present), 29 (18 \u2264 22), 30 (backups on).\n\nFINAL: 2, 6, 11, 14, 16, 17, 26"
+    },
+    "longctx-1-0": {
+     "family": "longctx",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-4-3": {
+     "family": "longctx",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-2-1": {
+     "family": "longctx",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-3-4": {
+     "family": "casework",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-5-4": {
+     "family": "longctx",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-1-0": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-2-2": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-6-5": {
+     "family": "longctx",
+     "rung": 6,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "casework-1-0": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 408,
+     "extracted": "249",
+     "text": "**Step 1 \u2014 Slice levy on base 7700**\n\n- First slice (first 14 000): all 7700 falls here \u2192 7700 \u00d7 10 = 77 000 \u2192 77 000 / 100 = **770**\n- 14 000\u201318 000 slice: 0 units \u2192 0\n- 18 000\u201319 000 slice: 0 units \u2192 0\n- Above 19 000: 0 units \u2192 0\n\nSubtotal = **770**\n\n**Step 2 \u2014 Surcharge (class gamma qualifies)**\n\nRegistered units = 0 \u2192 0 \u00d7 45 = **0** \u2192 total stays 770\n\n**Step 3 \u2014 Relief credit (flagged: yes)**\n\n770 \u2212 521 = **249** (above 0, so kept)\n\n**Step 4 \u2014 Cap check**\n\n28% of 7700 = 7700 \u00d7 28 = 215 600 \u2192 215 600 / 100 = 2156\n249 \u2264 2156, so no cap applies.\n\nFINAL: 249"
+    },
+    "repobug-3-5": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-3-4": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-2-3": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "tableqa-5-4": {
+     "family": "tableqa",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-4-w20": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-7-w20": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-5-w22": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "repobug-4-w21": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-8-w23": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-7-w21": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "longctx-8-w22": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-1-w30": {
+     "family": "bigknap",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 8405,
+     "extracted": "1212",
+     "text": "## Setting Up\n\nSort by value/weight ratio:\n\n| item | v | w | v/w |\n|---|---|---|---|\n| 20 | 80 | 10 | 8.00 |\n| 11 | 90 | 14 | 6.43 |\n| 7 | 106 | 17 | 6.24 |\n| 25 | 63 | 12 | 5.25 |\n| 9 | 96 | 21 | 4.57 |\n| 1 | 35 | 8 | 4.38 |\n| 23 | 35 | 10 | 3.50 |\n| 12 | 109 | 33 | 3.30 |\n| 4 | 65 | 21 | 3.10 |\n| 21 | 72 | 29 | 2.48 |\n| 22 | 90 | 40 | 2.25 |\n| 2 | 92 | 41 | 2.24 |\n| 24 | 53 | 25 | 2.12 |\n| \u2026 | | | \u22641.83 |\n\nThese 13 \"core\" items have total weight **281**, value **986**, leaving **139** capacity.\n\n## Filling the remaining 139\n\nRemaining candidates: 28(73,40), 27(48,28), 16(25,16), 6(105,68), 14(40,28), 13(41,34), 17(103,86), 19(100,84), 8(83,77), 5(66,73), \u2026\n\n**If item 6 is used** (cap left 71, need \u2265122): best pairs are 28+27 = 121 (w 68), 28+16 = 98, 28+14 = 113, 27+16+14 = w 72 (too heavy). Max = 105+121 = **226**.\n\n**If item 6 is not used**: LP bound = 28+27+16+14 (w 112, v 186) + 27\u00b7(41/34) \u2248 218.6, so at most 218.\n\nSo the best fill is 6+28+27 = value **226**, weight 136 \u2192 total **986 + 226 = 1212** (weight 417).\n\n## Proving optimality\n\nLet f(W) = best value from the non-core items with weight \u2264 W. Its LP relaxation at W=139 is 28,27,16 (w 84, v 146) plus 55/68 of item 6: f_LP(139) \u2248 230.9, and beyond 139 its slope is \u2264 1.544 (item 6's ratio). Hence\nf(139+w) \u2264 230.9 + 1.544\u00b7w.\n\nAny solution = (core minus dropped set D) \u222a (non-core subset), with value \u2264 986 \u2212 v_D + 230.9 + 1.544\u00b7w_D.\n\nFor every core item, v_i \u2212 1.544\u00b7w_i \u2265 14.4 (minimum at item 24: 53 \u2212 38.6 = 14.4), so for any nonempty D:\nvalue \u2264 986 + 230.9 \u2212 14.4 \u2248 1202.5 < 1212.\n\nSo no core item may be dropped, and with D = \u2205 the exact optimum of the remainder is f(139) = 226 (verified by cases above).\n\n**Optimal set:** {20, 11, 7, 25, 9, 1, 23, 12, 4, 21, 22, 2, 24, 28, 27, 6} \u2014 weight 417, value 1212.\n\nFINAL: 1212"
+    },
+    "inv-45-w20": {
+     "family": "inv",
+     "rung": 45,
+     "correct": true,
+     "completion_tokens": 12710,
+     "extracted": "28284741",
+     "text": "## Working Backwards\n\n**Step 45** (\u00d79): solve 9x \u2261 85802619 \u2192 x = **76200291** (9\u00b776200291 = 685802619)\n**44** (\u221245335565): 30864726\n**43** (d\u21923d): each digit \u00d77 mod 10 \u2192 10628942\n**42** (rot left 5 back): 28942106\n**41** (rot left 7 back): 89421062\n**40** (reverse): 26012498\n**39** (swap 4,8): 26082491\n**38** (\u00d727): 27x \u2261 26082491 \u2192 x = 15780833 (27\u00b715780833 = 426082491)\n**37** (reverse): 33808751\n**36** (\u221222851817): 10956934\n**35** (d\u21923d+8): d = 7t+4 \u2192 14796752\n**34** (\u00d713): 13x \u2261 14796752 \u2192 x = 93445904 (=1214796752/13)\n**33** (d\u21929d): d = 9t \u2192 17665106\n**32** (\u00d719): 19x \u2261 17665106 \u2192 x = 21982374 (=417665106/19)\n**31** (d\u21927d+6): d = 3t+2 \u2192 85968134\n**30** (rot left 1 back): 48596813\n**29** (swap 1,6): 88596413\n**28** (swap 5,7): 88591463\n**27** (\u22125676123): 82915340\n**26** (d\u21927d+3): d = 3t+1 \u2192 57846031\n**25** (\u221271028416): 86817615\n**24** (swap 1,2): 68817615\n**23** (reverse): 51671886\n**22** (swap 5,8): 51676881\n**21** (\u22123857580): 47819301\n**20** (\u00d721): 21x \u2261 47819301 \u2192 x = 73705681 (=1547819301/21)\n**19** (swap 2,4): 70735681\n**18, 17** (two reverses cancel): 70735681\n**16** (\u221276778368): 93957313\n**15** (rot left 4 back): 73139395\n**14** (\u00d727): 27x \u2261 73139395 \u2192 x = 21227385 (=573139395/27)\n**13** (reverse): 58372212\n**12** (d\u21923d+8): d = 7t+4 \u2192 90538818\n**11** (rot left 5 back): 38818905\n**10** (swap 2,8): 35818908\n**9** (rot left 6 back): 81890835\n**8** (\u00d713): 81890835/13 = 6299295 \u2192 06299295\n**7** (rot left 5 back): 99295062\n**6** (rot left 5 back): 95062992\n**5** (reverse): 29926059\n**4** (rot left 4 back): 60592992\n**3** (\u221225235125): 35357867\n**2** (d\u21927d+9): d = 3t+3 \u2192 28284714\n**1** (swap 7,8): 28284741\n\nForward re-check confirms every stage (\u2026\u219210628942\u219230864726\u219276200291\u219285802619 \u2713).\n\nFINAL: 28284741"
+    },
+    "inv-60-w21": {
+     "family": "inv",
+     "rung": 60,
+     "correct": true,
+     "completion_tokens": 13425,
+     "extracted": "80931354",
+     "text": "## Working Backwards\n\nStarting from **31198109**, I invert each step (rotations become opposite rotations, swaps/reversals are self\u2011inverse, additions become subtractions, multiplications use modular inverses mod 10\u2078: 3\u207b\u00b9=66666667, 7\u207b\u00b9=42857143, 11\u207b\u00b9=90909091, 13\u207b\u00b9=76923077, 19\u207b\u00b9=52631579, 21\u207b\u00b9=80952381).\n\n| after step | value |\n|---|---|\n| 60 | 31198109 |\n| 59 | 09311981 (rot right 2) |\n| 58 | 33776761 (\u00f721) |\n| 57 | 76253823 (\u00f77) |\n| 56 | 75263823 (swap 2,4) |\n| 55 | 31163262 (\u221244100561) |\n| 54 | 23116326 |\n| 53 | 62311632 |\n| 52 | 16326231 |\n| 51 | 26326131 (swap 1,6) |\n| 50 | 43490849 (\u00f719) |\n| 49 | 43490948 |\n| 48 | 84909434 (reverse) |\n| 47 | 48490943 |\n| 46 | 42496947 (digits \u21d0 7(d\u22122)) |\n| 45 | 26345919 (\u00f713) |\n| 44 | 14318435 |\n| 43 | 20822390 |\n| 42 | 25235489 |\n| 41 | 65930499 (\u00f711) |\n| 40 | 46266582 |\n| 39 | 28566264 (reverse) |\n| 38 | 09522088 (\u00f73) |\n| 37 | 95220880 |\n| 36 | 13228448 (digits \u21d0 7(d\u22126)) |\n| 35 | 84482231 |\n| 34 | 13228448 |\n| 33 | 44813228 |\n| 32 | 41843228 (swap 2,4) |\n| 31 | 84184322 |\n| 30 | 15815677 (d \u21d0 \u2212d\u22121) |\n| 29 | 56771581 |\n| 28 | 85648312 (\u221271123269) |\n| 27 | 31285648 |\n| 26 | 56483128 |\n| 25 | 45797141 (\u221210685987) |\n| 24 | 45497171 (swap 3,7) |\n| 23 | 17179454 (reverse) |\n| 22 | 60608323 (d \u21d0 7\u2212d) |\n| 21 | 22360799 |\n| 20 | 93260128 |\n| 19 | 54387170 |\n| 18 | 43871705 |\n| 17 | 87170543 |\n| 16 | 08912883 (\u00f721) |\n| 15 | 30891288 |\n| 14 | 31890288 (swap 2,5) |\n| 13 | 02883189 |\n| 12 | 98138820 (reverse) |\n| 11 | 31770994 (\u221266367826) |\n| 10 | 95778116 (digits \u21d0 7(d\u22126)) |\n| 9 | 78116957 |\n| 8 | 87116957 (swap 1,2) |\n| 7 | 14227804 (digits \u21d0 7(d\u22125)) |\n| 6 | 14227840 |\n| 5 | 14220847 |\n| 4 | 71422084 |\n| 3 | 09136541 (\u221262285543) |\n| 2 | 45318903 (d \u21d0 4\u2212d) |\n| 1 | 30981354 (reverse) |\n| start | **80931354** (swap 1,4) |\n\n**Verification (forward):** 80931354 \u2192 30981354 \u2192 45318903 \u2192 09136541 \u2192 71422084 \u2192 14220847 \u2192 14227840 \u2192 14227804 \u2192 87116957 \u2192 78116957 \u2192 95778116 \u2192 31770994 \u2192 98138820 \u2192 02883189 \u2192 31890288 \u2192 30891288 \u2192 08912883 \u2192 87170543 \u2192 43871705 \u2192 54387170 \u2192 93260128 \u2192 22360799 \u2192 60608323 \u2192 17179454 \u2192 45497171 \u2192 45797141 \u2192 56483128 \u2192 31285648 \u2192 85648312 \u2192 56771581 \u2192 15815677 \u2192 84184322 \u2192 41843228 \u2192 44813228 \u2192 13228448 \u2192 84482231 \u2192 13228448 \u2192 95220880 \u2192 09522088 \u2192 28566264 \u2192 46266582 \u2192 65930499 \u2192 25235489 \u2192 20822390 \u2192 14318435 \u2192 26345919 \u2192 42496947 \u2192 48490943 \u2192 84909434 \u2192 43490948 \u2192 43490849 \u2192 26326131 \u2192 16326231 \u2192 62311632 \u2192 23116326 \u2192 31163262 \u2192 75263823 \u2192 76253823 \u2192 33776761 \u2192 09311981 \u2192 **31198109** \u2713\n\nFINAL: 80931354"
+    },
+    "bigknap-3-w32": {
+     "family": "bigknap",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 10659,
+     "extracted": "1431",
+     "text": "## Setting Up\n\nSorting by value/weight ratio, the nine best items are clearly forced in:\n\n| item | 22 | 8 | 9 | 26 | 5 | 2 | 12 | 25 | 30 |\n|---|---|---|---|---|---|---|---|---|---|\n| value | 112 | 109 | 88 | 57 | 108 | 85 | 97 | 77 | 69 |\n| weight | 5 | 9 | 11 | 8 | 17 | 15 | 19 | 18 | 23 |\n\nTotal: **value 802, weight 125** (each has ratio \u2265 3, far above the LP price \u03bb = 41/36 \u2248 1.139; the reduced\u2011cost bound for dropping any of them gives at most 1398 < 1431, so all are in the optimum).\n\nRemaining capacity: 601 \u2212 125 = **476**.\n\n## Solving the Subproblem (capacity 476)\n\nHigh\u2011ratio candidates: 18(76,45), 13(27,17), 21(79,51), 4(36,24), 15(103,74), 20(94,76), 32(98,82), 14(102,86), 1(41,36), 17(88,78) \u2014 total weight 569, value 744.\n\nSince 569 \u2212 476 = 93, we must discard a sub\u2011collection of weight \u2265 93. To beat value 629 we'd need a discarded set of value \u2264 114 and weight \u2265 93. Enumerating all low\u2011value subsets:\n\n- singles (value \u2264114): heaviest is 14 with weight 86 \u2014 too light\n- pairs: {13,4}=63 (w41), {13,1}=68 (w53), {13,18}=103 (w62), {13,21}=106 (w68), {4,1}=77 (w60), {4,18}=112 (w69) \u2014 heaviest 69\n- triples: only {13,4,1}=104 (w77)\n- quadruples: minimum value 180 > 114\n\nNo such subset exists, so the best using only these items is 744 \u2212 115 = **629** (discarding items 13 and 17).\n\nFor any lower\u2011ratio item, the reduced\u2011cost bound (LP optimum 638.92, \u03bb = 41/36) caps the value:\n\n- 29: 629.3 \u2192 \u2264629  \u2022  11: 626.5  \u2022  3: 620.4  \u2022  28: 617.3  \u2022  27: 615.3  \u2022  10: 614.1\n- 23: 607.1  \u2022  16: 590.3  \u2022  7: 586.6  \u2022  31: 586.7  \u2022  6: 578.1  \u2022  24: 574.7  \u2022  19: 568.8\n\nSo no solution containing a low\u2011ratio item exceeds 629 either. Subproblem optimum = **629**.\n\n## Optimal Solution\n\nItems: **22, 8, 9, 26, 5, 2, 12, 25, 30, 18, 21, 4, 15, 20, 32, 14, 1**\n\n- Weight: 125 + (45+51+24+74+76+82+86+36) = 125 + 474 = **599 \u2264 601**\n- Value: 802 + (76+79+36+103+94+98+102+41) = 802 + 629 = **1431**\n\nFINAL: 1431"
+    },
+    "bigknap-2-w31": {
+     "family": "bigknap",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 12902,
+     "extracted": "1359",
+     "text": "## Setting Up\n\n**Items sorted by value/weight ratio (density):**\n\n| item | value | weight | ratio |\n|---|---|---|---|\n| 4 | 102 | 10 | 10.20 |\n| 9 | 79 | 9 | 8.78 |\n| 12 | 42 | 7 | 6.00 |\n| 17 | 118 | 23 | 5.13 |\n| 13 | 94 | 20 | 4.70 |\n| 8 | 75 | 18 | 4.17 |\n| 11 | 91 | 22 | 4.14 |\n| 14 | 60 | 19 | 3.16 |\n| 19 | 96 | 41 | 2.34 |\n| 7 | 54 | 30 | 1.80 |\n| 16 | 46 | 28 | 1.64 |\n| 30 | 112 | 74 | 1.514 |\n| 22 | 109 | 75 | 1.453 |\n| 2 | 72 | 51 | 1.412 |\n| 3 | 112 | 80 | 1.400 |\n| 21 | 95 | 69 | 1.377 |\n| 28 | 92 | 77 | 1.195 \u2190 LP critical item |\n\nGreedy fills items 4\u202621 exactly to weight **576** (value 1357), leaving 11 units unusable (smallest remaining weight is 18). LP bound = 1357 + (11/77)\u00b792 = **1370.14**.\n\n## A Better Integer Solution\n\nDrop item 2 (72, w 51) and instead take item 24 (74, w 62):\n\n- Core: items 4, 9, 12, 17, 13, 8, 11, 14, 19, 7, 16 \u2192 weight 227, value 857\n- Plus items 30, 22, 3, 21, 24 \u2192 weight 74+75+80+69+62 = 360, value 112+109+112+95+74 = 502\n\nTotal weight = 227 + 360 = **587** (exactly full), total value = 857 + 502 = **1359**.\n\n## Proof of Optimality (reduced-cost argument)\n\nWith dual price \u03bb = 92/77 = 1.194805, any feasible solution satisfies\nvalue \u2264 1370.14 \u2212 \u03a3(penalties), where excluding an above-\u03bb item costs (v \u2212 \u03bbw) and including a below-\u03bb item costs (\u03bbw \u2212 v).\n\nTo reach 1360, total penalty must be \u2264 10.14. Penalties for omitting each above-\u03bb item:\n\n- item 2: 72 \u2212 60.94 = **11.07**; item 16: 46 \u2212 33.45 = **12.55**; item 21: 95 \u2212 82.44 = **12.56**; item 3: **16.42**; item 22: **19.39**; item 7: **18.16**; item 30: **23.58**; item 12: **33.6**; and all remaining ones are larger still.\n\nEvery one exceeds 10.14, so a solution worth \u2265 1360 must contain **all** 16 above-\u03bb items \u2014 weight 576, value 1357 \u2014 leaving only 11 capacity, while every remaining item weighs \u2265 18. So such a solution would be worth exactly 1357, a contradiction.\n\nHence no solution reaches 1360, and 1359 is attained.\n\nFINAL: 1359"
+    },
+    "tableqa-9-w31": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 3088,
+     "extracted": "13346",
+     "text": "## Step 1: Departments on floor \u2265 4\nOps (5), Field (4), Logistics (6), Support (6), Research (5). *(Design=3, Compliance=2 dropped.)*\n\n## Step 2: Must have \u22651 'active' project\n- Research: Indigo\u201194, Krait\u201140, Nimbus\u201119 all active \u2192 \u2714\n- Logistics: Meridian\u201114 active \u2192 \u2714\n- Field: Sable\u201114 active \u2192 \u2714\n- Support: Obsidian\u201193 wrapped, Delta\u201181 wrapped, Nimbus\u201114 paused \u2192 \u2718\n- Ops: Boreal\u201173 paused, Delta\u201149 wrapped \u2192 \u2718\n\n## Step 3: Exclude any with a 'paused' project\n- Research: none paused \u2192 keep\n- Logistics: Harrow\u201122 wrapped only \u2192 keep\n- Field: only Sable\u201114 \u2192 keep\n\n**Qualifying departments: Research, Logistics, Field.**\n\n## Step 4: Employees with rate \u2265 41, not a department head, joined < 2025\n\n**Research** (heads removed: Lena Zoe #137, Lang Weber #219, Omar Meyer n/a here)\n- 106 Lena Vogel 15\u00d769 = 1035\n- 153 Bea Henrik 35\u00d746 = 1610\n- 160 Hana Hoffman 30\u00d767 = 2010\n- 166 Milan Brandt 28\u00d784 = 2352\n- 193 Rustam Meyer 19\u00d759 = 1121\n- 199 Rustam Quint 35\u00d767 = 2345\n- 202 Nadia Amara 37\u00d763 = 2331\n\u2192 **12,804**\n\n**Logistics** (head Petra Brandt #170 removed)\n- 111 Marisol Vega 22\u00d760 = 1320\n- 121 Gustav Weber 17\u00d782 = 1394\n- 136 Bruno Henrik 32\u00d784 = 2688\n- 150 Petrov Rustam 11\u00d788 = 968\n- 151 Berg Priya 29\u00d774 = 2146\n- 175 Marchetti Aydin 21\u00d743 = 903\n- 197 Yusuf Marchetti 8\u00d758 = 464\n- 208 Milan Zoe 29\u00d783 = 2407\n- 211 Sartori Vogel 24\u00d744 = 1056\n\u2192 **13,346**\n\n**Field** (head Livia Costa #103 removed)\n- 110 Nora Lindgren 31\u00d776 = 2356\n- 119 Jana Kovac 36\u00d744 = 1584\n- 123 Talia Rosen 16\u00d743 = 688\n- 129 Henrik Dahl 38\u00d743 = 1634\n- 149 Ilsa Aydin 7\u00d774 = 518\n- 181 Freja Viktor 19\u00d761 = 1159\n- 196 Livia Rosen 11\u00d762 = 682\n- 200 Vidal Livia 35\u00d760 = 2100\n- 201 Vega Freja 24\u00d741 = 984\n\u2192 **11,705**\n\n## Step 5: Largest departmental total\nLogistics = 13,346\n\nFINAL: 13346"
+    }
+   }
+  },
+  "anthropic/claude-fable-5": {
+   "answers": {}
+  }
+ },
+ "usage": {
+  "anthropic/claude-opus-5": {
+   "prompt": 71815,
+   "completion": 111281
+  },
+  "anthropic/claude-fable-5": {
+   "prompt": 0,
+   "completion": 0
+  }
+ },
+ "effort_applied": {
+  "anthropic/claude-opus-5": true
+ }
+}

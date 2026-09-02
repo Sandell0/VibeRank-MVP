@@ -872,6 +872,13 @@ def run_one(client, model, item, data, no_effort):
                  {"role": "user", "content": item["prompt"]}],
                 temperature=0.2, max_tokens=60000, extra=extra, timeout=300.0,
             )
+            if getattr(result, "refusal", None) or getattr(result, "finish_reason", None) == "content_filter":
+                # Provider-side policy refusal (seen 2026-09-02: Anthropic's cyber-content
+                # classifier cutting Opus 5 mid-answer on longctx/casework/toolsim/tableqa).
+                # Censored by construction; retrying re-bills the prompt for the same verdict.
+                print(f"  {model} {item['id']}: provider refusal -> censored, no retry "
+                      f"({(result.refusal or result.finish_reason or '')[:70]})")
+                return None, extra is not None
             if not (result.content or "").strip() or result.content.strip() == "None":
                 raise ProviderError("empty/null content")
             return result, extra is not None

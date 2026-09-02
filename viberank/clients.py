@@ -22,6 +22,8 @@ class ChatResult:
     prompt_tokens: int | None = None
     completion_tokens: int | None = None
     total_tokens: int | None = None
+    finish_reason: str | None = None
+    refusal: str | None = None
 
     def usage_dict(self) -> dict[str, int | None]:
         return {
@@ -105,11 +107,16 @@ class ChatClient:
                 part.get("text", "") for part in content if isinstance(part, dict)
             )
         usage = result.get("usage") or {}
+        choice = result["choices"][0] if isinstance(result.get("choices"), list) else {}
+        message = choice.get("message") if isinstance(choice, dict) else None
+        refusal = message.get("refusal") if isinstance(message, dict) else None
         return ChatResult(
             content=str(content),
             prompt_tokens=_optional_int(usage.get("prompt_tokens")),
             completion_tokens=_optional_int(usage.get("completion_tokens")),
             total_tokens=_optional_int(usage.get("total_tokens")),
+            finish_reason=choice.get("finish_reason") if isinstance(choice, dict) else None,
+            refusal=str(refusal) if refusal else None,
         )
 
 
