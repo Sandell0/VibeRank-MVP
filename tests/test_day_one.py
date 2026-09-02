@@ -377,6 +377,25 @@ class TolerantLadderTests(unittest.TestCase):
         self.assertEqual(d1.outcome_label("ok", None), "ok")
 
 
+class RetryPolicyTests(unittest.TestCase):
+    def test_free_routes_keep_one_retry_and_paid_routes_keep_three(self):
+        import experiments.frontier_ladder as fl
+        import experiments.worldmodel_smoke as ws
+
+        saved = (fl.RETRY_SLEEPS, ws.RETRY_SLEEPS)
+        try:
+            untouched = d1.apply_retry_policy(False)
+            self.assertEqual(untouched["frontier"], (5, 15, 30))
+            self.assertEqual(fl.RETRY_SLEEPS, (5, 15, 30))
+            applied = d1.apply_retry_policy(True)
+            self.assertEqual(set(applied), {"domain", "frontier", "portfolio", "retro", "recall"})
+            self.assertTrue(all(v == (5,) for v in applied.values()))
+            self.assertEqual(ws.RETRY_SLEEPS, (5,))
+        finally:
+            fl.RETRY_SLEEPS, ws.RETRY_SLEEPS = saved
+            d1.apply_retry_policy(False)
+
+
 class PlanTests(unittest.TestCase):
     def test_plan_lists_steps_calls_and_pacing(self):
         lines = d1.plan_lines(

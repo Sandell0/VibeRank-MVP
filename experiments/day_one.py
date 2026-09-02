@@ -459,6 +459,31 @@ def step_interview(ctx: Context) -> None:
             )
 
 
+FREE_ROUTE_RETRY_SLEEPS = (5,)  # one retry; the instruments' default is three
+
+
+def apply_retry_policy(free_route: bool) -> dict[str, tuple]:
+    """Every instrument retries a failed cell three times with 5/15/30 s
+    sleeps, sized for transient paid-route errors. On a free route the usual
+    failure is an empty completion after a full 60k-token grind (~10 min a
+    try on nemotron-3.5-lightning:free), and it repeats, so three retries
+    cost an hour per censored cell for nothing. Keep one. Returns what was
+    applied, per module."""
+    import experiments.domain_portfolio as dp
+    import experiments.frontier_ladder as fl
+    import experiments.portfolio_ladder as pl
+    import experiments.retro_v2 as rv
+    import experiments.worldmodel_smoke as ws
+
+    applied = {}
+    for name, module in (("domain", dp), ("frontier", fl), ("portfolio", pl),
+                         ("retro", rv), ("recall", ws)):
+        if free_route:
+            module.RETRY_SLEEPS = FREE_ROUTE_RETRY_SLEEPS
+        applied[name] = tuple(module.RETRY_SLEEPS)
+    return applied
+
+
 RUNNERS = {
     "recall": step_recall,
     "retro": step_retro,
@@ -1030,6 +1055,11 @@ def parse_args(argv=None):
         default=None,
         help="clamp max_tokens (default: the route's served max_completion_tokens)",
     )
+    parser.add_argument(
+        "--full-retries",
+        action="store_true",
+        help="keep the instruments' three retries per cell even on a free route",
+    )
     parser.add_argument("--plan", action="store_true", help="print the plan, no calls")
     parser.add_argument("--report", action="store_true", help="summarize what is on file")
     return parser.parse_args(argv)
@@ -1080,6 +1110,9 @@ def main(argv=None) -> int:
         print("MISTRAL_API_KEY missing", file=sys.stderr)
         return 2
 
+    retries = apply_retry_policy(is_free and not args.full_retries)
+    print("  retries per cell: " + ", ".join(
+        f"{k} {len(v) + 1}" for k, v in retries.items()))
     halt = threading.Event()
     limiter = RateLimiter(rpm) if rpm else None
     factory = make_factory(slug, limiter=limiter, max_tokens_cap=cap, halt=halt)
