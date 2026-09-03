@@ -18,14 +18,15 @@ import experiments.domain_portfolio as dp
 
 NEW = dp.EXP / "opus5_fable5_bank_data.json"
 OLD = dp.EXP / "distilled_efficiency_data.json"
-SHOW = ["anthropic/claude-opus-5", "anthropic/claude-fable-5", "anthropic/claude-fable-5.1",
+MUSE = dp.EXP / "muse13_bank_data.json"
+SHOW = ["meta/muse-spark-1.3", "anthropic/claude-opus-5", "anthropic/claude-fable-5", "anthropic/claude-fable-5.1",
         "openai/gpt-5.4-mini", "anthropic/claude-haiku-4.5", "qwen/qwen3.6-35b-a3b"]
 SKIP = {"toolsim"}
 
 
 def load():
     ans = {}
-    for path in (OLD, NEW):
+    for path in (OLD, NEW, MUSE):
         if path.is_file():
             d = json.loads(path.read_text(encoding="utf-8"))
             for m, rec in d["responses"].items():
@@ -64,7 +65,7 @@ def main():
         print(row)
 
     # matched items: solved by both
-    pairs = [("anthropic/claude-opus-5", "anthropic/claude-fable-5"), ("anthropic/claude-opus-5", "anthropic/claude-fable-5.1"), ("anthropic/claude-fable-5", "anthropic/claude-fable-5.1")]
+    pairs = [("meta/muse-spark-1.3", "anthropic/claude-fable-5.1"), ("meta/muse-spark-1.3", "anthropic/claude-opus-5"), ("meta/muse-spark-1.3", "openai/gpt-5.4-mini"), ("anthropic/claude-opus-5", "anthropic/claude-fable-5"), ("anthropic/claude-opus-5", "anthropic/claude-fable-5.1"), ("anthropic/claude-fable-5", "anthropic/claude-fable-5.1")]
     print("\nmatched items solved by both: median ratio of tokens (A/B), share of items where A used more, sign-test p")
     for a, b in pairs:
         if a not in ans or b not in ans: continue

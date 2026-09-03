@@ -34162,6 +34162,2264 @@
     "refusal": null,
     "text": null
    }
+  },
+  "meta/muse-spark-1.3": {
+   "r2-canon-219-1": {
+    "tier": "canon",
+    "extracted": "The horror! The horror!",
+    "correct": true,
+    "completion_tokens": 636,
+    "refusal": null,
+    "text": "The horror! The horror!\nFINAL: The horror! The horror!"
+   },
+   "r2-canon-5200-1": {
+    "tier": "canon",
+    "extracted": "Gregor Samsa",
+    "correct": true,
+    "completion_tokens": 738,
+    "refusal": null,
+    "text": "Gregor Samsa\nFINAL: Gregor Samsa"
+   },
+   "r2-canon-5200-2": {
+    "tier": "canon",
+    "extracted": "Grete Samsa",
+    "correct": true,
+    "completion_tokens": 812,
+    "refusal": null,
+    "text": "Grete Samsa\nFINAL: Grete Samsa"
+   },
+   "r2-canon-996-0": {
+    "tier": "canon",
+    "extracted": "Rocinante",
+    "correct": true,
+    "completion_tokens": 706,
+    "refusal": null,
+    "text": "Rocinante\nFINAL: Rocinante"
+   },
+   "r2-canon-996-1": {
+    "tier": "canon",
+    "extracted": "Cave of Montesinos",
+    "correct": true,
+    "completion_tokens": 815,
+    "refusal": null,
+    "text": "Cave of Montesinos\nFINAL: Cave of Montesinos"
+   },
+   "r2-canon-42324-4": {
+    "tier": "canon",
+    "extracted": "Elizabeth Lavenza",
+    "correct": true,
+    "completion_tokens": 660,
+    "refusal": null,
+    "text": "FINAL: Elizabeth Lavenza"
+   },
+   "r2-canon-70841-2": {
+    "tier": "canon",
+    "extracted": "Bay of All Saints",
+    "correct": false,
+    "completion_tokens": 1755,
+    "refusal": null,
+    "text": "Bay of All Saints\nFINAL: Bay of All Saints"
+   },
+   "r2-canon-219-2": {
+    "tier": "canon",
+    "extracted": "Inner Station",
+    "correct": false,
+    "completion_tokens": 1313,
+    "refusal": null,
+    "text": "Inner Station\nFINAL: Inner Station"
+   },
+   "r2-canon-70841-4": {
+    "tier": "canon",
+    "extracted": "Friday",
+    "correct": true,
+    "completion_tokens": 1873,
+    "refusal": null,
+    "text": "Friday\nFINAL: Friday"
+   },
+   "r2-canon-27780-0": {
+    "tier": "canon",
+    "extracted": "Hispaniola",
+    "correct": true,
+    "completion_tokens": 546,
+    "refusal": null,
+    "text": "Hispaniola\nFINAL: Hispaniola"
+   },
+   "r2-canon-219-0": {
+    "tier": "canon",
+    "extracted": "Kurtz",
+    "correct": true,
+    "completion_tokens": 1913,
+    "refusal": null,
+    "text": "Kurtz\nFINAL: Kurtz"
+   },
+   "r2-canon-996-2": {
+    "tier": "canon",
+    "extracted": "Carthusian",
+    "correct": true,
+    "completion_tokens": 1792,
+    "refusal": null,
+    "text": "Carthusian\nFINAL: Carthusian"
+   },
+   "r2-canon-42324-1": {
+    "tier": "canon",
+    "extracted": "wedding night",
+    "correct": true,
+    "completion_tokens": 1448,
+    "refusal": null,
+    "text": "wedding night\nFINAL: wedding night"
+   },
+   "r2-canon-70841-3": {
+    "tier": "canon",
+    "extracted": "pieces of eight",
+    "correct": true,
+    "completion_tokens": 2284,
+    "refusal": null,
+    "text": "pieces of eight\nFINAL: pieces of eight"
+   },
+   "r2-canon-27780-1": {
+    "tier": "canon",
+    "extracted": "Long John Silver",
+    "correct": true,
+    "completion_tokens": 881,
+    "refusal": null,
+    "text": "Long John Silver\nFINAL: Long John Silver"
+   },
+   "r2-canon-5200-0": {
+    "tier": "canon",
+    "extracted": "chest of drawers",
+    "correct": true,
+    "completion_tokens": 2125,
+    "refusal": null,
+    "text": "chest of drawers\nFINAL: chest of drawers"
+   },
+   "r2-canon-42324-2": {
+    "tier": "canon",
+    "extracted": "M. Krempe",
+    "correct": true,
+    "completion_tokens": 1788,
+    "refusal": null,
+    "text": "M. Krempe\nFINAL: M. Krempe"
+   },
+   "r2-canon-70841-1": {
+    "tier": "canon",
+    "extracted": "hatchet",
+    "correct": true,
+    "completion_tokens": 3453,
+    "refusal": null,
+    "text": "hatchet\nFINAL: hatchet"
+   },
+   "r2-canon-70841-0": {
+    "tier": "canon",
+    "extracted": "Orinoco",
+    "correct": true,
+    "completion_tokens": 2652,
+    "refusal": null,
+    "text": "Orinoco\nFINAL: Orinoco"
+   },
+   "r2-canon-45-2": {
+    "tier": "canon",
+    "extracted": "Bonny",
+    "correct": true,
+    "completion_tokens": 1296,
+    "refusal": null,
+    "text": "Bonny\nFINAL: Bonny"
+   },
+   "r2-canon-76-1": {
+    "tier": "canon",
+    "extracted": "Shepherdsons",
+    "correct": true,
+    "completion_tokens": 1034,
+    "refusal": null,
+    "text": "Shepherdsons\nFINAL: Shepherdsons"
+   },
+   "r2-canon-76-2": {
+    "tier": "canon",
+    "extracted": "Jim",
+    "correct": true,
+    "completion_tokens": 689,
+    "refusal": null,
+    "text": "FINAL: Jim"
+   },
+   "r2-canon-27780-3": {
+    "tier": "canon",
+    "extracted": "Admiral Benbow",
+    "correct": true,
+    "completion_tokens": 1831,
+    "refusal": null,
+    "text": "Admiral Benbow\nFINAL: Admiral Benbow"
+   },
+   "r2-canon-42324-3": {
+    "tier": "canon",
+    "extracted": "Secheron",
+    "correct": false,
+    "completion_tokens": 3003,
+    "refusal": null,
+    "text": "Secheron\nFINAL: Secheron"
+   },
+   "r2-canon-45-0": {
+    "tier": "canon",
+    "extracted": "White Sands Hotel",
+    "correct": true,
+    "completion_tokens": 1945,
+    "refusal": null,
+    "text": "White Sands Hotel\nFINAL: White Sands Hotel"
+   },
+   "r2-canon-45-4": {
+    "tier": "canon",
+    "extracted": "red",
+    "correct": true,
+    "completion_tokens": 1087,
+    "refusal": null,
+    "text": "red\nFINAL: red"
+   },
+   "r2-canon-45-3": {
+    "tier": "canon",
+    "extracted": "Lovers' Lane",
+    "correct": true,
+    "completion_tokens": 2316,
+    "refusal": null,
+    "text": "Lovers' Lane\nFINAL: Lovers' Lane"
+   },
+   "r2-canon-42324-0": {
+    "tier": "canon",
+    "extracted": "Strasbourg",
+    "correct": false,
+    "completion_tokens": 4658,
+    "refusal": null,
+    "text": "Strasbourg\nFINAL: Strasbourg"
+   },
+   "r2-canon-27780-2": {
+    "tier": "canon",
+    "extracted": "Spy-glass Hill",
+    "correct": true,
+    "completion_tokens": 3631,
+    "refusal": null,
+    "text": "Spy-glass Hill\nFINAL: Spy-glass Hill"
+   },
+   "r2-canon-10007-2": {
+    "tier": "canon",
+    "extracted": "Mircalla, Countess Karnstein",
+    "correct": true,
+    "completion_tokens": 1582,
+    "refusal": null,
+    "text": "Mircalla, Countess Karnstein\nFINAL: Mircalla, Countess Karnstein"
+   },
+   "r2-canon-10007-1": {
+    "tier": "canon",
+    "extracted": "Karnstein",
+    "correct": true,
+    "completion_tokens": 1706,
+    "refusal": null,
+    "text": "Karnstein\nFINAL: Karnstein"
+   },
+   "r2-canon-45-1": {
+    "tier": "canon",
+    "extracted": "Ruby Gillis",
+    "correct": true,
+    "completion_tokens": 2872,
+    "refusal": null,
+    "text": "Ruby Gillis\nFINAL: Ruby Gillis"
+   },
+   "r2-canon-76-4": {
+    "tier": "canon",
+    "extracted": "whiskey jug",
+    "correct": false,
+    "completion_tokens": 2472,
+    "refusal": null,
+    "text": "whiskey jug\nFINAL: whiskey jug"
+   },
+   "r2-canon-10007-0": {
+    "tier": "canon",
+    "extracted": "General Spielsdorf",
+    "correct": true,
+    "completion_tokens": 2356,
+    "refusal": null,
+    "text": "General Spielsdorf\nFINAL: General Spielsdorf"
+   },
+   "r2-canon-19337-1": {
+    "tier": "canon",
+    "extracted": "Fred",
+    "correct": true,
+    "completion_tokens": 606,
+    "refusal": null,
+    "text": "Fred\nFINAL: Fred"
+   },
+   "r2-canon-28054-1": {
+    "tier": "canon",
+    "extracted": "To my angel Grushenka, if she will come",
+    "correct": false,
+    "completion_tokens": 2196,
+    "refusal": null,
+    "text": "To my angel Grushenka, if she will come\nFINAL: To my angel Grushenka, if she will come"
+   },
+   "r2-canon-19337-2": {
+    "tier": "canon",
+    "extracted": "Jacob Marley",
+    "correct": true,
+    "completion_tokens": 688,
+    "refusal": null,
+    "text": "Jacob Marley\nFINAL: Jacob Marley"
+   },
+   "r2-canon-10007-3": {
+    "tier": "canon",
+    "extracted": "Karnstein Chapel",
+    "correct": true,
+    "completion_tokens": 2292,
+    "refusal": null,
+    "text": "Karnstein Chapel\nFINAL: Karnstein Chapel"
+   },
+   "r2-canon-19337-0": {
+    "tier": "canon",
+    "extracted": "harp",
+    "correct": true,
+    "completion_tokens": 998,
+    "refusal": null,
+    "text": "harp\nFINAL: harp"
+   },
+   "r2-canon-21839-3": {
+    "tier": "canon",
+    "extracted": "Delaford",
+    "correct": true,
+    "completion_tokens": 824,
+    "refusal": null,
+    "text": "Delaford\nFINAL: Delaford"
+   },
+   "r2-canon-28054-3": {
+    "tier": "canon",
+    "extracted": "Grushenka",
+    "correct": true,
+    "completion_tokens": 2224,
+    "refusal": null,
+    "text": "Grushenka\nFINAL: Grushenka"
+   },
+   "r2-canon-10007-4": {
+    "tier": "canon",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4539,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-canon-21839-1": {
+    "tier": "canon",
+    "extracted": "Mr Harris",
+    "correct": true,
+    "completion_tokens": 1451,
+    "refusal": null,
+    "text": "Mr Harris\nFINAL: Mr Harris"
+   },
+   "r2-canon-28054-4": {
+    "tier": "canon",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2481,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-canon-21839-2": {
+    "tier": "canon",
+    "extracted": "St James's Street",
+    "correct": false,
+    "completion_tokens": 2158,
+    "refusal": null,
+    "text": "St James's Street\nFINAL: St James's Street"
+   },
+   "r2-known-2145-2": {
+    "tier": "known",
+    "extracted": "Bethlehem",
+    "correct": true,
+    "completion_tokens": 1342,
+    "refusal": null,
+    "text": "FINAL: Bethlehem"
+   },
+   "r2-known-2145-1": {
+    "tier": "known",
+    "extracted": "Esther",
+    "correct": true,
+    "completion_tokens": 1717,
+    "refusal": null,
+    "text": "Esther\nFINAL: Esther"
+   },
+   "r2-canon-21839-4": {
+    "tier": "canon",
+    "extracted": "Exeter",
+    "correct": true,
+    "completion_tokens": 2651,
+    "refusal": null,
+    "text": "Exeter\nFINAL: Exeter"
+   },
+   "r2-known-696-0": {
+    "tier": "known",
+    "extracted": "Hippolita",
+    "correct": true,
+    "completion_tokens": 849,
+    "refusal": null,
+    "text": "Hippolita\nFINAL: Hippolita"
+   },
+   "r2-known-2145-0": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2737,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-2145-3": {
+    "tier": "known",
+    "extracted": "Ilderim",
+    "correct": true,
+    "completion_tokens": 2797,
+    "refusal": null,
+    "text": "Ilderim\nFINAL: Ilderim"
+   },
+   "r2-canon-76-3": {
+    "tier": "canon",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 6910,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-canon-21839-0": {
+    "tier": "canon",
+    "extracted": "Bond Street",
+    "correct": true,
+    "completion_tokens": 4725,
+    "refusal": null,
+    "text": "Bond Street\nFINAL: Bond Street"
+   },
+   "r2-known-696-4": {
+    "tier": "known",
+    "extracted": "Court of Rome",
+    "correct": true,
+    "completion_tokens": 1551,
+    "refusal": null,
+    "text": "Court of Rome\nFINAL: Court of Rome"
+   },
+   "r2-known-696-2": {
+    "tier": "known",
+    "extracted": "Church of St Nicholas",
+    "correct": true,
+    "completion_tokens": 2080,
+    "refusal": null,
+    "text": "Church of St Nicholas\nFINAL: Church of St Nicholas"
+   },
+   "r2-known-696-3": {
+    "tier": "known",
+    "extracted": "Bianca",
+    "correct": true,
+    "completion_tokens": 1987,
+    "refusal": null,
+    "text": "Bianca\nFINAL: Bianca"
+   },
+   "r2-known-2145-4": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3590,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-6688-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1336,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-2226-3": {
+    "tier": "known",
+    "extracted": "Umballa",
+    "correct": true,
+    "completion_tokens": 1998,
+    "refusal": null,
+    "text": "Umballa\nFINAL: Umballa"
+   },
+   "r2-known-6688-0": {
+    "tier": "known",
+    "extracted": "Wakem",
+    "correct": true,
+    "completion_tokens": 1833,
+    "refusal": null,
+    "text": "Wakem\nFINAL: Wakem"
+   },
+   "r2-canon-27780-4": {
+    "tier": "canon",
+    "extracted": "Israel Hands",
+    "correct": true,
+    "completion_tokens": 9830,
+    "refusal": null,
+    "text": "Israel Hands\nFINAL: Israel Hands"
+   },
+   "r2-canon-28054-2": {
+    "tier": "canon",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 7481,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-2226-0": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3904,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-6688-3": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1742,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-564-0": {
+    "tier": "known",
+    "extracted": "Nuns' House",
+    "correct": true,
+    "completion_tokens": 1044,
+    "refusal": null,
+    "text": "Nuns' House\nFINAL: Nuns' House"
+   },
+   "r2-known-2226-2": {
+    "tier": "known",
+    "extracted": "Wonder House",
+    "correct": false,
+    "completion_tokens": 2811,
+    "refusal": null,
+    "text": "FINAL: Wonder House"
+   },
+   "r2-known-1837-1": {
+    "tier": "known",
+    "extracted": "Hendon Hall",
+    "correct": true,
+    "completion_tokens": 1343,
+    "refusal": null,
+    "text": "Hendon Hall\nFINAL: Hendon Hall"
+   },
+   "r2-known-696-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 5068,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-1837-2": {
+    "tier": "known",
+    "extracted": "Lord St. John",
+    "correct": true,
+    "completion_tokens": 2234,
+    "refusal": null,
+    "text": "Lord St. John\nFINAL: Lord St. John"
+   },
+   "r2-known-1837-3": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2886,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-564-2": {
+    "tier": "known",
+    "extracted": "Neville Landless",
+    "correct": false,
+    "completion_tokens": 2470,
+    "refusal": null,
+    "text": "Neville Landless\nFINAL: Neville Landless"
+   },
+   "r2-known-16865-2": {
+    "tier": "known",
+    "extracted": "Melampo",
+    "correct": true,
+    "completion_tokens": 1699,
+    "refusal": null,
+    "text": "Melampo\nFINAL: Melampo"
+   },
+   "r2-known-16865-0": {
+    "tier": "known",
+    "extracted": "Lampwick",
+    "correct": false,
+    "completion_tokens": 1869,
+    "refusal": null,
+    "text": "Lampwick\nFINAL: Lampwick"
+   },
+   "r2-canon-76-0": {
+    "tier": "canon",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 11208,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-canon-28054-0": {
+    "tier": "canon",
+    "extracted": "Smerdyakov",
+    "correct": true,
+    "completion_tokens": 11354,
+    "refusal": null,
+    "text": "Smerdyakov\nFINAL: Smerdyakov"
+   },
+   "r2-known-6688-4": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4252,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-564-3": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3048,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-16865-1": {
+    "tier": "known",
+    "extracted": "Tunny",
+    "correct": true,
+    "completion_tokens": 2537,
+    "refusal": null,
+    "text": "Tunny\nFINAL: Tunny"
+   },
+   "r2-known-16865-4": {
+    "tier": "known",
+    "extracted": "Field of Miracles",
+    "correct": true,
+    "completion_tokens": 1390,
+    "refusal": null,
+    "text": "Field of Miracles\nFINAL: Field of Miracles"
+   },
+   "r2-known-6688-2": {
+    "tier": "known",
+    "extracted": "Maggie Tulliver",
+    "correct": false,
+    "completion_tokens": 5212,
+    "refusal": null,
+    "text": "Maggie Tulliver\nFINAL: Maggie Tulliver"
+   },
+   "r2-known-564-4": {
+    "tier": "known",
+    "extracted": "The Crozier",
+    "correct": false,
+    "completion_tokens": 3358,
+    "refusal": null,
+    "text": "The Crozier\nFINAL: The Crozier"
+   },
+   "r2-known-1200-2": {
+    "tier": "known",
+    "extracted": "Picrochole",
+    "correct": true,
+    "completion_tokens": 882,
+    "refusal": null,
+    "text": "Picrochole\nFINAL: Picrochole"
+   },
+   "r2-known-1200-3": {
+    "tier": "known",
+    "extracted": "Badebec",
+    "correct": true,
+    "completion_tokens": 850,
+    "refusal": null,
+    "text": "Badebec\nFINAL: Badebec"
+   },
+   "r2-known-2226-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 6029,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-1837-0": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4784,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-66073-3": {
+    "tier": "known",
+    "extracted": "Gustav von Aschenbach",
+    "correct": true,
+    "completion_tokens": 659,
+    "refusal": null,
+    "text": "Gustav von Aschenbach\nFINAL: Gustav von Aschenbach"
+   },
+   "r2-known-103-4": {
+    "tier": "known",
+    "extracted": "Sir Francis Cromarty",
+    "correct": true,
+    "completion_tokens": 849,
+    "refusal": null,
+    "text": "Sir Francis Cromarty\nFINAL: Sir Francis Cromarty"
+   },
+   "r2-known-103-1": {
+    "tier": "known",
+    "extracted": "San Francisco",
+    "correct": false,
+    "completion_tokens": 1755,
+    "refusal": null,
+    "text": "San Francisco\nFINAL: San Francisco"
+   },
+   "r2-known-103-0": {
+    "tier": "known",
+    "extracted": "55,000 pounds",
+    "correct": false,
+    "completion_tokens": 2109,
+    "refusal": null,
+    "text": "55,000 pounds\nFINAL: 55,000 pounds"
+   },
+   "r2-known-16865-3": {
+    "tier": "known",
+    "extracted": "Inn of the Red Crawfish",
+    "correct": false,
+    "completion_tokens": 3015,
+    "refusal": null,
+    "text": "Inn of the Red Crawfish\nFINAL: Inn of the Red Crawfish"
+   },
+   "r2-known-34808-0": {
+    "tier": "known",
+    "extracted": "Knips",
+    "correct": true,
+    "completion_tokens": 1001,
+    "refusal": null,
+    "text": "Knips\nFINAL: Knips"
+   },
+   "r2-known-103-3": {
+    "tier": "known",
+    "extracted": "Carnatic",
+    "correct": true,
+    "completion_tokens": 1800,
+    "refusal": null,
+    "text": "Carnatic\nFINAL: Carnatic"
+   },
+   "r2-known-66073-0": {
+    "tier": "known",
+    "extracted": "San Michele",
+    "correct": true,
+    "completion_tokens": 1915,
+    "refusal": null,
+    "text": "San Michele\nFINAL: San Michele"
+   },
+   "r2-known-66073-2": {
+    "tier": "known",
+    "extracted": "Tadzio",
+    "correct": true,
+    "completion_tokens": 1969,
+    "refusal": null,
+    "text": "Tadzio\nFINAL: Tadzio"
+   },
+   "r2-known-66073-1": {
+    "tier": "known",
+    "extracted": "Venice",
+    "correct": true,
+    "completion_tokens": 2204,
+    "refusal": null,
+    "text": "Venice\nFINAL: Venice"
+   },
+   "r2-known-66073-4": {
+    "tier": "known",
+    "extracted": "Narcissus",
+    "correct": true,
+    "completion_tokens": 2252,
+    "refusal": null,
+    "text": "Narcissus\nFINAL: Narcissus"
+   },
+   "r2-known-2413-0": {
+    "tier": "known",
+    "extracted": "Emma Bovary",
+    "correct": true,
+    "completion_tokens": 1495,
+    "refusal": null,
+    "text": "Emma Bovary\nFINAL: Emma Bovary"
+   },
+   "r2-known-564-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 6071,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-2413-2": {
+    "tier": "known",
+    "extracted": "Berthe",
+    "correct": true,
+    "completion_tokens": 1328,
+    "refusal": null,
+    "text": "Berthe\nFINAL: Berthe"
+   },
+   "r2-known-2413-1": {
+    "tier": "known",
+    "extracted": "Madeleine",
+    "correct": true,
+    "completion_tokens": 1680,
+    "refusal": null,
+    "text": "Madeleine\nFINAL: Madeleine"
+   },
+   "r2-known-34808-3": {
+    "tier": "known",
+    "extracted": "peccary",
+    "correct": true,
+    "completion_tokens": 2516,
+    "refusal": null,
+    "text": "peccary\nFINAL: peccary"
+   },
+   "r2-known-1200-0": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 5211,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-103-2": {
+    "tier": "known",
+    "extracted": "Mongolia",
+    "correct": false,
+    "completion_tokens": 4021,
+    "refusal": null,
+    "text": "Mongolia\nFINAL: Mongolia"
+   },
+   "r2-known-1200-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4961,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-34808-4": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2592,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-2413-4": {
+    "tier": "known",
+    "extracted": "Notre-Dame de Bonsecours",
+    "correct": false,
+    "completion_tokens": 2582,
+    "refusal": null,
+    "text": "Notre-Dame de Bonsecours\nFINAL: Notre-Dame de Bonsecours"
+   },
+   "r2-mid-52900-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2022,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-52900-2": {
+    "tier": "mid",
+    "extracted": "My Dan",
+    "correct": true,
+    "completion_tokens": 2220,
+    "refusal": null,
+    "text": "My Dan\nFINAL: My Dan"
+   },
+   "r2-known-2413-3": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3402,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-70855-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1033,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-52900-4": {
+    "tier": "mid",
+    "extracted": "Daisy Brooke",
+    "correct": true,
+    "completion_tokens": 1712,
+    "refusal": null,
+    "text": "Daisy Brooke\nFINAL: Daisy Brooke"
+   },
+   "r2-mid-4085-2": {
+    "tier": "mid",
+    "extracted": "Hugh Strap",
+    "correct": false,
+    "completion_tokens": 1751,
+    "refusal": null,
+    "text": "Hugh Strap\nFINAL: Hugh Strap"
+   },
+   "r2-known-34808-2": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 5145,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-70855-3": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 904,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-70855-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1463,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-known-34808-1": {
+    "tier": "known",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4899,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-70855-2": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1132,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-52900-0": {
+    "tier": "mid",
+    "extracted": "Dan",
+    "correct": false,
+    "completion_tokens": 3461,
+    "refusal": null,
+    "text": "Dan\nFINAL: Dan"
+   },
+   "r2-mid-70855-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1249,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-968-1": {
+    "tier": "mid",
+    "extracted": "Tom Pinch",
+    "correct": true,
+    "completion_tokens": 1164,
+    "refusal": null,
+    "text": "Tom Pinch\nFINAL: Tom Pinch"
+   },
+   "r2-mid-4085-4": {
+    "tier": "mid",
+    "extracted": "Strap",
+    "correct": false,
+    "completion_tokens": 2694,
+    "refusal": null,
+    "text": "Strap\nFINAL: Strap"
+   },
+   "r2-mid-52900-3": {
+    "tier": "mid",
+    "extracted": "Bess",
+    "correct": true,
+    "completion_tokens": 3448,
+    "refusal": null,
+    "text": "Bess\nFINAL: Bess"
+   },
+   "r2-mid-968-4": {
+    "tier": "mid",
+    "extracted": "Chuffey",
+    "correct": true,
+    "completion_tokens": 1098,
+    "refusal": null,
+    "text": "Chuffey\nFINAL: Chuffey"
+   },
+   "r2-mid-968-3": {
+    "tier": "mid",
+    "extracted": "Major Pawkins",
+    "correct": true,
+    "completion_tokens": 1547,
+    "refusal": null,
+    "text": "Major Pawkins\nFINAL: Major Pawkins"
+   },
+   "r2-mid-1565-3": {
+    "tier": "mid",
+    "extracted": "Nydia",
+    "correct": true,
+    "completion_tokens": 645,
+    "refusal": null,
+    "text": "Nydia\nFINAL: Nydia"
+   },
+   "r2-mid-4085-3": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2608,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-4085-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3808,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-3635-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 951,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-4085-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4297,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-3635-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 893,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-3635-2": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 985,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-3635-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 851,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-1947-0": {
+    "tier": "mid",
+    "extracted": "Gavrillac",
+    "correct": true,
+    "completion_tokens": 1233,
+    "refusal": null,
+    "text": "Gavrillac\nFINAL: Gavrillac"
+   },
+   "r2-mid-1565-0": {
+    "tier": "mid",
+    "extracted": "Apaecides",
+    "correct": true,
+    "completion_tokens": 2347,
+    "refusal": null,
+    "text": "Apaecides\nFINAL: Apaecides"
+   },
+   "r2-mid-968-0": {
+    "tier": "mid",
+    "extracted": "Jonas Chuzzlewit",
+    "correct": true,
+    "completion_tokens": 3308,
+    "refusal": null,
+    "text": "Jonas Chuzzlewit\nFINAL: Jonas Chuzzlewit"
+   },
+   "r2-mid-3635-3": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 634,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-1565-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2395,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-1565-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3525,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-34378-3": {
+    "tier": "mid",
+    "extracted": "Dr. Boekman",
+    "correct": true,
+    "completion_tokens": 925,
+    "refusal": null,
+    "text": "Dr. Boekman\nFINAL: Dr. Boekman"
+   },
+   "r2-mid-968-2": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3652,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-34378-1": {
+    "tier": "mid",
+    "extracted": "Amsterdam",
+    "correct": false,
+    "completion_tokens": 1399,
+    "refusal": null,
+    "text": "Amsterdam\nFINAL: Amsterdam"
+   },
+   "r2-mid-1947-3": {
+    "tier": "mid",
+    "extracted": "Paris",
+    "correct": false,
+    "completion_tokens": 1744,
+    "refusal": null,
+    "text": "Paris\nFINAL: Paris"
+   },
+   "r2-mid-4966-0": {
+    "tier": "mid",
+    "extracted": "Flora Mac-Ivor",
+    "correct": true,
+    "completion_tokens": 761,
+    "refusal": null,
+    "text": "Flora Mac-Ivor\nFINAL: Flora Mac-Ivor"
+   },
+   "r2-mid-1947-4": {
+    "tier": "mid",
+    "extracted": "Com\u00e9die-Fran\u00e7aise",
+    "correct": false,
+    "completion_tokens": 2100,
+    "refusal": null,
+    "text": "Com\u00e9die-Fran\u00e7aise\nFINAL: Com\u00e9die-Fran\u00e7aise"
+   },
+   "r2-mid-4966-1": {
+    "tier": "mid",
+    "extracted": "Flora Mac-Ivor",
+    "correct": true,
+    "completion_tokens": 618,
+    "refusal": null,
+    "text": "Flora Mac-Ivor\nFINAL: Flora Mac-Ivor"
+   },
+   "r2-mid-4966-3": {
+    "tier": "mid",
+    "extracted": "Cosmo Comyne Bradwardine",
+    "correct": true,
+    "completion_tokens": 1134,
+    "refusal": null,
+    "text": "Cosmo Comyne Bradwardine\nFINAL: Cosmo Comyne Bradwardine"
+   },
+   "r2-mid-1565-2": {
+    "tier": "mid",
+    "extracted": "Diomed",
+    "correct": true,
+    "completion_tokens": 3895,
+    "refusal": null,
+    "text": "Diomed\nFINAL: Diomed"
+   },
+   "r2-mid-34378-4": {
+    "tier": "mid",
+    "extracted": "Saint Nicholas",
+    "correct": true,
+    "completion_tokens": 1612,
+    "refusal": null,
+    "text": "Saint Nicholas\nFINAL: Saint Nicholas"
+   },
+   "r2-mid-4966-2": {
+    "tier": "mid",
+    "extracted": "Donald Bean Lean",
+    "correct": true,
+    "completion_tokens": 1576,
+    "refusal": null,
+    "text": "Donald Bean Lean\nFINAL: Donald Bean Lean"
+   },
+   "r2-mid-4709-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1662,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-34378-2": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2736,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-1947-1": {
+    "tier": "mid",
+    "extracted": "Le Chapelier",
+    "correct": true,
+    "completion_tokens": 3578,
+    "refusal": null,
+    "text": "Le Chapelier\nFINAL: Le Chapelier"
+   },
+   "r2-mid-4709-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2273,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-2276-2": {
+    "tier": "mid",
+    "extracted": "Daniel",
+    "correct": true,
+    "completion_tokens": 1697,
+    "refusal": null,
+    "text": "Daniel\nFINAL: Daniel"
+   },
+   "r2-mid-4709-2": {
+    "tier": "mid",
+    "extracted": "Swearengen Jones",
+    "correct": true,
+    "completion_tokens": 2861,
+    "refusal": null,
+    "text": "Swearengen Jones\nFINAL: Swearengen Jones"
+   },
+   "r2-mid-4709-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2814,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-34378-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 5439,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-2276-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2163,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-1947-2": {
+    "tier": "mid",
+    "extracted": "Marquis de La Tour d'Azyr",
+    "correct": false,
+    "completion_tokens": 5646,
+    "refusal": null,
+    "text": "Marquis de La Tour d'Azyr\nFINAL: Marquis de La Tour d'Azyr"
+   },
+   "r2-mid-2276-3": {
+    "tier": "mid",
+    "extracted": "Robert Wringhim",
+    "correct": false,
+    "completion_tokens": 2567,
+    "refusal": null,
+    "text": "Robert Wringhim\nFINAL: Robert Wringhim"
+   },
+   "r2-mid-4709-3": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3316,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-73224-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 881,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-2276-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2886,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-73224-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 823,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-50109-3": {
+    "tier": "mid",
+    "extracted": "Philip Traum",
+    "correct": false,
+    "completion_tokens": 1321,
+    "refusal": null,
+    "text": "Philip Traum\nFINAL: Philip Traum"
+   },
+   "r2-mid-50109-1": {
+    "tier": "mid",
+    "extracted": "Marget",
+    "correct": true,
+    "completion_tokens": 1960,
+    "refusal": null,
+    "text": "Marget\nFINAL: Marget"
+   },
+   "r2-obscure-47899-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 698,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-47899-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 790,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-47899-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 519,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-73224-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1165,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-47899-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 701,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-50109-4": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1852,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-47899-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1020,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-50109-2": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2513,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-73224-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1253,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-27437-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1004,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-2276-1": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3791,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-27437-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1165,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-27437-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 937,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-27437-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 930,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-27437-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1244,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-78890-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1069,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-78890-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1235,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-74385-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1280,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-mid-50109-0": {
+    "tier": "mid",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3759,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-78890-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1636,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-74385-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1069,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-78890-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1861,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-74385-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 969,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-74385-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1460,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-9862-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1060,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-74385-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1646,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-13757-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 784,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-9862-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 951,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-9862-0": {
+    "tier": "obscure",
+    "extracted": "Berlin",
+    "correct": true,
+    "completion_tokens": 1572,
+    "refusal": null,
+    "text": "Berlin\nFINAL: Berlin"
+   },
+   "r2-obscure-13757-4": {
+    "tier": "obscure",
+    "extracted": "Saracinesca",
+    "correct": false,
+    "completion_tokens": 1082,
+    "refusal": null,
+    "text": "Saracinesca\nFINAL: Saracinesca"
+   },
+   "r2-obscure-78890-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1787,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-13757-3": {
+    "tier": "obscure",
+    "extracted": "Anastase Gouache",
+    "correct": false,
+    "completion_tokens": 1309,
+    "refusal": null,
+    "text": "Anastase Gouache\nFINAL: Anastase Gouache"
+   },
+   "r2-obscure-49450-1": {
+    "tier": "obscure",
+    "extracted": "Augustine",
+    "correct": true,
+    "completion_tokens": 1028,
+    "refusal": null,
+    "text": "Augustine\nFINAL: Augustine"
+   },
+   "r2-obscure-36467-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 898,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-9862-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1935,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-36467-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1037,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-36467-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 931,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-36467-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1169,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-13757-0": {
+    "tier": "obscure",
+    "extracted": "Duke of Astrardente",
+    "correct": false,
+    "completion_tokens": 2396,
+    "refusal": null,
+    "text": "Duke of Astrardente\nFINAL: Duke of Astrardente"
+   },
+   "r2-obscure-36467-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1421,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-49450-2": {
+    "tier": "obscure",
+    "extracted": "Africa",
+    "correct": true,
+    "completion_tokens": 1622,
+    "refusal": null,
+    "text": "Africa\nFINAL: Africa"
+   },
+   "r2-obscure-25780-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1368,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-25780-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1029,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-25780-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1161,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-49450-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2453,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-9862-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3035,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-63223-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1111,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-13757-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3128,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-63223-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 802,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-25780-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1843,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-63223-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1267,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-5161-2": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1735,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-49450-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2974,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-63223-3": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 954,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-5161-0": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2300,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-63223-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1141,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-55463-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1334,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-5161-1": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2197,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-55463-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1128,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-obscure-25780-4": {
+    "tier": "obscure",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1744,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-55463-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1082,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-55463-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1315,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-24522-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 917,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-22113-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 990,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-22113-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1774,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-55463-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1707,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-22113-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1553,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-22113-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2233,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-24522-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1392,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-22113-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1847,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-24522-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1357,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-24522-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1256,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-76495-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 895,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11371-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1457,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11371-0": {
+    "tier": "deep",
+    "extracted": "Frank",
+    "correct": true,
+    "completion_tokens": 2009,
+    "refusal": null,
+    "text": "FINAL: Frank"
+   },
+   "r2-deep-24522-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1674,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-76495-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 801,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-76495-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1204,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-76495-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1305,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11371-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1922,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-35964-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 794,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-35964-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1067,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-76495-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1505,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-26902-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1586,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-26902-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1543,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-35964-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1393,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-35964-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1418,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11668-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1626,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-26902-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1890,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-26902-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2173,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-60037-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1133,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-10658-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1557,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11668-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2144,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-60037-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 952,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-60037-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 933,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11668-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2259,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-60037-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 907,
+    "refusal": null,
+    "text": "FINAL: UNKNOWN"
+   },
+   "r2-deep-10658-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2046,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-60037-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 1073,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-26902-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4367,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-7101-0": {
+    "tier": "deep",
+    "extracted": "quicksilver",
+    "correct": true,
+    "completion_tokens": 1133,
+    "refusal": null,
+    "text": "quicksilver\nFINAL: quicksilver"
+   },
+   "r2-deep-11668-2": {
+    "tier": "deep",
+    "extracted": "porcupine",
+    "correct": false,
+    "completion_tokens": 3017,
+    "refusal": null,
+    "text": "porcupine\nFINAL: porcupine"
+   },
+   "r2-deep-10658-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2366,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-11371-1": {
+    "tier": "deep",
+    "extracted": "Frank Buxton",
+    "correct": false,
+    "completion_tokens": 2489,
+    "refusal": null,
+    "text": "Frank Buxton\nFINAL: Frank Buxton"
+   },
+   "r2-deep-10658-1": {
+    "tier": "deep",
+    "extracted": "Bursley",
+    "correct": false,
+    "completion_tokens": 3515,
+    "refusal": null,
+    "text": "Bursley\nFINAL: Bursley"
+   },
+   "r2-deep-11668-4": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2614,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-10658-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2762,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-7101-4": {
+    "tier": "deep",
+    "extracted": "Jackson's Island",
+    "correct": true,
+    "completion_tokens": 1089,
+    "refusal": null,
+    "text": "Jackson's Island\nFINAL: Jackson's Island"
+   },
+   "r2-deep-75201-4": {
+    "tier": "deep",
+    "extracted": "Lake Maggiore",
+    "correct": false,
+    "completion_tokens": 2538,
+    "refusal": null,
+    "text": "Lake Maggiore\nFINAL: Lake Maggiore"
+   },
+   "r2-deep-75201-0": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2656,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-7101-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3860,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-7101-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3940,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-75201-3": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 2993,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-7101-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 4477,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-75201-1": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 3915,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   },
+   "r2-deep-75201-2": {
+    "tier": "deep",
+    "extracted": "UNKNOWN",
+    "correct": false,
+    "completion_tokens": 8069,
+    "refusal": null,
+    "text": "UNKNOWN\nFINAL: UNKNOWN"
+   }
   }
  },
  "usage": {
@@ -34232,6 +36490,10 @@
   "nvidia/nemotron-3.5-lightning:free": {
    "prompt": 0,
    "completion": 0
+  },
+  "meta/muse-spark-1.3": {
+   "prompt": 25669,
+   "completion": 605102
   }
  },
  "effort_applied": {
@@ -34250,6 +36512,7 @@
   "openai/gpt-oss-120b": true,
   "liquid/lfm-2.5-2.6b:free": true,
   "openai/gpt-5.2": true,
-  "nvidia/nemotron-3.5-lightning:free": true
+  "nvidia/nemotron-3.5-lightning:free": true,
+  "meta/muse-spark-1.3": true
  }
 }

@@ -1,0 +1,659 @@
+{
+ "seed": 20260830,
+ "effort": "high",
+ "responses": {
+  "meta/muse-spark-1.3": {
+   "answers": {
+    "toolsim-1-0": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1335,
+     "extracted": "verify(B); unlock(B); deposit(B, 50)",
+     "text": "Goal needs +50 total, so deposit 50 to B after verifying and unlocking it.\nFINAL: verify(B); unlock(B); deposit(B, 50)"
+    },
+    "toolsim-2-2": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1592,
+     "extracted": "deposit(B, 30); move(C, B, 70)",
+     "text": "Goal needs +30 total, so deposit 30 to B, then move 70 from C to B. Both B and C start unlocked.\nFINAL: deposit(B, 30); move(C, B, 70)"
+    },
+    "toolsim-2-3": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1518,
+     "extracted": "move(B, D, 100); deposit(D, 100)",
+     "text": "B starts 110 needs 10, D starts 50 needs 250. Difference is +100 total, so deposit 100 and move 100 from B to D. Both B and D are already unlocked and verified.\nFINAL: move(B, D, 100); deposit(D, 100)"
+    },
+    "toolsim-1-1": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1740,
+     "extracted": "verify(A); unlock(A); deposit(A, 20); deposit(B, 20)",
+     "text": "FINAL: verify(A); unlock(A); deposit(A, 20); deposit(B, 20)"
+    },
+    "longctx-1-0": {
+     "family": "longctx",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 612,
+     "extracted": "6540",
+     "text": "Tomas Reyes leads project Glacier per note 11, and Glacier was folded into the Summit program per note 19. Summit allocation is 1900 units per note 14.\n\nLivia Costa leads project Quartz per note 5, and Quartz was folded into the Horizon program per note 12. Horizon allocation is 4640 units per note 18.\n\nSum = 1900 + 4640 = 6540.\n\nFINAL: 6540"
+    },
+    "longctx-2-1": {
+     "family": "longctx",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 533,
+     "extracted": "15770",
+     "text": "Dario Quint leads project Zephyr [note 40], which was folded into the Granite program [note 56]. Granite carries a quarterly allocation of 6350 units [note 17].\n\nBruno Vidal leads project Cobalt [note 16], which was folded into the Lantern program [note 5]. Lantern carries a quarterly allocation of 9420 units [note 34].\n\nSum = 6350 + 9420 = 15770.\n\nFINAL: 15770"
+    },
+    "longctx-4-3": {
+     "family": "longctx",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 565,
+     "extracted": "8530",
+     "text": "Bea Solano leads project Juniper, which was folded into the Ironwood program.\nIvo Petrov leads project Nimbus, which was folded into the Quarry program.\n\nIronwood reports under budget line K58 with 5030 units.\nQuarry reports under budget line R60 with 3500 units.\n\nSum = 5030 + 3500 = 8530\n\nFINAL: 8530"
+    },
+    "toolsim-3-4": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1987,
+     "extracted": "verify(D); unlock(D); move(C, D, 40); move(B, D, 70); deposit(D, 30); deposit(E, 80)",
+     "text": "Initial total is 410, goal total is 520, so +110 must be deposited.\nA can be left untouched at 100. D must be unlocked to receive.\nMove out all of C and 70 from B to D, then deposit the remainder:\n\nFINAL: verify(D); unlock(D); move(C, D, 40); move(B, D, 70); deposit(D, 30); deposit(E, 80)"
+    },
+    "toolsim-3-5": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2427,
+     "extracted": "deposit(B, 30); deposit(C, 40); move(E, C, 20)",
+     "text": "FINAL: deposit(B, 30); deposit(C, 40); move(E, C, 20)"
+    },
+    "longctx-5-4": {
+     "family": "longctx",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 943,
+     "extracted": "15020",
+     "text": "The project led by Nadia Osei is Willow, per note 204, which was folded into the Pioneer program per note 53.\n\nThe Pioneer program reports under budget line K89 per note 52, which carries the amount posted at desk E6 per note 223, which is 7710 units per note 4.\n\nThe project led by Amara Diallo is Xenon, per note 242, which was folded into the Beacon program per note 35.\n\nThe Beacon program reports under budget line R33 per note 248, which carries the amount posted at desk W8 per note 73, which is 7310 units per note 44.\n\nSum = 7710 + 7310 = 15020.\n\nFINAL: 15020"
+    },
+    "casework-2-2": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1638,
+     "extracted": "2701",
+     "text": "Step 1 - levy per slice:\n- first 8000 at 11%: 8000*11=88000 /100 = 880\n- next 8000 (8000 to 16000) at 27%: 8000*27=216000 /100 = 2160\n- next 800 (16000 to 16800) at 8%: 800*8=6400 /100 = 64\n- above 17000: 0\nTotal = 880+2160+64 = 3104\n\nStep 2 - surcharge:\nclass is beta, not alpha or gamma, so +0. Total = 3104\n\nStep 3 - relief credit:\nflagged yes. Base exceeds 14000 by 2800.\nfull 100s above = 28. Reduction = 28*10 = 280.\ncredit = 683-280 = 403, >=0.\nTotal = 3104-403 = 2701, >=0.\n\nStep 4 - cap:\n42% of base: 16800*42=705600 /100 = 7056.\n2701 <= 7056, so no cap.\n\nFINAL: 2701"
+    },
+    "longctx-6-5": {
+     "family": "longctx",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 781,
+     "extracted": "16700",
+     "text": "The project led by Viktor Lang is Zephyr, which was folded into the Everest program. Everest reports under budget line K24, which carries the amount posted at desk E4: 6910 units.\n\nThe project led by Ines Ferreira is Vertex, which was folded into the Trident program. Trident reports under budget line R22, which carries the amount posted at desk W4: 9790 units.\n\nSum = 6910 + 9790 = 16700.\n\nFINAL: 16700"
+    },
+    "longctx-3-2": {
+     "family": "longctx",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 621,
+     "extracted": "6530",
+     "text": "Ivo Petrov leads project Delta, which was folded into the Orchard program, which reports under budget line K30 with 4130 units.\n\nZoe Marchetti leads project Anvil, which was folded into the Everest program, which reports under budget line R32 with 2400 units.\n\nSum = 4130 + 2400 = 6530\n\nFINAL: 6530"
+    },
+    "casework-2-3": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1662,
+     "extracted": "1290",
+     "text": "Step 1 - levy per slice:\n- first 2000 at 18%: 2000*18 = 36000 /100 = 360\n- 2000 to 7000 at 20%: 5000*20 = 100000 /100 = 1000\n- 7000 to 10000 at 14%: 3000*14 = 42000 /100 = 420\n- above 10000 at 7%: 12800-10000 = 2800; 2800*7 = 19600 /100 = 196\nTotal = 360+1000+420+196 = 1976\n\nStep 2 - surcharge:\nfiling class beta, not alpha or gamma, so +0. Total = 1976\n\nStep 3 - relief credit:\nflagged yes, base 12800 does not exceed 20000, so credit = 686.\n1976-686 = 1290, >=0.\n\nStep 4 - cap:\n38% of base: 12800*38 = 486400 /100 = 4864.\n1290 <= 4864, so no cap.\n\nFINAL: 1290"
+    },
+    "casework-1-1": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1544,
+     "extracted": "1194",
+     "text": "Step 1 - slice levy on base 8800:\n- first 6000 at 18%: 6000*18=108000, /100 = 1080\n- 6000 to 7000: 1000 at 20%: 1000*20=20000, /100 = 200\n- 7000 to 8800: 1800 at 24%: 1800*24=43200, /100 = 432\n- above 11000: 0\nTotal = 1080+200+432 = 1712\n\nStep 2 - surcharge for alpha or gamma only. Class is beta, so no addition. Total = 1712\n\nStep 3 - flagged for relief: subtract 518. 1712-518 = 1194, above 0.\n\nStep 4 - cap at 32% of base: 8800*32=281600, /100 = 2816. 1194 is below 2816, so unchanged.\n\nFINAL: 1194"
+    },
+    "tableqa-1-0": {
+     "family": "tableqa",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1669,
+     "extracted": "1696",
+     "text": "Qualifying departments need floor >=4 and an active project:\n\n- Ops floor 2 -> excluded\n- Support floor 1 -> excluded\n- Research floor 5, has Pinnacle-34 active -> included\n- Logistics floor 6, has Zephyr-79 active -> included\n\nEmployees in Research or Logistics with joined < 2022:\n\n- 100 Priya Nair, Logistics, 2020: 12 * 20 = 240\n- 103 Henrik Dahl, Research, 2019: 28 * 52 = 1456\n\nOthers in those depts joined in 2022 or later.\n\nTotal = 240 + 1456 = 1696\n\nFINAL: 1696"
+    },
+    "casework-3-5": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1488,
+     "extracted": "211",
+     "text": "Step 1 - slice levy on base 2000:\n- first 3000 at 27%: 2000 * 27 = 54000, //100 = 540\n- other slices: 0\nRunning total = 540\n\nStep 2 - class gamma, so surcharge:\n34 * 3 = 102\nRunning total = 540 + 102 = 642\n\nStep 3 - flagged for relief:\nbase 2000 does not exceed 16000, so credit stays 431\n642 - 431 = 211, >=0\nRunning total = 211\n\nStep 4 - surtax:\n211 does not exceed 1800, so no addition\nRunning total = 211\n\nStep 5 - cap at 34% of base:\n2000 * 34 = 68000, //100 = 680\n211 <= 680, so unchanged\n\nFINAL: 211"
+    },
+    "casework-3-4": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1592,
+     "extracted": "3300",
+     "text": "Step 1 - levy per slice:\n- first 14000 at 18%: 14000*18=252000 //100 = 2520\n- 14000 to 15000: 1000 at 6%: 1000*6=6000 //100 = 60\n- 15000 to 17000: 2000 at 24%: 2000*24=48000 //100 = 480\n- above 17000: 19100-17000=2100 at 6%: 2100*6=12600 //100 = 126\nTotal = 2520+60+480+126 = 3186\n\nStep 2 - class gamma, 1 unit: +48\n3186+48 = 3234\n\nStep 3 - not flagged for relief: no change\n3234\n\nStep 4 - surtax, total >1900:\nexcess = 3234-1900 = 1334\n1334*5=6670 //100 = 66\n3234+66 = 3300\n\nStep 5 - cap 40% of base:\n19100*40=764000 //100 = 7640\n3300 <= 7640, no cap.\n\nFINAL: 3300"
+    },
+    "casework-1-0": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1748,
+     "extracted": "249",
+     "text": "Step 1 - slice levy on base 7700:\n- first 14000 at 10%: 7700 * 10 = 77000, //100 = 770\n- above 14000 to 18000: 0 units = 0\n- above 18000 to 19000: 0 units = 0\n- above 19000: 0 units = 0\nTotal = 770\n\nStep 2 - class gamma, surcharge 45 per registered unit:\nregistered units 0 => 45 * 0 = 0\nTotal = 770 + 0 = 770\n\nStep 3 - flagged for relief, subtract 521, floor 0:\n770 - 521 = 249\n\nStep 4 - cap at 28% of base:\n7700 * 28 = 215600, //100 = 2156\n249 <= 2156, so unchanged.\n\nFINAL: 249"
+    },
+    "tableqa-4-3": {
+     "family": "tableqa",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 2103,
+     "extracted": "3880",
+     "text": "Departments on floor >=4:\n- Support is floor 4, all others floor 2.\n\nProjects with status 'active' for Support:\n- Xenon-79 is Support / active, so Support qualifies.\n\nEmployees in Support with joined < 2022:\n- 104 Ivo Petrov: 24 * 87 = 2088\n- 108 Viktor Lang: 31 * 47 = 1457\n- 117 Omar Haddad: 5 * 67 = 335\n\nTotal = 2088 + 1457 + 335 = 3880\n\nFINAL: 3880"
+    },
+    "tableqa-2-1": {
+     "family": "tableqa",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 2026,
+     "extracted": "1460",
+     "text": "Departments on floor 3 or higher:\n- Compliance (3)\n- Ops (6)\n- Design (3)\n\nActive projects by dept:\n- Ops: only paused\n- Compliance: Meridian-29 active\n- Design: no projects\n- Support: Zephyr-83 active but floor 1\n- Logistics: no active\n\nOnly Compliance satisfies both floor >=3 AND >=1 active project.\n\nEmployees with dept = Compliance and joined < 2024:\n- 107 Ines Ferreira: 27 * 30 = 810, joined 2022\n- 114 Nadia Osei: 13 * 50 = 650, joined 2019\n\nTotal = 810 + 650 = 1460\n\nFINAL: 1460"
+    },
+    "tableqa-3-2": {
+     "family": "tableqa",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2485,
+     "extracted": "3367",
+     "text": "Departments on floor >=4 are Support(4), Research(6), Design(4).\n\nActive projects:\n- Support: Krait-88 active, Fjord-14 active -> qualifies\n- Research: Zenith-11 paused only -> no active -> excluded\n- Design: Lumen-29 active -> qualifies\n\nQualifying departments: Support, Design.\n\nEmployees in those depts with joined < 2022:\n- 102 Bruno Vidal, Design, 2019: 14*85 = 1190\n- 108 Casper Holm, Design, 2020: 5*67 = 335\n- 116 Dina Waheed, Design, 2020: 34*48 = 1632\n- 117 Greta Hoffman, Design, 2019: 10*21 = 210\n- No Support employees joined before 2022 (109:2026, 111:2025, 113:2022, 114:2026, 115:2024, 120:2023)\n\nTotal = 1190 + 335 + 1632 + 210 = 3367\n\nFINAL: 3367"
+    },
+    "tableqa-5-4": {
+     "family": "tableqa",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 3453,
+     "extracted": "6513",
+     "text": "Departments on floor >=4 are Research(5), Support(5), Logistics(5), Ops(4).\n\nActive projects:\n- Research: Delta-15 active, Zephyr-50 active\n- Logistics: Xenon-83 active\n- Support: only wrapped\n- Ops: only wrapped\n\nSo qualifying departments: Research and Logistics.\n\nEmployees in those depts with joined < 2025:\n\n- Casper Holm, Logistics, 2023: 7*32 = 224\n- Yusuf Kaan, Logistics, 2020: 15*20 = 300\n- Omar Haddad, Research, 2021: 22*47 = 1034\n- Dario Quint, Research, 2021: 6*32 = 192\n- Greta Hoffman, Logistics, 2022: 14*74 = 1036\n- Lena Vogel, Research, 2024: 26*69 = 1794\n- Priya Nair, Research, 2023: 19*46 = 874\n- Selin Aydin, Logistics, 2020: 14*51 = 714\n- Ilsa Brandt, Research, 2022: 15*23 = 345\n\nExcluded: Amara Diallo 2026, Nadia Osei 2025, Anders Berg 2025.\n\nSum = 224+300+1034+192+1036+1794+874+714+345 = 6513\n\nFINAL: 6513"
+    },
+    "repobug-1-0": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 2825,
+     "extracted": "f2",
+     "text": "The docstrings describe affine maps mod 101.\nComparing each body to its docstring:\n\n- f1: doc `(x*3+25)%101`, body `(x*3+25)%101` \u2013 match.\n- f3: doc `2*x+8 mod 101`, body `(x*2+8)%101` \u2013 match.\n- f4: doc `x*3+7 mod 101`, body `(x*3+7)%101` \u2013 match.\n- f5: doc `x*9+20 mod 101`, body `(x*9+20)%101` \u2013 match.\n- f2: doc `(x*7+27)%101`, body `(x*10+27)%101` \u2013 mismatch on the multiplier 7 vs 10.\n\nThis is the single mismatch, consistent with the review statement. The pipeline `f1(f3(f2(x)))` does apply f2 then f3 then f1.\n\nFINAL: f2"
+    },
+    "repobug-2-3": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1833,
+     "extracted": "f6",
+     "text": "The docstrings describe functions of the form `(x*a + b) % 103`:\n\n- f1 doc says 7, 5; body is `(x * 7 + 5) % 103` - matches\n- f2 doc says 8, 22; body is `(x * 8 + 22) % 103` - matches\n- f3 doc says 3, 11; body is `(x * 3 + 11) % 103` - matches\n- f4 doc says 11, 10; body is `(x * 11 + 10) % 103` - matches\n- f5 doc says 6 copies of x plus 22; body is `(x * 6 + 22) % 103` - matches\n- f6 doc says scaled by 7, shifted up by 9; body is `(x * 7 + 19) % 103` - does NOT match\n\n19 != 9, so f6 is the unique mismatch, consistent with exactly one mismatch.\n\nFINAL: f6"
+    },
+    "tableqa-6-5": {
+     "family": "tableqa",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 3386,
+     "extracted": "9552",
+     "text": "Departments on floor >=3: Research(4), Design(4), Ops(6), Field(5), Support(5).\n\nActive projects by dept:\n- Ops: only paused -> no\n- Support: Juniper-31 active, Lumen-28 active -> yes\n- Design: Indigo-50 active, Talus-74 active -> yes\n- Research: only paused -> no\n- Field: Drift-85 active -> yes\n- Logistics has active but floor 1 -> no\n- Compliance only paused -> no\n\nQualifying departments: Design, Support, Field.\n\nEmployees in those depts with joined < 2023:\n- 106 Gustav Weber | Design | 16 * 80 = 1280 | 2020\n- 117 Henrik Dahl | Field | 29 * 88 = 2552 | 2020\n- 129 Jana Kovac | Support | 36 * 66 = 2376 | 2020\n- 137 Amara Reyes | Field | 38 * 88 = 3344 | 2021\n\nAll other Design/Support/Field employees joined 2024+.\n\nTotal = 1280 + 2552 + 2376 + 3344 = 9552\n\nFINAL: 9552"
+    },
+    "repobug-1-1": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 2613,
+     "extracted": "f2",
+     "text": "Direct comparison of each docstring to its body:\n\n- f1 doc: *2 +37 mod 89. Body `(x*2+37)%89` matches.\n- f3 doc: 9*x +12 mod 89. Body `(x*9+12)%89` matches.\n- f4 doc: x*2 +39 mod 89. Body `(x*2+39)%89` matches.\n- f5 doc: 9*x +37 mod 89. Body `(x*9+37)%89` matches.\n- pipeline doc: f4 then f3 then f5. Body `f5(f3(f4(x)))` matches.\n\n- f2 doc: *7 +15 mod 89. Body `(x*9+15)%89` uses 9, not 7.\n\nThis is the sole mismatch, consistent with exactly one violator.\n\nFINAL: f2"
+    },
+    "audit-1-0": {
+     "family": "audit",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1744,
+     "extracted": "2,9",
+     "text": "Violations:\n- 2: region sa-east is not allowed\n- 9: tls 1.1 is not 1.2 or 1.3\nAll other requirements are satisfied.\n\nFINAL: 2,9"
+    },
+    "audit-2-1": {
+     "family": "audit",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 2039,
+     "extracted": "5, 11, 14",
+     "text": "1. replicas 2 is within 2-6: pass\n2. us-east is allowed: pass\n3. tier is dev, not prod: pass\n4. 25 >= 2*2: pass\n5. 6 >= 4*25? No. 6 >= 32? No: fail\n6. 0 <= 5 <= 5: pass\n7. owner_tag true: pass\n8. 57 >= 30: pass\n9. 1.2 is allowed: pass\n10. 19 > 2: pass\n11. 42 <= 25? No: fail\n12. dev with 2 <= 3: pass\n13. region not eu-: pass\n14. backups true requires window_start <=4, but 5 > 4: fail\n\nViolations are 5, 11, 14.\nFINAL: 5, 11, 14"
+    },
+    "audit-3-2": {
+     "family": "audit",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2277,
+     "extracted": "1,2,6,9,11,14",
+     "text": "Violations:\n1: 8 not in [2,6]\n2: me-central not allowed\n6: 21 not in [0,5]\n9: 1.1 not 1.2/1.3\n11: 49 > 25\n14: backups true but 21 > 4\nOthers pass: 3 prod+backups ok, 4 17>=16 ok, 5 45>=32 ok, 7 tag present, 8 31>=30 ok, 10 13>8 ok, 12/13 antecedent false, 15 17>=8 ok, 16 prod not dev ok.\nFINAL: 1,2,6,9,11,14"
+    },
+    "repobug-3-4": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 3346,
+     "extracted": "f6",
+     "text": "Comparing each body to its docstring mod 103:\n\n- f1: doc 10*x+14, body (x*10+14)%103 : match\n- f2: doc 10*x+25, body (x*10+25)%103 : match\n- f3: doc 8*x+6, body (x*8+6)%103 : match\n- f4: doc 6*x+23, body (x*6+23)%103 : match\n- f5: doc 5*x+6, body (x*5+6)%103 : match\n- f6: doc 7*x+34, body (x*12+8)%103 : NO match\n- f7: doc 6*x+12, body (x*6+12)%103 : match\n- f8: doc 7*x+34, body (x*7+34)%103 : match\n\nThe pipeline code f1(f4(f3(x))) matches its docstring.\n\nHence the single violator is f6.\nFINAL: f6"
+    },
+    "audit-4-3": {
+     "family": "audit",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 2340,
+     "extracted": "3,5,6,8,11,18",
+     "text": "Violations check:\n\n1. 5 in [2,6] - ok\n2. us-east allowed - ok\n3. prod requires backups=true, has false - violate\n4. 27 >= 2*5=10 - ok\n5. 16 >= 4*27=108? No. 16 >=32? No - violate\n6. 16 not in [0,5] - violate\n7. owner_tag true - ok\n8. 22 >=30? No - violate\n9. 1.2 in {1.2,1.3} - ok\n10. 9 > 5 - ok\n11. 39 <=25? No - violate\n12. tier != dev - vacuously ok\n13. region != eu-* - vacuously ok\n14. backups=false - vacuously ok\n15. 9>10? No - vacuously ok\n16. 39>0 and tier=prod != dev - ok\n17. 16 <=48 - ok\n18. prod requires TLS 1.3, has 1.2 - violate\n\nFINAL: 3,5,6,8,11,18"
+    },
+    "repobug-2-2": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 4999,
+     "extracted": "f1",
+     "text": "Comparing each docstring to its body:\n\n- f2: 8*x+20 matches, f3: 7*x+18 matches, f4: 2*x+31 matches, f5: 5*x+6 matches, f6: 4*x+37 matches.\n- f1 docstring specifies 8*x+18 mod 89, but the body computes 8*x+28 mod 89.\n\nThis is the sole mismatch among f1-f6, consistent with the review statement. The pipeline composition is as documented.\n\nFINAL: f1"
+    },
+    "audit-5-4": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2840,
+     "extracted": "6, 11, 14, 18",
+     "text": "Violations check:\n\n1. 5 in [2,6] - pass\n2. eu-north allowed - pass\n3. prod -> backups true - pass\n4. 15 >= 2*5=10 - pass\n5. 37 >= 60? No, but 37 >= 32? Yes - pass (OR)\n6. 11 in [0,5]? No - violate\n7. owner_tag present - pass\n8. 76 >= 30 - pass\n9. 1.2 in {1.2,1.3} - pass\n10. 8 > 5 - pass\n11. 34 <= 25? No - violate\n12. tier prod, not dev - pass vacuously\n13. eu- -> 76 >= 45 - pass\n14. backups true -> 11 <= 4? No - violate\n15. 8 > 10? No - pass vacuously\n16. 34>0 -> tier prod != dev - pass\n17. 37 <= 48 - pass\n18. prod -> tls 1.3? 1.2 != 1.3 - violate\n19. 5*15=75 <=120 - pass\n20. owner present, antecedent false - pass\n\nViolated: 6, 11, 14, 18\nFINAL: 6, 11, 14, 18"
+    },
+    "audit-5-5": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2627,
+     "extracted": "1,5,9,11,14",
+     "text": "Violations:\n1 fails (1 < 2), 5 fails (9 < 56 and 9 < 32), 9 fails (1.1 not 1.2/1.3), 11 fails (45 > 25), 14 fails (backups true but 5 > 4). All others pass.\n\nFINAL: 1,5,9,11,14"
+    },
+    "repobug-3-5": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 4265,
+     "extracted": "f5",
+     "text": "Comparing each docstring specification to its body:\n\n- f1 specifies 5*x+32 mod 101, body is (x*5+32)%101 - match.\n- f2 specifies 10*x+25 mod 101, body is (x*10+25)%101 - match.\n- f3 specifies 4*x+38 mod 101, body is (x*4+38)%101 - match.\n- f4 specifies 10*x+34 mod 101, body is (x*10+34)%101 - match.\n- f5 specifies 5*x+27 mod 101, body is (x*5+6)%101 - 6 != 27 mod 101, mismatch.\n- f6 specifies 7*x+18 mod 101, body is (x*7+18)%101 - match.\n- f7 specifies 11*x+39 mod 101, body is (x*11+39)%101 - match.\n- f8 specifies 5*x+25 mod 101, body is (x*5+25)%101 - match.\n\nThe pipeline body f2(f8(f6(x))) does apply f6 then f8 then f2, so its docstring is accurate.\n\nHence the single violator is f5.\nFINAL: f5"
+    },
+    "toolsim-4-w20": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1532,
+     "extracted": "deposit(B, 100)",
+     "text": "B is already unlocked, so a direct deposit increases only B to the target.\nFINAL: deposit(B, 100)"
+    },
+    "toolsim-4-w21": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1945,
+     "extracted": "verify(C); unlock(C); move(C, F, 30)",
+     "text": "Goal needs C 100\u219270 and F 70\u2192100, others unchanged, total unchanged so no deposit. F is already unlocked, C needs verify then unlock, then move 30.\n\nFINAL: verify(C); unlock(C); move(C, F, 30)"
+    },
+    "toolsim-5-w22": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1755,
+     "extracted": "verify(G); unlock(G); move(G, D, 90); deposit(D, 160)",
+     "text": "Initial total is 370, goal total is 530, so +160 must be deposited.\nD needs +250, G needs -90. Moving 90 from G to D plus depositing 160 to D achieves the goal.\n\nFINAL: verify(G); unlock(G); move(G, D, 90); deposit(D, 160)"
+    },
+    "toolsim-5-w23": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1916,
+     "extracted": "verify(B); unlock(B); verify(D); unlock(D); deposit(B, 40); deposit(D, 100); deposit(E, 60)",
+     "text": "Direct deposits can supply the needed +200 total: B needs +40, D needs +100, E needs +60.\nFINAL: verify(B); unlock(B); verify(D); unlock(D); deposit(B, 40); deposit(D, 100); deposit(E, 60)"
+    },
+    "longctx-7-w20": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1086,
+     "extracted": "8700",
+     "text": "The chain for Lena Vogel:\n\n- Lena Vogel now leads project Rampart.\n- Project Rampart was folded into the Dynamo program.\n- The Dynamo program reports under budget line K51.\n- Budget line K51 carries the amount posted at desk E6.\n- The amount posted at desk E6 is 6540 units.\n\nSo Dynamo allocation = 6540.\n\nThe chain for Amara Diallo:\n\n- Amara Diallo now leads project Vertex.\n- Project Vertex was folded into the Compass program.\n- The Compass program reports under budget line R20.\n- Budget line R20 carries the amount posted at desk W5.\n- The amount posted at desk W5 is 2160 units.\n\nSo Compass allocation = 2160.\n\nSum = 6540 + 2160 = 8700.\n\nFINAL: 8700"
+    },
+    "inv-8-0": {
+     "family": "inv",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 8374,
+     "extracted": "36758088",
+     "text": "Work backwards from X8 = 86336348.\n\n8. X8 = reverse(X7), reverse is involution:\nX7 = reverse(86336348) = 84363368.\n\n7. X7 = X6 with positions 2 and 7 swapped:\nX7 = 8 4 3 6 3 3 6 8\nswap 2<->7 to get X6:\nX6 = 8 6 3 6 3 3 4 8 = 86363348.\n\n6. X6 = X5 with positions 7 and 8 swapped:\nX5 with 7<->8 swapped gives X6, so swap again:\nX6 = 8 6 3 6 3 3 4 8\nX5 = 8 6 3 6 3 3 8 4 = 86363384.\n\n5. X5 digit = (d*9+9) mod 10 applied to X4 digit.\n(9d+9) mod10 = 9-d, complement to 9, which is its own inverse.\nSo X4 digit = 9 - X5 digit:\nX5 = 8 6 3 6 3 3 8 4\n9-d =1 3 6 3 6 6 1 5\nX4 = 13636615.\n\n4. X4 = (X3 + 59215981) mod 100000000:\nX3 = (X4 - 59215981) mod 100000000\n= 13636615 - 59215981 + 100000000\n= 13636615 + 40784019 = 54420634.\nCheck: 54420634+59215981=113636615 -> 13636615.\nX3 = 54420634.\n\n3. X3 = rotl6(X2).\nFor 8 digits, rotl6: d1..d8 -> d7 d8 d1 d2 d3 d4 d5 d6.\nInverse is rotr6 = rotl2: d1..d8 -> d3 d4 d5 d6 d7 d8 d1 d2.\nX3 = 5 4 4 2 0 6 3 4\nrotl2 -> 4 2 0 6 3 4 5 4\nX2 = 42063454.\n\n2. X2 = reverse(X1):\nX1 = reverse(X2) = reverse(42063454) = 45436024.\nX1 = 45436024.\n\n1. X1 = (X0 * 23) mod 100000000.\n23 is coprime to 10^8, invertible.\nInverse mod 10: 3*7=21=1, so 7.\nLift to 10^8: if 23*x =1 mod 10^k, write error t,\nneed d = -7t mod10 for next digit.\n7 ->87 ->87 ->6087 ->26087 ->826087 ->7826087 ->47826087.\nIndeed 23*47826087 = 1100000001 =1 mod 100000000.\nSo inv23 = 47826087.\n\nX0 = X1 * inv23 mod 100000000\n= 45436024 * 47826087 mod 100000000.\n\nSplit 4+4 digits: A=4543|6024, B=4782|6087.\nA*B = Ah*Bh*10^8 + (Ah*Bl+Al*Bh)*10^4 + Al*Bl.\nOnly last 8 digits matter.\n\nAl*Bl = 6024*6087 = 36668088.\nAh*Bl = 4543*6087 = 27653241.\nAl*Bh = 6024*4782 = 28806768.\nSum = 27653241+28806768 = 56460009.\nmod 10000 = 9.\nResult = 9*10000 + 36668088 = 36758088 mod 100000000.\n\nCheck: 36758088*23 = 845436024 -> 45436024 correct.\n\nAll forward steps then give 86336348, and X0 has no leading zero.\n\nFINAL: 36758088"
+    },
+    "inv-14-1": {
+     "family": "inv",
+     "rung": 14,
+     "correct": true,
+     "completion_tokens": 9261,
+     "extracted": "52573598",
+     "text": "Working backwards from 21804772, keeping 8 digits:\n\nAfter 14: 21804772\n14 is rotL5. Inverse is rotR5 = rotL3.\nrotL3(2 1 8 0 4 7 7 2) = 0 4 7 7 2 2 1 8\nAfter 13: 04772218\n\n13 is reverse. Inverse is reverse.\nreverse(04772218) = 81227740\nAfter 12: 81227740\n\n12 is rotL5. Inverse is rotL3.\nrotL3(8 1 2 2 7 7 4 0) = 2 7 7 4 0 8 1 2\nAfter 11: 27740812\n\n11 is swap 2-3. Inverse is itself.\n2 7 7 4 0 8 1 2 swapped 2-3 is unchanged.\nAfter 10: 27740812\n\n10 is rotL7. Inverse is rotL1.\nrotL1(2 7 7 4 0 8 1 2) = 7 7 4 0 8 1 2 2\nAfter 9: 77408122\n\n9 is rotL7. Inverse is rotL1.\nrotL1(7 7 4 0 8 1 2 2) = 7 4 0 8 1 2 2 7\nAfter 8: 74081227\n\n8 is swap 1-6. Inverse is itself.\n7 4 0 8 1 2 2 7 swap 1-6 -> 2 4 0 8 1 7 2 7\nAfter 7: 24081727\n\n7 is *27 mod 100000000. 27 inverse mod 1e8 is 62962963,\nsince 27*62962963 = 1700000001 = 1 mod 1e8.\n24081727 * 62962963 mod 1e8 = 86077101.\nCheck: 86077101*27 = 2324081727 -> 24081727.\nAfter 6: 86077101\n\n6 is d -> 3d mod10. Inverse is d -> 7d mod10 since 3*7=1 mod10.\n8->6, 6->2, 0->0, 7->9, 7->9, 1->7, 0->0, 1->7\nAfter 5: 62099707\n\n5 is *7 mod 1e8. 7 inverse mod 1e8 is 42857143,\nsince 7*42857143 = 300000001 = 1 mod 1e8.\n62099707 * 42857143 mod 1e8 = 23157101.\nCheck: 23157101*7 = 162099707 -> 62099707.\nAfter 4: 23157101\n\n4 is swap 1-7. Inverse is itself.\n2 3 1 5 7 1 0 1 swap 1-7 -> 0 3 1 5 7 1 2 1\nAfter 3: 03157121\n\n3 is swap 3-8. Inverse is itself.\n0 3 1 5 7 1 2 1 swap 3-8, both 1, unchanged.\nAfter 2: 03157121\n\n2 is reverse. Inverse is reverse.\nreverse(03157121) = 12175130\nAfter 1: 12175130\n\n1 is d -> 3d+6 mod10. Inverse: x = 7*(y-6) mod10.\n1->5, 2->2, 1->5, 7->7, 5->3, 1->5, 3->9, 0->8\nOriginal: 52573598\n\nForward check confirms 52573598 -> ... -> 21804772.\n\nFINAL: 52573598"
+    },
+    "inv-22-2": {
+     "family": "inv",
+     "rung": 22,
+     "correct": true,
+     "completion_tokens": 9899,
+     "extracted": "37788826",
+     "text": "Work backwards. Let S0 be original, S22=13395583 final.\n\n22: S22 = S21+56925703 mod 1e8\nS21 = 13395583-56925703 mod 1e8 = 56469880\n\n21: S21 = S20+44843911 mod 1e8\nS20 = 56469880-44843911 = 11625969\n\n20: S20 = rotL5(S19)\nSo S19 = rotR5(S20) = rotL3(S20)\nS20=11625969 -> rotL3 -> 25969116\nS19 = 25969116\n\n19: S19 = reverse(S18)\nS19=25969116 reversed = 61196952\nS18 = 61196952\n\n18: S18 = rotL2(S17)\nSo S17 = rotR2(S18)\n61196952 -> rotR2 -> 52611969\nS17 = 52611969\n\n17: S17 = f(S16), f(d)=(7d+8) mod10\nf: 0->8,1->5,2->2,3->9,4->6,5->3,6->0,7->7,8->4,9->1\ninverse: 0->6,1->9,2->2,3->5,4->8,5->1,6->4,7->7,8->0,9->3\nS17=5 2 6 1 1 9 6 9 -> 1 2 4 9 9 3 4 3\nS16 = 12499343\n\n16: S16 = f(S15), f(d)=9d mod10\nf: 0->0,1->9,2->8,3->7,4->6,5->5,6->4,7->3,8->2,9->1, self-inverse\nS16=1 2 4 9 9 3 4 3 -> 9 8 6 1 1 7 6 7\nS15 = 98611767\n\n15: S15 = S14*21 mod 1e8 = 98611767\nNeed 21*S14 = 98611767 + k*1e8.\n1e8 mod21 =16, 98611767 mod21=9.\n9+16k=0 mod21 -> k=6 mod21.\nk=6 gives 698611767 /21 = 33267227\nS14 = 33267227\n\n14: S14 = f(S13), f(d)=(3d+3) mod10\nf: 0->3,1->6,2->9,3->2,4->5,5->8,6->1,7->4,8->7,9->0\ninverse: 0->9,1->6,2->3,3->0,4->7,5->4,6->1,7->8,8->5,9->2\nS14=3 3 2 6 7 2 2 7 -> 0 0 3 1 8 3 3 8\nS13 = 00318338\n\n13: S13 = S12*23 mod 1e8 = 318338\nNeed 23*S12 = 318338 + k*1e8.\n1e8 mod23=2, 318338 mod23=18.\n18+2k=0 mod23 -> k=14 mod23.\nk=14 gives 1400318338 /23 = 60883406\nS12 = 60883406\n\n12: S12 = rotL5(S11)\nSo S11 = rotR5(S12)=rotL3(S12)\n60883406 -> rotL3 -> 83406608\nS11 = 83406608\n\n11: S11 = reverse(S10)\nreverse 83406608 = 80660438\nS10 = 80660438\n\n10: S10 = S9+3602796 mod 1e8\nS9 = 80660438-3602796 = 77057642\n\n9: S9 = reverse(S8)\nS8 = reverse(77057642) = 24675077\n\n8: S8 = reverse(S7)\nS7 = reverse(24675077) = 77057642\n\n7: S7 = S6*13 mod 1e8 = 77057642\nNeed 13*S6 = 77057642 + k*1e8.\n1e8 mod13=9, 77057642 mod13=12.\n12+9k=0 mod13 -> k=3 mod13.\nk=3 gives 377057642 /13 = 29004434\nS6 = 29004434\n\n6: S6 = S5+87067098 mod 1e8\nS5 = 29004434-87067098 mod 1e8 = 41937336\n\n5: S5 = f(S4), f(d)=(7d+4) mod10\nf: 0->4,1->1,2->8,3->5,4->2,5->9,6->6,7->3,8->0,9->7\ninverse: 0->8,1->1,2->4,3->7,4->0,5->3,6->6,7->9,8->2,9->5\nS5=4 1 9 3 7 3 3 6 -> 0 1 5 7 9 7 7 6\nS4 = 01579776\n\n4: S4 = S3*27 mod 1e8 = 1579776\nNeed 27*S3 = 1579776 + k*1e8.\n1e8 mod27=19, 1579776 mod27=6.\n6+19k=0 mod27 -> k=21 mod27.\nk=21 gives 2101579776 /27 = 77836288\nS3 = 77836288\n\n3: S3 = reverse(S2)\nS2 = reverse(77836288) = 88263877\n\n2: S2 = swap6-8(S1), self-inverse\nS2=8 8 2 6 3 8 7 7 swap pos6,8 -> 8 8 2 6 3 7 7 8\nS1 = 88263778\n\n1: S1 = rotL4(S0)\nrotL4 is self-inverse on 8 digits.\nS0 = rotL4(88263778) = 37788826\n\nThis is 8-digit with no leading zero and forwards to 13395583.\n\nFINAL: 37788826"
+    },
+    "casework-4-w20": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1371,
+     "extracted": "1314",
+     "text": "Step 1 - base slice levy:\n base = 5000, all in first 8000 slice at 24%\n 5000 * 24 = 120000, //100 = 1200\n running total = 1200\n\nStep 2 - class gamma surcharge:\n 38 per unit for 3 units = 3 * 38 = 114\n no units above 3, so no double count extra\n running total = 1200 + 114 = 1314\n\nStep 3 - relief:\n flagged = no, no subtraction\n running total = 1314\n\nStep 4 - surtax:\n 1314 does not exceed 1500, no surtax\n running total = 1314\n\nStep 5 - cap 31% of base:\n 5000 * 31 = 155000, //100 = 1550\n 1314 <= 1550, no cap reduction\n\nFINAL: 1314"
+    },
+    "longctx-7-w21": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1151,
+     "extracted": "9630",
+     "text": "Lena Vogel leads project Krait, Dina Waheed leads project Pinnacle.\n\n- note 217: Lena Vogel took over as lead of project Krait\n- note 542: Project Krait was folded into the Lantern program\n=> Lena Vogel's project is in Lantern\n\n- note 125: Dina Waheed was appointed to head project Pinnacle\n- note 517: Project Pinnacle was folded into the Ironwood program\n=> Dina Waheed's project is in Ironwood\n\nBudget lines:\n- note 616: The Lantern program reports under budget line K29\n- note 225: Budget line K29 carries the amount posted at desk E3\n- note 69: The amount posted at desk E3 is 1830 units\n=> Lantern = 1830\n\n- note 363: The Ironwood program reports under budget line R47\n- note 87: Budget line R47 carries the amount posted at desk W7\n- note 410: The amount posted at desk W7 is 7800 units\n=> Ironwood = 7800\n\nSum = 1830 + 7800 = 9630\n\nFINAL: 9630"
+    },
+    "longctx-8-w22": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 900,
+     "extracted": "15960",
+     "text": "The program containing the project led by Henrik Dahl:\n\n- Henrik Dahl heads project Rampart [note 150]\n- Project Rampart was folded into the Ironwood program [note 923]\n- Ironwood reports under budget line K84 [note 87]\n- Budget line K84 carries the amount posted at desk E7 [note 566]\n- Amount at desk E7 matches ledger row G762 [note 694]\n- Ledger row G762 shows 9400 units [note 575]\n=> Ironwood allocation = 9400\n\nThe program containing the project led by Ivo Petrov:\n\n- Ivo Petrov heads project Delta [note 752]\n- Project Delta was folded into the Quarry program [note 940]\n- Quarry reports under budget line R13 [note 534]\n- Budget line R13 carries the amount posted at desk W5 [note 203]\n- Amount at desk W5 matches ledger row H988 [note 341]\n- Ledger row H988 shows 6560 units [note 595]\n=> Quarry allocation = 6560\n\nSum = 9400 + 6560 = 15960\n\nFINAL: 15960"
+    },
+    "longctx-8-w23": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 740,
+     "extracted": "18340",
+     "text": "The program containing the project led by Milan Novak is Compass:\n- Milan Novak leads project Nimbus\n- Nimbus was folded into Compass\n- Compass reports under budget line K87\n- K87 carries the amount at desk E4\n- Desk E4 matches ledger row G595 at 9080 units\n\nThe program containing the project led by Petra Lindqvist is Lantern:\n- Petra Lindqvist leads project Willow\n- Willow was folded into Lantern\n- Lantern reports under budget line R70\n- R70 carries the amount at desk W5\n- Desk W5 matches ledger row H551 at 9260 units\n\nSum = 9080 + 9260 = 18340\n\nFINAL: 18340"
+    },
+    "casework-4-w21": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1769,
+     "extracted": "3154",
+     "text": "Step 1 - base 19100 per slice:\n- first 8000 at 29%: 8000*29=232000 //100 = 2320\n- 8000 to 9000 = 1000 at 20%: 1000*20=20000 //100 = 200\n- 9000 to 12000 = 3000 at 15%: 3000*15=45000 //100 = 450\n- above 12000 = 7100 at 13%: 7100*13=92300 //100 = 923\nTotal = 2320+200+450+923 = 3893\n\nStep 2 - filing class beta, not alpha or gamma: no surcharge. Total 3893.\n\nStep 3 - flagged for relief: credit 822. Base 19100 does not exceed 20000, so no reduction. 3893-822 = 3071, >=0.\n\nStep 4 - surtax: 3071 > 1400. Excess = 3071-1400 = 1671. 1671*5=8355 //100 = 83. Total = 3071+83 = 3154.\n\nStep 5 - cap: 37% of base: 19100*37=706700 //100 = 7067. 3154 <= 7067, so unchanged.\n\nFINAL: 3154"
+    },
+    "casework-5-w22": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2059,
+     "extracted": "1878",
+     "text": "Base 12700:\n\n1. Slice levy:\n- first 2000 at 20%: 2000*20/100 = 400\n- 2000 to 5000: 3000*21/100 = 630\n- 5000 to 9000: 4000*23/100 = 920\n- above 9000: 3700*11/100 = 40700/100 = 407\nTotal = 400+630+920+407 = 2357\n\n2. Class gamma, 2 units:\n2*44 = 88, no units above 3.\nTotal = 2357+88 = 2445\n\n3. Relief flagged, base 12700 does not exceed 19000, credit = 638:\nTotal = 2445-638 = 1807\n\n4. Surtax, 1807 > 1100:\nexcess = 707, 707*5/100 = 3535/100 = 35\nTotal = 1807+35 = 1842\n\n5. Second surtax, 1842 > 625:\nexcess = 1217, 1217*3/100 = 3651/100 = 36\nTotal = 1842+36 = 1878\n\n6. Oddity: 1878 mod 7 = 2, not divisible, add 0.\nTotal = 1878\n\n7. Cap: 31% of base = 12700*31/100 = 393700/100 = 3937. 1878 < 3937, no cap.\n\nFINAL: 1878"
+    },
+    "casework-5-w23": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2563,
+     "extracted": "4563",
+     "text": "Step 1 - base levy on 17300:\n- first 10000 at 27%: 10000*27/100 = 2700\n- next 4000 at 26%: 4000*26/100 = 1040\n- next 2000 at 25%: 2000*25/100 = 500\n- remaining 1300 at 26%: 1300*26/100 = 338\nTotal = 2700+1040+500+338 = 4578\n\nStep 2 - filing class beta, not alpha or gamma: no surcharge.\nTotal = 4578\n\nStep 3 - relief flagged yes:\nExcess over 12000 = 17300-12000 = 5300\nFull 100s = 53, reduction = 53*7 = 371\nCredit = 607-371 = 236, >=0\nTotal = 4578-236 = 4342\n\nStep 4 - surtax over 1800:\nExcess = 4342-1800 = 2542\nAdd = 2542*5/100 = 12710/100 = 127\nTotal = 4342+127 = 4469\n\nStep 5 - second surtax over 1750:\nExcess = 4469-1750 = 2719\nAdd = 2719*3/100 = 8157/100 = 81\nTotal = 4469+81 = 4550\n\nStep 6 - oddity:\n4550 = 7*650, exactly divisible by 7, add 13\nTotal = 4550+13 = 4563\n\nStep 7 - cap at 37% of base:\n17300*37/100 = 6401\n4563 <= 6401, so unchanged.\n\nFINAL: 4563"
+    },
+    "inv-32-3": {
+     "family": "inv",
+     "rung": 32,
+     "correct": true,
+     "completion_tokens": 16809,
+     "extracted": "97097923",
+     "text": "Working backwards from S32 = 35265817, where Sk is after step k.\n\n32 rotL1: S31 = rotR1(S32)\n35265817 -> 73526581. So S31=73526581.\n\n31 rotL4: S30 = rotR4(S31) = rotL4(S31)\n73526581 -> 65817352. So S30=65817352.\n\n30 d -> 7d+2 mod10:\n0->2,1->9,2->6,3->3,4->0,5->7,6->4,7->1,8->8,9->5\ninverse 0<-4,1<-7,2<-0,3<-3,4<-6,5<-9,6<-2,7<-5,8<-8,9<-1\n65817352 -> 2,9,8,7,5,3,9,0. So S29=29875390.\n\n29 rotL3: S28 = rotR3(S29)\n29875390 -> 39029875. So S28=39029875.\n\n28 reverse: S27 = reverse(S28)\n39029875 -> 57892093. So S27=57892093.\n\n27 rotL2: S26 = rotR2(S27)\n57892093 -> 93578920. So S26=93578920.\n\n26 rotL7: S25 = rotL1(S26)\n93578920 -> 35789209. So S25=35789209.\n\n25 rotL6: S24 = rotL2(S25)\n35789209 -> 78920935. So S24=78920935.\n\n24 d -> 7d+7 mod10:\n0->7,1->4,2->1,3->8,4->5,5->2,6->9,7->6,8->3,9->0\ninverse 0<-9,1<-2,2<-5,3<-8,4<-1,5<-4,6<-7,7<-0,8<-3,9<-6\n78920935 -> 0,3,6,5,9,6,8,4. So S23=03659684.\n\n23 reverse: S22 = reverse(S23)\n03659684 -> 48695630. So S22=48695630.\n\n22 swap 3-5: self-inverse\n48695630 -> 48596630. So S21=48596630.\n\n21 d -> 9d+6 mod10, self-inverse:\n0->6,1->5,2->4,3->3,4->2,5->1,6->0,7->9,8->8,9->7\n48596630 -> 2,8,1,7,0,0,3,6. So S20=28170036.\n\n20 rotL6: S19 = rotL2(S20)\n28170036 -> 17003628. So S19=17003628.\n\n19 *27 mod 1e8: inverse of 27 mod 1e8 is 62962963?\n27*3=81. Lifting: mod100 63, mod1000 963, mod10000 2963,\nmod100000 62963, mod1000000 962963, mod10000000 2962963,\nmod100000000 62962963. Indeed 27*62962963=1700000001.\nS18 = 17003628*62962963 mod1e8.\nSplit 10000: 1700*10000+3628 times 6296*10000+2963.\n3628*2963=10749764, 1700*2963=5037100, 3628*6296=22841888.\nSum 27878988 -> mod10000 8988 -> 89880000+10749764=100629764\n-> 629764. So S18=00629764.\nCheck: 629764*27=17003628.\n\n18 swap 1-3: self-inverse\n00629764 -> 60029764. So S17=60029764.\n\n17 +43300806: S16 = S17-43300806\n60029764-43300806=16728958. So S16=16728958.\n\n16 reverse: S15 = reverse(S16)\n16728958 -> 85982761. So S15=85982761.\n\n15 d -> 3d mod10:\n0->0,1->3,2->6,3->9,4->2,5->5,6->8,7->1,8->4,9->7\ninverse 0<-0,1<-7,2<-4,3<-1,4<-8,5<-5,6<-2,7<-9,8<-6,9<-3\n85982761 -> 6,5,3,6,4,9,2,7. So S14=65364927.\n\n14 d -> 7d+1 mod10:\n0->1,1->8,2->5,3->2,4->9,5->6,6->3,7->0,8->7,9->4\ninverse 0<-7,1<-0,2<-3,3<-6,4<-9,5<-2,6<-5,7<-8,8<-1,9<-4\n65364927 -> 5,2,6,5,9,4,3,8. So S13=52659438.\n\n13 rotL5: S12 = rotL3(S13)\n52659438 -> 59438526. So S12=59438526.\n\n12 *7 mod1e8: inverse of 7 mod1e8 is 42857143, since 7*42857143=300000001.\nS11 = 59438526*42857143 mod1e8.\n5943*10000+8526 times 4285*10000+7143.\n8526*7143=60901218, 5943*7143=42450849, 8526*4285=36533910.\nSum 78984759 -> mod10000 4759 ->47590000+60901218=108491218\n-> 8491218. So S11=08491218.\nCheck: 8491218*7=59438526.\n\n11 +62023864: S10 = S11-62023864 mod1e8\n8491218+100000000-62023864=46467354. So S10=46467354.\n\n10 d -> 7d+9 mod10:\n0->9,1->6,2->3,3->0,4->7,5->4,6->1,7->8,8->5,9->2\ninverse 0<-3,1<-6,2<-9,3<-2,4<-5,5<-8,6<-1,7<-4,8<-7,9<-0\n46467354 -> 5,1,5,1,4,2,8,5. So S9=51514285.\n\n9 +81305949: S8 = S9-81305949 mod1e8\n51514285+100000000-81305949=70208336. So S8=70208336.\n\n8 rotL3: S7 = rotR3(S8)\n70208336 -> 33670208. So S7=33670208.\n\n7 d -> 7d+6 mod10:\n0->6,1->3,2->0,3->7,4->4,5->1,6->8,7->5,8->2,9->9\ninverse 0<-2,1<-5,2<-8,3<-1,4<-4,5<-7,6<-0,7<-3,8<-6,9<-9\n33670208 -> 1,1,0,3,2,8,2,6. So S6=11032826.\n\n6 +30195620: S5 = S6-30195620 mod1e8\n11032826+100000000-30195620=80837206. So S5=80837206.\n\n5 +7862983: S4 = S5-7862983\n80837206-7862983=72974223. So S4=72974223.\n\n4 +52659685: S3 = S4-52659685\n72974223-52659685=20314538. So S3=20314538.\n\n3 d -> 9d+9 mod10, self-inverse 9-d:\n0->9,1->8,2->7,3->6,4->5,5->4,6->3,7->2,8->1,9->0\n20314538 -> 7,9,6,8,5,4,6,1. So S2=79685461.\n\n2 *7: S1 = S2*42857143 mod1e8\n7968*10000+5461 times 4285*10000+7143.\n5461*7143=39007923, 7968*7143=56915424, 5461*4285=23400385.\nSum 80315809 -> mod10000 5809 ->58090000+39007923=97097923.\nSo S1=97097923. Check: 97097923*7=679685461 ->79685461.\n\n1 swap 1-6: self-inverse\n97097923 positions 1 and 6 are both 9, unchanged.\nSo S0=97097923.\n\nFINAL: 97097923\n"
+    },
+    "tableqa-8-w22": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 4438,
+     "extracted": "9157",
+     "text": "Departments on floor 3 or higher:\n- Logistics floor 4\n- Field floor 4\n\nProjects:\n- Logistics: Cobalt-82 active, no paused\n- Field: Cinder-31 paused, Nimbus-53 paused, no active\n\nSo departments with >=1 active: Logistics only.\nLogistics has no paused, so it is not excluded.\n\nRemaining department: Logistics.\n\nLogistics employees with rate >=54:\n- 119 Marisol Vega 89\n- 121 Anders Berg 66\n- 124 Bruno Vidal 56\n- 130 Ilsa Brandt 81\n- 131 Petra Lindqvist 89\n- 136 Ivo Haddad 54\n- 139 Omar Rustam 75\n- 142 Solano Solano 74\n- 170 Osei Rosen 54\n- 178 Lang Costa 85\n- 187 Dario Novak 58\n\nHeads of any department:\nOmar Haddad, Ilsa Vega, Sato Bruno, Henrik Dahl, Marisol Vega, Solano Solano, Aliyev Bruno\n\nExclude heads:\n- 119 Marisol Vega excluded\n- 142 Solano Solano excluded\n\nLeft:\n121,124,130,131,136,139,170,178,187\n\nJoined strictly before 2025:\n- 121 Anders Berg 2023: 30*66 = 1980\n- 124 Bruno Vidal 2025: exclude\n- 130 Ilsa Brandt 2023: 22*81 = 1782\n- 131 Petra Lindqvist 2019: 23*89 = 2047\n- 136 Ivo Haddad 2024: 33*54 = 1782\n- 139 Omar Rustam 2026: exclude\n- 170 Osei Rosen 2025: exclude\n- 178 Lang Costa 2026: exclude\n- 187 Dario Novak 2021: 27*58 = 1566\n\nTotal = 1980+1782+2047+1782+1566 = 9157\n\nFINAL: 9157"
+    },
+    "tableqa-7-w21": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 6257,
+     "extracted": "9618",
+     "text": "Remaining departments must be floor >=2 with an active project, and no paused project.\n\n- Floor >=2: Compliance, Ops, Design, Research, Logistics, Support\n- Active projects: Ops (Meridian-51), Support (Sable-17, Cinder-79), Compliance (Umber-66)\n- Paused projects: Ops (Cobalt-87), Research (Umber-91)\n\nOps has both active and paused, so excluded.\nRemaining: Compliance, Support.\n\nHeads of any department: Zoe Berg, Greta Rustam, Diallo Ferreira, Henrik Dahl, Osei Doyle, Sato Vega.\n\nFilter employees in Compliance or Support with rate >=42, name not a head, joined <2025:\n\n- Milan Novak, Support, 4*76=304, 2023\n- Viktor Lang, Compliance, 35*70=2450, 2024\n- Livia Costa, Support, 30*67=2010, 2022\n- Talia Rosen, Support, 34*67=2278, 2024\n- Weber Bea, Compliance, 26*79=2054, 2020\n- Marchetti Selin, Compliance, 6*87=522, 2019\n\nOsei Doyle is excluded as a head despite rate 55.\n\nSum = 304+2450+2010+2278+2054+522 = 9618.\n\nFINAL: 9618"
+    },
+    "tableqa-8-w23": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 3640,
+     "extracted": "7224",
+     "text": "Departments on floor >=3: Compliance(6), Field(3), Logistics(3), Design(4), Support(6), Ops(4). Research(1) excluded.\n\nActive projects:\n- Compliance: Xenon-16, Zephyr-27 -> yes\n- Support: Vertex-91 -> yes\n- Ops: Pinnacle-80 -> yes\n- Field: only Cobalt-30 paused -> no active\n- Logistics: wrapped/paused only -> no active\n- Design: no projects -> no active\n\nRemaining: Compliance, Support, Ops.\n\nExclude if also has a paused project:\n- Compliance: Delta-83 paused -> exclude\n- Support: Drift-39 paused -> exclude\n- Ops: no paused -> keep\n\nOnly Ops remains.\n\nOps employees:\n111 Jana Kovac 10*70 2025\n119 Omar Haddad 10*57 2023\n124 Ivo Petrov 34*42 2020\n145 Petra Marisol 22*68 2022\n149 Vogel Tomas 6*83 2022\n150 Weber Costa 37*79 2026\n164 Costa Quint 4*32 2020\n172 Meyer Petra 12*39 2022\n174 Sartori Rosen 18*79 2021\n179 Rustam Dahl 23*80 2024\n\nHeads of any department: Greta Lindgren, Milan Freja, Priya Nair, Vogel Tomas, Casper Holm, Costa Quint, Livia Sato.\n\nRate >=31: all 10 qualify.\nNot head: exclude 149 Vogel Tomas and 164 Costa Quint.\nJoined strictly before 2025: exclude 111 (2025) and 150 (2026).\n\nIncluded:\n119: 10*57 = 570\n124: 34*42 = 1428\n145: 22*68 = 1496\n172: 12*39 = 468\n174: 18*79 = 1422\n179: 23*80 = 1840\n\nSum = 570+1428+1496+468+1422+1840 = 7224.\n\nFINAL: 7224"
+    },
+    "tableqa-7-w20": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 5881,
+     "extracted": "10424",
+     "text": "Departments on floor >=3: all 7.\n\nActive projects by dept:\n- Field: only wrapped -> no active\n- Ops: Fjord-73, Cobalt-29 active -> keep\n- Logistics: Talus-17 active -> keep\n- Research: Cobalt-25, Nimbus-95 active -> keep\n- Compliance: Boreal-90, Xenon-14 active -> keep\n- Design: Basalt-31 active -> keep\n- Support: none -> no active\n\nPaused projects:\n- Logistics: Umber-11 paused -> exclude\n- Compliance: Lumen-56 paused -> exclude\n- Design: Meridian-71 paused -> exclude\n- Ops: none paused -> remain\n- Research: none paused -> remain\n\nRemaining departments: Ops, Research.\n\nHeads of any department:\nMeyer Yusuf, Livia Anders, Tomas Reyes, Holm Casper, Nadia Milan, Jonas Meyer, Kovac Brandt\n\nOps + Research employees with rate >=43 and name not in head list:\n101 Priya Nair 35*75 2022\n104 Elio Sartori 6*84 2026\n118 Talia Rosen 34*67 2024\n121 Henrik Dahl 15*53 2022\n124 Jana Kovac 30*67 2023\n127 Petra Lindqvist 5*79 2026\n132 Nora Lindgren 8*43 2019\n135 Bruno Vidal 12*81 2024\n138 Cormac Omar 15*84 2022\n141 Costa Ivo 32*60 2021\n147 Nair Reyes 30*53 2021\n158 Haddad Lindgren 20*44 2026\n159 Vogel Waheed 35*54 2022\n108 Jonas Meyer excluded as head and rate<43, 156 Holm Casper excluded as head.\n\nJoined strictly before 2023 from those:\n101: 35*75 = 2625\n121: 15*53 = 795\n132: 8*43 = 344\n138: 15*84 = 1260\n141: 32*60 = 1920\n147: 30*53 = 1590\n159: 35*54 = 1890\n\nSum = 2625+795+344+1260+1920+1590+1890 = 10424\n\nFINAL: 10424"
+    },
+    "repobug-4-w21": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 2525,
+     "extracted": "f10",
+     "text": "Comparing each docstring to its body:\n\n- f1-f9, f11 all implement exactly `a*x + b mod 103` as described.\n- f10 docstring says \"Add 23 to 6 copies of x\", i.e. `6*x + 23` mod 103.\n- f10 body is `(x * 23 + 6) % 103`, i.e. `23*x + 6` mod 103.\n\nThese are not equivalent mod 103, with coefficients and constants swapped. This is the single mismatch.\n\nFINAL: f10"
+    },
+    "repobug-4-w20": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 3186,
+     "extracted": "f2",
+     "text": "Each helper is documented as an affine map mod 97: `a*x + b`.\n\n- f1: doc 9*x+29. body `(x*9+29)%97`. match.\n- f2: doc \"Add 35 to 6 copies of x\" = 6*x+35. body `(x*35+6)%97` = 35*x+6. coefficients swapped. mismatch.\n- f3: doc x scaled by 6, shifted by 6. body `(x*6+6)%97`. match.\n- f4: doc x*9+18. body `(x*9+18)%97`. match.\n- f5: doc \"Add 24 to 8 copies of x\" = 8*x+24. body `(x*8+24)%97`. match.\n- f6: doc \"Add 11 to 8 copies of x\" = 8*x+11. body `(x*8+11)%97`. match.\n- f7: doc 5*x+3. body `(x*5+3)%97`. match.\n- f8: doc 9*x+9. body `(x*9+9)%97`. match.\n- f9: doc 7*x+27. body `(x*7+27)%97`. match.\n- f10: doc 5*x+5. body `(x*5+5)%97`. match.\n- f11: doc \"Add 4 to 2 copies of x\" = 2*x+4. body `(x*2+4)%97`. match.\n\nThe same \"Add B to A copies of x\" phrasing in f5, f6, f11 clearly means A*x+B, confirming f2 should be 6*x+35, not 35*x+6.\n\npipeline body `f8(f3(f6(x)))` indeed applies f6 then f3 then f8, so its docstring is accurate.\n\nThe sole violator is f2.\nFINAL: f2"
+    },
+    "audit-6-w20": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2100,
+     "extracted": "6,7,11,14,20,23,26",
+     "text": "Violations:\n6: window_start 9 not in 0-5\n7: owner_tag false\n11: canary 53 > 25\n14: backups true but window 9 > 4\n20: owner missing but tier staging not dev\n23: replicas 2 <3 but canary 53 !=0\n26: autoscale_max 10 > 4*2=8\nAll others satisfied.\nFINAL: 6,7,11,14,20,23,26"
+    },
+    "repobug-5-w22": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2640,
+     "extracted": "f9",
+     "text": "Comparing each docstring to its body:\n\n- f1 through f8 match their stated multiply and add constants mod 97.\n- f9 docstring says multiply by 7 then add 10, but body is `(x * 7 + 11) % 97`.\n- f10 through f14 match their stated multiply and add constants mod 97.\n\nThis is the single mismatch.\n\nFINAL: f9"
+    },
+    "audit-6-w21": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2678,
+     "extracted": "2,5,10,11,19,22,24",
+     "text": "Violations check:\n\n1. 5 in [2,6] pass\n2. sa-east not in list -> violate\n3. tier\u2260prod pass\n4. 26 \u2265 2*5=10 pass\n5. 30 \u2265 4*26=104? No; 30 \u226532? No -> violate\n6. 4 in [0,5] pass\n7. owner_tag true pass\n8. 65 \u226530 pass\n9. 1.3 is allowed pass\n10. 4 > 5? No -> violate\n11. 51 \u226425? No -> violate\n12. tier\u2260dev pass\n13. region\u2260eu-* pass\n14. backups true and 4 \u22644 pass\n15. autoscale_max 4 not >10 pass\n16. 51>0 and tier\u2260dev pass\n17. 30 \u226448 pass\n18. tier\u2260prod pass\n19. 5*26=130 \u2264120? No -> violate\n20. owner present pass\n21. 30 not >32 pass\n22. staging requires even log_days, 65 odd -> violate\n23. replicas 5 not <3 pass\n24. 26 \u226424? No -> violate\n25. TLS\u22601.1 pass\n26. 4 \u22644*5=20 pass\n\nFINAL: 2,5,10,11,19,22,24"
+    },
+    "repobug-5-w23": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2656,
+     "extracted": "f8",
+     "text": "Comparing each docstring to its body:\n\n- f1: 7x+24 matches\n- f2: 6x+30 matches\n- f3: 10x+39 matches\n- f4: 2x+15 matches\n- f5: 9x+25 matches\n- f6: 9x+10 matches\n- f7: 2x+33 matches\n- f8: docstring says 7x+11, body is 7x+12 \u2014 mismatch\n- f9: 11x+38 matches\n- f10: 7x+4 matches\n- f11: 8x+17 matches\n- f12: 7x+28 matches\n- f13: 2x+13 matches\n- f14: 4x+30 matches\n\nOnly f8 differs, consistent with exactly one mismatch.\n\nFINAL: f8"
+    },
+    "audit-7-w23": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2118,
+     "extracted": "2,6,11,14,16,17,26",
+     "text": "Violations:\n2: sa-east not in allowed list\n6: 12 not in 0-5\n11: 45 > 25\n14: backups true but 12 > 4\n16: canary >0 but tier is dev\n17: 59 > 48\n26: 15 > 4*3=12\nAll others satisfied.\n\nFINAL: 2,6,11,14,16,17,26"
+    },
+    "audit-7-w22": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2776,
+     "extracted": "2,6,7,14,16,28",
+     "text": "Violations check:\n\n1. 3 in [2,6] - ok\n2. me-central not in list - **violate**\n3. tier dev - vacuously ok\n4. 8 >= 2*3=6 - ok\n5. 39 >= 32 - ok\n6. 12 not in [0,5] - **violate**\n7. owner_tag false - **violate**\n8. 70 >=30 - ok\n9. 1.2 allowed - ok\n10. 7 > 3 - ok\n11. 14 <=25 - ok\n12. dev and 3 <=3 - ok\n13. region not eu- - vacuously ok\n14. backups true but 12 >4 - **violate**\n15. autoscale 7 not >10 - vacuously ok\n16. canary 14>0 but tier dev - **violate**\n17. 39 <=48 - ok\n18. tier not prod - vacuously ok\n19. 3*8=24 <=120 - ok\n20. missing owner, tier dev - ok\n21. 39>32 and backups true - ok\n22. tier not staging - vacuously ok\n23. replicas 3 not <3 - vacuously ok\n24. 8 <=24 - ok\n25. TLS not 1.1 - vacuously ok\n26. 7 <=12 - ok\n27. region not ap-south - vacuously ok\n28. canary 14>10 but no owner - **violate**\n29. 3+7=10 <=22 - ok\n30. backups not disabled - vacuously ok\n\nFINAL: 2,6,7,14,16,28"
+    },
+    "inv-60-w21": {
+     "family": "inv",
+     "rung": 60,
+     "correct": true,
+     "completion_tokens": 24574,
+     "extracted": "80931354",
+     "text": "Working backwards from 31198109, inverting each operation mod 100000000.\nRotations, swaps and reverses are inverted by the opposite\npermutation.  Adds are inverted by subtracts.\nDigit maps d->a d+b are inverted by inv-a:\n9 inverse 9, 3 inverse 7.\nMultiplies by M coprime to 10 are inverted by solving M x = y\ndigit by digit from LSD with carry.\n\nC60=31198109\n60 rotL2 inv rotR2: 09311981=C59\n59 *21 inv: solve 21x=09311981 -> 33776761=C58\n58 *7 inv: solve 7x=33776761 -> 76253823=C57\n57 swap2-4: 75263823=C56\n56 -44100561: 31163262=C55\n55 rotL1 inv rotR1: 23116326=C54\n54 rotL1 inv rotR1: 62311632=C53\n53 rotL4 inv rotL4: 16326231=C52\n52 swap1-6: 26326131=C51\n51 *19 inv: solve 19x=26326131 -> 43490849=C50\n50 swap6-8: 43490948=C49\n49 reverse: 84909434=C48\n48 rotL1 inv rotR1: 48490943=C47\n47 d->3d+2 inv 7d+6: 42496947=C46\n46 *13 inv: solve 13x=42496947 -> 26345919=C45\n45 -12027484: 14318435=C44\n44 -93496045: 20822390=C43\n43 -95586901: 25235489=C42\n42 *11 inv: solve 11x=25235489 -> 65930499=C41\n41 -19663917: 46266582=C40\n40 reverse: 28566264=C39\n39 *3 inv: solve 3x=28566264 -> 09522088=C38\n38 rotL7 inv rotL1: 95220880=C37\n37 d->3d+6 inv 7d+8: 13228448=C36\n36 reverse: 84482231=C35\n35 reverse: 13228448=C34\n34 rotL3 inv rotR3: 44813228=C33\n33 swap2-4: 41843228=C32\n32 rotL1 inv rotR1: 84184322=C31\n31 d->9d+9 self inv 9-d: 15815677=C30\n30 rotL4 inv rotL4: 56771581=C29\n29 -71123269: 85648312=C28\n28 rotL3 inv rotR3: 31285648=C27\n27 rotL4 inv rotL4: 56483128=C26\n26 -10685987: 45797141=C25\n25 swap3-7: 45497171=C24\n24 reverse: 17179454=C23\n23 d->9d+7 self inv: 60608323=C22\n22 -38247524: 22360799=C21\n21 -29100671: 93260128=C20\n20 -38872958: 54387170=C19\n19 rotL7 inv rotL1: 43871705=C18\n18 rotL6 inv rotL2: 87170543=C17\n17 *21 inv: solve 21x=87170543 -> 08912883=C16\n16 rotL1 inv rotR1: 30891288=C15\n15 swap2-5: 31890288=C14\n14 rotL4 inv rotL4: 02883189=C13\n13 reverse: 98138820=C12\n12 -66367826: 31770994=C11\n11 d->3d+6 inv 7d+8: 95778116=C10\n10 rotL5 inv rotL3: 78116957=C9\n9 swap1-2: 87116957=C8\n8 d->3d+5 inv 7d+5: 14227804=C7\n7 swap7-8: 14227840=C6\n6 swap5-8: 14220847=C5\n5 rotL1 inv rotR1: 71422084=C4\n4 -62285543: 09136541=C3\n3 d->9d+4 self inv: 45318903=C2\n2 reverse: 30981354=C1\n1 swap1-4: 80931354=C0\n\nForward check restores 31198109. Original has no leading zero.\n\nFINAL: 80931354"
+    },
+    "inv-45-w20": {
+     "family": "inv",
+     "rung": 45,
+     "correct": true,
+     "completion_tokens": 21241,
+     "extracted": "28284741",
+     "text": "Starting from 85802619 invert steps 45 to 1.\nAll adds are mod 100000000, all multiplies are by numbers\ncoprime to 10 so uniquely invertible, digit maps\nd -> a d+b with a=3,7,9 are invertible mod 10.\n\nInverse maps used:\n d->3d : d->7d\n d->9d : d->9d\n d->7d+9 : d->3d+3\n d->3d+8 : d->7d+4\n d->7d+3 : d->3d+1\n d->7d+6 : d->3d+2\nRotate left k inverse is rotate left 8-k.\nReverse and swaps are self inverse.\nAdd C inverse is subtract C.\nMultiply by M inverse solved LSD first:\nif Y=y0..y7, carry0=0, M0=M mod10 with inv,\nneed=(yi-carry) mod10, xi=need*inv mod10,\nt=xi*M+carry, carry_next=(t-yi)/10.\n\nBackwards:\n\n45: 9x=85802619 -> 76200291\n  9*76200291=685802619\n44: -45335565 : 76200291-45335565=30864726\n43: d->7d : 30864726 -> 10628942\n42: left3 : 10628942 -> 28942106\n41: left1 : 28942106 -> 89421062\n40: reverse : 89421062 -> 26012498\n39: swap 4-8 : 26012498 -> 26082491\n38: 27x=26082491 -> 15780833\n  15780833*27=426082491\n37: reverse : 15780833 -> 33808751\n36: -22851817 : 33808751-22851817=10956934\n35: d->7d+4 : 10956934 -> 14796752\n34: 13x=14796752 -> 93445904\n  93445904*13=1214796752\n33: d->9d : 93445904 -> 17665106\n32: 19x=17665106 -> 21982374\n  21982374*19=417665106\n31: d->3d+2 : 21982374 -> 85968134\n30: left7 : 85968134 -> 48596813\n29: swap 1-6 : 48596813 -> 88596413\n28: swap 5-7 : 88596413 -> 88591463\n27: -5676123 : 88591463-5676123=82915340\n26: d->3d+1 : 82915340 -> 57846031\n25: -71028416 : 57846031-71028416 mod1e8=86817615\n24: swap 1-2 : 86817615 -> 68817615\n23: reverse : 68817615 -> 51671886\n22: swap 5-8 : 51671886 -> 51676881\n21: -3857580 : 51676881-3857580=47819301\n20: 21x=47819301 -> 73705681\n  73705681*21=1547819301\n19: swap 2-4 : 73705681 -> 70735681\n18: reverse : 70735681 -> 18653707\n17: reverse : 18653707 -> 70735681\n16: -76778368 : 70735681-76778368 mod1e8=93957313\n15: left4 : 93957313 -> 73139395\n14: 27x=73139395 -> 21227385\n  21227385*27=573139395\n13: reverse : 21227385 -> 58372212\n12: d->7d+4 : 58372212 -> 90538818\n11: left3 : 90538818 -> 38818905\n10: swap 2-8 : 38818905 -> 35818908\n9: left2 : 35818908 -> 81890835\n8: 13x=81890835 -> 06299295\n  6299295*13=81890835\n7: left3 : 06299295 -> 99295062\n6: left3 : 99295062 -> 95062992\n5: reverse : 95062992 -> 29926059\n4: left4 : 29926059 -> 60592992\n3: -25235125 : 60592992-25235125=35357867\n2: d->3d+3 : 35357867 -> 28284714\n1: swap 7-8 : 28284714 -> 28284741\n\nForward check restores 85802619. Leading digit non-zero.\n\nFINAL: 28284741"
+    },
+    "bigknap-1-w30": {
+     "family": "bigknap",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 19226,
+     "extracted": "1212",
+     "text": "Sorting by value/weight gives order:\n\n20(8.0),11(6.43),7(6.24),25(5.25),9(4.57),1(4.375),\n23(3.5),12(3.30),4(3.10),21(2.48),22(2.25),2(2.24),\n24(2.12),28(1.825),27(1.714),16(1.5625),6(1.544),\n14(1.429),13(1.206),17(1.198),19(1.190),8(1.078),\n5(0.904),3(0.676),10(0.66),15(0.617),26(0.375),18(0.218).\n\nCumulative to 16:\nW=365, V=1132.\nRemaining 55, next is 6 w68 v105.\nFractional optimum =1132+55*105/68=1216.92...\nHence integer optimum <=1216.\n\nFeasible set:\n20,11,7,25,9,1,23,12,4,21,22,2,24,28,27,6\nWeights:10+14+17+12+21+8+10+33+21+29+40+41+25+40+28+68=417<=420\nValues:80+90+106+63+96+35+35+109+65+72+90+92+53+73+48+105=1212.\nSo 1212 <= OPT <=1216.\n\nBranch on 6, the fractional item.\nx6=0: take to 16 (365,1132), +14 (393,1172), +27/34 of 13.\nBound =1172+27*41/34=1204.56 <1212. So x6=0 impossible for improvement. Hence x6=1.\n\nWith x6=1, remaining 352. Take to 27 (349,1107) +3/16 of 16.\nBound =1107+75/16+105=1216.69.\n\nBranch on 16:\n- x6=1,x16=1: used84, rem336. Take to 24 (281,986), +28 to 321, +15/28 of 27.\nBound =1059+720/28+130=1214.71.\n- x6=1,x16=0: used68, rem352. Take to 27 (349,1107) +3/28 of 14.\nBound =1111.29+105=1216.29.\n\nConsider x6=1,x16=1:\nBranch on 27:\n x27=1: F={6,16,27} W112 V178 rem308. Take to 24 (281,986)+27/40 of 28.\n Bound=986+1971/40+178=1213.275.\n x27=0: F={6,16} rem336. Take to 28 (321,1059)+15/28 of 14.\n Bound=1080.43+130=1210.43 <1212. Prune.\nFor the 1213.275 node branch on 28:\n x28=1: F W152 V251 rem268. Take to 2 (256,933)+12/25 of 24.\n Bound=958.44+251=1209.44 <1212. Prune.\n x28=0: F W112 rem308. Take to 24 (281,986)+27/28 of 14.\n Bound=1024.57+178=1202.57 <1212. Prune.\nThus x6=1,x16=1 cannot reach 1212. Hence x16=0.\n\nNow x6=1,x16=0. Fractional is 14. Branch:\n x14=1: F W96 V145 rem324. Take to 28 (321,1059)+3/28 of 27.\n Bound=1064.14+145=1209.14 <1212. Prune.\nHence x14=0.\n\nx6=1,x16=0,x14=0: rem352, take to 27 +3/34 of 13. Bound=1215.62.\nBranch on 13:\n x13=1: F W102 V146 rem318. Take to 24 +37/40 of 28.\n Bound=1053.525+146=1199.525 <1212. Prune.\nHence x13=0.\n\nContinue similarly. With F={6}, outs={16,14,13}, rem352, take to 27 +3/86 of 17. Bound 1215.59.\n x17=1: F W154 V208 rem266. Take to 2 +10/25 of 24 =>954.2+208=1162.2 <1212. Prune. Hence x17=0.\n x19=1: F W152 V205 rem268 =>933+25.44+205=1163.44 <1212. Prune. Hence x19=0.\n x8=1: F W145 V188 rem275 =>933+40.28+188=1161.28 <1212. Prune. Hence x8=0.\n x5=1: F W141 V171 rem279 =>933+48.76+171=1152.76 <1212. Prune. Hence x5=0.\n x3=1: F W139 V153 rem281 =>986+153=1139 <1212. Prune. Hence x3=0.\n x10=1: F W118 V138 rem302 =>986+38.325+138=1162.325 <1212. Prune. Hence x10=0.\n x15=1: F W128 V142 rem292 =>986+20.075+142=1148.075 <1212. Prune. Hence x15=0.\n x26=1: F W100 V117 rem320 =>986+71.175+117=1174.175 <1212. Prune. Hence x26=0.\n x18=1: F W146 V122 rem274 =>933+38.16+122=1093.16 <1212. Prune. Hence x18=0.\n\nAll low-density items forced out. Remaining available are exactly 20,11,7,25,9,1,23,12,4,21,22,2,24,28,27 plus 6, total W417 V1212, which fits. Any drop loses positive value.\n\nAll other branches are <1212. Hence global optimum is the feasible 1212.\n\nFINAL: 1212"
+    },
+    "toolsim-6-w30": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2330,
+     "extracted": "deposit(D, 140); verify(G); unlock(G); deposit(G, 40); verify(H); unlock(H); move(H, G, 30)",
+     "text": "The net increase needed is 180, with D +140, G +70, H -30. Deposit directly to D and G, then move from H to G:\n\nFINAL: deposit(D, 140); verify(G); unlock(G); deposit(G, 40); verify(H); unlock(H); move(H, G, 30)"
+    },
+    "toolsim-6-w31": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2625,
+     "extracted": "verify(E); unlock(E); verify(G); unlock(G); verify(F); unlock(F); verify(C); unlock(C); move(E, G, 80); deposit(C, 30); move(F, C, 10)",
+     "text": "Balances show E must lose 80, F lose 10, C gain 40, G gain 80, others unchanged. Total rises 550 to 580, so deposit 30.\n\nUnlock E,G,F,C then move E->G 80 to fix E and G, deposit 30 to C and move F->C 10 to fix F and C.\n\nFINAL: verify(E); unlock(E); verify(G); unlock(G); verify(F); unlock(F); verify(C); unlock(C); move(E, G, 80); deposit(C, 30); move(F, C, 10)"
+    },
+    "toolsim-7-w32": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1843,
+     "extracted": "verify(D); unlock(D); verify(F); unlock(F); move(F, B, 50); deposit(B, 30); deposit(D, 110)",
+     "text": "Goal needs B +80, D +110, F -50. Move F's 50 to B, then deposit the remainder.\n\nFINAL: verify(D); unlock(D); verify(F); unlock(F); move(F, B, 50); deposit(B, 30); deposit(D, 110)"
+    },
+    "toolsim-7-w33": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2188,
+     "extracted": "verify(A); unlock(A); move(A, C, 110); verify(H); unlock(H); deposit(H, 70); deposit(C, 80)",
+     "text": "Goal needs A -110, C +190, H +70 for net +150 from deposits.\nC is already unlocked, so move A's balance to C then deposit the remainder.\n\nFINAL: verify(A); unlock(A); move(A, C, 110); verify(H); unlock(H); deposit(H, 70); deposit(C, 80)"
+    },
+    "tableqa-9-w30": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 8179,
+     "extracted": "13783",
+     "text": "Remaining departments after floor, active, and no-paused filters are Design, Research, Field, Ops.\n\nFiltering those departments' employees to rate >=41, not a department head, and joined <2023:\n\n- Design: 9*45 + 21*84 + 25*78 + 25*67 + 4*66 + 4*85 = 405+1764+1950+1675+264+340 = 6398\n- Research: 24*69 + 37*85 + 38*88 + 39*89 + 11*56 + 10*68 + 13*67 = 1656+3145+3344+3471+616+680+871 = 13783\n- Field: 38*88 + 21*89 + 28*81 + 29*63 + 34*73 = 3344+1869+2268+1827+2482 = 11790\n  Reyes Petra excluded as head of Design.\n- Ops: 37*67 + 11*45 + 8*57 + 39*72 = 2479+495+456+2808 = 6238\n\nLargest is Research.\n\nFINAL: 13783"
+    },
+    "tableqa-9-w31": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 6611,
+     "extracted": "13346",
+     "text": "Field, Logistics, Research are floor >=4.\n\nActive projects:\n- Research: Indigo-94, Krait-40, Nimbus-19\n- Logistics: Meridian-14\n- Field: Sable-14\n- Ops: none active, only paused + wrapped\n- Support: none active, only wrapped + paused\n\nSo floor>=4 with active: Research, Logistics, Field.\n\nPaused projects:\n- Research: none\n- Logistics: none, only active + wrapped\n- Field: none\n\nRemaining departments: Field, Logistics, Research.\n\nHeads to exclude: Lang Weber, Lena Zoe, Rustam Aliyev, Petra Brandt, Livia Costa, Omar Meyer, Aliyev Nair.\n\nFilter to rate >=41, joined <2025, name not a head:\n\nField:\n- 110 Nora Lindgren 31*76=2356\n- 119 Jana Kovac 36*44=1584\n- 123 Talia Rosen 16*43=688\n- 129 Henrik Dahl 38*43=1634\n- 149 Ilsa Aydin 7*74=518\n- 181 Freja Viktor 19*61=1159\n- 196 Livia Rosen 11*62=682\n- 200 Vidal Livia 35*60=2100\n- 201 Vega Freja 24*41=984\nTotal = 11705\n\nLogistics:\n- 111 Marisol Vega 22*60=1320\n- 121 Gustav Weber 17*82=1394\n- 136 Bruno Henrik 32*84=2688\n- 150 Petrov Rustam 11*88=968\n- 151 Berg Priya 29*74=2146\n- 175 Marchetti Aydin 21*43=903\n- 197 Yusuf Marchetti 8*58=464\n- 208 Milan Zoe 29*83=2407\n- 211 Sartori Vogel 24*44=1056\nTotal = 13346\n\nResearch:\n- 106 Lena Vogel 15*69=1035\n- 153 Bea Henrik 35*46=1610\n- 160 Hana Hoffman 30*67=2010\n- 166 Milan Brandt 28*84=2352\n- 193 Rustam Meyer 19*59=1121\n- 199 Rustam Quint 35*67=2345\n- 202 Nadia Amara 37*63=2331\nTotal = 12804\n\nLargest is Logistics with 13346.\n\nFINAL: 13346"
+    },
+    "tableqa-10-w32": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 6780,
+     "extracted": "10094",
+     "text": "Remaining departments must be floor >=2, have an active project, and have no paused project.\n\n- Ops: no active -> out\n- Logistics: no active -> out\n- Design: active Umber-73, but paused Nimbus-13 -> out\n- Support: active Willow-33/Xenon-70, but paused Ember-37 -> out\n- Compliance: active Indigo-43, Krait-85, no paused -> keep\n- Field: active Zephyr-76, Obsidian-42, no paused -> keep\n- Research: active Sable-33, Basalt-19, no paused -> keep\n\nHeads to exclude: Dario Lindqvist, Marchetti Dahl, Anders Selin, Lindgren Dario, Petra Lindqvist, Vidal Freja, Nora Bruno.\n\nFilter employees of Compliance, Field, Research to rate >=51, not a head, joined <2022:\n\nCompliance:\n- Ilsa Brandt 27*88 = 2376\n- Nora Costa 39*71 = 2769\nTotal = 5145\n\nField:\n- Hana Sato 18*54 = 972\n- Yusuf Kaan 14*67 = 938\n- Selin Rustam 30*84 = 2520\n- Nair Elio 24*86 = 2064\n- Ferreira Viktor 20*82 = 1640\n- Novak Diallo 28*70 = 1960\nTotal = 10094\n\nResearch:\n- Ines Ferreira 31*84 = 2604\n- Elio Nilsson 9*86 = 774\n- Elio Gustav 24*78 = 1872\nTotal = 5250\n\nLargest is Field with 10094.\n\nFINAL: 10094"
+    },
+    "bigknap-2-w31": {
+     "family": "bigknap",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 30582,
+     "extracted": "1359",
+     "text": "Greedy by value/weight gives order\n\n4,9,12,17,13,8,11,14,19,7,16,30,22,2,3,21,28,24,26,...\n\ndensities e.g. 30:112/74=1.5135, 22:109/75, 2:72/51,\n3:112/80, 21:95/69, 28:92/77=1.1948, 24:74/62=1.1935\nsince 92*62=5704 > 5698=74*77, etc.\n\nCumulative to 21: weight 576 value 1357, slack 11.\nFractional optimum fills 11/77 of 28:\nF0 =1357+11*92/77 =105501/77 \u22481370.14.\nHence integer optimum \u22641370.\n\nReplace 2(w51 v72) by 24(w62 v74):\nweight 576-51+62=587, value 1357-72+74=1359.\nLet T = first 11 items:\nweights 10+9+7+23+20+18+22+19+41+30+28=227\nvalues 102+79+42+118+94+75+91+60+96+54+46=857.\nWith A-items 30,22,3,21,24:\nweights 74+75+80+69+62=360 values 112+109+112+95+74=502.\nTotal 587, 1359 feasible.\n\nLet d28=92/77. For t fully in F0, forbidding t loses vt\nand can regain at most wt*d28, since all denser items\nexcept t stay at 1. So fractional optimum without t:\nF_{-t} \u2264 F0 - vt + wt*d28.\n\nF0-1360 =781/77\u224810.14. Need vt-wt*d28>781/77.\nN=77v-92w:\n4:6934, 9:5255, 12:2590, 17:6970, 13:5398, 8:4119,\n11:4983, 14:2872, 19:3620, 7:1398, 16:966.\nAll \u2265966>781. Hence F_{-t}<1360, integer \u22641359.\nSo any solution missing a T-item cannot beat 1359.\n\nAssume all T present. Remaining capacity 360.\nRemaining items: A={30,22,2,3,21,28,24,26} all v>w,\nB={rest} all v<w.\n\nA weights 74,75,51,80,69,77,62,84 sum572.\nA values 112,109,72,112,95,92,74,99 sum765.\nSurpluses v-w:38,34,21,32,26,15,12,15 sum193.\n\n6 items min weight 51+62+69+74+75+77=408>360 impossible.\n\u22644 items max value top4 112+112+109+99=432<502.\nSo need exactly 5 items to beat 502.\n\n5 items without 2,24: min weight 69+74+75+77+80=375>360\nimpossible. Hence contain 2 or 24.\n\nBoth 2,24: need 3 from other 6, max top3 112+112+109=333,\ntotal \u2264146+333=479.\n\nOnly 2: value 72+V4, V4 from 6 items. Top4 value 432\nfor 30,3,22,26 weight313. Any other 4-set \u2264428,\nsince replacing 99 by \u226495 loses \u22654. Top4+2 weight\n313+51=364>360 infeasible, so V4\u2264428, total \u2264500.\n\nOnly 24: value 74+V4. Same top4. Top4+24 weight\n313+62=375>360 infeasible, so V4\u2264428, total \u2264502,\nattained by 30,3,22,21 +24 weight360 value502.\n\nNeither: already impossible for 5. Hence A-only max 502.\n\nMixed A+B: let WA+WB\u2264360, V=W+surplusA-deficitB\n\u2264360+surplusA-deficitB.\nB deficits w-v:3,9,8,9,16,27,9,2,61,55,58 all \u22652.\nB min weight 18, so WA\u2264342.\n\u22644 items surplus \u2264 top4 38+34+32+26=130.\n5 items: surplus\u2265138 \u21d2 complement 3 items surplus\u226455\nand weight\u2265572-342=230.\nTriples with surplus\u226455 cannot contain 38,34,32\nsince +12+15>55, so from {26,21,15,15,12}:\nsums 53,51,48,42 with weights 208,215,212,190,197,223,\nall <230. Hence no such triple, surplus\u2264137.\nE.g. max 137 for 30,22,2,3,24 weight342.\nThus V\u2264360+137-2=495<502.\n\nSo with T present max =857+502=1359.\n\nEither case \u22641359, and 1359 is achievable. Optimum is 1359.\n\nFINAL: 1359"
+    },
+    "tableqa-10-w33": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 7881,
+     "extracted": "19612",
+     "text": "The qualifying departments must be floor \u22652 with an active project and no paused project.\n\n- Support (floor 3, active) has paused Delta-45 \u2192 excluded\n- Logistics (floor 3, active Umber-56) no paused \u2192 keep\n- Design (floor 5, active Nimbus-51) no paused \u2192 keep\n- Compliance (floor 6, active Drift-39) no paused \u2192 keep\n- Field floor 1 \u2192 excluded\n- Research no active \u2192 excluded\n- Ops (floor 2, active Lumen-92, Zephyr-82) no paused \u2192 keep\n\nHeads to exclude: Vidal Sato, Marisol Vogel, Haddad Kovac, Ferreira Amara, Yusuf Elio, Viktor Livia, Dina Vidal.\n\nFilter to dept in {Logistics, Design, Compliance, Ops}, rate \u226537, name not a head, joined <2025, sum hours*rate:\n\n- Logistics: 1014+1280+966+2870+1241+3108 = 10479\n- Design: 2190+2002+1872+627+1296+968+1890+1394+2336+2047+1898+1092 = 19612\n- Compliance: 1144+1672+1118+650+1248+594+2436+1612+912+2325+1872 = 15583\n- Ops: 1491+1092+913+1188+2888+828+3060+2485+1496+228 = 15669\n\nLargest is Design.\n\nFINAL: 19612"
+    },
+    "bigknap-4-w33": {
+     "family": "bigknap",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 29240,
+     "extracted": "1557",
+     "text": "The fractional knapsack ordered by value/weight gives\n\n26,18,3,4,32,17,12,33,8,14,23,10,9,30,13,6,27,2\nweight 630 value 1545, plus 17/34 of 25 for 22,\nupper bound 1567.\n\nThe feasible set with 27 replaced by 7 has\nweight 630-62+77=645 value 1545-86+98=1557.\n\nLet H be the 14 items through 30:\nweight 405 value 1224.\nRemoving any i in H leaves P\\{i} fitting, remaining\n17+w_i filled by 25,7,...\ne.g. without 23: 1510+33*44/34=1552.7,\nwithout 14: 1486+44+9*98/77=1541.5, etc.,\nall <1557. Hence H is mandatory.\n\nRemaining capacity 242. P_sub=13,6,27,2 weight225\nvalue321. Without 13: 226+44+43*98/77=324.7<333,\nwhere 333=95+22+118+98 is feasible with 13,6,2,7.\nHence 13 mandatory. Capacity now 182, feasible 238.\n\nWith 27, remaining 120. With 2, remaining 31 allows\nonly 6 for 140. With 7, remaining 43 allows best 25\nfor 142. With neither 2 nor 7, fractional 22+44+\n72*84/79=142.6, so \u2264142. Hence with 27 \u226486+142=\n228<238. So 27 excluded.\n\nWith 25 and 2, remaining 59 allows best 6+1=57 for\n219. With 25 and 7, remaining 71 allows best 6+31=65\nfor 207. With 25 neither 2 nor 7, fractional 44+22+\n84+55*73/77=202.1<238. So 25 excluded.\n\nCapacity 182 without 6: fractional 118+98+16*84/79\n=233.0<238. So 6 mandatory. Remaining 168.\n\nWithout 2: fractional 98+84+12*73/77=193.4<216,\nwhere 216=118+98 is feasible. So 2 mandatory.\nRemaining 79.\n\nWeights \u226479 are 42,51,53,57,61,68,72,73,77,77,77,\n77,79. Smallest two sum 93>79, so at most one item.\nMax single value is 98 for item 7. Hence 7 optimal.\n\nOptimal set is H+13+6+2+7, weight 645, value\n1224+95+22+118+98=1557, and no feasible set exceeds it.\n\nFINAL: 1557"
+    },
+    "inv-70-w30": {
+     "family": "inv",
+     "rung": 70,
+     "correct": true,
+     "completion_tokens": 32320,
+     "extracted": "50588301",
+     "text": "Inverting modulo 100000000, keeping 8 digits.\n\nadd a -> subtract a mod 1e8.\nmul m with m=7,11,13,17,21,23 coprime to 10 -> unique\nsolution found LSD first using inverse mod 10.\ndigit d -> a d+b mod10 with a coprime to 10 -> inverse.\nswap, reverse self-inverse.\nrotL k -> rotL 8-k.\n\nStart from final after 70: 22311112.\n\n70 mul17 inverse: 17*y=22311112 -> 36606536\n69 rotL3 inverse rotR3: 36606536 -> 53636606\n68 swap2-8: 53636606 -> 56636603\n67 add24811919 inverse sub: 56636603-24811919=31824684\n66 mul13 inverse: 13*y=31824684 -> 17832668\n65 add85961766 inverse: 17832668-85961766=31870902\n64 mul11 inverse: 11*y=31870902 -> 30170082\n63 rotL3 inverse: 30170082 -> 08230170\n62 digit 7d+3 inverse 3e+1: 08230170 -> 15701421\n61 reverse: 15701421 -> 12410751\n60 digit 3d+1 inverse 7e+3: 12410751 -> 07103280\n59 digit 9d+1 inverse 9e+1: 07103280 -> 14018931\n58 swap2-3: 14018931 -> 10418931\n57 digit 7d+5 inverse 3e+5: 10418931 -> 85789248\n56 reverse: 85789248 -> 84298758\n55 rotL3 inverse: 84298758 -> 75884298\n54 mul7 inverse: 7*y=75884298 -> 10840614\n53 add52533251 inverse: 10840614-52533251=58307363\n52 mul7 inverse: 7*y=58307363 -> 94043909\n51 mul17 inverse: 17*y=94043909 -> 70237877\n50 reverse: 70237877 -> 77873207\n49 mul13 inverse: 13*y=77873207 -> 98297939\n48 mul11 inverse: 11*y=98297939 -> 81663449\n47 reverse: 81663449 -> 94436618\n46 rotL7 inverse rotL1: 94436618 -> 44366189\n45 add12287404 inverse: 44366189-12287404=32078785\n44 mul17 inverse: 17*y=32078785 -> 37181105\n43 swap1-4: 37181105 -> 87131105\n42 add6424519 inverse: 87131105-6424519=80706586\n41 digit 3d+5 inverse 7e+5: 80706586 -> 15457017\n40 reverse: 15457017 -> 71075451\n39 digit 7d+5 inverse 3e+5: 71075451 -> 68560708\n38 add10524120 inverse: 68560708-10524120=58036588\n37 digit 3d+3 inverse 7e+9: 58036588 -> 45901455\n36 swap5-7: 45901455 -> 45905415\n35 add22620440 inverse: 45905415-22620440=23284975\n34 rotL1 inverse rotL7: 23284975 -> 52328497\n33 reverse: 52328497 -> 79482325\n32 mul13 inverse: 13*y=79482325 -> 06114025\n31 rotL4 inverse rotL4: 06114025 -> 40250611\n30 digit 3d+7 inverse 7e+1: 40250611 -> 91561388\n29 swap4-5: 91561388 -> 91516388\n28 swap5-8: 91516388 -> 91518386\n27 digit 9d+9 inverse itself: 91518386 -> 08481613\n26 rotL3 inverse: 08481613 -> 61308481\n25 swap1-6: 61308481 -> 41308681\n24 reverse: 41308681 -> 18680314\n23 mul23 inverse: 23*y=18680314 -> 22551318\n22 rotL7 inverse rotL1: 22551318 -> 25513182\n21 mul7 inverse: 7*y=25513182 -> 89359026\n20 mul11 inverse: 11*y=89359026 -> 26305366\n19 add12274738 inverse: 26305366-12274738=14030628\n18 mul21 inverse: 21*y=14030628 -> 43525268\n17 mul23 inverse: 23*y=43525268 -> 54066316\n16 swap3-5: 54066316 -> 54660316\n15 add81080014 inverse: 54660316-81080014=73580302\n14 rotL4 inverse rotL4: 73580302 -> 03027358\n13 mul23 inverse: 23*y=03027358 -> 87088146\n12 reverse: 87088146 -> 64188078\n11 swap1-7: 64188078 -> 74188068\n10 digit 7d+4 inverse 3e+8: 74188068 -> 90122862\n9 swap3-4: 90122862 -> 90212862\n8 rotL7 inverse rotL1: 90212862 -> 02128629\n7 swap5-7: 02128629 -> 02122689\n6 swap5-8: 02122689 -> 02129682\n5 digit 7d+5 inverse 3e+5: 02129682 -> 51812391\n4 mul17 inverse: 17*y=51812391 -> 73636023\n3 add52983139 inverse: 73636023-52983139=20652884\n2 swap1-2: 20652884 -> 02652884\n1 add52064583 inverse: 02652884-52064583=50588301\n\nOriginal has no leading zero.\n\nFINAL: 50588301"
+    },
+    "bigknap-5-w34": {
+     "family": "bigknap",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 40228,
+     "extracted": "1417",
+     "text": "The items sorted by value/weight are\n\n27(54,6),17(88,10),4(106,13),34(89,27),18(112,35),\n30(82,26),15(74,25),10(91,31),23(96,36),2(115,54),\n33(54,27),21(38,20),13(59,32),36(90,54),1(74,54),\n24(75,64),29(95,82),11(75,66),16(36,33),3(30,28),\n26(45,42),5(71,71),9(40,40),14(78,78),20(54,67),\n25(10,14),28(47,69),19(25,37),12(46,73),31(22,38),\n8(24,57),6(31,75),35(27,81),7(21,68),32(11,43),22(11,64)\n\nPrefix weights-values up to the break:\nW16=514,V16=1297, W17=596,V17=1392, W18=662,V18=1467.\nCapacity C=623. W17<=C<W18.\nFractional Dantzig bound:\n1392+27*75/66 =1422.68, so optimum <=1422.\n\nFeasible set\ncore 27,17,4,34,18,30,15,10,23,2,33,21,13,36,1\nplus 24,11,26\ni.e. items 1,2,4,10,11,13,15,17,18,21,23,24,26,27,30,33,34,36\nweight =622, value =1417:\ncore weight 450 value 1222, plus 64+66+42=172,\n75+75+45=195, total 622,1417.\n\nLet core = positions 1-15. Its lowest density is 74/54\nfor item 1, while the highest density outside core is\n75/64 for item 24. 74/54 > 75/64.\n\nFor any core position p, bound the knapsack with xp=0\nby the fractional bound.\nOriginal V17=1392,W17=596,V18=1467,W18=662.\n\nIf wp<39 break stays at 18:\nUB =1392-vp+(27+wp)*75/66.\nx22: UB*22=(1392-v)*22+(27+w)*25 <1417*22=31174:\n27:30261,17:29613,4:29292,34:30016,18:29710,\n30:30145,15:30296,10:30072,23:30087,\n33:30786,21:30963,13:30801, all <31174.\n\nIf wp=54 break moves to 19 with ratio 36/33:\nUB =1467-vp+(wp-39)*12/11.\nUB*11=(1467-v)*11+(w-39)*12 <1417*11=15587:\n2:15052,36:15327,1:15503, all <15587.\n\nHence any solution missing a core item has value <=1409\n<1417. Optimal must contain all 15 core items.\n\nFix core: weight 450 value 1222 used, remaining\ncapacity 173 for R={3,5,6,7,8,9,11,12,14,16,19,20,22,\n24,25,26,28,29,31,32,35}.\n\nTop R densities: 24,29,11. 64+82+66=212>173,\nso at most two.\n\nLet x24,x29,x11. Remaining items all satisfy v<=12/11 w,\nwith equality for 16, e.g. 30*11=330<=336,\n45*11=495<=504, etc.\n\n000: cap173 <=floor(2076/11)=188 <195.\n100: 24 in only, rem109 <=floor(1308/11)=118,\ntotal<=75+118=193 <195.\n010: 29 in only, rem91 <=99, total<=194 <195.\n001: 11 in only, rem107 <=116, total<=191 <195.\n\n110: 24+29 in,11 out. Used146 rem27.\nOnly weight<=27 in R\\{24,29,11} is 25(10,14),\n3 is 28>27. Total=75+95+10=180 <195.\n011: 29+11 in. Used148 rem25. Only 25 fits.\nTotal=180 <195.\n111: infeasible.\n\n101: 24+11 in,29 out. Used130 rem43.\nFitting weights<=43 are 16(33,36),3(28,30),\n26(42,45),9(40,40),19(37,25),31(38,22),\n25(14,10),32(43,11).\nBest single is 26 with 45. Only pair <=43 is\n25+3=42 value40. So max additional 45.\nTotal=75+75+45=195 weight172.\n\nThus residual optimum is 195.\n\nTotal optimum =1222+195=1417.\n\nFINAL: 1417"
+    },
+    "bigknap-3-w32": {
+     "family": "bigknap",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 30537,
+     "extracted": "1431",
+     "text": "Sort by value/weight. With $v/w$ decreasing:\n\n22(112,5),8(109,9),9(88,11),26(57,8),5(108,17),\n2(85,15),12(97,19),25(77,18),30(69,23),18(76,45),\n13(27,17),21(79,51),4(36,24),15(103,74),20(94,76),\n32(98,82),14(102,86),1(41,36),17(88,78),29(61,62),\n11(40,46),27(63,76),10(64,78),3(35,47),23(57,78),\n28(24,40),31(48,88),16(30,69),6(28,78),24(28,81),\n19(29,87),7(16,60)\n\nThis order is verified by cross multiplication, e.g.\n$57\\cdot17=969>864=108\\cdot8$,\n$79\\cdot24=1896>1836=36\\cdot51$,\n$103\\cdot76=7828>6956=94\\cdot74$,\n$94\\cdot82=7708>7448=98\\cdot76$,\n$98\\cdot86=8428>8364=102\\cdot82$,\n$102\\cdot36=3672>3526=41\\cdot86$,\n$41\\cdot78=3198>3168=88\\cdot36$, etc.\n\nCumulative weight/value of first 17:\n$5+9+11+8+17+15+19+18+23+45+17+51+24+74+76+82+86=580$,\nvalue $112+109+88+57+108+85+97+77+69+76+27+79+36+103+94+98+102=1417$.\nCapacity $C=601$, remainder $21$.\nBreak item $b$ is $1(41,36)$ with density $d_b=41/36$.\nFractional optimum:\n$V_F=1417+21\\cdot41/36=51873/36\\approx1440.92$.\n\nFeasible integer: take the 17 except $13(17,27)$ and add $1(36,41)$:\nweight $580-17+36=599\\le601$,\nvalue $1417-27+41=1431$.\nItems: 22,8,9,26,5,2,12,25,30,18,21,15,4,20,32,14,1.\nSo OPT $\\ge1431$.\n\nLet $i<b$ be first 17, $j\\ge b$ rest.\n$V_F=\\sum_{i<b}v_i+(C-W_{b-1})d_b$,\n$W_{b-1}=580$.\nWrite for any feasible $S$, $W_S,V_S$:\n$V_S=d_bW_S+\\sum_{S}(v-d_bw)$.\nHence with $p_i=v_i-d_bw_i\\ge0$ for $i<b$,\n$q_j=d_bw_j-v_j\\ge0$ for $j\\ge b$,\n$G=V_F-V_S=d_b(C-W_S)+\\sum_{i<b,i\\notin S}p_i+\\sum_{j\\ge b,j\\in S}q_j$.\n\nMultiply by 36. Put $D=36G=51873-36V_S$,\n$e_i=36v_i-41w_i$ for $i<b$,\n$c_j=41w_j-36v_j$ for $j\\ge b$,\n$D=41(C-W_S)+\\sum_{excl}e_i+\\sum_{incl}c_j\\ge0$.\n\n$V_S\\ge1431\\iff D\\le357$ since $36\\cdot1431=51516$,\n$51873-51516=357$.\n\nCompute $e_i$:\n22:3827, 8:3555, 9:2717, 26:1724, 5:3191, 2:2445,\n12:2713, 25:2034, 30:1541, 18:891, 13:275, 21:753,\n4:312, 15:674, 20:268, 32:166, 14:146.\n\nSo $e_i>357$ except for 13:275, 4:312, 20:268, 32:166, 14:146.\n\nCompute $c_j$:\n1:0, 17:30, 29:346, 11:446, 27:848, 10:894, 3:667,\n23:1146, 28:776, 31:1880, 16:1749, 6:2190, 24:2313,\n19:2523, 7:1884.\n\nSo $c_j>357$ except for 1:0, 17:30, 29:346.\n\nSince all terms in $D$ are $\\ge0$, $D\\le357$ forces:\nmust include 22,8,9,26,5,2,12,25,30,18,21,15,\ncannot include 11,27,10,3,23,28,31,16,6,24,19,7.\nAny violation gives $D>357$, i.e. $V_S\\le1430$.\n\nHence any $V_S\\ge1431$ uses only core $C_0$ fixed plus\n$O=\\{13(17,27),4(24,36),20(76,94),32(82,98),14(86,102)\\}$\nand $A=\\{1(36,41),17(78,88),29(62,61)\\}$.\n\nCore weight $295$, value $1060$:\n$5+9+11+8+17+15+19+18+23+45+51+74=295$,\n$112+109+88+57+108+85+97+77+69+76+79+103=1060$.\nRemaining capacity $306$ for $O+A$.\n\nAll $O$ subsets (w,v):\n0,0; 17,27; 24,36; 41,63; 76,94; 82,98; 86,102;\n93,121; 99,125; 100,130; 103,129; 106,134; 110,138;\n117,157; 123,161; 127,165; 158,192; 162,196; 168,200;\n175,219; 179,223; 182,228; 185,227; 186,232; 192,236;\n199,255; 203,259; 209,263; 244,294; 261,321; 268,330; 285,357.\n\nBest $O$ for capacity $C_O$ is max $v$ with $w\\le C_O$:\n$C_O=306\\to357$, $270\\to330$, $228\\to263$, $244\\to294$,\n$192\\to236$, $208\\to259$, $166\\to196$, $130\\to165$.\n\n$A$ cases, $C_O=306-W_A$:\n$\\emptyset$: $0+357=357$\n$\\{1\\}$: $41+330=371$, $C_O=270$\n$\\{17\\}$: $88+263=351$, $C_O=228$\n$\\{29\\}$: $61+294=355$, $C_O=244$\n$\\{1,17\\}$: $129+236=365$, $C_O=192$\n$\\{1,29\\}$: $102+259=361$, $C_O=208$\n$\\{17,29\\}$: $149+196=345$, $C_O=166$\n$\\{1,17,29\\}$: $190+165=355$, $C_O=130$\n\nMaximum $O+A$ is $371$, total $1060+371=1431$.\nNo restricted set exceeds $1431$, and any unrestricted set has $\\le1430$.\nHence optimum is $1431$.\n\nFINAL: 1431"
+    }
+   }
+  }
+ },
+ "usage": {
+  "meta/muse-spark-1.3": {
+   "prompt": 220598,
+   "completion": 443606
+  }
+ },
+ "effort_applied": {
+  "meta/muse-spark-1.3": true
+ }
+}

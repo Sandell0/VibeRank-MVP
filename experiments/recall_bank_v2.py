@@ -360,6 +360,7 @@ PANEL = {  # slug: (site Elo budget-unified 2026-09-02, ($/M in, $/M out))
     "moonshotai/kimi-k2.6": (1834, (0.95, 4.0)),
     "moonshotai/kimi-k2-0905": (1722, (0.6, 2.5)),
     "openai/gpt-oss-120b": (1665, (0.04, 0.17)),
+    "meta/muse-spark-1.3": (1981, (1.25, 4.25)),   # day-zero placement 2026-09-03 (site Elo from 30 boards)
     "liquid/lfm-2.5-2.6b:free": (0, (0.0, 0.0)),   # guessability floor
 }
 FLOOR = "liquid/lfm-2.5-2.6b:free"
@@ -547,7 +548,8 @@ def report():
         c = sum(1 for m in real if resp[m].get(i, {}).get("correct"))
         counts[c] = counts.get(c, 0) + 1
     print("\nitems by number of models solving:", dict(sorted(counts.items())))
-    flag = [m for m in real if PANEL[m][0] >= 1800]
+    OUT_OF_SAMPLE = {"meta/muse-spark-1.3"}  # provisional site Elo; placed, not fitted
+    flag = [m for m in real if PANEL[m][0] >= 1800 and m not in OUT_OF_SAMPLE]
     if len(flag) >= 5:
         errs = []
         for held in flag:
