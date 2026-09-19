@@ -1306,6 +1306,651 @@
      "text": "FINAL: 1848"
     }
    }
+  },
+  "inclusionai/ling-3.0-flash-fin:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": true,
+     "extracted": "59202020",
+     "text": "Looking at this problem, I need to reverse each of the 4 transformations, working backwards from the final result 08171705.\n\n## Step 4 Reverse: Undo (d*9+3) mod 10\n\nI need the inverse mapping. For each output digit e, I find d where (9d+3) mod 10 = e:\n\n| e | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| d | 3 | 2 | 1 | 0 | 9 | 8 | 7 | 6 | 5 | 4 |\n\nApplying to 08171705 digit by digit:\n- 0\u21923, 8\u21925, 1\u21922, 7\u21926, 1\u21922, 7\u21926, 0\u21923, 5\u21928\n\n**Result after Step 3:** 35262638\n\n## Step 3 Reverse: Undo rotate left by 6\n\nRotating left by 6 moves the first 6 digits to the end. To reverse, I rotate right by 6 (equivalently left by 2):\n\n\"35262638\" \u2192 take last 6 digits \"262638\" + first 2 \"35\" \u2192 wait, I need to be careful.\n\nIf Y[j] = X[(j+6) mod 8], then X[j] = Y[(j+2) mod 8]:\n- X = Y[2]Y[3]Y[4]Y[5]Y[6]Y[7]Y[0]Y[1] = 2,6,2,6,3,8,3,5\n\n**Result after Step 2:** 26263835\n\n*Verification:* Rotating \"26263835\" left by 6 gives \"35262638\" \u2713\n\n## Step 2 Reverse: Undo multiply by 13 (mod 10\u2078)\n\nI need 13\u207b\u00b9 mod 100000000. Using the extended Euclidean algorithm:\n$$13 \\times 76923077 = 1000000001 \\equiv 1 \\pmod{10^8}$$\n\nSo: 26263835 \u00d7 76923077 mod 100000000\n\n**Verification:** 13 \u00d7 2020295 = 26263835 \u2713\n\nSo the answer is 2020295, written as 8 digits: **02020295**\n\n## Step 1 Reverse: Undo digit reversal\n\nReversing \"02020295\" gives:\n\n**Original number:** 59202020\n\n## Final Verification (forward)\n\n1. **Reverse** 59202020 \u2192 02020295\n2. **\u00d713 mod 10\u2078:** 02020295 \u00d7 13 = 26263835 \u2713\n3. **Rotate left by 6:** 26263835 \u2192 35262638 \u2713\n4. **(d\u00d79+3) mod 10:** 3\u21920, 5\u21928, 2\u21921, 6\u21927, 2\u21921, 6\u21927, 3\u21920, 8\u21925 \u2192 **08171705** \u2713\n\nFINAL: 59202020"
+    },
+    "exe-2-0": {
+     "correct": true,
+     "extracted": "308",
+     "text": "Looking at this problem, I need to trace the program step by step through all 12 iterations of the loop.\n\n**Initial values:** v0=1, v1=25, v2=26, v3=29\n\n**Iteration by iteration:**\n\n| i | v3 = (v3*3+v1)%997 | v0 = (v0+v2*i)%997 | v1 = (v1+v2*i)%997 |\n|---|---|---|---|\n| 1 | (87+25)=112 | (1+26)=27 | (25+26)=51 |\n| 2 | (336+51)=387 | (27+52)=79 | (51+52)=103 |\n| 3 | (1161+103)=1264\u2192267 | (79+78)=157 | (103+78)=181 |\n| 4 | (801+181)=982 | (157+104)=261 | (181+104)=285 |\n| 5 | (2946+285)=3231\u2192240 | (261+130)=391 | (285+130)=415 |\n| 6 | (720+415)=1135\u2192138 | (391+156)=547 | (415+156)=571 |\n| 7 | (414+571)=985 | (547+182)=729 | (571+182)=753 |\n| 8 | (2955+753)=3708\u2192717 | (729+208)=937 | (753+208)=961 |\n| 9 | (2151+961)=3112\u2192121 | (937+234)=1171\u2192174 | (961+234)=1195\u2192198 |\n| 10 | (363+198)=561 | (174+260)=434 | (198+260)=458 |\n| 11 | (1683+458)=2141\u2192147 | (434+286)=720 | (458+286)=744 |\n| 12 | (441+744)=1185\u2192188 | (720+312)=1032\u219235 | (744+312)=1056\u219259 |\n\n**Final values:** v0=35, v1=59, v2=26, v3=188\n\n**Sum:** 35 + 59 + 26 + 188 = **308**\n\nFINAL: 308"
+    },
+    "inv-4-1": {
+     "correct": true,
+     "extracted": "92898498",
+     "text": "Looking at this problem, I need to reverse each of the 4 transformations, working backwards from the final result 47877633.\n\n## Step 4 (Reverse): Undo \"reverse digit order\"\n\nFinal result: **47877633**\nReverse its digits: **33677874**\n\nThis was the value after Step 3.\n\n## Step 3 (Reverse): Undo \"multiply by 13, keep last 8 digits\"\n\nI need x such that 13x \u2261 33677874 (mod 100000000)\n\nFinding 13\u207b\u00b9 mod 10\u2078 using the extended Euclidean algorithm:\n- 13\u207b\u00b9 \u2261 76923077 (mod 10\u2078)\n\nComputing: x = 33677874 \u00d7 76923077 mod 10\u2078\n\nBreaking this down using a\u2081 = 3367, a\u2080 = 7874, b\u2081 = 7692, b\u2080 = 3077:\n- C = 7874 \u00d7 3077 = 24228298\n- B = 3367 \u00d7 3077 + 7874 \u00d7 7692 = 10360259 + 60566808 = 70927067\n- Result = (B mod 10\u2074) \u00d7 10\u2074 + C = 70670000 + 24228298 = **94898298**\n\n**Verification:** 94898298 \u00d7 13 = 1233677874 \u2192 last 8 digits = 33677874 \u2713\n\n## Step 2 (Reverse): Undo \"reverse digit order\"\n\nValue after Step 1: **94898298**\nReverse its digits: **89289849**\n\n## Step 1 (Reverse): Undo \"rotate left by 7 positions\"\n\nRotating left by 7 positions moves the last digit to the front. If the original is d\u2081d\u2082d\u2083d\u2084d\u2085d\u2086d\u2087d\u2088, then after rotation: d\u2088d\u2081d\u2082d\u2083d\u2084d\u2085d\u2086d\u2087 = 89289849\n\nMatching digits:\n- d\u2088=8, d\u2081=9, d\u2082=2, d\u2083=8, d\u2084=9, d\u2085=8, d\u2086=4, d\u2087=9\n\nOriginal: **92898498**\n\n## Verification (forward check)\n\n1. 92898498 \u2192 rotate left 7 \u2192 **89289849** \u2713\n2. 89289849 \u2192 reverse \u2192 **94898298** \u2713  \n3. 94898298 \u00d7 13 = 1233677874 \u2192 last 8 digits \u2192 **33677874** \u2713\n4. 33677874 \u2192 reverse \u2192 **47877633** \u2713\n\nFINAL: 92898498"
+    },
+    "exe-2-1": {
+     "correct": true,
+     "extracted": "576",
+     "text": "Let me trace through the program step by step.\n\n**Initial values:** v0=23, v1=24, v2=22, v3=6\n\n**i=1:** v0=(23\u00d73+6)%997=75, v2=(22+6\u00d71)%997=28, 75%3=0\u2192v2=30\n**i=2:** v0=(75\u00d73+6)%997=231, v2=(30+12)%997=42, 231%3=0\u2192v2=44\n**i=3:** v0=(231\u00d73+6)%997=699, v2=(44+18)%997=62, 699%3=0\u2192v2=64\n**i=4:** v0=(699\u00d73+6)%997=2103%997=109, v2=(64+24)%997=88, 109%3=1\u2192no change\n**i=5:** v0=(109\u00d73+6)%997=333, v2=(88+30)%997=118, 333%3=0\u2192v2=120\n**i=6:** v0=(333\u00d73+6)%997=1005%997=8, v2=(120+36)%997=156, 8%3=2\u2192no change\n**i=7:** v0=(8\u00d73+6)%997=30, v2=(156+42)%997=198, 30%3=0\u2192v2=200\n**i=8:** v0=(30\u00d73+6)%997=96, v2=(200+48)%997=248, 96%3=0\u2192v2=250\n**i=9:** v0=(96\u00d73+6)%997=294, v2=(250+54)%997=304, 294%3=0\u2192v2=306\n**i=10:** v0=(294\u00d73+6)%997=888, v2=(306+60)%997=366, 888%3=0\u2192v2=368\n**i=11:** v0=(888\u00d73+6)%997=2670%997=676, v2=(368+66)%997=434, 676%3=1\u2192no change\n**i=12:** v0=(676\u00d73+6)%997=2034%997=40, v2=(434+72)%997=506, 40%3=1\u2192no change\n\n**Final values:** v0=40, v1=24, v2=506, v3=6\n\nv0+v1+v2+v3 = 40+24+506+6 = 576\n\nFINAL: 576"
+    },
+    "inv-8-0": {
+     "correct": true,
+     "extracted": "16442211",
+     "text": "Looking at this problem, I need to reverse each of the 8 steps starting from the final result 77129782.\n\n## Working Backwards\n\n**Reverse Step 8:** Inverse of d \u2192 (d\u00d79+1) mod 10 is d' \u2192 9\u00d7(d'-1) mod 10\n\nApplying to 77129782: 7\u21924, 7\u21924, 1\u21920, 2\u21929, 9\u21922, 7\u21924, 8\u21923, 2\u21929\n\u2192 **44092439**\n\n**Reverse Step 7:** Swap positions 1 and 6 (self-inverse)\nPositions 1,6 are both 4 \u2192 no change\n\u2192 **44092439**\n\n**Reverse Step 6:** Inverse of d \u2192 (d\u00d77+7) mod 10 is d' \u2192 3\u00d7(d'-7) mod 10\n\nApplying to 44092439: 4\u21921, 4\u21921, 0\u21929, 9\u21926, 2\u21925, 4\u21921, 3\u21928, 9\u21926\n\u2192 **11965186**\n\n**Reverse Step 5:** Divide by 13 mod 100000000. Since 13\u207b\u00b9 mod 10\u2078 = 76923077:\n\nSolving X\u00d713 \u2261 11965186 (mod 10\u2078): X = (11965186 + 3\u00d710\u2078)/13 = 311965186/13\n\u2192 **23997322**\n\n**Reverse Step 4:** Reverse digit order (self-inverse)\n23997322 \u2192 22379932\n\u2192 **22379932**\n\n**Reverse Step 3:** Inverse of d \u2192 (d\u00d77+5) mod 10 is d' \u2192 3\u00d7(d'-5) mod 10\n\nApplying to 22379932: 2\u21921, 2\u21921, 3\u21924, 7\u21926, 9\u21922, 9\u21922, 3\u21924, 2\u21921\n\u2192 **11462241**\n\n**Reverse Step 2:** Swap positions 4 and 7 (self-inverse)\n11462241: pos 4=6, pos 7=4 \u2192 swap gives 11442261\n\u2192 **11442261**\n\n**Reverse Step 1:** Swap positions 2 and 7 (self-inverse)\n11442261: pos 2=1, pos 7=6 \u2192 swap gives 16442211\n\u2192 **16442211**\n\n## Verification\nForward-checking 16442211 through all 8 steps yields 77129782 \u2713\n\nFINAL: 16442211"
+    },
+    "exe-4-0": {
+     "correct": true,
+     "extracted": "720",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 18, carefully tracking all variable assignments.\n\n**Initial values:** v0=16, v1=26, v2=8, v3=21, v4=13\n\nI'll trace each iteration, noting the key operations:\n- The `if` checks if v2 % 3 == 0 (adds 4 to v0 if true)\n- Tuple assignments happen atomically (RHS evaluated first)\n\nAfter carefully tracing all 18 iterations:\n\n| i | v0 | v1 | v2 | v3 | v4 |\n|---|-----|-----|-----|-----|-----|\n| 0 | 16 | 26 | 8 | 21 | 13 |\n| 1 | 21 | 26 | 16 | 45 | 13 |\n| 2 | 45 | 26 | 21 | 64 | 13 |\n| 3 | 64 | 26 | 49 | 77 | 13 |\n| 4 | 77 | 26 | 64 | 136 | 13 |\n| 5 | 136 | 26 | 77 | 169 | 13 |\n| 6 | 169 | 26 | 136 | 198 | 13 |\n| 7 | 198 | 26 | 169 | 319 | 13 |\n| 8 | 319 | 26 | 198 | 388 | 13 |\n| 9 | 388 | 26 | 323 | 449 | 13 |\n| 10 | 449 | 26 | 388 | 702 | 13 |\n| 11 | 702 | 26 | 449 | 835 | 13 |\n| 12 | 835 | 26 | 702 | 960 | 13 |\n| 13 | 960 | 26 | 839 | 472 | 13 |\n| 14 | 472 | 26 | 960 | 749 | 13 |\n| 15 | 749 | 26 | 476 | 994 | 13 |\n| 16 | 994 | 26 | 749 | 29 | 13 |\n| 17 | 29 | 26 | 994 | 578 | 13 |\n| 18 | **578** | **26** | **29** | **74** | **13** |\n\n**Final sum:** 578 + 26 + 29 + 74 + 13 = **720**\n\nFINAL: 720"
+    },
+    "inv-8-1": {
+     "correct": true,
+     "extracted": "39786618",
+     "text": "Looking at this problem, I need to reverse each of the 8 transformations, working backwards from the final result 65434728.\n\n## Step-by-Step Reverse Process\n\n**Reverse Step 8** (rotate left by 3 \u2192 rotate right by 3):\n65434728 \u2192 move last 3 digits (728) to front \u2192 **72865434**\n\n**Reverse Step 7** (inverse of (d\u00d79+8) mod 10, which is self-inverse):\nApply (d\u00d79+8) mod 10 to each digit of 72865434:\n7\u21921, 2\u21926, 8\u21920, 6\u21922, 5\u21923, 4\u21924, 3\u21925, 4\u21924 \u2192 **16023454**\n\n**Reverse Step 6** (divide by 9 mod 10\u2078; inverse of 9 is 88888889):\nSolve x\u00d79 \u2261 16023454 (mod 10\u2078) digit-by-digit \u2192 **24002606**\n*Verify: 24002606\u00d79 = 216023454, last 8 digits = 16023454 \u2713*\n\n**Reverse Step 5** (subtract 43041634 mod 10\u2078):\n24002606 \u2212 43041634 = \u221219039028 \u2192 **80960972**\n*Verify: 80960972+43041634 = 124002606, last 8 digits = 24002606 \u2713*\n\n**Reverse Step 4** (divide by 9 mod 10\u2078):\nSolve x\u00d79 \u2261 80960972 (mod 10\u2078) \u2192 **53440108**\n*Verify: 53440108\u00d79 = 480960972, last 8 digits = 80960972 \u2713*\n\n**Reverse Step 3** (divide by 21 mod 10\u2078; inverse of 21 is 83497148...):\nSolve x\u00d721 \u2261 53440108 (mod 10\u2078) \u2192 **83497148**\n*Verify: 83497148\u00d721 = 1753440108, last 8 digits = 53440108 \u2713*\n\n**Reverse Step 2** (inverse of digit-wise (d\u00d73) mod 10; inverse is (d\u00d77) mod 10):\nApply (d\u00d77) mod 10 to each digit of 83497148:\n8\u21926, 3\u21921, 4\u21928, 9\u21923, 7\u21929, 1\u21927, 4\u21928, 8\u21926 \u2192 **61839786**\n\n**Reverse Step 1** (rotate left by 5 \u2192 rotate right by 5, i.e., rotate left by 3):\n61839786 \u2192 move first 3 digits (618) to end \u2192 **39786618**\n\n## Verification (forward)\n39786618 \u2192 rotate left 5 \u2192 61839786 \u2192 \u00d73 digitwise \u2192 83497148 \u2192 \u00d721 \u2192 53440108 \u2192 \u00d79 \u2192 80960972 \u2192 +43041634 \u2192 24002606 \u2192 \u00d79 \u2192 16023454 \u2192 \u00d79+8 digitwise \u2192 72865434 \u2192 rotate left 3 \u2192 **65434728** \u2713\n\nFINAL: 39786618"
+    },
+    "exe-4-1": {
+     "correct": true,
+     "extracted": "2025",
+     "text": "Looking at this problem, I need to trace the program execution step by step.\n\n**Initial values:** v0=5, v1=23, v2=1, v3=28, v4=16\n\n**Key observations:**\n- v4 never changes (always 16)\n- Since 16 % 3 = 1, the condition `v4 % 3 == 1` is always true, so v1 increments by 2 each iteration\n\n**Tracing each iteration (i=1 to 18):**\n\n| i | v0 | v1 | v2 | v3 |\n|---|-----|-----|-----|-----|\n| 0 | 5 | 23 | 1 | 28 |\n| 1 | 33 | 25 | 51 | 2 |\n| 2 | 91 | 27 | 52 | 53 |\n| 3 | 209 | 29 | 134 | 55 |\n| 4 | 447 | 31 | 171 | 138 |\n| 5 | 925 | 33 | 293 | 176 |\n| 6 | 886 | 35 | 374 | 299 |\n| 7 | 810 | 37 | 544 | 381 |\n| 8 | 660 | 39 | 677 | 552 |\n| 9 | 362 | 41 | 903 | 686 |\n| 10 | 765 | 43 | 99 | 913 |\n| 11 | 576 | 45 | 389 | 110 |\n| 12 | 200 | 47 | 650 | 401 |\n| 13 | 447 | 49 | 15 | 663 |\n| 14 | 943 | 51 | 352 | 29 |\n| 15 | 940 | 53 | 794 | 367 |\n| 16 | 936 | 55 | 218 | 810 |\n| 17 | 930 | 57 | 748 | 235 |\n| 18 | 920 | 59 | 264 | 766 |\n\n**Final values:** v0=920, v1=59, v2=264, v3=766, v4=16\n\n**Sum:** 920 + 59 + 264 + 766 + 16 = 2025\n\nFINAL: 2025"
+    },
+    "inv-14-0": {
+     "correct": true,
+     "extracted": "17513303",
+     "text": "Looking at this problem, I need to reverse all 14 steps starting from the final result 16083238.\n\n## Working Backwards\n\n**Reverse Step 14** (swap pos 5,7): 16083238 \u2192 both positions have digit 3, so unchanged: **16083238**\n\n**Reverse Step 13** (subtract 69816705): 16083238 + 100000000 - 69816705 = **46266533**\n\n**Reverse Step 12** (multiply by 23\u207b\u00b9 mod 10\u2078 = 47826087): 46266533 \u00d7 47826087 mod 10\u2078 = **32446371**\n\n**Reverse Step 11** (reverse digits): 32446371 \u2192 **17364423**\n\n**Reverse Step 10** (subtract 82949377): 17364423 + 100000000 - 82949377 = **34415046**\n\n**Reverse Step 9** (multiply by 13\u207b\u00b9 mod 10\u2078 = 76923077): 34415046 \u00d7 76923077 mod 10\u2078 = **33416542**\n\n**Reverse Step 8** (subtract 97897206): 33416542 + 100000000 - 97897206 = **35519336**\n\n**Reverse Step 7** (inverse of d\u2192(3d+9)mod10: d=7(e+1)mod10):\n3\u21928, 5\u21922, 5\u21922, 1\u21924, 9\u21920, 3\u21928, 3\u21928, 6\u21929 \u2192 **82240889**\n\n**Reverse Step 6** (inverse of d\u2192(9d+8)mod10: d=9(e+2)mod10):\n8\u21920, 2\u21926, 2\u21926, 4\u21924, 0\u21928, 8\u21920, 8\u21920, 9\u21929 \u2192 **06648009**\n\n**Reverse Step 5** (reverse digits): 06648009 \u2192 **90084660**\n\n**Reverse Step 4** (reverse digits): 90084660 \u2192 **06648009**\n\n**Reverse Step 3** (swap pos 3,5): 06648009 \u2192 swap 6\u21948 \u2192 **06846009**\n\n**Reverse Step 2** (undo rotate left by 7 = rotate left by 1): 06846009 \u2192 **68460090**\n\n**Reverse Step 1** (inverse of d\u2192(7d+9)mod10: d=3(e+1)mod10):\n6\u21921, 8\u21927, 4\u21925, 6\u21921, 0\u21923, 0\u21923, 9\u21920, 0\u21923 \u2192 **17513303**\n\n## Verification\n\nForward check confirms: 17513303 \u2192(all 14 steps)\u2192 16083238 \u2713\n\nFINAL: 17513303"
+    },
+    "exe-6-0": {
+     "correct": true,
+     "extracted": "1446",
+     "text": "Looking at this problem, I need to trace the program execution through all 24 iterations of the loop (i from 1 to 24).\n\n**Initial values:** v0=27, v1=20, v2=25, v3=28, v4=11, v5=12\n\nI'll track the key operations each iteration:\n1. `v0 = (v0 + v4*i) % 997`\n2. `v0, v4 = v4, (v0 + i) % 997` (using updated v0 from step 1)\n3. `v5 = (v5*3 + v4) % 997`\n4. `v5 = (v5*5 + v1) % 997`\n5. If `v5 % 3 == 1`: `v3 = (v3 + 5) % 997`\n\nAfter carefully tracing all 24 iterations, tracking when v5%3==1 (which happens at i=2,3,4,5,7,9,13,15,17,22,23), I get the following final state:\n\n**After i=24:**\n- v0 = 206\n- v1 = 20 (unchanged throughout)\n- v2 = 25 (unchanged throughout)\n- v3 = 83 (updated 11 times: 28\u219233\u219238\u219243\u219248\u219253\u219258\u219263\u219268\u219273\u219278\u219283)\n- v4 = 437\n- v5 = 675\n\n**Final sum:** 206 + 20 + 25 + 83 + 437 + 675 = **1446**\n\nFINAL: 1446"
+    },
+    "inv-14-1": {
+     "correct": true,
+     "extracted": "35799633",
+     "text": "Looking at this problem, I need to reverse all 14 steps starting from the final result 79270622.\n\n## Working Backwards Step by Step\n\n**Reverse Step 14** (multiply by 17 \u2192 find inverse): Multiply by 17\u207b\u00b9 mod 10\u2078 = 5882353\n- 79270622 \u00d7 5882353 mod 10\u2078 = **81133566**\n\n**Reverse Step 13** (add 61727447 \u2192 subtract):\n- 81133566 \u2212 61727447 = **19406119**\n\n**Reverse Step 12** (swap pos 5,6 \u2192 swap again):\n- 19406119 \u2192 swap digits at positions 5,6 \u2192 **19401619**\n\n**Reverse Step 11** (transform d\u2192(9d+3)%10 \u2192 same transform, since it's self-inverse):\n- 19401619 \u2192 apply transform \u2192 **24932724**\n\n**Reverse Step 10** (rotate left 3 \u2192 rotate right 3):\n- 24932724 \u2192 rotate right by 3 \u2192 **72424932**\n\n**Reverse Step 9** (swap pos 1,7 \u2192 swap again):\n- 72424932 \u2192 swap positions 1,7 \u2192 **32424972**\n\n**Reverse Step 8** (reverse digits \u2192 reverse again):\n- 32424972 \u2192 reverse \u2192 **27942423**\n\n**Reverse Step 7** (multiply by 19 \u2192 multiply by 17\u207b\u00b9 = 52631579):\n- 27942423 \u00d7 52631579 mod 10\u2078 = **43575917**\n\n**Reverse Step 6** (reverse digits \u2192 reverse again):\n- 43575917 \u2192 reverse \u2192 **71957534**\n\n**Reverse Step 5** (add 36157901 \u2192 subtract):\n- 71957534 \u2212 36157901 = **35799633**\n\n**Reverse Step 4** (swap pos 2,3 \u2192 swap again):\n- 35799633 \u2192 swap \u2192 **37599633**\n\n**Reverse Step 3** (swap pos 2,3 \u2192 swap again):\n- 37599633 \u2192 swap \u2192 **35799633**\n\n**Reverse Step 2** (reverse digits \u2192 reverse again):\n- 35799633 \u2192 reverse \u2192 **33699753**\n\n**Reverse Step 1** (reverse digits \u2192 reverse again):\n- 33699753 \u2192 reverse \u2192 **35799633**\n\n## Verification (Forward)\nStarting with 35799633 and applying all 14 steps confirms the final result is 79270622. \u2713\n\nFINAL: 35799633"
+    },
+    "exe-6-1": {
+     "correct": true,
+     "extracted": "2768",
+     "text": "Looking at this problem, I need to trace through the Python program exactly, executing each line of the loop body for i = 1 to 24.\n\n**Key observation:** Python evaluates all right-hand sides before assignments on each line, so simultaneous swaps work correctly.\n\nI'll track the state (v0, v1, v2, v3, v4, v5) after each iteration:\n\nStarting: (16, 19, 11, 17, 15, 12)\n\nAfter carefully tracing each iteration through all 5 lines:\n\n| i | v0 | v1 | v2 | v3 | v4 | v5 |\n|---|-----|-----|-----|-----|-----|-----|\n| 0 | 16 | 19 | 11 | 17 | 15 | 12 |\n| 1 | 11 | 16 | 17 | 30 | 13 | 19 |\n| 2 | 17 | 15 | 30 | 53 | 21 | 16 |\n| 3 | 30 | 24 | 53 | 71 | 19 | 15 |\n| 4 | 53 | 23 | 71 | 98 | 19 | 24 |\n| 5 | 71 | 24 | 98 | 183 | 29 | 23 |\n| 6 | 98 | 35 | 183 | 221 | 29 | 24 |\n| 7 | 183 | 36 | 221 | 280 | 31 | 35 |\n| 8 | 221 | 39 | 280 | 479 | 43 | 36 |\n| 9 | 280 | 52 | 479 | 563 | 45 | 39 |\n| 10 | 479 | 55 | 563 | 690 | 49 | 52 |\n| 11 | 563 | 60 | 690 | 76 | 63 | 55 |\n| 12 | 690 | 75 | 76 | 250 | 67 | 60 |\n| 13 | 76 | 80 | 250 | 499 | 73 | 75 |\n| 14 | 250 | 87 | 499 | 157 | 89 | 80 |\n| 15 | 499 | 104 | 157 | 483 | 95 | 87 |\n| 16 | 157 | 111 | 483 | 926 | 103 | 104 |\n| 17 | 483 | 120 | 926 | 962 | 121 | 111 |\n| 18 | 926 | 139 | 523 | 962 | 129 | 120 |\n| 19 | 523 | 148 | 962 | 253 | 139 | 139 |\n| 20 | 962 | 159 | 253 | 352 | 159 | 148 |\n| 21 | 253 | 180 | 352 | 124 | 169 | 159 |\n| 22 | 352 | 191 | 124 | 804 | 181 | 180 |\n| 23 | 124 | 204 | 804 | 550 | 203 | 191 |\n| 24 | **804** | **227** | **550** | **768** | **215** | **204** |\n\n**Final sum:** 804 + 227 + 550 + 768 + 215 + 204 = **2768**\n\nFINAL: 2768"
+    },
+    "inv-22-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-0": {
+     "correct": true,
+     "extracted": "2166",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 30, carefully tracking all variable updates.\n\n**Initial values:** v0=28, v1=17, v2=15, v3=5, v4=14, v5=2, v6=4\n\nI'll trace each iteration, noting the key operations:\n- Step 1: simultaneous swap `v0, v1 = v1, (v0+i)%997`\n- Step 2: `v1 = (v1 + v4*i) % 997`\n- Step 3: `v4 = (v4*2 + v2) % 997`\n- Step 4: `v0 = (v0*2 + v6) % 997`\n- Step 5: `v6 = (v6 + v1*i) % 997`\n- Step 6: `v5 = (v5*5 + v0) % 997`\n\nAfter carefully computing all 30 iterations (verified at multiple checkpoints), the final state is:\n\n| Variable | Final Value |\n|----------|-------------|\n| v0 | 90 |\n| v1 | 411 |\n| v2 | 15 |\n| v3 | 5 |\n| v4 | 508 |\n| v5 | 145 |\n| v6 | 992 |\n\n**Verification of key steps at i=30:**\n- v0,v1 swap: v0=729, v1=(962+30)%997=992\n- v1=(992+745\u00d730)%997=(992+22350)%997=23342%997=411\n- v4=(745\u00d72+15)%997=1505%997=508\n- v0=(729\u00d72+626)%997=2084%997=90\n- v6=(626+411\u00d730)%997=12956%997=992\n- v5=(11\u00d75+90)%997=145\n\n**Final sum:** 90 + 411 + 15 + 5 + 508 + 145 + 992 = **2166**\n\nFINAL: 2166"
+    },
+    "inv-22-1": {
+     "correct": true,
+     "extracted": "14126023",
+     "text": "Looking at this problem, I need to reverse all 22 steps starting from the final result 72246771.\n\n## Working Backwards Step by Step\n\n**Reverse Step 22** (swap pos 2,5): 72246771 \u2192 **76242771**\n\n**Reverse Step 21** (swap pos 4,8): 76242771 \u2192 **76212774**\n\n**Reverse Step 20** (swap pos 1,6): both digits are 7, so \u2192 **76212774**\n\n**Reverse Step 19** (\u00d79 mod 10\u2078): Multiply by 88888889 (inverse of 9): 76212774 \u00d7 88888889 mod 10\u2078 = **08468086**\n\n**Reverse Step 18** (rotate left 1): Rotate right 1: 08468086 \u2192 **60846808**\n\n**Reverse Step 17** (swap pos 4,7): 60846808 \u2192 **60806848**\n\n**Reverse Step 16** (swap pos 4,5): 60806848 \u2192 **60860848**\n\n**Reverse Step 15** (d\u2192(7d+7)mod10): Inverse is e\u2192(3e+9)mod10: 60860848 \u2192 **79379313**\n\n**Reverse Step 14** (d\u2192(9d+9)mod10): Inverse is e\u2192(9e+9)mod10: 79379313 \u2192 **20620686**\n\n**Reverse Step 13** (\u00d719 mod 10\u2078): Multiply by 52631579: 20620686 \u00d7 52631579 mod 10\u2078 = **64243194**\n\n**Reverse Step 12** (\u00d727 mod 10\u2078): Multiply by 62962963: 64243194 \u00d7 62962963 mod 10\u2078 = **46823822**\n\n**Reverse Step 11** (d\u21929d mod10): Self-inverse: 46823822 \u2192 **64287288**\n\n**Reverse Step 10** (+35865363): Subtract: 64287288 \u2212 35865363 = **28421925**\n\n**Reverse Step 9** (\u00d73 mod 10\u2078): Multiply by 66666667: 28421925 \u00d7 66666667 mod 10\u2078 = **09473975**\n\n**Reverse Step 8** (+59905321): Subtract: 9473975 \u2212 59905321 mod 10\u2078 = **49568654**\n\n**Reverse Step 7** (reverse digits): 49568654 \u2192 **45686594**\n\n**Reverse Step 6** (swap pos 1,8): Both are 4, unchanged \u2192 **45686594**\n\n**Reverse Step 5** (d\u2192(7d+9)mod10): Inverse is e\u2192(3e+3)mod10: 45686594 \u2192 **58171805**\n\n**Reverse Step 4** (reverse digits): 58171805 \u2192 **50817185**\n\n**Reverse Step 3** (swap pos 1,5): 50817185 \u2192 **70815185**\n\n**Reverse Step 2** (+57689161): Subtract: 70815185 \u2212 57689161 = **13126024**\n\n**Reverse Step 1** (swap pos 2,8): 13126024 \u2192 **14126023**\n\n## Verification\n\nForward check confirms: 14126023 \u2192 (all 22 steps) \u2192 72246771 \u2713\n\nFINAL: 14126023"
+    },
+    "exe-8-1": {
+     "correct": true,
+     "extracted": "2725",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 30, carefully tracking all variable changes.\n\n**Initial values:** v0=5, v1=25, v2=3, v3=28, v4=18, v5=6, v6=6\n\nI'll trace each iteration, noting the key operations:\n- Step 1: v2 = (v2*2 + v3) % 997\n- Step 2: if v4%3==2, v0 += 8\n- Step 3: swap v1\u2194v4, with v4 = (old_v1 + i) % 997\n- Step 4: v2 = (v2 + v6*i) % 997\n- Step 5: v5 = (v5*2 + v0) % 997\n- Step 6: v3 = (v3*5 + v1) % 997\n\nAfter carefully tracing all 30 iterations (verifying key checkpoints at i=4, i=14, i=20, i=28):\n\n**Final state after i=30:**\n- v0 = 125\n- v1 = 250\n- v2 = 780\n- v3 = 443\n- v4 = 258\n- v5 = 863\n- v6 = 6\n\n**Sum calculation:**\n125 + 250 + 780 + 443 + 258 + 863 + 6 = 2725\n\nFINAL: 2725"
+    },
+    "inv-32-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-0": {
+     "correct": true,
+     "extracted": "2784",
+     "text": "Looking at this problem, I need to trace through 36 iterations of the loop, carefully tracking all variable assignments.\n\n**Key observations:**\n- v2=7 and v4=1 never change (never assigned in the loop)\n- v4%3 = 1%3 = 1, so the condition `v4 % 3 == 2` is NEVER true \u2192 that branch never executes\n- The `v0 % 3 == 1` condition triggers periodically and adds 7 to v7\n\n**Tracing through all 36 iterations** (showing state after each):\n\n| i | v0 | v1 | v3 | v5 | v6 | v7 |\n|---|-----|-----|-----|-----|-----|-----|\n| 0 | 21 | 26 | 20 | 26 | 20 | 2 |\n| 1 | 20 | 21 | 48 | 47 | 22 | 23 |\n| 2 | 22 | 50 | 65 | 87 | 22 | 123 |\n| 3 | 22 | 68 | 125 | 153 | 25 | 334 |\n| ... | ... | ... | ... | ... | ... | ... |\n| 35 | 326 | 23 | 698 | 116 | 345 | 851 |\n| **36** | **345** | **734** | **94** | **885** | **362** | **356** |\n\nAfter carefully executing all steps (each involving modular arithmetic with %997), the final values are:\n\n- v0 = 345\n- v1 = 734  \n- v2 = 7\n- v3 = 94\n- v4 = 1\n- v5 = 885\n- v6 = 362\n- v7 = 356\n\n**Final sum:** 345 + 734 + 7 + 94 + 1 + 885 + 362 + 356 = **2784**\n\nFINAL: 2784"
+    },
+    "inv-32-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-1": {
+     "correct": true,
+     "extracted": "1943",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 36, tracking how v0, v2, v4, and v5 change (v1=11, v3=28, v6=7, v7=25 remain constant).\n\n**Key observations:**\n- v7 = 25, so v7 % 3 = 1, meaning neither conditional branch ever executes\n- The simultaneous assignment `v2, v0 = v0, (v2 + i) % 997` uses the *updated* v2 from step 1\n\n**Tracing each iteration** (tracking v0, v2, v4, v5):\n\n| i | v0 | v2 | v4 | v5 |\n|---|-----|-----|-----|-----|\n| 0 | 7 | 19 | 5 | 13 |\n| 1 | 124 | 7 | 30 | 147 |\n| 2 | 65 | 124 | 80 | 540 |\n| 3 | 651 | 65 | 155 | 582 |\n| 4 | 357 | 651 | 255 | 155 |\n| 5 | 297 | 357 | 380 | 73 |\n| 6 | 822 | 297 | 530 | 500 |\n| 7 | 523 | 822 | 705 | 85 |\n| 8 | 158 | 523 | 905 | 273 |\n| 9 | 658 | 158 | 133 | 559 |\n| 10 | 828 | 658 | 383 | 878 |\n| 11 | 338 | 828 | 658 | 580 |\n| 12 | 192 | 338 | 958 | 144 |\n| 13 | 734 | 192 | 286 | 372 |\n| 14 | 5 | 734 | 636 | 311 |\n| 15 | 722 | 5 | 14 | 401 |\n| 16 | 69 | 722 | 414 | 57 |\n| 17 | 664 | 69 | 839 | 408 |\n| 18 | 391 | 664 | 292 | 780 |\n| 19 | 376 | 391 | 767 | 415 |\n| 20 | 9 | 376 | 270 | 706 |\n| 21 | 932 | 9 | 795 | 628 |\n| 22 | 95 | 932 | 348 | 898 |\n| 23 | 723 | 95 | 923 | 710 |\n| 24 | 527 | 723 | 526 | 977 |\n| 25 | 677 | 527 | 154 | 859 |\n| 26 | 695 | 677 | 804 | 929 |\n| 27 | 449 | 695 | 482 | 935 |\n| 28 | 540 | 449 | 185 | 351 |\n| 29 | 308 | 540 | 910 | 896 |\n| 30 | 764 | 308 | 663 | 817 |\n| 31 | 602 | 764 | 441 | 530 |\n| 32 | 889 | 602 | 244 | 207 |\n| 33 | 80 | 889 | 72 | 571 |\n| 34 | 519 | 80 | 922 | 876 |\n| 35 | 463 | 519 | 800 | 641 |\n| 36 | **665** | **463** | **703** | **41** |\n\n**Final values:**\nv0=665, v1=11, v2=463, v3=28, v4=703, v5=41, v6=7, v7=25\n\n**Sum** = 665 + 11 + 463 + 28 + 703 + 41 + 7 + 25 = **1943**\n\nFINAL: 1943"
+    },
+    "inv-45-0": {
+     "correct": true,
+     "extracted": "66990326",
+     "text": "Looking at this problem, I need to reverse all 45 transformations starting from the final result 13715443.\n\n## Working Backwards\n\n**Step 45** (rotate left by 2 \u2192 reverse: rotate right by 2): 13715443 \u2192 **43137154**\n\n**Step 44** (\u00d723 \u2192 multiply by 23\u207b\u00b9 mod 10\u2078 = 47826087): 43137154 \u00d7 47826087 mod 10\u2078 = **80136398**\n\n**Step 43** (reverse \u2192 reverse): 80136398 \u2192 **89363108**\n\n**Step 42** (+21680938 \u2192 subtract): 89363108 \u2212 21680938 = **67682170**\n\n**Step 41** (rotate left 3 \u2192 rotate right 3): 67682170 \u2192 **17067682**\n\n**Step 40** (swap pos 2,3 \u2192 swap again): 17067682 \u2192 **10767682**\n\n**Step 39** (d\u2192(7d+6)%10 \u2192 inverse d\u2192(3e+2)%10): 10767682 \u2192 **52303068**\n\n**Step 38** (+99992679 \u2192 subtract): 52303068 \u2212 99992679 mod 10\u2078 = **52310389**\n\n**Step 37** (+65368021 \u2192 subtract): 52310389 \u2212 65368021 mod 10\u2078 = **86942368**\n\n**Step 36** (swap pos 2,6 \u2192 swap again): 86942368 \u2192 **83942668**\n\n**Step 35** (\u00d711 \u2192 \u00d790909091): 83942668 \u00d7 90909091 mod 10\u2078 = **43994788**\n\n**Step 34** (d\u2192(3d+6)%10 \u2192 inverse d\u2192(7e+8)%10): 43994788 \u2192 **69116744**\n\n**Step 33** (rotate left 1 \u2192 rotate right 1): 69116744 \u2192 **46911674**\n\n**Step 32** (reverse \u2192 reverse): 46911674 \u2192 **47611964**\n\n**Step 31** (rotate left 6 \u2192 rotate right 6): 47611964 \u2192 **61196447**\n\n**Step 30** (\u00d727 \u2192 \u00d762962963): 61196447 \u00d7 62962963 mod 10\u2078 = **28192461**\n\n**Step 29** (\u00d77 \u2192 \u00d742857143): 28192461 \u00d7 42857143 mod 10\u2078 = **32598923**\n\n**Step 28** (reverse \u2192 reverse): 32598923 \u2192 **32989523**\n\n**Step 27** (\u00d723 \u2192 \u00d747826087): 32989523 \u00d7 47826087 mod 10\u2078 = **97086501**\n\n**Step 26** (\u221276734145): 97086501 \u2212 76734145 = **20352356**\n\n**Step 25** (\u221263339141): 20352356 \u2212 63339141 mod 10\u2078 = **57013215**\n\n**Step 24** (\u221235952379): 57013215 \u2212 35952379 = **21060836**\n\n**Step 23** (rotate left 6 \u2192 rotate right 6): 21060836 \u2192 **06083621**\n\n**Step 22** (rotate left 2 \u2192 rotate right 2): 06083621 \u2192 **21060836**\n\n**Step 21** (reverse \u2192 reverse): 21060836 \u2192 **63806012**\n\n**Step 20** (\u221242841382): 63806012 \u2212 42841382 = **20964630**\n\n**Step 19** (d\u2192(9d)%10 \u2192 self-inverse): 20964630 \u2192 **80146470**\n\n**Step 18** (\u221277046266): 80146470 \u2212 77046266 = **03100204**\n\n**Step 17** (rotate left 3 \u2192 rotate right 3): 03100204 \u2192 **20403100**\n\n**Step 16** (swap pos 4,7 \u2192 swap again): 20403100 \u2192 **20403100**\n\n**Step 15** (\u00d79 \u2192 \u00d788888889): 20403100 \u00d7 88888889 mod 10\u2078 = **91155900**\n\n**Step 14** (\u00d713 \u2192 \u00d776923077): 91155900 \u00d7 76923077 mod 10\u2078 = **14704300**\n\n**Step 13** (reverse \u2192 reverse): 14704300 \u2192 **00340741**\n\n**Step 12** (d\u2192(3d+1)%10 \u2192 inverse d\u2192(7e+3)%10): 00340741 \u2192 **33413210**\n\n**Step 11** (d\u2192(9d+1)%10 \u2192 inverse d\u2192(9e+1)%10): 33413210 \u2192 **88708901**\n\n**Step 10** (swap pos 2,5 \u2192 swap again): 88708901 \u2192 **88708901**\n\n**Step 9** (swap pos 2,8 \u2192 swap again): 88708901 \u2192 **81708908**\n\n**Step 8** (rotate left 3 \u2192 rotate right 3): 81708908 \u2192 **90881708**\n\n**Step 7** (swap pos 1,5 \u2192 swap again): 90881708 \u2192 **10889708**\n\n**Step 6** (\u221231344411): 10889708 \u2212 31344411 mod 10\u2078 = **79545297**\n\n**Step 5** (reverse \u2192 reverse): 79545297 \u2192 **79254597**\n\n**Step 4** (rotate left 1 \u2192 rotate right 1): 79254597 \u2192 **77925459**\n\n**Step 3** (\u00d711 \u2192 \u00d790909091): 77925459 \u00d7 90909091 mod 10\u2078 = **43447769**\n\n**Step 2** (reverse \u2192 reverse): 43447769 \u2192 **96774434**\n\n**Step 1** (\u221229784108): 96774434 \u2212 29784108 = **66990326**\n\n## Verification\nForward check confirms: 66990326 \u2192 ... \u2192 13715443 \u2713\n\nFINAL: 66990326"
+    },
+    "exe-12-0": {
+     "correct": false,
+     "extracted": "3136",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 42, carefully tracking all variable changes.\n\n**Initial values:** v0=7, v1=21, v2=15, v3=19, v4=18, v5=14, v6=4, v7=16, v8=14\n\nI traced through each iteration, applying the operations in order:\n1. v8 = (v8 * 3 + v3) % 997\n2. v2, v7 = v7, (v2 + i) % 997 (simultaneous assignment)\n3. v0 = (v0 + v1 * i) % 997\n4. v0 = (v0 + v2 * i) % 997 (using updated v2)\n5. If v5 % 3 == 1: v7 = (v7 + 7) % 997\n6. v8 = (v8 * 5 + v0) % 997\n7. v5 = (v5 * 5 + v0) % 997\n8. If v7 % 3 == 1: v5 = (v5 + 2) % 997\n\nAfter carefully computing all 42 iterations and verifying key checkpoints (including double-condition triggers at i=12, i=24, i=33, etc.), the final values are:\n\n**v0=484, v1=21, v2=477, v3=19, v4=18, v5=918, v6=4, v7=520, v8=675**\n\nSum = 484 + 21 + 477 + 19 + 18 + 918 + 4 + 520 + 675 = 3136\n\nFINAL: 3136"
+    },
+    "inv-45-1": {
+     "correct": true,
+     "extracted": "13599292",
+     "text": "Looking at this problem, I need to reverse all 45 transformations starting from the final result 27200582.\n\n**Working backwards through each step:**\n\n| Step | Operation to Reverse | Result |\n|------|---------------------|--------|\n| 45 | Swap pos 3,5 (self-inverse) on 27200582 | 27002582 |\n| 44 | Inverse of (d\u00d77) mod 10 \u2192 (d\u00d73) mod 10 | 61006546 |\n| 43 | \u00d713\u207b\u00b9 mod 10\u2078 (inverse=76923077) | 35462042 |\n| 42 | Reverse digits | 24026453 |\n| 41 | Subtract 31183567 | 92842886 |\n| 40 | Subtract 79647931 | 13194955 |\n| 39 | \u00d79\u207b\u00b9 mod 10\u2078 (inverse=88888889) | 90354995 |\n| 38 | Inverse of (7d+8): apply (3d+6) mod 10 | 36518331 |\n| 37 | Reverse digits | 13381563 |\n| 36 | Rotate left 4 (self-inverse) | 15631338 |\n| 35 | Subtract 59754729 | 55876609 |\n| 34 | Inverse of (7d+8): (3d+6) mod 10 | 11074463 |\n| 33 | Reverse digits | 36447011 |\n| 32 | Swap pos 2,6 | 30447611 |\n| 31 | Swap pos 5,7 | 30441671 |\n| 30 | \u00d711\u207b\u00b9 mod 10\u2078 (inverse=90909091) | 39131061 |\n| 29 | Swap pos 3,6 | 39031161 |\n| 28 | Subtract 26855197 | 12175964 |\n| 27 | Inverse of (7d+7): (3d+9) mod 10 | 25204671 |\n| 26 | Subtract 57556523 | 67648148 |\n| 25 | Swap pos 4,6 | 67618448 |\n| 24 | Inverse of (7d+1): (3d\u22123) mod 10 | 58501991 |\n| 23 | \u00d77\u207b\u00b9 mod 10\u2078 (inverse=42857143) | 94071713 |\n| 22 | Inverse of (7d): (3d) mod 10 | 72013139 |\n| 21 | \u00d727\u207b\u00b9 mod 10\u2078 (inverse=62962963) | 06370857 |\n| 20 | Swap pos 1,8 | 76370850 |\n| 19 | Subtract 7282986 | 69087864 |\n| 18 | Inverse of (3d+7): (7d+1) mod 10 | 34170739 |\n| 17 | Rotate left 4 (self-inverse) | 07393417 |\n| 16 | Swap pos 2,8 (no change) | 07393417 |\n| 15 | Swap pos 1,4 | 97303417 |\n| 14 | Swap pos 1,3 | 37903417 |\n| 13 | Reverse digits | 71430973 |\n| 12 | \u00d79\u207b\u00b9 mod 10\u2078 (inverse=88888889) | 30158997 |\n| 11 | Inverse of (3d+8): (7d+4) mod 10 | 54190773 |\n| 10 | Inverse of (3d): (7d) mod 10 | 58730991 |\n| 9 | Inverse of (3d+3): (7d+9) mod 10 | 45809226 |\n| 8 | Swap pos 5,8 | 45806229 |\n| 7 | Subtract 52516861 | 93289368 |\n| 6 | Swap pos 4,7 | 93269388 |\n| 5 | Inverse of (7d): (3d) mod 10 | 79687944 |\n| 4 | Subtract 44593956 | 35093988 |\n| 3 | Subtract 11494697 | 23599291 |\n| 2 | Swap pos 4,7 (no change) | 23599291 |\n| 1 | Swap pos 1,8 | **13599292** |\n\n**Verification:** Applying all 45 forward steps to 13599292 produces 27200582 \u2713\n\nFINAL: 13599292"
+    },
+    "exe-12-1": {
+     "correct": true,
+     "extracted": "1848",
+     "text": "Looking at this problem, I need to trace through 42 iterations of the loop carefully.\n\n**Key observations first:**\n- v5 = 13 and v6 = 8 never change (they're never reassigned in the loop)\n- v5 % 3 = 1, so `if v5 % 3 == 2` is never true\n- v6 % 3 = 2, so `if v6 % 3 == 0` and `if v6 % 3 == 1` are never true\n- Therefore v1 = 9, v2 = 22 never change\n- v0 only changes when v4_temp % 3 == 2 (adding 5 each time)\n\n**Tracing the loop** (tracking v0, v3, v4, v7, v8 through each iteration):\n\nI systematically computed all 42 iterations. The critical variable v4_temp = (v4 + 13*i) % 997 determines when v0 increments.\n\nv0 changes at iterations: i=2,3,4,8,9,10,14,15,18,23,25,32,36,37 (14 times total)\nSo v0 = 10 + 14\u00d75 = 80\n\n**Final state after i=42:**\n- v0 = 80\n- v1 = 9  \n- v2 = 22\n- v3 = 492\n- v4 = 201\n- v5 = 13\n- v6 = 8\n- v7 = 479\n- v8 = 544\n\n**Verification of key steps:**\n- i=42: v4_temp = (901 + 546) % 997 = 450, v4_new = 201, v3_new = 492, v7 = (513\u00d72+450)%997 = 479, v8 = (487\u00d73+80)%997 = 544 \u2713\n\n**Final sum:**\n80 + 9 + 22 + 492 + 201 + 13 + 8 + 479 + 544 = **1848**\n\nFINAL: 1848"
+    }
+   }
+  },
+  "dots-studio/dots-3-note-preview:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": true,
+     "extracted": "59202020",
+     "text": "\n\nWe work backwards from the final result 08171705.\n\n**Step 4 reverse:** The forward step replaces each digit \\(d\\) with \\((d \\times 9 + 3) \\bmod 10\\). To reverse, for each digit \\(d'\\) we need \\(d\\) such that \\((d \\times 9 + 3) \\equiv d' \\pmod{10}\\). Since \\(9 \\equiv -1\\), this gives \\(-d + 3 \\equiv d'\\) so \\(d \\equiv 3 - d' \\pmod{10}\\).  \nApply to 0 8 1 7 1 7 0 5:\n- 0 \u2192 3\n- 8 \u2192 5\n- 1 \u2192 2\n- 7 \u2192 6\n- 1 \u2192 2\n- 7 \u2192 6\n- 0 \u2192 3\n- 5 \u2192 8  \nResult after step 3: **35262638**.\n\n**Step 3 reverse:** Step 3 rotates an 8-digit string left by 6 positions. To reverse, rotate right by 6 (equivalently left by 2).  \nTake 35262638, move the first two digits \"35\" to the end: 26263835.  \nResult after step 2: **26263835**.\n\n**Step 2 reverse:** Step 2 multiplies by 13 and keeps the last 8 digits (modulo \\(10^8\\)). We need \\(x\\) such that \\(13x \\equiv 26263835 \\pmod{10^8}\\).  \nSince \\(\\gcd(13,10^8)=1\\), 13 has a modular inverse. Notice \\(26263835 = 13 \\times 2020295\\), so \\(x = 2020295\\) is a solution. Because \\(0 \\le x < 10^8\\), this is the unique 8-digit value. Written with leading zeros to 8 digits: **02020295**.  \nResult after step 1: **02020295**.\n\n**Step 1 reverse:** Step 1 writes the original 8-digit number (no leading zero) and reverses its digits. So the original is the reverse of 02020295, which is **59202020**. This has no leading zero and is 8 digits.\n\nCheck forward:  \n59202020 \u2192 reverse \u2192 02020295 \u2192 \u00d713 = 26263835 \u2192 rotate left 6 \u2192 35262638 \u2192 digit map \u2192 08171705. Correct.\n\nFINAL: 59202020"
+    },
+    "exe-2-0": {
+     "correct": true,
+     "extracted": "308",
+     "text": "\n\nFINAL: 308"
+    },
+    "inv-4-1": {
+     "correct": true,
+     "extracted": "92898498",
+     "text": "\n\nWe work backwards from the final result 47877633.\n\n**Step 4:** Write as 8 digits and reverse the digit order.  \nThe number before step 4 is the reverse of 47877633.  \n47877633 digits: 4,7,8,7,7,6,3,3 \u2192 reversed: 3,3,6,7,7,8,7,4 = 33677874.  \nSo the output of step 3 is 33677874.\n\n**Step 3:** Multiply by 13, keep the last 8 digits.  \nWe need an 8\u2011digit number \\(X\\) such that \\(13X \\equiv 33677874 \\pmod{100000000}\\).  \nSince \\(\\gcd(13,100000000)=1\\), 13 has a modular inverse. Using the extended Euclidean algorithm:  \n\\(100000000 = 13 \\times 7692307 + 9\\)  \n\\(13 = 9 \\times 1 + 4\\)  \n\\(9 = 4 \\times 2 + 1\\)  \nBack\u2011substituting gives \\(1 = 3 \\times 100000000 - 13 \\times 23076923\\), so the inverse of 13 is \\(-23076923 \\equiv 76923077 \\pmod{100000000}\\).  \nThen \\(X \\equiv 33677874 \\times 76923077 \\pmod{100000000}\\).  \nAlternatively, solve \\(13X = 33677874 + 100000000k\\). Modulo 13, \\(33677874 \\equiv 9\\) and \\(100000000 \\equiv 9\\), so \\(9 + 9k \\equiv 0 \\Rightarrow k \\equiv 12 \\pmod{13}\\).  \nTaking \\(k=12\\): \\(X = (33677874 + 1200000000)/13 = 1233677874/13 = 94898298\\).  \nThus the output of step 2 is 94898298.\n\n**Step 2:** Write as 8 digits and reverse the digit order.  \nThe number before step 2 is the reverse of 94898298.  \n94898298 digits: 9,4,8,9,8,2,9,8 \u2192 reversed: 8,9,2,8,9,8,4,9 = 89289849.  \nSo the output of step 1 is 89289849.\n\n**Step 1:** Write as 8 digits and rotate left by 7 positions.  \nRotating left by 7 on an 8\u2011digit number moves the last digit to the front and shifts the first 7 digits right.  \nLet the original number be \\(N = a_1a_2a_3a_4a_5a_6a_7a_8\\). Then after step 1 we get \\(a_8a_1a_2a_3a_4a_5a_6a_7 = 89289849\\).  \nMatching digits:  \n\\(a_8 = 8\\)  \n\\(a_1 = 9\\)  \n\\(a_2 = 2\\)  \n\\(a_3 = 8\\)  \n\\(a_4 = 9\\)  \n\\(a_5 = 8\\)  \n\\(a_6 = 4\\)  \n\\(a_7 = 9\\)  \nSo \\(N = 92898498\\).\n\n**Forward check:**  \n\\(N = 92898498\\)  \nStep 1: rotate left 7 \u2192 89289849  \nStep 2: reverse \u2192 94898298  \nStep 3: \\(94898298 \\times 13 = 1233677874\\), last 8 digits = 33677874  \nStep 4: reverse \u2192 47877633.  \nMatches the given final result.\n\nFINAL: 92898498"
+    },
+    "exe-2-1": {
+     "correct": true,
+     "extracted": "576",
+     "text": "\n\nFINAL: 576"
+    },
+    "inv-8-0": {
+     "correct": true,
+     "extracted": "16442211",
+     "text": "\n\nFINAL: 16442211"
+    },
+    "exe-4-0": {
+     "correct": true,
+     "extracted": "720",
+     "text": "\n\nFINAL: 720"
+    },
+    "inv-8-1": {
+     "correct": true,
+     "extracted": "39786618",
+     "text": "\n\nFINAL: 39786618"
+    },
+    "exe-4-1": {
+     "correct": true,
+     "extracted": "2025",
+     "text": "\n\nFINAL: 2025"
+    },
+    "inv-14-0": {
+     "correct": true,
+     "extracted": "17513303",
+     "text": "\n\nThe original 8-digit number is recovered by reversing the 14 steps in order. Working backwards from the final result 16083238:\n\n- Step 14 inverse: swap positions 5 and 7 (both are 3, so no change) \u2192 16083238\n- Step 13 inverse: subtract 69816705 mod 100000000 \u2192 46266533\n- Step 12 inverse: multiply by modular inverse of 23 mod 100000000 (which is 47826087) \u2192 32446371\n- Step 11 inverse: reverse digits \u2192 17364423\n- Step 10 inverse: subtract 82949377 mod 100000000 \u2192 34415046\n- Step 9 inverse: multiply by modular inverse of 13 mod 100000000 (which is 76923077) \u2192 33416542\n- Step 8 inverse: subtract 97897206 mod 100000000 \u2192 35519336\n- Step 7 inverse: apply inverse digit mapping d = 7(y+1) mod 10 \u2192 82240889\n- Step 6 inverse: apply inverse digit mapping d = (9y+8) mod 10 \u2192 06648009\n- Steps 5 and 4 inverse: two consecutive reversals cancel \u2192 06648009\n- Step 3 inverse: swap positions 3 and 5 \u2192 06846009\n- Step 2 inverse: rotate right by 7 (or left by 1) \u2192 68460090\n- Step 1 inverse: apply inverse digit mapping d = 3(y+1) mod 10 \u2192 17513303\n\nThe forward application of all steps on 17513303 yields 16083238, confirming the result.\n\nFINAL: 17513303"
+    },
+    "exe-6-0": {
+     "correct": true,
+     "extracted": "1446",
+     "text": "\n\nI'll trace through the program step by step.\n\n**Initial values:** v0=27, v1=20, v2=25, v3=28, v4=11, v5=12\n\nThe loop runs for i = 1 to 24. Each iteration:\n1. v0 = (v0 + v4*i) % 997\n2. swap v0,v4 with v4 = (old_v0 + i) % 997\n3. v5 = (v5*3 + v4) % 997\n4. v5 = (v5*5 + v1) % 997\n5. if v5%3 == 1: v3 += 5\n\nTracing each iteration (I'll summarize the key results):\n\n| i | v0 | v4 | v5 | v3 |\n|---|---|---|---|---|\n| 1 | 11 | 39 | 395 | 28 |\n| 2 | 39 | 91 | 418 | 33 |\n| 3 | 91 | 315 | 886 | 38 |\n| 4 | 315 | 358 | 145 | 43 |\n| 5 | 358 | 116 | 781 | 48 |\n| 6 | 116 | 63 | 86 | 48 |\n| 7 | 63 | 564 | 142 | 53 |\n| 8 | 564 | 595 | 140 | 53 |\n| 9 | 595 | 943 | 853 | 58 |\n| 10 | 943 | 65 | 179 | 58 |\n| 11 | 65 | 672 | 83 | 58 |\n| 12 | 672 | 165 | 96 | 58 |\n| 13 | 165 | 836 | 655 | 63 |\n| 14 | 836 | 916 | 467 | 63 |\n| 15 | 916 | 633 | 220 | 68 |\n| 16 | 633 | 93 | 794 | 68 |\n| 17 | 93 | 237 | 154 | 73 |\n| 18 | 237 | 389 | 287 | 73 |\n| 19 | 389 | 668 | 686 | 73 |\n| 20 | 668 | 808 | 392 | 73 |\n| 21 | 808 | 708 | 467 | 73 |\n| 22 | 708 | 454 | 322 | 78 |\n| 23 | 454 | 206 | 895 | 83 |\n| 24 | 206 | 437 | 675 | 83 |\n\n**Final values:** v0=206, v1=20, v2=25, v3=83, v4=437, v5=675\n\nSum = 206 + 20 + 25 + 83 + 437 + 675 = 1446\n\nFINAL: 1446"
+    },
+    "inv-14-1": {
+     "correct": true,
+     "extracted": "35799633",
+     "text": "\n\nThe original 8-digit number is recovered by reversing each step in reverse order. Starting from the final result 79270622, we apply the inverse operations:\n\n- Step 14 (multiply by 17): inverse is multiply by 5882353 modulo 100000000 \u2192 81133566\n- Step 13 (add 61727447): subtract \u2192 19406119\n- Step 12 (swap positions 5 and 6): swap back \u2192 19401619\n- Step 11 (digit map d\u2192(9d+3) mod 10): apply same map \u2192 24932724\n- Step 10 (rotate left by 3): rotate right by 3 \u2192 72424932\n- Step 9 (swap positions 1 and 7): swap back \u2192 32424972\n- Step 8 (reverse digits): reverse \u2192 27942423\n- Step 7 (multiply by 19): multiply by 52631579 modulo 100000000 \u2192 43575917\n- Step 6 (reverse digits): reverse \u2192 71957534\n- Step 5 (add 36157901): subtract \u2192 35799633\n- Step 4 (swap positions 2 and 3): swap back \u2192 37599633\n- Step 3 (swap positions 2 and 3): swap back \u2192 35799633\n- Step 2 (reverse digits): reverse \u2192 33699753\n- Step 1 (reverse digits): reverse \u2192 35799633\n\nThe original number is 35799633.\n\nFINAL: 35799633"
+    },
+    "exe-6-1": {
+     "correct": true,
+     "extracted": "2768",
+     "text": "\n\nThe program initializes six variables and then runs a loop from i = 1 to 24, performing a series of simultaneous and sequential assignments that include modulo operations with 997. After tracing each iteration carefully, the final values are:\n\nv0 = 804  \nv1 = 227  \nv2 = 989  \nv3 = 329  \nv4 = 215  \nv5 = 204  \n\nTheir sum is 804 + 227 + 989 + 329 + 215 + 204 = 2768.\n\nFINAL: 2768"
+    },
+    "inv-22-0": {
+     "correct": true,
+     "extracted": "72403062",
+     "text": "\n\nThe original 8-digit number is 72403062.\n\nFINAL: 72403062"
+    },
+    "exe-8-0": {
+     "correct": true,
+     "extracted": "2166",
+     "text": "\n\nThe program initializes variables and then iterates 30 times, updating them according to the given rules. After tracing each iteration exactly, the final values are:\n\n- v0 = 90\n- v1 = 411\n- v2 = 15\n- v3 = 5\n- v4 = 508\n- v5 = 145\n- v6 = 992\n\nTheir sum is 90 + 411 + 15 + 5 + 508 + 145 + 992 = 2166.\n\nFINAL: 2166"
+    },
+    "inv-22-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-1": {
+     "correct": true,
+     "extracted": "2725",
+     "text": "\n\nThe program runs through 30 iterations, updating variables as specified. After tracing each step, the final values are:\n\n- v0 = 125\n- v1 = 250\n- v2 = 780\n- v3 = 443\n- v4 = 258\n- v5 = 863\n- v6 = 6\n\nTheir sum is 125 + 250 + 780 + 443 + 258 + 863 + 6 = 2725.\n\nFINAL: 2725"
+    },
+    "inv-32-0": {
+     "correct": true,
+     "extracted": "17848900",
+     "text": "\n\nThe original 8-digit number is 17848900.\n\nFINAL: 17848900"
+    },
+    "exe-10-0": {
+     "correct": true,
+     "extracted": "2784",
+     "text": "\n\nLooking at the program, I traced each variable through all 36 iterations.\n\nKey recurrences I derived:\n- v0/v6 swap each iteration: v0 becomes old v6, v6 becomes (old v0 + i) % 997\n- v1/v3 swap similarly, with v1 updated using the *new* v6\n- v5 accumulates v0\u00b7i; v7 accumulates v1\u00b7i plus 7 whenever v0 % 3 == 1 (v4 never triggers the +3)\n\nTracing carefully (verified iteratively for the first 10 steps and cross-checked sums):\n\n- v0 = 345, v6 = 362 (final swap values)\n- v5 = (26 + \u03a3 v0\u00b7i) % 997 = 885\n- v1 = 734, v3 = 94\n- v7 = (2 + \u03a3 v1\u00b7i + 18\u00d77) % 997 = 356\n- v2 = 7, v4 = 1 (unchanged)\n\nSum: 345 + 734 + 7 + 94 + 1 + 885 + 362 + 356 = 2784\n\nFINAL: 2784"
+    },
+    "inv-32-1": {
+     "correct": true,
+     "extracted": "58348987",
+     "text": "\n\nI worked backwards through all 32 steps, carefully inverting each operation (modular arithmetic, digit swaps, rotations, reversals, and affine digit transformations). Every step was verified by re-running the forward operations from the recovered original number.\n\nFINAL: 58348987"
+    },
+    "exe-10-1": {
+     "correct": true,
+     "extracted": "1943",
+     "text": "\n\nThe program initializes variables and runs a loop from i=1 to 36. During each iteration, it updates v2, v0, v5, and v4 according to the given formulas. The condition `v7 % 3 == 0` and `v7 % 3 == 2` are both false because v7 = 25 and 25 % 3 = 1, so the conditional blocks are skipped. After tracing all 36 iterations, the final values are:\n\n- v0 = 665\n- v1 = 11\n- v2 = 463\n- v3 = 28\n- v4 = 703\n- v5 = 41\n- v6 = 7\n- v7 = 25\n\nSumming these gives 665 + 11 + 463 + 28 + 703 + 41 + 7 + 25 = 1943.\n\nFINAL: 1943"
+    },
+    "inv-45-0": {
+     "correct": true,
+     "extracted": "66990326",
+     "text": "\n\nThe original 8-digit number is recovered by applying the inverse of each of the 45 steps in reverse order. Starting from the final result 13715443, we systematically inverted each operation (arithmetic modulo 100,000,000, digit permutations, and digit-wise transformations). The step-by-step backward process yields the original number.\n\nFINAL: 66990326"
+    },
+    "exe-12-0": {
+     "correct": true,
+     "extracted": "2785",
+     "text": "\n\nAfter tracing all 42 iterations carefully, the final values are:\n\nv0 = 990, v1 = 21, v2 = 484, v3 = 19, v4 = 18, v5 = 375, v6 = 4, v7 = 555, v8 = 319\n\nSum = 990 + 21 + 484 + 19 + 18 + 375 + 4 + 555 + 319 = 2785\n\nFINAL: 2785"
+    },
+    "inv-45-1": {
+     "correct": true,
+     "extracted": "13599292",
+     "text": "\n\nThe original 8-digit number is recovered by reversing all 45 steps. Working backwards from the final result 27200582, each operation is inverted (swaps, rotations, reversals, digit-wise affine transformations, additions, and multiplications modulo 100,000,000). The step-by-step reverse yields the initial number.\n\nFINAL: 13599292"
+    },
+    "exe-12-1": {
+     "correct": true,
+     "extracted": "1848",
+     "text": "\n\nFINAL: 1848"
+    }
+   }
+  },
+  "liquid/lfm-2.5-2.6b:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-2-0": {
+     "correct": false,
+     "extracted": "278",
+     "text": "Let me trace through the program step by step carefully.\n\n**Initial values:**\n- v0 = 1\n- v1 = 25\n- v2 = 26\n- v3 = 29\n\n**Iteration i = 1:**\n- v3 = (29 \u00d7 3 + 25) % 997 = (87 + 25) % 997 = 112\n- v0 = (1 + 26 \u00d7 1) % 997 = 27\n- v1 = (25 + 26 \u00d7 1) % 997 = 51\n\n**Iteration i = 2:**\n- v3 = (112 \u00d7 3 + 51) % 997 = (336 + 51) % 997 = 387\n- v0 = (27 + 26 \u00d7 2) % 997 = 79\n- v1 = (51 + 26 \u00d7 2) % 997 = 103\n\n**Iteration i = 3:**\n- v3 = (387 \u00d7 3 + 103) % 997 = (1161 + 103) % 997 = 1264 % 997 = 267\n- v0 = (79 + 26 \u00d7 3) % 997 = 157\n- v1 = (103 + 26 \u00d7 3) % 997 = 181\n\n**Iteration i = 4:**\n- v3 = (267 \u00d7 3 + 181) % 997 = (801 + 181) % 997 = 982\n- v0 = (157 + 26 \u00d7 4) % 997 = 261\n- v1 = (181 + 26 \u00d7 4) % 997 = 285\n\n**Iteration i = 5:**\n- v3 = (982 \u00d7 3 + 285) % 997 = (2946 + 285) % 997 = 3231 % 997 = 240\n- v0 = (261 + 26 \u00d7 5) % 997 = 391\n- v1 = (285 + 26 \u00d7 5) % 997 = 415\n\n**Iteration i = 6:**\n- v3 = (240 \u00d7 3 + 415) % 997 = (720 + 415) % 997 = 1135 % 997 = 138\n- v0 = (391 + 26 \u00d7 6) % 997 = 547\n- v1 = (415 + 26 \u00d7 6) % 997 = 571\n\n**Iteration i = 7:**\n- v3 = (138 \u00d7 3 + 571) % 997 = (414 + 571) % 997 = 985\n- v0 = (547 + 26 \u00d7 7) % 997 = 729\n- v1 = (571 + 26 \u00d7 7) % 997 = 753\n\n**Iteration i = 8:**\n- v3 = (985 \u00d7 3 + 753) % 997 = (2955 + 753) % 997 = 3708 % 997 = 717\n- v0 = (729 + 26 \u00d7 8) % 997 = 937\n- v1 = (753 + 26 \u00d7 8) % 997 = 961\n\n**Iteration i = 9:**\n- v3 = (717 \u00d7 3 + 961) % 997 = (2151 + 961) % 997 = 3112 % 997 = 121\n- v0 = (937 + 26 \u00d7 9) % 997 = 1171 % 997 = 174\n- v1 = (961 + 26 \u00d7 9) % 997 = 1195 % 997 = 198\n\n**Iteration i = 10:**\n- v3 = (121 \u00d7 3 + 198) % 997 = (363 + 198) % 997 = 561\n- v0 = (174 + 26 \u00d7 10) % 997 = 434\n- v1 = (198 + 26 \u00d7 10) % 997 = 458\n\n**Iteration i = 11:**\n- v3 = (561 \u00d7 3 + 458) % 997 = (1683 + 458) % 997 = 2131 % 997 = 137\n- v0 = (434 + 26 \u00d7 11) % 997 = 720\n- v1 = (458 + 26 \u00d7 11) % 997 = 744\n\n**Iteration i = 12:**\n- v3 = (137 \u00d7 3 + 744) % 997 = (411 + 744) % 997 = 1155 % 997 = 158\n- v0 = (720 + 26 \u00d7 12) % 997 = 1032 % 997 = 35\n- v1 = (744 + 26 \u00d7 12) % 997 = 1056 % 997 = 59\n\n**Final values:**\n- v0 = 35\n- v1 = 59\n- v2 = 26 (unchanged)\n- v3 = 158\n\n**Sum:** 35 + 59 + 26 + 158 = 278\n\nFINAL: 278"
+    },
+    "inv-4-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-2-1": {
+     "correct": true,
+     "extracted": "576",
+     "text": "Let me trace through the program step by step carefully.\n\n**Initial values:**\n- v0 = 23\n- v1 = 24\n- v2 = 22\n- v3 = 6\n\n**Loop iterations (i from 1 to 12):**\n\n**i=1:**\n- v0 = (23*3 + 6) % 997 = (69 + 6) % 997 = 75\n- v2 = (22 + 6*1) % 997 = 28\n- v0 % 3 = 75 % 3 = 0 \u2192 v2 = (28 + 2) % 997 = 30\n\n**i=2:**\n- v0 = (75*3 + 6) % 997 = (225 + 6) % 997 = 231\n- v2 = (30 + 6*2) % 997 = 42\n- v0 % 3 = 231 % 3 = 0 \u2192 v2 = (42 + 2) % 997 = 44\n\n**i=3:**\n- v0 = (231*3 + 6) % 997 = (693 + 6) % 997 = 699\n- v2 = (44 + 6*3) % 997 = 62\n- v0 % 3 = 699 % 3 = 0 \u2192 v2 = (62 + 2) % 997 = 64\n\n**i=4:**\n- v0 = (699*3 + 6) % 997 = (2097 + 6) % 997 = 2103 % 997 = 109\n- v2 = (64 + 6*4) % 997 = 88\n- v0 % 3 = 109 % 3 = 1 \u2192 no change\n\n**i=5:**\n- v0 = (109*3 + 6) % 997 = (327 + 6) % 997 = 333\n- v2 = (88 + 6*5) % 997 = 118\n- v0 % 3 = 333 % 3 = 0 \u2192 v2 = (118 + 2) % 997 = 120\n\n**i=6:**\n- v0 = (333*3 + 6) % 997 = (999 + 6) % 997 = 1005 % 997 = 8\n- v2 = (120 + 6*6) % 997 = 156\n- v0 % 3 = 8 % 3 = 2 \u2192 no change\n\n**i=7:**\n- v0 = (8*3 + 6) % 997 = 30\n- v2 = (156 + 6*7) % 997 = 198\n- v0 % 3 = 30 % 3 = 0 \u2192 v2 = (198 + 2) % 997 = 200\n\n**i=8:**\n- v0 = (30*3 + 6) % 997 = 96\n- v2 = (200 + 6*8) % 997 = 248\n- v0 % 3 = 96 % 3 = 0 \u2192 v2 = (248 + 2) % 997 = 250\n\n**i=9:**\n- v0 = (96*3 + 6) % 997 = 294\n- v2 = (250 + 6*9) % 997 = 304\n- v0 % 3 = 294 % 3 = 0 \u2192 v2 = (304 + 2) % 997 = 306\n\n**i=10:**\n- v0 = (294*3 + 6) % 997 = (882 + 6) % 997 = 888\n- v2 = (306 + 6*10) % 997 = 366\n- v0 % 3 = 888 % 3 = 0 \u2192 v2 = (366 + 2) % 997 = 368\n\n**i=11:**\n- v0 = (888*3 + 6) % 997 = (2664 + 6) % 997 = 2670 % 997 = 676\n- v2 = (368 + 6*11) % 997 = 434\n- v0 % 3 = 676 % 3 = 1 \u2192 no change\n\n**i=12:**\n- v0 = (676*3 + 6) % 997 = (2028 + 6) % 997 = 2034 % 997 = 40\n- v2 = (434 + 6*12) % 997 = 506\n- v0 % 3 = 40 % 3 = 1 \u2192 no change\n\n**Final values:**\n- v0 = 40\n- v1 = 24\n- v2 = 506\n- v3 = 6\n\n**Sum:** 40 + 24 + 506 + 6 = 576\n\nFINAL: 576"
+    },
+    "inv-8-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-4-0": {
+     "correct": false,
+     "extracted": "2002",
+     "text": "Let me trace through the program step by step carefully.\n\n**Initial values:**\n- v0 = 16\n- v1 = 26\n- v2 = 8\n- v3 = 21\n- v4 = 13\n\n**Loop iterations (i from 1 to 18):**\n\n**i=1:** v2%3 = 8%3 = 2 \u2260 0 \u2192 no v0 update.  \nv2, v0 = 16, (8+1)%997 = 9 \u2192 v2=9, v0=16  \nv0 = (16\u00d72 + 26) % 997 = 58  \nv0, v3 = 21, (58+1)%997 = 59 \u2192 v0=21, v3=59\n\n**i=2:** v2%3 = 9%3 = 0 \u2192 v0 = (21+4)%997 = 25  \nv2, v0 = 25, (9+2)%997 = 11 \u2192 v2=11, v0=25  \nv0 = (25\u00d72 + 26) % 997 = 76  \nv0, v3 = 59, (76+2)%997 = 78 \u2192 v0=76, v3=78\n\n**i=3:** v2%3 = 11%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 76, (11+3)%997 = 14 \u2192 v2=14, v0=76  \nv0 = (76\u00d72 + 26) % 997 = 178  \nv0, v3 = 78, (178+3)%997 = 181 \u2192 v0=178, v3=181\n\n**i=4:** v2%3 = 14%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 178, (14+4)%997 = 18 \u2192 v2=18, v0=178  \nv0 = (178\u00d72 + 26) % 997 = 382  \nv0, v3 = 181, (382+4)%997 = 386 \u2192 v0=382, v3=386\n\n**i=5:** v2%3 = 18%3 = 0 \u2192 v0 = (382+4)%997 = 386  \nv2, v0 = 386, (18+5)%997 = 23 \u2192 v2=23, v0=386  \nv0 = (386\u00d72 + 26) % 997 = 798  \nv0, v3 = 386, (798+5)%997 = 803 \u2192 v0=798, v3=803\n\n**i=6:** v2%3 = 23%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 798, (23+6)%997 = 29 \u2192 v2=29, v0=798  \nv0 = (798\u00d72 + 26) % 997 = 1622 % 997 = 625  \nv0, v3 = 803, (625+6)%997 = 631 \u2192 v0=625, v3=631\n\n**i=7:** v2%3 = 29%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 625, (29+7)%997 = 36 \u2192 v2=36, v0=625  \nv0 = (625\u00d72 + 26) % 997 = 1276 % 997 = 279  \nv0, v3 = 631, (279+7)%997 = 286 \u2192 v0=279, v3=286\n\n**i=8:** v2%3 = 36%3 = 0 \u2192 v0 = (279+4)%997 = 283  \nv2, v0 = 283, (36+8)%997 = 44 \u2192 v2=44, v0=283  \nv0 = (283\u00d72 + 26) % 997 = 592  \nv0, v3 = 286, (592+8)%997 = 600 \u2192 v0=592, v3=600\n\n**i=9:** v2%3 = 44%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 592, (44+9)%997 = 53 \u2192 v2=53, v0=592  \nv0 = (592\u00d72 + 26) % 997 = 1210 % 997 = 213  \nv0, v3 = 600, (213+9)%997 = 222 \u2192 v0=213, v3=222\n\n**i=10:** v2%3 = 53%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 213, (53+10)%997 = 63 \u2192 v2=63, v0=213  \nv0 = (213\u00d72 + 26) % 997 = 452  \nv0, v3 = 222, (452+10)%997 = 462 \u2192 v0=452, v3=462\n\n**i=11:** v2%3 = 63%3 = 0 \u2192 v0 = (452+4)%997 = 456  \nv2, v0 = 456, (63+11)%997 = 74 \u2192 v2=74, v0=456  \nv0 = (456\u00d72 + 26) % 997 = 938  \nv0, v3 = 462, (938+11)%997 = 949 \u2192 v0=938, v3=949\n\n**i=12:** v2%3 = 74%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 938, (74+12)%997 = 86 \u2192 v2=86, v0=938  \nv0 = (938\u00d72 + 26) % 997 = 1902 % 997 = 905  \nv0, v3 = 949, (905+12)%997 = 917 \u2192 v0=905, v3=917\n\n**i=13:** v2%3 = 86%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 905, (86+13)%997 = 99 \u2192 v2=99, v0=905  \nv0 = (905\u00d72 + 26) % 997 = 1836 % 997 = 839  \nv0, v3 = 917, (839+13)%997 = 852 \u2192 v0=839, v3=852\n\n**i=14:** v2%3 = 99%3 = 0 \u2192 v0 = (839+4)%997 = 843  \nv2, v0 = 843, (99+14)%997 = 113 \u2192 v2=113, v0=843  \nv0 = (843\u00d72 + 26) % 997 = 1712 % 997 = 715  \nv0, v3 = 852, (715+14)%997 = 729 \u2192 v0=715, v3=729\n\n**i=15:** v2%3 = 113%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 715, (113+15)%997 = 128 \u2192 v2=128, v0=715  \nv0 = (715\u00d72 + 26) % 997 = 1456 % 997 = 459  \nv0, v3 = 729, (459+15)%997 = 474 \u2192 v0=459, v3=474\n\n**i=16:** v2%3 = 128%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 459, (128+16)%997 = 144 \u2192 v2=144, v0=459  \nv0 = (459\u00d72 + 26) % 997 = 944  \nv0, v3 = 474, (944+16)%997 = 960 \u2192 v0=944, v3=960\n\n**i=17:** v2%3 = 144%3 = 0 \u2192 v0 = (944+4)%997 = 948  \nv2, v0 = 948, (144+17)%997 = 161 \u2192 v2=161, v0=948  \nv0 = (948\u00d72 + 26) % 997 = 1922 % 997 = 927  \nv0, v3 = 960, (927+17)%997 = 944 \u2192 v0=927, v3=944\n\n**i=18:** v2%3 = 161%3 = 2 \u2260 0 \u2192 no update  \nv2, v0 = 927, (161+18)%997 = 179 \u2192 v2=179, v0=927  \nv0 = (927\u00d72 + 26) % 997 = 1880 % 997 = 883  \nv0, v3 = 944, (883+18)%997 = 901 \u2192 v0=883, v3=901\n\n**Final values:**\n- v0 = 883\n- v1 = 26\n- v2 = 179\n- v3 = 901\n- v4 = 13\n\n**Sum:** 883 + 26 + 179 + 901 + 13 = 2002\n\nFINAL: 2002"
+    },
+    "inv-8-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-4-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-14-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-6-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-14-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-6-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-45-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-45-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    }
+   }
+  },
+  "thinkingmachines/inkling-small:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-2-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-4-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-2-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-8-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-4-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-8-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-4-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-14-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-6-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-14-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-6-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-8-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-32-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-45-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "inv-45-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    }
+   }
+  },
+  "poolside/laguna-s-2.1:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": false,
+     "extracted": null,
+     "text": ""
+    },
+    "exe-2-0": {
+     "correct": false,
+     "extracted": null,
+     "text": ""
+    },
+    "inv-4-1": {
+     "correct": true,
+     "extracted": "92898498",
+     "text": "Working backwards from the final result 47877633:\n\n**Undo Step 4 (reverse digits):** 47877633 \u2192 33677874\n\n**Undo Step 3 (multiply by 13 \u2192 multiply by inverse of 13 mod 10\u2078):**\nThe inverse of 13 mod 100000000 is 76923077 (since 13 \u00d7 76923077 = 1000000001 \u2261 1).\n33677874 \u00d7 76923077 mod 10\u2078 = 94898298\n(Verification: 13 \u00d7 94898298 = 1233677874 \u2192 last 8 digits = 33677874 \u2713)\n\n**Undo Step 2 (reverse digits):** 94898298 \u2192 89289849\n\n**Undo Step 1 (rotate left by 7 = rotate right by 1 \u2192 undo with rotate left by 1):**\n89289849 \u2192 92898498\n\n**Verification (forward):**\n- Start: 92898498\n- Step 1 (rotate left 7): 89289849 \u2713\n- Step 2 (reverse): 94898298 \u2713\n- Step 3 (\u00d713): 94898298 \u00d7 13 = 1233677874 \u2192 33677874 \u2713\n- Step 4 (reverse): 47877633 \u2713\n\nFINAL: 92898498"
+    }
+   }
+  },
+  "inclusionai/ling-3.0-flash-sante:free": {
+   "public_elo": null,
+   "answers": {
+    "inv-4-0": {
+     "correct": true,
+     "extracted": "59202020",
+     "text": "Looking at this problem, I need to reverse 4 transformations applied to an 8-digit number, working backwards from 08171705.\n\n## Step 1: Reverse Step 4 (digit substitution)\n\nThe forward rule is d \u2192 (9d+3) mod 10. To invert: d \u2261 9(y-3) mod 10, giving the inverse mapping:\n0\u21923, 1\u21922, 2\u21921, 3\u21920, 4\u21929, 5\u21928, 6\u21927, 7\u21926, 8\u21925, 9\u21924\n\nApplying to 08171705: **35262638**\n\n## Step 2: Reverse Step 3 (rotate left by 6)\n\nThe inverse of rotating left by 6 is rotating left by 2 (since 6+2=8).\n\nRotating 35262638 left by 2: **26263835**\n\n## Step 3: Reverse Step 2 (multiply by 13)\n\nI need 13\u207b\u00b9 mod 100000000. Using the extended Euclidean algorithm:\n13 \u00d7 76923077 = 1000000001 \u2261 1 (mod 10\u2078) \u2713\n\nComputing 26263835 \u00d7 76923077 mod 10\u2078:\n- 26263835 \u00d7 77 = 2022315295 \u2192 mod 10\u2078 = 95000000 (after \u00d710\u2076)\n- 26263835 \u00d7 76923 = 2020292979705 \u2192 mod 10\u2078 = 92979705\n- Result: (95000000 - 92979705) mod 10\u2078 = **02020295**\n\nVerification: 2020295 \u00d7 13 = 26263835 \u2713\n\n## Step 4: Reverse Step 1 (reverse digits)\n\nReversing 02020295: **59202020**\n\n## Verification (forward)\n- Start: 59202020\n- Step 1 (reverse): 02020295\n- Step 2 (\u00d713): 26263835\n- Step 3 (rotate left 6): 35262638\n- Step 4 ((9d+3) mod 10): 3\u21920, 5\u21928, 2\u21921, 6\u21927, 2\u21921, 6\u21927, 3\u21920, 8\u21925 = **08171705** \u2713\n\nFINAL: 59202020"
+    },
+    "exe-2-0": {
+     "correct": true,
+     "extracted": "308",
+     "text": "Looking at this problem, I need to trace the loop exactly for i = 1 to 12.\n\n**Initial:** v0=1, v1=25, v2=26, v3=29\n\n**i=1:** v3=(29\u00d73+25)%997=112, v0=(1+26\u00d71)%997=27, v1=(25+26\u00d71)%997=51\n\n**i=2:** v3=(112\u00d73+51)%997=387, v0=(27+52)%997=79, v1=(51+52)%997=103\n\n**i=3:** v3=(387\u00d73+103)%997=1264%997=267, v0=(79+78)%997=157, v1=(103+78)%997=181\n\n**i=4:** v3=(267\u00d73+181)%997=982, v0=(157+104)%997=261, v1=(181+104)%997=285\n\n**i=5:** v3=(982\u00d73+285)%997=3231%997=240, v0=(261+130)%997=391, v1=(285+130)%997=415\n\n**i=6:** v3=(240\u00d73+415)%997=1135%997=138, v0=(391+156)%997=547, v1=(415+156)%997=571\n\n**i=7:** v3=(138\u00d73+571)%997=985, v0=(547+182)%997=729, v1=(571+182)%997=753\n\n**i=8:** v3=(985\u00d73+753)%997=3708%997=717, v0=(729+208)%997=937, v1=(753+208)%997=961\n\n**i=9:** v3=(717\u00d73+961)%997=3112%997=121, v0=(937+234)%997=1171%997=174, v1=(961+234)%997=1195%997=198\n\n**i=10:** v3=(121\u00d73+198)%997=561, v0=(174+260)%997=434, v1=(198+260)%997=458\n\n**i=11:** v3=(561\u00d73+458)%997=2141%997=147, v0=(434+286)%997=720, v1=(458+286)%997=744\n\n**i=12:** v3=(147\u00d73+744)%997=1185%997=188, v0=(720+312)%997=1032%997=35, v1=(744+312)%997=1056%997=59\n\n**Final values:** v0=35, v1=59, v2=26, v3=188\n\n**Sum:** 35 + 59 + 26 + 188 = **308**\n\nFINAL: 308"
+    },
+    "inv-4-1": {
+     "correct": true,
+     "extracted": "92898498",
+     "text": "Looking at this problem, I need to reverse 4 transformations applied to an 8-digit number, working backwards from 47877633.\n\n## Step 4 Inverse: Reverse digit order\n47877633 \u2192 **33677874**\n\n## Step 3 Inverse: Divide by 13 (mod 100000000)\nI need X where (X \u00d7 13) mod 100000000 = 33677874.\n\nFinding 13\u207b\u00b9 mod 100000000 using extended Euclidean algorithm:\n13 \u00d7 76923077 = 1000000001 \u2261 1 (mod 10\u2078) \u2713\n\nSo X = 33677874 \u00d7 76923077 mod 10\u2078\n\nComputing via splitting (a = 3367\u00b710\u2074 + 7874, b = 7692\u00b710\u2074 + 3077):\n- 3367 \u00d7 3077 = 10,360,259\n- 7874 \u00d7 7692 = 60,566,808\n- Sum \u00d7 10\u2074 \u2192 last 8 digits contribution: 70,670,000\n- 7874 \u00d7 3077 = 24,228,298\n- Total: 70,670,000 + 24,228,298 = **94,898,298**\n\n**Verification:** 94,898,298 \u00d7 13 = 1,233,677,874 \u2192 last 8 digits = 33677874 \u2713\n\n## Step 2 Inverse: Reverse digit order\n94898298 \u2192 **89289849**\n\n## Step 1 Inverse: Reverse the left-rotate-by-7\nRotating left by 7 on d\u2081d\u2082d\u2083d\u2084d\u2085d\u2086d\u2087d\u2088 gives d\u2088d\u2081d\u2082d\u2083d\u2084d\u2085d\u2086d\u2087.\n\nSo 89289849 = d\u2088d\u2081d\u2082d\u2083d\u2084d\u2085d\u2086d\u2087 means:\n- d\u2088=8, d\u2081=9, d\u2082=2, d\u2083=8, d\u2084=9, d\u2085=8, d\u2086=4, d\u2087=9\n\nOriginal: **92898498**\n\n## Full Verification (forward):\n1. 92898498 \u2192 rotate left 7 \u2192 89289849\n2. 89289849 \u2192 reverse \u2192 94898298\n3. 94898298 \u00d7 13 = 1,233,677,874 \u2192 last 8 digits \u2192 33677874\n4. 33677874 \u2192 reverse \u2192 **47877633** \u2713\n\nFINAL: 92898498"
+    },
+    "exe-2-1": {
+     "correct": true,
+     "extracted": "576",
+     "text": "Looking at this program, I need to trace through each iteration of the loop carefully.\n\n**Initial values:** v0=23, v1=24, v2=22, v3=6\n\n**i=1:** v0=(23\u00d73+6)%997=75, v2=(22+6\u00d71)%997=28, 75%3=0\u2192v2=30\n**i=2:** v0=(75\u00d73+6)%997=231, v2=(30+12)%997=42, 231%3=0\u2192v2=44\n**i=3:** v0=(231\u00d73+6)%997=699, v2=(44+18)%997=62, 699%3=0\u2192v2=64\n**i=4:** v0=(699\u00d73+6)%997=2103%997=109, v2=(64+24)%997=88, 109%3=1\u2192no change\n**i=5:** v0=(109\u00d73+6)%997=333, v2=(88+30)%997=118, 333%3=0\u2192v2=120\n**i=6:** v0=(333\u00d73+6)%997=1005%997=8, v2=(120+36)%997=156, 8%3=2\u2192no change\n**i=7:** v0=(8\u00d73+6)%997=30, v2=(156+42)%997=198, 30%3=0\u2192v2=200\n**i=8:** v0=(30\u00d73+6)%997=96, v2=(200+48)%997=248, 96%3=0\u2192v2=250\n**i=9:** v0=(96\u00d73+6)%997=294, v2=(250+54)%997=304, 294%3=0\u2192v2=306\n**i=10:** v0=(294\u00d73+6)%997=888, v2=(306+60)%997=366, 888%3=0\u2192v2=368\n**i=11:** v0=(888\u00d73+6)%997=2670%997=676, v2=(368+66)%997=434, 676%3=1\u2192no change\n**i=12:** v0=(676\u00d73+6)%997=2034%997=40, v2=(434+72)%997=506, 40%3=1\u2192no change\n\n**Final values:** v0=40, v1=24, v2=506, v3=6\n\n**Sum:** 40 + 24 + 506 + 6 = 576\n\nFINAL: 576"
+    },
+    "inv-8-0": {
+     "correct": true,
+     "extracted": "16442211",
+     "text": "Looking at this problem, I need to reverse 8 steps starting from 77129782.\n\n## Working Backwards\n\n**Inverse of Step 8:** f(d)=(9d+1) mod 10 \u2192 inverse maps: 7\u21924, 7\u21924, 1\u21920, 2\u21929, 9\u21922, 7\u21924, 8\u21923, 2\u21929 \u2192 **44092439**\n\n**Inverse of Step 7:** Swap positions 1 and 6: both are 4, no change \u2192 **44092439**\n\n**Inverse of Step 6:** f(d)=(7d+7) mod 10 \u2192 inverse maps: 4\u21921, 4\u21921, 0\u21929, 9\u21926, 2\u21925, 4\u21921, 3\u21928, 9\u21926 \u2192 **11965186**\n\n**Inverse of Step 5:** Multiply by 13\u207b\u00b9 mod 10\u2078. Using extended Euclidean: 13\u207b\u00b9 \u2261 76923077 (mod 10\u2078). Computing 11965186 \u00d7 76923077 mod 10\u2078 = **23997322**\n\n**Inverse of Step 4:** Reverse digits \u2192 **22379932**\n\n**Inverse of Step 3:** f(d)=(7d+5) mod 10 \u2192 inverse maps: 2\u21921, 2\u21921, 3\u21924, 7\u21926, 9\u21922, 9\u21922, 3\u21924, 2\u21921 \u2192 **11462241**\n\n**Inverse of Step 2:** Swap positions 4 and 7: position 4=6, position 7=4 \u2192 **11442261**\n\n**Inverse of Step 1:** Swap positions 2 and 7: position 2=1, position 7=6 \u2192 **16442211**\n\n## Verification (Forward)\n16442211 \u2192 swap(2,7): 11442261 \u2192 swap(4,7): 11462241 \u2192 (7d+5)%10: 22379932 \u2192 reverse: 23997322 \u2192 \u00d713 mod 10\u2078: 11965186 \u2192 (7d+7)%10: 44092439 \u2192 swap(1,6): 44092439 \u2192 (9d+1)%10: **77129782** \u2713\n\nFINAL: 16442211"
+    },
+    "exe-4-0": {
+     "correct": true,
+     "extracted": "720",
+     "text": "Looking at this problem, I need to carefully trace through each iteration of the loop, tracking all variable changes.\n\n**Initial:** v0=16, v1=26, v2=8, v3=21, v4=13\n\nI'll trace each iteration (i=1 to 18), noting the four operations per loop:\n1. Conditional: if v2%3==0, v0 = (v0+4)%997\n2. Swap: v2,v0 = v0, (v2+i)%997\n3. Compute: v0 = (v0*2+v1)%997\n4. Swap: v0,v3 = v3, (v0+i)%997\n\nAfter carefully tracing all 18 iterations:\n\n| i | v0 | v1 | v2 | v3 | v4 |\n|---|-----|-----|-----|-----|-----|\n| 0 | 16 | 26 | 8 | 21 | 13 |\n| 1 | 21 | 26 | 16 | 45 | 13 |\n| 2 | 45 | 26 | 21 | 64 | 13 |\n| 3 | 64 | 26 | 49 | 77 | 13 |\n| 4 | 77 | 26 | 64 | 136 | 13 |\n| 5 | 136 | 26 | 77 | 169 | 13 |\n| 6 | 169 | 26 | 136 | 198 | 13 |\n| 7 | 198 | 26 | 169 | 319 | 13 |\n| 8 | 319 | 26 | 198 | 388 | 13 |\n| 9 | 388 | 26 | 323 | 449 | 13 |\n| 10 | 449 | 26 | 388 | 702 | 13 |\n| 11 | 702 | 26 | 449 | 835 | 13 |\n| 12 | 835 | 26 | 702 | 960 | 13 |\n| 13 | 960 | 26 | 839 | 472 | 13 |\n| 14 | 472 | 26 | 960 | 749 | 13 |\n| 15 | 749 | 26 | 476 | 994 | 13 |\n| 16 | 994 | 26 | 749 | 29 | 13 |\n| 17 | 29 | 26 | 994 | 578 | 13 |\n| 18 | 578 | 26 | 29 | 74 | 13 |\n\n**Final sum:** 578 + 26 + 29 + 74 + 13 = **720**\n\nFINAL: 720"
+    },
+    "inv-8-1": {
+     "correct": true,
+     "extracted": "39786618",
+     "text": "Looking at this problem, I need to reverse 8 steps starting from 65434728.\n\n## Working Backwards\n\n**Reverse Step 8** (rotate left by 3 \u2192 rotate right by 3 = rotate left by 5):\n65434728 \u2192 rotate left by 5 \u2192 **72865434**\n\n**Reverse Step 7** (inverse of d\u2192(9d+8) mod 10):\nBuilding inverse table: 8\u21920, 7\u21921, 6\u21922, 5\u21923, 4\u21924, 3\u21925, 2\u21926, 1\u21927, 0\u21928, 9\u21929\nApplying to 72865434: **16023454**\n\n**Reverse Step 6** (multiply by 9 \u2192 multiply by 9\u207b\u00b9 mod 10\u2078 = 88888889):\n16023454 \u00d7 88888889 mod 10\u2078 = **24002606**\n*Verified: 24002606 \u00d7 9 = 216023454 \u2192 last 8 digits = 16023454 \u2713*\n\n**Reverse Step 5** (subtract 43041634):\n24002606 \u2212 43041634 mod 10\u2078 = **80960972**\n\n**Reverse Step 4** (multiply by 9\u207b\u00b9 = 88888889):\n80960972 \u00d7 88888889 mod 10\u2078 = **53440108**\n*Verified: 53440108 \u00d7 9 = 480960972 \u2192 last 8 digits = 80960972 \u2713*\n\n**Reverse Step 3** (multiply by 21\u207b\u00b9 mod 10\u2078 = 80952381):\n53440108 \u00d7 80952381 mod 10\u2078 = **83497148**\n*Verified: 83497148 \u00d7 21 = 1753440108 \u2192 last 8 digits = 53440108 \u2713*\n\n**Reverse Step 2** (inverse of d\u21923d mod 10):\nInverse table: 0\u21920, 3\u21921, 6\u21922, 9\u21923, 2\u21924, 5\u21925, 8\u21926, 1\u21927, 4\u21928, 7\u21929\nApplying to 83497148: **61839786**\n\n**Reverse Step 1** (rotate left by 5 \u2192 rotate right by 5 = rotate left by 3):\n61839786 \u2192 rotate left by 3 \u2192 **39786618**\n\n## Verification (Forward)\n39786618 \u2192 rotate left 5 \u2192 61839786 \u2192 \u00d73 mod 10 \u2192 83497148 \u2192 \u00d721 \u2192 53440108 \u2192 \u00d79 \u2192 80960972 \u2192 +43041634 \u2192 24002606 \u2192 \u00d79 \u2192 16023454 \u2192 (9d+8) mod 10 \u2192 72865434 \u2192 rotate left 3 \u2192 **65434728** \u2713\n\nFINAL: 39786618"
+    },
+    "exe-4-1": {
+     "correct": true,
+     "extracted": "2025",
+     "text": "Looking at this program, I need to trace through the loop for i = 1 to 18.\n\n**Key observation:** v4 = 16 never changes (only read, never assigned). Since 16 % 3 = 1, the condition `v4 % 3 == 1` is always True, so v1 increases by 2 each iteration.\n\n**Tracing each iteration:**\n\n| i | v0 | v1 | v2 | v3 | v4 |\n|---|-----|-----|-----|-----|-----|\n| init | 5 | 23 | 1 | 28 | 16 |\n| 1 | 33 | 25 | 51 | 2 | 16 |\n| 2 | 91 | 27 | 52 | 53 | 16 |\n| 3 | 209 | 29 | 134 | 55 | 16 |\n| 4 | 447 | 31 | 171 | 138 | 16 |\n| 5 | 925 | 33 | 293 | 176 | 16 |\n| 6 | 886 | 35 | 374 | 299 | 16 |\n| 7 | 810 | 37 | 544 | 381 | 16 |\n| 8 | 660 | 39 | 677 | 552 | 16 |\n| 9 | 362 | 41 | 903 | 686 | 16 |\n| 10 | 765 | 43 | 99 | 913 | 16 |\n| 11 | 576 | 45 | 389 | 110 | 16 |\n| 12 | 200 | 47 | 650 | 401 | 16 |\n| 13 | 447 | 49 | 15 | 663 | 16 |\n| 14 | 943 | 51 | 352 | 29 | 16 |\n| 15 | 940 | 53 | 794 | 367 | 16 |\n| 16 | 936 | 55 | 218 | 810 | 16 |\n| 17 | 930 | 57 | 748 | 235 | 16 |\n| 18 | 920 | 59 | 264 | 766 | 16 |\n\n**Final sum:** 920 + 59 + 264 + 766 + 16 = **2025**\n\nFINAL: 2025"
+    },
+    "inv-14-0": {
+     "correct": false,
+     "extracted": "17553303",
+     "text": "Looking at this problem, I need to reverse 14 steps starting from 16083238.\n\n## Working Backwards\n\n**Step 14 reverse:** Swap positions 5 and 7 of 16083238 \u2192 both are 3, no change \u2192 **16083238**\n\n**Step 13 reverse:** Subtract 69816705 mod 10\u2078: (16083238 - 69816705) mod 10\u2078 = **46266533**\n\n**Step 12 reverse:** Multiply by 23\u207b\u00b9 mod 10\u2078 = 47826087: 46266533 \u00d7 47826087 mod 10\u2078 = **32446371**\n\n**Step 11 reverse:** Reverse digits: 32446371 \u2192 **17364423**\n\n**Step 10 reverse:** Subtract 82949377 mod 10\u2078: (17364423 - 82949377) mod 10\u2078 = **34415046**\n\n**Step 9 reverse:** Multiply by 13\u207b\u00b9 mod 10\u2078 = 76923077: 34415046 \u00d7 76923077 mod 10\u2078 = **33416542**\n\n**Step 8 reverse:** Subtract 97897206 mod 10\u2078: (33416542 - 97897206) mod 10\u2078 = **35519336**\n\n**Step 7 reverse:** Inverse of (3d+9) mod 10: d = (7e+7) mod 10 applied to each digit of 35519336 \u2192 **82240889**\n\n**Step 6 reverse:** Inverse of (9d+8) mod 10: d = (9e+8) mod 10 applied to each digit of 82240889 \u2192 **06648009**\n\n**Step 5 reverse:** Reverse digits: 06648009 \u2192 **90084660**\n\n**Step 4 reverse:** Reverse digits: 90084660 \u2192 **06648009**\n\n**Step 3 reverse:** Swap positions 3 and 5 of 06648009 \u2192 **06846009**\n\n**Step 2 reverse:** Rotate left by 7 reversed = rotate left by 1: 06846009 \u2192 **68460090**\n\n**Step 1 reverse:** Inverse of (7d+9) mod 10: d = (3e+3) mod 10 applied to each digit of 68460090:\n- 6\u21921, 8\u21927, 4\u21925, 6\u21925, 0\u21923, 0\u21923, 9\u21920, 0\u21923 \u2192 **17553303**\n\n## Verification (forward)\nStarting with 17553303, applying all 14 steps produces 16083238 \u2713\n\nFINAL: 17553303"
+    },
+    "exe-6-0": {
+     "correct": true,
+     "extracted": "1446",
+     "text": "Looking at this problem, I need to trace through the loop for i = 1 to 24, carefully tracking all variable updates.\n\n**Initial values:** v0=27, v1=20, v2=25, v3=28, v4=11, v5=12\n\nI'll trace each iteration, noting the simultaneous assignment `v0, v4 = v4, (v0 + i) % 997` uses the *new* v0 value for computing v4.\n\nAfter carefully computing all 24 iterations (tracking v0, v4 swaps, v5 updates with two modular operations, and v3 increments when v5%3==1):\n\nKey checkpoints where v3 changes (v5%3==1):\n- i=2: v3=33, i=3: v3=38, i=4: v3=43, i=5: v3=48, i=7: v3=53, i=9: v3=58, i=13: v3=63, i=15: v3=68, i=17: v3=73, i=22: v3=78, i=23: v3=83\n\n**Final state after i=24:**\n- v0 = 206\n- v1 = 20 (unchanged throughout)\n- v2 = 25 (unchanged throughout)\n- v3 = 83\n- v4 = 437\n- v5 = 675\n\n**Sum:** 206 + 20 + 25 + 83 + 437 + 675 = **1446**\n\nFINAL: 1446"
+    },
+    "inv-14-1": {
+     "correct": true,
+     "extracted": "35799633",
+     "text": "Looking at this problem, I need to reverse 14 transformations starting from 79270622.\n\n## Working Backwards\n\n**Step 14\u219213:** Multiply by 17's inverse mod 10\u2078. Since 17\u207b\u00b9 \u2261 5882353 (mod 10\u2078):\nX13 = 79270622 \u00d7 5882353 mod 10\u2078 = **81133566**\n\n**Step 13\u219212:** Subtract 61727447: X12 = 81133566 - 61727447 = **19406119**\n\n**Step 12\u219211:** Swap positions 5,6 (self-inverse): 1940**61**19 \u2192 1940**16**19 = **19401619**\n\n**Step 11\u219210:** Inverse of d\u2192(9d+3) mod 10 is the same map:\nDigits 1,9,4,0,1,6,1,9 \u2192 2,4,9,3,2,7,2,4 = **24932724**\n\n**Step 10\u21929:** Reverse rotate-left-by-3 (rotate right by 3):\n24932724 \u2192 digits at positions 4-8 then 1-3: **72424932**\n\n**Step 9\u21928:** Swap positions 1,7 (self-inverse): 724249**3**2 \u2192 swap 7,3 \u2192 **32424972**\n\n**Step 8\u21927:** Reverse (self-inverse): **27942423**\n\n**Step 7\u21926:** Multiply by 19\u207b\u00b9 \u2261 52631579 (mod 10\u2078):\nX6 = 27942423 \u00d7 52631579 mod 10\u2078 = **43575917**\n\n**Step 6\u21925:** Reverse (self-inverse): **71957534**\n\n**Step 5\u21924:** Subtract 36157901: X4 = 71957534 - 36157901 = **35799633**\n\n**Step 4\u21923:** Swap positions 2,3 (self-inverse): 3**57**99633 \u2192 3**75**99633 = **37599633**\n\n**Step 3\u21922:** Swap positions 2,3 (self-inverse): 3**75**99633 \u2192 3**57**99633 = **35799633**\n\n**Step 2\u21921:** Reverse (self-inverse): **33699753**\n\n**Step 1\u21920:** Reverse (self-inverse): **35799633**\n\n## Verification (forward)\n35799633 \u2192 rev\u219233699753 \u2192 rev\u219235799633 \u2192 swap2,3\u219237599633 \u2192 swap2,3\u219235799633 \u2192 +36157901\u219271957534 \u2192 rev\u219243575917 \u2192 \u00d719\u219227942423 \u2192 rev\u219232424972 \u2192 swap1,7\u219272424932 \u2192 rotL3\u219224932724 \u2192 digit map\u219219401619 \u2192 swap5,6\u219219406119 \u2192 +61727447\u219281133566 \u2192 \u00d717\u2192**79270622** \u2713\n\nFINAL: 35799633"
+    },
+    "exe-6-1": {
+     "correct": true,
+     "extracted": "2768",
+     "text": "Looking at this problem, I need to carefully trace through each iteration of the loop, being precise about Python's simultaneous assignment semantics.\n\n**Initial values:** v0=16, v1=19, v2=11, v3=17, v4=15, v5=12\n\nI'll trace each iteration (i=1 through i=24), evaluating all right-hand sides before any assignments.\n\nAfter carefully tracing all 24 iterations:\n\n**i=1:** v0=11, v1=16, v2=17, v3=30, v4=19, v5=13\u219219, v4=13\n**i=2:** v0=17, v1=15, v2=30, v3=53, v4=21, v5=16\n**i=3:** v0=30, v1=24, v2=53, v3=71, v4=19, v5=15\n**i=4:** v0=53, v1=23, v2=71, v3=98, v4=19, v5=24\n**i=5:** v0=71, v1=24, v2=98, v3=183, v4=29, v5=23\n**i=6:** v0=98, v1=35, v2=183, v3=221, v4=29, v5=24\n**i=7:** v0=183, v1=36, v2=221, v3=280, v4=31, v5=35\n**i=8:** v0=221, v1=39, v2=280, v3=479, v4=43, v5=36\n**i=9:** v0=280, v1=52, v2=479, v3=563, v4=45, v5=39\n**i=10:** v0=479, v1=55, v2=563, v3=690, v4=49, v5=52\n**i=11:** v0=563, v1=60, v2=690, v3=76, v4=63, v5=55\n**i=12:** v0=690, v1=75, v2=76, v3=250, v4=67, v5=60\n**i=13:** v0=76, v1=80, v2=250, v3=499, v4=73, v5=75\n**i=14:** v0=250, v1=87, v2=499, v3=157, v4=89, v5=80\n**i=15:** v0=499, v1=104, v2=157, v3=483, v4=95, v5=87\n**i=16:** v0=157, v1=111, v2=483, v3=926, v4=103, v5=104\n**i=17:** v0=483, v1=120, v2=926, v3=962, v4=121, v5=111\n**i=18:** v0=926, v1=139, v2=962, v3=523, v4=129, v5=120\n**i=19:** v0=962, v1=148, v2=523, v3=253, v4=139, v5=139\n**i=20:** v0=523, v1=159, v2=253, v3=791, v4=159, v5=148\n**i=21:** v0=253, v1=180, v2=791, v3=682, v4=169, v5=159\n**i=22:** v0=791, v1=191, v2=682, v3=804, v4=181, v5=180\n**i=23:** v0=682, v1=204, v2=804, v3=989, v4=203, v5=191\n**i=24:** v0=804, v1=227, v2=989, v3=329, v4=215, v5=204\n\n**Final sum:** 804 + 227 + 989 + 329 + 215 + 204 = **2768**\n\nFINAL: 2768"
+    },
+    "inv-22-0": {
+     "correct": true,
+     "extracted": "72403062",
+     "text": "Looking at this problem, I need to reverse 22 transformations starting from the final result 25513339.\n\n## Working Backwards Step by Step\n\n**Step 22\u219221:** Reverse digit substitution d\u2192(9d+5)mod10: inverse is d\u2192(9e+5)mod10\n25513339 \u2192 **30042226**\n\n**Step 21\u219220:** Subtract 75852205 mod 10\u2078: 30042226 - 75852205 \u2261 **54190021**\n\n**Step 20\u219219:** Reverse digits: **12009145**\n\n**Step 19\u219218:** Reverse digits: **54190021**\n\n**Step 18\u219217:** Multiply by 13\u207b\u00b9 mod 10\u2078 = 76923077: 54190021 \u00d7 76923077 mod 10\u2078 = **58014617**\n\n**Step 17\u219216:** Reverse rotate-left-6 (rotate left by 2): **01461758**\n\n**Step 16\u219215:** Swap positions 3,4 back: **01641758**\n\n**Step 15\u219214:** Multiply by 9\u207b\u00b9 mod 10\u2078 = 88888889: **44626862**\n\n**Step 14\u219213:** Reverse d\u2192(3d+9)mod10: inverse d\u2192(3e+9)mod10: **55919391**\n\n**Step 13\u219212:** Reverse rotate-left-5 (rotate left by 3): **19391559**\n\n**Step 12\u219211:** Multiply by 11\u207b\u00b9 mod 10\u2078 = 90909091: **01762869**\n\n**Step 11\u219210:** Reverse rotate-left-7 (rotate left by 1): **17628690**\n\n**Step 10\u21929:** Subtract 34465185 mod 10\u2078: **83163505**\n\n**Step 9\u21928:** Reverse rotate-left-3 (rotate left by 5): **50583163**\n\n**Step 8\u21927:** Subtract 86134270 mod 10\u2078: **64448893**\n\n**Step 7\u21926:** Reverse digits: **39884446**\n\n**Step 6\u21925:** Reverse d\u2192(7d+7)mod10: inverse d\u2192(3e+9)mod10: **86331117**\n\n**Step 5\u21924:** Subtract 6811141 mod 10\u2078: **79519976**\n\n**Step 4\u21923:** Reverse d\u2192(9d+1)mod10: inverse d\u2192(9e+1)mod10: **42602245**\n\n**Step 3\u21922:** Subtract 99831439 mod 10\u2078: **42770806**\n\n**Step 2\u21921:** Multiply by 19\u207b\u00b9 mod 10\u2078 = 52631579: **54882674**\n\n**Step 1\u21920:** Multiply by 27\u207b\u00b9 mod 10\u2078 = 62962963: **72403062**\n\n## Verification (forward)\nStarting with 72403062 and applying all 22 steps produces 25513339 \u2713\n\nFINAL: 72403062"
+    },
+    "exe-8-0": {
+     "correct": true,
+     "extracted": "2166",
+     "text": "Looking at this problem, I need to trace through 30 iterations of a loop, updating variables v0-v6 at each step.\n\n**Initial values:** v0=28, v1=17, v2=15, v3=5, v4=14, v5=2, v6=4\n\nI'll trace each iteration carefully, applying the operations in order:\n\n1. `v0, v1 = v1, (v0 + i) % 997` (simultaneous swap)\n2. `v1 = (v1 + v4 * i) % 997`\n3. `v4 = (v4 * 2 + v2) % 997`\n4. `v0 = (v0 * 2 + v6) % 997`\n5. `v6 = (v6 + v1 * i) % 997`\n6. `v5 = (v5 * 5 + v0) % 997`\n\nAfter carefully tracing all 30 iterations (verifying key checkpoints):\n\n**After i=10:** v0=271, v1=759, v2=15, v3=5, v4=768, v5=960, v6=366\n**After i=20:** v0=788, v1=78, v2=15, v3=5, v4=189, v5=619, v6=464\n**After i=30:** v0=90, v1=411, v2=15, v3=5, v4=508, v5=145, v6=992\n\n**Final sum:** 90 + 411 + 15 + 5 + 508 + 145 + 992 = **2166**\n\nFINAL: 2166"
+    },
+    "inv-22-1": {
+     "correct": true,
+     "extracted": "14126023",
+     "text": "Looking at this problem, I need to reverse 22 steps starting from 72246771.\n\n## Working Backwards Step by Step\n\n**Step 22\u219221:** Swap positions 2\u21945: `72246771` \u2192 `76242771`\n\n**Step 21\u219220:** Swap positions 4\u21948: `76242771` \u2192 `76212774`\n\n**Step 20\u219219:** Swap positions 1\u21946: `76212774` \u2192 `76212774` (both are 7)\n\n**Step 19\u219218:** Multiply by 9\u207b\u00b9 mod 10\u2078: 76212774 \u00d7 88888889 mod 10\u2078 = `08468086`\n\n**Step 18\u219217:** Rotate right by 1: `08468086` \u2192 `60846808`\n\n**Step 17\u219216:** Swap positions 4\u21947: `60846808` \u2192 `60806848`\n\n**Step 16\u219215:** Swap positions 4\u21945: `60806848` \u2192 `60860848`\n\n**Step 15\u219214:** Inverse of (7d+7) mod 10 \u2192 (3d+3) mod 10: `60860848` \u2192 `79379313`\n\n**Step 14\u219213:** Inverse of (9d+9) mod 10 \u2192 (9d+9) mod 10: `79379313` \u2192 `20620686`\n\n**Step 13\u219212:** Multiply by 19\u207b\u00b9 = 52631579: `20620686` \u2192 `64243194`\n\n**Step 12\u219211:** Multiply by 27\u207b\u00b9 = 62962963: `64243194` \u2192 `46823822`\n\n**Step 11\u219210:** Inverse of 9d mod 10 (multiply by 9): `46823822` \u2192 `64287288`\n\n**Step 10\u21929:** Subtract 35865363: `64287288 - 35865363` = `28421925`\n\n**Step 9\u21928:** Multiply by 3\u207b\u00b9 = 66666667: `28421925` \u2192 `09473975`\n\n**Step 8\u21927:** Subtract 59905321 (mod 10\u2078): `09473975 - 59905321` = `49568654`\n\n**Step 7\u21926:** Reverse digits: `49568654` \u2192 `45686594`\n\n**Step 6\u21925:** Swap positions 1\u21948: `45686594` \u2192 `45686594` (both 4)\n\n**Step 5\u21924:** Inverse of (7d+9) mod 10 \u2192 (3d+3) mod 10: `45686594` \u2192 `58171805`\n\n**Step 4\u21923:** Reverse digits: `58171805` \u2192 `50817185`\n\n**Step 3\u21922:** Swap positions 1\u21945: `50817185` \u2192 `70815185`\n\n**Step 2\u21921:** Subtract 57689161: `70815185 - 57689161` = `13126024`\n\n**Step 1\u21920:** Swap positions 2\u21948: `13126024` \u2192 `14126023`\n\n## Verification (forward)\nStarting from 14126023 and applying all 22 steps produces 72246771 \u2713\n\nFINAL: 14126023"
+    },
+    "exe-8-1": {
+     "correct": true,
+     "extracted": "2725",
+     "text": "Looking at this problem, I need to trace through the loop for i=1 to 30, updating variables at each step.\n\n**Initial values:** v0=5, v1=25, v2=3, v3=28, v4=18, v5=6, v6=6\n\nI'll trace each iteration carefully, noting the key operations:\n1. v2 = (v2*2 + v3) % 997\n2. If v4%3==2: v0 = (v0+8) % 997\n3. v1,v4 = v4, (v1+i) % 997\n4. v2 = (v2 + v6*i) % 997\n5. v5 = (v5*2 + v0) % 997\n6. v3 = (v3*5 + v1) % 997\n\nAfter carefully tracing all 30 iterations:\n\n| i | v0 | v1 | v2 | v3 | v4 | v5 | v4%3 |\n|---|-----|-----|-----|-----|-----|-----|------|\n| 0 | 5 | 25 | 3 | 28 | 18 | 6 | 6 |\n| 1 | 5 | 18 | 40 | 158 | 26 | 17 | 0 |\n| 2 | 13 | 26 | 250 | 816 | 20 | 47 | 2 |\n| 3 | 21 | 20 | 337 | 112 | 29 | 115 | 2 |\n| 4 | 29 | 29 | 810 | 589 | 24 | 259 | 0 |\n| 5 | 29 | 24 | 245 | 975 | 34 | 547 | 1 |\n| 6 | 29 | 34 | 504 | 921 | 30 | 126 | 0 |\n| 7 | 29 | 30 | 974 | 647 | 41 | 281 | 0 |\n| 8 | 37 | 41 | 649 | 285 | 38 | 599 | 2 |\n| 9 | 45 | 38 | 640 | 466 | 50 | 246 | 2 |\n| 10 | 53 | 50 | 809 | 386 | 48 | 545 | 0 |\n| 11 | 53 | 48 | 76 | 981 | 61 | 146 | 0 |\n| 12 | 53 | 61 | 208 | 978 | 60 | 345 | 0 |\n| 13 | 53 | 60 | 475 | 962 | 74 | 743 | 0 |\n| 14 | 61 | 74 | 2 | 896 | 74 | 550 | 2 |\n| 15 | 69 | 74 | 990 | 566 | 89 | 172 | 2 |\n| 16 | 77 | 89 | 648 | 925 | 90 | 421 | 0 |\n| 17 | 77 | 90 | 329 | 727 | 106 | 919 | 1 |\n| 18 | 77 | 106 | 496 | 750 | 108 | 918 | 0 |\n| 19 | 77 | 108 | 859 | 867 | 125 | 916 | 0 |\n| 20 | 85 | 125 | 711 | 472 | 128 | 920 | 2 |\n| 21 | 93 | 128 | 26 | 494 | 146 | 936 | 2 |\n| 22 | 101 | 146 | 678 | 622 | 150 | 976 | 0 |\n| 23 | 101 | 150 | 122 | 269 | 169 | 59 | 1 |\n| 24 | 101 | 169 | 657 | 517 | 174 | 219 | 0 |\n| 25 | 101 | 174 | 984 | 765 | 194 | 539 | 2 |\n| 26 | 109 | 194 | 895 | 31 | 200 | 190 | 2 |\n| 27 | 117 | 200 | 986 | 355 | 221 | 497 | 2 |\n| 28 | 125 | 221 | 501 | 999 | 228 | 122 | 0 |\n| 29 | 125 | 228 | 181 | 238 | 250 | 369 | 1 |\n| 30 | 125 | 250 | 780 | 443 | 258 | 863 | 1 |\n\n**Final values:** v0=125, v1=250, v2=780, v3=443, v4=258, v5=863, v6=6\n\n**Sum:** 125 + 250 + 780 + 443 + 258 + 863 + 6 = 2725\n\nFINAL: 2725"
+    },
+    "inv-32-0": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-0": {
+     "correct": true,
+     "extracted": "2784",
+     "text": "Looking at this problem, I need to carefully trace through 36 iterations of the loop, tracking all 8 variables.\n\n**Initial values:** v0=21, v1=26, v2=7, v3=20, v4=1, v5=26, v6=20, v7=2\n\n**Key observations:** v4=1 throughout (never modified), v2=7 throughout (never modified). v4%3=1\u22602, so the `v4%3==2` branch never executes.\n\nI traced all 36 iterations carefully, paying attention to:\n- Simultaneous assignments (v0,v6 and v3,v1 swap patterns)\n- Modular arithmetic at each step\n- The v0%3==1 condition triggering v7+=7\n\n**Critical check at i=36:** v1 = (23 + 362\u00d736) % 997 = 13055 % 997 = 94 (not 84 - careful arithmetic needed)\n\n**Final state after i=36:**\n- v0=345, v1=734, v2=7, v3=94, v4=1, v5=885, v6=362, v7=356\n\n**Sum:** 345 + 734 + 7 + 94 + 1 + 885 + 362 + 356 = 2784\n\nFINAL: 2784"
+    },
+    "inv-32-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-10-1": {
+     "correct": true,
+     "extracted": "1943",
+     "text": "Looking at this program, I need to trace through 36 iterations of a loop.\n\n**Key observation:** v7 = 25 never changes, and 25 % 3 = 1, so both `if` conditions (v7 % 3 == 0 and v7 % 3 == 2) are never true.\n\n**Initial values:** v0=7, v1=11, v2=19, v3=28, v4=5, v5=13, v6=7, v7=25\n\n**Each iteration i:**\n1. v2 = (v2 * 5 + v3) % 997\n2. v2, v0 = v0, (v2 + i) % 997 (swap v2 with old v0, set new v0)\n3. v5 = (v5 * 5 + v4) % 997\n4. v5 = (v5 * 2 + v6) % 997\n5. v4 = (v4 + v7 * i) % 997\n\nI traced all 36 iterations carefully. Here are key checkpoints:\n\n| After i | v0 | v2 | v4 | v5 |\n|---------|-----|-----|-----|-----|\n| 1 | 124 | 7 | 30 | 147 |\n| 5 | 297 | 357 | 380 | 73 |\n| 10 | 828 | 658 | 383 | 878 |\n| 15 | 722 | 5 | 14 | 401 |\n| 20 | 9 | 376 | 270 | 706 |\n| 25 | 677 | 527 | 154 | 859 |\n| 30 | 764 | 308 | 663 | 817 |\n| 35 | 463 | 519 | 800 | 641 |\n| 36 | 665 | 463 | 703 | 41 |\n\n**Final values:**\n- v0 = 665, v1 = 11, v2 = 463, v3 = 28, v4 = 703, v5 = 41, v6 = 7, v7 = 25\n\n**Sum:** 665 + 11 + 463 + 28 + 703 + 41 + 7 + 25 = 1943\n\nFINAL: 1943"
+    },
+    "inv-45-0": {
+     "correct": true,
+     "extracted": "66990326",
+     "text": "Looking at this problem, I need to reverse 45 steps starting from the final result 13715443.\n\n## Working Backwards (Key Steps)\n\n**Steps 45\u219243:** Reverse rotate left 2 \u2192 rotate right 2: `13715443` \u2192 `43137154`\nThen multiply by 23\u207b\u00b9 (mod 10\u2078) = 47826087: `43137154 \u00d7 47826087 mod 10\u2078 = 80136398`\nThen reverse: `89363108`\n\n**Step 42:** Subtract 21680938: `89363108 - 21680938 = 67682170`\n\n**Step 41:** Reverse rotate left 3 \u2192 rotate right 3: `67682170` \u2192 `17067682`\n\n**Steps 40\u219239:** Swap positions 2,3 then apply inverse of (7d+6) mod 10 using (3d+2):\n`17067682` \u2192 swap \u2192 `10767682` \u2192 digit transform \u2192 `52303068`\n\n**Steps 38\u219237:** Subtract 99992679, then subtract 65368021: `52310389` \u2192 `86942368`\n\n**Step 36:** Swap positions 2,6: `86942368` \u2192 `83942668`\n\n**Step 35:** Multiply by 11\u207b\u00b9 = 90909091: `83942668 \u00d7 90909091 mod 10\u2078 = 43994788`\n\n**Step 34:** Inverse of (3d+6) mod 10 using (7d+8): `43994788` \u2192 `69116744`\n\n**Steps 33\u219231:** Reverse rotate left 1, reverse, rotate left 2: `69116744` \u2192 `47611964` \u2192 `61196447`\n\n**Steps 30\u219227:** Multiply by 27\u207b\u00b9, then 7\u207b\u00b9, then reverse, then 23\u207b\u00b9:\n`61196447` \u2192 `28192461` \u2192 `32598923` \u2192 `32989523` \u2192 `97086501`\n\n**Steps 26\u219224:** Subtract 76734145, 63339141, 35952379: `97086501` \u2192 `20352356` \u2192 `57013215` \u2192 `21060836`\n\n**Steps 23\u219221:** (RotL6 + RotL2 = identity) Reverse: `21060836` \u2192 `63806012`\n\n**Steps 20\u219218:** Subtract 42841382, apply inverse of (9d) mod 10, subtract 77046266:\n`63806012` \u2192 `20964630` \u2192 `80146470` \u2192 `03100204`\n\n**Steps 17\u219214:** Reverse rotate left 3, swap pos 4,7, multiply by 9\u207b\u00b9, multiply by 13\u207b\u00b9:\n`03100204` \u2192 `20403100` \u2192 `20403100` \u2192 `91155900` \u2192 `14704300`\n\n**Steps 13\u219211:** Reverse, inverse of (3d+1), inverse of (9d+1):\n`14704300` \u2192 `00340741` \u2192 `33413210` \u2192 `88708901`\n\n**Steps 10\u21926:** Swap pos 2,5; swap pos 2,8; reverse rotate left 3; swap pos 1,5; subtract 31344411:\n`88708901` \u2192 `88708901` \u2192 `81708908` \u2192 `90881708` \u2192 `10889708` \u2192 `79545297`\n\n**Steps 5\u21921:** Reverse, reverse rotate left 1, multiply by 11\u207b\u00b9, reverse, subtract 29784108:\n`79545297` \u2192 `79254597` \u2192 `77925459` \u2192 `43447769` \u2192 `96774434` \u2192 `66990326`\n\n## Verification (Forward)\n\nStarting with `66990326` and applying all 45 steps produces `13715443` \u2713\n\nFINAL: 66990326"
+    },
+    "exe-12-0": {
+     "correct": true,
+     "extracted": "2785",
+     "text": "Looking at this problem, I need to trace through 42 iterations of the loop exactly.\n\n**Initial values:** v0=7, v1=21, v2=15, v3=19, v4=18, v5=14, v6=4, v7=16, v8=14\n\nI'll trace each iteration carefully, noting the key operations:\n1. `v8 = (v8 * 3 + v3) % 997`\n2. `v2, v7 = v7, (v2 + i) % 997` (swap v2 with v7, new v7 = old v2 + i)\n3. `v0 = (v0 + v1 * i) % 997`\n4. `v0 = (v0 + v2 * i) % 997` (using updated v2)\n5. If v5%3==1: `v7 = (v7 + 7) % 997`\n6. `v8 = (v8 * 5 + v0) % 997`\n7. `v5 = (v5 * 5 + v0) % 997`\n8. If v7%3==1: `v5 = (v5 + 2) % 997`\n\nAfter carefully executing all 42 iterations (tracking each variable at each step), the final values are:\n\n- v0 = 990\n- v1 = 21\n- v2 = 484\n- v3 = 19\n- v4 = 18\n- v5 = 375\n- v6 = 4\n- v7 = 555\n- v8 = 319\n\n**Sum:** 990 + 21 + 484 + 19 + 18 + 375 + 4 + 555 + 319 = 2785\n\nFINAL: 2785"
+    },
+    "inv-45-1": {
+     "correct": false,
+     "extracted": null,
+     "text": null
+    },
+    "exe-12-1": {
+     "correct": true,
+     "extracted": "1848",
+     "text": "Looking at this program, I need to trace through 42 iterations of the loop.\n\n**Key observations:**\n- v5 = 13 (never changes), 13 % 3 = 1, so `v5 % 3 == 2` is always FALSE\n- v6 = 8 (never changes), 8 % 3 = 2, so `v6 % 3 == 0` and `v6 % 3 == 1` are always FALSE\n\nThis means only v0 (conditionally), v4, v7, v3, and v8 get updated.\n\nI carefully traced all 42 iterations, tracking v0, v3, v4, v7, v8 (v1=9, v2=22, v5=13, v6=8 remain constant).\n\n**Critical correction at i=38:** 13\u00d738 = 494 (not 484), so v4 = (806+494) % 997 = 303 (not 293). This error propagated through iterations 38-42.\n\n**Final state after i=42:**\n- v0=80, v1=9, v2=22, v3=492, v4=201, v5=13, v6=8, v7=479, v8=544\n\n**Sum:** 80+9+22+492+201+13+8+479+544 = 1848\n\nFINAL: 1848"
+    }
+   }
   }
  },
  "usage": {
@@ -1348,6 +1993,30 @@
   "nvidia/nemotron-3.5-lightning:free": {
    "prompt": 3638,
    "completion": 209677
+  },
+  "inclusionai/ling-3.0-flash-fin:free": {
+   "prompt": 8301,
+   "completion": 369050
+  },
+  "dots-studio/dots-3-note-preview:free": {
+   "prompt": 9269,
+   "completion": 517040
+  },
+  "liquid/lfm-2.5-2.6b:free": {
+   "prompt": 611,
+   "completion": 16930
+  },
+  "thinkingmachines/inkling-small:free": {
+   "prompt": 0,
+   "completion": 0
+  },
+  "poolside/laguna-s-2.1:free": {
+   "prompt": 205,
+   "completion": 4366
+  },
+  "inclusionai/ling-3.0-flash-sante:free": {
+   "prompt": 7740,
+   "completion": 312808
   }
  }
 }

@@ -3,47 +3,47 @@
   {
    "slug": "inclusionai/ling-3.0-flash-fin:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-02T11:25:07+00:00",
+   "last_exit": 0,
+   "note": "**Ling 3.0 Flash Fin (free)** (inclusionai/ling-3.0-flash-fin:free) - recall 0.24 (famous+mid 0.35, obscure 0.00; #12/17 on file, nearest kimi-k2-0905 0.24, qwen3.6-plus 0.24); retro-today Brier 0.291 vs base rate 0.198 (n=22, |p-.5| 0.24, 1 correct commits on the scored set); domain bank 71/72 meas"
   },
   {
    "slug": "dots-studio/dots-3-note-preview:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-02T15:20:38+00:00",
+   "last_exit": 0,
+   "note": "**Dots Studio: Dots3-Note Preview (free)** (dots-studio/dots-3-note-preview:free) - recall 0.12 (famous+mid 0.17, obscure 0.00; #17/18 on file, nearest claude-haiku-4.5 0.09, nemotron-3.5-lightning:free 0.18); retro-today Brier 0.311 vs base rate 0.198 (n=22, |p-.5| 0.27, 1 correct commits on the sc"
   },
   {
    "slug": "liquid/lfm-2.5-2.6b:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-02T18:54:16+00:00",
+   "last_exit": 0,
+   "note": "**LiquidAI: LFM2.5-2.6B (free)** (liquid/lfm-2.5-2.6b:free) - recall 0.03 (famous+mid 0.04, obscure 0.00; #19/19 on file, nearest claude-haiku-4.5 0.09, dots-3-note-preview:free 0.12); retro-today Brier 0.327 vs base rate 0.198 (n=22, |p-.5| 0.19, 0 correct commits on the scored set); domain bank 28"
   },
   {
    "slug": "thinkingmachines/inkling-small:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-02T20:13:59+00:00",
+   "last_exit": 0,
+   "note": "**Thinking Machines: Inkling Small (free)** (thinkingmachines/inkling-small:free) - recall 0.00 (famous+mid 0.00, obscure 0.00; #20/20 on file, nearest lfm-2.5-2.6b:free 0.03, claude-haiku-4.5 0.09); domain bank 0/0 measurable (80 censored, median - ctok/solved, effort on); frontier ladder 0/0, 24 c"
   },
   {
    "slug": "poolside/laguna-s-2.1:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "running",
+   "last_run": "2026-09-03T00:14:59+00:00",
+   "last_exit": 3,
+   "note": "stopped at the day cap"
   },
   {
    "slug": "thinkingmachines/inkling:free",

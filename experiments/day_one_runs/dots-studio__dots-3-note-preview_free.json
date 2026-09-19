@@ -1,0 +1,179 @@
+{
+ "slug": "dots-studio/dots-3-note-preview:free",
+ "generated_at": "2026-09-02T18:54:16+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "Dots Studio: Dots3-Note Preview (free)",
+  "created": "2026-08-14",
+  "context_length": 512000,
+  "max_completion_tokens": 460800,
+  "input_modalities": [
+   "text",
+   "image"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": "2026-09-30",
+  "hugging_face_id": null
+ },
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "289 requests, 0 429 retries, 0 max_tokens clamps, 4.6 min paced",
+  "_elapsed": "214 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.11764705882352941,
+   "tiers": {
+    "famous": 0.16666666666666666,
+    "mid": 0.18181818181818182,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.17391304347826086,
+   "rank": 17,
+   "of": 18,
+   "nearest": [
+    [
+     "anthropic/claude-haiku-4.5",
+     0.08823529411764706
+    ],
+    [
+     "nvidia/nemotron-3.5-lightning:free",
+     0.17647058823529413
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.3106318181818182,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.5,
+   "boldness": 0.27136363636363636,
+   "commits": 7,
+   "correct_commits": 5,
+   "correct_commits_on_scored_set": 1
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 77,
+   "solved": 74,
+   "accuracy": 0.961038961038961,
+   "censored": 3,
+   "families": {
+    "audit": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 2,
+     "n": 3,
+     "censored": 2
+    },
+    "casework": {
+     "solved": 9,
+     "n": 10,
+     "censored": 0
+    },
+    "inv": {
+     "solved": 6,
+     "n": 6,
+     "censored": 1
+    },
+    "longctx": {
+     "solved": 9,
+     "n": 10,
+     "censored": 0
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 14,
+     "n": 14,
+     "censored": 0
+    },
+    "toolsim": {
+     "solved": 14,
+     "n": 14,
+     "censored": 0
+    }
+   },
+   "ctok_per_solved_median": 1436.5,
+   "ctok_per_solved_mean": 6970.918918918919,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 245274,
+    "completion": 577633
+   }
+  },
+  "frontier": {
+   "n": 23,
+   "solved": 23,
+   "censored": 1,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 1.0,
+   "families": {
+    "execution": {
+     "solved": 12,
+     "n": 12,
+     "censored": 0
+    },
+    "inversion": {
+     "solved": 11,
+     "n": 11,
+     "censored": 1
+    }
+   }
+  },
+  "portfolio": {
+   "n": 26,
+   "solved": 24,
+   "censored": 4,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.9230769230769231,
+   "families": {
+    "bughunt": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 2,
+     "n": 2,
+     "censored": 4
+    },
+    "spec": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}

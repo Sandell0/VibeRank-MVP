@@ -1,0 +1,178 @@
+{
+ "slug": "inclusionai/ling-3.0-flash-fin:free",
+ "generated_at": "2026-09-02T15:20:38+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "Ling 3.0 Flash Fin (free)",
+  "created": "2026-08-27",
+  "context_length": 262144,
+  "max_completion_tokens": 32768,
+  "input_modalities": [
+   "text"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": null
+ },
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "295 requests, 0 429 retries, 154 max_tokens clamps, 6.5 min paced",
+  "_elapsed": "235 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.23529411764705882,
+   "tiers": {
+    "famous": 0.3333333333333333,
+    "mid": 0.36363636363636365,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.34782608695652173,
+   "rank": 12,
+   "of": 17,
+   "nearest": [
+    [
+     "moonshotai/kimi-k2-0905",
+     0.23529411764705882
+    ],
+    [
+     "qwen/qwen3.6-plus",
+     0.23529411764705882
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.2908272727272727,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.5454545454545454,
+   "boldness": 0.24000000000000002,
+   "commits": 8,
+   "correct_commits": 3,
+   "correct_commits_on_scored_set": 1
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 72,
+   "solved": 71,
+   "accuracy": 0.9861111111111112,
+   "censored": 8,
+   "families": {
+    "audit": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "inv": {
+     "solved": 4,
+     "n": 4,
+     "censored": 3
+    },
+    "longctx": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 13,
+     "n": 14,
+     "censored": 0
+    },
+    "toolsim": {
+     "solved": 14,
+     "n": 14,
+     "censored": 0
+    }
+   },
+   "ctok_per_solved_median": 1085,
+   "ctok_per_solved_mean": 3427.3661971830984,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 253440,
+    "completion": 250746
+   }
+  },
+  "frontier": {
+   "n": 21,
+   "solved": 20,
+   "censored": 3,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 0.9523809523809523,
+   "families": {
+    "execution": {
+     "solved": 11,
+     "n": 12,
+     "censored": 0
+    },
+    "inversion": {
+     "solved": 9,
+     "n": 9,
+     "censored": 3
+    }
+   }
+  },
+  "portfolio": {
+   "n": 24,
+   "solved": 18,
+   "censored": 6,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.75,
+   "families": {
+    "bughunt": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "spec": {
+     "solved": 1,
+     "n": 6,
+     "censored": 0
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}

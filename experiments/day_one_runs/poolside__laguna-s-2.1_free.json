@@ -1,0 +1,38 @@
+{
+ "slug": "poolside/laguna-s-2.1:free",
+ "generated_at": "2026-09-02T20:44:40+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "Poolside: Laguna S 2.1 (free)",
+  "created": "2026-07-21",
+  "context_length": 262144,
+  "max_completion_tokens": 32768,
+  "input_modalities": [
+   "text"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": "poolside/Laguna-S-2.1"
+ },
+ "step_results": {
+  "recall": "stopped: poolside/laguna-s-2.1:free: OpenRouter returned HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day-high-balance. \",\"code\":429,\"metadata\":{\" (0/86)",
+  "retro": "skipped: daily request cap (re-run tomorrow)",
+  "domain": "skipped: daily request cap (re-run tomorrow)",
+  "frontier": "skipped: daily request cap (re-run tomorrow)",
+  "portfolio": "skipped: daily request cap (re-run tomorrow)",
+  "_target_calls": "5 requests, 0 429 retries, 0 max_tokens clamps, 0.0 min paced",
+  "_elapsed": "0 min"
+ },
+ "steps": {
+  "recall": null,
+  "retro": null,
+  "domain": null,
+  "frontier": null,
+  "portfolio": null,
+  "interview": null
+ }
+}

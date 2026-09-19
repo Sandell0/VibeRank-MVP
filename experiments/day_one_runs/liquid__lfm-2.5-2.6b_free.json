@@ -1,0 +1,178 @@
+{
+ "slug": "liquid/lfm-2.5-2.6b:free",
+ "generated_at": "2026-09-02T20:13:59+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "LiquidAI: LFM2.5-2.6B (free)",
+  "created": "2026-08-11",
+  "context_length": 65536,
+  "max_completion_tokens": 8192,
+  "input_modalities": [
+   "text"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": "LiquidAI/LFM2.5-2.6B"
+ },
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "353 requests, 9 429 retries, 344 max_tokens clamps, 6.3 min paced",
+  "_elapsed": "80 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.029411764705882353,
+   "tiers": {
+    "famous": 0.0,
+    "mid": 0.09090909090909091,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.043478260869565216,
+   "rank": 19,
+   "of": 19,
+   "nearest": [
+    [
+     "anthropic/claude-haiku-4.5",
+     0.08823529411764706
+    ],
+    [
+     "dots-studio/dots-3-note-preview:free",
+     0.11764705882352941
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.32654090909090905,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.5454545454545454,
+   "boldness": 0.19318181818181818,
+   "commits": 2,
+   "correct_commits": 1,
+   "correct_commits_on_scored_set": 0
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 52,
+   "solved": 28,
+   "accuracy": 0.5384615384615384,
+   "censored": 28,
+   "families": {
+    "audit": {
+     "solved": 6,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 2,
+     "n": 10,
+     "censored": 0
+    },
+    "inv": {
+     "solved": 0,
+     "n": 0,
+     "censored": 7
+    },
+    "longctx": {
+     "solved": 3,
+     "n": 6,
+     "censored": 4
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 1,
+     "n": 8,
+     "censored": 6
+    },
+    "toolsim": {
+     "solved": 6,
+     "n": 8,
+     "censored": 6
+    }
+   },
+   "ctok_per_solved_median": 1930.0,
+   "ctok_per_solved_mean": 2341.1071428571427,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 152934,
+    "completion": 184775
+   }
+  },
+  "frontier": {
+   "n": 3,
+   "solved": 1,
+   "censored": 21,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 0.3333333333333333,
+   "families": {
+    "execution": {
+     "solved": 1,
+     "n": 3,
+     "censored": 9
+    },
+    "inversion": {
+     "solved": 0,
+     "n": 0,
+     "censored": 12
+    }
+   }
+  },
+  "portfolio": {
+   "n": 12,
+   "solved": 4,
+   "censored": 18,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.3333333333333333,
+   "families": {
+    "bughunt": {
+     "solved": 1,
+     "n": 2,
+     "censored": 4
+    },
+    "docfact": {
+     "solved": 2,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "spec": {
+     "solved": 0,
+     "n": 2,
+     "censored": 4
+    },
+    "zebra": {
+     "solved": 1,
+     "n": 2,
+     "censored": 4
+    }
+   }
+  },
+  "interview": null
+ }
+}
