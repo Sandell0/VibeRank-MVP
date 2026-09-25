@@ -421,3 +421,19 @@ class PlanTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_scoped_est_cost_ignores_other_models_in_shared_file():
+    """2026-09-25: phantom spend from earlier $0 models tripped the domain
+    ceiling for every new free model."""
+    import types
+    from experiments import day_one
+
+    mod = types.SimpleNamespace(PRICE={"new/model:free": (0.0, 0.0)})
+    data = {"usage": {
+        "old/model:free": {"prompt": 10**9, "completion": 10**9},
+        "new/model:free": {"prompt": 5000, "completion": 5000},
+    }}
+    assert day_one.scoped_est_cost(mod, "new/model:free")(data) == 0.0
+    mod.PRICE["new/model:free"] = (1.0, 2.0)
+    assert day_one.scoped_est_cost(mod, "new/model:free")(data) == 0.015

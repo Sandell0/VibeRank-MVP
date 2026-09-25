@@ -353,6 +353,7 @@ def step_retro(ctx: Context) -> None:
     rv.PRICE[ctx.slug] = ctx.price
     rv.DATA_PATH = rt.DATA_PATH
     rv.COST_CEILING_USD = ctx.cost_ceiling
+    rv.est_cost = scoped_est_cost(rv, ctx.slug)
     data["responses"].setdefault(ctx.slug, {})
     data["usage"].setdefault(ctx.slug, {"prompt": 0, "completion": 0})
     data.setdefault("effort_applied", {})
@@ -368,12 +369,26 @@ def step_retro(ctx: Context) -> None:
     )
 
 
+def scoped_est_cost(module, slug: str):
+    """The instruments' est_cost() sums every model in the shared data file
+    and prices unknown slugs at a paid default, so once enough earlier free
+    models accumulated (2026-09-25: ~$19 of phantom spend from $0 routes) the
+    domain step skipped all 80 cells of every new free model as "cost
+    ceiling". The ceiling guards this run's spend, so count only this model."""
+    def est_cost(data):
+        u = data["usage"].get(slug, {"prompt": 0, "completion": 0})
+        pi, po = module.PRICE.get(slug, (1.0, 5.0))
+        return u["prompt"] / 1e6 * pi + u["completion"] / 1e6 * po
+    return est_cost
+
+
 def step_domain(ctx: Context) -> None:
     import experiments.distilled_efficiency as de
 
     de.MODELS = ((ctx.slug, ctx.elo or 0, ctx.price),)
     de.PRICE[ctx.slug] = ctx.price
     de.COST_CEILING_USD = ctx.cost_ceiling
+    de.est_cost = scoped_est_cost(de, ctx.slug)
     de.openrouter_client = ctx.factory
     de.main()
 
