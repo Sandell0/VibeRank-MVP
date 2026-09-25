@@ -1,0 +1,156 @@
+{
+ "slug": "minimax/minimax-m3:free",
+ "generated_at": "2026-09-25T06:24:15+00:00",
+ "public_elo": null,
+ "catalog": {},
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "160 requests, 0 429 retries, 0 max_tokens clamps, 7.6 min paced",
+  "_elapsed": "8 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.0,
+   "tiers": {
+    "famous": 0.0,
+    "mid": 0.0,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.0,
+   "rank": 36,
+   "of": 39,
+   "nearest": [
+    [
+     "thinkingmachines/inkling-small:free",
+     0.0
+    ],
+    [
+     "thinkingmachines/inkling:free",
+     0.0
+    ]
+   ]
+  },
+  "retro": {
+   "n": 0,
+   "commits": 0,
+   "correct_commits": 0
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 0,
+   "solved": 0,
+   "accuracy": null,
+   "censored": 80,
+   "families": {
+    "audit": {
+     "solved": 0,
+     "n": 0,
+     "censored": 10
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 0,
+     "n": 0,
+     "censored": 10
+    },
+    "inv": {
+     "solved": 0,
+     "n": 0,
+     "censored": 7
+    },
+    "longctx": {
+     "solved": 0,
+     "n": 0,
+     "censored": 10
+    },
+    "repobug": {
+     "solved": 0,
+     "n": 0,
+     "censored": 10
+    },
+    "tableqa": {
+     "solved": 0,
+     "n": 0,
+     "censored": 14
+    },
+    "toolsim": {
+     "solved": 0,
+     "n": 0,
+     "censored": 14
+    }
+   },
+   "ctok_per_solved_median": null,
+   "ctok_per_solved_mean": null,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 0,
+    "completion": 0
+   }
+  },
+  "frontier": {
+   "n": 0,
+   "solved": 0,
+   "censored": 24,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": null,
+   "families": {
+    "execution": {
+     "solved": 0,
+     "n": 0,
+     "censored": 12
+    },
+    "inversion": {
+     "solved": 0,
+     "n": 0,
+     "censored": 12
+    }
+   }
+  },
+  "portfolio": {
+   "n": 0,
+   "solved": 0,
+   "censored": 30,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": null,
+   "families": {
+    "bughunt": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "docfact": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "spec": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "zebra": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    }
+   }
+  },
+  "interview": null
+ }
+}

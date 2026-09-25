@@ -1,0 +1,163 @@
+{
+ "slug": "mistral/zai-glm-5-3",
+ "generated_at": "2026-09-22T23:32:00+00:00",
+ "public_elo": null,
+ "catalog": {},
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "369 requests, 49 429 retries, 0 max_tokens clamps, 0.5 min paced",
+  "_elapsed": "86 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.3235294117647059,
+   "tiers": {
+    "famous": 0.5,
+    "mid": 0.45454545454545453,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.4782608695652174,
+   "rank": 8,
+   "of": 28,
+   "nearest": [
+    [
+     "moonshotai/kimi-k2.6",
+     0.3235294117647059
+    ],
+    [
+     "deepseek/deepseek-v4-pro",
+     0.3235294117647059
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.4258681818181818,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.4090909090909091,
+   "boldness": 0.30863636363636365,
+   "commits": 3,
+   "correct_commits": 0,
+   "correct_commits_on_scored_set": 0
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 74,
+   "solved": 71,
+   "accuracy": 0.9594594594594594,
+   "censored": 6,
+   "families": {
+    "audit": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 2,
+     "n": 2,
+     "censored": 3
+    },
+    "casework": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "inv": {
+     "solved": 4,
+     "n": 6,
+     "censored": 1
+    },
+    "longctx": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 12,
+     "n": 12,
+     "censored": 2
+    },
+    "toolsim": {
+     "solved": 13,
+     "n": 14,
+     "censored": 0
+    }
+   },
+   "ctok_per_solved_median": 828,
+   "ctok_per_solved_mean": 3176.1408450704225,
+   "effort_applied": false,
+   "usage": {
+    "prompt": 218620,
+    "completion": 277500
+   }
+  },
+  "frontier": {
+   "n": 24,
+   "solved": 22,
+   "censored": 0,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 0.9166666666666666,
+   "families": {
+    "execution": {
+     "solved": 11,
+     "n": 12,
+     "censored": 0
+    },
+    "inversion": {
+     "solved": 11,
+     "n": 12,
+     "censored": 0
+    }
+   }
+  },
+  "portfolio": {
+   "n": 28,
+   "solved": 26,
+   "censored": 2,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.9285714285714286,
+   "families": {
+    "bughunt": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 4,
+     "n": 4,
+     "censored": 2
+    },
+    "spec": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}

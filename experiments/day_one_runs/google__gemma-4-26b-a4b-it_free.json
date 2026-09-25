@@ -1,0 +1,180 @@
+{
+ "slug": "google/gemma-4-26b-a4b-it:free",
+ "generated_at": "2026-09-25T09:46:14+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "Google: Gemma 4 26B A4B  (free)",
+  "created": "2026-04-03",
+  "context_length": 262144,
+  "max_completion_tokens": 32768,
+  "input_modalities": [
+   "image",
+   "text",
+   "video"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": "google/gemma-4-26B-A4B-it"
+ },
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "163 requests, 45 429 retries, 118 max_tokens clamps, 0.0 min paced",
+  "_elapsed": "154 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.14705882352941177,
+   "tiers": {
+    "famous": 0.25,
+    "mid": 0.18181818181818182,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.21739130434782608,
+   "rank": 25,
+   "of": 39,
+   "nearest": [
+    [
+     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+     0.14705882352941177
+    ],
+    [
+     "google/gemma-4-31b-it:free",
+     0.14705882352941177
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.31325909090909093,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.5454545454545454,
+   "boldness": 0.29045454545454547,
+   "commits": 3,
+   "correct_commits": 1,
+   "correct_commits_on_scored_set": 0
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 46,
+   "solved": 43,
+   "accuracy": 0.9347826086956522,
+   "censored": 34,
+   "families": {
+    "audit": {
+     "solved": 2,
+     "n": 2,
+     "censored": 8
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 8,
+     "n": 8,
+     "censored": 2
+    },
+    "inv": {
+     "solved": 1,
+     "n": 4,
+     "censored": 3
+    },
+    "longctx": {
+     "solved": 6,
+     "n": 6,
+     "censored": 4
+    },
+    "repobug": {
+     "solved": 9,
+     "n": 9,
+     "censored": 1
+    },
+    "tableqa": {
+     "solved": 10,
+     "n": 10,
+     "censored": 4
+    },
+    "toolsim": {
+     "solved": 7,
+     "n": 7,
+     "censored": 7
+    }
+   },
+   "ctok_per_solved_median": 2797,
+   "ctok_per_solved_mean": 5410.116279069767,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 87337,
+    "completion": 303284
+   }
+  },
+  "frontier": {
+   "n": 24,
+   "solved": 10,
+   "censored": 0,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 0.4166666666666667,
+   "families": {
+    "execution": {
+     "solved": 5,
+     "n": 12,
+     "censored": 0
+    },
+    "inversion": {
+     "solved": 5,
+     "n": 12,
+     "censored": 0
+    }
+   }
+  },
+  "portfolio": {
+   "n": 30,
+   "solved": 16,
+   "censored": 0,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.5333333333333333,
+   "families": {
+    "bughunt": {
+     "solved": 2,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 6,
+     "censored": 0
+    },
+    "spec": {
+     "solved": 3,
+     "n": 6,
+     "censored": 0
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}

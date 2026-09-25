@@ -1,6 +1,6 @@
 {
  "slug": "poolside/laguna-s-2.1:free",
- "generated_at": "2026-09-02T20:44:40+00:00",
+ "generated_at": "2026-09-23T07:07:10+00:00",
  "public_elo": null,
  "catalog": {
   "name": "Poolside: Laguna S 2.1 (free)",
@@ -19,20 +19,160 @@
   "hugging_face_id": "poolside/Laguna-S-2.1"
  },
  "step_results": {
-  "recall": "stopped: poolside/laguna-s-2.1:free: OpenRouter returned HTTP 429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day-high-balance. \",\"code\":429,\"metadata\":{\" (0/86)",
-  "retro": "skipped: daily request cap (re-run tomorrow)",
-  "domain": "skipped: daily request cap (re-run tomorrow)",
-  "frontier": "skipped: daily request cap (re-run tomorrow)",
-  "portfolio": "skipped: daily request cap (re-run tomorrow)",
-  "_target_calls": "5 requests, 0 429 retries, 0 max_tokens clamps, 0.0 min paced",
-  "_elapsed": "0 min"
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "136 requests, 66 429 retries, 70 max_tokens clamps, 0.0 min paced",
+  "_elapsed": "455 min"
  },
  "steps": {
-  "recall": null,
-  "retro": null,
-  "domain": null,
-  "frontier": null,
-  "portfolio": null,
+  "recall": {
+   "n": 34,
+   "accuracy": 0.058823529411764705,
+   "tiers": {
+    "famous": 0.08333333333333333,
+    "mid": 0.09090909090909091,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.08695652173913043,
+   "rank": 24,
+   "of": 28,
+   "nearest": [
+    [
+     "liquid/lfm-2.5-2.6b:free",
+     0.029411764705882353
+    ],
+    [
+     "qwen/qwen3.8-27b:free",
+     0.029411764705882353
+    ]
+   ]
+  },
+  "retro": {
+   "n": 22,
+   "frozen_set": 22,
+   "brier": 0.23240454545454545,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.6363636363636364,
+   "boldness": 0.2168181818181818,
+   "commits": 12,
+   "correct_commits": 9,
+   "correct_commits_on_scored_set": 5
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 69,
+   "solved": 64,
+   "accuracy": 0.927536231884058,
+   "censored": 11,
+   "families": {
+    "audit": {
+     "solved": 9,
+     "n": 10,
+     "censored": 0
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "inv": {
+     "solved": 3,
+     "n": 4,
+     "censored": 3
+    },
+    "longctx": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "repobug": {
+     "solved": 10,
+     "n": 10,
+     "censored": 0
+    },
+    "tableqa": {
+     "solved": 11,
+     "n": 12,
+     "censored": 2
+    },
+    "toolsim": {
+     "solved": 11,
+     "n": 13,
+     "censored": 1
+    }
+   },
+   "ctok_per_solved_median": 1163.0,
+   "ctok_per_solved_mean": 2691.984375,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 239046,
+    "completion": 201146
+   }
+  },
+  "frontier": {
+   "n": 15,
+   "solved": 11,
+   "censored": 9,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 0.7333333333333333,
+   "families": {
+    "execution": {
+     "solved": 5,
+     "n": 7,
+     "censored": 5
+    },
+    "inversion": {
+     "solved": 6,
+     "n": 8,
+     "censored": 4
+    }
+   }
+  },
+  "portfolio": {
+   "n": 24,
+   "solved": 19,
+   "censored": 6,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 0.7916666666666666,
+   "families": {
+    "bughunt": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 5,
+     "n": 6,
+     "censored": 0
+    },
+    "knapsack": {
+     "solved": 0,
+     "n": 0,
+     "censored": 6
+    },
+    "spec": {
+     "solved": 2,
+     "n": 6,
+     "censored": 0
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
   "interview": null
  }
 }

@@ -1,6 +1,69 @@
 {
  "models": [
   {
+   "slug": "stealth/space-bunny-alpha",
+   "added": "2026-09-25T02:11:04+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T02:11:05+00:00",
+   "last_exit": 0,
+   "note": "**Space Bunny Alpha** (stealth/space-bunny-alpha) - recall 0.15 (famous+mid 0.22, obscure 0.00; #25/39 on file, nearest nemotron-3-nano-omni-30b-a3b-reasoning:free 0.15, gemma-4-26b-a4b-it:free 0.15); retro-today Brier 0.290 vs base rate 0.198 (n=22, |p-.5| 0.26, 1 correct commits on the scored set)"
+  },
+  {
+   "slug": "inclusionai/ling-3.0-flash-vl:free",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 2,
+   "status": "done",
+   "last_run": "2026-09-21T03:56:22+00:00",
+   "last_exit": 0,
+   "note": "**inclusionAI: Ling 3.0 Flash VL (free)** (inclusionai/ling-3.0-flash-vl:free) - recall 0.18 (famous+mid 0.26, obscure 0.00; #16/24 on file, nearest nemotron-3.5-lightning:free 0.18, ling-3.0-flash-sante:free 0.18); retro-today Brier 0.275 vs base rate 0.198 (n=22, |p-.5| 0.25, 1 correct commits on "
+  },
+  {
+   "slug": "nex-agi/nex-n2.5-pro:free",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 3,
+   "status": "done",
+   "last_run": "2026-09-22T04:04:39+00:00",
+   "last_exit": 0,
+   "note": "**Nex AGI: Nex-N2.5-Pro (free)** (nex-agi/nex-n2.5-pro:free) - recall 0.29 (famous+mid 0.43, obscure 0.00; #10/25 on file, nearest gpt-5.4-mini 0.29, qwen3.6-35b-a3b 0.29); retro-today Brier 0.393 vs base rate 0.198 (n=22, |p-.5| 0.29, 1 correct commits on the scored set); domain bank 71/77 measurab"
+  },
+  {
+   "slug": "nex-agi/nex-n2.5-mini:free",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-22T05:39:11+00:00",
+   "last_exit": 0,
+   "note": "**Nex AGI: Nex-N2.5-Mini (free)** (nex-agi/nex-n2.5-mini:free) - recall 0.32 (famous+mid 0.48, obscure 0.00; #8/26 on file, nearest kimi-k2.6 0.32, deepseek-v4-pro 0.32); retro-today Brier 0.373 vs base rate 0.198 (n=19, |p-.5| 0.34, 0 correct commits on the scored set); domain bank 58/73 measurable"
+  },
+  {
+   "slug": "inclusionai/ling-3.0-flash-sante:free",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-22T09:59:56+00:00",
+   "last_exit": 0,
+   "note": "**inclusionAI: Ling 3.0 Flash Sante (free)** (inclusionai/ling-3.0-flash-sante:free) - recall 0.18 (famous+mid 0.26, obscure 0.00; #18/26 on file, nearest nemotron-3.5-lightning:free 0.18, ling-3.0-flash-vl:free 0.18); retro-today Brier 0.292 vs base rate 0.198 (n=22, |p-.5| 0.25, 1 correct commits "
+  },
+  {
+   "slug": "qwen/qwen3.8-27b:free",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-22T09:59:57+00:00",
+   "last_exit": 0,
+   "note": "**Qwen: Qwen3.8 27B (free)** (qwen/qwen3.8-27b:free) - recall 0.03 (famous+mid 0.04, obscure 0.00; #24/27 on file, nearest lfm-2.5-2.6b:free 0.03, inkling-small:free 0.00); retro-today Brier 0.407 vs base rate 0.198 (n=7, |p-.5| 0.29, 1 correct commits on the scored set); domain bank 41/41 measurabl"
+  },
+  {
+   "slug": "mistral/zai-glm-5-3",
+   "added": "2026-09-20T03:43:26+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-22T22:06:21+00:00",
+   "last_exit": 0,
+   "note": "**mistral/zai-glm-5-3** (mistral/zai-glm-5-3) - recall 0.32 (famous+mid 0.48, obscure 0.00; #8/28 on file, nearest kimi-k2.6 0.32, deepseek-v4-pro 0.32); retro-today Brier 0.426 vs base rate 0.198 (n=22, |p-.5| 0.31, 0 correct commits on the scored set); domain bank 71/74 measurable (6 censored, med"
+  },
+  {
    "slug": "inclusionai/ling-3.0-flash-fin:free",
    "added": "2026-09-02T11:24:06+00:00",
    "attempts": 1,
@@ -39,110 +102,119 @@
   {
    "slug": "poolside/laguna-s-2.1:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 1,
-   "status": "running",
-   "last_run": "2026-09-03T00:14:59+00:00",
-   "last_exit": 3,
-   "note": "stopped at the day cap"
-  },
-  {
-   "slug": "thinkingmachines/inkling:free",
-   "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 2,
+   "status": "done",
+   "last_run": "2026-09-22T23:32:01+00:00",
+   "last_exit": 0,
+   "note": "**Poolside: Laguna S 2.1 (free)** (poolside/laguna-s-2.1:free) - recall 0.06 (famous+mid 0.09, obscure 0.00; #24/28 on file, nearest lfm-2.5-2.6b:free 0.03, qwen3.8-27b:free 0.03); retro-today Brier 0.232 vs base rate 0.198 (n=22, |p-.5| 0.22, 5 correct commits on the scored set); domain bank 64/69 "
   },
   {
    "slug": "poolside/laguna-xs-2.1:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-23T07:07:10+00:00",
+   "last_exit": 0,
+   "note": "**Poolside: Laguna XS 2.1 (free)** (poolside/laguna-xs-2.1:free) - recall 0.09 (famous+mid 0.13, obscure 0.00; #23/29 on file, nearest claude-haiku-4.5 0.09, dots-3-note-preview:free 0.12); retro-today Brier 0.247 vs base rate 0.198 (n=22, |p-.5| 0.22, 3 correct commits on the scored set); domain ba"
   },
   {
    "slug": "cohere/north-mini-code:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-23T13:06:42+00:00",
+   "last_exit": 0,
+   "note": "**Cohere: North Mini Code (free)** (cohere/north-mini-code:free) - recall 0.09 (famous+mid 0.13, obscure 0.00; #23/30 on file, nearest claude-haiku-4.5 0.09, laguna-xs-2.1:free 0.09); retro-today Brier 0.368 vs base rate 0.198 (n=20, |p-.5| 0.29, 1 correct commits on the scored set); domain bank 65/"
   },
   {
    "slug": "z-ai/glm-5.2:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T04:50:35+00:00",
+   "last_exit": 0,
+   "note": "**Z.ai: GLM 5.2 (free)** (z-ai/glm-5.2:free) - recall 0.24 (famous+mid 0.35, obscure 0.00; #17/39 on file, nearest kimi-k2-0905 0.24, qwen3.6-plus 0.24); retro-today Brier 0.312 vs base rate 0.198 (n=18, |p-.5| 0.27, 0 correct commits on the scored set); domain bank 52/57 measurable (23 censored, me"
   },
   {
    "slug": "nvidia/nemotron-3-ultra-550b-a55b:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T05:42:29+00:00",
+   "last_exit": 0,
+   "note": "**NVIDIA: Nemotron 3 Ultra (free)** (nvidia/nemotron-3-ultra-550b-a55b:free) - recall 0.29 (famous+mid 0.43, obscure 0.00; #12/39 on file, nearest gpt-5.4-mini 0.29, qwen3.6-35b-a3b 0.29); retro-today Brier 0.188 vs base rate 0.198 (n=18, |p-.5| 0.27, 0 correct commits on the scored set); domain ban"
   },
   {
    "slug": "minimax/minimax-m3:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T06:16:04+00:00",
+   "last_exit": 0,
+   "note": "**minimax/minimax-m3:free** (minimax/minimax-m3:free) - recall 0.00 (famous+mid 0.00, obscure 0.00; #36/39 on file, nearest inkling-small:free 0.00, inkling:free 0.00); domain bank 0/0 measurable (80 censored, median - ctok/solved, effort on); frontier ladder 0/0, 24 censored; portfolio ladder 0/0, "
   },
   {
    "slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T06:24:15+00:00",
+   "last_exit": 0,
+   "note": "**NVIDIA: Nemotron 3 Nano Omni (free)** (nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) - recall 0.15 (famous+mid 0.22, obscure 0.00; #25/39 on file, nearest gemma-4-26b-a4b-it:free 0.15, gemma-4-31b-it:free 0.15); retro-today Brier 0.217 vs base rate 0.198 (n=15, |p-.5| 0.25, 0 correct commits"
   },
   {
    "slug": "google/gemma-4-26b-a4b-it:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T07:12:09+00:00",
+   "last_exit": 0,
+   "note": "**Google: Gemma 4 26B A4B  (free)** (google/gemma-4-26b-a4b-it:free) - recall 0.15 (famous+mid 0.22, obscure 0.00; #25/39 on file, nearest nemotron-3-nano-omni-30b-a3b-reasoning:free 0.15, gemma-4-31b-it:free 0.15); retro-today Brier 0.313 vs base rate 0.198 (n=22, |p-.5| 0.29, 0 correct commits on "
   },
   {
    "slug": "google/gemma-4-31b-it:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T09:46:14+00:00",
+   "last_exit": 0,
+   "note": "**Google: Gemma 4 31B (free)** (google/gemma-4-31b-it:free) - recall 0.15 (famous+mid 0.22, obscure 0.00; #25/39 on file, nearest nemotron-3-nano-omni-30b-a3b-reasoning:free 0.15, gemma-4-26b-a4b-it:free 0.15); retro-today Brier 0.358 vs base rate 0.198 (n=22, |p-.5| 0.30, 0 correct commits on the s"
   },
   {
    "slug": "minimax/minimax-m2.7:free",
    "added": "2026-09-02T11:24:06+00:00",
-   "attempts": 0,
-   "status": "pending",
-   "last_run": null,
-   "last_exit": null,
-   "note": ""
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T10:53:33+00:00",
+   "last_exit": 0,
+   "note": "**minimax/minimax-m2.7:free** (minimax/minimax-m2.7:free) - recall 0.00 (famous+mid 0.00, obscure 0.00; #36/39 on file, nearest inkling-small:free 0.00, inkling:free 0.00); domain bank 0/0 measurable (80 censored, median - ctok/solved, effort on); frontier ladder 0/0, 24 censored; portfolio ladder 0"
   },
   {
    "slug": "nvidia/nemotron-3-super-120b-a12b:free",
    "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-09-25T11:01:50+00:00",
+   "last_exit": 0,
+   "note": "**NVIDIA: Nemotron 3 Super (free)** (nvidia/nemotron-3-super-120b-a12b:free) - recall 0.26 (famous+mid 0.39, obscure 0.00; #16/39 on file, nearest kimi-k2-0905 0.24, qwen3.6-plus 0.24); retro-today Brier 0.289 vs base rate 0.198 (n=22, |p-.5| 0.34, 1 correct commits on the scored set); domain bank 6"
+  },
+  {
+   "slug": "deepseek/deepseek-v4-flash-0731:free",
+   "added": "2026-09-20T03:43:26+00:00",
    "attempts": 0,
-   "status": "pending",
+   "status": "failed",
    "last_run": null,
    "last_exit": null,
-   "note": ""
+   "note": "OpenRouter retired this :free route on or before 2026-09-20: the endpoint answers 404 'This model is unavailable for free. The paid version is available now'. Acked in llm-leaderboard free-models-seen.json instead."
+  },
+  {
+   "slug": "thinkingmachines/inkling:free",
+   "added": "2026-09-02T11:24:06+00:00",
+   "attempts": 1,
+   "status": "failed",
+   "last_run": "2026-09-20T03:43:30+00:00",
+   "last_exit": null,
+   "note": "OpenRouter gates this :free route to agentic harnesses: every plain API call answers 403 'is only available on agentic harnesses' with failed_routing_step 'Gate Free Endpoints by Agentic Harness'. The battery retried 406 times on 2026-09-20 for zero cells. Not runnable from day_one."
   }
  ]
 }

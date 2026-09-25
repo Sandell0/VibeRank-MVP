@@ -1,12 +1,12 @@
 {
- "slug": "inclusionai/ling-3.0-flash-sante:free",
- "generated_at": "2026-09-22T09:59:57+00:00",
+ "slug": "nvidia/nemotron-3-ultra-550b-a55b:free",
+ "generated_at": "2026-09-25T06:16:04+00:00",
  "public_elo": null,
  "catalog": {
-  "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
-  "created": "2026-09-04",
-  "context_length": 262144,
-  "max_completion_tokens": 32768,
+  "name": "NVIDIA: Nemotron 3 Ultra (free)",
+  "created": "2026-06-04",
+  "context_length": 1000000,
+  "max_completion_tokens": 65536,
   "input_modalities": [
    "text"
   ],
@@ -16,7 +16,7 @@
    0.0
   ],
   "expires": null,
-  "hugging_face_id": null
+  "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
  },
  "step_results": {
   "recall": "ok (86/86)",
@@ -24,50 +24,50 @@
   "domain": "ok (80/80)",
   "frontier": "ok (24/24)",
   "portfolio": "ok (30/30)",
-  "_target_calls": "0 requests, 0 429 retries, 0 max_tokens clamps, 0.0 min paced",
-  "_elapsed": "0 min"
+  "_target_calls": "81 requests, 0 429 retries, 0 max_tokens clamps, 0.6 min paced",
+  "_elapsed": "34 min"
  },
  "steps": {
   "recall": {
    "n": 34,
-   "accuracy": 0.17647058823529413,
+   "accuracy": 0.29411764705882354,
    "tiers": {
-    "famous": 0.3333333333333333,
-    "mid": 0.18181818181818182,
+    "famous": 0.5,
+    "mid": 0.36363636363636365,
     "obscure": 0.0
    },
-   "zone_famous_mid": 0.2608695652173913,
-   "rank": 18,
-   "of": 26,
+   "zone_famous_mid": 0.43478260869565216,
+   "rank": 12,
+   "of": 39,
    "nearest": [
     [
-     "nvidia/nemotron-3.5-lightning:free",
-     0.17647058823529413
+     "openai/gpt-5.4-mini",
+     0.29411764705882354
     ],
     [
-     "inclusionai/ling-3.0-flash-vl:free",
-     0.17647058823529413
+     "qwen/qwen3.6-35b-a3b",
+     0.29411764705882354
     ]
    ]
   },
   "retro": {
-   "n": 22,
+   "n": 18,
    "frozen_set": 22,
-   "brier": 0.2917772727272727,
+   "brier": 0.18834027777777776,
    "base_rate": 0.2727272727272727,
    "base_rate_brier": 0.1983471074380165,
-   "direction_accuracy": 0.5454545454545454,
-   "boldness": 0.2540909090909091,
-   "commits": 7,
-   "correct_commits": 5,
-   "correct_commits_on_scored_set": 1
+   "direction_accuracy": 0.8333333333333334,
+   "boldness": 0.26861111111111113,
+   "commits": 4,
+   "correct_commits": 2,
+   "correct_commits_on_scored_set": 0
   },
   "domain": {
    "n": 80,
-   "measurable": 72,
-   "solved": 69,
-   "accuracy": 0.9583333333333334,
-   "censored": 8,
+   "measurable": 77,
+   "solved": 73,
+   "accuracy": 0.948051948051948,
+   "censored": 3,
    "families": {
     "audit": {
      "solved": 10,
@@ -76,8 +76,8 @@
     },
     "bigknap": {
      "solved": 0,
-     "n": 0,
-     "censored": 5
+     "n": 2,
+     "censored": 3
     },
     "casework": {
      "solved": 10,
@@ -85,9 +85,9 @@
      "censored": 0
     },
     "inv": {
-     "solved": 4,
-     "n": 4,
-     "censored": 3
+     "solved": 6,
+     "n": 7,
+     "censored": 0
     },
     "longctx": {
      "solved": 10,
@@ -100,7 +100,7 @@
      "censored": 0
     },
     "tableqa": {
-     "solved": 11,
+     "solved": 13,
      "n": 14,
      "censored": 0
     },
@@ -110,41 +110,41 @@
      "censored": 0
     }
    },
-   "ctok_per_solved_median": 1176,
-   "ctok_per_solved_mean": 2170.840579710145,
+   "ctok_per_solved_median": 1350,
+   "ctok_per_solved_mean": 4448.178082191781,
    "effort_applied": true,
    "usage": {
-    "prompt": 253440,
-    "completion": 166201
+    "prompt": 252196,
+    "completion": 659423
    }
   },
   "frontier": {
-   "n": 21,
-   "solved": 20,
-   "censored": 3,
+   "n": 19,
+   "solved": 19,
+   "censored": 5,
    "attempted": 24,
    "bank": 24,
-   "accuracy": 0.9523809523809523,
+   "accuracy": 1.0,
    "families": {
     "execution": {
-     "solved": 12,
-     "n": 12,
-     "censored": 0
+     "solved": 10,
+     "n": 10,
+     "censored": 2
     },
     "inversion": {
-     "solved": 8,
+     "solved": 9,
      "n": 9,
      "censored": 3
     }
    }
   },
   "portfolio": {
-   "n": 24,
-   "solved": 18,
-   "censored": 6,
+   "n": 27,
+   "solved": 21,
+   "censored": 3,
    "attempted": 30,
    "bank": 30,
-   "accuracy": 0.75,
+   "accuracy": 0.7777777777777778,
    "families": {
     "bughunt": {
      "solved": 6,
@@ -153,23 +153,23 @@
     },
     "docfact": {
      "solved": 4,
-     "n": 6,
-     "censored": 0
+     "n": 5,
+     "censored": 1
     },
     "knapsack": {
-     "solved": 0,
-     "n": 0,
-     "censored": 6
-    },
-    "spec": {
      "solved": 2,
      "n": 6,
      "censored": 0
     },
+    "spec": {
+     "solved": 4,
+     "n": 5,
+     "censored": 1
+    },
     "zebra": {
-     "solved": 6,
-     "n": 6,
-     "censored": 0
+     "solved": 5,
+     "n": 5,
+     "censored": 1
     }
    }
   },

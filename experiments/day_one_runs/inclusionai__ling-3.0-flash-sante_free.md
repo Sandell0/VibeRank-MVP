@@ -1,6 +1,6 @@
 # Day-one battery: inclusionai/ling-3.0-flash-sante:free
 
-Generated 2026-09-05T04:52:43+00:00.
+Generated 2026-09-22T09:59:57+00:00.
 Catalog: inclusionAI: Ling 3.0 Flash Sante (free) - listed 2026-09-04, ctx 262144, max out 32768, reasoning param, $0.00/$0.00 per M.
 
 | step | outcome |
@@ -10,18 +10,18 @@ Catalog: inclusionAI: Ling 3.0 Flash Sante (free) - listed 2026-09-04, ctx 26214
 | domain | ok (80/80) |
 | frontier | ok (24/24) |
 | portfolio | ok (30/30) |
-| _target_calls | 293 requests, 0 429 retries, 152 max_tokens clamps, 8.6 min paced |
-| _elapsed | 91 min |
+| _target_calls | 0 requests, 0 429 retries, 0 max_tokens clamps, 0.0 min paced |
+| _elapsed | 0 min |
 
 ## Dossier draft
 
-**inclusionAI: Ling 3.0 Flash Sante (free)** (inclusionai/ling-3.0-flash-sante:free) - recall 0.18 (famous+mid 0.26, obscure 0.00; #16/22 on file, nearest nemotron-3.5-lightning:free 0.18, gpt-oss-120b 0.21); retro-today Brier 0.292 vs base rate 0.198 (n=22, |p-.5| 0.25, 1 correct commits on the scored set); domain bank 69/72 measurable (8 censored, median 1176 ctok/solved, effort on); frontier ladder 20/21, 3 censored; portfolio ladder 18/24, 6 censored
+**inclusionAI: Ling 3.0 Flash Sante (free)** (inclusionai/ling-3.0-flash-sante:free) - recall 0.18 (famous+mid 0.26, obscure 0.00; #18/26 on file, nearest nemotron-3.5-lightning:free 0.18, ling-3.0-flash-vl:free 0.18); retro-today Brier 0.292 vs base rate 0.198 (n=22, |p-.5| 0.25, 1 correct commits on the scored set); domain bank 69/72 measurable (8 censored, median 1176 ctok/solved, effort on); frontier ladder 20/21, 3 censored; portfolio ladder 18/24, 6 censored
 
 ## Recall (long-tail, closed book)
 
 | items | all | famous | mid | obscure | famous+mid | rank on file |
 |---|---|---|---|---|---|---|
-| 34 | 0.18 | 0.33 | 0.18 | 0.00 | 0.26 | 16/22 |
+| 34 | 0.18 | 0.33 | 0.18 | 0.00 | 0.26 | 18/26 |
 
 ## Retro-today (72h Manifold bank, panel-frozen shared set)
 

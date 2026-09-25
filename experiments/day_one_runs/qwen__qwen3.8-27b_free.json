@@ -1,0 +1,180 @@
+{
+ "slug": "qwen/qwen3.8-27b:free",
+ "generated_at": "2026-09-22T22:06:21+00:00",
+ "public_elo": null,
+ "catalog": {
+  "name": "Qwen: Qwen3.8 27B (free)",
+  "created": "2026-08-14",
+  "context_length": 262144,
+  "max_completion_tokens": 235929,
+  "input_modalities": [
+   "text",
+   "image",
+   "video"
+  ],
+  "supports_reasoning": true,
+  "price_per_m": [
+   0.0,
+   0.0
+  ],
+  "expires": null,
+  "hugging_face_id": "Qwen/Qwen3.8-27B"
+ },
+ "step_results": {
+  "recall": "ok (86/86)",
+  "retro": "ok (55/55)",
+  "domain": "ok (80/80)",
+  "frontier": "ok (24/24)",
+  "portfolio": "ok (30/30)",
+  "_target_calls": "2349 requests, 1885 429 retries, 0 max_tokens clamps, 4.0 min paced",
+  "_elapsed": "726 min"
+ },
+ "steps": {
+  "recall": {
+   "n": 34,
+   "accuracy": 0.029411764705882353,
+   "tiers": {
+    "famous": 0.0,
+    "mid": 0.09090909090909091,
+    "obscure": 0.0
+   },
+   "zone_famous_mid": 0.043478260869565216,
+   "rank": 24,
+   "of": 27,
+   "nearest": [
+    [
+     "liquid/lfm-2.5-2.6b:free",
+     0.029411764705882353
+    ],
+    [
+     "thinkingmachines/inkling-small:free",
+     0.0
+    ]
+   ]
+  },
+  "retro": {
+   "n": 7,
+   "frozen_set": 22,
+   "brier": 0.40688571428571424,
+   "base_rate": 0.2727272727272727,
+   "base_rate_brier": 0.1983471074380165,
+   "direction_accuracy": 0.42857142857142855,
+   "boldness": 0.2885714285714286,
+   "commits": 3,
+   "correct_commits": 2,
+   "correct_commits_on_scored_set": 1
+  },
+  "domain": {
+   "n": 80,
+   "measurable": 41,
+   "solved": 41,
+   "accuracy": 1.0,
+   "censored": 39,
+   "families": {
+    "audit": {
+     "solved": 5,
+     "n": 5,
+     "censored": 5
+    },
+    "bigknap": {
+     "solved": 0,
+     "n": 0,
+     "censored": 5
+    },
+    "casework": {
+     "solved": 4,
+     "n": 4,
+     "censored": 6
+    },
+    "inv": {
+     "solved": 1,
+     "n": 1,
+     "censored": 6
+    },
+    "longctx": {
+     "solved": 8,
+     "n": 8,
+     "censored": 2
+    },
+    "repobug": {
+     "solved": 6,
+     "n": 6,
+     "censored": 4
+    },
+    "tableqa": {
+     "solved": 10,
+     "n": 10,
+     "censored": 4
+    },
+    "toolsim": {
+     "solved": 7,
+     "n": 7,
+     "censored": 7
+    }
+   },
+   "ctok_per_solved_median": 765,
+   "ctok_per_solved_mean": 2326.609756097561,
+   "effort_applied": true,
+   "usage": {
+    "prompt": 153319,
+    "completion": 95391
+   }
+  },
+  "frontier": {
+   "n": 9,
+   "solved": 9,
+   "censored": 15,
+   "attempted": 24,
+   "bank": 24,
+   "accuracy": 1.0,
+   "families": {
+    "execution": {
+     "solved": 4,
+     "n": 4,
+     "censored": 8
+    },
+    "inversion": {
+     "solved": 5,
+     "n": 5,
+     "censored": 7
+    }
+   }
+  },
+  "portfolio": {
+   "n": 24,
+   "solved": 24,
+   "censored": 6,
+   "attempted": 30,
+   "bank": 30,
+   "accuracy": 1.0,
+   "families": {
+    "bughunt": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    },
+    "docfact": {
+     "solved": 4,
+     "n": 4,
+     "censored": 2
+    },
+    "knapsack": {
+     "solved": 3,
+     "n": 3,
+     "censored": 3
+    },
+    "spec": {
+     "solved": 5,
+     "n": 5,
+     "censored": 1
+    },
+    "zebra": {
+     "solved": 6,
+     "n": 6,
+     "censored": 0
+    }
+   }
+  },
+  "interview": null
+ }
+}
