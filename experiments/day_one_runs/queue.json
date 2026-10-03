@@ -215,6 +215,24 @@
    "last_run": "2026-09-20T03:43:30+00:00",
    "last_exit": null,
    "note": "OpenRouter gates this :free route to agentic harnesses: every plain API call answers 403 'is only available on agentic harnesses' with failed_routing_step 'Gate Free Endpoints by Agentic Harness'. The battery retried 406 times on 2026-09-20 for zero cells. Not runnable from day_one."
+  },
+  {
+   "slug": "apodex/apodex-1.1-mini:free",
+   "added": "2026-10-02T03:32:35+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-10-02T03:32:35+00:00",
+   "last_exit": 0,
+   "note": "**Apodex: Apodex 1.1 Mini (free)** (apodex/apodex-1.1-mini:free) - recall 0.18 (famous+mid 0.26, obscure 0.00; #22/40 on file, nearest nemotron-3.5-lightning:free 0.18, ling-3.0-flash-sante:free 0.18); retro-today Brier 0.407 vs base rate 0.198 (n=19, |p-.5| 0.36, 0 correct commits on the scored set"
+  },
+  {
+   "slug": "inclusionai/ling-3.1-flash",
+   "added": "2026-10-03T03:43:41+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-10-03T03:43:42+00:00",
+   "last_exit": 0,
+   "note": "**inclusionAI: Ling 3.1 Flash** (inclusionai/ling-3.1-flash) - recall 0.15 (famous+mid 0.22, obscure 0.00; #26/41 on file, nearest nemotron-3-nano-omni-30b-a3b-reasoning:free 0.15, gemma-4-26b-a4b-it:free 0.15); retro-today Brier 0.245 vs base rate 0.198 (n=21, |p-.5| 0.23, 0 correct commits on the "
   }
  ]
 }
