@@ -19193,6 +19193,650 @@
      "text": null
     }
    }
+  },
+  "nvidia/nemotron-3.5-super-vl:free": {
+   "answers": {
+    "toolsim-1-1": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 834,
+     "extracted": "verify(A); unlock(A); deposit(A, 20); deposit(B, 20)",
+     "text": "FINAL: verify(A); unlock(A); deposit(A, 20); deposit(B, 20)"
+    },
+    "toolsim-3-5": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1087,
+     "extracted": "deposit(B, 30); deposit(C, 40); move(E, C, 20)",
+     "text": "FINAL: deposit(B, 30); deposit(C, 40); move(E, C, 20)"
+    },
+    "toolsim-2-3": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1075,
+     "extracted": "deposit(D, 100); move(B, D, 100)",
+     "text": "FINAL: deposit(D, 100); move(B, D, 100)"
+    },
+    "toolsim-1-0": {
+     "family": "toolsim",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1074,
+     "extracted": "verify(B); unlock(B); deposit(A, 50); move(A, B, 50)",
+     "text": "FINAL: verify(B); unlock(B); deposit(A, 50); move(A, B, 50)"
+    },
+    "longctx-1-0": {
+     "family": "longctx",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 507,
+     "extracted": "6540",
+     "text": "Tomas Reyes leads Glacier, which is in Summit (1900 units). Livia Costa leads Quartz, which is in Horizon (4640 units). Sum: 1900 + 4640 = 6540.\n\nFINAL: 6540"
+    },
+    "longctx-4-3": {
+     "family": "longctx",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 849,
+     "extracted": "8530",
+     "text": "Bea Solano leads Juniper, which was folded into Ironwood; Ironwood reports under budget line K58, allocated 5030 units. Ivo Petrov leads Nimbus, which was folded into Quarry; Quarry reports under budget line R60, allocated 3500 units. Sum: 5030 + 3500 = 8530.\n\nFINAL: 8530"
+    },
+    "toolsim-3-4": {
+     "family": "toolsim",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 2032,
+     "extracted": "verify(D); unlock(D); move(B, D, 70); move(C, D, 40); deposit(D, 30); deposit(E, 80)",
+     "text": "FINAL: verify(D); unlock(D); move(B, D, 70); move(C, D, 40); deposit(D, 30); deposit(E, 80)"
+    },
+    "longctx-2-1": {
+     "family": "longctx",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 586,
+     "extracted": "15770",
+     "text": "Dario Quint leads project Zephyr (note 40), which was folded into the Granite program (note 56); Granite\u2019s quarterly allocation is 6350 units (note 17). Bruno Vidal leads project Cobalt (note 16), which was folded into the Lantern program (note 5); Lantern\u2019s quarterly allocation is 9420 units (note 34). Sum: 6350 + 9420 = 15770.\n\nFINAL: 15770"
+    },
+    "longctx-5-4": {
+     "family": "longctx",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1055,
+     "extracted": "15020",
+     "text": "Nadia Osei leads Project Willow, which is in the Pioneer program. Pioneer reports under budget line K89, which carries the desk E6 amount: 7710 units.\n\nAmara Diallo leads Project Xenon, which is in the Beacon program. Beacon reports under budget line R33, which carries the desk W8 amount: 7310 units.\n\nSum: 7710 + 7310 = 15020.\n\nFINAL: 15020"
+    },
+    "longctx-3-2": {
+     "family": "longctx",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 705,
+     "extracted": "6530",
+     "text": "Ivo Petrov leads Project Delta, which is in the Orchard program; Orchard reports under budget line K30, allocated 4130 units. Zoe Marchetti leads Project Anvil, which is in the Everest program; Everest reports under budget line R32, allocated 2400 units. Sum: 4130 + 2400 = 6530.\n\nFINAL: 6530"
+    },
+    "casework-1-0": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 836,
+     "extracted": "249",
+     "text": "1. Slice levy: 7700 \u00d7 10 // 100 = 770. Remaining slices are 0 because base is below 14000.\n2. Gamma surcharge: 45 \u00d7 0 registered units = 0. Total remains 770.\n3. Relief credit: 770 \u2212 521 = 249, not below 0.\n4. Cap: 7700 \u00d7 28 // 100 = 2156; 249 is below the cap.\n\nFINAL: 249"
+    },
+    "toolsim-2-2": {
+     "family": "toolsim",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": 624,
+     "extracted": "move(C, B, 70)",
+     "text": "FINAL: move(C, B, 70)"
+    },
+    "longctx-6-5": {
+     "family": "longctx",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 952,
+     "extracted": "16700",
+     "text": "Viktor Lang leads Zephyr, which is folded into Everest. Everest uses budget line K24, allocated the desk E4 amount: 6910 units.\n\nInes Ferreira leads Vertex, which is folded into Trident. Trident uses budget line R22, allocated the desk W4 amount: 9790 units.\n\nSum: 6910 + 9790 = 16700.\n\nFINAL: 16700"
+    },
+    "casework-1-1": {
+     "family": "casework",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1594,
+     "extracted": "1194",
+     "text": "Step 1 \u2014 Slice levy on base 8800 (integer division by 100 after each multiplication):\n\n- First 6000 at 18%: 6000 \u00d7 18 = 108000 \u2192 108000 // 100 = 1080\n- 6000 to 7000 (1000 units) at 20%: 1000 \u00d7 20 = 20000 \u2192 20000 // 100 = 200\n- 7000 to 8800 (1800 units) at 24%: 1800 \u00d7 24 = 43200 \u2192 43200 // 100 = 432\n- Above 11000: 0 units \u2192 0\n\nSubtotal: 1080 + 200 + 432 = 1712\n\nStep 2 \u2014 Filing class is beta (not alpha/gamma), so no surcharge. Total remains 1712.\n\nStep 3 \u2014 Flagged for relief: subtract 518. 1712 \u2212 518 = 1194 (not below 0).\n\nStep 4 \u2014 Cap: 32% of base = 8800 \u00d7 32 = 281600 \u2192 281600 // 100 = 2816. Since 1194 \u2264 2816, the cap does not bind.\n\nFINAL: 1194"
+    },
+    "tableqa-1-0": {
+     "family": "tableqa",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 1104,
+     "extracted": "1696",
+     "text": "Qualifying departments (floor \u2265 4 AND at least one active project):\n- Research (floor 5): has Pinnacle-34 active \u2713\n- Logistics (floor 6): has Zephyr-79 active \u2713\n(Ops floor 2 and Support floor 1 are excluded.)\n\nEmployees in those departments joined strictly before 2022:\n- Henrik Dahl, Research, joined 2019: 28 \u00d7 52 = 1456\n- Priya Nair, Logistics, joined 2020: 12 \u00d7 20 = 240\n\n(Research employees joined in 2022 or 2024 are excluded; Viktor Lang joined 2024 is excluded.)\n\nTotal: 1456 + 240 = 1696\n\nFINAL: 1696"
+    },
+    "casework-3-5": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1137,
+     "extracted": "211",
+     "text": "1. Slice levy: base 2000 is entirely in the first slice:  \n   (2000 \u00d7 27) // 100 = 54000 // 100 = 540.\n\n2. Gamma surcharge: 34 \u00d7 3 registered units = 102.  \n   Running total: 540 + 102 = 642.\n\n3. Relief credit: base 2000 does not exceed 16000, so credit stays 431.  \n   Running total: max(0, 642 \u2212 431) = 211.\n\n4. Surtax: 211 does not exceed 1800, so no surtax.\n\n5. Cap: 34% of base = (2000 \u00d7 34) // 100 = 680.  \n   Final levy: min(211, 680) = 211.\n\nFINAL: 211"
+    },
+    "casework-2-3": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 2075,
+     "extracted": "1290",
+     "text": "Slice levy:\n- First 2000: 2000 \u00d7 18 // 100 = 360\n- 2000 to 7000: 5000 \u00d7 20 // 100 = 1000\n- 7000 to 10000: 3000 \u00d7 14 // 100 = 420\n- Above 10000: 2800 \u00d7 7 // 100 = 196\n\nSubtotal = 360 + 1000 + 420 + 196 = 1976.\n\nFiling class is beta, so no surcharge.\n\nRelief flagged: base 12800 does not exceed 20000, so credit stays 686.  \n1976 \u2212 686 = 1290, which is not below 0.\n\nCap = 12800 \u00d7 38 // 100 = 4864.  \nFinal = min(1290, 4864) = 1290.\n\nFINAL: 1290"
+    },
+    "casework-3-4": {
+     "family": "casework",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1969,
+     "extracted": "3300",
+     "text": "Slice levies:\n- 14000 at 18%: 14000*18//100 = 2520\n- 1000 at 6%: 1000*6//100 = 60\n- 2000 at 24%: 2000*24//100 = 480\n- 2100 at 6%: 2100*6//100 = 126\n\nSubtotal = 2520 + 60 + 480 + 126 = 3186  \nGamma surcharge: +48*1 = 3234  \nRelief: not flagged, no change.  \nSurtax: excess over 1900 = 1334; 1334*5//100 = 66; total = 3300  \nCap: 19100*40//100 = 7640; 3300 is below the cap.\n\nFINAL: 3300"
+    },
+    "tableqa-2-1": {
+     "family": "tableqa",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 1304,
+     "extracted": "1460",
+     "text": "Qualifying departments: floor \u2265 3 are Compliance, Ops, and Design; only Compliance has an active project (Meridian-29).  \nCompliance employees joined before 2024: Ines Ferreira 27\u00d730 = 810; Nadia Osei 13\u00d750 = 650. Total = 1460.\n\nFINAL: 1460"
+    },
+    "tableqa-4-3": {
+     "family": "tableqa",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1153,
+     "extracted": "3880",
+     "text": "Departments on floor \u2265 4: only Support (floor 4).  \nSupport has an active project: Xenon-79.\n\nSupport employees joined strictly before 2022:\n- Ivo Petrov: 24 \u00d7 87 = 2088\n- Viktor Lang: 31 \u00d7 47 = 1457\n- Omar Haddad: 5 \u00d7 67 = 335\n\nTotal: 2088 + 1457 + 335 = 3880\n\nFINAL: 3880"
+    },
+    "repobug-1-0": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 335,
+     "extracted": "f2",
+     "text": "f2\u2019s docstring says to multiply x by 7 and add 27, but its body multiplies x by 10 and adds 27. All other helpers match their docstrings, and the pipeline composition matches its docstring.\n\nFINAL: f2"
+    },
+    "casework-2-2": {
+     "family": "casework",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 2026,
+     "extracted": "2701",
+     "text": "Slice levy:\n- First 8000 at 11%: 8000 \u00d7 11 // 100 = 880\n- Next 8000 at 27%: 8000 \u00d7 27 // 100 = 2160\n- Remaining 800 at 8%: 800 \u00d7 8 // 100 = 64\n- Above 17000: 0\n\nSubtotal = 880 + 2160 + 64 = 3104.\n\nFiling class is beta, so no surcharge.\n\nRelief credit: base exceeds 14000 by 2800, which is 28 full 100-unit blocks. Credit = 683 \u2212 28 \u00d7 10 = 403. After subtraction: 3104 \u2212 403 = 2701.\n\nCap: 16800 \u00d7 42 // 100 = 7056, so the cap does not bind.\n\nFINAL: 2701"
+    },
+    "tableqa-3-2": {
+     "family": "tableqa",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1969,
+     "extracted": "3367",
+     "text": "Qualifying departments: Support (floor 4, active projects) and Design (floor 4, active project Lumen-29). Research is floor 6 but has no active project.\n\nIncluded employees joined strictly before 2022:\n- Bruno Vidal, Design: 14 \u00d7 85 = 1190\n- Casper Holm, Design: 5 \u00d7 67 = 335\n- Dina Waheed, Design: 34 \u00d7 48 = 1632\n- Greta Hoffman, Design: 10 \u00d7 21 = 210\n\nSupport has no employees with joined < 2022; Nadia Osei joined in 2022, which is not strictly before 2022.\n\nTotal: 1190 + 335 + 1632 + 210 = 3367\n\nFINAL: 3367"
+    },
+    "repobug-2-2": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 598,
+     "extracted": "f1",
+     "text": "Checking each helper against its docstring:\n\n- f1: docstring says `(x * 8 + 18) % 89`, but body is `(x * 8 + 28) % 89` \u2014 constant is 28 instead of 18. MISMATCH.\n- f2: `8x + 20` matches \"8 copies of x plus 20.\"\n- f3: `7x + 18` matches.\n- f4: `2x + 31` matches.\n- f5: `5x + 6` matches.\n- f6: `4x + 37` matches.\n\nThe pipeline docstring is also accurate: `f4(f3(f1(x)))` applies f1, then f3, then f4.\n\nFINAL: f1"
+    },
+    "tableqa-6-5": {
+     "family": "tableqa",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2283,
+     "extracted": "9552",
+     "text": "Qualifying departments: Design, Field, and Support. Research and Ops are floor \u22653 but have no active projects; Logistics and Compliance have floor <3.\n\nEmployees in those departments joined strictly before 2023:\n- Gustav Weber, Design: 16 \u00d7 80 = 1280\n- Jana Kovac, Support: 36 \u00d7 66 = 2376\n- Henrik Dahl, Field: 29 \u00d7 88 = 2552\n- Amara Reyes, Field: 38 \u00d7 88 = 3344\n\nTotal: 1280 + 2376 + 2552 + 3344 = 9552\n\nFINAL: 9552"
+    },
+    "repobug-1-1": {
+     "family": "repobug",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 531,
+     "extracted": "f2",
+     "text": "f1, f3, f4, and f5 match their docstrings. f2\u2019s docstring says \u201cscaled by 7,\u201d but its body computes `x * 9 + 15`, so it scales by 9 instead.\n\nFINAL: f2"
+    },
+    "repobug-3-5": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 656,
+     "extracted": "f5",
+     "text": "f5\u2019s docstring says to add 27 after multiplying by 5, but its body adds 6.\nFINAL: f5"
+    },
+    "repobug-2-3": {
+     "family": "repobug",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 622,
+     "extracted": "f6",
+     "text": "Checking each helper against its docstring:\n\n- f1: \u00d77 then +5 mod 103 \u2192 `(x * 7 + 5) % 103` \u2713\n- f2: \u00d78 then +22 mod 103 \u2192 `(x * 8 + 22) % 103` \u2713\n- f3: \u00d73 then +11 mod 103 \u2192 `(x * 3 + 11) % 103` \u2713\n- f4: \u00d711 then +10 mod 103 \u2192 `(x * 11 + 10) % 103` \u2713\n- f5: 6 copies of x plus 22 mod 103 \u2192 `(x * 6 + 22) % 103` \u2713\n- f6: docstring says scaled by 7 then shifted up by 9, but body adds 19 \u2192 `(x * 7 + 19) % 103` \u2717\n\nFINAL: f6"
+    },
+    "tableqa-5-4": {
+     "family": "tableqa",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 3217,
+     "extracted": "6513",
+     "text": "Qualifying departments: floor \u2265 4 and at least one active project \u2192 Research and Logistics. Ops is floor 4 but has no active project; Support has no active project.\n\nEligible employees (joined strictly before 2025):\n- Logistics: Casper Holm 224, Yusuf Kaan 300, Greta Hoffman 1036, Selin Aydin 714 \u2192 subtotal 2274\n- Research: Omar Haddad 1034, Dario Quint 192, Lena Vogel 1794, Priya Nair 874, Ilsa Brandt 345 \u2192 subtotal 4239\n\nTotal = 2274 + 4239 = 6513.\nFINAL: 6513"
+    },
+    "audit-1-0": {
+     "family": "audit",
+     "rung": 1,
+     "correct": true,
+     "completion_tokens": 995,
+     "extracted": "2,9",
+     "text": "FINAL: 2,9"
+    },
+    "repobug-3-4": {
+     "family": "repobug",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 690,
+     "extracted": "f6",
+     "text": "f6\u2019s docstring says to scale x by 7 and shift up by 34, but its body computes `(x * 12 + 8) % 103`.\n\nFINAL: f6"
+    },
+    "audit-4-3": {
+     "family": "audit",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1467,
+     "extracted": "3,5,6,8,11,18",
+     "text": "FINAL: 3,5,6,8,11,18"
+    },
+    "audit-3-2": {
+     "family": "audit",
+     "rung": 3,
+     "correct": true,
+     "completion_tokens": 1569,
+     "extracted": "1, 2, 6, 9, 11, 14",
+     "text": "FINAL: 1, 2, 6, 9, 11, 14"
+    },
+    "audit-5-4": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1702,
+     "extracted": "6, 11, 14, 18",
+     "text": "FINAL: 6, 11, 14, 18"
+    },
+    "audit-5-5": {
+     "family": "audit",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1922,
+     "extracted": "1, 5, 9, 11, 14",
+     "text": "FINAL: 1, 5, 9, 11, 14"
+    },
+    "toolsim-4-w20": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 974,
+     "extracted": "deposit(B, 100)",
+     "text": "FINAL: deposit(B, 100)"
+    },
+    "toolsim-4-w21": {
+     "family": "toolsim",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 657,
+     "extracted": "verify(C); unlock(C); move(C, F, 30)",
+     "text": "FINAL: verify(C); unlock(C); move(C, F, 30)"
+    },
+    "toolsim-5-w22": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1512,
+     "extracted": "verify(G); unlock(G); move(G, D, 90); deposit(D, 160)",
+     "text": "FINAL: verify(G); unlock(G); move(G, D, 90); deposit(D, 160)"
+    },
+    "toolsim-5-w23": {
+     "family": "toolsim",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 1513,
+     "extracted": "verify(B); unlock(B); deposit(B, 40); verify(D); unlock(D); deposit(D, 100); deposit(E, 60)",
+     "text": "FINAL: verify(B); unlock(B); deposit(B, 40); verify(D); unlock(D); deposit(D, 100); deposit(E, 60)"
+    },
+    "inv-14-1": {
+     "family": "inv",
+     "rung": 14,
+     "correct": true,
+     "completion_tokens": 12991,
+     "extracted": "52573598",
+     "text": "Treat every intermediate value as an 8-digit string, keeping leading zeros.\n\nDigit-map inverses:\n- Step 1: `y = (3d + 6) mod 10` \u21d2 `d = (7y + 8) mod 10`\n- Step 6: `y = 3d mod 10` \u21d2 `d = 7y mod 10`\n\nRotation left by `r` is undone by rotation left by `8 - r`; swaps and reversal are self-inverse.\n\nFor the multiplications, solve `mx \u2261 y (mod 100000000)` via `mx = y + t\u00b7100000000` with `t` chosen to make the numerator divisible by `m`.\n\n| Undo step | Inverse operation | 8-digit state |\n|---|---|---|\n| final after step 14 | \u2014 | 21804772 |\n| undo 14 | rotate left 5 \u2192 inverse rotate left 3 | 04772218 |\n| undo 13 | reverse | 81227740 |\n| undo 12 | rotate left 5 \u2192 inverse rotate left 3 | 27740812 |\n| undo 11 | swap positions 2 and 3 | 27740812 |\n| undo 10 | rotate left 7 \u2192 inverse rotate left 1 | 77408122 |\n| undo 9 | rotate left 7 \u2192 inverse rotate left 1 | 74081227 |\n| undo 8 | swap positions 1 and 6 | 24081727 |\n| undo 7 | `27x \u2261 24081727`; `t=23`, `x=86077101` | 86077101 |\n| undo 6 | `d \u2190 7y mod 10` digitwise | 62099707 |\n| undo 5 | `7x \u2261 62099707`; `t=1`, `x=23157101` | 23157101 |\n| undo 4 | swap positions 1 and 7 | 03157121 |\n| undo 3 | swap positions 3 and 8 | 03157121 |\n| undo 2 | reverse | 12175130 |\n| undo 1 | `d \u2190 (7y + 8) mod 10` digitwise | 52573598 |\n\nFINAL: 52573598"
+    },
+    "longctx-7-w20": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1118,
+     "extracted": "8700",
+     "text": "Lena Vogel leads Rampart, which is in the Dynamo program; Dynamo reports under budget line K51, which carries desk E6\u2019s 6540 units.  \nAmara Diallo leads Vertex, which is in the Compass program; Compass reports under budget line R20, which carries desk W5\u2019s 2160 units.  \nSum: 6540 + 2160 = 8700.\n\nFINAL: 8700"
+    },
+    "audit-2-1": {
+     "family": "audit",
+     "rung": 2,
+     "correct": true,
+     "completion_tokens": 984,
+     "extracted": "5, 11, 14",
+     "text": "FINAL: 5, 11, 14"
+    },
+    "inv-8-0": {
+     "family": "inv",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 9561,
+     "extracted": "36758088",
+     "text": "Work backward from the final string, keeping 8 digits at all times.\n\nFinal after step 8: `86336348`\n- Undo step 8 (reverse): `84363368`\n- Undo step 7 (swap positions 2 and 7): `86363348`\n- Undo step 6 (swap positions 7 and 8): `86363384`\n- Undo step 5: `(9d+9) mod 10 = 9-d`, self-inverse, so `86363384` \u2192 `13636615`\n- Undo step 4: `13636615 - 59215981 \u2261 54420634 (mod 10^8)`\n- Undo step 3: inverse of left rotate by 6 is left rotate by 2: `54420634` \u2192 `42063454`\n- Undo step 2 (reverse): `42063454` \u2192 `45436024`\n- Undo step 1: solve `23x \u2261 45436024 (mod 10^8)`. Since `23\u00b747826087 = 1100000001 \u2261 1`, `x \u2261 36758088 (mod 10^8)`.\n\nThis is 8 digits with no leading zero.\n\nFINAL: 36758088"
+    },
+    "longctx-7-w21": {
+     "family": "longctx",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 868,
+     "extracted": "9630",
+     "text": "Dina Waheed heads project Pinnacle, which was folded into the Ironwood program. Ironwood reports under budget line R47, which carries the amount posted at desk W7: 7800 units.\n\nLena Vogel leads project Krait, which was folded into the Lantern program. Lantern reports under budget line K29, which carries the amount posted at desk E3: 1830 units.\n\nSum: 7800 + 1830 = 9630.\n\nFINAL: 9630"
+    },
+    "casework-4-w20": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 1150,
+     "extracted": "1314",
+     "text": "Step 1: base 5000 falls entirely in the first slice: 5000 \u00d7 24 // 100 = 1200.  \nStep 2: class gamma, 3 registered units: 3 \u00d7 38 = 114; no units beyond 3. Running total = 1200 + 114 = 1314.  \nStep 3: not flagged for relief, no credit.  \nStep 4: 1314 does not exceed 1500, so no surtax.  \nStep 5: cap = 5000 \u00d7 31 // 100 = 1550; final = min(1314, 1550) = 1314.\n\nFINAL: 1314"
+    },
+    "longctx-8-w23": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 936,
+     "extracted": "18340",
+     "text": "Milan Novak leads Project Nimbus, which was folded into the Compass program. Compass reports under budget line K87, which carries the amount posted at desk E4. That amount matches ledger row G595, showing 9080 units.\n\nPetra Lindqvist leads Project Willow, which was folded into the Lantern program. Lantern reports under budget line R70, which carries the amount posted at desk W5. That amount matches ledger row H551, showing 9260 units.\n\nSum: 9080 + 9260 = 18340.\n\nFINAL: 18340"
+    },
+    "longctx-8-w22": {
+     "family": "longctx",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 1698,
+     "extracted": "15960",
+     "text": "Henrik Dahl leads project Rampart (note 150), which was folded into the Ironwood program (note 923). Ironwood reports under budget line K84 (note 87), which carries the amount posted at desk E7 (note 566). Desk E7 matches ledger row G762 (note 694), and G762 shows 9400 units (note 575). So Ironwood\u2019s allocation is 9400 units.\n\nIvo Petrov leads project Delta (note 752), which was folded into the Quarry program (note 940). Quarry reports under budget line R13 (note 534), which carries the amount posted at desk W5 (note 203). Desk W5 matches ledger row H988 (note 341), and H988 shows 6560 units (note 595). So Quarry\u2019s allocation is 6560 units.\n\nSum: 9400 + 6560 = 15960.\n\nFINAL: 15960"
+    },
+    "casework-4-w21": {
+     "family": "casework",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 2044,
+     "extracted": "3154",
+     "text": "Slice levy:\n- 8000 \u00d7 29 // 100 = 2320\n- 1000 \u00d7 20 // 100 = 200\n- 3000 \u00d7 15 // 100 = 450\n- 7100 \u00d7 13 // 100 = 923\n\nSubtotal = 2320 + 200 + 450 + 923 = 3893.\n\nFiling class is beta, so no surcharge.\n\nRelief applies: base 19100 does not exceed 20000, so credit stays 822.  \n3893 \u2212 822 = 3071.\n\nSurtax: running total exceeds 1400. Excess = 3071 \u2212 1400 = 1671.  \n1671 \u00d7 5 // 100 = 8355 // 100 = 83.  \n3071 + 83 = 3154.\n\nCap: 19100 \u00d7 37 // 100 = 7067. Since 3154 \u2264 7067, the cap does not reduce it.\n\nFINAL: 3154"
+    },
+    "casework-5-w22": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 2667,
+     "extracted": "1878",
+     "text": "1. Slice levy:\n   - First 2000 at 20%: 2000\u00d720//100 = 400\n   - 2000\u20135000 (3000 units) at 21%: 3000\u00d721//100 = 630\n   - 5000\u20139000 (4000 units) at 23%: 4000\u00d723//100 = 920\n   - Above 9000 (3700 units) at 11%: 3700\u00d711//100 = 407\n   Subtotal = 400 + 630 + 920 + 407 = 2357\n\n2. Gamma surcharge for 2 registered units: 2\u00d744 = 88  \n   Running total = 2357 + 88 = 2445\n\n3. Relief credit: base 12700 does not exceed 19000, so credit = 638  \n   Running total = 2445 \u2212 638 = 1807\n\n4. First surtax: excess over 1100 = 707; 707\u00d75//100 = 35  \n   Running total = 1807 + 35 = 1842\n\n5. Second surtax: excess over 625 = 1217; 1217\u00d73//100 = 36  \n   Running total = 1842 + 36 = 1878\n\n6. 1878 is not divisible by 7, so no oddity levy.\n\n7. Cap = 12700\u00d731//100 = 3937; 1878 is below the cap.\n\nFINAL: 1878"
+    },
+    "casework-5-w23": {
+     "family": "casework",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 4250,
+     "extracted": "4563",
+     "text": "Step 1: slice levy = 10000\u00d727//100 + 4000\u00d726//100 + 2000\u00d725//100 + 1300\u00d726//100  \n= 2700 + 1040 + 500 + 338 = 4578.\n\nStep 2: filing class is beta, so no surcharge. Total remains 4578.\n\nStep 3: relief credit = 607 \u2212 7\u00d7((17300\u221212000)//100) = 607 \u2212 7\u00d753 = 236.  \nTotal = 4578 \u2212 236 = 4342.\n\nStep 4: excess over 1800 = 2542; add 2542\u00d75//100 = 127. Total = 4469.\n\nStep 5: excess over 1750 = 2719; add 2719\u00d73//100 = 81. Total = 4550.\n\nStep 6: 4550 is divisible by 7, so add 13. Total = 4563.\n\nStep 7: cap = 17300\u00d737//100 = 6401; 4563 is below the cap.\n\nFINAL: 4563"
+    },
+    "tableqa-7-w20": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 6112,
+     "extracted": "10424",
+     "text": "Qualifying departments: Ops and Research.  \nCompliance, Design, and Logistics have active projects but also paused projects, so they are excluded. Field has no active project; Support has no projects.\n\nHeads excluded by name: Meyer Yusuf, Livia Anders, Tomas Reyes, Holm Casper, Nadia Milan, Jonas Meyer, Kovac Brandt.\n\nQualifying employees: rate \u2265 43, not a department head, joined strictly before 2023:\n- Priya Nair, Ops: 35 \u00d7 75 = 2625\n- Henrik Dahl, Ops: 15 \u00d7 53 = 795\n- Nora Lindgren, Ops: 8 \u00d7 43 = 344\n- Costa Ivo, Ops: 32 \u00d7 60 = 1920\n- Nair Reyes, Ops: 30 \u00d7 53 = 1590\n- Vogel Waheed, Ops: 35 \u00d7 54 = 1890\n- Cormac Omar, Research: 15 \u00d7 84 = 1260\n\nTotal = 10424  \nFINAL: 10424"
+    },
+    "tableqa-8-w22": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 6154,
+     "extracted": "9157",
+     "text": "Qualifying departments: floor \u2265 3 are Logistics (4) and Field (4). Field has only paused projects/no active project, so it is excluded. Logistics has an active project and no paused project, so it remains.\n\nDepartment heads: Omar Haddad, Ilsa Vega, Sato Bruno, Henrik Dahl, Marisol Vega, Solano Solano, Aliyev Bruno.\n\nIncluded Logistics employees (rate \u2265 54, not a head, joined before 2025):\n- Anders Berg: 30 \u00d7 66 = 1980\n- Ilsa Brandt: 22 \u00d7 81 = 1782\n- Petra Lindqvist: 23 \u00d7 89 = 2047\n- Ivo Haddad: 33 \u00d7 54 = 1782\n- Dario Novak: 27 \u00d7 58 = 1566\n\nTotal = 9157.\nFINAL: 9157"
+    },
+    "repobug-4-w21": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 449,
+     "extracted": "f10",
+     "text": "f10\u2019s docstring describes `6*x + 23`, but its body computes `23*x + 6`.\n\nFINAL: f10"
+    },
+    "repobug-4-w20": {
+     "family": "repobug",
+     "rung": 4,
+     "correct": true,
+     "completion_tokens": 926,
+     "extracted": "f2",
+     "text": "f2\u2019s docstring describes `6x + 35 mod 97`, but its body computes `35x + 6 mod 97`. All other helpers match their docstrings.\n\nFINAL: f2"
+    },
+    "inv-32-3": {
+     "family": "inv",
+     "rung": 32,
+     "correct": false,
+     "completion_tokens": 23136,
+     "extracted": "71378161",
+     "text": "Let \\(S_k\\) be the 8-digit string after forward step \\(k\\), keeping leading zeros. I undo steps \\(32\\) down to \\(1\\). Rotations are undone by the opposite rotation; swaps and reversal are self-inverse; additions are undone by subtraction mod \\(100000000\\). Also \\(7^{-1}\\equiv 42857143\\) and \\(27^{-1}\\equiv 62962963 \\pmod{100000000}\\).\n\n| Undo step | Inverse operation | Previous state |\n|---:|---|---|\n| 32 | rotate right 1 | 73526581 |\n| 31 | rotate right 4 | 65817352 |\n| 30 | digit inverse of \\(7d+2\\): \\(d=3y+2\\) | 29875390 |\n| 29 | rotate right 3 | 39029875 |\n| 28 | reverse | 57892093 |\n| 27 | rotate right 2 | 93578920 |\n| 26 | rotate right 7 | 35789209 |\n| 25 | rotate right 6 | 78920935 |\n| 24 | digit inverse of \\(7d+7\\): \\(d=3y+9\\) | 03659684 |\n| 23 | reverse | 48695630 |\n| 22 | swap positions 3 and 5 | 48596630 |\n| 21 | digit inverse of \\(9d+6\\): \\(d=6-y\\) | 28170036 |\n| 20 | rotate right 6 | 17003628 |\n| 19 | multiply by \\(27^{-1}\\) | 00629764 |\n| 18 | swap positions 1 and 3 | 60029764 |\n| 17 | subtract 43300806 | 16728958 |\n| 16 | reverse | 85982761 |\n| 15 | digit inverse of \\(3d\\): \\(d=7y\\) | 65364921 |\n| 14 | digit inverse of \\(7d+1\\): \\(d=3y+7\\) | 52659430 |\n| 13 | rotate right 5 | 59430526 |\n| 12 | multiply by \\(7^{-1}\\) | 51347218 |\n| 11 | subtract 62023864 | 89323354 |\n| 10 | digit inverse of \\(7d+9\\): \\(d=3y+3\\) | 70292285 |\n| 9 | subtract 81305949 | 88986336 |\n| 8 | rotate right 3 | 33688986 |\n| 7 | digit inverse of \\(7d+6\\): \\(d=3y+2\\) | 11066960 |\n| 6 | subtract 30195620 | 80871340 |\n| 5 | subtract 7862983 | 73008357 |\n| 4 | subtract 52659685 | 20348672 |\n| 3 | digit inverse of \\(9d+9\\): \\(d=9-y\\) | 79651327 |\n| 2 | multiply by \\(7^{-1}\\) | 11378761 |\n| 1 | swap positions 1 and 6 | 71378161 |\n\nFINAL: 71378161"
+    },
+    "tableqa-7-w21": {
+     "family": "tableqa",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 7050,
+     "extracted": "9618",
+     "text": "The qualifying departments are Support and Compliance. Support has active projects and no paused project; Compliance has active Umber-66 and no paused project. Ops is excluded because it has both active Meridian-51 and paused Cobalt-87.\n\nEligible employees (rate \u2265 42, not a department head, joined strictly before 2025):\n- Support: Milan Novak 4\u00d776 = 304; Livia Costa 30\u00d767 = 2010; Talia Rosen 34\u00d767 = 2278\n- Compliance: Viktor Lang 35\u00d770 = 2450; Weber Bea 26\u00d779 = 2054; Marchetti Selin 6\u00d787 = 522\n\nOsei Doyle (33\u00d755) is excluded because he is listed as head of Logistics.\n\nTotal = 304 + 2010 + 2278 + 2450 + 2054 + 522 = 9618.\nFINAL: 9618"
+    },
+    "repobug-5-w23": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 525,
+     "extracted": "f8",
+     "text": "f8\u2019s docstring says \u201cx times 7 plus 11,\u201d but its body computes `(x * 7 + 12) % 103`. All other helper bodies match their docstrings.\n\nFINAL: f8"
+    },
+    "tableqa-8-w23": {
+     "family": "tableqa",
+     "rung": 8,
+     "correct": true,
+     "completion_tokens": 4263,
+     "extracted": "7224",
+     "text": "Qualifying department: Ops only \u2014 floor 4, has active project Pinnacle-80, and no paused project. Compliance and Support have active projects but also paused ones, so they are excluded.\n\nIncluded Ops employees (rate \u2265 31, not a department head, joined before 2025):\n- Omar Haddad: 10 \u00d7 57 = 570\n- Ivo Petrov: 34 \u00d7 42 = 1428\n- Petra Marisol: 22 \u00d7 68 = 1496\n- Meyer Petra: 12 \u00d7 39 = 468\n- Sartori Rosen: 18 \u00d7 79 = 1422\n- Rustam Dahl: 23 \u00d7 80 = 1840\n\nExcluded: Vogel Tomas and Costa Quint are department heads; Jana Kovac joined 2025 and Weber Costa joined 2026.\n\nTotal = 570 + 1428 + 1496 + 468 + 1422 + 1840 = 7224.\nFINAL: 7224"
+    },
+    "audit-6-w20": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2364,
+     "extracted": "6, 7, 11, 14, 20, 23, 26",
+     "text": "FINAL: 6, 7, 11, 14, 20, 23, 26"
+    },
+    "repobug-5-w22": {
+     "family": "repobug",
+     "rung": 5,
+     "correct": true,
+     "completion_tokens": 699,
+     "extracted": "f9",
+     "text": "f9\u2019s docstring says to multiply by 7 then add 10, but its body adds 11: `(x * 7 + 11) % 97`. All other helpers match their docstrings.\nFINAL: f9"
+    },
+    "audit-7-w22": {
+     "family": "audit",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 1569,
+     "extracted": "2, 6, 7, 14, 16, 28",
+     "text": "2, 6, 7, 14, 16, 28\n\nFINAL: 2, 6, 7, 14, 16, 28"
+    },
+    "audit-6-w21": {
+     "family": "audit",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2287,
+     "extracted": "2, 5, 10, 11, 19, 22, 24",
+     "text": "FINAL: 2, 5, 10, 11, 19, 22, 24"
+    },
+    "audit-7-w23": {
+     "family": "audit",
+     "rung": 7,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-3-w32": {
+     "family": "bigknap",
+     "rung": 3,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "inv-22-2": {
+     "family": "inv",
+     "rung": 22,
+     "correct": false,
+     "completion_tokens": 36891,
+     "extracted": "06750934",
+     "text": "Working modulo \\(M=100000000\\), always keeping 8 digits, the inverse steps give:\n\n| Undo step | Inverse operation | Result before that step |\n|---:|---|---|\n| 22 | subtract 56925703 | 56469880 |\n| 21 | subtract 44843911 | 11625969 |\n| 20 | rotate right 5 = left 3 | 25969116 |\n| 19 | reverse | 61196952 |\n| 18 | rotate right 2 = left 6 | 52611969 |\n| 17 | \\(e\\mapsto (3e+6)\\bmod 10\\) | 12499343 |\n| 16 | \\(e\\mapsto 9e\\bmod 10\\) | 98611767 |\n| 15 | multiply by \\(80952381\\) | 33267227 |\n| 14 | \\(e\\mapsto (7e+9)\\bmod 10\\) | 00318338 |\n| 13 | multiply by \\(47826087\\) | 47827471 |\n| 12 | rotate right 5 = left 3 | 27471478 |\n| 11 | reverse | 87417472 |\n| 10 | subtract 3602796 | 83814676 |\n| 9 | reverse | 67641838 |\n| 8 | reverse | 83814676 |\n| 7 | multiply by \\(76923077\\) | 75678052 |\n| 6 | subtract 87067098 | 88610954 |\n| 5 | \\(e\\mapsto (3e+8)\\bmod 10\\) | 22618530 |\n| 4 | multiply by \\(62962963\\) | 67504390 |\n| 3 | reverse | 09340576 |\n| 2 | swap positions 6 and 8 | 09340675 |\n| 1 | rotate left 4 = right 4 | 06750934 |\n\nNote: this exact preimage begins with 0, so the stated \u201cno leading zero\u201d condition is inconsistent with the given final result and operations; the recovered 8-digit string is:\n\nFINAL: 06750934"
+    },
+    "inv-45-w20": {
+     "family": "inv",
+     "rung": 45,
+     "correct": true,
+     "completion_tokens": 26260,
+     "extracted": "28284741",
+     "text": "Working modulo \\(M=100000000\\), I inverted steps 45 down to 1. Additions are undone by subtraction mod \\(M\\); multiplications by \\(m\\) are undone by \\(m^{-1}\\bmod M\\), using  \n\\(9^{-1}=88888889,\\ 13^{-1}=76923077,\\ 19^{-1}=52631579,\\ 21^{-1}=80952381,\\ 27^{-1}=62962963\\).  \nDigit maps are inverted digitwise, rotations are undone by the opposite rotation, and swaps/reversals are self-inverse.\n\nStarting from final value `85802619`, the state after undoing each step was:\n```\nafter undoing step 45: 76200291\nafter undoing step 44: 30864726\nafter undoing step 43: 10628942\nafter undoing step 42: 28942106\nafter undoing step 41: 89421062\nafter undoing step 40: 26012498\nafter undoing step 39: 26082491\nafter undoing step 38: 15780833\nafter undoing step 37: 33808751\nafter undoing step 36: 10956934\nafter undoing step 35: 14796752\nafter undoing step 34: 93445904\nafter undoing step 33: 17665106\nafter undoing step 32: 21982374\nafter undoing step 31: 85968134\nafter undoing step 30: 48596813\nafter undoing step 29: 88596413\nafter undoing step 28: 88591463\nafter undoing step 27: 82915340\nafter undoing step 26: 57846031\nafter undoing step 25: 86817615\nafter undoing step 24: 68817615\nafter undoing step 23: 51671886\nafter undoing step 22: 51676881\nafter undoing step 21: 47819301\nafter undoing step 20: 73705681\nafter undoing step 19: 70735681\nafter undoing step 18: 18653707\nafter undoing step 17: 70735681\nafter undoing step 16: 93957313\nafter undoing step 15: 73139395\nafter undoing step 14: 21227385\nafter undoing step 13: 58372212\nafter undoing step 12: 90538818\nafter undoing step 11: 38818905\nafter undoing step 10: 35818908\nafter undoing step 9: 81890835\nafter undoing step 8: 06299295\nafter undoing step 7: 99295062\nafter undoing step 6: 95062992\nafter undoing step 5: 29926059\nafter undoing step 4: 60592992\nafter undoing step 3: 35357867\nafter undoing step 2: 28284714\nafter undoing step 1: 28284741\n```\n\nFINAL: 28284741"
+    },
+    "toolsim-6-w30": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2115,
+     "extracted": "verify(G); unlock(G); deposit(G, 70); verify(H); unlock(H); move(H, D, 30); deposit(D, 110)",
+     "text": "FINAL: verify(G); unlock(G); deposit(G, 70); verify(H); unlock(H); move(H, D, 30); deposit(D, 110)"
+    },
+    "toolsim-6-w31": {
+     "family": "toolsim",
+     "rung": 6,
+     "correct": true,
+     "completion_tokens": 2486,
+     "extracted": "verify(E); unlock(E); verify(G); unlock(G); verify(F); unlock(F); verify(C); unlock(C); move(E, G, 80); move(F, C, 10); deposit(C, 30)",
+     "text": "FINAL: verify(E); unlock(E); verify(G); unlock(G); verify(F); unlock(F); verify(C); unlock(C); move(E, G, 80); move(F, C, 10); deposit(C, 30)"
+    },
+    "toolsim-7-w32": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2341,
+     "extracted": "verify(D); unlock(D); verify(F); unlock(F); deposit(B, 30); deposit(D, 110); move(F, B, 50)",
+     "text": "FINAL: verify(D); unlock(D); verify(F); unlock(F); deposit(B, 30); deposit(D, 110); move(F, B, 50)"
+    },
+    "toolsim-7-w33": {
+     "family": "toolsim",
+     "rung": 7,
+     "correct": true,
+     "completion_tokens": 2557,
+     "extracted": "verify(A); unlock(A); move(A, C, 110); verify(H); unlock(H); deposit(H, 70); deposit(C, 80)",
+     "text": "FINAL: verify(A); unlock(A); move(A, C, 110); verify(H); unlock(H); deposit(H, 70); deposit(C, 80)"
+    },
+    "tableqa-9-w30": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 13140,
+     "extracted": "13783",
+     "text": "Qualifying departments: Design, Research, Ops, Field. Support is excluded due to paused projects; Logistics has no active project; Compliance is floor 1.\n\nFiltered sums of hours \u00d7 rate for rate \u2265 41, not a department head, joined before 2023:\n- Design: 6398\n- Research: 13783\n- Ops: 6238\n- Field: 11790\n\nLargest departmental total is Research.\nFINAL: 13783"
+    },
+    "bigknap-1-w30": {
+     "family": "bigknap",
+     "rung": 1,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "inv-60-w21": {
+     "family": "inv",
+     "rung": 60,
+     "correct": true,
+     "completion_tokens": 55058,
+     "extracted": "80931354",
+     "text": "All values are kept as 8-digit strings modulo \\(10^8\\). Reversing rotate-left-\\(k\\) is rotate-right-\\(k\\); swaps and reversals are self-inverse. For a digit map \\(d\\mapsto ad+b\\pmod{10}\\), the inverse is \\(e\\mapsto a^{-1}(e-b)\\pmod{10}\\). Thus \\(9d+b\\) is self-inverse, and \\(3d+b\\) inverts to \\(7d+3b\\). Consecutive add/multiply steps with no intervening digit/permutation step were combined.\n\nBackward pass, showing the earlier state after undoing the listed forward step(s):\n\n```\nstart after step 60: 31198109\nundo 60 rot right 2: 09311981\nundo 59 divide by 21: 33776761\nundo 58 divide by 7: 76253823\nundo 57 swap 2,4: 75263823\nundo 56 subtract 44100561: 31163262\nundo 55-52 inverse permutation: 26326131\nundo 51 divide by 19: 43490849\nundo 50-47 digit map 7d+6 then permutation: 42496947\nundo 46 divide by 13: 26345919\nundo 45-43 subtract 1110430: 25235489\nundo 42 divide by 11: 65930499\nundo 41 subtract 19663917: 46266582\nundo 40 reverse: 28566264\nundo 39 divide by 3: 09522088\nundo 38-30 digit map 3d+1 then permutation: 56771581\nundo 29 subtract 71123269: 85648312\nundo 28-27 rotate left 1: 56483128\nundo 26 subtract 10685987: 45797141\nundo 25-23 digit map 9d+7 then permutation: 60608323\nundo 22-20 subtract 6221153: 54387170\nundo 19-18 rotate left 3: 87170543\nundo 17 divide by 21: 08912883\nundo 16-13 inverse permutation: 98138820\nundo 12 subtract 66367826: 31770994\nundo 11-5 digit map 9d+1 then permutation: 71422084\nundo 4 subtract 62285543: 09136541\nundo 3-1 digit map 9d+4 then permutation: 80931354\n```\n\nApplying the forward steps to `80931354` reproduces `31198109`.\n\nFINAL: 80931354"
+    },
+    "tableqa-9-w31": {
+     "family": "tableqa",
+     "rung": 9,
+     "correct": true,
+     "completion_tokens": 8036,
+     "extracted": "13346",
+     "text": "Qualifying departments: Field, Logistics, and Research.  \nOps fails (no active project; has paused), Support fails (has paused), Design/Compliance fail floor < 4.\n\nAfter filtering employees to those departments, requiring rate \u2265 41, excluding department heads, and requiring joined < 2025, the sums of hours \u00d7 rate are:\n\n- Field: 11,705  \n- Logistics: 13,346  \n- Research: 12,804  \n\nLargest departmental total: Logistics, 13,346.\n\nFINAL: 13346"
+    },
+    "tableqa-10-w33": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 11623,
+     "extracted": "19612",
+     "text": "Departments passing the filters: Logistics, Design, Compliance, Ops.  \nSupport is excluded because it has a paused project; Research has no active project; Field is floor 1.\n\nDepartmental totals for qualifying employees (rate \u2265 37, not any department head, joined < 2025):\n\n- Logistics: 7609  \n- Design: 19612  \n- Compliance: 15583  \n- Ops: 15669  \n\nLargest departmental total: Design with 19612.\n\nFINAL: 19612"
+    },
+    "tableqa-10-w32": {
+     "family": "tableqa",
+     "rung": 10,
+     "correct": true,
+     "completion_tokens": 13115,
+     "extracted": "10094",
+     "text": "Qualifying departments are those with floor \u2265 2, at least one active project, and no paused project: **Compliance, Field, and Research**. Design and Support have active projects but also paused ones; Ops and Logistics lack an active project.\n\nApplying rate \u2265 51, not a department head, and joined strictly before 2022:\n\n- Compliance: Ilsa Brandt 27\u00d788 = 2376; Nora Costa 39\u00d771 = 2769 \u2192 total **5145**\n- Field: Hana Sato 972; Yusuf Kaan 938; Selin Rustam 2520; Nair Elio 2064; Ferreira Viktor 1640; Novak Diallo 1960 \u2192 total **10094**\n- Research: Ines Ferreira 2604; Elio Nilsson 774; Elio Gustav 1872 \u2192 total **5250**\n\nLargest departmental total: Field, 10094.\n\nFINAL: 10094"
+    },
+    "inv-70-w30": {
+     "family": "inv",
+     "rung": 70,
+     "correct": true,
+     "completion_tokens": 31630,
+     "extracted": "50588301",
+     "text": "Working backward, let \\(M=100000000\\). Undo additions by subtraction mod \\(M\\). To undo multiplication by \\(k\\), choose \\(q\\in[0,k-1]\\) with \\(k\\mid(y+qM)\\), then \\(x=(y+qM)/k\\). Digit maps are inverted digitwise; swaps and reversal are self-inverse, and \u201crotate left by \\(r\\)\u201d is undone by \u201crotate left by \\(8-r\\).\u201d\n\nRecovered state after undoing each step, from step 70 down to step 1:\n\n```\n70 -> 36606536\n69 -> 53636606\n68 -> 56636603\n67 -> 31824684\n66 -> 17832668\n65 -> 31870902\n64 -> 30170082\n63 -> 08230170\n62 -> 15701421\n61 -> 12410751\n60 -> 07103280\n59 -> 14018931\n58 -> 10418931\n57 -> 85789248\n56 -> 84298758\n55 -> 75884298\n54 -> 10840614\n53 -> 58307363\n52 -> 94043909\n51 -> 70237877\n50 -> 77873207\n49 -> 98297939\n48 -> 81663449\n47 -> 94436618\n46 -> 44366189\n45 -> 32078785\n44 -> 37181105\n43 -> 87131105\n42 -> 80706586\n41 -> 15457017\n40 -> 71075451\n39 -> 68560708\n38 -> 58036588\n37 -> 45901455\n36 -> 45905415\n35 -> 23284975\n34 -> 52328497\n33 -> 79482325\n32 -> 06114025\n31 -> 40250611\n30 -> 91561388\n29 -> 91516388\n28 -> 91518386\n27 -> 08481613\n26 -> 61308481\n25 -> 41308681\n24 -> 18680314\n23 -> 22551318\n22 -> 25513182\n21 -> 89359026\n20 -> 26305366\n19 -> 14030628\n18 -> 43525268\n17 -> 54066316\n16 -> 54660316\n15 -> 73580302\n14 -> 03027358\n13 -> 87088146\n12 -> 64188078\n11 -> 74188068\n10 -> 90122862\n9  -> 90212862\n8  -> 02128629\n7  -> 02122689\n6  -> 02129682\n5  -> 51812391\n4  -> 73636023\n3  -> 20652884\n2  -> 02652884\n1  -> 50588301\n```\n\nThe entry for undoing step 1 is the original number. A forward check of all 70 steps from `50588301` gives `22311112`.\n\nFINAL: 50588301"
+    },
+    "bigknap-5-w34": {
+     "family": "bigknap",
+     "rung": 5,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-4-w33": {
+     "family": "bigknap",
+     "rung": 4,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    },
+    "bigknap-2-w31": {
+     "family": "bigknap",
+     "rung": 2,
+     "correct": false,
+     "completion_tokens": null,
+     "extracted": null,
+     "text": null
+    }
+   }
   }
  },
  "usage": {
@@ -19315,6 +19959,10 @@
   "inclusionai/ling-3.1-flash": {
    "prompt": 256349,
    "completion": 304653
+  },
+  "nvidia/nemotron-3.5-super-vl:free": {
+   "prompt": 248394,
+   "completion": 346843
   }
  },
  "effort_applied": {
@@ -19347,6 +19995,7 @@
   "minimax/minimax-m2.7:free": true,
   "nvidia/nemotron-3-super-120b-a12b:free": true,
   "apodex/apodex-1.1-mini:free": true,
-  "inclusionai/ling-3.1-flash": true
+  "inclusionai/ling-3.1-flash": true,
+  "nvidia/nemotron-3.5-super-vl:free": true
  }
 }

@@ -233,6 +233,15 @@
    "last_run": "2026-10-03T03:43:42+00:00",
    "last_exit": 0,
    "note": "**inclusionAI: Ling 3.1 Flash** (inclusionai/ling-3.1-flash) - recall 0.15 (famous+mid 0.22, obscure 0.00; #26/41 on file, nearest nemotron-3-nano-omni-30b-a3b-reasoning:free 0.15, gemma-4-26b-a4b-it:free 0.15); retro-today Brier 0.245 vs base rate 0.198 (n=21, |p-.5| 0.23, 0 correct commits on the "
+  },
+  {
+   "slug": "nvidia/nemotron-3.5-super-vl:free",
+   "added": "2026-10-16T00:07:30+00:00",
+   "attempts": 1,
+   "status": "done",
+   "last_run": "2026-10-16T00:07:30+00:00",
+   "last_exit": 0,
+   "note": "**NVIDIA: Nemotron 3.5 Super VL (free)** (nvidia/nemotron-3.5-super-vl:free) - recall 0.29 (famous+mid 0.43, obscure 0.00; #12/42 on file, nearest gpt-5.4-mini 0.29, qwen3.6-35b-a3b 0.29); retro-today Brier 0.284 vs base rate 0.198 (n=22, |p-.5| 0.28, 0 correct commits on the scored set); domain ban"
   }
  ]
 }

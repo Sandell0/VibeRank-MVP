@@ -9971,6 +9971,283 @@
     "text": "The 2026 NFL preseason is expected to be the standard 3-game format. Preseason scoring is somewhat lower than the regular season but not dramatically so; a typical team allows roughly 16\u201318 points per preseason game, implying an expected total around 50\u201354 over three games, with high variance (blowouts and low-scoring games both occur, and there is no overtime in preseason). The threshold of 50 sits near the expected value, perhaps slightly below it, so this is close to a coin flip with a modest lean toward \"no.\" The Packers' identity doesn't strongly move preseason backup-driven results in either direction.\n\nFINAL: 0.48",
     "completion_tokens": 3146
    }
+  },
+  "nvidia/nemotron-3.5-super-vl:free": {
+   "today-shjGGdUWayk0YI1n8Z7A:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don\u2019t have reliable information confirming that a Monopoly movie is scheduled for release by the end of August 2026. A Monopoly film has been in development for years with various studios and filmmakers attached, but as far as my training knowledge goes, there is no confirmed release date meeting that deadline. Since this is a future event and I cannot determine the outcome, I should not guess YES or NO.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 286
+   },
+   "today-EhlUzuUdIE:know": {
+    "extracted": "UNKNOWN",
+    "text": "GTA 6 has not been released yet (Rockstar announced a Fall 2025 window), so the day of release has not occurred, and it is not possible to say whether Keir Starmer would still be UK Prime Minister on that date.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 579
+   },
+   "today-D2fda35c02:know": {
+    "extracted": "UNKNOWN",
+    "text": "This is a future event beyond my knowledge cutoff, and I have no information about whether such an agreement will be reached by August 31, 2026.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 121
+   },
+   "today-RLERSpg8AA:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "completion_tokens": 467
+   },
+   "today-Zn2gSpzc8N:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN \u2014 IMO 2026 has not taken place, so the outcome is not known.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 113
+   },
+   "today-zIdESLd8d2:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don\u2019t have reliable knowledge of this specific Polymarket market\u2019s resolution. The question as written doesn\u2019t specify a year, and I\u2019m not aware of a definitive \u201cStrait of Hormuz traffic returns to normal by end of August\u201d market outcome from my training data, so I shouldn\u2019t guess YES or NO.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 833
+   },
+   "today-tnsSE2OqCy:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN \u2014 the question does not specify a year, and I do not have reliable knowledge of Iran directly striking a U.S. military base in any August. The most notable direct Iranian missile strike on U.S. bases (Al Asad/Erbil in Iraq) occurred in January 2020, not August.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 674
+   },
+   "today-czIqhnAgC8:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nI don't have reliable information about an entity called \"Predictle\" (as distinct from, say, PredictIt), nor is a specific year given for \"September 1st,\" so I cannot determine whether this has occurred or how it resolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 458
+   },
+   "today-hnuCnLAIsu:know": {
+    "extracted": "UNKNOWN",
+    "text": "This question concerns a future date (end of August 2026) that is beyond my knowledge cutoff, so I cannot know the outcome.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 119
+   },
+   "today-tYH8BxZBKEstwO3K6Ujs:know": {
+    "extracted": "UNKNOWN",
+    "text": "South Korea has not withdrawn from the Treaty on the Non-Proliferation of Nuclear Weapons (NPT), and there is no known outcome for a withdrawal by 2026. This remains an unresolved future question.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 320
+   },
+   "today-tn6vs7I5nR75n2mdghmH:know": {
+    "extracted": "UNKNOWN",
+    "text": "This concerns a future date (before September 2026) that is beyond my training knowledge, so I cannot resolve whether it occurred.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 678
+   },
+   "today-8qScI5yqgQ:know": {
+    "extracted": "UNKNOWN",
+    "text": "This question concerns a future event (before September 2026) that is beyond my training knowledge, and I have no information about whether such a ceasefire occurred or will occur.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 254
+   },
+   "today-5UdQsNOlUd:know": {
+    "extracted": "UNKNOWN",
+    "text": "This refers to a future date (end of August 2026) that is beyond my knowledge cutoff, so I cannot determine whether a new Claude or GPT model was released by then.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 419
+   },
+   "today-cZs5qI9SOL:know": {
+    "extracted": "UNKNOWN",
+    "text": "I\u2019m not aware of any such order by Donald Trump mandating predeployment AI evaluations with an end-of-August deadline, and the phrasing suggests a future or conditional scenario that I cannot confirm from my training knowledge.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 2035
+   },
+   "today-Slqq0n6SA5:know": {
+    "extracted": "UNKNOWN",
+    "text": "I don\u2019t have reliable knowledge of an OpenAI publication specifically titled \u201cTen Advances in Math and Theoretical CS,\u201d nor can I confirm which August is referenced or whether any item from such a list was shown to be flawed. Because I\u2019m unsure whether this event occurred or what its resolution was, I cannot answer YES or NO.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 581
+   },
+   "today-SOQRCQZ5AI:know": {
+    "extracted": "NO",
+    "text": "Andrew Tate was arrested in Romania in December 2022 and held in pretrial detention, but he was moved from jail to house arrest in late March 2023. By the end of August 2023, he was no longer in jail (he was under house arrest / later judicial restrictions, but not incarcerated).\n\nFINAL: NO",
+    "completion_tokens": 1001
+   },
+   "today-HqPpVwyfb4kP9O85oOgp:know": {
+    "extracted": "UNKNOWN",
+    "text": "The sequel to *The Super Mario Bros. Movie* has been announced and is scheduled for release in 2026, but it has not yet been released as of my knowledge cutoff. The first film grossed over $1.36 billion worldwide, so whether the sequel will exceed that is not yet known.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 384
+   },
+   "today-5c2yAUpAEZ:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN \u2014 I can\u2019t identify which year\u2019s \u201cAugust 31\u201d is meant, and I don\u2019t have reliable knowledge of whether new US\u2013Iran peace talks occurred before that date.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 812
+   },
+   "today-8RdZCqRR98:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "completion_tokens": 505
+   },
+   "today-8AdhUZlURp:know": {
+    "extracted": "UNKNOWN",
+    "text": "This is a future event (before September 1, 2026) that is beyond my training knowledge, so I cannot determine whether it has occurred or how it will resolve.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 231
+   },
+   "today-tlOd6gEgIU:know": {
+    "extracted": "UNKNOWN",
+    "text": "I can\u2019t resolve this with confidence because the question doesn\u2019t specify a year or administration, and \u201cWhite House press secretary\u201d has changed multiple times (e.g., Jen Psaki to Karine Jean-Pierre in 2022; Karoline Leavitt in 2025). Without knowing which August is meant, I\u2019m unsure whether the condition was met.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 947
+   },
+   "today-Cquyz9Zc0A:know": {
+    "extracted": "UNKNOWN",
+    "text": "The U.S. withdrew from Afghanistan in August 2021, and Bagram Air Base was relinquished to Afghan forces before falling under Taliban control. As of my training knowledge, the U.S. has not regained control of Bagram, and whether it will do so by August 2026 is a future event I cannot resolve.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 407
+   },
+   "today-8Z896gSZEy:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nI don't have enough context to determine which \"September\" is meant, nor the exact resolution criteria for this specific question (e.g., whether releasing parts of the recommendation algorithm to GitHub counts, or whether the entire X/Twitter platform must be open sourced). While Twitter did publish some recommendation-algorithm code on GitHub in March 2023, the platform as a whole was not open sourced, and I'm not certain how this particular question was resolved.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 1573
+   },
+   "today-PlzUAL09cU:know": {
+    "extracted": "NO",
+    "text": "Aaron Donald announced his retirement from the NFL after the 2023 season (around February 2024). Based on my training knowledge, he has not come out of retirement or signed with any team since then; he remained retired.\n\nFINAL: NO",
+    "completion_tokens": 503
+   },
+   "today-8Z82suzhQO:know": {
+    "extracted": "YES",
+    "text": "YES. Nicol\u00e1s Maduro was declared the winner of Venezuela\u2019s July 2024 presidential election and was inaugurated in January 2025 for a term running to 2031, so he is serving as president through 2026.\n\nFINAL: YES",
+    "completion_tokens": 1141
+   },
+   "today-R5Rh5A8zCu:know": {
+    "extracted": "UNKNOWN",
+    "text": "The question doesn\u2019t specify which year\u2019s August is meant, and I can\u2019t confidently pin down the referenced deadline or confirm whether a new Romanian government was formed by it (Romania\u2019s Ciolacu government was in place through mid\u20112024, with parliamentary elections not held until December 2024, and the 2025 presidential rerun/post\u2011election situation is less certain for me). Because I\u2019m unsure of the exact outcome for the referenced \u201cend of August,\u201d I won\u2019t guess YES or NO.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 5723
+   },
+   "today-dnyQtU0QCL:know": {
+    "extracted": "YES",
+    "text": "YES. Argentina won the 2022 FIFA World Cup in Qatar, defeating France in the final on December 18, 2022. This was their third World Cup title, following previous wins in 1978 and 1986, so they did win it \"again.\"\n\nFINAL: YES",
+    "completion_tokens": 273
+   },
+   "today-yEJ0dA4ViV3rYYm9fBU2:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN \u2014 this is a future event that has not yet occurred and is beyond my knowledge cutoff.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 197
+   },
+   "today-RO9htAqtyy:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN \u2014 this is a future event (before October 1, 2026) that cannot be determined from training knowledge.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 138
+   },
+   "today-cEO6du5g58:know": {
+    "extracted": "UNKNOWN",
+    "text": "UNKNOWN\n\nFINAL: UNKNOWN",
+    "completion_tokens": 86
+   },
+   "today-0L6hS2EqdA:know": {
+    "extracted": "UNKNOWN",
+    "text": "The 2026 Vuelta a Espa\u00f1a has not yet taken place, so the outcome is not known.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 100
+   },
+   "today-NqZNZgILEL:know": {
+    "extracted": "UNKNOWN",
+    "text": "IMO 2026 has not yet occurred, and there is no record in my training knowledge of an open-source AI model achieving a perfect score there.\n\nFINAL: UNKNOWN",
+    "completion_tokens": 284
+   },
+   "today-s2p5zLt5Qq:know": {
+    "extracted": "NO",
+    "text": "Iceland is not currently in EU accession negotiations. Its membership application (submitted in 2009; talks opened in 2010) was suspended in 2013, and Iceland is not an EU candidate country. I am not aware of a vote to (re)open negotiations as of my knowledge, so the forward\u2011looking proposition has not come to pass.\n\nFINAL: NO",
+    "completion_tokens": 8365
+   },
+   "today-czIqhnAgC8:forecast": {
+    "extracted": "0.7",
+    "text": "I don\u2019t have reliable information about what \u201cPredictle\u201d is, its current operational status, funding, or team. Without knowing whether it is an active project, a dormant site, or something else, I can only fall back on a weak base rate: if it exists now and September 1st is the nearest upcoming one, most small online properties survive a few months, but the uncertainty is high because I have no specific evidence about this one.\n\nFINAL: 0.7",
+    "completion_tokens": 1085
+   },
+   "today-zIdESLd8d2:forecast": {
+    "extracted": "0.6",
+    "text": "I don\u2019t have specific knowledge of whether the Strait of Hormuz is currently disrupted, nor which year\u2019s \u201cend of August\u201d this market references, so I\u2019m reasoning from base rates rather than an assumed outcome.\n\nTraffic through the Strait of Hormuz is economically vital to nearly all regional actors (including Iran) and is heavily monitored by extra-regional powers, so sustained closures are historically rare. Most disruptions\u2014whether from seizures, mines, or military tension\u2014tend to be short-lived because the costs of a prolonged shutdown rise quickly and create strong incentives for de-escalation or re-routing. That said, \u201creturns to normal\u201d depends on the specific disruption and data source, and geopolitical escalation could keep traffic abnormal past the deadline.\n\nUsing a base-rate prior for a temporary chokepoint disruption resolving within a few months, I\u2019d place the probability moderately above a coin flip but well short of certainty.\n\nFINAL: 0.6",
+    "completion_tokens": 1139
+   },
+   "today-EhlUzuUdIE:forecast": {
+    "extracted": "0.88",
+    "text": "Keir Starmer became PM in July 2024 with a large Labour majority, and the next UK general election is not required until 2029, so he is very likely to still be PM in late 2025. The main uncertainty is GTA 6\u2019s release timing: Rockstar\u2019s stated window is Fall 2025, but Rockstar games often slip, so a 2026 (or later) release is plausible. The longer it slips, the more chance there is of a resignation, leadership challenge, or early electoral change before release. Weighting a likely 2025 release against possible delays and mid-term political risk, YES is more likely than not but not certain.\n\nFINAL: 0.88",
+    "completion_tokens": 2219
+   },
+   "today-Zn2gSpzc8N:forecast": {
+    "extracted": "0.55",
+    "text": "Singapore has a strong, well-resourced olympiad pipeline and has been among the stronger teams in recent IMOs, but \u201ctop 10\u201d is a crowded, competitive tier (China, USA, South Korea, Iran, Japan, Vietnam, Taiwan, Russia when present, etc.), and IMO team results depend heavily on the specific six-student cohort each year. I do not know the IMO 2025 or 2026 outcomes, so I\u2019ll treat Singapore as a plausible but not assured top-10 finisher.\n\nFINAL: 0.55",
+    "completion_tokens": 2285
+   },
+   "today-D2fda35c02:forecast": {
+    "extracted": "0.15",
+    "text": "The Strait of Hormuz is not currently closed, so an agreement to \u201creopen\u201d it would generally require a closure or credible shutdown first\u2014something Iran has threatened but rarely carried out, since it would also disrupt Iran\u2019s own exports and risk major conflict. Legally, the Strait is an international waterway bordered by Iran and the UAE (Oman\u2019s Musandam is nearby), so a bilateral Iran\u2013Oman deal could not by itself reopen it; Oman\u2019s usual role is mediation rather than control. The joint probability of a closure plus a specific Iran\u2013Oman reopening agreement by Aug 31, 2026 is therefore low.\n\nFINAL: 0.15",
+    "completion_tokens": 1840
+   },
+   "today-RLERSpg8AA:forecast": {
+    "extracted": "0.3",
+    "text": "I don\u2019t have reliable knowledge of an \u201cOpus 5\u201d model, nor of a specific \u201c---\u201d prompt that induces base-model-like behavior in an Anthropic model. Because the event depends on several uncertain conditions\u2014whether such a model exists, whether the vulnerability is real and present, and whether Anthropic would patch or pull it by a specific date\u2014I\u2019m forecasting under substantial ignorance rather than any confirmed timeline.\n\nFINAL: 0.3",
+    "completion_tokens": 1996
+   },
+   "today-tnsSE2OqCy:forecast": {
+    "extracted": "0.03",
+    "text": "Iran has strong incentives to avoid a direct strike on a U.S. base, since that would risk a major war it struggles to control; it typically relies on proxies, deniable/cyber means, and calibrated, telegraphed responses instead. Direct Iranian strikes on U.S. bases are rare (the 2020 Al Asad/Erbil missile attack being the clear exception), and August itself carries no specific trigger. The probability is low but nonzero because of miscalculation or retaliation risk.\n\nFINAL: 0.03",
+    "completion_tokens": 2087
+   },
+   "today-tn6vs7I5nR75n2mdghmH:forecast": {
+    "extracted": "0.06",
+    "text": "I read this as a material change in control of Georgian-claimed territory, not routine borderization. The conflict remains frozen: Georgia has strong incentives to avoid escalation, and Russia has little to gain from opening a new front, though border incidents or broader regional escalation create tail risk.\nFINAL: 0.06",
+    "completion_tokens": 3446
+   },
+   "today-8qScI5yqgQ:forecast": {
+    "extracted": "0.35",
+    "text": "I don\u2019t have reliable evidence that the U.S. and Iran are currently in an open war requiring a ceasefire, so a \u201cyes\u201d would require both direct hostilities and a durable political off-ramp before September 2026. Large-scale direct conflict is not the base case, but limited exchanges are possible; deep mistrust, domestic politics on both sides, and the nuclear/regional file make a durable cessation uncertain. I\u2019d put it below a coin flip but not negligible.\n\nFINAL: 0.35",
+    "completion_tokens": 2526
+   },
+   "today-hnuCnLAIsu:forecast": {
+    "extracted": "0.55",
+    "text": "I have no skillful information about the 2025\u201326 winter precipitation or ENSO state, so I\u2019m relying on base rates: California\u2019s drought status in late summer is mostly inherited from the preceding winter(s), and by end of August at least part of the state is often in moderate drought or worse. Long-term aridification nudges this slightly above a coin flip, but the lead time is very long and uncertainty is high.\n\nFINAL: 0.55",
+    "completion_tokens": 1988
+   },
+   "today-SOQRCQZ5AI:forecast": {
+    "extracted": "0.3",
+    "text": "I don\u2019t have reliable real-time information about Andrew Tate\u2019s current custody status or the exact date this question refers to, so I shouldn\u2019t treat the outcome as known. What I do know is that he has been caught up in long-running Romanian proceedings (human trafficking/organized crime-related charges) with a history of moving between pre-trial detention, house arrest/judicial control, and periods of travel, plus related legal exposure elsewhere. Romanian cases of this type can be slow, but he has also succeeded at times in avoiding continuous jail. \u201cIn jail through the end of August\u201d requires continuous incarceration up to that date, which is a specific and restrictive condition given that history and my uncertainty about where things stand now.\n\nFINAL: 0.3",
+    "completion_tokens": 2922
+   },
+   "today-Cquyz9Zc0A:forecast": {
+    "extracted": "0.02",
+    "text": "The U.S. completed its withdrawal from Afghanistan in August 2021, and Bagram is now under Taliban control. There are no U.S. forces in Afghanistan, no recognized Taliban government to negotiate a basing deal with, and essentially no U.S. political appetite for re-invading or re-occupying an air base. The Taliban would be extremely unlikely to cede control of their most important military airfield to the U.S., and a Taliban collapse followed by a U.S.-invited return within ~1.5 years is also improbable. So the chance is very low, though not literally zero.\n\nFINAL: 0.02",
+    "completion_tokens": 824
+   },
+   "today-HqPpVwyfb4kP9O85oOgp:forecast": {
+    "extracted": "0.40",
+    "text": "The first film grossed roughly $1.36B worldwide, driven heavily by \u201cfirst-ever Mario movie\u201d novelty plus nostalgia. A sequel would have a built-in audience and could deepen the story/cast, but sequels to billion-dollar animated openers more often decline than exceed once that novelty fades, and the 2026 family-film environment is uncertain. Beating $1.36B would require Frozen II\u2013level staying power\u2014possible, but not the base case.\n\nFINAL: 0.40",
+    "completion_tokens": 1612
+   },
+   "today-NqZNZgILEL:forecast": {
+    "extracted": "0.05",
+    "text": "A perfect IMO score (42/42) requires solving all six problems\u2014including the very hard P3/P6\u2014with no errors, which remains far beyond current AI capability even for leading closed systems. Requiring the model to be open-source further lowers the odds, since frontier math reasoning may not be publicly released or replicated in time for IMO 2026.\n\nFINAL: 0.05",
+    "completion_tokens": 1907
+   },
+   "today-Slqq0n6SA5:forecast": {
+    "extracted": "0.2",
+    "text": "I don\u2019t have reliable knowledge of a specific OpenAI document titled \u201cTen Advances in Math and Theoretical CS,\u201d nor of its contents or release date. Treating it as a set of about ten technical claims from a reputable lab, the base rate for at least one being publicly demonstrated to be flawed within a short window (by the end of August) is low but non-zero: rigorous results are usually vetted before announcement, but \u201cadvances\u201d can include informal or empirical claims, and review/debunking takes time.\n\nI\u2019ll place the probability at roughly 0.2.\n\nFINAL: 0.2",
+    "completion_tokens": 1442
+   },
+   "today-8AdhUZlURp:forecast": {
+    "extracted": "0.85",
+    "text": "Anthropic has released Sonnet-tier updates on a relatively short cadence (e.g., Claude 3 Sonnet in March 2024, then Claude 3.5 Sonnet in June 2024), and Sonnet is their flagship workhorse tier, so competitive pressure gives them strong incentive to refresh it within a ~1.5\u20132 year window. The main downside risks are scheduling slips, safety/regulatory delays, or a naming/tiers shift that avoids a literal \u201cSonnet\u201d release, but those seem unlikely to fully prevent a newer Sonnet before September 2026.\n\nFINAL: 0.85",
+    "completion_tokens": 1697
+   },
+   "today-PlzUAL09cU:forecast": {
+    "extracted": "0.08",
+    "text": "Aaron Donald retired voluntarily in March 2024 after 10 seasons, at age 32/33, while still elite and with a Hall of Fame r\u00e9sum\u00e9 already secured. He has been consistent and public about wanting to step away for family, health, and post-football pursuits, and there have been no credible reports of him seeking reinstatement or training for a comeback. Voluntary retirements by all-time-great defensive tackles do get reversed occasionally, but usually within the first year and with a clear motivating circumstance (e.g., reuniting with a specific quarterback/coach); none of that is present here, and a year off at 33\u201334 at a physically brutal position makes a return increasingly difficult.\n\nSo the chance is small but not zero.\n\nFINAL: 0.08",
+    "completion_tokens": 2350
+   },
+   "today-5UdQsNOlUd:forecast": {
+    "extracted": "0.9",
+    "text": "Assuming \u201cnew\u201d means any new Claude- or GPT-family model release, both labs ship on a multi-month cadence, so a release before Aug. 31, 2026 is likely though not guaranteed.\n\nFINAL: 0.9",
+    "completion_tokens": 6659
+   },
+   "today-cEO6du5g58:forecast": {
+    "extracted": "0.35",
+    "text": "NFL preseason usually consists of 3 games, with starters playing limited snaps and backups taking most snaps\u2014especially in the second half\u2014so points allowed can add up quickly. Allowing fewer than 50 points across three preseason games means averaging under roughly 16.7 points per game, which is below the typical per-team preseason scoring level. It\u2019s plausible if the defense plays well and backups limit damage, but not the likely baseline outcome.\n\nFINAL: 0.35",
+    "completion_tokens": 1097
+   },
+   "today-dnyQtU0QCL:forecast": {
+    "extracted": "0.30",
+    "text": "Argentina is a strong program and the reigning champion, but repeating as World Cup winner is historically rare, Messi\u2019s era is ending, and the expanded tournament format adds variance. I\u2019d put the chance of winning again at roughly 30%.\n\nFINAL: 0.30",
+    "completion_tokens": 1076
+   },
+   "today-0L6hS2EqdA:forecast": {
+    "extracted": "0.15",
+    "text": "Poga\u010dar is the best stage racer in the world and the Vuelta is the one Grand Tour he hasn\u2019t won, so he has motivation. But whether he even starts the 2026 Vuelta is uncertain\u2014he may prioritize the Tour/Giro, do a double, or skip it\u2014and even if he starts, three weeks of Vuelta racing against contenders like Roglic and others is far from guaranteed. So the chance should be well below 50%, roughly in the mid-teens.\n\nFINAL: 0.15",
+    "completion_tokens": 2215
+   },
+   "today-RO9htAqtyy:forecast": {
+    "extracted": "0.8",
+    "text": "Anthropic has been shipping frontier models at a rapid cadence (Claude 3 in March 2024, Claude 3.5 Sonnet in June 2024, Claude 3.5 Haiku shortly after), and competitive pressure from OpenAI, Google, xAI, and Meta makes a long gap before the next top-tier model unlikely. The window to October 1, 2026 is roughly two years, which is ample time for a Claude 4/5 Opus-class flagship\u2014or an equivalently positioned next-gen top model\u2014to train, complete safety testing, and launch. The main downside risks are training/safety delays or Anthropic choosing not to use the \u201cOpus\u201d name, but the \u201cor equivalent next-gen flagship\u201d clause covers those.\n\nFINAL: 0.8",
+    "completion_tokens": 3324
+   }
   }
  },
  "usage": {
@@ -10117,6 +10394,10 @@
   "inclusionai/ling-3.1-flash": {
    "prompt": 6387,
    "completion": 68221
+  },
+  "nvidia/nemotron-3.5-super-vl:free": {
+   "prompt": 5844,
+   "completion": 78343
   }
  },
  "effort_applied": {
@@ -10155,6 +10436,7 @@
   "nvidia/nemotron-3-super-120b-a12b:free": true,
   "stealth/space-bunny-alpha": true,
   "apodex/apodex-1.1-mini:free": true,
-  "inclusionai/ling-3.1-flash": true
+  "inclusionai/ling-3.1-flash": true,
+  "nvidia/nemotron-3.5-super-vl:free": true
  }
 }
